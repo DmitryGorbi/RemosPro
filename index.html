@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Каталог RemosPro</title>
+</head>
+
+<body class="page-body">
+  <header>
+
+  </header>
+  <main class="container">
+
+    <!--Filtr-->
+    <section>
+      <h2>Фильтр поиска</h2>
+      <form action="https://echo.htmlacademy.ru/courses" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Основные параметры</legend>
+          <select name="type_deal" id="">
+            <option value="rent" name="rent">Аренда</option>
+            <option value="buy" nam="buy">Покупка</option>
+          </select>
+          <select name="property_type" id="property_type">
+            <optgroup label="Жилая недвижимость">
+              <option value="flat">Квартира</option>
+              <option value="room">Комната</option>
+              <option value="part_flat">Доля в квартире</option>
+            </optgroup>
+            <optgroup label="Загородная недвижимлсть" name="suburb">
+              <option value="house" name="house">Дом</option>
+              <option value="">Участок</option>
+              <option value="">Доля в доме</option>
+            </optgroup>
+          </select>
+          <div class="price">
+            <label for="">
+              <input type="number" id="">
+            </label>
+            <label for="">
+              <input type="number" id="">
+            </label>
+          </div>
+          <input type="search" placeholder="Введите адрес">
+        </fieldset>
+        <fieldset>
+          <legend>Количество комнат</legend>
+          <label for="studio">
+            <input type="button" name="studio" value="Студия" id="studio" aria-pressed="false">
+          </label>
+          <label for="">
+            <input type="button" name="1-room" value="1" aria-pressed="true">
+          </label>
+          <label for="">
+            <input type="button" value="2">
+          </label>
+          <label for="">
+            <input type="button" value="3">
+          </label>
+          <label for="">
+            <input type="button" value="4">
+          </label>
+          <label for="">
+            <input type="button" value="5">
+          </label>
+          <label for="">
+            <input type="button" value="6+">
+          </label>
+          <label for="">
+            <input type="button" value="Своб. планировка">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Площадь</legend>
+          <label>Общая
+            <input type="number">
+            <input type="number">
+          </label>
+          <label>Жилая
+            <input type="number">
+            <input type="number">
+          </label>
+          <label>Кухня
+            <input type="number">
+            <input type="number">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Апартаменты</legend>
+          <label>Только апартаменты
+            <input type="radio">
+          </label>
+          <label>Без апартаментов
+            <input type="radio">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Планировка</legend>
+          <label>
+            <input type="button" value="Изолированная">
+          </label>
+          <label>
+            <input type="button" value="Смежная">
+          </label>
+          <label>С планировкой
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>Этажность</label>
+          <label>Этаж
+            <input type="number">
+            <input type="number">
+          </label>
+          <label>В доме
+            <input type="number">
+            <input type="number">
+          </label>
+          <label>Не первый
+            <input type="checkbox">
+          </label>
+          <label>Не последний
+            <input type="checkbox">
+          </label>
+          <label>последний
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <label>Год постройки
+          <input type="number">
+          <input type="number">
+        </label>
+        <fieldset>
+          <label for="">Тип дома</label>
+          <label>
+            <input type="button" value="Панельный">
+          </label>
+          <label>
+            <input type="button" value="Кирпично-монолитный">
+          </label>
+          <label>
+            <input type="button" value="Монолитный">
+          </label>
+          <label>
+            <input type="button" value="Блочный">
+          </label>
+          <label>
+            <input type="button" value="Кирпичный">
+          </label>
+          <label>
+            <input type="button" value="Деревянный">
+          </label>
+          <label>
+            <input type="button" value="Сталинский">
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="">Ремонт</label>
+          <label>
+            <input type="button" value="Дизайнерский">
+          </label>
+          <label>
+            <input type="button" value="Евро">
+          </label>
+          <label>
+            <input type="button" value="Косметический">
+          </label>
+          <label>
+            <input type="button" value="Отсутствует">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Санузел</legend>
+          <label>
+            <input type="button" value="Совмещенный">
+          </label>
+          <label>
+            <input type="button" value="Раздельный">
+          </label>
+          <label>Несколько
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Лифты</legend>
+          <label>
+            <input type="button" value="Есть любой">
+          </label>
+          <label>
+            <input type="button" value="Есть грузовой">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Балкон</legend>
+          <label>
+            <input type="button" value="Балкон">
+          </label>
+          <label>
+            <input type="button" value="Лоджия">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Вид из окна</legend>
+          <label>
+            <input type="button" value="Во двор">
+          </label>
+          <label>
+            <input type="button" value="На улицу">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Тип продажи</legend>
+          <label>
+            <input type="button" value="Свободная">
+          </label>
+          <label>
+            <input type="button" value="Альтернативная">
+          </label>
+          <label>Возможна ипотека
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Парковка</legend>
+          <label>
+            <input type="button" value="Подземная">
+          </label>
+          <label>
+            <input type="button" value="Наземная">
+          </label>
+          <label>
+            <input type="button" value="Многоуровневая">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Время до метро</legend>
+          <label>
+            <input type="button" value="Пешком">
+          </label>
+          <label>
+            <input type="button" value="Транспортом">
+          </label>
+          <label>
+            <input type="button" value="5">
+          </label>
+          <label>
+            <input type="button" value="7">
+          </label>
+          <label>
+            <input type="button" value="10">
+          </label>
+          <label>
+            <input type="button" value="15">
+          </label>
+          <label>
+            <input type="button" value="20">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Санузел</legend>
+          <select name="" id="">
+            <option value="">За 1 день</option>
+            <option value="">За 2 дня</option>
+          </select>
+          <label>С фото
+            <input type="checkbox">
+          </label>
+          <label>С видео
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <label>Объявления содержат слова
+          <input type="search" placeholder="Введите слово">
+        </label>
+        <label>Объявления не содержат слова
+          <input type="search" placeholder="Введите слово">
+        </label>
+        <label>Название населенного пункта содержит слово
+          <input type="search" placeholder="Введите слово">
+        </label>
+        <button>Показать объявления</button>
+
+      </form>
+</section>
+  </main>
+  <footer>
+
+  </footer>
+
+</body>
+
+</html>
