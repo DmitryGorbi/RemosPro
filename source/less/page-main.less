@@ -1,0 +1,51 @@
+.page-main__header {
+  min-height: 174px;
+  padding-top: 21px;
+  // margin: 0 -20px;
+  background-color: @green-light;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 66px;
+    height: 66px;
+    background-image: url('../img/icons/building.svg');
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 52px;
+    min-height: 136px;
+    margin: 0;
+
+
+    &::after {
+      top: 40px;
+      right: 55px;
+      width: 112px;
+      height: 112px;
+      background-size: 100%;
+    }
+  }
+}
+
+.page-main__caption {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    width: 760px;
+    margin-left: 38px;
+  }
+}
+
+.page-main__caption-name {
+  color: @basic-green;
+}
