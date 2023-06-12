@@ -1,22 +1,112 @@
 .advantages-list {
   list-style: none;
   margin: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    row-gap: 25px;
+    margin-bottom: 60px;
+  }
 }
 
 .advantages-list__item {
   padding: 0;
-  margin-left: 50px;
+  padding-bottom: 23px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-bottom: 1px dashed @dark-gray;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &:first-child::before {
+    background-image: url('../img/icons/xml.svg');
+  }
+
+  &:nth-child(2)::before {
+    background-image: url('../img/icons/report.svg');
+  }
+
+  &:nth-child(3)::before {
+    background-image: url('../img/icons/checkbox.svg');
+  }
+
+  &:nth-child(4)::before {
+    background-image: url('../img/icons/diagram.svg');
+  }
+
+  &:nth-child(5)::before {
+    background-image: url('../img/icons/page.svg');
+  }
+
+  &:nth-child(6)::before {
+    background-image: url('../img/icons/card.svg');
+  }
+
+  &:nth-child(7)::before {
+    background-image: url('../img/icons/grafic.svg');
+  }
+
+  &:nth-child(8)::before {
+    background-image: url('../img/icons/blank.svg');
+  }
+
+  &:nth-child(9)::before {
+    background-image: url('../img/icons/question.svg');
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 773px;
+    row-gap: 15px;
+    margin-left: 121px;
+    padding-bottom: 30px;
+    white-space: pre-line;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: -121px;
+    }
+  }
 }
+
+// Icons
 
 .advantages-list__caption {
   margin: 0;
-  font-size: 16px;
+  margin-bottom: ;
+  font-size: 16px; // по макету слишком мелко, увеличил на 2px
   line-height: 18px;
   font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
 }
 
 .advantages-list__description {
   margin: 0;
   font-size: 14px; // увеличил на 1 от макета
   line-height: 17px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

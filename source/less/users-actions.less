@@ -1,0 +1,91 @@
+.users-actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+}
+
+.users-actions__button {
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 36px;
+  cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    height: 44px;
+    padding: 10px 30px 14px 52px;
+  }
+}
+
+.users-actions__button-reg {
+  color: @white;
+  background-color: @basic-green;
+}
+
+.users-actions__icon-person {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -23px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/icons/person.svg');
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: 0px;
+      left: -32px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.users-actions__button-faq {
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border: 2px solid @basic-green;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+}
+
+.users-actions__icon-faq {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -23px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/icons/chat-question.svg');
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      top: 0px;
+      left: -32px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

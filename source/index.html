@@ -1,296 +1,231 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext"
+      rel="stylesheet"
+    />
+    <title>О проекте</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Каталог RemosPro</title>
-</head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="logo-text" href="#">Remos</a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Продажа</a>
+            <div class="navigation__submenu">
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title">Жилая недвижимость</p>
+                <li class="navigation__submenu-item"><a href="#">Квартира</a></li>
+                <li class="navigation__submenu-item"><a href="#">Дом</a></li>
+                <li class="navigation__submenu-item"><a href="#">Земельный участок</a></li>
+                <li class="navigation__submenu-item"><a href="#">Комната</a></li>
+                <li class="navigation__submenu-item"><a href="#">Таунхаус</a></li>
+              </ul>
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title"><a class="navigation__submenu-link" href="#">Коммерческая недвижимость</a></p>
+                <li class="navigation__submenu-item">Офис</li>
+                <li class="navigation__submenu-item">ПСН</li>
+                <li class="navigation__submenu-item">Здание</li>
+                <li class="navigation__submenu-item">Производство</li>
+                <li class="navigation__submenu-item">Торговая площадь</li>
+                <li class="navigation__submenu-item">Склад</li>
+                <li class="navigation__submenu-item">Готовый бизнес</li>
+                <li class="navigation__submenu-item">Коммерческая земля</li>
+              </ul>
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title">Гаражи</p>
+                <li class="navigation__submenu-item">Гараж</li>
+                <li class="navigation__submenu-item">Гаражный бокс</li>
+                <li class="navigation__submenu-item">Машиноместо</li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Аренда</a>
+            <div class="navigation__submenu">
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title">Жилая недвижимость</p>
+                <li class="navigation__submenu-item"><a href="#">Квартира</a></li>
+                <li class="navigation__submenu-item"><a href="#">Дом</a></li>
+                <li class="navigation__submenu-item"><a href="#">Комната</a></li>
+                <li class="navigation__submenu-item"><a href="#">Таунхаус</a></li>
+              </ul>
+              <!-- ? стоит ли делать второй список -->
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title"><a class="navigation__submenu-link" href="#">Коммерческая недвижимость</a></p>
+                <li class="navigation__submenu-item">Офис</li>
+                <li class="navigation__submenu-item">ПСН</li>
+                <li class="navigation__submenu-item">Здание</li>
+                <li class="navigation__submenu-item">Производство</li>
+                <li class="navigation__submenu-item">Торговая площадь</li>
+                <li class="navigation__submenu-item">Склад</li>
+                <li class="navigation__submenu-item">Готовый бизнес</li>
+                <li class="navigation__submenu-item">Коммерческая земля</li>
+              </ul>
+              <ul class="navigation__submenu-list">
+                <p class="navigation__submenu-title">Гаражи</p>
+                <li class="navigation__submenu-item">Гараж</li>
+                <li class="navigation__submenu-item">Гаражный бокс</li>
+                <li class="navigation__submenu-item">Машиноместо</li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__item">Специалисты</li>
+          <li class="navigation__item">Ипотека</li>
+        </ul>
+      </nav>
+    </header>
 
-<body class="page-body">
-  <header>
-
-  </header>
-  <main class="container">
-
-    <!--Filtr-->
-    <section>
-      <h2>Фильтр поиска</h2>
-      <form action="https://echo.htmlacademy.ru/courses" method="post" enctype="multipart/form-data">
-        <fieldset>
-          <legend>Основные параметры</legend>
-          <select name="type_deal" id="">
-            <option value="rent" name="rent">Аренда</option>
-            <option value="buy" nam="buy">Покупка</option>
-          </select>
-          <select name="property_type" id="property_type">
-            <optgroup label="Жилая недвижимость">
-              <option value="flat">Квартира</option>
-              <option value="room">Комната</option>
-              <option value="part_flat">Доля в квартире</option>
-            </optgroup>
-            <optgroup label="Загородная недвижимлсть" name="suburb">
-              <option value="house" name="house">Дом</option>
-              <option value="">Участок</option>
-              <option value="">Доля в доме</option>
-            </optgroup>
-          </select>
-          <div class="price">
-            <label for="">
-              <input type="number" id="">
-            </label>
-            <label for="">
-              <input type="number" id="">
-            </label>
+    <main class="page-main">
+      <div class="wrapper">
+        <header class="page-main__header">
+          <div class="wrapper-content">
+            <h1 class="page-main__caption">
+              <span class="page-main__caption-name">RemosPRO</span> — сервис
+              поиска недвижимости для продажи и аренды
+            </h1>
           </div>
-          <input type="search" placeholder="Введите адрес">
-        </fieldset>
-        <fieldset>
-          <legend>Количество комнат</legend>
-          <label for="studio">
-            <input type="button" name="studio" value="Студия" id="studio" aria-pressed="false">
-          </label>
-          <label for="">
-            <input type="button" name="1-room" value="1" aria-pressed="true">
-          </label>
-          <label for="">
-            <input type="button" value="2">
-          </label>
-          <label for="">
-            <input type="button" value="3">
-          </label>
-          <label for="">
-            <input type="button" value="4">
-          </label>
-          <label for="">
-            <input type="button" value="5">
-          </label>
-          <label for="">
-            <input type="button" value="6+">
-          </label>
-          <label for="">
-            <input type="button" value="Своб. планировка">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Площадь</legend>
-          <label>Общая
-            <input type="number">
-            <input type="number">
-          </label>
-          <label>Жилая
-            <input type="number">
-            <input type="number">
-          </label>
-          <label>Кухня
-            <input type="number">
-            <input type="number">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Апартаменты</legend>
-          <label>Только апартаменты
-            <input type="radio">
-          </label>
-          <label>Без апартаментов
-            <input type="radio">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Планировка</legend>
-          <label>
-            <input type="button" value="Изолированная">
-          </label>
-          <label>
-            <input type="button" value="Смежная">
-          </label>
-          <label>С планировкой
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <fieldset>
-          <label>Этажность</label>
-          <label>Этаж
-            <input type="number">
-            <input type="number">
-          </label>
-          <label>В доме
-            <input type="number">
-            <input type="number">
-          </label>
-          <label>Не первый
-            <input type="checkbox">
-          </label>
-          <label>Не последний
-            <input type="checkbox">
-          </label>
-          <label>последний
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <label>Год постройки
-          <input type="number">
-          <input type="number">
-        </label>
-        <fieldset>
-          <label for="">Тип дома</label>
-          <label>
-            <input type="button" value="Панельный">
-          </label>
-          <label>
-            <input type="button" value="Кирпично-монолитный">
-          </label>
-          <label>
-            <input type="button" value="Монолитный">
-          </label>
-          <label>
-            <input type="button" value="Блочный">
-          </label>
-          <label>
-            <input type="button" value="Кирпичный">
-          </label>
-          <label>
-            <input type="button" value="Деревянный">
-          </label>
-          <label>
-            <input type="button" value="Сталинский">
-          </label>
-        </fieldset>
-        <fieldset>
-          <label for="">Ремонт</label>
-          <label>
-            <input type="button" value="Дизайнерский">
-          </label>
-          <label>
-            <input type="button" value="Евро">
-          </label>
-          <label>
-            <input type="button" value="Косметический">
-          </label>
-          <label>
-            <input type="button" value="Отсутствует">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Санузел</legend>
-          <label>
-            <input type="button" value="Совмещенный">
-          </label>
-          <label>
-            <input type="button" value="Раздельный">
-          </label>
-          <label>Несколько
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Лифты</legend>
-          <label>
-            <input type="button" value="Есть любой">
-          </label>
-          <label>
-            <input type="button" value="Есть грузовой">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Балкон</legend>
-          <label>
-            <input type="button" value="Балкон">
-          </label>
-          <label>
-            <input type="button" value="Лоджия">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Вид из окна</legend>
-          <label>
-            <input type="button" value="Во двор">
-          </label>
-          <label>
-            <input type="button" value="На улицу">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Тип продажи</legend>
-          <label>
-            <input type="button" value="Свободная">
-          </label>
-          <label>
-            <input type="button" value="Альтернативная">
-          </label>
-          <label>Возможна ипотека
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Парковка</legend>
-          <label>
-            <input type="button" value="Подземная">
-          </label>
-          <label>
-            <input type="button" value="Наземная">
-          </label>
-          <label>
-            <input type="button" value="Многоуровневая">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Время до метро</legend>
-          <label>
-            <input type="button" value="Пешком">
-          </label>
-          <label>
-            <input type="button" value="Транспортом">
-          </label>
-          <label>
-            <input type="button" value="5">
-          </label>
-          <label>
-            <input type="button" value="7">
-          </label>
-          <label>
-            <input type="button" value="10">
-          </label>
-          <label>
-            <input type="button" value="15">
-          </label>
-          <label>
-            <input type="button" value="20">
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Санузел</legend>
-          <select name="" id="">
-            <option value="">За 1 день</option>
-            <option value="">За 2 дня</option>
-          </select>
-          <label>С фото
-            <input type="checkbox">
-          </label>
-          <label>С видео
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <label>Объявления содержат слова
-          <input type="search" placeholder="Введите слово">
-        </label>
-        <label>Объявления не содержат слова
-          <input type="search" placeholder="Введите слово">
-        </label>
-        <label>Название населенного пункта содержит слово
-          <input type="search" placeholder="Введите слово">
-        </label>
-        <button>Показать объявления</button>
+        </header>
+      </div>
 
-      </form>
-</section>
-  </main>
-  <footer>
-
-  </footer>
-
-</body>
-
+      <section class="stats wrapper">
+        <div class="wrapper-content">
+          <h2 class="visually-hidden">Статистика Ремос</h2>
+          <dl class="stats__description">
+            <div class="stats__description-item stats__description-icon1">
+              <dt class="stats__description-point">риэлторов</dt>
+              <dd class="stats__description-value">10000</dd>
+            </div>
+            <div class="stats__description-item stats__description-icon2">
+              <dt class="stats__description-point">арентств</dt>
+              <dd class="stats__description-value">10000</dd>
+            </div>
+            <div class="stats__description-item stats__description-icon3">
+              <dt class="stats__description-point">объявлений</dt>
+              <dd class="stats__description-value">1 000 000</dd>
+            </div>
+            <div class="stats__description-item stats__description-icon4">
+              <dt class="stats__description-point">посетителей в сутки</dt>
+              <dd class="stats__description-value">1 000 000</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="advantages">
+        <h2 class="visually-hidden">
+          Описание преимуществ по категориям пользователей
+        </h2>
+        <div class="wrapper">
+          <ul class="users-list wrapper-content">
+            <li class="users-list__item users-list__item--active">
+              <a class="users-list__link" href="">Агентствам</a>
+            </li>
+            <li class="users-list__item">
+              <a class="users-list__link" href="">Риэлторам</a>
+            </li>
+            <li class="users-list__item">
+              <a class="users-list__link" href="">Частным пользователям</a>
+            </li>
+            <li class="users-list__item">
+              <a class="users-list__link" href="">Застройщикам</a>
+            </li>
+          </ul>
+          <ul class="advantages-list wrapper-content">
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Бесплатная выгрузка объявлений через XML фид
+              </h3>
+              <p class="advantages-list__description">
+                Быстрая автоматическая выгрузка каждый день с неограниченным
+                количеством объявлений. Популярный формат XML фида.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">Полный отчет выгрузки</h3>
+              <p class="advantages-list__description">
+                Предоставим подробный отчет выгрузки в нескольких форматах XML |
+                JSON | CSV.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Быстрая и лояльная модерация объявлений
+              </h3>
+              <p class="advantages-list__description">
+                Главное — качественное и достоверное объявление. Остальное
+                допускается: вотемарки, эмодзи.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Подробная статистика посещений объявлений за 6 месяцев
+              </h3>
+              <p class="advantages-list__description">
+                В статистику включены: просмотр объявлений, клики на телефон,
+                сохранения в избранное.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Отдельная страница агентства с обратной связью с клиентом
+              </h3>
+              <p class="advantages-list__description">
+                Оформите красивую страницу своего агентства со всеми объектами,
+                сотрудниками, вакансиями, отзывами, и получить дополнительный
+                трафик с заявками.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">Раздел с вакансиями</h3>
+              <p class="advantages-list__description">
+                Размещайте вакансии и ищите сотрудников прямо на RemosPro.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Отчет для собственника о рекламе его объекта
+              </h3>
+              <p class="advantages-list__description">
+                Возможность отправить клиенту подробный отчет о ходе рекламной
+                компании на почту.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Заявки клиентов на риэлторские услуги
+              </h3>
+              <p class="advantages-list__description">
+                Обработанные и отфильтрованные заявки оставленные клиентами на
+                риэлторские услуги рассылаем 3-м агентствам.
+              </p>
+            </li>
+            <li class="advantages-list__item">
+              <h3 class="advantages-list__caption">
+                Оперативный ответ техподдержки
+              </h3>
+              <p class="advantages-list__description">
+                Быстро отвечаем на вопросы пользователей и решаем ваши проблемы
+                через удобные каналы связи: онлайн-чат, почта, телеграмм.
+              </p>
+            </li>
+          </ul>
+          <div class="users-actions wrapper-content">
+            <button class="users-actions__button users-actions__button-reg">
+              <span class="users-actions__icon-person">Зарегистрироваться</span>
+            </button>
+            <button class="users-actions__button users-actions__button-faq">
+              <span class="users-actions__icon-faq">Задать вопрос</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

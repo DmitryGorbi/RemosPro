@@ -1,9 +1,8 @@
 .page-main__header {
-  min-height: 174px;
-  padding-top: 21px;
-  // margin: 0 -20px;
-  background-color: @green-light;
   position: relative;
+  min-height: 154px;
+  padding: 21px 0 20px 0;
+  background-color: @green-light;
 
   &::after {
     content: '';
@@ -17,13 +16,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 52px;
-    min-height: 136px;
+    min-height: 84px;
     margin: 0;
-
+    padding: 52px 0 52px 0;
 
     &::after {
-      top: 40px;
+      bottom: 36px;
       right: 55px;
       width: 112px;
       height: 112px;
@@ -33,16 +31,16 @@
 }
 
 .page-main__caption {
+  margin: 0;
   font-size: 20px;
   line-height: 26px;
-  margin: 0;
 
   @media (min-width: @desktop-width) {
+    margin-left: 38px;
+    width: 760px;
     font-size: 36px;
     line-height: 42px;
     font-weight: 400;
-    width: 760px;
-    margin-left: 38px;
   }
 }
 

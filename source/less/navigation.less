@@ -1,0 +1,43 @@
+.navigation {
+
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.navigation__item {
+  position: relative;
+}
+
+.navigation__link {
+  display: block;
+}
+
+.navigation__submenu-title {
+  margin: 0;
+}
+
+.navigation__submenu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation__submenu {
+  position: absolute;
+  // top: 0;
+  // left: 98px;
+  // padding: 0 0 0 2px;
+  visibility: hidden;
+}
+
+.navigation__item:hover .navigation__submenu {
+  visibility: visible;
+  // position: absolute;
+}
