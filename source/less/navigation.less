@@ -1,6 +1,6 @@
-.navigation {
+// .navigation {
 
-}
+// }
 
 .navigation__list {
   margin: 0;
@@ -9,6 +9,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -37,7 +38,15 @@
   visibility: hidden;
 }
 
-.navigation__item:hover .navigation__submenu {
-  visibility: visible;
-  // position: absolute;
-}
+// .navigation__item:active .navigation__submenu {
+//   visibility: visible;
+// }
+
+
+@media (min-width: @desktop-width) {
+  .navigation__item:hover .navigation__submenu {
+    visibility: visible;
+    // position: absolute;
+    }
+  }
+

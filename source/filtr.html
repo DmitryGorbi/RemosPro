@@ -15,7 +15,7 @@
     <!--Filtr-->
     <section>
       <h2>Фильтр поиска</h2>
-      <form action="https://echo.htmlacademy.ru/courses" method="post" enctype="multipart/form-data">
+      <form class="filter-catalog" action="https://echo.htmlacademy.ru/courses" method="get" enctype="multipart/form-data">
         <fieldset>
           <legend>Основные параметры</legend>
           <select name="type_deal" id="">
@@ -44,7 +44,7 @@
           </div>
           <input type="search" placeholder="Введите адрес">
         </fieldset>
-        <fieldset>
+        <fieldset class="filter__rooms-count">
           <legend>Количество комнат</legend>
           <label for="studio">
             <input type="button" name="studio" value="Студия" id="studio" aria-pressed="false">

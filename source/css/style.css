@@ -62,6 +62,7 @@ a {
 @media (min-width: 1240px) {
   .navigation__list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .navigation__item {
@@ -81,8 +82,10 @@ a {
   position: absolute;
   visibility: hidden;
 }
-.navigation__item:hover .navigation__submenu {
-  visibility: visible;
+@media (min-width: 1240px) {
+  .navigation__item:hover .navigation__submenu {
+    visibility: visible;
+  }
 }
 .page-header {
   border-bottom: 1px #cccccc solid;
@@ -501,6 +504,16 @@ a {
     width: 20px;
     height: 20px;
   }
+}
+.filter__rooms-count {
+  border: none;
+  display: flex;
+}
+legend {
+  padding: 0;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  float: left;
 }
 
 /*# sourceMappingURL=style.css.map */
