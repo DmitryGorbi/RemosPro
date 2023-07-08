@@ -44,7 +44,7 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", sans-serif, "Arial";
   font-weight: 400;
   color: #333333;
   background-color: #ffffff;
@@ -74,7 +74,6 @@ button {
 }
 a {
   text-decoration: none;
-  color: #333333;
 }
 .wrapper-content {
   padding: 0 20px;
@@ -88,6 +87,16 @@ a {
   .wrapper {
     width: 1200px;
     margin: 0 auto;
+  }
+}
+.h3-title {
+  margin: 0;
+}
+@media (min-width: 1240px) {
+  .page-header {
+    display: flex;
+    margin-bottom: 65px;
+    border-bottom: 1px #cccccc solid;
   }
 }
 .logo-text {
@@ -112,9 +121,6 @@ a {
 .navigation__link {
   display: block;
 }
-.navigation__submenu-title {
-  margin: 0;
-}
 .navigation__submenu-list {
   list-style: none;
   padding: 0;
@@ -126,12 +132,6 @@ a {
 @media (min-width: 1240px) {
   .navigation__item:hover .navigation__submenu {
     visibility: visible;
-  }
-}
-@media (min-width: 1240px) {
-  .page-header {
-    margin-bottom: 65px;
-    border-bottom: 1px #cccccc solid;
   }
 }
 .page-main__header {
