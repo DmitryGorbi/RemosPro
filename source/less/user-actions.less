@@ -1,0 +1,37 @@
+.user-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.user-actions__item {
+  position: relative;
+}
+
+.user-actions__offer-link {
+  // display: block;
+}
+
+.user-actions__offer-link {
+  // position: absolute;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: block;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 3px;
+    top: 9px;
+    left: 0;
+    background-color: @basic-green;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}

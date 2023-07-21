@@ -1,4 +1,4 @@
-.users-actions {
+.actions {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -6,10 +6,14 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     column-gap: 20px;
+
+    &--config {
+      padding-left: 121px;
+    }
   }
 }
 
-.users-actions__button {
+.actions__button {
   font-size: 14px;
   line-height: 18px;
   padding-top: 8px;
@@ -29,12 +33,12 @@
   }
 }
 
-.users-actions__button-reg {
+.actions__button-reg {
   color: @white;
   background-color: @basic-green;
 }
 
-.users-actions__icon-person {
+.actions__icon-person {
   position: relative;
 
   &::before {
@@ -56,7 +60,7 @@
   }
 }
 
-.users-actions__button-faq {
+.actions__button-faq {
   position: relative;
   padding-top: 6px;
   padding-bottom: 8px;
@@ -68,7 +72,7 @@
   }
 }
 
-.users-actions__icon-faq {
+.actions__icon-faq {
   position: relative;
 
   &::before {

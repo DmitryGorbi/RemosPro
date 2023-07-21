@@ -1,8 +1,23 @@
 .page-header {
+  padding-top: 13px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @light-gray;
+}
 
-  @media (min-width: @desktop-width) {
-    display: flex;
-    margin-bottom: 65px;
-    border-bottom: 1px @dark-gray solid;
-  }
+.page-header__navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-header__logo {
+  margin-left: 40px;
+}
+
+.page-header__user-actions {
+  margin-left: auto;
+}
+
+.page-header__user-nav {
+  display: none;
 }
