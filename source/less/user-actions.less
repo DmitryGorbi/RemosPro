@@ -1,37 +1,79 @@
 .user-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 50px;
+  column-gap: 5px;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    align-items: center;
+  }
 }
 
 .user-actions__item {
-  position: relative;
+  @media (min-width: @desktop-width) {
+  }
 }
 
-.user-actions__offer-link {
-  // display: block;
+.user-actions__button-like {
+  padding: 5px;
+  @media (min-width: @desktop-width) {
+    padding: 10px;
+  }
 }
 
-.user-actions__offer-link {
-  // position: absolute;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
+.user-actions__like-icon {
   display: block;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    width: 15px;
-    height: 3px;
-    top: 9px;
-    left: 0;
-    background-color: @basic-green;
+  @media (min-width: @desktop-width) {
+    height: 16px;
   }
+}
 
-  &::after {
-    transform: rotate(90deg);
+.user-actions__button-add {
+  padding: 5px;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    color: inherit;
+    padding: 5px;
+    border: 1px solid @basic-green;
+    border-radius: 5px;
+    line-height: 20px;
   }
+}
+
+// Add Icon
+
+.user-actions__add-icon {
+  display: block;
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.user-actions__add-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    // margin: 0;
+    // padding: 0;
+    // font-size: 15px;
+
+    line-height: 20px;
+  }
+}
+
+// Изменил цвет иконки
+.user-actions__like-icon path {
+  // fill: blue;
+  fill: @basic-green;
+}
+
+.user-actions__add-icon path {
+  // fill: blue;
+  fill: @basic-green;
 }

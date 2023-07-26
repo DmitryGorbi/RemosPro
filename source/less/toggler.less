@@ -1,0 +1,43 @@
+.toggler {
+  position: relative;
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-right: 20px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.navigation--closed .toggler::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 23px;
+  height: 2px;
+  background-color: @basic-black;
+  box-shadow: 0 6px 0 0 @basic-black, 0 12px 0 0 @basic-black;
+}
+
+.navigation--open .toggler {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 23px;
+    height: 2px;
+    background-color: @basic-black;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}

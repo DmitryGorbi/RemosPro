@@ -1,3 +1,45 @@
+.user-nav {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    color: @basic-green;
+  }
+}
+
 .user-nav--disabled {
   display: none;
+}
+
+.user-nav__link {
+  display: block;
+  color: inherit;
+
+  @media (min-width: @desktop-width) {
+    line-height: 20px;
+    padding: 18px 10px 19px 10px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-nav__link--reg {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: 17px;
+      transform: translateY(-50%);
+      background-color: @basic-green;
+    }
+  }
 }

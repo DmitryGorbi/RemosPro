@@ -1,0 +1,12 @@
+.layout__header {
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr 250px min-content;
+    column-gap: 20px;
+  }
+}
