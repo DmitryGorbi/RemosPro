@@ -8,7 +8,15 @@
 
 @media (max-width: 1239px) {
   .navigation--closed .navigation__list {
-    display: none;
+    // display: none;
+    transition: 0.5s;
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1239px) {
+  .navigation--open .navigation__list {
+    transition: 0.5s;
   }
 }
 
@@ -22,9 +30,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: blue;
+  background-color: @light-green;
   padding: 20px;
-  color: @white;
+  // color: @white;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+  }
 
   @media (min-width: @desktop-width) {
     position: static;
@@ -70,24 +82,49 @@
     font-weight: 400;
     margin: 0;
     padding: 18px 10px 20px 10px;
+    position: relative;
 
-    &--active {
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        background: @basic-green;
-      }
+    &:hover::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: @basic-green;
     }
+
+    // &--active {
+    //   position: relative;
+
+    //   &::after {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     height: 2px;
+    //     background: @basic-green;
+    //   }
+    // }
   }
 }
 
-// Нормальный блок
+.navigation__item-link--closed ~ .navigation__submenu {
+  display: none;
+}
+
+// main {
+//   position: fixed;
+//   left: -100%;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.7);
+//   opacity: 0;
+//   z-index: 0;
+//   transition: opacity 0.3s ease;
+// }
 
 @media (min-width: @desktop-width) {
   .navigation__submenu {
@@ -99,13 +136,12 @@
   .navigation__item:focus-within .navigation__submenu {
     display: block;
     width: 1200px;
-    min-height: 420px;
-    padding: 40px 20px;
+    height: 500px;
+    margin-top: 1px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    background-color: @extra-light-gray;
-    // background-color: @white;
+    background-color: @white;
     border-bottom: 1px solid @basic-green;
     padding: 40px 100px 40px 145px;
     box-sizing: border-box;
@@ -115,20 +151,6 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 50px;
     }
-  }
-}
-
-// .navigation__submenu--sale {
-//   @media (min-width: @desktop-width) {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     column-gap: 50px;
-//   }
-// }
-
-.navigation__submenu-wrapper {
-  @media (min-width: @desktop-width) {
-    // margin: 0 100px 0 145px;
   }
 }
 

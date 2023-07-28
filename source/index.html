@@ -46,11 +46,11 @@
                   d="M426.666667 736 426.666667 597.333333 128 597.333333 128 426.666667 426.666667 426.666667 426.666667 288 650.666667 512 426.666667 736M341.333333 85.333333 725.333333 85.333333C772.266667 85.333333 810.666667 123.733333 810.666667 170.666667L810.666667 853.333333C810.666667 900.266667 772.266667 938.666667 725.333333 938.666667L341.333333 938.666667C294.4 938.666667 256 900.266667 256 853.333333L256 682.666667 341.333333 682.666667 341.333333 853.333333 725.333333 853.333333 725.333333 170.666667 341.333333 170.666667 341.333333 341.333333 256 341.333333 256 170.666667C256 123.733333 294.4 85.333333 341.333333 85.333333Z"
                 />
               </svg>
-              <span class="navigation__login-text">Войти</span>
+              <span class="navigation__login-text">Войти или зарегистрироваться</span>
             </button>
           </li>
           <li class="navigation__item" tabindex="0">
-            <a class="navigation__item-link navigation__item-link--active" href="#" tabindex="0">Продажа</a>
+            <a class="navigation__item-link navigation__item-link--closed" href="#" tabindex="0">Продажа</a>
             <div class="navigation__submenu navigation__submenu--sale">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
@@ -115,7 +115,7 @@
             </div>
           </li>
           <li class="navigation__item" tabindex="0">
-            <a class="navigation__item-link" href="#">Аренда</a>
+            <a class="navigation__item-link navigation__item-link--closed" href="#">Аренда</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
@@ -176,7 +176,7 @@
             </div>
           </li>
           <li class="navigation__item" tabindex="0">
-            <a class="navigation__item-link" href="#">Каталог новостроек</a>
+            <a class="navigation__item-link navigation__item-link--closed" href="#">Каталог новостроек</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
@@ -201,7 +201,7 @@
             </div>
           </li>
           <li class="navigation__item" tabindex="0">
-            <a class="navigation__item-link" href="">Специалисты</a>
+            <a class="navigation__item-link navigation__item-link--closed" href="#">Специалисты</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Риэлторы</a>
@@ -250,7 +250,7 @@
             </div>
           </li>
           <li class="navigation__item">
-            <a class="navigation__item-link" href="">Ипотека</a>
+            <a class="navigation__item-link" href="#">Ипотека</a>
           </li>
         </ul>
       </nav>
@@ -267,7 +267,7 @@
           </button>
         </li>
         <li class="user-actions__item" tabindex="0">
-          <a class="user-actions__button-add" href="index.html" tabindex="0">
+          <a class="user-actions__button-add" href="#" tabindex="0">
             <svg class="user-actions__add-icon" width="20" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 7H13.5556V9H2V7Z" fill="#20A052" />
               <path d="M9 2V13.5556H7L7 2L9 2Z" fill="#20A052" />
@@ -295,7 +295,9 @@
         </ul>
       </div>
     </header>
-    <p class="page-header__locale wrapper-content">Москва</p>
+    <main>
+      <p class="page-header__locale wrapper-content">Москва</p>
+    </main>
 
     <script src="js/main.js"></script>
   </body>

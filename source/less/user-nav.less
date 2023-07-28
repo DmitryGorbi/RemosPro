@@ -1,8 +1,8 @@
 .user-nav {
   display: flex;
 
-  @media (min-width: @desktop-width) {
-    margin-left: auto;
+  @media (min-width: @tablet-width) {
+    // margin-left: auto;
     color: @basic-green;
   }
 }
@@ -14,6 +14,10 @@
 .user-nav__link {
   display: block;
   color: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 10px 10px 10px;
+  }
 
   @media (min-width: @desktop-width) {
     line-height: 20px;
@@ -29,7 +33,7 @@
 .user-nav__link--reg {
   position: relative;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     padding-right: 0;
     &::before {
       position: absolute;

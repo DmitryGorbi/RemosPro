@@ -24,6 +24,10 @@
 .page-header__user-actions {
   margin-left: auto;
 
+  @media (min-width: @tablet-width) {
+    margin-right: 40px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0;
   }
@@ -31,10 +35,8 @@
 
 .page-header__user-nav {
   display: none;
-  @media (min-width: @desktop-width) {
+
+  @media (min-width: @tablet-width) {
     display: block;
   }
-}
-
-.page-header__locale {
 }

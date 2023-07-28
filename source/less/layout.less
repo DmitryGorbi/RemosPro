@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: min-content 1fr 250px min-content;
