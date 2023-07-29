@@ -137,10 +137,22 @@ a {
     padding: 3px 0 0 0;
   }
 }
+.logo {
+  width: 75px;
+  height: 19px;
+}
+@media (min-width: 1240px) {
+  .logo {
+    width: 112px;
+    height: 42px;
+    position: relative;
+    top: -2px;
+  }
+}
 @media (min-width: 1240px) {
   .page-header__logo {
     margin-left: 0;
-    padding: 15px 0 17px 0;
+    padding: 0px 0 0px 0;
   }
 }
 .page-header__user-actions {
@@ -171,6 +183,10 @@ a {
   .navigation--mobile {
     order: 0;
   }
+}
+.navigation__button-login {
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 1239px) {
   .navigation--closed .navigation__list {
@@ -435,14 +451,16 @@ a {
 }
 .user-actions__like-icon {
   display: block;
+  position: relative;
+  top: 2px;
 }
-@media (min-width: 1240px) {
+@media (min-width: 768px) {
   .user-actions__like-icon {
-    height: 16px;
+    top: 1px;
   }
 }
 .user-actions__button-add {
-  padding: 5px;
+  padding: 5px 0 5px 5px;
   display: block;
 }
 @media (min-width: 768px) {
@@ -467,6 +485,13 @@ a {
 }
 .user-actions__add-icon {
   display: block;
+  position: relative;
+  top: 1px;
+}
+@media (min-width: 768px) {
+  .user-actions__add-icon {
+    top: 0;
+  }
 }
 .user-actions__add-text {
   display: none;
