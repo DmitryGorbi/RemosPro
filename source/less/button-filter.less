@@ -1,0 +1,29 @@
+.button-filter {
+  display: none;
+  @media (min-width: @desktop-width) {
+    display: block;
+    text-align: start;
+    padding: 5px 10px 5px 10px;
+    background-color: @extra-light-gray;
+    border: @gray 1px solid;
+    border-radius: 4px;
+
+    &:active,
+    &:hover {
+      border-color: @basic-green;
+    }
+
+    min-width: 90px;
+    box-sizing: border-box;
+  }
+}
+
+.button-filter__icon {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+.button-filter__icon--rotate {
+  transform: rotate(180deg);
+}

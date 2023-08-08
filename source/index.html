@@ -44,14 +44,14 @@
               <span class="navigation__login-text">Войти или зарегистрироваться</span>
             </button>
           </li>
-          <li class="navigation__item" tabindex="0">
+          <li class="navigation__item">
             <a class="navigation__item-link navigation__item-link--closed" href="#" tabindex="0">Продажа</a>
-            <div class="navigation__submenu navigation__submenu--sale" focusable="false">
-              <div class="navigation__submenu-wrapper" focusable="false">
+            <div class="navigation__submenu navigation__submenu--sale" aria-hidden="true">
+              <div class="navigation__submenu-wrapper" focusable="false" aria-hidden="true">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
                 <ul class="list navigation__submenu-list">
                   <li class="navigation__submenu-item">
-                    <a class="navigation__submenu-link" href="#">Квартиры</a>
+                    <a class="navigation__submenu-link" href="#" tabindex="0">Квартиры</a>
                   </li>
                   <li class="navigation__submenu-item">
                     <a class="navigation__submenu-link" href="#">Дома и дачи</a>
@@ -109,14 +109,14 @@
               <div class="sale-aside"></div>
             </div>
           </li>
-          <li class="navigation__item" tabindex="0">
+          <li class="navigation__item">
             <a class="navigation__item-link navigation__item-link--closed" href="#">Аренда</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
                 <ul class="list navigation__submenu-list">
                   <li class="navigation__submenu-item">
-                    <a class="navigation__submenu-link" href="#">Квартира</a>
+                    <a class="navigation__submenu-link" href="#" tabindex="0">Квартира</a>
                   </li>
                   <li class="navigation__submenu-item">
                     <a class="navigation__submenu-link" href="#">Дом</a>
@@ -170,14 +170,14 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item" tabindex="0">
+          <li class="navigation__item">
             <a class="navigation__item-link navigation__item-link--closed" href="#">Каталог новостроек</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
                 <ul class="list navigation__submenu-list">
                   <li class="navigation__submenu-item">
-                    <a class="navigation__submenu-link" href="#">Квартира</a>
+                    <a class="navigation__submenu-link" href="#" tabindex="0">Квартира</a>
                   </li>
                   <li class="navigation__submenu-item">
                     <a class="navigation__submenu-link" href="#">Дом</a>
@@ -195,14 +195,14 @@
               </div>
             </div>
           </li>
-          <li class="navigation__item" tabindex="0">
+          <li class="navigation__item">
             <a class="navigation__item-link navigation__item-link--closed" href="#">Специалисты</a>
             <div class="navigation__submenu">
               <div class="navigation__submenu-wrapper">
                 <a class="navigation__submenu-title">Риэлторы</a>
                 <ul class="list navigation__submenu-list">
                   <li class="navigation__submenu-item">
-                    <a class="navigation__submenu-link" href="#">Квартира</a>
+                    <a class="navigation__submenu-link" href="#" tabindex="0">Квартира</a>
                   </li>
                   <li class="navigation__submenu-item">
                     <a class="navigation__submenu-link" href="#">Дом</a>
@@ -251,7 +251,7 @@
       </nav>
       <ul class="list page-header__user-actions user-actions">
         <li class="user-actions__item">
-          <button type="button" class="button user-actions__button-like">
+          <button type="button" class="button user-actions__button-like" aria-label="Список, сохраненных объявлений">
             <svg class="user-actions__like-icon" width="20px" height="18px">
               <use xlink:href="img/icons/sprite.svg#like"></use>
             </svg>
@@ -264,7 +264,7 @@
             <span class="visually-hidden">Likes</span>
           </button>
         </li>
-        <li class="user-actions__item" tabindex="0">
+        <li class="user-actions__item">
           <a class="user-actions__button-add" href="#" tabindex="0">
             <svg class="user-actions__add-icon" width="20" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 7H13.5556V9H2V7Z" fill="#20A052" />
@@ -277,7 +277,7 @@
       <div class="page-header__user-nav">
         <ul class="list user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Войти</a>
+            <a class="user-nav__link" href="#" tabindex="0">Войти</a>
           </li>
           <li class="user-nav__item">
             <a class="user-nav__link user-nav__link--reg" href="#">Зарегистрироваться</a>
@@ -295,6 +295,7 @@
     </header>
     <main>
       <p class="page-header__locale wrapper-content">Москва</p>
+      <a href="filter.html">Filter</a>
     </main>
 
     <script src="js/main.js"></script>
