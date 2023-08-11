@@ -1,15 +1,15 @@
 const filter = document.querySelector('.filter');
-const filterSelect = filter.querySelectorAll('.filter__select');
+const dealSelect = filter.querySelector('.filter__select-deal');
+const typeSelect = filter.querySelector('.filter__select-type');
+const dealFieldset = filter.querySelector('.filter__fieldset-deal');
 const filterSelectItems = filter.querySelectorAll('.filter__deal-item');
-const buttonFilter = filter.querySelectorAll('.button-filter');
+const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
-
 const filterFieldset = filter.querySelectorAll('.filter__fieldset');
 const buttonsTitle = filter.querySelectorAll('.button-filter__text');
-const selectItemText = filter.querySelectorAll('.filter__deal-label');
-console.log(filterFieldset);
 
-// Обработчик на смену класса в мобильной версии
+const filterSelect = filter.querySelectorAll('.filter__select');
+
 const dealItemsToggleMobile = (evt) => {
   let target = evt.target;
 
@@ -20,16 +20,16 @@ const dealItemsToggleMobile = (evt) => {
   }
 };
 
-filter.addEventListener('click', dealItemsToggleMobile);
+dealFieldset.addEventListener('click', dealItemsToggleMobile);
 
 // Убираю обработчик на десктопе
 
 const mediaQueryFilter = window.matchMedia('(min-width: 1240px)');
 if (mediaQueryFilter.matches) {
-  filter.removeEventListener('click', dealItemsToggleMobile);
+  dealFieldset.removeEventListener('click', dealItemsToggleMobile);
 }
 
-// Desktop Filter
+// // Desktop Filter
 
 const isEscEvent = (evt) => {
   return evt.key === 'Escape' || evt.key === 'Esc';
@@ -59,7 +59,9 @@ const openSelect = (button, select, icon) => {
     select.classList.toggle('filter__select--disabled');
     icon.classList.toggle('button-filter__icon--rotate');
     document.addEventListener('keydown', isEscKeydown);
-    filter.addEventListener('click', inputClickSelect);
+    if (mediaQueryFilter.matches) {
+      filter.addEventListener('click', inputClickSelect);
+    }
   });
 };
 
@@ -68,24 +70,22 @@ const closeSelect = (select, icon) => {
   icon.classList.remove('button-filter__icon--rotate');
 };
 
-for (let i = 0; i < buttonFilter.length; i++) {
-  openSelect(buttonFilter[i], filterSelect[i], buttonIcon[i]);
+for (let i = 0; i < buttonsFilter.length; i++) {
+  openSelect(buttonsFilter[i], filterSelect[i], buttonIcon[i]);
 }
 
 // Замена текста в кнопке
 
-const changeButtonsTitle = (fieldset, title, text) => {
+const changeButtonsTitle = (fieldset, title) => {
   fieldset.addEventListener('click', (evt) => {
     if (evt.target.matches('input[type="radio"]')) {
       title.textContent = evt.target.value;
-      console.log(title);
-      console.log(text);
     }
   });
 };
 
 for (let i = 0; i < buttonsTitle.length; i++) {
-  changeButtonsTitle(filterFieldset[i], buttonsTitle[i], selectItemText[i]);
+  changeButtonsTitle(filterFieldset[i], buttonsTitle[i]);
 }
 
 const windowClick = (select, button) => {

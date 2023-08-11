@@ -1,29 +1,55 @@
 .button-filter {
-  display: none;
-  @media (min-width: @desktop-width) {
-    display: block;
+  border-radius: 4px;
+  &--deal {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+  @media (min-width: @tablet-width) {
     text-align: start;
-    padding: 5px 10px 5px 10px;
-    background-color: @extra-light-gray;
-    border: @gray 1px solid;
-    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid @light-gray;
 
     &:active,
     &:hover {
       border-color: @basic-green;
     }
 
-    min-width: 90px;
+    min-width: 80px;
     box-sizing: border-box;
   }
 }
 
 .button-filter__icon {
-  position: relative;
-  top: 3px;
-  left: 5px;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+
+  path {
+    fill: blue;
+  }
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 3px;
+    left: 5px;
+  }
 }
 
 .button-filter__icon--rotate {
   transform: rotate(180deg);
+}
+
+.button-filter--type {
+  border: 1px solid @light-gray;
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 14px 0 16px 10px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding: 5px 10px;
+  }
 }
