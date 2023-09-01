@@ -1,0 +1,155 @@
+.filter-add {
+  font-size: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px;
+    width: 900px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.filter-add__title {
+  margin: 0;
+  padding: 0 0 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid @light-gray;
+}
+
+.filter-add__subtitle {
+  font-weight: 400;
+  margin: 0;
+  font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    margin-bottom: auto;
+  }
+}
+
+.filter-add__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
+    align-items: center;
+  }
+}
+
+.filter-add__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.filter-add__item {
+  flex-grow: 1;
+}
+
+.filter-add__sublist {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.filter-add__input:focus + .pseudo-checkbox,
+.filter-add__input:hover + .pseudo-checkbox {
+  border-color: @basic-green;
+  border-radius: 4px;
+}
+
+.filter-add__input:checked + .pseudo-checkbox {
+  background-color: @basic-green;
+  color: @white;
+  border-color: @basic-black;
+}
+
+.label {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  column-gap: 5px;
+  row-gap: 5px;
+
+  &:hover,
+  &:active {
+    border-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+}
+
+.label__title {
+  grid-column: 1/-1;
+  @media (min-width: @tablet-width) {
+    margin-right: 5px;
+  }
+}
+
+.label__wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid @light-gray;
+  border-radius: 4px;
+
+  &:hover,
+  &:active {
+    border-color: @basic-green;
+  }
+}
+
+.label__floor-margin {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.label__margin {
+  margin-top: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 10px;
+  }
+}
+
+.filter-add__input-text {
+  padding: 5px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.filter-add__subgroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.filter-add__floor {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+}

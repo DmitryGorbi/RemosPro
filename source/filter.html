@@ -9,17 +9,17 @@
   </head>
 
   <body class="page__body">
-    <main>
+    <main class="main">
       <header></header>
       <!--Filter-->
-      <section class="container form">
-        <h2 class="form__caption">Фильтр поиска недвижимости</h2>
-        <div class="form__wrapper">
+      <search class="main-search container" role="search">
+        <h2 class="main-search__caption">Фильтр поиска недвижимости</h2>
+        <div class="main-search__wrapper">
           <form class="filter" action="https://echo.htmlacademy.ru/courses" autocomplete="off">
-            <fieldset class="filter__fieldset filter__fieldset-deal">
-              <legend class="filter__legend visually-hidden">Тип сделки</legend>
+            <fieldset class="filter__fieldset filter__fieldset-js">
+              <legend class="visually-hidden">Тип сделки</legend>
               <button class="button button-filter button-filter--deal" type="button" tabindex="0">
-                <span class="button-filter__text">Купить</span>
+                <span class="button-filter__text button-filter__text-js">Купить</span>
                 <svg class="button-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.99998 12C7.78492 12 7.56988 11.916 7.40591 11.7483L2.24617 6.46804C1.91794 6.13215 1.91794 5.58757 2.24617 5.25181C2.57426 4.91606 3.10632 4.91606 3.43458 5.25181L7.99998 9.92404L12.5654 5.25198C12.8936 4.91623 13.4256 4.91623 13.7537 5.25198C14.0821 5.58773 14.0821 6.13231 13.7537 6.4682L8.59405 11.7484C8.43 11.9162 8.21497 12 7.99998 12Z"
@@ -27,21 +27,25 @@
                   />
                 </svg>
               </button>
-              <ul class="list filter__select filter__select-deal filter__select--disabled">
-                <li class="filter__item filter__deal-item filter__deal-item--current">
-                  <label class="filter__label filter__deal-label" for="sell" tabindex="0">Купить</label>
-                  <input class="visually-hidden" type="radio" name="deal_type" id="sell" value="Купить" checked tabindex="-1" />
+              <ul class="list filter__select filter__select--disabled deal">
+                <li class="deal__item">
+                  <label class="">
+                    <input id="deal_type_field" class="visually-hidden deal__input" type="radio" name="filter[deal_type]" value="Купить" checked tabindex="0" />
+                    <span class="deal__input-text">Купить</span>
+                  </label>
                 </li>
-                <li class="filter__item filter__deal-item">
-                  <label class="filter__label filter__deal-label" for="rent" tabindex="0">Снять</label>
-                  <input class="visually-hidden" type="radio" name="deal_type" id="rent" value="Снять" tabindex="-1" />
+                <li class="deal__item">
+                  <label class="filter__label filter__deal-label">
+                    <input id="deal_type_field" class="visually-hidden deal__input" type="radio" name="filter[deal_type]" value="Снять" tabindex="0" />
+                    <span class="deal__input-text">Снять</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend visually-hidden">Тип недвижимости</legend>
+            <fieldset class="filter__fieldset filter__fieldset-js">
+              <legend class="visually-hidden">Тип недвижимости</legend>
               <button class="button button-filter button-filter--type" type="button" tabindex="0">
-                <span class="button-filter__text">Квартиру</span>
+                <span class="button-filter__text button-filter__text-js">Квартиру</span>
                 <svg class="button-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.99998 12C7.78492 12 7.56988 11.916 7.40591 11.7483L2.24617 6.46804C1.91794 6.13215 1.91794 5.58757 2.24617 5.25181C2.57426 4.91606 3.10632 4.91606 3.43458 5.25181L7.99998 9.92404L12.5654 5.25198C12.8936 4.91623 13.4256 4.91623 13.7537 5.25198C14.0821 5.58773 14.0821 6.13231 13.7537 6.4682L8.59405 11.7484C8.43 11.9162 8.21497 12 7.99998 12Z"
@@ -49,56 +53,367 @@
                   />
                 </svg>
               </button>
-              <div class="filter__select filter__select-type select__layout filter__select--disabled">
-                <p class="filter__select-title">Жилая недвижимость</p>
+              <div class="filter__select filter__type-layout type filter__select--disabled">
+                <p class="type__title">Жилая недвижимость</p>
                 <ul class="list">
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="flat" tabindex="0">Квартиру</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="flat" value="Квартиру" checked tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="flat" value="Квартиру" checked />
+                      <span class="type__radio">Квартиру</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="new__flat" tabindex="0">Новостройку</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="new__flat" value="Новостройку" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="new__flat" value="Новостройку" />
+                      <span class="type__radio">Новостройку</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="old__flat" tabindex="0">Вторичную квартиру</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="old__flat" value="Вторичную квартиру" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="old__flat" value="Вторичную квартиру" />
+                      <span class="type__radio">Вторичную квартиру</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="part__flat" tabindex="0">Долю в квартире</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="part__flat" value="Долю в квартире" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="part__flat" value="Долю в квартире" />
+                      <span class="type__radio">Долю в квартире</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="room" tabindex="0">Комнату</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="room" value="Комнату" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="room" value="Комнату" />
+                      <span class="type__radio">Комнату</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="house" tabindex="0">Дом</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="house" value="Дом" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="house" value="Дом" />
+                      <span class="type__radio">Дом</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="townhouse" tabindex="0">Таунхаус</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="townhouse" value="Таунхаус" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="townhouse" value="Таунхаус" />
+                      <span class="type__radio">Таунхаус</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="part__house" tabindex="0">Долю в доме</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="part__house" value="Долю в доме" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="part__house" value="Долю в доме" />
+                      <span class="type__radio">Долю в доме</span>
+                    </label>
                   </li>
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="land" tabindex="0">Земельный участок</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="land" value="Земельный участок" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="land" value="Земельный участок" />
+                      <span class="type__radio">Земельный участок</span>
+                    </label>
                   </li>
                 </ul>
-                <p class="filter__select-title">Коммерческая недвижимость</p>
+                <p class="type__title">Коммерческая недвижимость</p>
                 <ul class="list">
-                  <li class="filter__item filter__type-item">
-                    <label class="filter__label filter__type-label" for="office" tabindex="0">Офис</label>
-                    <input class="visually-hidden filter__type-input" type="radio" name="type" id="office" value="Офис" tabindex="-1" /><span class="filter__radio"></span>
+                  <li class="filter__type-item">
+                    <label>
+                      <input class="visually-hidden type__input" type="radio" name="type" id="office" value="Офис" />
+                      <span class="type__radio">Офис</span>
+                    </label>
                   </li>
                 </ul>
               </div>
             </fieldset>
-            <input class="button button-main" type="submit" value="134 000 объявлений" />
+            <fieldset class="filter__fieldset filter__fieldset-price">
+              <legend class="visually-hidden">Стоимость недвижимости</legend>
+              <button class="button button-filter button-filter--price" type="button" tabindex="0">
+                <span class="button-filter__text">Цена</span>
+                <svg class="button-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99998 12C7.78492 12 7.56988 11.916 7.40591 11.7483L2.24617 6.46804C1.91794 6.13215 1.91794 5.58757 2.24617 5.25181C2.57426 4.91606 3.10632 4.91606 3.43458 5.25181L7.99998 9.92404L12.5654 5.25198C12.8936 4.91623 13.4256 4.91623 13.7537 5.25198C14.0821 5.58773 14.0821 6.13231 13.7537 6.4682L8.59405 11.7484C8.43 11.9162 8.21497 12 7.99998 12Z"
+                    fill="#20A052"
+                  />
+                </svg>
+              </button>
+              <div class="list filter__select filter__price-layout filter__select--disabled price">
+                <ul class="list price__list">
+                  <li class="price__item">
+                    <label class="price__label">
+                      <input class="input-number" type="number" name="filter[price][from]" value="" placeholder="Цена от" />
+                      <span class="price__input-text">₽</span>
+                    </label>
+                  </li>
+                  <li class="price__item">
+                    <label class="price__label">
+                      <input class="input-number" type="number" name="filter[price][to]" value="" placeholder="до" />
+                      <span class="price__input-text">₽</span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="control control--layout">
+                  <div class="control__container control__container--active">
+                    <label class="control__label">
+                      <input class="visually-hidden control__radio" type="radio" name="price__type" value="all__price" checked />
+                      <span class="control__text">всё</span>
+                    </label>
+                  </div>
+                  <div class="control__container">
+                    <label class="control__label">
+                      <input class="visually-hidden control__radio" type="radio" name="price__type" value="miter__price" />
+                      <span class="control__text">м²</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__fieldset filter__fieldset-search">
+              <legend class="visually-hidden">Поиск недвижимости по адресу</legend>
+              <div class="filter-search">
+                <label class="filter-search__label">
+                  <input class="filter-search__input" type="text" name="filter[place]" value="" placeholder="Город, адрес, метро, район, шоссе или ЖК" />
+                </label>
+                <button class="button filter-search__button" type="button"><span>Метро</span></button>
+                <button class="button filter-search__button" type="button"><span>Район</span></button>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__fieldset filter__fieldset-add">
+              <legend class="visually-hidden">Расширенные фильтры поиска</legend>
+              <button class="button button-filter button-filter--add" type="button" tabindex="0">
+                <span class="button-filter__text">Фильтры</span>
+                <svg class="button-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99998 12C7.78492 12 7.56988 11.916 7.40591 11.7483L2.24617 6.46804C1.91794 6.13215 1.91794 5.58757 2.24617 5.25181C2.57426 4.91606 3.10632 4.91606 3.43458 5.25181L7.99998 9.92404L12.5654 5.25198C12.8936 4.91623 13.4256 4.91623 13.7537 5.25198C14.0821 5.58773 14.0821 6.13231 13.7537 6.4682L8.59405 11.7484C8.43 11.9162 8.21497 12 7.99998 12Z"
+                    fill="#20A052"
+                  />
+                </svg>
+              </button>
+              <div class="filter__select filter-add filter-add--layout filter__select--disabled">
+                <h3 class="filter-add__title">Расширенные фильтры</h3>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Количество комнат</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="200" />
+                      <span class="pseudo-checkbox">Студия</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="1" />
+                      <span class="pseudo-checkbox">1</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="2" />
+                      <span class="pseudo-checkbox">2</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="3" />
+                      <span class="pseudo-checkbox">3</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="4" />
+                      <span class="pseudo-checkbox">4</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="5" />
+                      <span class="pseudo-checkbox">5</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="6" />
+                      <span class="pseudo-checkbox">6</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Площадь, м²</p>
+                  <div class="filter-add__sublist">
+                    <label class="label">
+                      <span class="label__title">Общая</span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_all][from]" value="" maxlength="7" placeholder="от" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_all][to]" value="" placeholder="до" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                    </label>
+                    <label class="label">
+                      <span class="label__title">Жилая</span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_living][from]" value="" placeholder="от" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_living][to]" value="" placeholder="до" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                    </label>
+                    <label class="label">
+                      <span class="label__title">Кухня</span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_kitchen][from]" value="" placeholder="от" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                      <span class="label__wrapper">
+                        <input class="input-number input-number--sq" type="number" name="filter[area_kitchen][to]" value="" placeholder="до" />
+                        <span class="filter-add__input-text">м²</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Апартаменты</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[is_apartment]" value="2" />
+                      <span class="pseudo-checkbox">Без апартаментов</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[is_apartment]" value="1" />
+                      <span class="pseudo-checkbox">Только апартаменты</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Планировка</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="100" />
+                      <span class="pseudo-checkbox">Изолированная</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="200" />
+                      <span class="pseudo-checkbox">Смежная</span>
+                    </label>
+                    <label class="label__margin">
+                      <input type="checkbox" name="filter[is_plan]" value="1" />
+                      <span>С планировкой</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Ремонт</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[repair][]" value="300" />
+                      <span class="pseudo-checkbox">Дизайнерский</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[repair][]" value="200" />
+                      <span class="pseudo-checkbox">Евро</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[repair][]" value="100" />
+                      <span class="pseudo-checkbox">Косметический</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[repair][]" value="10" />
+                      <span class="pseudo-checkbox">absent</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle filter-add__subtitle--align">Этажность</p>
+                  <div class="filter-add__subgroup">
+                    <ul class="list filter-add__sublist">
+                      <li class="label">
+                        <label class="label__floor-margin">
+                          <span class="label__title">Этаж</span>
+                          <input class="input-number input-number--border" type="number" name="filter[floor][from]" value="" placeholder="от" />
+                        </label>
+                        <label>
+                          <input class="input-number input-number--border" type="number" name="filter[floor][to]" value="" placeholder="до" />
+                        </label>
+                      </li>
+                      <li class="label">
+                        <label class="label__floor-margin">
+                          <span class="label__title">В доме</span>
+                          <input class="input-number input-number--border" type="number" name="floor_all_from" value="" placeholder="от" />
+                        </label>
+                        <label>
+                          <input class="input-number input-number--border" type="number" name="floor_all_to" value="" placeholder="до" />
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="list filter-add__floor">
+                      <label>
+                        <input type="checkbox" name="filter[floor_no_first]" value="100" />
+                        <span>Не первый</span>
+                      </label>
+                      <label>
+                        <input id="floor_no_last" type="checkbox" name="filter[floor_no_last]" value="100" />
+                        <span>Не последний</span>
+                      </label>
+                      <label>
+                        <input id="floor_last" type="checkbox" name="filter[floor_last]" value="100" />
+                        <span>Последний</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Год постройки</p>
+                  <div class="label">
+                    <label class="">
+                      <input class="input-number input-number--border" type="number" name="filter[building_year][from]" value="" placeholder="от" />
+                    </label>
+                    <label class="">
+                      <input class="input-number input-number--border" type="number" name="filter[building_year][to]" value="" placeholder="до" />
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle filter-add__subtitle--align">Тип дома</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="100" />
+                      <span class="pseudo-checkbox">Панельный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="200" />
+                      <span class="pseudo-checkbox">Кирпично-монолитный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="300" />
+                      <span class="pseudo-checkbox">Монолитный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="400" />
+                      <span class="pseudo-checkbox">Блочный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="500" />
+                      <span class="pseudo-checkbox">Кирпичный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="600" />
+                      <span class="pseudo-checkbox">Деревянный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="700" />
+                      <span class="pseudo-checkbox">Сталинский</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-add__container">
+                  <p class="filter-add__subtitle">Санузел</p>
+                  <div class="filter-add__wrapper">
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="100" />
+                      <span class="pseudo-checkbox">Совмещенный</span>
+                    </label>
+                    <label>
+                      <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="200" />
+                      <span class="pseudo-checkbox">Раздельный</span>
+                    </label>
+                    <label class="label__margin">
+                      <input type="checkbox" name="filter[is_plan]" value="1" />
+                      <span>Несколько</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <input class="button button-main" type="submit" value="Искать из 134 000" />
           </form>
 
           <form class="filter-catalog" action="https://echo.htmlacademy.ru/courses" method="get" enctype="multipart/form-data">
@@ -387,7 +702,7 @@
             <button>Показать объявления</button>
           </form>
         </div>
-      </section>
+      </search>
     </main>
     <footer></footer>
     <script src="js/main.js"></script>

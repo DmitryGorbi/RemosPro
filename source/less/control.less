@@ -1,0 +1,62 @@
+.control {
+  display: flex;
+  border: 1px solid @light-gray;
+  border-radius: 4px;
+  padding: 3px;
+  // background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding: 2px;
+  }
+}
+
+.control--layout {
+  @media (max-width: @mobile-width-only) {
+    align-self: flex-start;
+  }
+}
+
+.control__container {
+  display: flex;
+  min-width: 50px;
+
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 40px;
+  }
+}
+
+.control__label {
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.control__text {
+  margin: auto;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 100%;
+  padding: 7px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 4px;
+  }
+}
+
+.control__radio:checked + .control__text {
+  background-color: @basic-green;
+  color: @white;
+}
+
+.control__radio:hover + .control__text {
+  border: 1px solid @basic-green;
+  padding: 6px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 3px;
+  }
+}

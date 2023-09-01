@@ -1,0 +1,51 @@
+.type {
+  padding: 10px 0;
+  margin-top: 5px;
+  border: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    // padding-top: 10px;
+  }
+}
+
+.type__title {
+  margin: 0;
+  padding: 0 10px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    &:nth-of-type(2) {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+  }
+}
+
+.type__radio {
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 5px 10px;
+  }
+}
+
+.type__input:hover + .type__radio {
+  border: 1px solid @basic-green;
+  padding: 9px;
+
+  @media (min-width: @tablet-width) {
+    padding: 4px 9px;
+  }
+}
+
+.type__input:focus + .type__radio {
+  border: 1px solid @basic-green;
+  padding: 9px;
+}
+
+.type__input:checked + .type__radio {
+  background-color: @basic-green;
+  color: @white;
+}

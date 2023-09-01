@@ -1,33 +1,24 @@
 const filter = document.querySelector('.filter');
-const dealSelect = filter.querySelector('.filter__select-deal');
-const typeSelect = filter.querySelector('.filter__select-type');
-const dealFieldset = filter.querySelector('.filter__fieldset-deal');
-const filterSelectItems = filter.querySelectorAll('.filter__deal-item');
 const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
-const filterFieldset = filter.querySelectorAll('.filter__fieldset');
-const buttonsTitle = filter.querySelectorAll('.button-filter__text');
-
+const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
+const buttonsTitle = filter.querySelectorAll('.button-filter__text-js');
 const filterSelect = filter.querySelectorAll('.filter__select');
 
-const dealItemsToggleMobile = (evt) => {
-  let target = evt.target;
+// Универсальная функция для переключения класса активного элемента
 
-  if (target.matches('input[type="radio"]')) {
-    for (let i = 0; i < filterSelectItems.length; i++) {
-      filterSelectItems[i].classList.toggle('filter__deal-item--current');
-    }
-  }
+const changeActiveClass = (items, selector) => {
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      items.forEach((el) => {
+        el.classList.remove(selector);
+      });
+      item.classList.add(selector);
+    });
+  });
 };
 
-dealFieldset.addEventListener('click', dealItemsToggleMobile);
-
-// Убираю обработчик на десктопе
-
 const mediaQueryFilter = window.matchMedia('(min-width: 1240px)');
-if (mediaQueryFilter.matches) {
-  dealFieldset.removeEventListener('click', dealItemsToggleMobile);
-}
 
 // // Desktop Filter
 
@@ -87,6 +78,8 @@ const changeButtonsTitle = (fieldset, title) => {
 for (let i = 0; i < buttonsTitle.length; i++) {
   changeButtonsTitle(filterFieldset[i], buttonsTitle[i]);
 }
+
+// Закрытие попапа при клике вне
 
 const windowClick = (select, button) => {
   window.addEventListener('click', (evt) => {

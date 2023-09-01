@@ -1,6 +1,9 @@
 .button-filter {
   border-radius: 4px;
-  &--deal {
+  position: relative;
+  &--deal,
+  &--price,
+  &--add {
     display: none;
 
     @media (min-width: @tablet-width) {
@@ -9,7 +12,7 @@
   }
   @media (min-width: @tablet-width) {
     text-align: start;
-    padding: 5px 10px;
+    padding: 5px 25px 5px 10px;
     border: 1px solid @light-gray;
 
     &:active,
@@ -17,28 +20,26 @@
       border-color: @basic-green;
     }
 
-    min-width: 80px;
     box-sizing: border-box;
   }
 }
 
 .button-filter__icon {
   position: absolute;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 10px;
 
   path {
-    fill: blue;
+    fill: @basic-green;
   }
   @media (min-width: @tablet-width) {
-    position: relative;
-    top: 3px;
-    left: 5px;
+    right: 5px;
   }
 }
 
 .button-filter__icon--rotate {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 }
 
 .button-filter--type {
@@ -46,10 +47,10 @@
   display: block;
   width: 100%;
   text-align: start;
-  padding: 14px 0 16px 10px;
+  padding: 9px 0 11px 10px;
   background-color: @white;
 
   @media (min-width: @tablet-width) {
-    padding: 5px 10px;
+    padding: 5px 25px 5px 10px;
   }
 }
