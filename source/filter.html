@@ -189,8 +189,8 @@
               </button>
               <div class="filter__select filter-add filter-add--layout filter__select--disabled">
                 <h3 class="filter-add__title">Расширенные фильтры</h3>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Количество комнат</p>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Количество комнат</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="checkbox" name="filter[rooms][]" value="200" />
@@ -221,9 +221,9 @@
                       <span class="pseudo-checkbox">6</span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Площадь, м²</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Площадь, м²</legend>
                   <div class="filter-add__sublist">
                     <label class="label">
                       <span class="label__title">Общая</span>
@@ -259,9 +259,9 @@
                       </span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Апартаменты</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Апартаменты</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="radio" name="filter[is_apartment]" value="2" />
@@ -272,9 +272,9 @@
                       <span class="pseudo-checkbox">Только апартаменты</span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Планировка</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Планировка</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="100" />
@@ -289,9 +289,9 @@
                       <span>С планировкой</span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Ремонт</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Ремонт</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="checkbox" name="filter[repair][]" value="300" />
@@ -310,11 +310,11 @@
                       <span class="pseudo-checkbox">absent</span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle filter-add__subtitle--align">Этажность</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Этажность</legend>
                   <div class="filter-add__subgroup">
-                    <ul class="list filter-add__sublist">
+                    <ul class="list filter-add__sublist" role="none">
                       <li class="label">
                         <label class="label__floor-margin">
                           <span class="label__title">Этаж</span>
@@ -336,7 +336,7 @@
                     </ul>
                     <div class="list filter-add__floor">
                       <label>
-                        <input type="checkbox" name="filter[floor_no_first]" value="100" />
+                        <input class="checkbox-style" type="checkbox" name="filter[floor_no_first]" value="100" />
                         <span>Не первый</span>
                       </label>
                       <label>
@@ -349,9 +349,9 @@
                       </label>
                     </div>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Год постройки</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Год постройки</legend>
                   <div class="label">
                     <label class="">
                       <input class="input-number input-number--border" type="number" name="filter[building_year][from]" value="" placeholder="от" />
@@ -360,9 +360,9 @@
                       <input class="input-number input-number--border" type="number" name="filter[building_year][to]" value="" placeholder="до" />
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle filter-add__subtitle--align">Тип дома</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Тип дома</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="checkbox" name="filter[building_type][]" value="100" />
@@ -393,9 +393,9 @@
                       <span class="pseudo-checkbox">Сталинский</span>
                     </label>
                   </div>
-                </div>
-                <div class="filter-add__container">
-                  <p class="filter-add__subtitle">Санузел</p>
+                </fieldset>
+                <fieldset class="filter__fieldset filter-add__fieldset">
+                  <legend class="filter-add__legend">Санузел</legend>
                   <div class="filter-add__wrapper">
                     <label>
                       <input class="visually-hidden filter-add__input" type="radio" name="filter[rooms_type]" value="100" />
@@ -410,7 +410,7 @@
                       <span>Несколько</span>
                     </label>
                   </div>
-                </div>
+                </fieldset>
               </div>
             </fieldset>
             <input class="button button-main" type="submit" value="Искать из 134 000" />
