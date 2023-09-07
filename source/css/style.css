@@ -520,8 +520,8 @@ input[type='checkbox'] {
 }
 .user-actions__button-like {
   padding: 10px;
-  border: 1px solid #b3b3b3;
-  border-radius: 4px;
+  background-color: #e5e5e5;
+  border-radius: 50px;
 }
 .user-actions__button-like:active {
   fill: blue;
