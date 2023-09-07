@@ -44,25 +44,26 @@
               <span class="navigation__login-text">Войти или зарегистрироваться</span>
             </button>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__item-link navigation__item-link--closed" href="#" tabindex="0">Продажа</a>
-            <div class="navigation__submenu navigation__submenu--sale" aria-hidden="true">
-              <div class="navigation__submenu-wrapper" focusable="false" aria-hidden="true">
+          <li class="navigation__item" tabindex="0">
+            <span ><a class="navigation__item-link navigation__item-link--closed" href="#">Продажа</a></span>
+            
+            <div class="navigation__submenu navigation__submenu--sale" aria-hidden="true" tabindex="-1">
+              <div class="navigation__submenu-wrapper" focusable="false" aria-hidden="true" tabindex="-1">
                 <a class="navigation__submenu-title">Жилая недвижимость</a>
-                <ul class="list navigation__submenu-list">
-                  <li class="navigation__submenu-item">
-                    <a class="navigation__submenu-link" href="#" tabindex="0">Квартиры</a>
+                <ul class="list navigation__submenu-list" tabindex="-1">
+                  <li class="navigation__submenu-item" tabindex="-1">
+                    <a class="navigation__submenu-link" href="#">Квартиры</a>
                   </li>
-                  <li class="navigation__submenu-item">
+                  <li class="navigation__submenu-item" tabindex="-1">
                     <a class="navigation__submenu-link" href="#">Дома и дачи</a>
                   </li>
-                  <li class="navigation__submenu-item">
+                  <li class="navigation__submenu-item" tabindex="-1">
                     <a class="navigation__submenu-link" href="#">Земельные участоки</a>
                   </li>
-                  <li class="navigation__submenu-item">
+                  <li class="navigation__submenu-item" tabindex="-1">
                     <a class="navigation__submenu-link" href="#">Комнаты</a>
                   </li>
-                  <li class="navigation__submenu-item">
+                  <li class="navigation__submenu-item" tabindex="-1">
                     <a class="navigation__submenu-link" href="#">Таунхаусы</a>
                   </li>
                 </ul>
@@ -295,7 +296,7 @@
     </header>
     <main>
       <p class="page-header__locale wrapper-content">Москва</p>
-      <a href="filter.html">Filter</a>
+      <span tabindex="0"><a href="filter.html">Filter</a></span>
     </main>
 
     <script src="js/main.js"></script>
