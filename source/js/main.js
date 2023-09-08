@@ -19,7 +19,9 @@ if (mediaQuery.matches) {
 
 // Active main navigation link
 
-const mainNavLinks = document.querySelectorAll('.navigation__item-link');
+const mainNavLinks = document.querySelectorAll('.navigation__item-link span');
+
+console.log(mainNavLinks);
 
 // mainNavLinks.forEach((item) => {
 //   item.addEventListener('mouseover', () => {
@@ -30,15 +32,23 @@ const mainNavLinks = document.querySelectorAll('.navigation__item-link');
 //   });
 // });
 
-const subMenu = document.querySelectorAll('.navigation__submenu');
-
 // Закрывает сабменю в моильной версии и на планшете
 
-const activeLinks = mainNavLinks;
+const subMenu = mainNav.querySelectorAll('.navigation__submenu');
 
-activeLinks.forEach((item) => {
+const subMenuButtons = mainNav.querySelectorAll('.navigation__item-button');
+
+subMenuButtons.forEach((item, index) => {
   item.addEventListener('click', (evt) => {
     evt.preventDefault();
-    item.classList.toggle('navigation__item-link--closed');
+    subMenu[index].classList.toggle('navigation__item-link--closed');
   });
+});
+
+// окрашивает ссылку в другой цвет, когда сабменю открыто
+
+subMenu.forEach((item, index) => {
+  if (item.classList.contains('navigation__item-link--closed')) {
+    // mainNavLinks[index].
+  }
 });

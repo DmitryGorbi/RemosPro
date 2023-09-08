@@ -1,6 +1,6 @@
 .page-header {
-  // padding-top: 10px;
-  // padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid @light-gray;
 
   @media (min-width: @desktop-width) {
@@ -11,6 +11,7 @@
 .logo {
   width: 75px;
   height: 19px;
+  display: block;
 
   @media (min-width: @desktop-width) {
     width: 112px;
@@ -22,14 +23,16 @@
 
 .page-header__logo {
   display: block;
-  // padding: 10px 0;
+  margin-left: 10px;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
+    padding: 0px 0 0px 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
-    padding: 0px 0 0px 0;
+    // margin-left: 0;
+    // padding: 0px 0 0px 0;
   }
 }
 
