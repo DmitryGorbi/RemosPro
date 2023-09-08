@@ -205,8 +205,6 @@ input[type='checkbox'] {
   }
 }
 .page-header {
-  padding-top: 10px;
-  padding-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
 }
 @media (min-width: 1240px) {
@@ -225,6 +223,9 @@ input[type='checkbox'] {
     position: relative;
     top: -2px;
   }
+}
+.page-header__logo {
+  display: block;
 }
 @media (min-width: 1240px) {
   .page-header__logo {
@@ -415,10 +416,10 @@ input[type='checkbox'] {
 }
 .toggler {
   position: relative;
-  display: block;
   width: 23px;
   height: 23px;
-  margin-right: 20px;
+  padding: 10px;
+  display: block;
 }
 @media (min-width: 1240px) {
   .toggler {
@@ -520,7 +521,7 @@ input[type='checkbox'] {
 }
 .user-actions__button-like {
   padding: 10px;
-  background-color: #e5e5e5;
+  background-color: #f6f6f6;
   border-radius: 50px;
 }
 .user-actions__button-like:active {
@@ -544,8 +545,8 @@ input[type='checkbox'] {
 .user-actions__button-add {
   padding: 10px;
   display: block;
-  border: 1px solid #b3b3b3;
-  border-radius: 4px;
+  background-color: #f6f6f6;
+  border-radius: 50px;
 }
 @media (min-width: 768px) {
   .user-actions__button-add {
@@ -591,10 +592,10 @@ input[type='checkbox'] {
   }
 }
 .user-actions__like-icon path {
-  fill: #20a052;
+  fill: blue;
 }
 .user-actions__add-icon path {
-  fill: #20a052;
+  fill: blue;
 }
 @media (min-width: 1240px) {
   .sale-aside {
