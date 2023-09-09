@@ -19,8 +19,11 @@ if (mediaQuery.matches) {
 
 // Active main navigation link
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 35a5b162 (some changes)
 // mainNavLinks.forEach((item) => {
 //   item.addEventListener('mouseover', () => {
 //     item.classList.add('navigation__item-link--active');
@@ -52,6 +55,7 @@ subMenuButtons.forEach((item, index) => {
 
 // окрашивает ссылку в другой цвет, когда сабменю открыто
 
+<<<<<<< HEAD
 
 
 // subMenu.forEach((item, index) => {
@@ -60,3 +64,13 @@ subMenuButtons.forEach((item, index) => {
 //     mainNavLinks[index].style.color = 'red'
 //   }
 // });
+=======
+const mainNavLinks = document.querySelectorAll('.navigation__item-link span');
+console.log(mainNavLinks);
+
+subMenu.forEach((item, index) => {
+  if (item.classList.contains('navigation__item-link--closed')) {
+    mainNavLinks[index];
+  }
+});
+>>>>>>> 35a5b162 (some changes)
