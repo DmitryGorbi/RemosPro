@@ -19,9 +19,7 @@ if (mediaQuery.matches) {
 
 // Active main navigation link
 
-const mainNavLinks = document.querySelectorAll('.navigation__item-link span');
 
-console.log(mainNavLinks);
 
 // mainNavLinks.forEach((item) => {
 //   item.addEventListener('mouseover', () => {
@@ -36,19 +34,29 @@ console.log(mainNavLinks);
 
 const subMenu = mainNav.querySelectorAll('.navigation__submenu');
 
+const mainNavLinks = mainNav.querySelectorAll('.navigation__item-link span');
+// console.log(mainNavLinks.style.color = 'red')
+
+
 const subMenuButtons = mainNav.querySelectorAll('.navigation__item-button');
 
 subMenuButtons.forEach((item, index) => {
   item.addEventListener('click', (evt) => {
     evt.preventDefault();
     subMenu[index].classList.toggle('navigation__item-link--closed');
+    if (!subMenu[index].classList.contains('navigation__item-link--closed')) {
+      mainNavLinks[index].style.color = 'red'
+    }
   });
 });
 
 // окрашивает ссылку в другой цвет, когда сабменю открыто
 
-subMenu.forEach((item, index) => {
-  if (item.classList.contains('navigation__item-link--closed')) {
-    // mainNavLinks[index].
-  }
-});
+
+
+// subMenu.forEach((item, index) => {
+  
+//   if (item.classList.contains('navigation__item-link--closed')) {
+//     mainNavLinks[index].style.color = 'red'
+//   }
+// });

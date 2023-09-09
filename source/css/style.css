@@ -355,6 +355,7 @@ input[type='checkbox'] {
 .navigation__item-link span {
   display: block;
   border-right: 1px solid #b3b3b3;
+  color: inherit;
 }
 @media (min-width: 1240px) {
   .navigation__item-link span {
