@@ -42,7 +42,9 @@ subMenuButtons.forEach((item, index) => {
     evt.preventDefault();
     subMenu[index].classList.toggle('navigation__item-link--closed');
     if (!subMenu[index].classList.contains('navigation__item-link--closed')) {
-      mainNavLinks[index].style.color = 'red';
+      mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
+    } else {
+      mainNavLinks[index].style.color = 'inherit';
     }
   });
 });
