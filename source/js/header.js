@@ -28,9 +28,11 @@ if (mediaQuery.matches) {
 //   });
 // });
 
-// Закрывает сабменю в моильной версии и на планшете
+// Открывает/закрывает сабменю в моильной версии и на планшете,
+// окрашивает ссылку в другой цвет, когда сабменю открыто.
 
 const subMenu = mainNav.querySelectorAll('.navigation__submenu');
+const subMenuButtonIcon = mainNav.querySelectorAll('.navigation__item-icon');
 
 const mainNavLinks = mainNav.querySelectorAll('.navigation__item-link span');
 // console.log(mainNavLinks.style.color = 'red')
@@ -43,17 +45,10 @@ subMenuButtons.forEach((item, index) => {
     subMenu[index].classList.toggle('navigation__item-link--closed');
     if (!subMenu[index].classList.contains('navigation__item-link--closed')) {
       mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
+      subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
     } else {
       mainNavLinks[index].style.color = 'inherit';
+      subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
     }
   });
 });
-
-// окрашивает ссылку в другой цвет, когда сабменю открыто
-
-// subMenu.forEach((item, index) => {
-
-//   if (item.classList.contains('navigation__item-link--closed')) {
-//     mainNavLinks[index].style.color = 'red'
-//   }
-// });

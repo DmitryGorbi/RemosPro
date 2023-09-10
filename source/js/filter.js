@@ -56,8 +56,8 @@ const openSelect = (button, select, icon) => {
   });
 };
 
-const closeSelect = (select, icon) => {
-  select.classList.add('filter__select--disabled');
+const closeSelect = (item, icon) => {
+  item.classList.add('filter__select--disabled');
   icon.classList.remove('button-filter__icon--rotate');
 };
 

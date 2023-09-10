@@ -242,7 +242,7 @@ input[type='checkbox'] {
 .page-header__user-actions {
   margin-left: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
   .page-header__user-actions {
     margin-right: 40px;
   }
@@ -255,7 +255,7 @@ input[type='checkbox'] {
 .page-header__user-nav {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
   .page-header__user-nav {
     display: block;
   }
@@ -276,13 +276,7 @@ input[type='checkbox'] {
 }
 @media (max-width: 1239px) {
   .navigation--closed .navigation__list {
-    transition: 0.5s;
-    transform: translateX(-100%);
-  }
-}
-@media (max-width: 1239px) {
-  .navigation--open .navigation__list {
-    transition: 0.5s;
+    display: none;
   }
 }
 .navigation__login-text {
@@ -302,7 +296,8 @@ input[type='checkbox'] {
 }
 @media (min-width: 768px) {
   .navigation__list {
-    top: 57px;
+    top: 59px;
+    padding: 0 40px;
   }
 }
 @media (min-width: 1240px) {
@@ -383,13 +378,13 @@ input[type='checkbox'] {
   padding: 10px 35px;
   border-bottom: 1px solid #e5e5e5;
 }
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
   .navigation__submenu {
     background-color: #ffffff;
     padding: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1240px) {
   .navigation__submenu {
     display: none;
     position: absolute;
@@ -425,7 +420,7 @@ input[type='checkbox'] {
 }
 @media (min-width: 1240px) {
   .navigation__submenu-title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1240px) {
@@ -434,10 +429,9 @@ input[type='checkbox'] {
     grid-template-columns: 200px max-content;
     -moz-column-gap: 40px;
          column-gap: 40px;
-    row-gap: 10px;
   }
   .navigation__submenu-list:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 .navigation__submenu-link {
@@ -456,6 +450,7 @@ input[type='checkbox'] {
 @media (min-width: 1240px) {
   .navigation__submenu-link {
     font-size: inherit;
+    padding: 5px 0;
   }
 }
 .toggler {
