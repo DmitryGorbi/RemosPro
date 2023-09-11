@@ -3,7 +3,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 20px;
-    width: 900px;
+    max-width: 900px;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -68,7 +68,8 @@
 
 .filter-add__input:focus + .pseudo-checkbox,
 .filter-add__input:hover + .pseudo-checkbox {
-  border-color: @basic-green;
+  // border-color: @basic-green;
+  outline: 2px solid tomato;
   border-radius: 4px;
 }
 
@@ -160,11 +161,6 @@
   accent-color: red;
 }
 
-// .fieldset__test {
-//   display: flex;
-//   align-items: top;
-
-//   @media (min-width: @tablet-width) {
-//     flex-direction: row;
-//   }
-// }
+.button__test:focus {
+  outline: 4px dashed orange;
+}

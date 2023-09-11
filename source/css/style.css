@@ -973,6 +973,8 @@ input[type='checkbox'] {
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   padding: 3px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
 }
 @media (min-width: 768px) {
   .control {
@@ -1018,8 +1020,8 @@ input[type='checkbox'] {
   color: #ffffff;
 }
 .control__radio:hover + .control__text {
-  border: 1px solid #20a052;
   padding: 6px 0;
+  outline: 2px solid orange;
 }
 @media (min-width: 768px) {
   .control__radio:hover + .control__text {
@@ -1111,7 +1113,7 @@ input[type='checkbox'] {
 @media (min-width: 768px) {
   .filter-add {
     padding: 20px;
-    width: 900px;
+    max-width: 900px;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -1174,7 +1176,7 @@ input[type='checkbox'] {
 }
 .filter-add__input:focus + .pseudo-checkbox,
 .filter-add__input:hover + .pseudo-checkbox {
-  border-color: #20a052;
+  outline: 2px solid tomato;
   border-radius: 4px;
 }
 .filter-add__input:checked + .pseudo-checkbox {
@@ -1260,6 +1262,9 @@ input[type='checkbox'] {
 }
 .checkbox-style:hover {
   accent-color: red;
+}
+.button__test:focus {
+  outline: 4px dashed orange;
 }
 .page-main__header {
   position: relative;

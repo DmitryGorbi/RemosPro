@@ -3,6 +3,7 @@
   border: 1px solid @light-gray;
   border-radius: 4px;
   padding: 3px;
+  column-gap: 3px;
   // background-color: @white;
 
   @media (min-width: @tablet-width) {
@@ -53,10 +54,16 @@
 }
 
 .control__radio:hover + .control__text {
-  border: 1px solid @basic-green;
+  // border: 1px solid @basic-green;
   padding: 6px 0;
+  outline: 2px solid orange;
 
   @media (min-width: @tablet-width) {
     padding: 3px;
+  }
+}
+
+.control__radio {
+  &:hover {
   }
 }
