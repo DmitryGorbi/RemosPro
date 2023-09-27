@@ -1,4 +1,27 @@
 .user-nav {
+  min-height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @white;
+  height: 50px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: static;
+  }
+}
+
+@media (max-width: 1239px) {
+  .navigation--closed .user-nav {
+    display: none;
+  }
+}
+
+.user-nav__list {
   display: flex;
 
   @media (min-width: @tablet-width) {
@@ -7,7 +30,7 @@
   }
 }
 
-.user-nav--disabled {
+.user-nav__list--disabled {
   display: none;
 }
 
