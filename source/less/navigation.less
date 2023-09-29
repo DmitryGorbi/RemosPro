@@ -1,11 +1,3 @@
-.navigation--mobile {
-  order: -1;
-
-  @media (min-width: @desktop-width) {
-    order: 0;
-  }
-}
-
 .navigation__button-login {
   width: 100%;
   padding: 12px 0 13px 20px;
@@ -26,3 +18,7 @@
 }
 
 // Nav
+
+[aria-expanded='true'] + .main-nav {
+  display: block;
+}

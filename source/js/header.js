@@ -17,17 +17,6 @@ if (mediaQuery.matches) {
   document.removeEventListener('click', onButtonClick);
 }
 
-// Active main navigation link
-
-// mainNavLinks.forEach((item) => {
-//   item.addEventListener('mouseover', () => {
-//     item.classList.add('main-nav__item-link--active');
-//   });
-//   item.addEventListener('mouseleave', () => {
-//     item.classList.remove('main-nav__item-link--active');
-//   });
-// });
-
 // Открывает/закрывает сабменю в моильной версии и на планшете,
 // окрашивает ссылку в другой цвет, когда сабменю открыто.
 
