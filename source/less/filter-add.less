@@ -2,19 +2,18 @@
   font-size: 15px;
 
   @media (min-width: @tablet-width) {
-    padding: 20px;
-    max-width: 900px;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 900px;
+    padding: 20px;
   }
 }
 
 .filter-add__title {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0 0 10px 0;
-  margin-bottom: 10px;
   border-bottom: 1px solid @light-gray;
 }
 
@@ -32,14 +31,14 @@
 }
 
 .filter-add__legend {
-  font-weight: 400;
-  margin: 0;
-  font-size: 18px;
   float: left;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
 
   @media (min-width: @tablet-width) {
-    font-size: 15px;
     margin-bottom: auto;
+    font-size: 15px;
   }
 }
 
@@ -74,17 +73,17 @@
 }
 
 .filter-add__input:checked + .pseudo-checkbox {
-  background-color: @basic-green;
   color: @white;
+  background-color: @basic-green;
   border-color: @basic-black;
 }
 
 .label {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
   column-gap: 5px;
   row-gap: 5px;
+  align-items: end;
 
   &:hover,
   &:active {

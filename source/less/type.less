@@ -1,11 +1,7 @@
 .type {
-  padding: 10px 0;
   margin-top: 5px;
+  padding: 10px 0;
   border: 1px solid @light-gray;
-
-  @media (min-width: @tablet-width) {
-    // padding-top: 10px;
-  }
 }
 
 .type__title {
@@ -22,8 +18,8 @@
 }
 
 .type__radio {
-  padding: 10px;
   display: block;
+  padding: 10px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -32,8 +28,8 @@
 }
 
 .type__input:hover + .type__radio {
-  border: 1px solid @basic-green;
   padding: 9px;
+  border: 1px solid @basic-green;
 
   @media (min-width: @tablet-width) {
     padding: 4px 9px;
@@ -41,11 +37,11 @@
 }
 
 .type__input:focus + .type__radio {
-  border: 1px solid @basic-green;
   padding: 9px;
+  border: 1px solid @basic-green;
 }
 
 .type__input:checked + .type__radio {
-  background-color: @basic-green;
   color: @white;
+  background-color: @basic-green;
 }

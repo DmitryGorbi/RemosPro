@@ -1,22 +1,20 @@
+@media (max-width: @mobile-width-only) {
+  .toggler[aria-expanded="false"] ~ .user-nav {
+    display: none;
+  }
+}
+
 .user-nav {
   margin-left: auto;
   color: @basic-green;
+
   @media (min-width: @tablet-width) {
     margin-left: 0;
   }
 }
 
-@media (max-width: @mobile-width-only) {
-  .navigation--closed .user-nav {
-    display: none;
-  }
-}
-
 .user-nav__list {
   display: flex;
-
-  @media (min-width: @tablet-width) {
-  }
 }
 
 .user-nav__list--disabled {
@@ -25,8 +23,8 @@
 
 .user-nav__link {
   display: block;
+  padding: 11px 21px 9px 21px;
   color: inherit;
-  padding: 11px 11px 9px 11px;
   background-color: @extra-light-gray;
   border-radius: 6px;
   border: 1px solid @basic-green;

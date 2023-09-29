@@ -1,9 +1,8 @@
 .filter-search {
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  // row-gap: 15px;
   align-items: flex-start;
+  border-radius: 4px;
 
   &:hover,
   &:active {
@@ -11,26 +10,24 @@
   }
 
   @media (min-width: @tablet-width) {
-    border: 1px solid @light-gray;
     flex-direction: row;
+    border: 1px solid @light-gray;
   }
 }
 
 .filter-search__label {
   align-self: stretch;
-  order: 1;
 
   @media (min-width: @tablet-width) {
-    margin-top: 0;
     flex-grow: 1;
-    order: 0;
+    margin-top: 0;
   }
 }
 
 .filter-search__input {
-  padding-left: 10px;
   width: 100%;
   height: 38px;
+  padding-left: 10px;
   border: 1px solid @light-gray;
   border-radius: 4px;
 
@@ -41,8 +38,8 @@
 }
 
 .filter-search__button {
-  color: @basic-green;
   padding: 11px 10px;
+  color: @basic-green;
 
   @media (max-width: @mobile-width-only) {
     align-self: stretch;
@@ -74,10 +71,10 @@
       right: 0;
       width: 16px;
       height: 16px;
+      transform: rotate(-90deg);
       background-repeat: no-repeat;
       background-size: 100%;
       background-image: url('../img/icons/arrow.svg');
-      transform: rotate(-90deg);
     }
   }
 }

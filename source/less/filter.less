@@ -1,9 +1,9 @@
 .filter {
-  margin-bottom: 300px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   row-gap: 25px;
+  margin-bottom: 300px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -51,13 +51,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 5px;
     position: absolute;
+    width: max-content;
+    margin-top: 5px;
     border: 1px solid @light-gray;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     background-color: @white;
-    width: max-content;
   }
 }
 
@@ -66,10 +66,11 @@
 .filter__price-layout {
   @media (max-width: @mobile-width-only) {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     column-gap: 3px;
     row-gap: 7px;
-    flex-direction: column;
+    
   }
   @media (min-width: @tablet-width) {
     padding: 10px;

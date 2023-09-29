@@ -1,5 +1,4 @@
-.toggler,
-.toggler2 {
+.toggler {
   position: relative;
   // display: block;
   width: 40px;
@@ -11,20 +10,22 @@
   }
 }
 
-.navigation--closed .toggler::after {
-  content: '';
-  position: absolute;
-  top: 13px;
-  left: 8px;
-  width: 23px;
-  height: 2px;
-  background-color: @basic-black;
-  box-shadow: 0 6px 0 0 @basic-black, 0 12px 0 0 @basic-black;
-}
 
-.navigation--open .toggler {
-  &::before,
-  &::after {
+
+  .toggler[aria-expanded="false"]::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    width: 23px;
+    height: 2px;
+    background-color: @basic-black;
+    box-shadow: 0 6px 0 0 @basic-black, 0 12px 0 0 @basic-black;
+  }
+
+  .toggler[aria-expanded="true"] {
+    &::before,
+    &::after {
     content: '';
     position: absolute;
     top: 19px;

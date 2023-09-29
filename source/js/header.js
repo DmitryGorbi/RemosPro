@@ -1,21 +1,33 @@
 // Close/Open burger
 
-const burgerMenu = document.querySelector('.toggler');
 const mainNav = document.querySelector('.navigation');
+const burgerMenu = mainNav.querySelector('.toggler');
 
-const onButtonClick = (evt) => {
+const onTogglerClick = (evt) => {
   evt.preventDefault();
-  mainNav.classList.toggle('navigation--closed');
-  mainNav.classList.toggle('navigation--open');
+  const isOpen = burgerMenu.getAttribute('aria-expanded') === 'false';
+  burgerMenu.setAttribute('aria-expanded', isOpen);
+
+  
 };
 
-burgerMenu.addEventListener('click', onButtonClick);
+burgerMenu.addEventListener('click', onTogglerClick);
+
+mainNav.addEventListener('keyup', (e) => {
+  if (e.code === 'Escape') {
+    burgerMenu.setAttribute('aria-expanded', false);
+    burgerMenu.focus();
+  }
+});
+
 
 // Убираем обработчик на десктопе
 const mediaQuery = window.matchMedia('(min-width: 1240px)');
 if (mediaQuery.matches) {
-  document.removeEventListener('click', onButtonClick);
+  document.removeEventListener('click', onTogglerClick);
 }
+
+
 
 // Открывает/закрывает сабменю в моильной версии и на планшете,
 // окрашивает ссылку в другой цвет, когда сабменю открыто.

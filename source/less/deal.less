@@ -23,27 +23,27 @@
 
 .deal__input-text {
   display: block;
-  padding: 10px 0;
   width: 100%;
+  padding: 10px 0;
   border: 1px solid @light-gray;
   border-radius: 4px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
+    padding: 5px 10px;
     border: none;
     border-radius: 0;
-    padding: 5px 10px;
   }
 }
 
 .deal__input:checked + .deal__input-text {
-  background-color: @light-green;
   font-weight: 700;
+  background-color: @light-green;
 
   @media (min-width: @tablet-width) {
-    background-color: @basic-green;
     color: @white;
     font-weight: 400;
+    background-color: @basic-green;
   }
 }
 

@@ -1,6 +1,7 @@
 .button-filter {
-  border-radius: 4px;
   position: relative;
+  border-radius: 4px;
+  
   &--deal,
   &--price,
   &--add {
@@ -11,8 +12,8 @@
     }
   }
   @media (min-width: @tablet-width) {
-    text-align: start;
     padding: 5px 25px 5px 10px;
+    text-align: start;
     border: 1px solid @light-gray;
 
     &:active,
@@ -27,8 +28,8 @@
 .button-filter__icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 10px;
+  transform: translateY(-50%);
 
   path {
     fill: @basic-green;
@@ -43,11 +44,11 @@
 }
 
 .button-filter--type {
-  border: 1px solid @light-gray;
   display: block;
   width: 100%;
-  text-align: start;
   padding: 9px 0 11px 10px;
+  border: 1px solid @light-gray;
+  text-align: start;
   background-color: @white;
 
   @media (min-width: @tablet-width) {

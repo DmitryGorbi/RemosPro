@@ -10,8 +10,8 @@ button.addEventListener('click', () => {
   button.setAttribute('aria-expanded', isOpen);
 });
 
-nav.addEventListener('keyup', (e) => {
-  if (e.code === 'Escape') {
+document.addEventListener('keyup', (e) => {
+  if (e.code == 'Escape') {
     button.setAttribute('aria-expanded', false);
     button.focus();
   }
