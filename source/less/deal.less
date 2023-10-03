@@ -21,6 +21,10 @@
   }
 }
 
+.deal__label {
+  display: block;
+}
+
 .deal__input-text {
   display: block;
   width: 100%;
@@ -36,22 +40,26 @@
   }
 }
 
-.deal__input:checked + .deal__input-text {
+.deal__input:checked + .deal__label .deal__input-text {
   font-weight: 700;
-  background-color: @light-green;
+  background-color: @light-blue;
+  border-color: @blue;
+  color: @blue;
 
   @media (min-width: @tablet-width) {
     color: @white;
     font-weight: 400;
-    background-color: @basic-green;
+    background-color: @blue;
   }
 }
 
-.deal__input:hover + .deal__input-text,
-.deal__input:focus + .deal__input-text {
-  border: 1px solid @basic-green;
+.deal__input:hover + .deal__label .deal__input-text {
+  border: 1px solid @blue;
 
   @media (min-width: @tablet-width) {
-    padding: 4px 9px;
   }
+}
+
+.deal__input:focus + .deal__label .deal__input-text {
+  outline: auto;
 }

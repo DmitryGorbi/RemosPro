@@ -1,9 +1,8 @@
 @media (max-width: 1239px) {
-  .toggler[aria-expanded="false"] ~ .main-nav {
+  .toggler[aria-expanded='false'] ~ .main-nav {
     display: none;
   }
 }
-
 
 .main-nav {
   position: absolute;
@@ -83,6 +82,10 @@
 .main-nav__item-icon {
   position: relative;
   top: 2px;
+
+  & path {
+    fill: @blue;
+  }
 }
 
 .main-nav__item-button {

@@ -1,12 +1,12 @@
 @media (max-width: @mobile-width-only) {
-  .toggler[aria-expanded="false"] ~ .user-nav {
+  .toggler[aria-expanded='false'] ~ .user-nav {
     display: none;
   }
 }
 
 .user-nav {
   margin-left: auto;
-  color: @basic-green;
+  color: inherit;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
@@ -27,7 +27,7 @@
   color: inherit;
   background-color: @extra-light-gray;
   border-radius: 6px;
-  border: 1px solid @basic-green;
+  border: 1px solid @blue;
 
   @media (min-width: @tablet-width) {
     padding: 5px 7px;

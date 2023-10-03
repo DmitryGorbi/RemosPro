@@ -65,17 +65,15 @@
   }
 }
 
-.filter-add__input:focus + .pseudo-checkbox,
-.filter-add__input:hover + .pseudo-checkbox {
-  // border-color: @basic-green;
-  outline: 2px solid tomato;
+.filter-add__input:focus + .filter-add__checkbox,
+.filter-add__input:hover + .filter-add__checkbox {
   border-radius: 4px;
+  outline: auto;
 }
 
-.filter-add__input:checked + .pseudo-checkbox {
-  color: @white;
-  background-color: @basic-green;
-  border-color: @basic-black;
+.filter-add__input:checked + .filter-add__checkbox {
+  background-color: @light-blue;
+  border-color: @blue;
 }
 
 .label {

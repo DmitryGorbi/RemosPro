@@ -1,5 +1,5 @@
 @media (max-width: @mobile-width-only) {
-  .toggler[aria-expanded="true"] ~ .user-actions {
+  .toggler[aria-expanded='true'] ~ .user-actions {
     display: none;
   }
 }
@@ -25,7 +25,7 @@
   background-color: @extra-light-gray;
   border-radius: 50px;
 
-  &:active {
+  &:hover symbol {
     fill: blue;
   }
   @media (min-width: @desktop-width) {
@@ -46,7 +46,7 @@
 .user-actions__button-add {
   display: block;
   padding: 10px;
-  background-color: @extra-light-gray;
+  background-color: @light;
   border-radius: 50px;
 
   @media (min-width: @tablet-width) {
@@ -56,7 +56,7 @@
     padding: 5px 7px 5px 5px;
     line-height: 20px;
     color: inherit;
-    border: 1px solid @basic-green;
+    border: 1px solid @blue;
     border-radius: 5px;
 
     &:active {
@@ -95,10 +95,7 @@
 }
 
 // Изменил цвет иконки
-.user-actions__like-icon path {
-  fill: @basic-green;
-}
 
 .user-actions__add-icon path {
-  fill: @basic-green;
+  fill: @blue;
 }

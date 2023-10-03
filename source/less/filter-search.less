@@ -1,4 +1,5 @@
 .filter-search {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -6,7 +7,7 @@
 
   &:hover,
   &:active {
-    border-color: @basic-green;
+    border-color: @blue;
   }
 
   @media (min-width: @tablet-width) {
@@ -39,7 +40,7 @@
 
 .filter-search__button {
   padding: 11px 10px;
-  color: @basic-green;
+  color: @blue;
 
   @media (max-width: @mobile-width-only) {
     align-self: stretch;
@@ -54,7 +55,7 @@
     padding: 5px 10px;
 
     & span {
-      border-bottom: 1px dashed @basic-green;
+      border-bottom: 1px dashed @blue;
     }
   }
 }

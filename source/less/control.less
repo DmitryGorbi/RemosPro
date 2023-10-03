@@ -40,22 +40,22 @@
   padding: 7px 0;
   font-size: 14px;
   border-radius: 4px;
-
-  @media (min-width: @tablet-width) {
-    padding: 4px;
-  }
-}
-
-.control__radio:checked + .control__text {
-  color: @white;
-  background-color: @basic-green;
-}
-
-.control__radio:hover + .control__text {
-  padding: 6px 0;
-  outline: 2px solid orange;
+  line-height: 16px;
 
   @media (min-width: @tablet-width) {
     padding: 3px;
   }
+}
+
+.control__radio:checked + .control__label .control__text {
+  background-color: @light-blue;
+  border: 1px solid @blue;
+}
+
+.control__radio:focus + .control__label .control__text {
+  outline: auto;
+}
+
+.control__radio:hover + .control__label .control__text {
+  border: 1px solid @blue;
 }
