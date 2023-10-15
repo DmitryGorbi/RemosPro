@@ -1,0 +1,87 @@
+.button-nav {
+  display: block;
+  padding: 11px;
+  color: inherit;
+  border-radius: 50%;
+  background-color: var(--extra-light-gray);
+
+  & path {
+    fill: var(--blue);
+  }
+
+  &:hover {
+    outline: 1px solid var(--blue);
+    transition: outline 1s linear;
+    transition-delay: 0.1s;
+  }
+
+  &:active {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  &:active path {
+    fill: var(--white);
+  }
+
+  @media (min-width: @tablet-width) {
+    border-radius: 5px;
+    padding: 6px;
+  }
+}
+
+.button-nav--login {
+  border-radius: 5px;
+}
+
+.button-nav--like {
+  @media (min-width: @tablet-width) {
+    border-radius: 50%;
+  }
+}
+
+.button-nav--add {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    column-gap: 2px;
+  }
+}
+
+.button-nav__icon {
+  position: relative;
+  top: 1px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
+}
+
+.button-nav__text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.button-nav__label {
+  display: none;
+}
+
+.button-nav--like {
+  position: relative;
+}
+
+.button-nav--like:hover .button-nav__label {
+  display: block;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 5px;
+  color: var(--white);
+  background-color: var(--gray);
+  border-radius: 5px;
+}

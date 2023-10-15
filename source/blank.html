@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body class="page__body catalog-page">
+    <main class="catalog wrapper-content">
+      <h1 class="catalog__title">Продажа квартир в Амурской области</h1>
 
-<body class="page-body catalog-page">
-  <main class="catalog-list">
-    <h1 class="catalog-caption">Продажа квартир в Амурской области</h1>
-    <div class="card-wrapper">
-      <section class="container catalog catalog-item">
-        <h2 class="card-caption">2-комнатная квартира, 54 м2</h2>
-        <div class="image-catalog-wrapper">
-          <a href="#"><img class="catalog-image" src="img/object_foto.png" width="373" height="260" alt=""></a>
-        </div>
-        <div class="data-block-wrapper">
-          <ul class="data-block">
-            <li class="card-address">Московская область, Сергиево-Посадский р-н, Сергиев Посад, квартал Троицкая слобода, ул. Даниила Чёрного, 8
-            </li>
-            <li class="card-metro">Нахимовский проспект, <span class="metro-distance">8 минут пешком</span></li>
-            <li class="card-space new-building-icon">Общая: 54 м2, жилая: 31 м2, кухня: 8 м2</li>
-            <li class="card-floor">Этаж: 17/12</li>
-            <li class="card-description">Йошкар-Ола г, бульвар Чавайна 18А, 2 комн., общ. пл. 54 кв.м., жил.пл. 31
-              кв.м.,
-              комнаты 19/12, кухня 8
-              кв.м., 5/9 этаж, Теплая квартира в панельном доме. Этаж средний... <a class="" href="#">Показать</a></li>
-          </ul>
-          <ul class="card-interaction">
-            <li>В избранное</li>
-            <li>На карте</li>
-            <li>Комментарий</li>
-            <li>Скрыть</li>
-          </ul>
-        </div>
+      <article class="card">
+        <h2 class="card__title">2-комнатная квартира, 54 м2</h2>
+        <picture>
+          <img class="card__image" src="img/objects/0b0357efbfd3f45621be35b8ceb32e4a.jpeg" width="100%" height="" alt="" />
+        </picture>
 
-        <ul class="price-block">
+        <ul class="">
+          <li class="card-address">Московская область, Сергиево-Посадский р-н, Сергиев Посад, квартал Троицкая слобода, ул. Даниила Чёрного, 8</li>
+          <li class="card-metro">Нахимовский проспект, <span class="metro-distance">8 минут пешком</span></li>
+          <li class="card-space new-building-icon">Общая: 54 м2, жилая: 31 м2, кухня: 8 м2</li>
+          <li class="card-floor">Этаж: 17/12</li>
+          <li class="card-description">
+            Современный дом с собственной инфраструктурой в престижном районе Санкт-Петербурга. В пешей доступности находится Юнтоловский лесопарк. Выезд на КАД и ЗСД. а также метро «Комендантский
+            проспект» – в 10 минутах. проект представляет собой 2 зеркальных корпуса в 13 этажей с собственной галереей бутиков на первых этажах. Территория комплекса благоустроена в стиле ландшафта
+            Карелии: искусственные холмы высотой до 1 м., гравийные отсыпки, хвойные и злаковые куртины.По периметру комплекса ведется круглосуточное видеонаблюдение. Вид из окон открывается на Лахта
+            центр, которая вечером подсвечивается разными цветами, укутанная в летнее время изумительными красками белых ночей. За 15-20 минут вы можете легко добраться до Парка 300-летия
+            Санкт-Петербурга, расположенного на окультуренной набережной Финского залива. Идентификатор объекта: N193585.
+            <button type="button">Подробнее</button>
+          </li>
+        </ul>
+        <ul class="card__interaction">
+          <li>В избранное</li>
+          <li>На карте</li>
+          <li>Комментарий</li>
+          <li>Скрыть</li>
+        </ul>
+
+        <ul class="crad__price">
           <li>100850000 ₽</li>
           <li>32963 ₽ за м2</li>
           <li>Следить за ценой</li>
           <li>Длительная аренда На Ремос с 12.12.20</li>
         </ul>
 
-        <ul class="saler-block">
-          <li><img class="avatar" src="img/avatar.png"></li>
+        <ul class="card__owner">
+          <li>
+            <img class="card__owner-avatar" src="img/avatar.png" alt="Логотип агентства недвижимости Пятьдесят новых этажей" />
+          </li>
           <li>АН «Пятьдесят новых этажей»</li>
           <li>
             <ul>
@@ -54,14 +57,11 @@
               <li>23</li>
             </ul>
           </li>
-          <li><a href="tel:+78005558628">8-800-555..</a></li>
+          <li>
+            <a href="tel:+78005558628">8-800-555-86-28</a>
+          </li>
         </ul>
-    </div>
-    </section>
-    <div class="circle">
-    </div>
-  </main>
-
-</body>
-
+      </article>
+    </main>
+  </body>
 </html>
