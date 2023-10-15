@@ -44,12 +44,12 @@
           </svg>
         </a>
         <ul id="main-nav" class="list main-nav">
-          <li class="main-nav__item main-nav__item">
+          <li class="main-nav__item">
             <div class="main-nav__item-layout">
               <a class="main-nav__item-link" href="#" aria-haspopup="true">
                 <span>Продажа</span>
               </a>
-              <button class="button main-nav__item-button" type="button">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false">
                 <span class="visually-hidden">Открыть подменю раздела продажи</span>
                 <svg aria-hidden="true" class="main-nav__item-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -58,68 +58,68 @@
                   />
                 </svg>
               </button>
-            </div>
-            <div class="main-nav__submenu main-nav__item-link--closed main-nav__submenu--sale">
-              <div class="main-nav__submenu-layout" focusable="false">
-                <a class="main-nav__submenu-title">Жилая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="" tabindex="-1">
-                    <a class="" href="#">Квартиры</a>
-                  </li>
-                  <li class="" tabindex="-1">
-                    <a class="" href="#">Дома и дачи</a>
-                  </li>
-                  <li class="" tabindex="-1">
-                    <a class="" href="#">Земельные участоки</a>
-                  </li>
-                  <li class="" tabindex="-1">
-                    <a class="" href="#">Комнаты</a>
-                  </li>
-                  <li class="" tabindex="-1">
-                    <a class="" href="#">Таунхаусы</a>
-                  </li>
-                </ul>
-                <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Офис</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">ПСН</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Здание</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Производство</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Торговая площадь</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Склад</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Готовый бизнес</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Коммерческая земля</a>
-                  </li>
-                </ul>
-                <a class="main-nav__submenu-title">Гаражи</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Гараж</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Гаражный бокс</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Машиноместо</a>
-                  </li>
-                </ul>
+              <div class="main-nav__submenu main-nav__submenu--sale">
+                <div class="main-nav__submenu-layout" focusable="false">
+                  <a class="main-nav__submenu-title">Жилая недвижимость</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="" tabindex="-1">
+                      <a class="" href="#">Квартиры</a>
+                    </li>
+                    <li class="" tabindex="-1">
+                      <a class="" href="#">Дома и дачи</a>
+                    </li>
+                    <li class="" tabindex="-1">
+                      <a class="" href="#">Земельные участоки</a>
+                    </li>
+                    <li class="" tabindex="-1">
+                      <a class="" href="#">Комнаты</a>
+                    </li>
+                    <li class="" tabindex="-1">
+                      <a class="" href="#">Таунхаусы</a>
+                    </li>
+                  </ul>
+                  <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Офис</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">ПСН</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Здание</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Производство</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Торговая площадь</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Склад</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Готовый бизнес</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Коммерческая земля</a>
+                    </li>
+                  </ul>
+                  <a class="main-nav__submenu-title">Гаражи</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Гараж</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Гаражный бокс</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Машиноместо</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sale-aside"></div>
               </div>
-              <div class="sale-aside"></div>
             </div>
           </li>
           <li class="main-nav__item">
@@ -127,7 +127,7 @@
               <a class="main-nav__item-link" href="#">
                 <span>Аренда</span>
               </a>
-              <button class="button main-nav__item-button" type="button">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false">
                 <span class="visually-hidden">Открыть подменю раздела аренды</span>
                 <svg aria-hidden="true" class="main-nav__item-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -136,63 +136,63 @@
                   />
                 </svg>
               </button>
-            </div>
-            <div class="main-nav__submenu main-nav__item-link--closed">
-              <div class="main-nav__submenu-layout">
-                <a class="main-nav__submenu-title">Жилая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Квартира</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Дом</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Комната</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Таунхаус</a>
-                  </li>
-                </ul>
-                <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Офис</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">ПСН</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Здание</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Производство</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Торговая площадь</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Склад</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Готовый бизнес</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Коммерческая земля</a>
-                  </li>
-                </ul>
-                <a class="main-nav__submenu-title">Гаражи</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="">Гараж</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="">Гаражный бокс</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="">Машиноместо</a>
-                  </li>
-                </ul>
+              <div class="main-nav__submenu">
+                <div class="main-nav__submenu-layout">
+                  <a class="main-nav__submenu-title">Жилая недвижимость</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Квартира</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Дом</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Комната</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Таунхаус</a>
+                    </li>
+                  </ul>
+                  <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Офис</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">ПСН</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Здание</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Производство</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Торговая площадь</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Склад</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Готовый бизнес</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Коммерческая земля</a>
+                    </li>
+                  </ul>
+                  <a class="main-nav__submenu-title">Гаражи</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="">Гараж</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="">Гаражный бокс</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="">Машиноместо</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
@@ -201,7 +201,7 @@
               <a class="main-nav__item-link" href="#">
                 <span>Каталог новостроек</span>
               </a>
-              <button class="button main-nav__item-button" type="button">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false">
                 <span class="visually-hidden">Открыть подменю каталога новостроек</span>
                 <svg aria-hidden="true" class="main-nav__item-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -210,27 +210,27 @@
                   />
                 </svg>
               </button>
-            </div>
-            <div class="main-nav__submenu main-nav__item-link--closed">
-              <div class="main-nav__submenu-layout">
-                <a class="main-nav__submenu-title">Жилая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Квартира</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Дом</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Земельный участок</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Комната</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Таунхаус</a>
-                  </li>
-                </ul>
+              <div class="main-nav__submenu">
+                <div class="main-nav__submenu-layout">
+                  <a class="main-nav__submenu-title">Жилая недвижимость</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Квартира</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Дом</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Земельный участок</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Комната</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Таунхаус</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
@@ -239,7 +239,7 @@
               <a class="main-nav__item-link" href="#">
                 <span>Специалисты</span>
               </a>
-              <button class="button main-nav__item-button" type="button">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false">
                 <span class="visually-hidden">Открыть подменю раздела специалистов</span>
                 <svg aria-hidden="true" class="main-nav__item-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -248,51 +248,51 @@
                   />
                 </svg>
               </button>
-            </div>
-            <div class="main-nav__submenu main-nav__item-link--closed">
-              <div class="main-nav__submenu-layout">
-                <a class="main-nav__submenu-title">Риэлторы</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#" tabindex="0">Квартира</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Дом</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Комната</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Таунхаус</a>
-                  </li>
-                </ul>
-                <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
-                <ul class="list main-nav__submenu-list">
-                  <li class="">
-                    <a class="" href="#">Офис</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">ПСН</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Здание</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Производство</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Торговая площадь</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Склад</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Готовый бизнес</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Коммерческая земля</a>
-                  </li>
-                </ul>
+              <div class="main-nav__submenu">
+                <div class="main-nav__submenu-layout">
+                  <a class="main-nav__submenu-title">Риэлторы</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#" tabindex="0">Квартира</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Дом</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Комната</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Таунхаус</a>
+                    </li>
+                  </ul>
+                  <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
+                  <ul class="list main-nav__submenu-list">
+                    <li class="">
+                      <a class="" href="#">Офис</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">ПСН</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Здание</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Производство</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Торговая площадь</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Склад</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Готовый бизнес</a>
+                    </li>
+                    <li class="">
+                      <a class="" href="#">Коммерческая земля</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </li>
@@ -301,7 +301,7 @@
               <a class="main-nav__item-link" href="#">
                 <span>Ипотека</span>
               </a>
-              <button class="button main-nav__item-button" type="button">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false">
                 <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
                 <svg aria-hidden="true" class="main-nav__item-icon" width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
