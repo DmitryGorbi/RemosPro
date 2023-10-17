@@ -52,17 +52,39 @@
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  outline: none;
 }
-a {
-  text-decoration: none;
-}
-a:visited {
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
   color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+a:visited {
+  color: inherit;
+}
+:is(.navigation) a:focus {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
+}
+:is(.navigation) a:hover {
+  color: var(--dark-blue);
+}
+:is(.navigation) .button:focus {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
 .page,
 .page__body {
@@ -109,6 +131,7 @@ a:visited {
 }
 :root {
   --blue: #006aff;
+  --bright-blue: #a6e5ff;
   --dark-blue: #00008b;
   --white: #ffffff;
   --basic-black: #333333;
@@ -121,16 +144,6 @@ a:visited {
   --light-green: #def6e7;
   --light: #fbfbfb;
   --light-blue: #f2faff;
-}
-.button {
-  padding: 0;
-  margin: 0;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
 }
 .button-main {
   padding: 5px 10px;
@@ -296,10 +309,14 @@ input[type='checkbox'] {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0 40px;
   z-index: 2;
   min-height: 100%;
   background-color: var(--white);
+}
+@media (min-width: 768px) {
+  .main-nav {
+    padding: 0 40px;
+  }
 }
 @media (min-width: 1240px) {
   .main-nav {
@@ -333,9 +350,6 @@ input[type='checkbox'] {
     font-weight: 400;
     border: none;
   }
-  .main-nav__item-link:hover {
-    color: var(--blue);
-  }
   .main-nav__item-link:hover::after {
     content: '';
     position: absolute;
@@ -364,16 +378,11 @@ input[type='checkbox'] {
   fill: #006aff;
 }
 .main-nav__toggler {
-  padding: 0 24px;
+  padding: 0 25px;
   border-bottom: 1px solid var(--light-gray);
 }
 @media (min-width: 1240px) {
   .main-nav__toggler {
-    display: none;
-  }
-}
-@media (max-width: 1239px) {
-  .main-nav__item-link--closed.main-nav__submenu {
     display: none;
   }
 }
@@ -405,9 +414,9 @@ input[type='checkbox'] {
     transform: translateX(-50%);
     z-index: 1;
     width: 1200px;
-    height: 500px;
+    height: 400px;
     margin-top: 1px;
-    padding: 40px 100px 40px 145px;
+    padding: 40px 100px 40px 250px;
     background-color: var(--white);
     box-shadow: 0px 5px 10px 0px var(--light-black);
     box-sizing: border-box;
@@ -422,34 +431,42 @@ input[type='checkbox'] {
   }
 }
 @media (min-width: 1240px) {
-  .main-nav__submenu--sale {
+  .main-nav__submenu--layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 50px;
-         column-gap: 50px;
+    grid-template-columns: max-content max-content max-content;
+    grid-template-rows: max-content;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
   }
 }
 .main-nav__submenu-title {
   display: block;
-  padding: 15px 0 5px 0;
-  font-size: 15px;
+  padding: 5px 0 5px 0;
+  font-size: 16px;
   font-weight: 700;
   color: inherit;
+  margin-top: 15px;
 }
 @media (min-width: 1240px) {
   .main-nav__submenu-title {
+    position: relative;
+    margin-top: 0;
     margin-bottom: 10px;
+  }
+  .main-nav__submenu-title:not(:first-child)::after {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: -31px;
+    width: 2px;
+    height: 280px;
+    background-color: var(--extra-light-gray);
   }
 }
 @media (min-width: 1240px) {
   .main-nav__submenu-list {
-    display: grid;
-    grid-template-columns: 200px max-content;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
-  }
-  .main-nav__submenu-list:not(:last-child) {
-    margin-bottom: 15px;
+    grid-row: 2/3;
+    position: relative;
   }
 }
 .main-nav__submenu-list li a {
@@ -457,22 +474,36 @@ input[type='checkbox'] {
   padding: 10px 0;
   font-size: 14px;
 }
-.main-nav__submenu-list li a:active {
-  color: red;
-}
 @media (min-width: 1240px) {
   .main-nav__submenu-list li a {
+    position: relative;
     display: inline-block;
-    padding: 5px 0;
+    padding: 8px 10px;
     line-height: inherit;
     font-size: inherit;
   }
-  .main-nav__submenu-list li a:hover {
-    padding: 5px 0 4px 0;
-    border-bottom: 1px solid var(--blue);
+  .main-nav__submenu-list li a span:hover::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 6px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-blue);
   }
-  .main-nav__submenu-list li a:active {
-    color: red;
+}
+@media (min-width: 1240px) {
+  .main-nav__submenu-list li a span {
+    position: relative;
+  }
+  .main-nav__submenu-list li a span:hover::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-blue);
   }
 }
 .toggler {
@@ -523,13 +554,12 @@ input[type='checkbox'] {
   fill: var(--blue);
 }
 .button-nav:hover {
-  outline: 1px solid var(--blue);
-  transition: outline 1s linear;
-  transition-delay: 0.1s;
+  outline: 2px solid var(--blue);
+  background-color: var(--light-blue);
 }
 .button-nav:active {
   background-color: var(--blue);
-  color: var(--white);
+  color: var(--white) !important;
 }
 .button-nav:active path {
   fill: var(--white);
@@ -537,7 +567,7 @@ input[type='checkbox'] {
 @media (min-width: 768px) {
   .button-nav {
     border-radius: 5px;
-    padding: 6px;
+    padding: 10px;
   }
 }
 .button-nav--login {
@@ -607,6 +637,13 @@ input[type='checkbox'] {
 }
 .user-nav__list {
   display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .user-nav__list {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .user-nav__list--disabled {
   display: none;
@@ -785,7 +822,7 @@ input[type='checkbox'] {
 }
 @media (min-width: 768px) {
   .button-filter {
-    padding: 5px 25px 5px 10px;
+    padding: 9px 25px 9px 10px;
     text-align: start;
     border: 1px solid #e5e5e5;
     box-sizing: border-box;
@@ -822,7 +859,7 @@ input[type='checkbox'] {
 }
 @media (min-width: 768px) {
   .button-filter--type {
-    padding: 5px 25px 5px 10px;
+    padding: 9px 25px 9px 10px;
   }
 }
 @media (max-width: 767px) {

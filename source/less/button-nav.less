@@ -10,14 +10,13 @@
   }
 
   &:hover {
-    outline: 1px solid var(--blue);
-    transition: outline 1s linear;
-    transition-delay: 0.1s;
+    outline: 2px solid var(--blue);
+    background-color: var(--light-blue);
   }
 
   &:active {
     background-color: var(--blue);
-    color: var(--white);
+    color: var(--white) !important;
   }
 
   &:active path {
@@ -26,7 +25,7 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 5px;
-    padding: 6px;
+    padding: 10px;
   }
 }
 

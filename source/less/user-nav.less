@@ -15,6 +15,11 @@
 
 .user-nav__list {
   display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 10px;
+  }
 }
 
 .user-nav__list--disabled {

@@ -63,3 +63,14 @@ subMenuButtons.forEach((item, index) => {
     }
   });
 });
+
+const changeActiveClass = (items, disabledSelector) => {
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      items.forEach((el) => {
+        el.classList.remove(disabledSelector);
+      });
+      item.classList.add(disabledSelector);
+    });
+  });
+};

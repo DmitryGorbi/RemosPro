@@ -9,18 +9,48 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  outline: none;
 }
 
-a {
-  text-decoration: none;
-
-  &:visited {
-    color: inherit;
-  }
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+:is(.navigation) a {
+  &:focus {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
+  }
+
+  &:hover {
+    color: var(--dark-blue);
+  }
+}
+
+:is(.navigation) .button {
+  &:focus {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
+  }
 }
