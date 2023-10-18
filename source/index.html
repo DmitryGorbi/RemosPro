@@ -316,21 +316,18 @@
             </a>
           </li>
         </ul>
-        <div class="user-nav">
-          <ul class="list user-nav__list user-nav__list--disabled">
-            <li class="user-nav__item">
-              <a class="button-nav button-nav--login" href="#">Войти</a>
-            </li>
-          </ul>
+        <nav class="user-nav">
           <ul class="list user-nav__list">
-            <li>
-              <a class="button-nav button-nav--login" href="#">Личный кабинет</a>
+            <li class="user-nav__item">
+              <a class="button-nav button-nav--login user-nav__list--disabled" href="#">Войти</a>
             </li>
-            <li>
-              <a class="button-nav button-nav--login" href="#">Выйти</a>
+            <li class="user-nav__item">
+              <a class="user-nav__login" href="#" aria-label="Вход в ичный кабинет"
+                ><span><img src="../img/icons/user-icon.svg" width="40px" height="40px" alt="" /></span
+              ></a>
             </li>
           </ul>
-        </div>
+        </nav>
       </nav>
     </header>
     <main id="main" class="wrapper-content">

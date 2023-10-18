@@ -2,6 +2,8 @@
 
 const mainNav = document.querySelector('.navigation');
 const burgerMenu = mainNav.querySelector('.toggler');
+const userNav = document.querySelector('.user-nav');
+console.log(userNav);
 
 const onTogglerClick = (evt) => {
   evt.preventDefault();

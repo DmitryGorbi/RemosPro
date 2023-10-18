@@ -4,6 +4,12 @@
   }
 }
 
+// @media (max-width: @mobile-width-only) {
+//   .user-nav__disabled {
+//     display: none;
+//   }
+// }
+
 .user-nav {
   margin-left: auto;
   color: inherit;
@@ -24,4 +30,16 @@
 
 .user-nav__list--disabled {
   display: none;
+}
+
+.user-nav__login {
+  // display: none;
+  & span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--extra-light-gray);
+    // background-image: url('../img/icons/user-icon.svg');
+    border-radius: 50%;
+  }
 }

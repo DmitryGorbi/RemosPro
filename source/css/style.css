@@ -97,8 +97,8 @@ a:visited {
   font-size: 15px;
   font-family: 'Roboto', sans-serif, 'Arial';
   font-weight: 400;
-  color: #333333;
-  background-color: #ffffff;
+  color: var(--basic-black);
+  background-color: var(--white);
 }
 .wrapper-content {
   padding: 0 20px;
@@ -648,6 +648,13 @@ input[type='checkbox'] {
 .user-nav__list--disabled {
   display: none;
 }
+.user-nav__login span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--extra-light-gray);
+  border-radius: 50%;
+}
 @media (max-width: 767px) {
   .toggler[aria-expanded='true'] ~ .user-actions {
     display: none;
@@ -659,6 +666,7 @@ input[type='checkbox'] {
   -moz-column-gap: 5px;
        column-gap: 5px;
   align-items: center;
+  outline: none;
 }
 @media (min-width: 768px) {
   .user-actions {
