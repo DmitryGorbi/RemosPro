@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 40px;
+  margin-left: 10px;
+  line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 112px;
+    height: 42px;
+    & svg {
+      width: 112px;
+      height: 42px;
+    }
+  }
+}
+
+.logo__icon {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    top: -3px;
+  }
+}

@@ -1,0 +1,37 @@
+.label-popup,
+.label-popup--add {
+  display: none;
+}
+
+.user-actions__like:hover .label-popup,
+.user-nav__button-profile:hover .label-popup {
+  display: block;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 14px;
+  padding: 5px;
+  color: var(--white);
+  background-color: var(--gray);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.user-actions__add:hover .label-popup--add {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 14px;
+    padding: 5px;
+    color: var(--white);
+    background-color: var(--gray);
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+}

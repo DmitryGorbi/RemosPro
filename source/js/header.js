@@ -2,13 +2,15 @@
 
 const mainNav = document.querySelector('.navigation');
 const burgerMenu = mainNav.querySelector('.toggler');
-const userNav = document.querySelector('.user-nav');
-console.log(userNav);
+const userActionsNav = document.querySelector('.user-actions');
+
+// Открываю меню бургера и привязываю это событие к показу навигации личного кабинета
 
 const onTogglerClick = (evt) => {
   evt.preventDefault();
   const isOpen = burgerMenu.getAttribute('aria-expanded') === 'false';
   burgerMenu.setAttribute('aria-expanded', isOpen);
+  console.log('click');
 };
 
 burgerMenu.addEventListener('click', onTogglerClick);
@@ -26,7 +28,7 @@ if (mediaQuery.matches) {
   document.removeEventListener('click', onTogglerClick);
 }
 
-// Открывает/закрывает сабменю в моильной версии и на планшете,
+// Открывает/закрывает сабменю в мобильной версии и на планшете,
 // окрашивает ссылку в другой цвет, когда сабменю открыто.
 
 const subMenu = mainNav.querySelectorAll('.main-nav__submenu');
@@ -37,24 +39,19 @@ const mainNavLinks = mainNav.querySelectorAll('.main-nav__item-link span');
 
 const subMenuButtons = mainNav.querySelectorAll('.main-nav__toggler');
 
-// subMenuButtons.forEach((item, index) => {
-//   item.addEventListener('click', (evt) => {
-//     evt.preventDefault();
-//     subMenu[index].classList.toggle('main-nav__item-link--closed');
-//     if (!subMenu[index].classList.contains('main-nav__item-link--closed')) {
-//       mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
-//       subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
-//     } else {
-//       mainNavLinks[index].style.color = 'inherit';
-//       subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
-//     }
-//   });
-// });
-
 subMenuButtons.forEach((item, index) => {
   item.addEventListener('click', (evt) => {
     evt.preventDefault();
     const isOpen = item.getAttribute('aria-expanded') === 'false';
+    subMenuButtons.forEach((el, ind) => {
+      if (isOpen) {
+        el.setAttribute('aria-expanded', false);
+        mainNavLinks[ind].style.color = 'inherit';
+        subMenuButtonIcon[ind].style.transform = 'rotate(0deg)';
+      } else {
+        item.setAttribute('aria-expanded', isOpen);
+      }
+    });
     item.setAttribute('aria-expanded', isOpen);
     if (isOpen) {
       mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
@@ -66,13 +63,15 @@ subMenuButtons.forEach((item, index) => {
   });
 });
 
-const changeActiveClass = (items, disabledSelector) => {
-  items.forEach((item) => {
-    item.addEventListener('click', () => {
-      items.forEach((el) => {
-        el.classList.remove(disabledSelector);
-      });
-      item.classList.add(disabledSelector);
-    });
-  });
+// Обработчик на показ окна с навигацией личного ккабинета
+const userNavButton = document.querySelector('.user-nav__button-profile');
+console.log(userNavButton);
+const userNavList = document.querySelector('.user-nav__item-list');
+
+const userMenuToggler = (evt) => {
+  evt.preventDefault();
+  userNavList.classList.toggle('user-nav__item-list--disabled');
+  console.log('click');
 };
+
+userNavButton.addEventListener('click', userMenuToggler);

@@ -1,3 +1,15 @@
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -9,18 +21,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  outline: none;
-}
-
-.button {
-  padding: 0;
-  margin: 0;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
   outline: none;
 }
 
@@ -39,7 +39,9 @@ a {
   }
 }
 
-:is(.navigation) a {
+:is(.navigation, .user-actions, .user-nav, .modal) a {
+  color: inherit;
+
   &:focus {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
   }
@@ -49,8 +51,16 @@ a {
   }
 }
 
-:is(.navigation) .button {
+:is(.navigation, .modal) .button {
   &:focus {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
   }
+}
+
+:is(.main-nav, .user-actions, .user-nav) svg {
+  fill: var(--blue);
+
+  // &:active {
+  //   fill: var(--white);
+  // }
 }

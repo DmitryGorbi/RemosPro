@@ -2,54 +2,15 @@
   padding-top: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--light-gray);
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
 
   @media (min-width: @desktop-width) {
     padding: 3px 0 0 0;
   }
 }
 
-.logo {
-  // display: block;
-  width: 75px;
-  height: 40px;
-
-  @media (min-width: @desktop-width) {
-    position: relative;
-    top: -2px;
-    width: 112px;
-    height: 42px;
-  }
-}
-
-.page-header__logo {
-  // display: block;
-  margin-left: 10px;
-  line-height: 40px;
-
-  & path {
-    fill: var(--blue);
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-left: 0;
-    padding: 0px 0 0px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-  }
-}
-
-.page-header__user-actions {
-  margin-left: auto;
-
-  @media (min-width: @desktop-width) {
-    margin-right: 40px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-  }
+.page-header--layout {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  align-items: center;
 }

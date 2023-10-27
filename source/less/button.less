@@ -1,1 +1,19 @@
+.button--modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
 
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('../img/icons/close-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
