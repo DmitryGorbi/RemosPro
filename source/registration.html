@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#00aba9" />
     <!-- <meta name="theme-color" content="#ffffff" /> -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду</title>
+    <title>Remos Недвижимость | Регистрация</title>
   </head>
 
   <body class="page__body layout">
@@ -308,113 +308,61 @@
         </ul>
       </nav>
     </header>
-    <main id="main" class="wrapper-content page-main">
-      <p class="page-header__locale">Москва</p>
-      <span><a href="filter.html">Filter</a></span>
-      <p><a href="blank.html">Карточка</a></p>
-      <p><a href="auth.html">Auth</a></p>
-      <p><a href="registration.html">Регистрация</a></p>
+    <main id="main" class="wrapper-content page-main layout__page-main">
+      <h1 class="caption caption--h1">Зарегистрироваться на сайте</h1>
+      <section class="auth auth--reg">
+        <h2 class="visually-hidden">Форма регистрации</h2>
+        <form class="auth__form" method="post" action="">
+          <div>
+            <label for="userRegEmail">
+              <span class="">Email адресс:</span>
+            </label>
+            <input class="input input--field" title="Введите ваш email" id="userRegEmail" type="email" name="email" inputmode="email" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="registrationPassword">
+              <span class="">Пароль:</span>
+            </label>
+            <input
+              class="input input--field"
+              title="Придумайте надежный пароль"
+              id="registrationPassword"
+              type="password"
+              name="password"
+              autocomplete="new-password"
+              value=""
+              min="3"
+              maxlength="20"
+              size="20"
+              required
+            />
+          </div>
+          <fieldset>
+            <legend>Вы профессионал?</legend>
+            <div>
+              <input id="realtor" type="radio" name="profi-type" value="realtor" />
+              <label for="realtor"><span>Риэлтор</span></label>
+            </div>
+            <div>
+              <input id="agency" type="radio" name="profi-type" value="agency" />
+              <label for="agency"><span>Агентство недвижимости</span></label>
+            </div>
+            <div>
+              <input id="builder" type="radio" name="profi-type" value="builder" />
+              <label for="builder"><span>Застройщик</span></label>
+            </div>
+          </fieldset>
+          <div>
+            <input id="agreement" type="checkbox" required checked />
+            <label for="agreement">
+              <span>Согласен с правилами сайта и с условиями политики конфиденциальности.</span>
+            </label>
+          </div>
+          <button class="button" type="submit">Зарегистрироваться</button>
+        </form>
+      </section>
     </main>
-    <footer></footer>
-    <section class="modal modal--login auth auth--login">
-      <h2 class="caption">Авторизация</h2>
-      <button class="button modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно авторизации</span>
-      </button>
-      <form class="auth__form" method="post" action="">
-        <div>
-          <label for="userEmail">
-            <span>Email адресс:</span>
-          </label>
-          <input class="input input--field" title="Введите ваш email" id="userEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
-        </div>
-        <div>
-          <label for="userPassword">
-            <span>Пароль:</span>
-          </label>
-          <input
-            class="input input--field"
-            title="Введите ваш пароль"
-            id="userPassword"
-            type="password"
-            name="password"
-            autocomplete="current-password"
-            value=""
-            min="3"
-            maxlength="20"
-            size="20"
-            required
-            aria-describedby="password-validation"
-            enterkeyhint="done"
-          />
-          <!-- <span id="password-validation">Для регистрации: Пароль должен содержать не менее 8-ми и не более 20 символов</span> -->
-        </div>
-        <div>
-          <input type="checkbox" id="remember" />
-          <label for="remember">Запомнить</label>
-        </div>
-        <button class="button" type="submit">Войти</button>
-        <div>
-          <a class="auth__form-link" href="registration.html">Регистрация</a>
-          <a href="restore-password.html">Восстановить доступ</a>
-        </div>
-      </form>
-    </section>
-    <section class="modal modal--reg auth auth--reg">
-      <h2 class="caption">Регистрация</h2>
-      <button class="button modal__button-close" type="button">
-        <span class="visually-hidden">Закрыть окно регистрации</span>
-      </button>
-      <form class="auth__form" method="post" action="">
-        <div>
-          <label for="userRegEmail">
-            <span class="">Email адресс:</span>
-          </label>
-          <input class="input input--field" title="Введите ваш email" id="userRegEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
-        </div>
-        <div>
-          <label for="registrationPassword">
-            <span class="">Пароль:</span>
-          </label>
-          <input
-            class="input input--field"
-            title="Придумайте надежный пароль"
-            id="registrationPassword"
-            type="password"
-            name="password"
-            autocomplete="new-password"
-            value=""
-            min="3"
-            maxlength="20"
-            size="20"
-            required
-            enterkeyhint="done"
-          />
-        </div>
-        <fieldset>
-          <legend>Вы профессионал?</legend>
-          <div>
-            <input id="realtor" type="radio" name="profi-type" value="realtor" />
-            <label for="realtor"><span>Риэлтор</span></label>
-          </div>
-          <div>
-            <input id="agency" type="radio" name="profi-type" value="agency" />
-            <label for="agency"><span>Агентство недвижимости</span></label>
-          </div>
-          <div>
-            <input id="builder" type="radio" name="profi-type" value="builder" />
-            <label for="builder"><span>Застройщик</span></label>
-          </div>
-        </fieldset>
-        <div>
-          <input id="agreement" type="checkbox" required checked />
-          <label for="agreement">
-            <span>Согласен с правилами сайта и с политикой конфиденциальности.</span>
-          </label>
-        </div>
-        <button class="button" type="submit">Зарегистрироваться</button>
-      </form>
-    </section>
+
     <script src="js/header.js"></script>
   </body>
 </html>

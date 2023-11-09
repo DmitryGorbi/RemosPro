@@ -6,7 +6,7 @@
 
 .main-nav {
   position: absolute;
-  top: 59px;
+  top: 63px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -24,6 +24,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: transparent;
   }
 }
 
@@ -119,7 +120,12 @@
     margin-top: 1px;
     padding: 40px 100px 40px 250px;
     background-color: var(--white);
+
     box-shadow: 0 5px 10px 0 var(--light-black);
+
+    // background-color: rgba(0, 0, 0, 0.5);
+    // box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5); /* fallback for IE */
+    // box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -159,8 +165,8 @@
 
 .main-nav__submenu-list {
   @media (min-width: @desktop-width) {
-    grid-row: 2/3;
     position: relative;
+    grid-row: 2/3;
   }
 }
 

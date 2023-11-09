@@ -7,30 +7,30 @@
   position: relative;
   flex-grow: 1;
   display: flex;
-  align-items: center;
-  border: 1px solid @light-gray;
-  border-radius: 4px;
+  flex-direction: column;
+  row-gap: 3px;
 
   &::after {
     position: absolute;
     content: '₽';
-    top: 10px;
-    right: 7px;
+    top: 39px;
+    right: 5px;
     width: 16px;
-    height: 12px;
+    height: 20px;
 
     @media (min-width: @tablet-width) {
-      top: 5px;
-      right: 0;
+      top: 30px;
     }
   }
 
-  &:hover {
-    border-color: @blue;
-  }
-
   @media (min-width: @tablet-width) {
-    height: 30px;
-    width: 120px;
+    & input {
+      padding: 5px 10px;
+    }
   }
+}
+
+.price__label span {
+  margin-left: 3px;
+  font-size: 13px;
 }

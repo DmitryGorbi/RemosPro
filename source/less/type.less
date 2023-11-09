@@ -3,6 +3,10 @@
   padding: 10px 0;
   border: 1px solid @light-gray;
   background-color: @light;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 7px;
+  }
 }
 
 .type__title {
@@ -22,34 +26,6 @@
   margin-bottom: 3px;
 }
 
-.type__radio {
-  display: block;
-  padding: 11px;
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    padding: 5px 10px;
-  }
-}
-
-.type__input:hover + .type__label .type__radio {
-  padding: 10px;
-  border: 1px solid @blue;
-  border-radius: 4px;
-
-  @media (min-width: @tablet-width) {
-    padding: 4px 9px;
-  }
-}
-
-.type__input:focus + .type__label .type__radio {
-  padding: 10px;
-  border: 1px solid @blue;
-}
-
-.type__input:checked + .type__label .type__radio {
-  font-weight: 700;
-  color: @blue;
-  background-color: @light-blue;
-  border-radius: 4px;
+.type__label .pseudo-input {
+  border: none;
 }

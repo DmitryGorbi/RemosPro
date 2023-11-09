@@ -1,3 +1,9 @@
+.layout {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  row-gap: 20px;
+}
+
 .layout__navigation {
   flex-grow: 1;
   display: flex;
@@ -7,4 +13,10 @@
   @media (min-width: @tablet-width) {
     column-gap: 10px;
   }
+}
+
+.layout__page-main {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  row-gap: 30px;
 }

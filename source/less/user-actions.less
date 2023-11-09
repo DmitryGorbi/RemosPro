@@ -1,5 +1,6 @@
 .user-actions ul {
   display: flex;
+  column-gap: 10px;
   align-items: center;
 
   @media (min-width: @small-tablet-width) {
@@ -11,28 +12,34 @@
 .user-actions__add {
   position: relative;
   display: block;
-  padding: 11px;
+  padding: 13px;
+  border-radius: 50%;
+  // background-color: var(--extra-light-gray);
+
+  &:hover {
+    outline: 2px solid var(--blue);
+    background-color: var(--light-blue);
+  }
+
+  &:active {
+    background-color: var(--blue);
+    color: var(--white) !important;
+  }
+
+  &:active svg {
+    fill: var(--white);
+  }
 
   @media (min-width: @small-tablet-width) {
+    padding: 11px;
     background-color: var(--extra-light-gray);
-
-    &:hover {
-      outline: 2px solid var(--blue);
-      background-color: var(--light-blue);
-    }
-
-    &:active {
-      background-color: var(--blue);
-      color: var(--white) !important;
-    }
-
-    &:active svg {
-      fill: var(--white);
-    }
   }
 }
 
 .user-actions__like {
+  @media (max-width: 339px) {
+    display: none;
+  }
   @media (min-width: @small-tablet-width) {
     border-radius: 50%;
   }
@@ -43,14 +50,6 @@
     display: flex;
     column-gap: 2px;
     border-radius: 5px;
-  }
-}
-
-.user-actions__text {
-  display: none;
-
-  @media (min-width: @small-tablet-width) {
-    display: block;
   }
 }
 

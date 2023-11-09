@@ -4,6 +4,14 @@ const mainNav = document.querySelector('.navigation');
 const burgerMenu = mainNav.querySelector('.toggler');
 const userActionsNav = document.querySelector('.user-actions');
 
+const isEscEvent = (evt) => {
+  return evt.key === 'Escape' || evt.key === 'Esc';
+};
+
+const isEnterEvent = (evt) => {
+  return evt.key === 'Enter';
+};
+
 // Открываю меню бургера и привязываю это событие к показу навигации личного кабинета
 
 const onTogglerClick = (evt) => {
@@ -64,9 +72,10 @@ subMenuButtons.forEach((item, index) => {
 });
 
 // Обработчик на показ окна с навигацией личного ккабинета
-const userNavButton = document.querySelector('.user-nav__button-profile');
+const userNav = document.querySelector('.user-nav');
+const userNavButton = userNav.querySelector('.user-nav__button-profile');
 console.log(userNavButton);
-const userNavList = document.querySelector('.user-nav__item-list');
+const userNavList = userNav.querySelector('.user-nav__item-list');
 
 const userMenuToggler = (evt) => {
   evt.preventDefault();
@@ -75,3 +84,44 @@ const userMenuToggler = (evt) => {
 };
 
 userNavButton.addEventListener('click', userMenuToggler);
+
+// Модальные окна с регистрацией
+
+const buttonLogIn = userNav.querySelector('.user-nav__button-login');
+const modalLogin = document.querySelector('.modal--login');
+const modalReg = document.querySelector('.modal--reg');
+const buttonModalClose = document.querySelector('.modal__button-close');
+const inputMail = document.getElementById('userEmail');
+const regModalLink = modalLogin.querySelector('.auth__form-link');
+
+const onButtonClose = (evt) => {
+  let target = evt.target;
+  if (target === buttonModalClose) {
+    modalLogin.classList.remove('modal--show');
+  }
+};
+
+const onEscClose = (evt) => {
+  if (isEscEvent(evt)) {
+    modalLogin.classList.remove('modal--show');
+  }
+};
+
+buttonLogIn.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modalLogin.classList.toggle('modal--show');
+  modalLogin.addEventListener('click', onButtonClose);
+  inputMail.focus();
+
+  if (!modalLogin.classList.contains('modal--show')) {
+    modalLogin.removeEventListener('click', onButtonClose);
+    document.removeEventListener('keydown', onEscClose);
+  } else {
+    document.addEventListener('keydown', onEscClose);
+    regModalLink.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      modalLogin.classList.remove('modal--show');
+      modalReg.classList.add('modal--show');
+    });
+  }
+});

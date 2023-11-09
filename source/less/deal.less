@@ -3,6 +3,7 @@
     display: flex;
     column-gap: 5px;
   }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     min-width: 90px;
@@ -23,43 +24,4 @@
 
 .deal__label {
   display: block;
-}
-
-.deal__input-text {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  border: 1px solid @light-gray;
-  border-radius: 4px;
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 0;
-  }
-}
-
-.deal__input:checked + .deal__label .deal__input-text {
-  font-weight: 700;
-  background-color: @light-blue;
-  border-color: @blue;
-  color: @blue;
-
-  @media (min-width: @tablet-width) {
-    color: @white;
-    font-weight: 400;
-    background-color: @blue;
-  }
-}
-
-.deal__input:hover + .deal__label .deal__input-text {
-  border: 1px solid @blue;
-
-  @media (min-width: @tablet-width) {
-  }
-}
-
-.deal__input:focus + .deal__label .deal__input-text {
-  outline: auto;
 }

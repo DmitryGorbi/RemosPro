@@ -2,8 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  row-gap: 25px;
-  margin-bottom: 300px;
+  row-gap: 15px;
+  margin-bottom: 600px;
+  line-height: 20px;
+
+  & h3 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -13,9 +21,14 @@
 }
 
 .filter__fieldset {
-  margin: 0;
-  padding: 0;
   border: none;
+  // border: 1px red solid;
+  padding: 10px 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .filter__type-layout {
@@ -44,7 +57,7 @@
 }
 
 .filter__select {
-  border-radius: 4px;
+  border-radius: 5px;
 
   &--disabled {
     display: none;
@@ -53,10 +66,9 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     width: max-content;
-    margin-top: 5px;
-    border: 1px solid @light-gray;
+    margin-top: 7px;
+    border: 1px solid var(--light-gray);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
     background-color: @white;
   }
 }
@@ -70,9 +82,10 @@
     justify-content: space-between;
     column-gap: 3px;
     row-gap: 7px;
-    
   }
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    row-gap: 7px;
     padding: 10px;
   }
 }
