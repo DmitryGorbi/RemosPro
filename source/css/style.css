@@ -223,6 +223,9 @@ img {
 .button:focus {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
+.button--text {
+  padding: 7px 5px;
+}
 .button-main {
   padding: 14px 10px;
   color: var(--white);
@@ -1642,15 +1645,17 @@ input[type='radio'] {
     margin-left: 10px;
   }
 }
+.filter-add__footer {
+  display: flex;
+  margin: auto;
+}
 .filter-add__footer > .button > span {
   border-bottom: 1px dashed var(--blue);
 }
 @media (min-width: 768px) {
   .filter-add__footer {
-    display: flex;
     -moz-column-gap: 35px;
          column-gap: 35px;
-    margin: auto;
   }
 }
 .filter-add__wrapper--keywords {
