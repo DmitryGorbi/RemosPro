@@ -1,11 +1,16 @@
 .button-main {
-  padding: 5px 10px;
-  color: @basic-black;
+  padding: 14px 10px;
+  color: var(--white);
   border-radius: 5px;
-  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  // border: 1px solid var(--blue);
 
   &:hover {
-    color: @white;
-    background-color: @blue;
+    // color: @white;
+    // background-color: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 5px 10px;
   }
 }

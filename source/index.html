@@ -17,305 +17,503 @@
   </head>
 
   <body class="page__body layout">
-    <header class="page-header page-header--layout wrapper-content">
-      <nav class="navigation layout__navigation">
-        <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <a class="logo" href="index.html">
-          <svg class="logo__icon" role="img" aria-label="Логотип RemosPro" width="75" height="19" viewBox="0 0 75 19">
-            <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
-          </svg>
-        </a>
-        <ul id="main-nav" class="list main-nav">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Продажа</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
-              <span class="visually-hidden">Открыть подменю раздела продажи</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-sale" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
+    <header class="page-header wrapper-content">
+      <div class="page-header__wrapper">
+        <nav class="navigation layout__navigation">
+          <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="logo" href="index.html">
+            <svg class="logo__icon" role="img" aria-label="Логотип RemosPro" width="75" height="19" viewBox="0 0 75 19">
+              <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
+            </svg>
+          </a>
+          <ul id="main-nav" class="list main-nav">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                <span>Продажа</span>
+              </a>
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
+                <span class="visually-hidden">Открыть подменю раздела продажи</span>
+                <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-sale" class="main-nav__submenu main-nav__submenu--layout">
+                <p class="main-nav__submenu-title">Жилая недвижимость</p>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="main-nav__submenu-title">Гаражи</p>
+                <ul class="list main-nav__submenu-list">
+                  <li class="">
+                    <a class="" href="#">Гараж</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Гаражный бокс</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                <span>Аренда</span>
+              </a>
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
+                <span class="visually-hidden">Открыть подменю раздела аренды</span>
+                <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-rent" class="main-nav__submenu main-nav__submenu--layout">
+                <p class="main-nav__submenu-title">Жилая недвижимость</p>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"> <span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="main-nav__submenu-title">Гаражи</p>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#">Гараж</a>
+                  </li>
+                  <li>
+                    <a href="#">Гаражный бокс</a>
+                  </li>
+                  <li>
+                    <a href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                <span>Каталог новостроек</span>
+              </a>
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-buildings">
+                <span class="visually-hidden">Открыть подменю каталога новостроек</span>
+                <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-new-buildings" class="main-nav__submenu main-nav__submenu--layout">
+                <p class="main-nav__submenu-title">Жилая недвижимость</p>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                <span>Специалисты</span>
+              </a>
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
+                <span class="visually-hidden">Открыть подменю раздела специалистов</span>
+                <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="professionals" class="main-nav__submenu main-nav__submenu--layout">
+                <p class="main-nav__submenu-title">Риэлторы</p>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"> <span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
+                <ul class="list main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="#">
+                <span>Ипотека</span>
+              </a>
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="mortgage">
+                <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
+                <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-actions">
+          <ul class="list">
+            <li class="user-actions__item">
+              <a class="user-actions__like" href="#" aria-describedby="favorite">
+                <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                </svg>
+                <span class="label-popup">Избранное</span>
+                <span class="visually-hidden" id="favorite">Список сохранённых объявлений</span>
+              </a>
+            </li>
+            <li class="user-actions__item">
+              <a class="user-actions__add" href="#" aria-describedby="add-offer">
+                <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
+                </svg>
+                <span class="visually-hidden-desktop">Разместить объявление</span>
+                <span class="label-popup label-popup--add" id="add-offer">Разместить объявление</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-nav">
+          <ul class="list user-nav__list">
+            <li class="user-nav__item user-nav__item--disabled">
+              <a class="user-nav__button-login" href="auth.html">Войти</a>
+            </li>
+            <li class="user-nav__item">
+              <a class="user-nav__button-profile" href="#" aria-describedby="login" aria-expanded="false" aria-controls="user-nav" aria-label="Авторизация">
+                <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
+                </svg>
+                <span class="label-popup">Личный кабинет</span>
+                <span class="visually-hidden" id="login">Войти</span>
+              </a>
+              <ul id="user-nav" class="list user-nav__item-list user-nav__item-list--disabled">
+                <li><a href="">Мои обявления</a></li>
+                <li><a href="">Профиль</a></li>
+                <li><a href="">Кошелёк</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Статистика</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Статистика</a></li>
               </ul>
-              <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Офис</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>ПСН</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Здание</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Производство</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Торговая площадь</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Склад</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Готовый бизнес</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Коммерческая земля</span></a>
-                </li>
-              </ul>
-              <p class="main-nav__submenu-title">Гаражи</p>
-              <ul class="list main-nav__submenu-list">
-                <li class="">
-                  <a class="" href="#">Гараж</a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Гаражный бокс</a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Машиноместо</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Аренда</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
-              <span class="visually-hidden">Открыть подменю раздела аренды</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-rent" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-              <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Офис</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>ПСН</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Здание</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Производство</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Торговая площадь</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Склад</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Готовый бизнес</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Коммерческая земля</span></a>
-                </li>
-              </ul>
-              <p class="main-nav__submenu-title">Гаражи</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#">Гараж</a>
-                </li>
-                <li>
-                  <a href="#">Гаражный бокс</a>
-                </li>
-                <li>
-                  <a href="#">Машиноместо</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Каталог новостроек</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-buildings">
-              <span class="visually-hidden">Открыть подменю каталога новостроек</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-new-buildings" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Специалисты</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
-              <span class="visually-hidden">Открыть подменю раздела специалистов</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="professionals" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Риэлторы</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-              <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Ипотека</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="mortgage">
-              <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-actions">
-        <ul class="list">
-          <li class="user-actions__item">
-            <a class="user-actions__like" href="#" aria-describedby="favorite">
-              <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-              </svg>
-              <span class="label-popup">Избранное</span>
-              <span class="visually-hidden" id="favorite">Список сохранённых объявлений</span>
-            </a>
-          </li>
-          <li class="user-actions__item">
-            <a class="user-actions__add" href="#" aria-describedby="add-offer">
-              <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
-              </svg>
-              <span class="visually-hidden-desktop">Разместить объявление</span>
-              <span class="label-popup label-popup--add" id="add-offer">Разместить объявление</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-nav">
-        <ul class="list user-nav__list">
-          <li class="user-nav__item">
-            <a class="user-nav__button-login" href="auth.html">Войти</a>
-          </li>
-          <li class="user-nav__item user-nav__item--disabled">
-            <a class="user-nav__button-profile" href="#" aria-describedby="login" aria-expanded="false" aria-controls="user-nav" aria-label="Авторизация">
-              <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
-              </svg>
-              <span class="label-popup">Личный кабинет</span>
-              <span class="visually-hidden" id="login">Войти</span>
-            </a>
-            <ul id="user-nav" class="list user-nav__item-list user-nav__item-list--disabled">
-              <li><a href="">Мои обявления</a></li>
-              <li><a href="">Профиль</a></li>
-              <li><a href="">Кошелёк</a></li>
-              <li><a href="">Жалобы</a></li>
-              <li><a href="">XML</a></li>
-              <li><a href="">Статистика</a></li>
-              <li><a href="">Жалобы</a></li>
-              <li><a href="">XML</a></li>
-              <li><a href="">Статистика</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="button page-header__button" type="button">
+        <svg class="" width="18px" height="18px" aria-hidden="true">
+          <use xlink:href="img/icons/sprite.svg#region"></use>
+        </svg>
+        <span>Калининград</span>
+      </button>
     </header>
-    <main id="main" class="wrapper-content page-main">
+
+    <main id="main" class="wrapper-content page-main page-main--index">
+      <h1 class="caption caption--h1">Поиск недвижимости в Калининграде</h1>
+      <!-- <h2 class="main-search__caption">Фильтр поиска недвижимости</h2> -->
+      <form class="filter main-search__wrapper" action="https://echo.htmlacademy.ru/courses">
+        <fieldset class="filter__fieldset filter__fieldset-js">
+          <legend class="visually-hidden-mobile">Выберите тип сделки</legend>
+          <button class="button button-filter button-filter--deal" type="button" aria-expanded="false" aria-controls="deal">
+            <span class="button-filter__text button-filter__text-js">Купить</span>
+            <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+          <ul id="deal" class="list filter__select filter__select--disabled deal">
+            <li class="deal__item">
+              <input id="deal_type_buy" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Купить" checked />
+              <label class="filter__label deal__label" for="deal_type_buy">
+                <span class="pseudo-input">Купить</span>
+              </label>
+            </li>
+            <li class="deal__item">
+              <input id="deal_type_rent" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Снять" />
+              <label class="filter__label deal__label" for="deal_type_rent">
+                <span class="pseudo-input">Снять</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__fieldset filter__fieldset-js">
+          <legend class="visually-hidden-mobile">Тип недвижимости</legend>
+          <button class="button button-filter button-filter--type" type="button" aria-expanded="false" aria-controls="type">
+            <span class="button-filter__text button-filter__text-js">Квартиру</span>
+            <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+          <div id="type" class="filter__select filter__type-layout type filter__select--disabled">
+            <p class="type__title">Жилая недвижимость</p>
+            <ul class="list">
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
+                <label class="type__label" for="flat">
+                  <span class="pseudo-input">Квартиру</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Новостройку" />
+                <label class="type__label" for="new__flat">
+                  <span class="pseudo-input">Квартиру-новостройку</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="old__flat" value="Вторичную квартиру" />
+                <label for="old__flat" class="type__label">
+                  <span class="pseudo-input">Квартиру-вторичку</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="part__flat" value="Долю в квартире" />
+                <label for="part__flat" class="type__label">
+                  <span class="pseudo-input">Долю в квартире</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="room" value="Комнату" />
+                <label for="room" class="type__label">
+                  <span class="pseudo-input">Комнату</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="house" value="Дом" />
+                <label for="house" class="type__label">
+                  <span class="pseudo-input">Дом</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="townhouse" value="Таунхаус" />
+                <label for="townhouse" class="type__label">
+                  <span class="pseudo-input">Таунхаус</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="part__house" value="Долю в доме" />
+                <label for="part__house" class="type__label">
+                  <span class="pseudo-input">Долю в доме</span>
+                </label>
+              </li>
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="land" value="Земельный участок" />
+                <label for="land" class="type__label">
+                  <span class="pseudo-input">Земельный участок</span>
+                </label>
+              </li>
+            </ul>
+            <p class="type__title">Коммерческая недвижимость</p>
+            <ul class="list">
+              <li class="type__item">
+                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
+                <label for="office" class="type__label">
+                  <span class="pseudo-input">Офис</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="filter__fieldset filter__fieldset-price">
+          <legend class="visually-hidden-mobile">Цена</legend>
+          <button class="button button-filter button-filter--price" type="button" aria-expanded="false" aria-controls="price">
+            <span class="button-filter__text">Цена</span>
+            <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+          <div id="price" class="filter__select filter__price-layout price filter__select--disabled">
+            <ul class="list price__list">
+              <li class="price__item">
+                <label class="price__label" for="min__price">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </label>
+                <input id="min__price" class="input input--field" type="number" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
+              </li>
+              <li class="price__item">
+                <label for="max__price" class="price__label">
+                  <span class="visually-hidden">Максимальная цена</span>
+                </label>
+                <input id="max__price" class="input input--field" type="number" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
+              </li>
+            </ul>
+            <div class="switch">
+              <input id="all__price" class="visually-hidden input" type="radio" name="price__type" value="all__price" checked />
+              <label for="all__price" class="switch__label">
+                <span class="pseudo-input">Цена за всё</span>
+              </label>
+
+              <input id="metr__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
+              <label for="metr__price" class="switch__label">
+                <span class="pseudo-input">Цена за м²</span>
+              </label>
+            </div>
+            <!-- <p>Найдено: 3 560 000 объявлений</p> -->
+            <button class="button button-main" type="button">Применить</button>
+          </div>
+          <!-- <div class="switch">
+              <div class="switch__container switch__container--active">
+                <input id="all__price" class="visually-hidden switch__radio input" type="radio" name="price__type" value="all__price" checked />
+                <label for="all__price" class="switch__label">
+                  <span class="pseudo-input">Цена за всё</span>
+                </label>
+              </div>
+              <div class="switch__container">
+                <input id="metr__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
+                <label for="metr__price" class="switch__label">
+                  <span class="pseudo-input">Цена за м²</span>
+                </label>
+              </div>
+            </div> -->
+        </fieldset>
+
+        <fieldset class="filter__fieldset filter__fieldset-search">
+          <legend class="visually-hidden-mobile">Поиск адреса, района, шоссе и тд</legend>
+          <div class="filter-search">
+            <label for="search__field" class="filter-search__label">
+              <span class="visually-hidden">Введите: город, улицу, метро, район, шоссе и так далее</span>
+            </label>
+            <input id="search__field" class="input input--field" type="text" name="filter[place]" value="" inputmode="search" placeholder="Город, метро, район, шоссе, улица или ЖК" />
+            <button class="button filter-search__button" type="button" aria-label="Список станций метро"><span>Метро</span></button>
+            <button class="button filter-search__button" type="button" aria-label="Список районов и округов"><span>Район</span></button>
+          </div>
+        </fieldset>
+
+        <input class="button button-main" type="submit" value="Искать из 134 000" />
+      </form>
+      <ul class="list">
+        <li>Купить</li>
+        <li>Снять</li>
+        <li>Новостройки</li>
+        <li>Дома, участки</li>
+        <li>Коммерческая</li>
+        <li>Ипотека</li>
+      </ul>
+
       <p class="page-header__locale">Москва</p>
       <span><a href="filter.html">Filter</a></span>
       <p><a href="blank.html">Карточка</a></p>
       <p><a href="auth.html">Auth</a></p>
       <p><a href="registration.html">Регистрация</a></p>
     </main>
-    <footer></footer>
+    <footer class="page__footer">
+      <div class="wrapper-content">
+        <p>© Remos 2023 - Недвижимость в Московской области</p>
+        <ul class="list">
+          <li><a href="">О проекте</a></li>
+          <li><a href="">Условия использования</a></li>
+          <li><a href="">Публикации</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+      </div>
+    </footer>
     <section class="modal modal--login auth auth--login">
       <h2 class="caption">Авторизация</h2>
       <button class="button modal__button-close" type="button">

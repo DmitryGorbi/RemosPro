@@ -1,11 +1,13 @@
 .type {
   margin-top: 5px;
   padding: 10px 0;
-  border: 1px solid @light-gray;
-  background-color: @light;
+  border: 1px solid var(--light-gray);
+  background-color: var(--light);
 
   @media (min-width: @tablet-width) {
+    padding: 0 0 10px 0;
     margin-top: 7px;
+    background-color: transparent;
   }
 }
 
@@ -15,6 +17,11 @@
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--extra-light-gray);
+    border-bottom: 1px solid var(--light-gray);
+
     &:nth-of-type(2) {
       grid-row: 1/2;
       grid-column: 2/3;
@@ -27,5 +34,21 @@
 }
 
 .type__label .pseudo-input {
+  position: relative;
   border: none;
+}
+
+.type__item > input:checked + label > span::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 10px;
+  background-image: url('../img/icons/check-lg.svg');
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+  }
 }
