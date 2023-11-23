@@ -14,32 +14,32 @@
       <h2 class="main-search__caption">Фильтр поиска недвижимости</h2>
       <form class="filter main-search__wrapper" action="https://echo.htmlacademy.ru/courses">
         <fieldset class="filter__fieldset filter__fieldset-js">
-          <legend class="visually-hidden-mobile">Выберите тип сделки</legend>
+          <legend class="visually-hidden-desktop">Выберите тип сделки</legend>
           <button class="button button-filter button-filter--deal" type="button" aria-expanded="false" aria-controls="deal">
-            <span class="button-filter__text button-filter__text-js">Купить</span>
+            <span class="button-filter__title">Купить</span>
             <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#arrow"></use>
             </svg>
           </button>
-          <ul id="deal" class="list filter__select filter__select--disabled deal">
+          <ul id="deal" class="list filter__select deal filter__select--disabled">
             <li class="deal__item">
               <input id="deal_type_buy" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Купить" checked />
-              <label class="filter__label deal__label" for="deal_type_buy">
+              <label class="deal__label" for="deal_type_buy">
                 <span class="pseudo-input">Купить</span>
               </label>
             </li>
             <li class="deal__item">
               <input id="deal_type_rent" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Снять" />
-              <label class="filter__label deal__label" for="deal_type_rent">
+              <label class="deal__label" for="deal_type_rent">
                 <span class="pseudo-input">Снять</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="filter__fieldset filter__fieldset-js">
-          <legend class="visually-hidden-mobile">Тип недвижимости</legend>
+          <legend class="visually-hidden-desktop">Тип недвижимости</legend>
           <button class="button button-filter button-filter--type" type="button" aria-expanded="false" aria-controls="type">
-            <span class="button-filter__text button-filter__text-js">Квартиру</span>
+            <span class="button-filter__title">Квартиру</span>
             <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#arrow"></use>
             </svg>
@@ -49,13 +49,13 @@
             <ul class="list">
               <li class="type__item">
                 <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
-                <label class="type__label" for="flat">
+                <label for="flat" class="type__label">
                   <span class="pseudo-input">Квартиру</span>
                 </label>
               </li>
               <li class="type__item">
                 <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Квартиру-новостройку" />
-                <label class="type__label" for="new__flat">
+                <label for="new__flat" class="type__label">
                   <span class="pseudo-input">Квартиру-новостройку</span>
                 </label>
               </li>
@@ -111,68 +111,62 @@
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="psn" value="ПСН" />
+                <label for="psn" class="type__label">
+                  <span class="pseudo-input">ПСН</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="building" value="Здание" />
+                <label for="building" class="type__label">
+                  <span class="pseudo-input">Здание</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="manufacture" value="Производство" />
+                <label for="manufacture" class="type__label">
+                  <span class="pseudo-input">Производство</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="trade__area" value="Торговая площадь" />
+                <label for="trade__area" class="type__label">
+                  <span class="pseudo-input">Торговая площадь</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="stock" value="Склад" />
+                <label for="stock" class="type__label">
+                  <span class="pseudo-input">Склад</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="ready__business" value="Готовый бизнес" />
+                <label for="ready__business" class="type__label">
+                  <span class="pseudo-input">Готовый бизнес</span>
                 </label>
               </li>
               <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
-                </label>
-              </li>
-              <li class="type__item">
-                <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                <label for="office" class="type__label">
-                  <span class="pseudo-input">Офис</span>
+                <input class="visually-hidden input" type="radio" name="type" id="commercial__land" value="Коммерческая земля" />
+                <label for="commercial__land" class="type__label">
+                  <span class="pseudo-input">Коммерческая земля</span>
                 </label>
               </li>
             </ul>
           </div>
         </fieldset>
         <fieldset class="filter__fieldset filter__fieldset-price">
-          <legend class="visually-hidden-mobile">Цена</legend>
+          <legend class="visually-hidden-desktop">Цена</legend>
           <button class="button button-filter button-filter--price" type="button" aria-expanded="false" aria-controls="price">
-            <span class="button-filter__text">Цена</span>
+            <span class="">Цена</span>
             <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#arrow"></use>
             </svg>
           </button>
-          <div id="price" class="filter__select filter__price-layout price filter__select--disabled">
+          <div id="price" class="filter__select price filter__select-price filter__select--disabled">
             <ul class="list price__list">
               <li class="price__item">
-                <label class="price__label" for="min__price">
+                <label for="min__price" class="price__label">
                   <span class="visually-hidden">Минимальная цена</span>
                 </label>
                 <input id="min__price" class="input input--field" type="number" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
@@ -184,60 +178,55 @@
                 <input id="max__price" class="input input--field" type="number" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
               </li>
             </ul>
-            <div class="switch">
+            <div class="price__switch">
               <input id="all__price" class="visually-hidden input" type="radio" name="price__type" value="all__price" checked />
-              <label for="all__price" class="switch__label">
+              <label for="all__price" class="price__switch-label">
                 <span class="pseudo-input">Цена за всё</span>
               </label>
 
-              <input id="metr__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
-              <label for="metr__price" class="switch__label">
+              <input id="meter__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
+              <label for="meter__price" class="price__switch-label">
                 <span class="pseudo-input">Цена за м²</span>
               </label>
             </div>
             <!-- <p>Найдено: 3 560 000 объявлений</p> -->
             <button class="button button-main" type="button">Применить</button>
           </div>
-          <!-- <div class="switch">
-              <div class="switch__container switch__container--active">
-                <input id="all__price" class="visually-hidden switch__radio input" type="radio" name="price__type" value="all__price" checked />
-                <label for="all__price" class="switch__label">
-                  <span class="pseudo-input">Цена за всё</span>
-                </label>
-              </div>
-              <div class="switch__container">
-                <input id="metr__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
-                <label for="metr__price" class="switch__label">
-                  <span class="pseudo-input">Цена за м²</span>
-                </label>
-              </div>
-            </div> -->
         </fieldset>
 
         <fieldset class="filter__fieldset filter__fieldset-search">
-          <legend class="visually-hidden-mobile">Поиск адреса, района, шоссе и тд</legend>
+          <legend class="visually-hidden-desktop">Поиск адреса, района, шоссе и тд</legend>
           <div class="search search--locate">
             <label for="search__field">
-              <span class="visually-hidden">Введите: город, улицу, метро, район, шоссе и так далее</span>
+              <span class="visually-hidden">Введите название гео-объекта</span>
             </label>
-            <input id="search__field" class="input input--field" type="text" name="filter[place]" value="" inputmode="search" placeholder="Город, метро, район, шоссе, улица или ЖК" />
-            <button class="button search__button" type="button" aria-label="Список станций метро"><span class="search__locate-name">Метро</span></button>
-            <button class="button search__button" type="button" aria-label="Список районов и округов"><span class="search__locate-name">Район</span></button>
+            <input
+              id="search__field"
+              class="input input--field"
+              type="text"
+              name="filter[place]"
+              value=""
+              inputmode="search"
+              placeholder="Город, метро, район, шоссе, улица или ЖК"
+              autocomplete="off"
+            />
+            <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
+            <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
           </div>
         </fieldset>
 
         <fieldset class="filter__fieldset filter__fieldset-add">
           <legend class="visually-hidden">Расширенные фильтры поиска</legend>
           <button class="button button-filter button-filter--add" type="button" aria-expanded="false" aria-controls="filter__addition">
-            <span class="button-filter__text">Фильтры</span>
+            <span class="">Фильтры</span>
             <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#arrow"></use>
             </svg>
           </button>
-          <div id="filter__addition" class="filter__select filter-add filter-add--layout filter__select--disabled">
-            <div class="filter-add__header">
+          <div id="filter__addition" class="filter__select filter-add filter__select-add filter__select--disabled">
+            <div class="filter-add__header visually-hidden-mobile">
               <h3 class="filter-add__title">Фильтры</h3>
-              <button type="button">Закрыть окно</button>
+              <button type="button" class="button button--close" aria-expanded="false"><span class="visually-hidden">Закрыть окно</span></button>
             </div>
 
             <div class="filter-add__container">
@@ -603,7 +592,7 @@
 
             <div class="filter-add__footer">
               <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button>
-              <button class="button button-main visually-hidden-desktop" type="button">Смотреть объявления</button>
+              <button class="button button-main button-main--add visually-hidden-mobile" type="button">Смотреть объявления</button>
             </div>
           </div>
         </fieldset>

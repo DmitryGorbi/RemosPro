@@ -2,7 +2,7 @@ const filter = document.querySelector('.filter');
 const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
 const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
-const buttonsTitle = filter.querySelectorAll('.button-filter__text-js');
+const buttonsTitle = filter.querySelectorAll('.button-filter__title');
 const filterSelect = filter.querySelectorAll('.filter__select');
 
 // Универсальная функция для переключения класса активного элемента

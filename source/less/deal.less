@@ -1,13 +1,10 @@
 .deal {
   @media (max-width: @mobile-width-only) {
     display: flex;
-    column-gap: 5px;
+    column-gap: 7px;
   }
 
   @media (min-width: @tablet-width) {
-    // padding: 0;
-    // min-width: 90px;
-
     & > li > label > span {
       display: flex;
       margin: auto 0;
@@ -22,7 +19,6 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    // display: flex;
     width: auto;
     text-align: start;
     font-weight: 400;
@@ -31,6 +27,7 @@
 
   & .pseudo-input {
     position: relative;
+
     @media (min-width: @tablet-width) {
       border: none;
     }

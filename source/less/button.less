@@ -18,3 +18,29 @@
 .button--text {
   padding: 7px 5px;
 }
+
+.button--close {
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    background-color: var(--extra-light-gray);
+  }
+
+  &:active {
+    background-color: var(--light-blue);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/icons/close-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
