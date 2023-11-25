@@ -292,7 +292,7 @@ img {
   padding: 0;
 }
 .caption--h1 {
-  font-size: 2.25rem;
+  font-size: 1.375rem;
   line-height: 1.18em;
 }
 .caption--h2 {
@@ -1169,6 +1169,7 @@ input[type='radio'] {
   padding: 13px 10px;
   border: 1px solid var(--gray);
   border-radius: 5px;
+  background-color: var(--white);
 }
 .button-filter:active,
 .button-filter:hover {
@@ -1787,7 +1788,34 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .page-main__filter {
-    border: 1px solid red;
+    position: relative;
+    height: 477px;
+    box-sizing: border-box;
+  }
+  .page-main__filter h1 {
+    color: var(--white);
+    font-size: 36px;
+  }
+  .page-main__filter img {
+    height: 477px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .page-main__filter form {
+    min-width: 1000px;
+  }
+}
+.page-main__filter--wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+@media (min-width: 768px) {
+  .page-main__filter--wrapper {
+    flex-direction: row;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    justify-content: space-between;
   }
 }
 .stats {

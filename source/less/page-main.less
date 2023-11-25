@@ -65,12 +65,39 @@
   & form {
     padding: 20px 10px;
     margin: 0;
-    // background-color: var(--extra-light-gray);
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   }
 
   @media (min-width: @desktop-width) {
-    border: 1px solid red;
+    position: relative;
+    height: 477px;
+    box-sizing: border-box;
+
+    h1 {
+      color: var(--white);
+      font-size: 36px;
+    }
+
+    img {
+      height: 477px;
+      object-fit: cover;
+    }
+
+    & form {
+      min-width: 1000px;
+    }
+  }
+}
+
+.page-main__filter--wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content: space-between;
   }
 }
