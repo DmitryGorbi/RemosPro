@@ -17,10 +17,15 @@
 .search--locate {
   position: relative;
   flex-direction: column;
+  background-color: var(--white);
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     border: 1px solid var(--gray);
+
+    & .input--field {
+      border-radius: 5px 0 0 5px;
+    }
 
     & input:focus {
       box-shadow: none;
@@ -45,6 +50,7 @@
 
       @media (min-width: @tablet-width) {
         border: none;
+        border-radius: 0 5px 5px 0;
       }
     }
   }

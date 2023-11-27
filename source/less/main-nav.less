@@ -12,6 +12,7 @@
   bottom: 0;
   height: 100%;
   background-color: var(--white);
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
@@ -120,7 +121,6 @@
     margin-top: 1px;
     padding: 40px 100px 40px 250px;
     background-color: var(--white);
-
     box-shadow: 0 5px 10px 0 var(--light-black);
 
     // background-color: rgba(0, 0, 0, 0.5);
@@ -137,6 +137,7 @@
     transition-timing-function: linear, linear;
     transition-delay: 0.4s;
     visibility: visible;
+    z-index: 10;
   }
 }
 
