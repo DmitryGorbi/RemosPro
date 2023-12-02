@@ -1,0 +1,57 @@
+.new-offers {
+
+  h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.3em;
+  }
+
+  h3 {
+  }
+
+  .list {
+  }
+
+  .list li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 14px;
+    color: var(--blue);
+
+    &:hover {
+      color: var(--dark-blue);
+    }
+
+    &:focus {
+      color: var(--dark-blue);
+      box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
+    }
+
+    &:active {
+      color: red;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .section-nav__wrapper {
+    }
+
+
+  }
+
+  @media (min-width: @desktop-width) {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 1;
+      font-weight: 400;
+    }
+  }
+}

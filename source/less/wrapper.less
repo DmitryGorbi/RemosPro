@@ -4,7 +4,9 @@
   // margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    // max-width: 900px;
     padding: 0 40px;
+    // margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,5 +28,20 @@
 
   @media (min-width: @tablet-width) {
     background-color: @white;
+  }
+}
+
+.section-wrapper {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 688px;
+    max-width: 900px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1200px;
+    margin: 0 auto;
   }
 }
