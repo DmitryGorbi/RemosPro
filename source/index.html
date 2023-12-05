@@ -177,22 +177,22 @@
                 </svg>
               </button>
               <div id="submenu-new-buildings" class="main-nav__submenu main-nav__submenu--layout">
-                <p class="main-nav__submenu-title">Жилая недвижимость</p>
+                <p class="main-nav__submenu-title">Новостройки в Калининградской области</p>
                 <ul class="list main-nav__submenu-list">
                   <li>
-                    <a href="#"><span>Квартиры</span></a>
+                    <a href="#"><span>ЖК Юбилейный</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Дома и дачи</span></a>
+                    <a href="#"><span>ЖК Крылья</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Земельные участоки</span></a>
+                    <a href="#"><span>ЖК Небоскрёб</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Комнаты</span></a>
+                    <a href="#"><span>Квартал Житейский</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Таунхаусы</span></a>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
                   </li>
                 </ul>
               </div>
@@ -229,19 +229,19 @@
                 <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
                 <ul class="list main-nav__submenu-list">
                   <li>
-                    <a href="#"><span>Квартиры</span></a>
+                    <a href="#"><span>Этажи</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Дома и дачи</span></a>
+                    <a href="#"><span>Эталон Недвижимость</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Земельные участоки</span></a>
+                    <a href="#"><span>Каян</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Комнаты</span></a>
+                    <a href="#"><span>Азбука жилья</span></a>
                   </li>
                   <li>
-                    <a href="#"><span>Таунхаусы</span></a>
+                    <a href="#"><span>Континент недвижимость</span></a>
                   </li>
                 </ul>
               </div>
@@ -303,7 +303,7 @@
                 <li><a href="">Статистика</a></li>
                 <li><a href="">Жалобы</a></li>
                 <li><a href="">XML</a></li>
-                <li><a href="">Статистика</a></li>
+                <li><a href="">Выйти</a></li>
               </ul>
             </li>
           </ul>
@@ -372,13 +372,13 @@
                   <li class="type__item">
                     <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Квартиру-новостройку" />
                     <label for="new__flat">
-                      <span class="pseudo-input">Квартиру-новостройку</span>
+                      <span class="pseudo-input">Квартиру в новостройке</span>
                     </label>
                   </li>
                   <li class="type__item">
                     <input class="visually-hidden input" type="radio" name="type" id="old__flat" value="Квартиру-вторичку" />
                     <label for="old__flat">
-                      <span class="pseudo-input">Квартиру-вторичку</span>
+                      <span class="pseudo-input">Квартиру на вторичке</span>
                     </label>
                   </li>
                   <li class="type__item">
@@ -530,7 +530,7 @@
                 <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
               </div>
             </fieldset>
-            <input class="button button-main" type="submit" value="Искать из 134 000" />
+            <input class="button button-main" type="submit" value="Показать 134 000" />
           </form>
         </div>
       </section>
@@ -617,8 +617,52 @@
           </ul>
         </div>
       </section>
-      <section class="new-offers">
+      <section class="new-offers section-wrapper">
         <h2 class="caption">Свежие предложения</h2>
+        <ul class="list new-offers__nav">
+          <li>
+            <a href="#"><span class="span-active">Квартиры</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Новосткойки</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Дома</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Офисы</span></a>
+          </li>
+        </ul>
+        <div class="new-offers__wrapper">
+          <article>
+            <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
+            <a href="#">
+              <img src="img/offers/building.webp" alt="">
+              <p>38 500 000 Р</p>
+              <p>ул. Усиевича, 29к1</p>
+              <p>м. Войковская<span> 10 м.п.</span></p>
+            </a>
+          </article>
+          <article>
+            <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
+            <a href="#">
+              <img src="img/offers/building.webp" alt="">
+            </a>
+          </article>
+          <article>
+            <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
+            <a href="#">
+              <img src="img/offers/building.webp" alt="">
+            </a>
+          </article>
+          <article>
+            <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
+            <a href="#">
+              <img src="img/offers/building.webp" alt="">
+            </a>
+          </article>
+        </div>
+
       </section>
 
       <p class="page-header__locale">Москва</p>
@@ -738,6 +782,5 @@
       </form>
     </section>
     <script src="js/header.js"></script>
-    <script src="js/filter.js"></script>
   </body>
 </html>
