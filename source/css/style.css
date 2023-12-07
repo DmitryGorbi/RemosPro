@@ -1131,6 +1131,8 @@ input[type='radio'] {
 }
 .new-offers__wrapper article p {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .new-offers__wrapper {
@@ -1142,6 +1144,11 @@ input[type='radio'] {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
   }
+}
+.article-text {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .auth {

@@ -64,6 +64,9 @@
 
     & p {
       margin: 0;
+      text-overflow: ellipsis;
+      // white-space: nowrap;
+      overflow: hidden;
     }
   }
 
@@ -76,4 +79,12 @@
     grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
   }
+}
+
+.article-text {
+  width: 100px;
+  // text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  // padding: 0 15px;
 }
