@@ -1126,13 +1126,20 @@ input[type='radio'] {
   row-gap: 10px;
   margin: 0 auto;
 }
+.new-offers__wrapper article {
+  min-width: calc(50% - 15px);
+}
 .new-offers__wrapper article img {
   border-radius: 5px;
 }
 .new-offers__wrapper article p {
   margin: 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
+}
+.new-offers__wrapper a {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   .new-offers__wrapper {
@@ -1144,11 +1151,6 @@ input[type='radio'] {
     grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
   }
-}
-.article-text {
-  width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
 }
 @media (min-width: 768px) {
   .auth {

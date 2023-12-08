@@ -58,16 +58,24 @@
   // max-width: 600px;
 
   & article {
+    min-width: calc(50% - 15px);
     & img {
       border-radius: 5px;
     }
 
     & p {
       margin: 0;
-      text-overflow: ellipsis;
+      // text-overflow: ellipsis;
       // white-space: nowrap;
-      overflow: hidden;
+      // overflow: hidden;
     }
+  }
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 14px;
   }
 
   @media (min-width: @tablet-width) {
@@ -79,12 +87,4 @@
     grid-template-columns: repeat(4, 1fr);
     max-width: 1200px;
   }
-}
-
-.article-text {
-  width: 100px;
-  // text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  // padding: 0 15px;
 }
