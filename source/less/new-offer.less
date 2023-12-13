@@ -15,7 +15,8 @@
     position: relative;
     padding: 15px 15px 37px 15px;
     border-radius: 5px;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px var(--light-gray);
+    transition: transform 0.3s;
 
     & img {
       margin-bottom: 10px;
@@ -26,7 +27,7 @@
       content: 'new';
       bottom: 10px;
       right: 15px;
-      padding: 2px 5px;
+      padding: 0 5px;
       border: 2px solid var(--blue);
       border-radius: 5px;
     }
@@ -44,16 +45,16 @@
 }
 
 .new-offer__link {
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    font-size: 14px;
-    color: inherit;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 14px;
+  color: inherit;
 }
 
 .new-offer:has(.new-offer__link:focus) {
-    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
-    transform: scale(1.01);
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
+  transform: scale(1.01);
 }
 
 .new-offer:has(.new-offer__link:hover) {

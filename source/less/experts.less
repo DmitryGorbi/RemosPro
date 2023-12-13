@@ -1,3 +1,33 @@
 .experts {
+  & h3 {
+    font-size: 23px;
+    font-weight: 400;
+  }
 
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'caption caption'
+      'left right';
+  }
+
+  & h2 {
+    grid-area: caption;
+  }
+
+  & .realtors {
+    grid-area: left;
+  }
+
+  & .agencies {
+    grid-area: right;
+  }
+}
+
+.experts__list {
+  & div {
+    width: 65px;
+    height: 65px;
+  }
 }

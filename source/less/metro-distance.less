@@ -1,0 +1,21 @@
+.metro-distance {
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -1px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  &--foot::before {
+    background-image: url('../img/icons/walk_man.svg');
+  }
+
+  &--bus::before {
+    background-image: url('../img/icons/bus.svg');
+  }
+}

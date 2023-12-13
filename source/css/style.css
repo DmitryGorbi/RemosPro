@@ -92,8 +92,9 @@
   box-sizing: border-box;
 }
 h1,
+h2,
 h3,
-h3 {
+h4 {
   margin: 0;
 }
 p {
@@ -1143,7 +1144,8 @@ input[type='radio'] {
     position: relative;
     padding: 15px 15px 37px 15px;
     border-radius: 5px;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px var(--light-gray);
+    transition: transform 0.3s;
   }
   .new-offer img {
     margin-bottom: 10px;
@@ -1153,7 +1155,7 @@ input[type='radio'] {
     content: 'new';
     bottom: 10px;
     right: 15px;
-    padding: 2px 5px;
+    padding: 0 5px;
     border: 2px solid var(--blue);
     border-radius: 5px;
   }
@@ -1195,6 +1197,48 @@ input[type='radio'] {
   padding: 3px 5px;
   border: 1px solid var(--gray);
   border-radius: 5px;
+}
+.metro-distance {
+  position: relative;
+  padding-left: 20px;
+}
+.metro-distance::before {
+  position: absolute;
+  content: '';
+  top: -1px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+}
+.metro-distance--foot::before {
+  background-image: url('../img/icons/walk_man.svg');
+}
+.metro-distance--bus::before {
+  background-image: url('../img/icons/bus.svg');
+}
+.experts h3 {
+  font-size: 23px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .experts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'caption caption' 'left right';
+  }
+}
+.experts h2 {
+  grid-area: caption;
+}
+.experts .realtors {
+  grid-area: left;
+}
+.experts .agencies {
+  grid-area: right;
+}
+.experts__list div {
+  width: 65px;
+  height: 65px;
 }
 @media (min-width: 768px) {
   .auth {
