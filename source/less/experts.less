@@ -10,6 +10,7 @@
     grid-template-areas:
       'caption caption'
       'left right';
+    column-gap: 20px;
   }
 
   & h2 {
@@ -25,9 +26,72 @@
   }
 }
 
+.experts__realtors, .experts__agencies {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  background-color: var(--light);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.experts__list-item {
+
+}
+
 .experts__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 25px;
+  font-size: 14px;
+
+  & a {
+    display: grid;
+    grid-template-columns: 45px max-content;
+    column-gap: 10px;
+    row-gap: 5px;
+    border-radius: 5px;
+  }
+
   & div {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+
+  & h4 {
+    margin-top: 3px;
+  }
+}
+
+.experts__button-wrapper {
+  margin-top: auto;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-gray);
+  }
+
+  & .button-main {
+    display: flex;
+    margin-left: auto;
   }
 }
