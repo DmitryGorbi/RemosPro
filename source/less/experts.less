@@ -92,9 +92,17 @@
   }
 
   & a {
-    display: flex;
-    justify-content: end;
     color: var(--blue);
-    border-bottom: 1px solid;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      margin-left: auto;
+      width: max-content;
+    }
+
+  }
+
+  & span {
+    border-bottom: 1px solid var(--blue);
   }
 }
