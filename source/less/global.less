@@ -82,7 +82,17 @@ a {
   }
 }
 
-:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .modal, .auth) a {
+:is(
+  .navigation,
+  .user-actions,
+  .user-nav,
+  .nav-section,
+  .experts,
+  .new-buildings,
+  .articles,
+  .news,
+  .modal,
+  .auth) a {
   color: inherit;
 
   &:focus {
@@ -90,7 +100,7 @@ a {
   }
 
   &:hover {
-    color: var(--dark-blue);
+    color: var(--blue);
   }
 }
 
@@ -102,4 +112,26 @@ a {
 
 :is(.main-nav, .user-actions, .user-nav) svg {
   fill: var(--blue);
+}
+
+:is(
+  .location
+) a {
+  &:hover {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  &:focus {
+    color: var(--blue);
+    font-weight: 700;
+  }
+}
+
+:is(
+  .new-bldg
+) a {
+  &:hover {
+    color: inherit;
+  }
 }
