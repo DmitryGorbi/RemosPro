@@ -1319,8 +1319,10 @@ input[type='radio'] {
 .experts__list img {
   height: 100%;
   border-radius: 5px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .experts__list h4 {
   margin-top: 3px;
@@ -1387,6 +1389,9 @@ input[type='radio'] {
 .new-bldg h3,
 .new-bldg p {
   padding: 0 10px;
+}
+.new-bldg:hover {
+  border-color: var(--blue);
 }
 .new-bldg__wrapper {
   display: flex;
@@ -1636,11 +1641,19 @@ time {
     position: absolute;
     content: '';
     top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    background-image: url('../img/icons/train.svg');
+    left: 27px;
+    width: 35px;
+    height: 35px;
     background-repeat: no-repeat;
+  }
+  .location__item-metro::before {
+    background-image: url('../img/icons/train-svgrepo-com.svg');
+  }
+  .location__item-area::before {
+    background-image: url('../img/icons/pin-location-svgrepo-com.svg');
+  }
+  .location__item-city::before {
+    background-image: url('../img/icons/map-maps-and-location-svgrepo-com.svg');
   }
 }
 @media (min-width: 768px) and (min-width: 1240px) {

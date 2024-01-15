@@ -3,8 +3,13 @@
   border-radius: 5px;
   min-width: 100%;
 
-  & h3, p {
+  & h3,
+  p {
     padding: 0 10px;
+  }
+
+  &:hover {
+    border-color: var(--blue);
   }
 
   @media (min-width: @tablet-width) {
@@ -16,7 +21,8 @@
   flex-direction: column;
   row-gap: 10px;
 
-  & h3, p {
+  & h3,
+  p {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
