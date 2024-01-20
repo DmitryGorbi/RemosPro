@@ -1,5 +1,19 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  outline: none;
+}
+
 .feed {
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .feed h2 {
@@ -21,17 +35,17 @@
   display: flex;
   flex-direction: column;
   row-gap: 25px;
+  padding: 20px;
   max-width: 400px;
   background-color: #def6e7;
-  padding: 20px;
   border-radius: 5px;
 }
 
 .tariff__item h3 {
   position: relative;
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--light-gray);
-  font-weight: 600;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .tariff__item--free h3::after {
@@ -39,7 +53,7 @@
   content: 'Тариф по-умолчанию';
   font-size: 11px;
   font-weight: 400;
-  background-color: var(--light-gray);
+  background-color: #e5e5e5;
   padding: 0 3px;
   border-radius: 2px;
   width: auto;
@@ -49,7 +63,7 @@
 }
 
 .tariff__item--paid {
-  box-shadow: 0 0 10px var(--light-gray);
+  box-shadow: 0 0 10px #e5e5e5;
 }
 
 .tariff__item--paid h3::after {
@@ -63,7 +77,7 @@
   background-repeat: no-repeat;
 }
 
-.tariff__item div {
+.tariff__box {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -73,7 +87,7 @@
   font-size: 14px;
 }
 
-.tariff__item div p {
+.tariff__box p {
   line-height: 20px;
 }
 
@@ -94,31 +108,22 @@
 .tariff__item ul > li {
   position: relative;
   padding-left: 25px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background-image: url('../img/icons/check-lg.svg');
-  }
 }
 
-.article__li {
-  margin-bottom: 30px;
-  width: 800px;
-
-  & p {
-    margin-bottom: 15px;
-  }
+.tariff__item ul > li::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/icons/check-lg.svg');
 }
 
 .feed__note {
   padding: 20px;
-  width: 820px;
   margin-bottom: 30px;
+  width: 820px;
   box-shadow: 0 0 10px var(--light-gray);
   border-radius: 5px;
 }
@@ -126,10 +131,10 @@
 .feed__note ul {
   display: flex;
   flex-direction: column;
-  list-style: none;
   row-gap: 7px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .feed__note ul li {

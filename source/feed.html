@@ -17,10 +17,11 @@
   </head>
   <body class="page__body layout">
     <main class="wrapper-content feed">
+      <h1 class="visually-hidden">Добавление фида</h1>
       <section class="tariff">
         <h2>1. Выберите тарифный план импорта объявлений</h2>
         <div class="tariff__wrapper">
-          <article class="tariff__item tariff__item--free">
+          <section class="tariff__item tariff__item--free">
             <h3>Бесплатный</h3>
             <ul>
               <li>Бесплатный импорт xml-фида</li>
@@ -28,11 +29,11 @@
               <li>Ежедневное обновление</li>
               <li>1 фотография к объявлению</li>
             </ul>
-            <div>
+            <div class="tariff__box">
               <p>Если вы выбрали данный тариф, то просто установите фид в поле Url.</p>
             </div>
-          </article>
-          <article class="tariff__item tariff__item--paid">
+          </section>
+          <section class="tariff__item tariff__item--paid">
             <h3>Платный</h3>
             <ul>
               <li>Неограниченное количество объявлений</li>
@@ -40,11 +41,11 @@
               <li><b>Объявления выше бесплатных</b></li>
               <li><b>Загрузка от 15 фотографий к объявлению</b></li>
             </ul>
-            <div>
-              <p>Ознакомьтесь с <a href="#">тарифамии.</a></p>
+            <div class="tariff__box">
+              <p>Ознакомьтесь с <a href="#">тарифами.</a></p>
               <p>Для подключения платной выгрузки свяжитесь со <a href="#">службой поддержки</a> клиентов.</p>
             </div>
-          </article>
+          </section>
         </div>
       </section>
       <h2>2. Вставьте XML-фид</h2>
@@ -54,12 +55,12 @@
             Для импорта подходят XML-фиды формата Яндекс. Ознакомиться с форматом можно
             <a href="https://yandex.ru/support/realty/rules/content-requirements.html#format" target="_blank" rel="noopener noreferrer">здесь</a>;
           </li>
-          <li>Импорт запускается в 00:05(МСК);</li>
+          <li>Импорт запускается в 00:05 (МСК);</li>
           <li>Можно вставить несколько фидов;</li>
           <li>Большой фид (от 15 000 объявлений) необходимо разбить на несколько по 15 000 объявлений.</li>
         </ul>
       </div>
-      <div><h2>Url</h2></div>
+      <p>Url</p>
     </main>
   </body>
 </html>
