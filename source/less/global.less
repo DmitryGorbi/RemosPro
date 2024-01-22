@@ -61,8 +61,6 @@ dd {
   margin: 0;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -82,17 +80,7 @@ a {
   }
 }
 
-:is(
-  .navigation,
-  .user-actions,
-  .user-nav,
-  .nav-section,
-  .experts,
-  .new-buildings,
-  .articles,
-  .news,
-  .modal,
-  .auth) a {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth) a {
   color: inherit;
 
   &:focus {
@@ -114,9 +102,7 @@ a {
   fill: var(--blue);
 }
 
-:is(
-  .location
-) a {
+:is(.location) a {
   &:hover {
     color: var(--blue);
     font-weight: 700;
@@ -128,9 +114,7 @@ a {
   }
 }
 
-:is(
-  .new-bldg
-) a {
+:is(.new-bldg) a {
   &:hover {
     color: inherit;
   }

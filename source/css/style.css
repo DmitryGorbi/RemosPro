@@ -116,43 +116,13 @@ a {
 a:visited {
   color: inherit;
 }
-:is(
-  .navigation,
-  .user-actions,
-  .user-nav,
-  .nav-section,
-  .experts,
-  .new-buildings,
-  .articles,
-  .news,
-  .modal,
-  .auth) a {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth) a {
   color: inherit;
 }
-:is(
-  .navigation,
-  .user-actions,
-  .user-nav,
-  .nav-section,
-  .experts,
-  .new-buildings,
-  .articles,
-  .news,
-  .modal,
-  .auth) a:focus {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth) a:focus {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
-:is(
-  .navigation,
-  .user-actions,
-  .user-nav,
-  .nav-section,
-  .experts,
-  .new-buildings,
-  .articles,
-  .news,
-  .modal,
-  .auth) a:hover {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth) a:hover {
   color: var(--blue);
 }
 :is(.navigation, .modal) .button:focus {
@@ -161,21 +131,15 @@ a:visited {
 :is(.main-nav, .user-actions, .user-nav) svg {
   fill: var(--blue);
 }
-:is(
-  .location
-) a:hover {
+:is(.location) a:hover {
   color: var(--blue);
   font-weight: 700;
 }
-:is(
-  .location
-) a:focus {
+:is(.location) a:focus {
   color: var(--blue);
   font-weight: 700;
 }
-:is(
-  .new-bldg
-) a:hover {
+:is(.new-bldg) a:hover {
   color: inherit;
 }
 .page,
@@ -911,6 +875,11 @@ input[type='radio'] {
     top: 1;
   }
 }
+@media (min-width: 1240px) {
+  .user-nav__list {
+    position: relative;
+  }
+}
 .user-nav__item--disabled {
   display: none;
 }
@@ -975,19 +944,28 @@ input[type='radio'] {
 }
 .user-nav__item-list a {
   display: block;
-  padding: 11px;
+  padding: 10px;
 }
 .user-nav__item-list--disabled {
   display: none;
 }
+@media (min-width: 768px) {
+  .user-nav__item-list {
+    padding: 0 30px;
+  }
+}
 @media (min-width: 1240px) {
   .user-nav__item-list {
-    right: 110px;
+    right: 0;
     width: 250px;
     height: -moz-max-content;
     height: max-content;
-    padding: 10px;
+    padding: 0px;
     box-shadow: 0 5px 10px 0 var(--light-black);
+  }
+  .user-nav__item-list a {
+    display: block;
+    padding: 10px 10px 10px 20px;
   }
 }
 .search-section .search-section__banner img {

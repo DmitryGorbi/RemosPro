@@ -1,6 +1,7 @@
-.user-nav {
-  // position: relative;
-
+.user-nav__list {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .user-nav__item--disabled {
@@ -76,19 +77,27 @@
 
   & a {
     display: block;
-    padding: 11px;
+    padding: 10px;
   }
 
   &--disabled {
     display: none;
   }
 
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
   @media (min-width: @desktop-width) {
-    right: 110px;
+    right: 0;
     width: 250px;
     height: max-content;
-    padding: 10px;
+    padding: 0px;
     box-shadow: 0 5px 10px 0 var(--light-black);
 
+    & a {
+      display: block;
+      padding: 10px 10px 10px 20px;
+    }
   }
 }
