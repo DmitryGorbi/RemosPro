@@ -724,6 +724,14 @@ input[type='radio'] {
     background-color: var(--dark-blue);
   }
 }
+.main-nav__submenu--link ul li:last-child a {
+  margin-top: 15px;
+  color: var(--blue);
+}
+.main-nav__submenu--link ul li:last-child a span {
+  position: relative;
+  border-bottom: 1px dashed var(--blue);
+}
 .toggler {
   position: relative;
   width: 44px;
@@ -1249,27 +1257,21 @@ input[type='radio'] {
   .experts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'caption caption' 'left right';
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
 }
 .experts h2 {
-  grid-area: caption;
-}
-.experts .realtors {
-  grid-area: left;
-}
-.experts .agencies {
-  grid-area: right;
+  grid-column: 1/-1;
 }
 .experts__realtors,
 .experts__agencies {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-direction: column;
   row-gap: 25px;
-  background-color: var(--light);
   padding: 15px;
+  background-color: var(--light);
   border-radius: 5px;
 }
 .experts__list {
@@ -1279,12 +1281,18 @@ input[type='radio'] {
   font-size: 14px;
 }
 .experts__list a {
+  min-width: 100%;
   display: grid;
-  grid-template-columns: 45px max-content;
+  grid-template-columns: 45px 1fr;
   -moz-column-gap: 10px;
        column-gap: 10px;
   row-gap: 5px;
   border-radius: 5px;
+}
+.experts__list a h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .experts__list div {
   width: 45px;
@@ -1302,13 +1310,10 @@ input[type='radio'] {
   -o-object-position: top;
      object-position: top;
 }
-.experts__list h4 {
-  margin-top: 3px;
-}
 @media (min-width: 1240px) {
   .experts__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     -moz-column-gap: 10px;
          column-gap: 10px;
   }
