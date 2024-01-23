@@ -1,0 +1,31 @@
+.expert-card {
+  width: 100%;
+  font-size: 14px;
+  display: grid !important;
+  grid-template-columns: 45px 1fr;
+  column-gap: 10px;
+  row-gap: 5px;
+  border-radius: 5px;
+
+  & h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  & div {
+    width: 45px;
+    height: 45px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+  }
+
+  & img {
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: top;
+  }
+}

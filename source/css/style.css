@@ -628,7 +628,7 @@ input[type='radio'] {
 @media (min-width: 1240px) {
   .main-nav__submenu--layout {
     display: grid;
-    grid-template-columns: max-content max-content max-content;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: max-content;
     -moz-column-gap: 60px;
          column-gap: 60px;
@@ -652,7 +652,7 @@ input[type='radio'] {
     transform: translateX(-50%);
     z-index: 1;
     width: 1200px;
-    height: 400px;
+    height: 430px;
     margin-top: 1px;
     padding: 40px 100px 40px 250px;
     background-color: var(--white);
@@ -729,8 +729,38 @@ input[type='radio'] {
   color: var(--blue);
 }
 .main-nav__submenu--link ul li:last-child a span {
-  position: relative;
   border-bottom: 1px dashed var(--blue);
+}
+.expert-card {
+  width: 100%;
+  font-size: 14px;
+  display: grid !important;
+  grid-template-columns: 45px 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 5px;
+  border-radius: 5px;
+}
+.expert-card h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.expert-card div {
+  width: 45px;
+  height: 45px;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+.expert-card img {
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .toggler {
   position: relative;
@@ -1278,37 +1308,6 @@ input[type='radio'] {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  font-size: 14px;
-}
-.experts__list a {
-  min-width: 100%;
-  display: grid;
-  grid-template-columns: 45px 1fr;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  row-gap: 5px;
-  border-radius: 5px;
-}
-.experts__list a h4 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.experts__list div {
-  width: 45px;
-  height: 45px;
-  grid-column: 1/2;
-  grid-row: 1/4;
-  border: 1px solid var(--light-gray);
-  border-radius: 5px;
-}
-.experts__list img {
-  height: 100%;
-  border-radius: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
 }
 @media (min-width: 1240px) {
   .experts__list {
