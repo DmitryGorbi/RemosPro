@@ -27,7 +27,7 @@
               <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
             </svg>
           </a>
-          <ul id="main-nav" class="list main-nav">
+          <ul id="main-nav" class="main-nav">
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="#">
                 <span>Продажа</span>
@@ -40,7 +40,7 @@
               </button>
               <div id="submenu-sale" class="main-nav__submenu main-nav__submenu--layout">
                 <p class="main-nav__submenu-title">Жилая недвижимость</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#"><span>Квартиры</span></a>
                   </li>
@@ -58,7 +58,7 @@
                   </li>
                 </ul>
                 <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#"><span>Офис</span></a>
                   </li>
@@ -85,7 +85,7 @@
                   </li>
                 </ul>
                 <p class="main-nav__submenu-title">Гаражи</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li class="">
                     <a class="" href="#">Гараж</a>
                   </li>
@@ -110,7 +110,7 @@
               </button>
               <div id="submenu-rent" class="main-nav__submenu main-nav__submenu--layout">
                 <p class="main-nav__submenu-title">Жилая недвижимость</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#"> <span>Квартиры</span></a>
                   </li>
@@ -125,7 +125,7 @@
                   </li>
                 </ul>
                 <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#"><span>Офис</span></a>
                   </li>
@@ -152,7 +152,7 @@
                   </li>
                 </ul>
                 <p class="main-nav__submenu-title">Гаражи</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#">Гараж</a>
                   </li>
@@ -177,7 +177,7 @@
               </button>
               <div id="submenu-new-bldg" class="main-nav__submenu main-nav__submenu--layout main-nav__submenu--link">
                 <p class="main-nav__submenu-title">Строящиеся ЖК</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li>
                     <a href="#"><span>ЖК Юбилейный</span></a>
                   </li>
@@ -211,7 +211,7 @@
               </button>
               <div id="professionals" class="main-nav__submenu main-nav__submenu--layout main-nav__submenu--link">
                 <p class="main-nav__submenu-title">Риэлторы</p>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li class="">
                     <a class="expert-card" href="#">
                       <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
@@ -253,7 +253,7 @@
                   </li>
                 </ul>
                 <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
-                <ul class="list main-nav__submenu-list">
+                <ul class="main-nav__submenu-list">
                   <li class="">
                     <a class="expert-card" href="#">
                       <h4>Max Realty Max</h4>
@@ -300,17 +300,37 @@
               <a class="main-nav__item-link" href="#">
                 <span>Ипотека</span>
               </a>
-              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="mortgage">
+              <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-mortgage">
                 <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
                 <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
+              <div id="submenu-mortgage" class="main-nav__submenu main-nav__submenu--layout">
+                <!-- <p class="main-nav__submenu-title">Строящиеся ЖК</p> -->
+                <ul class="main-nav__submenu-list">
+                  <li>
+                    <a href="#"><span>Подбор ипотечных программ</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Ипотечный калькулятор</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Калькулятор с досрочным погашением</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Оформить заявку на ипотеку</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </nav>
         <nav class="user-actions">
-          <ul class="list">
+          <ul>
             <li class="user-actions__item">
               <a class="user-actions__like" href="#" aria-describedby="favorite">
                 <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
@@ -332,7 +352,7 @@
           </ul>
         </nav>
         <nav class="user-nav">
-          <ul class="list user-nav__list">
+          <ul class="user-nav__list">
             <li class="user-nav__item user-nav__item--disabled">
               <a class="user-nav__button-login" href="auth.html">Войти</a>
             </li>
@@ -344,7 +364,7 @@
                 <span class="label-popup">Личный кабинет</span>
                 <span class="visually-hidden" id="login">Войти</span>
               </a>
-              <ul id="user-nav" class="list user-nav__item-list user-nav__item-list--disabled">
+              <ul id="user-nav" class="user-nav__item-list user-nav__item-list--disabled">
                 <li><a href="">ПУ</a></li>
                 <li><a href="">SEO</a></li>
                 <li><a href="">Мои обявления</a></li>
@@ -389,7 +409,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <ul id="deal" class="list filter__select deal filter__select--disabled">
+              <ul id="deal" class="filter__select deal filter__select--disabled">
                 <li class="deal__item">
                   <input id="deal_type_buy" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Купить" checked />
                   <label for="deal_type_buy">
@@ -414,7 +434,7 @@
               </button>
               <div id="type" class="filter__select filter__type-layout type filter__select--disabled">
                 <p class="type__title">Жилая недвижимость</p>
-                <ul class="list">
+                <ul>
                   <li class="type__item">
                     <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
                     <label for="flat">
@@ -471,7 +491,7 @@
                   </li>
                 </ul>
                 <p class="type__title">Коммерческая недвижимость</p>
-                <ul class="list">
+                <ul>
                   <li class="type__item">
                     <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
                     <label for="office">
@@ -532,7 +552,7 @@
                 </svg>
               </button>
               <div id="price" class="filter__select price filter__select-price filter__select--disabled">
-                <ul class="list price__list">
+                <ul class="price__list">
                   <li class="price__item">
                     <label for="min__price" class="price__label">
                       <span class="visually-hidden">Минимальная цена</span>
@@ -590,7 +610,7 @@
         <h2 class="caption-index">Выбирайте из <data value="22075">22075</data> объявлений</h2>
         <div class="nav-section__wrapper">
           <h3 class="">Купить квартиру</h3>
-          <ul class="list">
+          <ul>
             <li>
               <a href="#"><span>1-комнатные</span><data value="12000">12 000</data></a>
             </li>
@@ -614,7 +634,7 @@
             </li>
           </ul>
           <h3>Снять квартиру</h3>
-          <ul class="list">
+          <ul>
             <li>
               <a href="#">1-комнатные</a>
             </li>
@@ -632,7 +652,7 @@
             </li>
           </ul>
           <h3>Загородная недвижимость</h3>
-          <ul class="list">
+          <ul>
             <li>
               <a href="#">Купить дом</a>
             </li>
@@ -650,7 +670,7 @@
             </li>
           </ul>
           <h3>Коммерческая недвижимость</h3>
-          <ul class="list">
+          <ul>
             <li>
               <a href="#">Купить офис</a>
             </li>
@@ -671,7 +691,7 @@
       </section>
       <section class="new-offers section-wrapper">
         <h2 class="caption-index">Свежие предложения</h2>
-        <ul class="list new-offers__nav">
+        <ul class="new-offers__nav">
           <li>
             <a href="#"><span class="span-active">Квартиры</span></a>
           </li>
@@ -772,7 +792,7 @@
         <h2 class="caption-index">Специалисты</h2>
         <section class="experts__realtors">
           <h3>Риэлторы</h3>
-          <ul class="list experts__list">
+          <ul class="experts__list">
             <li class="experts__list-item">
               <a class="expert-card" href="#">
                 <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
@@ -834,7 +854,7 @@
         </section>
         <section class="experts__agencies">
           <h3>Агентства недвижимости</h3>
-          <ul class="list experts__list">
+          <ul class="experts__list">
             <li class="experts__list-item">
               <a class="expert-card" href="#">
                 <h4>Max Realty Max</h4>
@@ -904,17 +924,17 @@
               <p class="new-bldg__address">Москва, 1-я Ямского поля, вл. 2</p>
               <img src="img/bldg/bldg1.webp" alt="" width="334" />
               <p class="new-bldg__finish"><span>Сдача 2 кв. 2025</span></p>
-              <!-- <ul class="list new-bldg__list">
+              <!-- <ul class="new-bldg__list">
                 <li>Студии</li>
                 <li>от 25 м²</li>
                 <li>от 2,4 млн ₽</li>
               </ul>
-              <ul class="list new-bldg__list">
+              <ul class="new-bldg__list">
                 <li>1-комн.</li>
                 <li>от 35 м²</li>
                 <li>от 5,5 млн ₽</li>
               </ul>
-              <ul class="list new-bldg__list">
+              <ul class="new-bldg__list">
                 <li>2-комн.</li>
                 <li>от 55 м²</li>
                 <li>от 8,5 млн ₽</li>
@@ -1008,7 +1028,7 @@
         </section>
         <section class="news">
           <h2 class="news__caption">Новости</h2>
-          <ul class="list news__list">
+          <ul class="news__list">
             <li>
               <a href="#">
                 <h3>В новостройках Москвы хотят устанавливать зарядки для электромобилей</h3>
@@ -1041,7 +1061,7 @@
         <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
         <section class="location__item location__item-metro">
           <h3>Квартиры у метро</h3>
-          <ul class="list location__list">
+          <ul class="location__list">
             <li><a href="#">Автозаводская</a></li>
             <li><a href="#">Авиамоторная</a></li>
             <li><a href="#">Академическая</a></li>
@@ -1079,7 +1099,7 @@
         </section>
         <section class="location__item location__item-area">
           <h3>Квартиры в районе</h3>
-          <ul class="list location__list">
+          <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
             <li><a href="#">Марьино</a></li>
             <li><a href="#">Орехово-Борисово Северное</a></li>
@@ -1097,7 +1117,7 @@
         </section>
         <section class="location__item location__item-city">
           <h3>Квартиры в районе</h3>
-          <ul class="list location__list">
+          <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
             <li><a href="#">Марьино</a></li>
             <li><a href="#">Орехово-Борисово Северное</a></li>
@@ -1123,7 +1143,7 @@
     <footer class="page__footer">
       <div class="wrapper-content">
         <p>© Remos 2023 - Недвижимость в Московской области</p>
-        <ul class="list">
+        <ul>
           <li><a href="">О проекте</a></li>
           <li><a href="">Условия использования</a></li>
           <li><a href="">Публикации</a></li>
