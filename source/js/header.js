@@ -39,13 +39,14 @@ if (mediaQuery.matches) {
 // Открывает/закрывает сабменю в мобильной версии и на планшете,
 // окрашивает ссылку в другой цвет, когда сабменю открыто.
 
-const subMenu = mainNav.querySelectorAll('.main-nav__submenu');
-const subMenuButtonIcon = mainNav.querySelectorAll('.main-nav__item-icon');
+const subMenu = mainNav.querySelectorAll('.submenu');
+const subMenuButtonIcon = mainNav.querySelectorAll('.nav__icon');
+console.log(subMenuButtonIcon);
 
-const mainNavLinks = mainNav.querySelectorAll('.main-nav__item-link span');
+const mainNavLinks = mainNav.querySelectorAll('.nav__link span');
 // console.log(mainNavLinks.style.color = 'red')
 
-const subMenuButtons = mainNav.querySelectorAll('.main-nav__toggler');
+const subMenuButtons = mainNav.querySelectorAll('.nav__toggler');
 
 subMenuButtons.forEach((item, index) => {
   item.addEventListener('click', (evt) => {
