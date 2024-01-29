@@ -38,9 +38,9 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-sale" class="submenu">
+              <div id="submenu-sale" class="submenu submenu--links">
                 <p class="submenu__title">Жилая недвижимость</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#"><span>Квартиры</span></a>
                   </li>
@@ -58,7 +58,7 @@
                   </li>
                 </ul>
                 <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#"><span>Офис</span></a>
                   </li>
@@ -85,7 +85,7 @@
                   </li>
                 </ul>
                 <p class="submenu__title">Гаражи</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li class="">
                     <a class="" href="#">Гараж</a>
                   </li>
@@ -108,9 +108,9 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-rent" class="submenu">
+              <div id="submenu-rent" class="submenu submenu--links">
                 <p class="submenu__title">Жилая недвижимость</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#"><span>Квартиры</span></a>
                   </li>
@@ -125,7 +125,7 @@
                   </li>
                 </ul>
                 <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#"><span>Офис</span></a>
                   </li>
@@ -152,7 +152,7 @@
                   </li>
                 </ul>
                 <p class="submenu__title">Гаражи</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#">Гараж</a>
                   </li>
@@ -175,7 +175,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-new-bldg" class="submenu submenu--link submenu--bldg">
+              <div id="submenu-new-bldg" class="submenu submenu--bldg">
                 <p class="submenu__title">Строящиеся ЖК</p>
                 <ul class="submenu__list submenu__list--bldg">
                   <li class="bldg-nav">
@@ -266,8 +266,8 @@
                     <a href="#"><span>ЖК Воскрешение</span></a>
                   </li> -->
                 </ul>
-                <p>
-                  <a href="#"><span class="">Перейти в каталог</span></a>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Перейти в каталог</span></a>
                 </p>
               </div>
             </li>
@@ -281,9 +281,9 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="professionals" class="submenu submenu--link">
+              <div id="professionals" class="submenu submenu--expert">
                 <p class="submenu__title">Риэлторы</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--expert">
                   <li class="">
                     <a class="expert-card" href="#">
                       <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
@@ -321,11 +321,11 @@
                     </a>
                   </li>
                 </ul>
-                <p>
-                  <a href="#"><span class="">Список риэлторов</span></a>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Список риэлторов</span></a>
                 </p>
-                <a class="submenu__title" href="#">Агентства недвижимости</a>
-                <ul class="submenu__list">
+                <p class="submenu__title">Агентства недвижимости</p>
+                <ul class="submenu__list submenu__list--expert">
                   <li class="">
                     <a class="expert-card" href="#">
                       <h4>Max Realty Max</h4>
@@ -363,8 +363,8 @@
                     </a>
                   </li>
                 </ul>
-                <p>
-                  <a href="#"><span class="">Список агентств</span></a>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Список агентств</span></a>
                 </p>
               </div>
             </li>
@@ -378,9 +378,9 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-mortgage" class="submenu">
+              <div id="submenu-mortgage" class="submenu submenu--links">
                 <p class="submenu__title">Ипотечные сервисы</p>
-                <ul class="submenu__list">
+                <ul class="submenu__list submenu__list--links">
                   <li>
                     <a href="#"><span>Подбор ипотечных программ</span></a>
                   </li>
@@ -618,7 +618,7 @@
             <fieldset class="filter__fieldset filter__fieldset-price">
               <legend class="visually-hidden-desktop">Цена</legend>
               <button class="button button-filter button-filter--price" type="button" aria-expanded="false" aria-controls="price">
-                <span class="">Цена</span>
+                <span>Цена</span>
                 <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
@@ -1274,13 +1274,13 @@
       <form class="auth__form" method="post" action="">
         <div>
           <label for="userRegEmail">
-            <span class="">Email адресс:</span>
+            <span>Email адресс:</span>
           </label>
           <input class="input input--field" title="Введите ваш email" id="userRegEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
         </div>
         <div>
           <label for="registrationPassword">
-            <span class="">Пароль:</span>
+            <span>Пароль:</span>
           </label>
           <input
             class="input input--field"
