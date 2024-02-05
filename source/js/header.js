@@ -23,8 +23,8 @@ const onTogglerClick = (evt) => {
 
 burgerMenu.addEventListener('click', onTogglerClick);
 
-mainNav.addEventListener('keyup', (e) => {
-  if (e.code === 'Escape') {
+mainNav.addEventListener('keyup', (evt) => {
+  if (evt.code === 'Escape') {
     burgerMenu.setAttribute('aria-expanded', false);
     burgerMenu.focus();
   }

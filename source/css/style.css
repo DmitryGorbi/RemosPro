@@ -862,27 +862,12 @@ input[type='radio'] {
 .toggler[aria-expanded='true']::after {
   transform: rotate(45deg);
 }
-.label-popup,
-.label-popup--add {
+.label-popup {
   display: none;
 }
-.user-actions__like:hover .label-popup,
-.user-nav__button-profile:hover .label-popup {
-  display: block;
-  position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  font-size: 14px;
-  padding: 5px;
-  color: var(--white);
-  background-color: var(--gray);
-  border-radius: 5px;
-  white-space: nowrap;
-}
-@media (max-width: 767px) {
-  .user-actions__add:hover .label-popup--add {
+@media (min-width: 1240px) {
+  .user-actions__like:hover .label-popup,
+  .user-nav__button-profile:hover .label-popup {
     display: block;
     position: absolute;
     bottom: -45px;
@@ -896,9 +881,6 @@ input[type='radio'] {
     border-radius: 5px;
     white-space: nowrap;
   }
-}
-.user-nav__button-profile:active .label-popup {
-  display: none;
 }
 .user-actions ul {
   display: flex;
@@ -918,6 +900,7 @@ input[type='radio'] {
   display: block;
   padding: 13px;
   border-radius: 50%;
+  background-color: var(--extra-light-gray);
 }
 .user-actions__like:hover,
 .user-actions__add:hover {

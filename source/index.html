@@ -413,12 +413,11 @@
               </a>
             </li>
             <li class="user-actions__item">
-              <a class="user-actions__add" href="#" aria-describedby="add-offer">
+              <a class="user-actions__add" href="#">
                 <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
                 </svg>
                 <span class="visually-hidden-mobile">Разместить объявление</span>
-                <span class="label-popup label-popup--add" id="add-offer">Разместить объявление</span>
               </a>
             </li>
           </ul>
@@ -426,15 +425,17 @@
         <nav class="user-nav">
           <ul class="user-nav__list">
             <li class="user-nav__item user-nav__item--disabled">
-              <a class="user-nav__button-login" href="auth.html">Войти</a>
+              <a class="user-nav__button-login" href="auth.html" aria-describedby="login">Войти
+                <span class="visually-hidden" id="login">Личный кабинет</span>
+              </a>
             </li>
             <li class="user-nav__item">
-              <a class="user-nav__button-profile" href="#" aria-describedby="login" aria-expanded="false" aria-controls="user-nav" aria-label="Авторизация">
+              <a class="user-nav__button-profile" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
                 <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
                 </svg>
                 <span class="label-popup">Личный кабинет</span>
-                <span class="visually-hidden" id="login">Войти</span>
+                <span class="visually-hidden" id="profile">Войти</span>
               </a>
               <ul id="user-nav" class="user-nav__item-list user-nav__item-list--disabled">
                 <li><a href="">ПУ</a></li>

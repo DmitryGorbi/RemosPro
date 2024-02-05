@@ -1,26 +1,11 @@
-.label-popup,
-.label-popup--add {
+.label-popup {
   display: none;
 }
 
-.user-actions__like:hover .label-popup,
-.user-nav__button-profile:hover .label-popup {
-  display: block;
-  position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  font-size: 14px;
-  padding: 5px;
-  color: var(--white);
-  background-color: var(--gray);
-  border-radius: 5px;
-  white-space: nowrap;
-}
+@media (min-width: @desktop-width) {
 
-.user-actions__add:hover .label-popup--add {
-  @media (max-width: @mobile-width-only) {
+  .user-actions__like:hover .label-popup,
+  .user-nav__button-profile:hover .label-popup {
     display: block;
     position: absolute;
     bottom: -45px;
@@ -36,6 +21,6 @@
   }
 }
 
-.user-nav__button-profile:active .label-popup {
-  display: none;
-}
+// .user-nav__button-profile:active .label-popup {
+//   display: none;
+// }
