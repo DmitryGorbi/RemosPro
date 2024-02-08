@@ -1,7 +1,5 @@
-// Close/Open burger
-
 const mainNav = document.querySelector('.navigation');
-const burgerMenu = mainNav.querySelector('.toggler');
+const burgerToggler = mainNav.querySelector('.toggler');
 const userActionsNav = document.querySelector('.user-actions');
 
 const isEscEvent = (evt) => {
@@ -12,32 +10,28 @@ const isEnterEvent = (evt) => {
   return evt.key === 'Enter';
 };
 
-// Открываю меню бургера и привязываю это событие к показу навигации личного кабинета
-
-const onTogglerClick = (evt) => {
+const onTogglerClick = (item, evt) => {
   evt.preventDefault();
-  const isOpen = burgerMenu.getAttribute('aria-expanded') === 'false';
-  burgerMenu.setAttribute('aria-expanded', isOpen);
+  const isOpen = item.getAttribute('aria-expanded') === 'false';
+  item.setAttribute('aria-expanded', isOpen);
   console.log('click');
 };
 
-burgerMenu.addEventListener('click', onTogglerClick);
+const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
+
+burgerToggler.addEventListener('click', clickBurgerToggler);
 
 mainNav.addEventListener('keyup', (evt) => {
   if (evt.code === 'Escape') {
-    burgerMenu.setAttribute('aria-expanded', false);
-    burgerMenu.focus();
+    burgerToggler.setAttribute('aria-expanded', false);
+    burgerToggler.focus();
   }
 });
 
-// Убираем обработчик на десктопе
 const mediaQuery = window.matchMedia('(min-width: 1240px)');
 if (mediaQuery.matches) {
-  document.removeEventListener('click', onTogglerClick);
+  document.removeEventListener('click', clickBurgerToggler);
 }
-
-// Открывает/закрывает сабменю в мобильной версии и на планшете,
-// окрашивает ссылку в другой цвет, когда сабменю открыто.
 
 const subMenu = mainNav.querySelectorAll('.submenu');
 const subMenuButtonIcon = mainNav.querySelectorAll('.nav__icon');
@@ -57,6 +51,7 @@ subMenuButtons.forEach((item, index) => {
         el.setAttribute('aria-expanded', false);
         mainNavLinks[ind].style.color = 'inherit';
         subMenuButtonIcon[ind].style.transform = 'rotate(0deg)';
+        subMenuButtonIcon[ind].style.fill = 'inherit';
       } else {
         item.setAttribute('aria-expanded', isOpen);
       }
@@ -65,30 +60,25 @@ subMenuButtons.forEach((item, index) => {
     if (isOpen) {
       mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
       subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
+      subMenuButtonIcon[index].style.fill = 'rgb(0, 106, 255)';
     } else {
       mainNavLinks[index].style.color = 'inherit';
       subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
+      subMenuButtonIcon[index].style.fill = 'inherit';
     }
   });
 });
 
-// Обработчик на показ окна с навигацией личного ккабинета
 const userNav = document.querySelector('.user-nav');
-const userNavButton = userNav.querySelector('.user-nav__button-profile');
-console.log(userNavButton);
-const userNavList = userNav.querySelector('.user-nav__item-list');
+const userNavToggler = userNav.querySelector('.user-nav__toggler');
 
-const userMenuToggler = (evt) => {
-  evt.preventDefault();
-  userNavList.classList.toggle('user-nav__item-list--disabled');
-  console.log('click');
-};
+const clickProfileToggler = onTogglerClick.bind(null, userNavToggler);
 
-userNavButton.addEventListener('click', userMenuToggler);
+userNavToggler.addEventListener('click', clickProfileToggler);
 
 // Модальные окна с регистрацией
 
-const buttonLogIn = userNav.querySelector('.user-nav__button-login');
+const buttonLogIn = userNav.querySelector('.user-nav__button');
 const modalLogin = document.querySelector('.modal--login');
 const modalReg = document.querySelector('.modal--reg');
 const buttonModalClose = document.querySelector('.modal__button-close');

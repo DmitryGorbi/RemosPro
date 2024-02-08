@@ -425,19 +425,20 @@
         <nav class="user-nav">
           <ul class="user-nav__list">
             <li class="user-nav__item user-nav__item--disabled">
-              <a class="user-nav__button-login" href="auth.html" aria-describedby="login">Войти
+              <a class="user-nav__button" href="auth.html" aria-describedby="login" aria-expanded="false">
+                <span>Войти</span>
                 <span class="visually-hidden" id="login">Личный кабинет</span>
               </a>
             </li>
             <li class="user-nav__item">
-              <a class="user-nav__button-profile" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
+              <button type="button" class="button user-nav__toggler" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
                 <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
                 </svg>
                 <span class="label-popup">Личный кабинет</span>
                 <span class="visually-hidden" id="profile">Войти</span>
-              </a>
-              <ul id="user-nav" class="user-nav__item-list user-nav__item-list--disabled">
+              </button>
+              <ul id="user-nav" class="user-nav__profile">
                 <li><a href="">ПУ</a></li>
                 <li><a href="">SEO</a></li>
                 <li><a href="">Мои обявления</a></li>
@@ -1189,7 +1190,25 @@
           <a class="news__link-all" href="#"><span>Показать всё</span></a>
         </section>
         <section class="location__item location__item-city">
-          <h3>Квартиры в районе</h3>
+          <h3>Квартиры в Округах</h3>
+          <ul class="location__list">
+            <li><a href="#">Хорошево-Мневники</a></li>
+            <li><a href="#">Марьино</a></li>
+            <li><a href="#">Орехово-Борисово Северное</a></li>
+            <li><a href="#">Строгино</a></li>
+            <li><a href="#">Тверской</a></li>
+            <li><a href="#">Дорогомилово</a></li>
+            <li><a href="#">Северное Измайлово</a></li>
+            <li><a href="#">Южное Медввеедково</a></li>
+            <li><a href="#">Лефортово</a></li>
+            <li><a href="#">Коньково</a></li>
+            <li><a href="#">Орехово-Борисово Южное</a></li>
+            <li><a href="#">Роостокино</a></li>
+          </ul>
+          <a class="news__link-all" href="#"><span>Показать всё</span></a>
+        </section>
+        <section class="location__item location__item-streets">
+          <h3>Квартиры на улицах</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
             <li><a href="#">Марьино</a></li>
