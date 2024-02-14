@@ -2024,10 +2024,10 @@ time {
   margin-bottom: 25px;
 }
 .modal-location__wrapper {
-  height: calc(100% - 24px - 48px - 20px);
+  height: calc(100% - 248px);
 }
 .modal-location__list {
-  height: calc(100% - 95px);
+  height: calc(100%);
   overflow: auto;
 }
 .modal-location__list li {

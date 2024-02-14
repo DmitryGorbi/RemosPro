@@ -9,7 +9,6 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-
   }
 
   @media (min-width: @desktop-width) {
@@ -36,7 +35,7 @@
   &::after {
     position: absolute;
     content: '';
-    top:  0;
+    top: 0;
     right: 0;
     width: 45px;
     height: 45px;
@@ -51,11 +50,12 @@
 }
 
 .modal-location__wrapper {
-  height: calc(100% - 24px - 48px - 20px);
+  height: calc(100% - 248px);
 }
 
 .modal-location__list {
-  height: calc(100% - 95px);
+  height: calc(100%);
+  // max-width: 100%;
   overflow: auto;
 
   & li {
