@@ -424,13 +424,13 @@
         </nav>
         <nav class="user-nav">
           <ul class="user-nav__list">
-            <li class="user-nav__item user-nav__item--disabled">
+            <li class="">
               <a class="user-nav__button" href="auth.html" aria-describedby="login" aria-expanded="false">
                 <span>Войти</span>
                 <span class="visually-hidden" id="login">Личный кабинет</span>
               </a>
             </li>
-            <li class="user-nav__item">
+            <li class="user-nav__disabled">
               <button type="button" class="button user-nav__toggler" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
                 <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
@@ -443,7 +443,7 @@
                 <li><a href="">SEO</a></li>
                 <li><a href="">Мои обявления</a></li>
                 <li><a href="">Профиль</a></li>
-                <li><a href="">Кошелёк</a></li>
+                <li><a href="">Кошелёк - 100 руб.</a></li>
                 <li><a href="">Жалобы</a></li>
                 <li><a href="">XML</a></li>
                 <li><a href="">Статистика</a></li>
@@ -455,7 +455,7 @@
           </ul>
         </nav>
       </div>
-      <button class="button page-header__button" type="button">
+      <button class="button button-location" type="button">
         <svg class="" width="18px" height="18px" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#region"></use>
         </svg>
@@ -783,7 +783,7 @@
           <article class="new-offer">
             <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
             <a class="new-offer__link" href="#">
-              <img src="img/offers/building.webp" alt="" />
+              <img src="img/offers/building.webp" alt="" loading="lazy"/>
               <p class="new-offer__price">38 500 000 ₽</p>
               <p class="new-offer__properties">3-комн. · 95.20 м² · 3/9 этаж</p>
               <p>Тюмень, мкр Суходолье, ул. Монтажников, 43</p>
@@ -861,6 +861,7 @@
             </a>
           </article>
         </div>
+        <button class="button">Смотреть весь список</button>
       </section>
       <section class="experts section-wrapper">
         <h2 class="caption-index">Специалисты</h2>
@@ -933,7 +934,7 @@
               <a class="expert-card" href="#">
                 <h4>Max Realty Max</h4>
                 <div>
-                  <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>56 объявлений</p>
               </a>
@@ -942,7 +943,7 @@
               <a class="expert-card" href="#">
                 <h4>Замоскворечье</h4>
                 <div>
-                  <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>1 000 объявлений</p>
               </a>
@@ -951,7 +952,7 @@
               <a class="expert-card" href="#">
                 <h4>Градомир</h4>
                 <div>
-                  <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>25 объявления</p>
               </a>
@@ -960,7 +961,7 @@
               <a class="expert-card" href="#">
                 <h4>Авангард</h4>
                 <div>
-                  <img src="img/experts/agencies/agency4.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts/agencies/agency4.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>25 объявления</p>
               </a>
@@ -969,7 +970,7 @@
               <a class="expert-card" href="#">
                 <h4>АэНБИ</h4>
                 <div>
-                  <img src="img/experts/agencies/agency5.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts/agencies/agency5.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>25 объявления</p>
               </a>
@@ -978,7 +979,7 @@
               <a class="expert-card" href="#">
                 <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
                 <div>
-                  <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                  <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Логотип агентства недвижимости Max Realty" />
                 </div>
                 <p>25 объявления</p>
               </a>
@@ -1339,6 +1340,87 @@
         </div>
         <button class="button" type="submit">Зарегистрироваться</button>
       </form>
+    </section>
+    <section class="modal-location">
+      <div class="modal-location__content">
+        <h2 class="">Выберите регион/город</h2>
+        <button class="button modal-location__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно авторизации</span>
+        </button>
+        <div class="modal-location__wrapper">
+          <form class="modal-location__form" action="">
+            <label class="visually-hidden" for="search-region">Выберите регион или город</label>
+            <input class="input input--field" id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off">
+            <div class="modal-location__footer">
+              <!-- <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button> -->
+              <button class="button button-main" type="button">Выбрать</button>
+            </div>
+          </form>
+          <ul class="breadcrumbs breadcrumbs--location">
+            <li>Россия</li>
+            <li>Кабардино-Балкарская республика</li>
+            <li>Нальчик</li>
+          </ul>
+          <div class="modal-location__list">
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="js/header.js"></script>
     <script src="js/header.js"></script>

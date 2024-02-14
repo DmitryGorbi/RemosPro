@@ -1,0 +1,20 @@
+.button-location {
+  display: flex;
+  column-gap: 2px;
+  padding: 5px 10px;
+  margin-left: -10px;
+  max-width: 100%;
+  font-size: 13px;
+  text-align: start;
+  border-radius: 5px;
+
+  & span {
+    border-bottom: 1px dashed var(--blue);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: max-content;
+    padding: 4px 10px;
+    font-size: 15px;
+  }
+}

@@ -1,3 +1,5 @@
+"use strict"
+
 const mainNav = document.querySelector('.navigation');
 const burgerToggler = mainNav.querySelector('.toggler');
 const userActionsNav = document.querySelector('.user-actions');
@@ -84,6 +86,7 @@ const modalReg = document.querySelector('.modal--reg');
 const buttonModalClose = document.querySelector('.modal__button-close');
 const inputMail = document.getElementById('userEmail');
 const regModalLink = modalLogin.querySelector('.auth__form-link');
+const buttonLocation = document.querySelector('.button-location')
 
 const onButtonClose = (evt) => {
   let target = evt.target;

@@ -1,0 +1,33 @@
+.breadcrumbs {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    // column-gap: 20px;
+
+    & li:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    & li {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+
+      &:not(:last-child)::after {
+        position: absolute;
+        content: '';
+        top: 7px;
+        right: -10px;
+        width: 5px;
+        height: 2px;
+        background-color: var(--gray);
+      }
+    }
+  }
+}
