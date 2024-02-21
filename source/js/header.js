@@ -86,7 +86,6 @@ const modalReg = document.querySelector('.modal--reg');
 const buttonModalClose = document.querySelector('.modal__button-close');
 const inputMail = document.getElementById('userEmail');
 const regModalLink = modalLogin.querySelector('.auth__form-link');
-const buttonLocation = document.querySelector('.button-location')
 
 const onButtonClose = (evt) => {
   let target = evt.target;
@@ -119,3 +118,40 @@ buttonLogIn.addEventListener('click', (evt) => {
     });
   }
 });
+
+
+//
+let inputSearch = document.querySelectorAll('.input--modal');
+let popupLocation = document.querySelectorAll('.modal-search');
+
+inputSearch[0].addEventListener('input', () => {
+  popupLocation[0].style.display = "block"
+})
+
+
+document.addEventListener('keydown', () => {
+  if(isEscEvent) {
+    popupLocation[0].style.display = 'none';
+    inputSearch[0].texContent = '';
+  }
+})
+
+inputSearch[1].addEventListener('input', () => {
+  popupLocation[1].style.display = "block"
+  console.dir(inputSearch[1])
+})
+
+
+document.addEventListener('keydown', () => {
+  if(isEscEvent) {
+    popupLocation[1].style.display = 'none';
+    // inputSearch[1].value = '';
+  }
+})
+
+const buttonLocation = document.querySelector('.button-location')
+const modalLocation = document.querySelector('.modal-location')
+
+buttonLocation.addEventListener('click', () => {
+  modalLocation.classList.toggle('modal-location--show')
+})

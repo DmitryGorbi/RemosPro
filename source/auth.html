@@ -17,296 +17,451 @@
   </head>
 
   <body class="page__body layout">
-    <header class="page-header page-header--layout wrapper-content">
-      <nav class="navigation layout__navigation">
-        <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <a class="logo" href="index.html">
-          <svg class="logo__icon" role="img" aria-label="Логотип RemosPro" width="75" height="19" viewBox="0 0 75 19">
-            <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
-          </svg>
-        </a>
-        <ul id="main-nav" class="list main-nav">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Продажа</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
-              <span class="visually-hidden">Открыть подменю раздела продажи</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-sale" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
+    <header class="page-header wrapper-content">
+      <div class="page-header__wrapper">
+        <nav class="navigation layout__navigation">
+          <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="logo" href="index.html">
+            <svg class="logo__icon" role="img" aria-label="Логотип RemosPro" width="75" height="19" viewBox="0 0 75 19">
+              <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
+            </svg>
+          </a>
+          <ul id="nav" class="nav">
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Продажа</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
+                <span class="visually-hidden">Открыть подменю раздела продажи</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-sale" class="submenu submenu--links">
+                <p class="submenu__title">Жилая недвижимость</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="submenu__title">Гаражи</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li class="">
+                    <a class="" href="#">Гараж</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Гаражный бокс</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Аренда</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
+                <span class="visually-hidden">Открыть подменю раздела аренды</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-rent" class="submenu submenu--links">
+                <p class="submenu__title">Жилая недвижимость</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="submenu__title">Гаражи</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#">Гараж</a>
+                  </li>
+                  <li>
+                    <a href="#">Гаражный бокс</a>
+                  </li>
+                  <li>
+                    <a href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Каталог новостроек</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-bldg">
+                <span class="visually-hidden">Открыть подменю каталога новостроек</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-new-bldg" class="submenu submenu--bldg">
+                <p class="submenu__title">Строящиеся ЖК</p>
+                <ul class="submenu__list submenu__list--bldg">
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="#"><span>ЖК Юбилейный</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Крылья</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Небоскрёб</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Квартал Житейский</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
+                  </li> -->
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Перейти в каталог новостроек</span></a>
+                </p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Специалисты</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
+                <span class="visually-hidden">Открыть подменю раздела специалистов</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="professionals" class="submenu submenu--expert">
+                <p class="submenu__title">Риэлторы</p>
+                <ul class="submenu__list submenu__list--expert">
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>Частный риэлтор</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Список риэлторов</span></a>
+                </p>
+                <p class="submenu__title">Агентства недвижимости</p>
+                <ul class="submenu__list submenu__list--expert">
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Max Realty Max</h4>
+                      <div>
+                        <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>56 объявлений</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Замоскворечье</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>1 000 объявлений</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Градомир</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>25 объявления</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>25 объявления</p>
+                    </a>
+                  </li>
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a href="#"><span>Список агентств</span></a>
+                </p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Ипотека</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-mortgage">
+                <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-mortgage" class="submenu submenu--links">
+                <p class="submenu__title">Ипотечные сервисы</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Подбор ипотечных программ</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Ипотечный калькулятор</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Калькулятор с досрочным погашением</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Оформить заявку на ипотеку</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-actions">
+          <ul>
+            <li class="user-actions__item">
+              <a class="user-actions__like" href="#" aria-describedby="favorite">
+                <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                </svg>
+                <span class="label-popup">Избранное</span>
+                <span class="visually-hidden" id="favorite">Список сохранённых объявлений</span>
+              </a>
+            </li>
+            <li class="user-actions__item">
+              <a class="user-actions__add" href="#">
+                <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
+                </svg>
+                <span class="visually-hidden-mobile">Разместить объявление</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-nav">
+          <ul class="user-nav__list">
+            <li class="">
+              <a class="user-nav__button" href="auth.html" aria-describedby="login" aria-expanded="false">
+                <span>Войти</span>
+                <span class="visually-hidden" id="login">Личный кабинет</span>
+              </a>
+            </li>
+            <li class="user-nav__disabled">
+              <button type="button" class="button user-nav__toggler" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
+                <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
+                </svg>
+                <span class="label-popup">Личный кабинет</span>
+                <span class="visually-hidden" id="profile">Войти</span>
+              </button>
+              <ul id="user-nav" class="user-nav__profile">
+                <li><a href="">ПУ</a></li>
+                <li><a href="">SEO</a></li>
+                <li><a href="">Мои обявления</a></li>
+                <li><a href="">Профиль</a></li>
+                <li><a href="">Кошелёк - 100 руб.</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Статистика</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Выйти</a></li>
               </ul>
-              <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Офис</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>ПСН</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Здание</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Производство</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Торговая площадь</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Склад</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Готовый бизнес</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Коммерческая земля</span></a>
-                </li>
-              </ul>
-              <p class="main-nav__submenu-title">Гаражи</p>
-              <ul class="list main-nav__submenu-list">
-                <li class="">
-                  <a class="" href="#">Гараж</a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Гаражный бокс</a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Машиноместо</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Аренда</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
-              <span class="visually-hidden">Открыть подменю раздела аренды</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-rent" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-              <a class="main-nav__submenu-title" href="#">Коммерческая недвижимость</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Офис</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>ПСН</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Здание</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Производство</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Торговая площадь</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Склад</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Готовый бизнес</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Коммерческая земля</span></a>
-                </li>
-              </ul>
-              <p class="main-nav__submenu-title">Гаражи</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#">Гараж</a>
-                </li>
-                <li>
-                  <a href="#">Гаражный бокс</a>
-                </li>
-                <li>
-                  <a href="#">Машиноместо</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Каталог новостроек</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-buildings">
-              <span class="visually-hidden">Открыть подменю каталога новостроек</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="submenu-new-buildings" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Жилая недвижимость</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Специалисты</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
-              <span class="visually-hidden">Открыть подменю раздела специалистов</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div id="professionals" class="main-nav__submenu main-nav__submenu--layout">
-              <p class="main-nav__submenu-title">Риэлторы</p>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-              <a class="main-nav__submenu-title" href="#">Агентства недвижимости</a>
-              <ul class="list main-nav__submenu-list">
-                <li>
-                  <a href="#"><span>Квартиры</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Дома и дачи</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Земельные участоки</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Комнаты</span></a>
-                </li>
-                <li>
-                  <a href="#"><span>Таунхаусы</span></a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">
-              <span>Ипотека</span>
-            </a>
-            <button class="button main-nav__toggler" type="button" aria-expanded="false" aria-controls="mortgage">
-              <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
-              <svg class="main-nav__item-icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-actions">
-        <ul class="list">
-          <li class="user-actions__item">
-            <a class="user-actions__like" href="#" aria-describedby="favorite">
-              <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-              </svg>
-              <span class="label-popup">Избранное</span>
-              <span class="visually-hidden" id="favorite">Список сохранённых объявлений</span>
-            </a>
-          </li>
-          <li class="user-actions__item">
-            <a class="user-actions__add" href="#" aria-describedby="add-offer">
-              <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
-              </svg>
-              <span class="visually-hidden-desktop">Разместить объявление</span>
-              <span class="label-popup label-popup--add" id="add-offer">Разместить объявление</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-nav">
-        <ul class="list user-nav__list">
-          <li class="user-nav__item">
-            <a class="user-nav__button-login" href="auth.html">Войти</a>
-          </li>
-          <li class="user-nav__item user-nav__item--disabled">
-            <a class="user-nav__button-profile" href="#" aria-describedby="login" aria-expanded="false" aria-controls="user-nav" aria-label="Авторизация">
-              <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
-              </svg>
-              <span class="label-popup">Личный кабинет</span>
-              <span class="visually-hidden" id="login">Войти</span>
-            </a>
-            <ul id="user-nav" class="list user-nav__item-list user-nav__item-list--disabled">
-              <li><a href="">Мои обявления</a></li>
-              <li><a href="">Профиль</a></li>
-              <li><a href="">Кошелёк</a></li>
-              <li><a href="">Жалобы</a></li>
-              <li><a href="">XML</a></li>
-              <li><a href="">Статистика</a></li>
-              <li><a href="">Жалобы</a></li>
-              <li><a href="">XML</a></li>
-              <li><a href="">Статистика</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="button button-location" type="button" aria-expanded="false">
+        <svg class="" width="18px" height="18px" aria-hidden="true">
+          <use xlink:href="img/icons/sprite.svg#region"></use>
+        </svg>
+        <span>Кабардино-Балкарская республика</span>
+      </button>
     </header>
     <main id="main" class="wrapper-content page-main layout__page-main">
       <h1 class="caption caption--h1">Войти в личный кабинет</h1>
@@ -337,7 +492,17 @@
         </form>
       </section>
     </main>
-
+    <footer class="page__footer">
+      <div class="wrapper-content">
+        <p>© Remos 2023 - Недвижимость в Московской области</p>
+        <ul>
+          <li><a href="">О проекте</a></li>
+          <li><a href="">Условия использования</a></li>
+          <li><a href="">Публикации</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="js/header.js"></script>
   </body>
 </html>
