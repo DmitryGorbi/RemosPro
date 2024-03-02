@@ -319,7 +319,7 @@ a:visited {
 .layout {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  row-gap: 20px;
+  row-gap: 40px;
 }
 .layout__navigation {
   flex-grow: 1;
@@ -474,6 +474,11 @@ input[type='radio'] {
   flex-direction: column;
   row-gap: 40px;
 }
+@media (min-width: 1240px) {
+  .page-main--index {
+    row-gap: 80px;
+  }
+}
 .page-main__header {
   position: relative;
   min-height: 154px;
@@ -521,6 +526,11 @@ input[type='radio'] {
 .page-main__caption-name {
   color: #20a052;
 }
+@media (min-width: 1240px) {
+  .page-header {
+    z-index: 2;
+  }
+}
 .page-header__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -537,6 +547,7 @@ input[type='radio'] {
 @media (min-width: 1240px) {
   .page-header__wrapper {
     padding: 3px 0 0 0;
+    z-index: 2;
   }
 }
 .logo {
@@ -1226,77 +1237,111 @@ input[type='radio'] {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-.nav-section h3 {
-  margin: 15px 0 10px 0;
-  font-size: inherit;
-  font-weight: 700;
-  line-height: 1.3em;
-}
-.nav-section ul {
+.nav-section__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  row-gap: 5px;
-  padding: 5px;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.nav-section_type {
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
-.nav-section ul li a {
-  display: block;
-  justify-content: space-between;
-  padding: 5px 0;
-  color: var(--clarified-black);
+.nav-section_type h3 {
+  margin: 15px 0 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3em;
 }
-.nav-section ul li a:hover {
+.nav-section_type img {
+  order: -1;
+  border-radius: 5px 5px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 180px;
+}
+.nav-section_type ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px 15px;
+}
+.nav-section_type ul li:not(:last-child) {
+  border-bottom: 1px solid var(--light-gray);
+}
+.nav-section_type ul li a {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 12px 5px;
   color: var(--blue);
 }
-.nav-section ul li a:active {
-  color: red;
+.nav-section_type ul li a data {
+  color: var(--clarified-black);
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
-  .nav-section .nav-section__wrapper {
+  .nav-section__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content max-content max-content max-content;
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
-  .nav-section h3:nth-of-type(2) {
+  .nav-section_type h3:nth-of-type(2) {
     grid-row: 1/2;
     grid-column: 2/3;
   }
-  .nav-section h3:nth-of-type(4) {
+  .nav-section_type h3:nth-of-type(4) {
     grid-row: 3/4;
     grid-column: 2/3;
   }
-  .nav-section ul {
+  .nav-section_type ul {
     flex-direction: column;
-    row-gap: 3px;
   }
 }
 @media (min-width: 1240px) {
-  .nav-section .nav-section__wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .nav-section__wrapper {
     grid-template-rows: max-content max-content;
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
-  .nav-section h3:nth-of-type(2) {
-    grid-row: 1/2;
+  .nav-section_type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    padding: 10px 10px 0 10px;
+  }
+  .nav-section_type h3 {
     grid-column: 2/3;
-  }
-  .nav-section h3:nth-of-type(3) {
     grid-row: 1/2;
-    grid-column: 3/4;
+    margin: 0;
+    font-size: 18px;
   }
-  .nav-section h3:nth-of-type(4) {
-    grid-row: 1/2;
-    grid-column: 4/5;
+  .nav-section_type img {
+    grid-row: 1/-1;
+    width: 100%;
+    order: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-radius: 5px;
   }
-  .nav-section ul {
+  .nav-section_type ul {
+    grid-column: 2/3;
+    grid-row: 2/3;
     padding: 0;
-    border: none;
+    box-shadow: none;
+  }
+  .nav-section_type ul li:not(:last-child) {
+    border-bottom: none;
+  }
+  .nav-section_type ul li a {
+    padding: 8px 5px;
   }
 }
 .new-offers {
