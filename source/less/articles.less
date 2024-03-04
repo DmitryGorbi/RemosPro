@@ -17,7 +17,6 @@
 .articles__wrapper {
   display: flex;
   flex-direction: column;
-  // row-gap: 15px;
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -56,10 +55,6 @@
   & .articles__picture--last {
     width: 100%;
     height: auto;
-
-    @media (min-width: @desktop-width) {
-      // margin-bottom: 7px;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -100,7 +95,6 @@
 
 .articles__title--last {
   font-weight: 700;
-  // padding: 10px;
   border-radius: 3px 3px 0 0;
 }
 
@@ -108,13 +102,14 @@ time {
   font-size: 12px;
 }
 
-.articles__link-all {
-  grid-column: 2/3;
+.link-all--articles {
   margin-left: auto;
 
   & span {
-    color: var(--blue);
-    border-bottom: 1px dashed var(--blue);
-    margin-top: auto;
+    // margin-top: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
   }
 }
