@@ -389,7 +389,7 @@ input[type='radio'] {
 .input {
   -webkit-appearance: none;
 }
-.input:checked + label .pseudo-input,
+.input:checked + label .pseudo-radio,
 .input:checked + label .pseudo-checkbox {
   font-weight: 500;
   background-color: var(--light-blue);
@@ -400,14 +400,14 @@ input[type='radio'] {
   border: 1px solid var(--blue);
   color: var(--dark-blue);
 }
-.input:focus + label .pseudo-input,
+.input:focus + label .pseudo-radio,
 .input:focus + label .pseudo-checkbox {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
 .input:focus {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
-.pseudo-input,
+.pseudo-radio,
 .pseudo-checkbox {
   display: block;
   width: 100%;
@@ -418,16 +418,16 @@ input[type='radio'] {
   border-radius: 5px;
   cursor: pointer;
 }
-.pseudo-input:hover,
+.pseudo-radio:hover,
 .pseudo-checkbox:hover {
   color: var(--dark-blue);
   border-color: var(--blue);
 }
-.pseudo-input {
+.pseudo-radio {
   padding: 13px 15px;
 }
 @media (min-width: 768px) {
-  .pseudo-input {
+  .pseudo-radio {
     padding: 9px 16px;
   }
 }
@@ -2423,11 +2423,11 @@ time {
     border: none;
   }
 }
-.deal__item .pseudo-input {
+.deal__item .pseudo-radio {
   position: relative;
 }
 @media (min-width: 768px) {
-  .deal__item .pseudo-input {
+  .deal__item .pseudo-radio {
     border: none;
   }
 }
@@ -2476,7 +2476,7 @@ time {
 .type__item:not(:last-child) {
   margin-bottom: 3px;
 }
-.type__item label .pseudo-input {
+.type__item label .pseudo-radio {
   position: relative;
   border: none;
 }
@@ -2560,7 +2560,7 @@ time {
        column-gap: 7px;
 }
 @media (min-width: 768px) {
-  .price__switch .pseudo-input {
+  .price__switch .pseudo-radio {
     padding: 5px;
   }
 }
