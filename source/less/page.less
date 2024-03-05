@@ -1,9 +1,6 @@
 .page,
 .page__body {
   height: 100%;
-
-  // margin: 0 auto;
-  // max-width: 1400px; // с этим вопрос
 }
 
 .page__body {
@@ -28,11 +25,14 @@
   & div {
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    flex-wrap: wrap;
+    row-gap: 5px;
     align-items: center;
 
     @media (min-width: @desktop-width) {
-      flex-direction: row;
+      // flex-direction: row;
+      // align-items: start;
+      row-gap: 5px;
       column-gap: 40px;
     }
   }
@@ -45,11 +45,14 @@
   & a {
     display: block;
     padding: 10px 5px;
+    color: var(--blue);
   }
 
   & ul {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    column-gap: 15px;
+    margin-left: -5px;
+    margin-bottom: 10px;
   }
 }
