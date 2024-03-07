@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/source/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/source/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/source/img/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="/source/img/favicons/safari-pinned-tab.svg" color="#20a052" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду</title>
+    <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
+  </head>
+
+  <body class="page__body layout layout--gk">
+    <header class="page-header wrapper-content">
+      <div class="page-header__wrapper">
+        <nav class="navigation layout__navigation">
+          <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <a class="logo" href="index.html">
+            <svg class="logo__icon" role="img" aria-label="Логотип RemosPro" width="75" height="19" viewBox="0 0 75 19">
+              <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
+            </svg>
+          </a>
+          <ul id="nav" class="nav">
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Продажа</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
+                <span class="visually-hidden">Открыть подменю раздела продажи</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-sale" class="submenu submenu--links">
+                <p class="submenu__title">Жилая недвижимость</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Земельные участоки</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="submenu__title">Гаражи</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li class="">
+                    <a class="" href="#">Гараж</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Гаражный бокс</a>
+                  </li>
+                  <li class="">
+                    <a class="" href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Аренда</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
+                <span class="visually-hidden">Открыть подменю раздела аренды</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-rent" class="submenu submenu--links">
+                <p class="submenu__title">Жилая недвижимость</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Квартиры</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Дома и дачи</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Комнаты</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Таунхаусы</span></a>
+                  </li>
+                </ul>
+                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Офис</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ПСН</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Здание</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Производство</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Торговая площадь</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Склад</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Готовый бизнес</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Коммерческая земля</span></a>
+                  </li>
+                </ul>
+                <p class="submenu__title">Гаражи</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#">Гараж</a>
+                  </li>
+                  <li>
+                    <a href="#">Гаражный бокс</a>
+                  </li>
+                  <li>
+                    <a href="#">Машиноместо</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Каталог новостроек</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-bldg">
+                <span class="visually-hidden">Открыть подменю каталога новостроек</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-new-bldg" class="submenu submenu--bldg">
+                <p class="submenu__title">Строящиеся ЖК в Кабардино-Балкарии</p>
+                <ul class="submenu__list submenu__list--bldg">
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="/source/gk.html">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3 class="">ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <li class="bldg-nav">
+                    <a class="bldg-nav__wrapper" href="#">
+                      <h3>ЖК Shagal</h3>
+                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
+                      <p class="bldg-nav__fix">2 кв. 2025</p>
+                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="#"><span>ЖК Юбилейный</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Крылья</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Небоскрёб</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Квартал Житейский</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
+                  </li> -->
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
+                </p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Специалисты</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
+                <span class="visually-hidden">Открыть подменю раздела специалистов</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="professionals" class="submenu submenu--expert">
+                <p class="submenu__title">Риэлторы</p>
+                <ul class="submenu__list submenu__list--expert">
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>Частный риэлтор</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Румянцева Татьяна</h4>
+                      <div>
+                        <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>На Ремос с 2020</p>
+                    </a>
+                  </li>
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a class="link-underline" href="#"><span>Список риэлторов</span></a>
+                </p>
+                <p class="submenu__title">Агентства недвижимости</p>
+                <ul class="submenu__list submenu__list--expert">
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Max Realty Max</h4>
+                      <div>
+                        <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>56 объявлений</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Замоскворечье</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>1 000 объявлений</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Градомир</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>25 объявления</p>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="expert-card" href="#">
+                      <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
+                      <div>
+                        <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
+                      </div>
+                      <p>25 объявления</p>
+                    </a>
+                  </li>
+                </ul>
+                <p class="submenu__link-wrapper">
+                  <a class="link-underline" href="#"><span>Список агентств</span></a>
+                </p>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Ипотека</span>
+              </a>
+              <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-mortgage">
+                <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
+                <svg class="nav__icon" width="18px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <div id="submenu-mortgage" class="submenu submenu--links">
+                <p class="submenu__title">Ипотечные сервисы</p>
+                <ul class="submenu__list submenu__list--links">
+                  <li>
+                    <a href="#"><span>Подбор ипотечных программ</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Ипотечный калькулятор</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Калькулятор с досрочным погашением</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Оформить заявку на ипотеку</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>ЖК Воскрешение</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-actions">
+          <ul>
+            <li class="user-actions__item">
+              <a class="user-actions__like" href="#" aria-describedby="favorite">
+                <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                </svg>
+                <span class="label-popup">Избранное</span>
+                <span class="visually-hidden" id="favorite">Список сохранённых объявлений</span>
+              </a>
+            </li>
+            <li class="user-actions__item">
+              <a class="user-actions__add" href="#">
+                <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
+                </svg>
+                <span class="visually-hidden-mobile">Разместить объявление</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="user-nav">
+          <ul class="user-nav__list">
+            <li class="">
+              <a class="user-nav__button" href="auth.html" aria-describedby="login" aria-expanded="false">
+                <span>Войти</span>
+                <span class="visually-hidden" id="login">Личный кабинет</span>
+              </a>
+            </li>
+            <li class="user-nav__disabled">
+              <button type="button" class="button user-nav__toggler" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
+                <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
+                </svg>
+                <span class="label-popup">Личный кабинет</span>
+                <span class="visually-hidden" id="profile">Войти</span>
+              </button>
+              <ul id="user-nav" class="user-nav__profile">
+                <li><a href="">ПУ</a></li>
+                <li><a href="">SEO</a></li>
+                <li><a href="">Мои обявления</a></li>
+                <li><a href="">Профиль</a></li>
+                <li><a href="">Кошелёк - 100 руб.</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Статистика</a></li>
+                <li><a href="">Жалобы</a></li>
+                <li><a href="">XML</a></li>
+                <li><a href="">Выйти</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main page-main--index gk">
+      <section class="gk__header">
+        <div class="gk__header-line"></div>
+        <div class="wrapper-content">
+          <div class="gk__layout">
+            <div class="gk__preview">
+              <div class="gk__preview-logo">
+                <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="" />
+              </div>
+              <h1>ЖК &#171;Сиреневый бульвар&#187;</h1>
+              <address>г. Калининград. Между улицами Арсенальная, Пехотная и 4-ой Большой окружной.</address>
+              <p class="gk__preview-message">Старт продаж 3-й очереди. Есть сданные корпуса.</p>
+              <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
+              <p>от 110 000 до 140 000 ₽/м²</p>
+            </div>
+            <p class="gk__preview-gallery">
+              <button class="button" type="button">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABqklEQVR4nO3VO2gVURAG4M8UaqESIYgQQbSxsPSZysIoKogWXjS2GlJFW9FYiBCCaKuVioqNlQ8ExUZEwRQJPtLYWoQgQVD0qpVyYIQl955N2Ls2kh+GMzv/Mv/uzJxzWMT/gm7cxjQ+12BvcKhM8CpeYh/6a7BhNLEuJ5i+aKDmqn3A4Rw5hUaFpL14hm+x9rbJORit2lOH4F08xA48wp02OZfjEl7VITiOE+GfxOtMzkY8dyx4Hh9xJdaRTgS3hJWhK3p0I9auqoJnY6yb4VfBVJngexwJfyimbif6wk+xIrZiFOewoYpgP1aH6I84AP5if8QStxa38BP38Ry/cG3OlkiYwMGcYMLuKOHxuUTEEvcFT7GpwG2LWOIvoyfiPYWetgim4fgaR1IOp+LPUjnbYVccjynPBawqcC2C4zHa8+EiPmF9yTsHMIlZbM4JvsVRC8OZQqIclmAvVuYEb+IJthf2X1Xrw3VsLORvEVyDxzFxvzu0Ju7N10MLJSuiUZYzbY8ZLK1R8DRe5MhlcSG/i9J0ag/wHcfKvmhFXDdjNdhI3JeL8E/wB9OtpliVnGiiAAAAAElFTkSuQmCC"
+                />
+                Галерея
+              </button>
+            </p>
+            <section class="gk__developer">
+              <h3>Застройщик Олимп</h3>
+              <img src="img/bldg/sirenevy__bulvar/olimpia.svg" width="100" height="100" alt="Логотип застройщика Олимп" />
+            </section>
+            <section class="gk__preview-contacts">
+              <h3 class="visually-hidden">Связаться с застройщиком</h3>
+              <button class="button button-main" type="button">Контакты</button>
+              <button class="button button-main button-main--developer" type="button">Перезвоните</button>
+            </section>
+            <section class="navbar">
+              <ul>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Генплан</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Расположение</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Выбрать квартиру</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Ипотека</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Акции</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Новости</button></li>
+                <li class="link-underline"><button class="button" type="button" style="border-bottom: 2px solid blue">Ход строительства</button></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="gk__banner">
+          <img src="img/bldg/sirenevy__bulvar/1-big.jpg" alt="" />
+        </div>
+      </section>
+
+      <section>
+        <h2>Генплан</h2>
+      </section>
+      <section>
+        <h2>Расположение</h2>
+      </section>
+      <!-- <section>
+        <h2>Квартиры</h2>
+      </section>
+      <section>
+        <h2>Как купить</h2>
+        <ul>
+          <li>Ипотека</li>
+          <li>Рассрочка</li>
+          <li>Акции</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Новости</h2>
+      </section>
+      <section>
+        <h2>Ход строительства</h2>
+      </section>
+      <section>
+        <h2>Галерея</h2>
+      </section> -->
+    </main>
+    <footer class="page__footer">
+      <div class="wrapper-content">
+        <p>© Remos 2023 - Недвижимость в Московской области</p>
+        <ul>
+          <li><a href="">О проекте</a></li>
+          <li><a href="">Условия использования</a></li>
+          <li><a href="">Публикации</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+        <ul class="social-list">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+    </footer>
+    <section class="modal modal--login auth auth--login">
+      <h2 class="caption">Авторизация</h2>
+      <button class="button modal__button-close" type="button">
+        <span class="visually-hidden">Закрыть окно авторизации</span>
+      </button>
+      <form class="auth__form" method="post" action="">
+        <div>
+          <label for="userEmail">
+            <span>Email адресс:</span>
+          </label>
+          <input class="input input--field" title="Введите ваш email" id="userEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
+        </div>
+        <div>
+          <label for="userPassword">
+            <span>Пароль:</span>
+          </label>
+          <input
+            class="input input--field"
+            title="Введите ваш пароль"
+            id="userPassword"
+            type="password"
+            name="password"
+            autocomplete="current-password"
+            value=""
+            maxlength="20"
+            size="20"
+            required
+            aria-describedby="password-validation"
+            enterkeyhint="done"
+          />
+          <!-- <span id="password-validation">Для регистрации: Пароль должен содержать не менее 8-ми и не более 20 символов</span> -->
+        </div>
+        <div>
+          <input type="checkbox" id="remember" />
+          <label for="remember">Запомнить</label>
+        </div>
+        <button class="button" type="submit">Войти</button>
+        <div>
+          <a class="auth__form-link" href="registration.html">Регистрация</a>
+          <a href="restore-password.html">Восстановить доступ</a>
+        </div>
+      </form>
+    </section>
+    <section class="modal modal--reg auth auth--reg">
+      <h2 class="caption">Регистрация</h2>
+      <button class="button modal__button-close" type="button">
+        <span class="visually-hidden">Закрыть окно регистрации</span>
+      </button>
+      <form class="auth__form" method="post" action="">
+        <div>
+          <label for="userRegEmail">
+            <span>Email адресс:</span>
+          </label>
+          <input class="input input--field" title="Введите ваш email" id="userRegEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
+        </div>
+        <div>
+          <label for="registrationPassword">
+            <span>Пароль:</span>
+          </label>
+          <input
+            class="input input--field"
+            title="Придумайте надежный пароль"
+            id="registrationPassword"
+            type="password"
+            name="password"
+            autocomplete="new-password"
+            value=""
+            maxlength="20"
+            size="20"
+            required
+            enterkeyhint="done"
+          />
+        </div>
+        <fieldset>
+          <legend>Вы профессионал?</legend>
+          <div>
+            <input id="realtor" type="radio" name="profi-type" value="realtor" />
+            <label for="realtor"><span>Риэлтор</span></label>
+          </div>
+          <div>
+            <input id="agency" type="radio" name="profi-type" value="agency" />
+            <label for="agency"><span>Агентство недвижимости</span></label>
+          </div>
+          <div>
+            <input id="builder" type="radio" name="profi-type" value="builder" />
+            <label for="builder"><span>Застройщик</span></label>
+          </div>
+        </fieldset>
+        <div>
+          <input id="agreement" type="checkbox" required checked />
+          <label for="agreement">
+            <span>Согласен с правилами сайта и с политикой конфиденциальности.</span>
+          </label>
+        </div>
+        <button class="button" type="submit">Зарегистрироваться</button>
+      </form>
+    </section>
+    <section class="modal-location">
+      <div class="modal-location__content">
+        <h2 class="">Выберите регион/город</h2>
+        <button class="button modal-location__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно авторизации</span>
+        </button>
+        <div class="modal-location__wrapper">
+          <form class="modal-location__form" action="">
+            <label class="visually-hidden" for="search-region">Выберите регион или город</label>
+            <input class="input input--field input--modal" id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
+            <div class="modal-location__button">
+              <!-- <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button> -->
+              <button class="button button-main" type="button">Сохранить</button>
+            </div>
+          </form>
+          <div class="modal-search modal-search--location">
+            <p>Алтайсткий край</p>
+            <p>Калининградская область</p>
+            <p>Самарская область</p>
+            <p>Республика Татарстан</p>
+            <p>Ленинградская область</p>
+          </div>
+          <ul class="breadcrumbs breadcrumbs--location">
+            <li>Россия</li>
+            <li>Кабардино-Балкарская республика</li>
+            <li>Нальчик</li>
+          </ul>
+          <div class="modal-location__list">
+            <ul>
+              <li>Санкт-Петербург и ЛО</li>
+              <li>Москва и Московская область</li>
+            </ul>
+            <ul>
+              <li>А</li>
+              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Б</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>В</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Г</li>
+              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Д</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Е</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ж</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+              <li>Ленинградская область</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+            <ul>
+              <li>Ё</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+              <li>Кабардино-Балкарская республика</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/header.js"></script>
+    <script src="js/header.js"></script>
+  </body>
+</html>
