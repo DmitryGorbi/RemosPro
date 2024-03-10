@@ -179,7 +179,7 @@
                 <p class="submenu__title">Строящиеся ЖК в Кабардино-Балкарии</p>
                 <ul class="submenu__list submenu__list--bldg">
                   <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="/source/gk.html">
+                    <a class="bldg-nav__wrapper" href="gk.html">
                       <h3 class="">ЖК Shagal</h3>
                       <img src="img/bldg/bldg1.webp" alt="" width="80" />
                       <p class="bldg-nav__fix">2 кв. 2025</p>
@@ -267,7 +267,7 @@
                   </li> -->
                 </ul>
                 <p class="submenu__link-wrapper">
-                  <a href="#"><span>Перейти в каталог новостроек</span></a>
+                  <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
                 </p>
               </div>
             </li>
@@ -322,7 +322,7 @@
                   </li>
                 </ul>
                 <p class="submenu__link-wrapper">
-                  <a href="#"><span>Список риэлторов</span></a>
+                  <a class="link-underline" href="#"><span>Список риэлторов</span></a>
                 </p>
                 <p class="submenu__title">Агентства недвижимости</p>
                 <ul class="submenu__list submenu__list--expert">
@@ -364,7 +364,7 @@
                   </li>
                 </ul>
                 <p class="submenu__link-wrapper">
-                  <a href="#"><span>Список агентств</span></a>
+                  <a class="link-underline" href="#"><span>Список агентств</span></a>
                 </p>
               </div>
             </li>
@@ -455,43 +455,50 @@
           </ul>
         </nav>
       </div>
+      <nav class="breadcrumbs breadcrumbs--header">
+        <ol class="">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Недвижимость к Калининграде</a></li>
+          <li><a href="">Новстройки</a></li>
+        </ol>
+      </nav>
     </header>
 
     <main id="main" class="page-main page-main--index gk">
       <section class="gk__header">
-          <div class="gk__layout wrapper-content">
-            <div class="gk__preview">
-              <div class="gk__preview-logo">
-                <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="" />
-              </div>
-              <h1>ЖК &#171;Сиреневый бульвар&#187;</h1>
-              <address>г. Калининград. Между улицами Арсенальная, Пехотная и 4-ой Большой окружной.</address>
-              <p class="gk__preview-message">Сдача 2025 г. Есть сданные корпуса.</p>
-              <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
-              <p class="gk__price-meter">от 110 000 до 140 000 ₽/м²</p>
+        <div class="gk__layout wrapper-content">
+          <div class="gk__preview">
+            <div class="gk__preview-logo">
+              <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="" />
             </div>
-            <section class="gk__developer">
-              <h3>Застройщик Ойкумена</h3>
-              <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="100" height="100" alt="Логотип застройщика Олимп" />
-            </section>
-            <section class="gk__preview-contacts">
-              <h3 class="visually-hidden">Связаться с застройщиком</h3>
-              <button class="button button-main" type="button">Контакты <span>застройщика</span></button>
-              <button class="button button-main button-main--developer" type="button">Перезвоните <span>мне</span></button>
-            </section>
-            <section class="navbar">
-              <ul>
-                <li><a href="">Генплан</a></li>
-                <li><a href="">Расположение</a></li>
-                <li><a href="">Выбрать квартиру</a></li>
-                <li><a href="">Ипотека</a></li>
-                <li><a href="">Акции</a></li>
-                <li><a href="">Новости</a></li>
-                <li><a href="">Ход строительства</a></li>
-                <li><a href="">Застройщик</a></li>
-              </ul>
-            </section>
+            <h1>ЖК &#171;Сиреневый бульвар&#187;</h1>
+            <address>г. Калининград. Между улицами Арсенальная, Пехотная и 4-ой Большой окружной.</address>
+            <p class="gk__preview-message">Сдача 2025 г. Есть сданные корпуса.</p>
+            <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
+            <p class="gk__price-meter">от 110 000 до 140 000 ₽/м²</p>
           </div>
+          <section class="gk__developer">
+            <h3>Застройщик Ойкумена</h3>
+            <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="100" height="100" alt="Логотип застройщика Олимп" />
+          </section>
+          <section class="gk__preview-contacts">
+            <h3 class="visually-hidden">Связаться с застройщиком</h3>
+            <button class="button button-main" type="button">Контакты <span>застройщика</span></button>
+            <button class="button button-main button-main--developer" type="button">Перезвоните <span>мне</span></button>
+          </section>
+          <section class="navbar">
+            <ul>
+              <li><a href="">Генплан</a></li>
+              <li><a href="">Расположение</a></li>
+              <li><a href="">Квартиру</a></li>
+              <li><a href="">Ипотека</a></li>
+              <li><a href="">Акции</a></li>
+              <li><a href="">Новости</a></li>
+              <li><a href="">Ход строительства</a></li>
+              <li><a href="">Застройщик</a></li>
+            </ul>
+          </section>
+        </div>
         <div class="gk__banner">
           <img src="img/bldg/sirenevy__bulvar/1-big.jpg" alt="" />
         </div>

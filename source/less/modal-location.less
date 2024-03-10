@@ -1,5 +1,4 @@
-
-:is(.page-header) .button-location[aria-expanded="false"] ~ .modal-location {
+:is(.page-header) .button-location[aria-expanded='false'] ~ .modal-location {
   display: none;
 }
 
@@ -58,7 +57,6 @@
 }
 
 .modal-location__form {
-
   @media (min-width: @desktop-width) {
     display: flex;
     column-gap: 10px;
@@ -80,14 +78,6 @@
 
   @media (min-width: @desktop-width) {
     height: 80vh;
-  }
-}
-
-.breadcrumbs--location {
-
-  @media (min-width: @tablet-width) {
-    margin-top: 15px;
-    margin-bottom: 15px;
   }
 }
 
@@ -137,7 +127,7 @@
   }
 
   & ul:first-child li::after,
-    ul li:not(:first-child)::after {
+  ul li:not(:first-child)::after {
     position: absolute;
     content: '';
     top: 18px;

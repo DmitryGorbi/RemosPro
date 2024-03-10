@@ -101,7 +101,8 @@ dt,
 dd {
   margin: 0;
 }
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -539,6 +540,7 @@ input[type='radio'] {
   color: #20a052;
 }
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -1148,16 +1150,18 @@ input[type='radio'] {
 }
 @media (min-width: 768px) {
   .breadcrumbs {
+    display: block;
+  }
+  .breadcrumbs ol {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
   .breadcrumbs li:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 20px;
   }
   .breadcrumbs li {
     position: relative;
-    cursor: pointer;
   }
   .breadcrumbs li:hover {
     color: red;
@@ -1165,12 +1169,28 @@ input[type='radio'] {
   .breadcrumbs li:not(:last-child)::after {
     position: absolute;
     content: '';
-    top: 7px;
-    right: -10px;
-    width: 5px;
-    height: 2px;
-    background-color: var(--gray);
+    top: 6px;
+    right: -13px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+    rotate: 45deg;
   }
+}
+.breadcrumbs--header {
+  position: absolute;
+  bottom: -25px;
+  color: var(--white);
+  font-size: 14px;
+}
+.breadcrumbs--location {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.breadcrumbs--location ol li {
+  cursor: pointer;
 }
 .search-section .search-section__banner img {
   display: none;
@@ -2035,7 +2055,7 @@ time {
   background-position: center;
   background-repeat: no-repeat;
 }
-:is(.page-header) .button-location[aria-expanded="false"] ~ .modal-location {
+:is(.page-header) .button-location[aria-expanded='false'] ~ .modal-location {
   display: none;
 }
 .modal-location {
@@ -2112,12 +2132,6 @@ time {
 @media (min-width: 1240px) {
   .modal-location__wrapper {
     height: 80vh;
-  }
-}
-@media (min-width: 768px) {
-  .breadcrumbs--location {
-    margin-top: 15px;
-    margin-bottom: 15px;
   }
 }
 .modal-location__list {
@@ -2970,7 +2984,6 @@ time {
   }
 }
 .gk__header {
-  height: calc(100vh - 63px);
   display: grid;
   grid-template-rows: 45vh min-content;
 }
@@ -3008,6 +3021,7 @@ time {
   font-weight: 700;
 }
 .gk__preview .gk__price-meter {
+  margin-bottom: 10px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -3078,7 +3092,6 @@ time {
   }
   .gk__layout {
     grid-row: 1/-1;
-    position: relative;
     height: 100%;
   }
   .gk__preview {
@@ -3111,6 +3124,9 @@ time {
   }
   .gk__preview .gk__price {
     font-size: 1.6em;
+  }
+  .gk__preview .gk__price-meter {
+    color: var(--white);
   }
   .gk__developer {
     display: block;

@@ -2,18 +2,20 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    // column-gap: 20px;
+    display: block;
+
+    & ol {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
 
     & li:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 20px;
     }
 
     & li {
       position: relative;
-      cursor: pointer;
 
       &:hover {
         color: red;
@@ -22,12 +24,32 @@
       &:not(:last-child)::after {
         position: absolute;
         content: '';
-        top: 7px;
-        right: -10px;
-        width: 5px;
-        height: 2px;
-        background-color: var(--gray);
+        top: 6px;
+        right: -13px;
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid var(--gray);
+        border-right: 1px solid var(--gray);
+        rotate: 45deg;
+        // background-color: var(--gray);
       }
     }
+  }
+}
+
+.breadcrumbs--header {
+  position: absolute;
+  bottom: -25px;
+  color: var(--white);
+  font-size: 14px;
+}
+
+.breadcrumbs--location {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+
+  & ol li {
+    cursor: pointer;
   }
 }
