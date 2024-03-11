@@ -469,6 +469,9 @@ input[type='radio'] {
   color: var(--blue);
   border-bottom: 1px dashed var(--blue);
 }
+.button-heart svg {
+  fill: var(--white);
+}
 .skip-links {
   display: block;
   position: absolute;
@@ -3076,7 +3079,6 @@ time {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 12;
   background-image: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0));
 }
 .gk__banner img {
@@ -3084,6 +3086,11 @@ time {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gk__banner .button-heart {
+  position: absolute;
+  top: 15px;
+  right: 0px;
 }
 @media (min-width: 1240px) {
   .gk__header {
