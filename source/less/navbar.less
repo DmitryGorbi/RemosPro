@@ -1,0 +1,39 @@
+.navbar {
+  font-size: 14px;
+
+  & ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
+
+    & li a {
+      display: block;
+      padding: 18px 5px 18px 25px;
+      border: 1px solid var(--gray);
+      border-radius: 5px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto auto 0 auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+      background-color: var(--white);
+      border-radius: 5px;
+      width: max-content;
+
+      & li a {
+        border: none;
+        padding: 18px 10px;
+      }
+    }
+  }
+}

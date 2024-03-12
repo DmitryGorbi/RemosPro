@@ -16,7 +16,7 @@
   </head>
 
   <body class="page__body layout layout--gk">
-    <header class="page-header wrapper-content">
+    <header class="page-header page-header--gk wrapper-content">
       <div class="page-header__wrapper">
         <nav class="navigation layout__navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
@@ -404,8 +404,8 @@
         <nav class="user-actions">
           <ul>
             <li class="user-actions__item">
-              <a class="user-actions__like" href="#" aria-describedby="favorite">
-                <svg class="user-actions__icon user-actions__icon-heart" width="20px" height="18px" aria-hidden="true">
+              <a class="button-circle button-circle--header" href="#" aria-describedby="favorite">
+                <svg width="20px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
                 </svg>
                 <span class="label-popup">Избранное</span>
@@ -414,7 +414,7 @@
             </li>
             <li class="user-actions__item">
               <a class="user-actions__add" href="#">
-                <svg class="user-actions__icon" width="20px" height="18px" aria-hidden="true">
+                <svg width="20px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
                 </svg>
                 <span class="visually-hidden-mobile">Разместить объявление</span>
@@ -466,6 +466,23 @@
 
     <main id="main" class="page-main page-main--index gk">
       <section class="gk__header">
+        <div class="wrapper-content wrapper-content--gk">
+          <div class="gk__header-controls">
+            <button class="button button-circle button-circle--gk" type="button">
+              <svg width="20" height="18" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+              </svg>
+              <span class="label-popup">Добавить ЖК в избранное</span>
+            </button>
+            <button class="button button-gallery" type="button">
+              <span>Галерея комплекса</span>
+              <span class="visually-hidden">Альбом фотографий ЖК</span>
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#images"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="gk__layout wrapper-content">
           <div class="gk__preview">
             <div class="gk__preview-logo">
@@ -475,7 +492,7 @@
             <address>г. Калининград. Между улицами Арсенальная, Пехотная и 4-ой Большой окружной.</address>
             <p class="gk__preview-message">Сдача 2025 г. Есть сданные корпуса.</p>
             <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
-            <p class="gk__price-meter">от 110 000 до 140 000 ₽/м²</p>
+            <p class="gk__price-meter">от <data value="110000">110 000 </data>до <data value="140000">140 000</data> ₽/м²</p>
           </div>
           <section class="gk__developer">
             <h3>Застройщик Ойкумена</h3>
@@ -501,11 +518,6 @@
         </div>
         <div class="gk__banner">
           <img src="img/bldg/sirenevy__bulvar/1-big.jpg" alt="" />
-          <button class="button button-heart" type="button">
-            <svg width="22" height="18" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-            </svg>
-          </button>
         </div>
       </section>
 

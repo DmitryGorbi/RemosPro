@@ -1,0 +1,98 @@
+.button-circle {
+  position: relative;
+  display: block;
+  padding: 13px;
+  border-radius: 50%;
+  background-color: var(--extra-light-gray);
+
+  & svg {
+    position: relative;
+    top: 2px;
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      top: 1;
+    }
+  }
+
+  &:hover {
+    background-color: var(--light-blue);
+  }
+
+  &:active {
+    background-color: var(--blue);
+    color: var(--white) !important;
+  }
+
+  &:active svg {
+    fill: var(--white);
+  }
+
+  @media (max-width: 340px) {
+    &--header {
+      display: none;
+    }
+  }
+
+  @media (min-width: @small-tablet-width) {
+    padding: 11px;
+    background-color: var(--extra-light-gray);
+  }
+}
+
+.button-circle--gk {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  & svg {
+    fill: var(--white);
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    & svg {
+      fill: var(--black);
+    }
+  }
+}
+
+.button-gallery {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+
+  & span:first-child {
+    display: none;
+  }
+
+  & svg {
+    position: relative;
+    top: 2px;
+    fill: var(--white);
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    & svg {
+      fill: var(--black);
+    }
+  }
+
+  @media (min-width: @small-tablet-width) {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+    width: max-content;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--white);
+
+    & span:first-child {
+      display: block;
+    }
+  }
+}

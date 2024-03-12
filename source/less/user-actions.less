@@ -8,7 +8,6 @@
   }
 }
 
-.user-actions__like,
 .user-actions__add {
   position: relative;
   display: block;
@@ -17,7 +16,7 @@
   background-color: var(--extra-light-gray);
 
   &:hover {
-    outline: 2px solid var(--blue);
+    // outline: 2px solid var(--blue);
     background-color: var(--light-blue);
   }
 
@@ -36,16 +35,6 @@
   }
 }
 
-.user-actions__like {
-  @media (max-width: 340px) {
-    display: none;
-  }
-
-  @media (min-width: @small-tablet-width) {
-    border-radius: 50%;
-  }
-}
-
 .user-actions__add {
   @media (min-width: @small-tablet-width) {
     display: flex;
@@ -55,19 +44,11 @@
 }
 
 .user-actions__icon {
-  position: relative;
-  top: 1px;
-  display: block;
+  // position: relative;
+  // top: 1px;
+  // display: block;
 
-  @media (min-width: @tablet-width) {
-    top: 0;
-  }
-}
-
-.user-actions__icon-heart {
-  top: 2px;
-
-  @media (min-width: @tablet-width) {
-    top: 1;
-  }
+  // @media (min-width: @tablet-width) {
+  //   top: 0;
+  // }
 }
