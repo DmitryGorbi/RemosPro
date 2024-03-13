@@ -12,6 +12,16 @@
   }
 }
 
+.gk__header-controls {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
 .gk__layout {
   grid-row: 3/-1;
   grid-column: 1/-1;
@@ -19,13 +29,15 @@
 }
 
 .gk__preview {
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 
   & h1 {
     position: absolute;
     top: -70px;
-    color: var(--white);
     font-size: 23px;
+    color: var(--white);
   }
 
   .gk__preview-logo {
@@ -52,7 +64,6 @@
   }
 
   .gk__price-meter {
-    margin-bottom: 10px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.6);
   }
@@ -63,9 +74,10 @@
 }
 
 .gk__preview-contacts {
-  position: fixed;
-  bottom: 10px;
   display: flex;
+  position: fixed;
+  width: calc(100% - 30px);
+  bottom: 10px;
   justify-content: space-between;
   column-gap: 5px;
 
@@ -85,11 +97,11 @@
   }
 }
 
-.gk__banner {
+.gk__image {
+  position: relative;
   grid-row: 1/3;
   grid-column: 1/-1;
   z-index: -1;
-  position: relative;
 
   &::after {
     content: '';
@@ -98,7 +110,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0));
+    background-image: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0));
   }
 
   & img {
@@ -108,25 +120,15 @@
   }
 }
 
-.gk__header-controls {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-}
-
 @media (min-width: @desktop-width) {
   .gk__header {
-    height: calc(100vh - 62px);
     grid-template-rows: repeat(20, 5%);
+    height: calc(100vh - 61px);
   }
 
   .gk__header-controls {
-    justify-content: flex-end;
     top: 40px;
+    justify-content: flex-end;
     column-gap: 15px;
   }
 
@@ -138,21 +140,24 @@
   .gk__preview {
     position: absolute;
     bottom: 100px;
+    margin-bottom: 0;
     color: var(--white);
-
-    & .gk__preview-logo {
-      display: block;
-      padding: 5px;
-      width: 130px;
-      background-color: var(--white);
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
 
     & h1 {
       position: static;
       font-size: 2.5em;
       font-weight: 700;
+    }
+
+    & .gk__preview-logo {
+      display: block;
+      order: -1;
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 130px;
+      background-color: var(--white);
+      border-radius: 5px;
+
     }
 
     & address {
@@ -163,11 +168,12 @@
 
     .gk__preview-message {
       position: static;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-size: 1.4em;
     }
 
     .gk__price {
+      margin-top: 0;
       font-size: 1.6em;
     }
 
@@ -200,10 +206,11 @@
   }
 
   .gk__preview-contacts {
-    column-gap: 10px;
     position: absolute;
     bottom: 170px;
     right: 0;
+    column-gap: 10px;
+    width: max-content;
 
     & .button {
       padding: 10px;
@@ -218,7 +225,7 @@
     }
   }
 
-  .gk__banner {
+  .gk__image {
     grid-row: 1/-1;
 
     & img {
@@ -229,7 +236,7 @@
 
   @media (min-height: 1000px) {
     .gk__preview {
-      bottom: 150px;
+      bottom: 155px;
 
       & address {
         margin-bottom: 20px;
@@ -241,7 +248,11 @@
     }
 
     .gk__preview-contacts {
-      bottom: 200px;
+      bottom: 210px;
+    }
+
+    .gk__image::after {
+      background-image: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0));
     }
   }
 }

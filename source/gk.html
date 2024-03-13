@@ -27,8 +27,8 @@
               <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
             </svg>
           </a>
-          <ul id="nav" class="nav">
-            <li class="nav__item">
+          <ul id="nav" class="nav nav--gk">
+            <li class="nav__item nav__item--gk">
               <a class="nav__link" href="#">
                 <span>Продажа</span>
               </a>
@@ -38,7 +38,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-sale" class="submenu submenu--links">
+              <div id="submenu-sale" class="submenu submenu--gk submenu--links">
                 <p class="submenu__title">Жилая недвижимость</p>
                 <ul class="submenu__list submenu__list--links">
                   <li>
@@ -108,7 +108,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-rent" class="submenu submenu--links">
+              <div id="submenu-rent" class="submenu submenu--gk submenu--links">
                 <p class="submenu__title">Жилая недвижимость</p>
                 <ul class="submenu__list submenu__list--links">
                   <li>
@@ -175,7 +175,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-new-bldg" class="submenu submenu--bldg">
+              <div id="submenu-new-bldg" class="submenu submenu--gk submenu--bldg">
                 <p class="submenu__title">Строящиеся ЖК в Кабардино-Балкарии</p>
                 <ul class="submenu__list submenu__list--bldg">
                   <li class="bldg-nav">
@@ -281,7 +281,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="professionals" class="submenu submenu--expert">
+              <div id="professionals" class="submenu submenu--gk submenu--expert">
                 <p class="submenu__title">Риэлторы</p>
                 <ul class="submenu__list submenu__list--expert">
                   <li class="">
@@ -378,7 +378,7 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-mortgage" class="submenu submenu--links">
+              <div id="submenu-mortgage" class="submenu submenu--gk submenu--links">
                 <p class="submenu__title">Ипотечные сервисы</p>
                 <ul class="submenu__list submenu__list--links">
                   <li>
@@ -465,7 +465,7 @@
     </header>
 
     <main id="main" class="page-main page-main--index gk">
-      <section class="gk__header">
+      <header class="gk__header">
         <div class="wrapper-content wrapper-content--gk">
           <div class="gk__header-controls">
             <button class="button button-circle button-circle--gk" type="button">
@@ -484,24 +484,24 @@
           </div>
         </div>
         <div class="gk__layout wrapper-content">
-          <div class="gk__preview">
-            <div class="gk__preview-logo">
-              <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="" />
-            </div>
+          <section class="gk__preview">
             <h1>ЖК &#171;Сиреневый бульвар&#187;</h1>
+            <div class="gk__preview-logo">
+              <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="Логотип жилого комплекса Сиреневый бульвар в г. Калининград" />
+            </div>
             <address>г. Калининград. Между улицами Арсенальная, Пехотная и 4-ой Большой окружной.</address>
             <p class="gk__preview-message">Сдача 2025 г. Есть сданные корпуса.</p>
             <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
             <p class="gk__price-meter">от <data value="110000">110 000 </data>до <data value="140000">140 000</data> ₽/м²</p>
-          </div>
+          </section>
           <section class="gk__developer">
             <h3>Застройщик Ойкумена</h3>
-            <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="100" height="100" alt="Логотип застройщика Олимп" />
+            <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="70" height="auto" alt="Логотип застройщика Ойкумена" />
           </section>
           <section class="gk__preview-contacts">
             <h3 class="visually-hidden">Связаться с застройщиком</h3>
             <button class="button button-main" type="button">Контакты <span>застройщика</span></button>
-            <button class="button button-main button-main--developer" type="button">Перезвоните <span>мне</span></button>
+            <button class="button button-main" type="button">Перезвоните <span>мне</span></button>
           </section>
           <section class="navbar">
             <ul>
@@ -516,10 +516,14 @@
             </ul>
           </section>
         </div>
-        <div class="gk__banner">
-          <img src="img/bldg/sirenevy__bulvar/1-big.jpg" alt="" />
+        <div class="gk__image">
+          <picture>
+            <source srcset="img/bldg/sirenevy__bulvar/front__large.webp" media="(min-width: 1240px)">
+            <source srcset="img/bldg/sirenevy__bulvar/front__medium.webp" media="(min-width: 768px)">
+            <img src="img/bldg/sirenevy__bulvar/front__small.webp" width="767" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
+          </picture>
         </div>
-      </section>
+      </header>
 
       <section>
         <h2>Генплан</h2>
@@ -815,6 +819,34 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="modal modal--gk">
+      <h2 class="caption">Контакты застройщика</h2>
+      <button class="button modal__button-close" type="button">
+        <span class="visually-hidden">Закрыть окно с контактами</span>
+      </button>
+      <section class="developer-contact">
+        <div>
+          <h3><span>Застройщик</span> Ойкумена</h3>
+          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента">
+        </div>
+        <p><a href="tel:+79067418512">+7 401 265 83 18</a></p>
+      </section>
+    </section>
+    <section class="modal modal--gk modal--show">
+      <h2 class="caption">Заказ звонка от застройщика</h2>
+      <button class="button modal__button-close" type="button">
+        <span class="visually-hidden">Закрыть окно с формой заказа звонка</span>
+      </button>
+      <section class="developer-contact">
+        <div>
+          <h3><span>Застройщик</span> Ойкумена</h3>
+          <form action="">
+            <input class="input input--field input--modal" type="tel" name="phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" inputmode="tel" minlength="12" maxlength="13" required>
+          </form>
+          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента">
+        </div>
+      </section>
     </section>
     <script src="js/header.js"></script>
     <script src="js/header.js"></script>

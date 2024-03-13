@@ -15,6 +15,16 @@
   border-radius: 50%;
   background-color: var(--extra-light-gray);
 
+  & svg {
+    position: relative;
+    top: 1px;
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+    }
+  }
+
   &:hover {
     // outline: 2px solid var(--blue);
     background-color: var(--light-blue);
@@ -31,24 +41,9 @@
 
   @media (min-width: @small-tablet-width) {
     padding: 11px;
-    background-color: var(--extra-light-gray);
-  }
-}
-
-.user-actions__add {
-  @media (min-width: @small-tablet-width) {
     display: flex;
     column-gap: 2px;
     border-radius: 5px;
+    background-color: var(--extra-light-gray);
   }
-}
-
-.user-actions__icon {
-  // position: relative;
-  // top: 1px;
-  // display: block;
-
-  // @media (min-width: @tablet-width) {
-  //   top: 0;
-  // }
 }
