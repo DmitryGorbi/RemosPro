@@ -494,8 +494,8 @@
             <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
             <p class="gk__price-meter">от <data value="110000">110 000 </data>до <data value="140000">140 000</data> ₽/м²</p>
           </section>
-          <section class="gk__developer">
-            <h3>Застройщик Ойкумена</h3>
+          <section class="developer developer--gk">
+            <h3><span>Застройщик</span> Ойкумена</h3>
             <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="70" height="auto" alt="Логотип застройщика Ойкумена" />
           </section>
           <section class="gk__preview-contacts">
@@ -518,8 +518,8 @@
         </div>
         <div class="gk__image">
           <picture>
-            <source srcset="img/bldg/sirenevy__bulvar/front__large.webp" media="(min-width: 1240px)">
-            <source srcset="img/bldg/sirenevy__bulvar/front__medium.webp" media="(min-width: 768px)">
+            <source srcset="img/bldg/sirenevy__bulvar/front__large.webp" media="(min-width: 1240px)" />
+            <source srcset="img/bldg/sirenevy__bulvar/front__medium.webp" media="(min-width: 768px)" />
             <img src="img/bldg/sirenevy__bulvar/front__small.webp" width="767" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
           </picture>
         </div>
@@ -825,26 +825,49 @@
       <button class="button modal__button-close" type="button">
         <span class="visually-hidden">Закрыть окно с контактами</span>
       </button>
-      <section class="developer-contact">
-        <div>
+      <section>
+        <div class="developer developer--modal">
           <h3><span>Застройщик</span> Ойкумена</h3>
-          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента">
+          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
         </div>
         <p><a href="tel:+79067418512">+7 401 265 83 18</a></p>
       </section>
     </section>
-    <section class="modal modal--gk modal--show">
-      <h2 class="caption">Заказ звонка от застройщика</h2>
+    <section class="modal modal--callBack modal--show">
+      <h2 class="caption">Звонок от застройщика</h2>
       <button class="button modal__button-close" type="button">
         <span class="visually-hidden">Закрыть окно с формой заказа звонка</span>
       </button>
-      <section class="developer-contact">
-        <div>
+      <form action="">
+        <div class="form-wrapper">
+          <label for="phone">Номер телефона:</label>
+          <input
+            id="phone"
+            class="input input--field input--modal"
+            type="tel"
+            name="phone"
+            pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+            inputmode="tel"
+            minlength="12"
+            maxlength="13"
+            required
+          />
+        </div>
+        <div class="form-wrapper">
+          <label for="timeInput">Время звонка:</label>
+          <input class="input input--field input--time" type="text" list="timeList" id="timeInput" name="timeInput" pattern="([01]?[0-9]|2[0-3])" required />
+        </div>
+        <button class="button button-main" type="button">Перезвоните мне</button>
+        <p>Вам перезвонят менеджеры компании в течении дня.</p>
+        <label for="">
+          <input type="checkbox" />
+          Я даю согласие на обработку моих персональных данных
+        </label>
+      </form>
+      <section>
+        <div class="developer developer--modal">
           <h3><span>Застройщик</span> Ойкумена</h3>
-          <form action="">
-            <input class="input input--field input--modal" type="tel" name="phone" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" inputmode="tel" minlength="12" maxlength="13" required>
-          </form>
-          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента">
+          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
         </div>
       </section>
     </section>
