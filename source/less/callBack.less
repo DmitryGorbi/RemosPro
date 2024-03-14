@@ -1,0 +1,66 @@
+.callBack {
+  width: 90%;
+  background-color: var(--white);
+
+  & .callBack__form {
+    margin-bottom: 10px;
+
+    & p {
+      color: #737a8e;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 600px;
+  }
+}
+
+& .callBack__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    & .callBack__form-control {
+      display: flex;
+      flex-direction: column;
+      row-gap: 7px;
+    }
+
+    & button {
+      margin-bottom: 15px;
+    }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    margin-bottom: 15px;
+
+    & label {
+      font-size: 14px;
+    }
+
+    & button {
+      margin-top: auto;
+      margin-bottom: 0;
+      height: 30px;
+    }
+
+    & .input {
+      height: 30px;
+    }
+
+    & .callBack__form-control {
+      row-gap: 5px;
+    }
+  }
+}
+
+.callBack__form-agree {
+  margin-left: 5px;
+
+  & a {
+    border-bottom: 1px dashed var(--blue);
+  }
+}

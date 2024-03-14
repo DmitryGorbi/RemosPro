@@ -833,35 +833,37 @@
         <p><a href="tel:+79067418512">+7 401 265 83 18</a></p>
       </section>
     </section>
-    <section class="modal modal--callBack modal--show">
+    <section class="modal callBack">
       <h2 class="caption">Звонок от застройщика</h2>
       <button class="button modal__button-close" type="button">
         <span class="visually-hidden">Закрыть окно с формой заказа звонка</span>
       </button>
-      <form action="">
-        <div class="form-wrapper">
-          <label for="phone">Номер телефона:</label>
-          <input
-            id="phone"
-            class="input input--field input--modal"
-            type="tel"
-            name="phone"
-            pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-            inputmode="tel"
-            minlength="12"
-            maxlength="13"
-            required
-          />
+      <form class="callBack__form" action="">
+        <div class="callBack__form-wrapper">
+          <div class="callBack__form-control">
+            <label for="phone">Номер телефона:</label>
+            <input
+              id="phone"
+              class="input input--field input--modal"
+              type="tel"
+              name="phone"
+              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              inputmode="tel"
+              minlength="12"
+              maxlength="13"
+              required
+            />
+          </div>
+          <div class="callBack__form-control">
+            <label for="timeInput">Время звонка:</label>
+            <input class="input input--field input--time" type="text" list="timeList" id="timeInput" name="timeInput" pattern="([01]?[0-9]|2[0-3])" placeholder="12:00" required />
+          </div>
+          <button class="button button-main" type="button">Перезвоните мне</button>
         </div>
-        <div class="form-wrapper">
-          <label for="timeInput">Время звонка:</label>
-          <input class="input input--field input--time" type="text" list="timeList" id="timeInput" name="timeInput" pattern="([01]?[0-9]|2[0-3])" required />
-        </div>
-        <button class="button button-main" type="button">Перезвоните мне</button>
         <p>Вам перезвонят менеджеры компании в течении дня.</p>
-        <label for="">
-          <input type="checkbox" />
-          Я даю согласие на обработку моих персональных данных
+        <input id="agree" type="checkbox" checked required/>
+        <label class="callBack__form-agree" for="agree">
+          Я даю согласие на обработку моих <a href="">персональных данных</a>.
         </label>
       </form>
       <section>
@@ -870,6 +872,24 @@
           <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
         </div>
       </section>
+    </section>
+    <section class="modal survey">
+      <div class="survey__layout">
+        <h2 class="caption">Спросите у застройщика</h2>
+        <button class="button modal__button-close" type="button">
+          <span class="visually-hidden">Закрыть окно с формой заказа звонка</span>
+        </button>
+        <ul>
+          <li>Какие есть варианты отделки?</li>
+          <li>Когда сдаётся дом?</li>
+          <li>Есть ли рассрочка?</li>
+          <li>С какими банками работаете?</li>
+          <li>Есть ли акции и скидки?</li>
+        </ul>
+        <div class="survey__img"><img src="img/decor/calling-girl.svg" alt=""></div>
+      </div>
+      <button class="button button-main" type="button">Позвонить</button>
+      <p class="survey__developerName">Застройщик Ойкумена</p>
     </section>
     <script src="js/header.js"></script>
     <script src="js/header.js"></script>
