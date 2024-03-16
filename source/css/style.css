@@ -2385,6 +2385,66 @@ time {
 .callBack__form-agree a {
   border-bottom: 1px dashed var(--blue);
 }
+.survey {
+  padding-bottom: 25px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.survey ul {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  font-size: 15px;
+}
+.survey ul li {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: #f2f5f7;
+}
+.survey button {
+  margin-bottom: 5px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .survey {
+    width: 650px;
+  }
+  .survey button {
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 10px;
+  }
+}
+.survey__layout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  margin-bottom: 20px;
+}
+.survey__layout .survey__img {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .survey__layout {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    margin-bottom: 25px;
+  }
+  .survey__layout .survey__img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    position: relative;
+    top: 25px;
+    min-width: 127px;
+  }
+}
+.survey__developerName {
+  font-size: 13px;
+}
 .main-search__wrapper {
   padding: 0 10px;
 }
@@ -3202,6 +3262,9 @@ time {
   margin-bottom: 5px;
   font-size: 13px;
 }
+.gk .caption-index {
+  margin-bottom: 15px;
+}
 .gk__header {
   position: relative;
   display: grid;
@@ -3240,9 +3303,6 @@ time {
   color: var(--white);
 }
 .gk__preview .gk__preview-logo {
-  display: none;
-}
-.gk__preview address {
   display: none;
 }
 .gk__preview .gk__preview-message {
@@ -3332,6 +3392,7 @@ time {
   }
   .gk__preview h1 {
     position: static;
+    margin-bottom: 10px;
     font-size: 2.5em;
     font-weight: 700;
   }
@@ -3343,11 +3404,6 @@ time {
     width: 130px;
     background-color: var(--white);
     border-radius: 5px;
-  }
-  .gk__preview address {
-    display: block;
-    margin-bottom: 10px;
-    font-style: normal;
   }
   .gk__preview .gk__preview-message {
     position: static;
@@ -3392,7 +3448,7 @@ time {
   .gk__preview {
     bottom: 155px;
   }
-  .gk__preview address {
+  .gk__preview h1 {
     margin-bottom: 20px;
   }
   .gk__preview .gk__preview-message {
@@ -3449,65 +3505,125 @@ time {
     padding: 14px 10px;
   }
 }
-.survey {
-  padding-bottom: 25px;
-  background-color: var(--white);
+.gkAddress address {
+  margin-bottom: 10px;
+}
+.gkAddress p {
+  margin-bottom: 5px;
+}
+.gkAddress a {
+  display: block;
+  height: 100px;
+}
+.gkAddress a img {
+  height: 100%;
   border-radius: 5px;
 }
-.survey ul {
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  row-gap: 10px;
-  font-size: 15px;
-}
-.survey ul li {
-  padding: 6px 12px;
-  border-radius: 10px;
-  background-color: #f2f5f7;
-}
-.survey button {
-  margin-bottom: 5px;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .survey {
-    width: 650px;
+@media (min-width: 1240px) {
+  .gkAddress {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: repeat(3, min-content);
   }
-  .survey button {
-    width: -moz-max-content;
-    width: max-content;
-    margin-bottom: 10px;
+  .gkAddress p {
+    grid-column: 1/2;
+  }
+  .gkAddress a {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    height: 100px;
+  }
+  .gkAddress a img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
   }
 }
-.survey__layout {
+.gkDescription dl {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 20px;
   margin-bottom: 20px;
 }
-.survey__layout .survey__img {
+.gkDescription dl div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  padding-left: 56px;
+}
+.gkDescription dl dt {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  color: rgba(73, 68, 96, 0.7);
+}
+.gkDescription dl dd {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 1240px) {
+  .gkDescription div {
+    width: 25%;
+  }
+}
+.gkDescription__item h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.gkDescription__block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+.gkDescription__block summary::marker {
+  color: green;
+}
+.gkDescription__block dl {
+  margin-top: 20px;
+}
+.genPlan {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
-@media (min-width: 768px) {
-  .survey__layout {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    margin-bottom: 25px;
+@media (min-width: 1600px) {
+  .genPlan {
+    width: 100%;
+    max-width: 1600px;
   }
-  .survey__layout .survey__img {
-    grid-column: 2/3;
-    grid-row: 1/3;
-    position: relative;
-    top: 25px;
-    min-width: 127px;
+  .genPlan h2 {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-.survey__developerName {
-  font-size: 13px;
+.genPlan__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.genPlan__container img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+.genPlan__container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.genPlan__container svg path:hover {
+  fill: green;
+  transition: opacity 0.3 ease;
 }
 .stats {
   padding: 30px 0;
