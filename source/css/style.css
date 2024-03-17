@@ -3549,10 +3549,21 @@ time {
   margin-bottom: 20px;
 }
 .gkDescription dl div {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 3px;
   padding-left: 56px;
+}
+.gkDescription dl div::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url('img/ic');
+  background-repeat: no-repeat;
 }
 .gkDescription dl dt {
   width: -moz-max-content;
@@ -3622,8 +3633,50 @@ time {
   height: 100%;
 }
 .genPlan__container svg path:hover {
-  fill: green;
+  fill: rgba(0, 0, 0, 0.4);
   transition: opacity 0.3 ease;
+}
+.mapTag {
+  position: absolute;
+  left: 34%;
+  top: 33%;
+  cursor: pointer;
+}
+.mapTag__container {
+  position: relative;
+}
+.mapTag__point {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background-color: var(--blue);
+}
+.mapTag__banner {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 2px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--white);
+  border-radius: 2px;
+}
+.mapTag__offer {
+  display: none;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.genPlan__container svg:hover .mapTag__offer {
+  display: block;
 }
 .stats {
   padding: 30px 0;
