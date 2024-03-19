@@ -1,30 +1,14 @@
 'use strict';
 
 let svgMap = document.querySelector('.genPlan__buildingsLayer');
-let ableLayer = svgMap.querySelectorAll('.able');
+let ableLayers = svgMap.querySelectorAll('.able');
 let mapTagPopups = document.querySelectorAll('.mapTag__offer');
-console.log(svgMap);
 
-console.log(mapTagPopups);
-
-svgMap.addEventListener('mouseover', (evt) => {
-  let target = evt.target;
-
-  if (target.classList.contains('able')) {
-    item.style.display = 'block';
-    console.log('sms');
-  } else {
-    item.style.display = 'none';
-  }
-});
-
-// svgMap.addEventListener('mouseover', (evt) => {
-//   let target = evt.target;
-//   mapTagPopups.forEach((item) => {
-//     if (target.classList.contains('able')) {
-//       item.style.display = 'block';
-//     } else {
-//       item.style.display = 'none';
-//     }
-//   });
-// });
+ableLayers.forEach((item, index) => {
+  item.addEventListener('mouseover', () => {
+    mapTagPopups[index].classList.add('mapTag__offer--show')
+  })
+  item.addEventListener('mouseout', () => {
+    mapTagPopups[index].classList.remove('mapTag__offer--show')
+  })
+})
