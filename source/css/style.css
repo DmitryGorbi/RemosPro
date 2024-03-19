@@ -3601,6 +3601,7 @@ time {
 }
 .gkDescription .gkDescription__preview {
   margin-bottom: 30px;
+  line-height: 22px;
 }
 .gkDescription h3 {
   margin-bottom: 15px;
@@ -3616,6 +3617,9 @@ time {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 30px;
+  }
+  .gkDescription .gkDescription__preview {
+    width: 80%;
   }
   .gkDescription h3 {
     margin-bottom: 20px;
