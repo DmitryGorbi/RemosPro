@@ -130,16 +130,29 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: start;
   column-gap: 20px;
   row-gap: 20px;
+
+  & details {
+    outline: none;
+  }
 
   & summary::marker {
     color: var(--blue);
   }
 
   & summary {
-    // width: 100%;
-    // padding: 10px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: red;
+    }
+
+    &:focus-visible {
+      color: red;
+    }
   }
 
   & dl {

@@ -1,0 +1,52 @@
+.inputRange {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & .inputRange__wrapper {
+    position: relative;
+    border: 1px solid var(--gray);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid var(--gray);
+
+    & input {
+      width: calc(100% - 34px);
+      border: none;
+    }
+
+    & span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      padding: 0 12px;
+    }
+  }
+}
+
+.inputRange__control {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  left: 80%;
+  width: 29px;
+  height: 29px;
+  box-shadow: 0 0 10px var(--light-gray);
+  border: 1px solid var(--light-gray);
+  background-color: var(--white);
+  border-radius: 50%;
+
+  @media (min-width: @desktop-width) {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.inputRange__scale {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background-color: var(--blue);
+}

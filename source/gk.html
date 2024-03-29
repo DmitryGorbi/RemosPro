@@ -11,10 +11,11 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="/source/img/favicons/safari-pinned-tab.svg" color="#20a052" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду</title>
+    <title>ЖК Сиреневый бульвар</title>
     <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
   </head>
 
+<!-- Нужно все цифры и даты обернуть в семантические теги -->
   <body class="page__body layout layout--gk">
     <header class="page-header page-header--gk wrapper-content">
       <div class="page-header__wrapper">
@@ -494,9 +495,9 @@
             <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
             <p class="gk__price-meter">от <data value="110000">110 000 </data>до <data value="140000">140 000</data> ₽/м²</p>
           </section>
-          <section class="developer developer--gk">
+          <section class="developer developer--header">
             <h3><span>Застройщик</span> Ойкумена</h3>
-            <img src="img/bldg/sirenevy__bulvar/logo__developer.jpg" width="70" height="auto" alt="Логотип застройщика Ойкумена" />
+            <img src="img/bldg/sirenevy__bulvar/dev__logo/logo__developer-1.webp" width="70" height="auto" alt="Логотип застройщика Ойкумена" />
           </section>
           <section class="gk__preview-contacts">
             <h3 class="visually-hidden">Связаться с застройщиком</h3>
@@ -526,9 +527,11 @@
         </div>
       </header>
       <section class="gkAddress wrapper-gk">
-        <h2 class="caption-index caption-index--gk">Расположение</h2>
-        <address>г. Калининград, ул. Ключевая.</address>
-        <p>Между улицами Арсенальная, Пехотная и 4-ой Большой окружной</p>
+        <div class="gkAddress__wrapper">
+          <h2 class="caption-index caption-index--gk">Расположение</h2>
+          <address>г. Калининград, ул. Ключевая.</address>
+          <p>Между улицами Арсенальная, Пехотная и 4-ой Большой окружной</p>
+        </div>
         <a href=""
           ><img
             src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Ae1a72c2121381af9aea085aa0e5a21b733d269b2de68225a16eff4a64daebf64&amp;width=300&amp;height=100&amp;lang=ru_RU"
@@ -877,50 +880,521 @@
       </section>
       <section class="gk-offers wrapper-gk">
         <h2 class="caption-index caption-index--gk"><span>93 квартиры от застройщика</span> в ЖК «Сиреневый бульвар»</h2>
-        <div class="gk-offers__filter">
-          <button class="gk-offers__button" type="button">
-            <span>Все корпуса</span>
-          </button>
-          <button class="gk-offers__button" type="button">
-            <span>Дом 1.1</span>
-            <span>сдача в 1-кв. 2024</span>
-          </button>
-          <button class="gk-offers__button" type="button">
-            <span>Дом 1.1</span>
-            <span>сдача в 1-кв. 2024</span>
-          </button>
-          <button class="gk-offers__button" type="button">
-            <span>Дом 1.1</span>
-            <span>сдача в 1-кв. 2024</span>
-          </button>
+        <ul class="gk-filter">
+          <li>
+            <button class="button button--selected" type="button">
+              <span>Все корпуса</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+              <span>сдача в 1-кв. 2024</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+              <span>сдача в 1-кв. 2024</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+              <span>сдача в 1-кв. 2024</span>
+            </button>
+          </li>
+        </ul>
+        <section class="gk-offers__item">
+          <div class="gk-offers__item-wrapper">
+            <h3>1-комнатные</h3>
+            <p>от 39 м²</p>
+            <p>от 4,6–7 млн ₽</p>
+          </div>
+          <div class="gk-offers__button-wrapper">
+            <button type="button" class="button">125 <span class="textShort">предл.</span><span class="textLong">предложений</span></button>
+          </div>
+        </section>
+        <table class="gk-table visually-hidden">
+          <caption class="visually-hidden">Однокомнатные квартиры, цены, метраж, количество предложений</caption>
+          <thead>
+            <tr class="visually-hidden">
+              <th>Количество комнат</th>
+              <th>Корпус ЖК</th>
+              <th>Сдача корпуса</th>
+              <th>Метраж</th>
+              <th>Цена</th>
+              <th>Планировка</th>
+            </tr>
+          </thead>
+          <tbody class="visually-hidden">
+            <tr class="">
+              <td><a href="">1-комнатная</a></td>
+              <td>Дом 1.1</td>
+              <td>1 кв. 2024</td>
+              <td>39 м²</td>
+              <td>6,4 млн ₽</td>
+              <td><img src="img/bldg/sirenevy__bulvar/plan.webp" alt=""></td>
+            </tr>
+            <tr class="">
+              <td><a href="">1-комнатная</a></td>
+              <td>Дом 1.1</td>
+              <td>1 кв. 2024</td>
+              <td>39 м²</td>
+              <td>6,4 млн ₽</td>
+              <td><img src="img/bldg/sirenevy__bulvar/plan.webp" alt=""></td>
+            </tr>
+            <tr class="">
+              <td><a href="">1-комнатная</a></td>
+              <td>Дом 1.1</td>
+              <td>1 кв. 2024</td>
+              <td>39 м²</td>
+              <td>6,4 млн ₽</td>
+              <td><img src="img/bldg/sirenevy__bulvar/plan.webp" alt=""></td>
+            </tr>
+            <tr class="">
+              <td><a href="">1-комнатная</a></td>
+              <td>Дом 1.1</td>
+              <td>1 кв. 2024</td>
+              <td>139 м²</td>
+              <td>116,4 млн ₽</td>
+              <td><img src="img/bldg/sirenevy__bulvar/plan.webp" alt=""></td>
+            </tr>
+            <tr class="">
+              <td><a href="">1-комнатная</a></td>
+              <td>Дом 1.1</td>
+              <td>1 кв. 2024</td>
+              <td>39 м²</td>
+              <td>6,4 млн ₽</td>
+              <td><img src="img/bldg/sirenevy__bulvar/plan.webp" alt=""></td>
+            </tr>
+          </tbody>
+          <tfoot class="visually-hidden">
+            <tr>
+              <td colspan="6"><a href="">Смотреть все предложения</a></td>
+            </tr>
+          </tfoot>
+        </table>
+        <section class="gk-offers__item">
+          <div class="gk-offers__item-wrapper">
+            <h3>2-комнатные</h3>
+            <p>от 62 м²</p>
+            <p>от 126,8–110,6 млн ₽</p>
+          </div>
+          <div class="gk-offers__button-wrapper">
+            <button type="button" class="button">5 <span class="textShort">предл.</span><span class="textLong">предложений</span></button>
+          </div>
+        </section>
+        <section class="gk-offers__item">
+          <div class="gk-offers__item-wrapper">
+            <h3>3-комнатные</h3>
+            <p>от 1178 м²</p>
+            <p>от 118,5–113,7 млн ₽</p>
+          </div>
+          <div class="gk-offers__button-wrapper">
+            <button type="button" class="button">2 225 <span class="textShort">предл.</span><span class="textLong">предложений</span></button>
+          </div>
+        </section>
+        <div class="gk-offers__summary">
+          <p>Всего <a href="">54 квартиры </a> в этом корпусе</p>
+          <p><a href="">Смотреть планировки</a></p>
         </div>
-        <div class="table__wrapper"></div>
+      </section>
+      <section class="gk-plans wrapper-gk">
+        <h2 class="caption-index caption-index--gk">Планировки в ЖК «Сиреневый бульвар»</h2>
+        <ul class="gk-filter gk-filter--rooms">
+          <li>
+            <button class="button button--selected" type="button">
+              <span>Все корпуса</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>Дом 1.1</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="gk-filter gk-filter--rooms">
+          <li>
+            <button class="button button--selected" type="button">
+              <span>Студия</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>1</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>2</span>
+            </button>
+          </li>
+          <li>
+            <button class="button" type="button">
+              <span>3</span>
+            </button>
+          </li>
+        </ul>
+        <div class="gk-plans__wrapper">
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan1.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 2, 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">2 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan2.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan3.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan4.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 2, 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">2 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan5.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan6.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan7.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 2, 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">2 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan8.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+          <article class="plan-offer">
+            <h3>2-комнатная 66,7 м²</h3>
+            <div class="plan-offer__picture">
+              <img src="img/bldg/sirenevy__bulvar/floor__plan/floor__plan9.webp" loading="lazy" alt="">
+            </div>
+            <p>Этаж 4 из 4</p>
+            <p>от 7,5 млн ₽</p>
+            <button type="button" class="button button-main">1 Предложение</button>
+          </article>
+        </div>
       </section>
       <section class="wrapper-gk">
         <h2 class="caption-index caption-index--gk">Акции в ЖК «Сиреневый бульвар»</h2>
       </section>
-      <section class="wrapper-gk">
+      <section class="gk-mortgage wrapper-gk">
         <h2 class="caption-index caption-index--gk">Ипотечные предложения и аккредитованные банки</h2>
-        <ul>
-          <li>Ипотека</li>
-          <li>Рассрочка</li>
-          <li>Акции</li>
-        </ul>
+        <form class="mortgageFilter" action="">
+          <div class="inputRange">
+            <label for="property__value">Стоимость недвижимости</label>
+            <div class="inputRange__wrapper">
+              <input id="property__value" class="input input--field" type="number" value="10000000">
+              <span>₽</span>
+            </div>
+            <div class="inputRange__control"></div>
+            <div class="inputRange__scale"></div>
+          </div>
+          <div class="inputRange">
+            <label for="down__payment">Первоначальный взнос, <span>20%</span></label>
+            <div class="inputRange__wrapper">
+              <input id="down__payment" class="input input--field" type="number" value="2000000">
+              <span>₽</span>
+            </div>
+            <div class="inputRange__control"></div>
+            <div class="inputRange__scale"></div>
+          </div>
+          <div class="inputRange">
+            <label for="mortgage__term">Срок</label>
+            <div class="inputRange__wrapper">
+              <input id="mortgage__term" class="input input--field" type="number" value="15">
+              <span>лет</span>
+            </div>
+            <div class="inputRange__control"></div>
+            <div class="inputRange__scale"></div>
+          </div>
+        </form>
+        <div class="gk-mortgage__wrapper">
+          <section class="gk-mortgage__item">
+            <h3>Семейная ипотека</h3>
+            <div>
+              <img src="img/mortgage/family.png" alt="">
+            </div>
+            <p class="gk-mortgage__item-percent">Ставка от <span>5%</span></p>
+            <p class="gk-mortgage__item-amount">Сумма кредита до <span>8 млн ₽</span></p>
+            <p class="gk-mortgage__item-time">Срок кредита до <span>30 лет</span></p>
+            <p class="gk-mortgage__item-payment">Платёж <span>112 000 ₽/мес</span></p>
+          </section>
+          <section class="gk-mortgage__item">
+            <h3>IT ипотека</h3>
+            <div>
+              <img src="img/mortgage/it.png" alt="">
+            </div>
+            <p class="gk-mortgage__item-percent">Ставка от <span>7%</span></p>
+            <p class="gk-mortgage__item-amount">Сумма кредита до <span>8 млн ₽</span></p>
+            <p class="gk-mortgage__item-time">Срок кредита до <span>30 лет</span></p>
+            <p class="gk-mortgage__item-payment">Платёж 112 000 ₽/мес</p>
+          </section>
+          <section class="gk-mortgage__item">
+            <h3>Ипотека с господдержкой</h3>
+            <div>
+              <img src="img/mortgage/perferential.png" alt="">
+            </div>
+            <p class="gk-mortgage__item-percent">Ставка от <span>6%</span></p>
+            <p class="gk-mortgage__item-amount">Сумма кредита до <span>8 млн ₽</span></p>
+            <p class="gk-mortgage__item-time">Срок кредита до <span>30 лет</span></p>
+            <p class="gk-mortgage__item-payment">Платёж 112 000 ₽/мес</p>
+          </section>
+          <section class="gk-mortgage__item">
+            <h3>Стандартная ипотека</h3>
+            <div>
+              <img src="img/mortgage/perferential.png" alt="">
+            </div>
+            <p class="gk-mortgage__item-percent">Ставка от <span>16%</span></p>
+            <p class="gk-mortgage__item-amount">Сумма кредита до <span>8 млн ₽</span></p>
+            <p class="gk-mortgage__item-time">Срок кредита до <span>30 лет</span></p>
+            <p class="gk-mortgage__item-payment">Платёж 112 000 ₽/мес</p>
+          </section>
+        </div>
+        <div class="gk-mortgage__result">
+          <section class="gk-mortgage__banks">
+            <h3>Банки-кредиторы</h3>
+            <ul>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_16640_6195)">
+                  <path d="M30 24.33C30 27.975 27.975 30 24.33 30H5.67C2.025 30 0 27.975 0 24.33V5.67C0 2.025 2.025 0 5.67 0H24.3375C27.975 0 30 2.025 30 5.67V24.33Z" fill="#FFE600"/>
+                  <path d="M19.29 13.5376V10.6726L20.325 9.63756V12.1201L21.225 13.0201L24.8475 9.39756L25.74 10.2901C25.7325 9.61506 25.5975 7.65756 23.94 6.03005C22.155 4.30505 20.22 5.08505 19.56 5.74505L15.945 9.36005L16.8675 10.2826L15 12.1651L13.1325 10.2976L14.055 9.37506L10.44 5.76005C9.78001 5.10005 7.84501 4.32006 6.06001 6.04506C4.40251 7.67256 4.26751 9.63006 4.26001 10.3051L5.15251 9.41256L8.77501 13.0351L9.67501 12.1351V9.65256L10.71 10.6876V13.5526L12.165 15.0001L4.99501 22.1701L7.83001 24.9976L15 17.8351L22.17 25.0051L25.005 22.1776L17.835 15.0001L19.29 13.5376Z" fill="#2B2D34"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_16640_6195">
+                  <rect width="30" height="30" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_16640_6198)">
+                <path d="M20.625 0H9.375C4.21875 0 0 4.21875 0 9.375V20.625C0 25.7812 4.21875 30 9.375 30H20.625C25.7812 30 30 25.7812 30 20.625V9.375C30 4.21875 25.7812 0 20.625 0Z" fill="#FF5000"/>
+                <path d="M9.28125 11.9062V13.2188H9C8.48438 12.2813 7.5 11.7188 6.375 11.7188C4.54688 11.7188 2.8125 13.4531 2.8125 15.7031C2.8125 17.9531 4.5 19.6406 6.375 19.6406C7.5 19.6406 8.48438 19.0781 9 18.1406H9.28125V19.4531H10.9219V11.9062H9.28125ZM6.84375 18.0937C5.53125 18.0937 4.45313 17.0625 4.45313 15.6563C4.45313 14.2969 5.48438 13.2188 6.84375 13.2188C8.15625 13.2188 9.28125 14.25 9.28125 15.6563C9.28125 17.0625 8.20313 18.0937 6.84375 18.0937Z" fill="white"/>
+                <path d="M17.7656 14.6719H14.9063V13.4531H19.7344V11.9531H13.2656V19.5H17.7656C19.3125 19.5 20.3438 18.4688 20.3438 17.0625C20.3438 15.7031 19.2656 14.6719 17.7656 14.6719ZM17.5781 18H14.9063V16.125H17.5781C18.3281 16.125 18.7031 16.5 18.7031 17.0625C18.7031 17.625 18.3281 18 17.5781 18Z" fill="white"/>
+                <path d="M24.375 15C25.9219 15 27.1875 13.7344 27.1875 12.1875C27.1875 10.6406 25.9219 9.375 24.375 9.375C22.8281 9.375 21.5625 10.6406 21.5625 12.1875C21.5625 13.7344 22.8281 15 24.375 15Z" fill="#00F500"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_16640_6198">
+                <rect width="30" height="30" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1746 8.02469L15.1994 7.98922C15.409 7.68277 15.3215 7.45618 15.181 7.33423L12.9802 5.97884C12.8278 5.87637 12.7273 5.70266 12.7273 5.50409C12.7273 5.19119 12.9143 4.95484 13.34 4.8372C14.697 4.46496 19.4705 4.26967 21.0923 4.26967C21.6552 4.26967 22.6243 4.2675 23.4941 4.29105L23.4563 4.25437C21.0782 2.22469 17.9913 1 14.617 1C7.09596 1 1 7.08789 1 14.599C1 17.9009 2.1777 20.9275 4.13766 23.283C5.84802 20.8272 10.0705 14.7706 10.9964 13.534C12.0628 12.1086 14.4939 8.93732 14.9055 8.39997L14.926 8.37552L15.1746 8.02469Z" fill="#E2001A"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31394 25.3805C8.61208 27.1479 11.4915 28.2 14.6173 28.2C22.1384 28.2 28.2343 22.1121 28.2343 14.601C28.2343 12.3275 27.6768 10.1855 26.6892 8.30263L26.6903 8.30371C27.1592 7.85267 27.6995 7.13836 27.344 6.24385C27.2338 5.97744 26.7044 5.37304 26.5682 5.22632L26.5866 5.27803C26.9183 6.27721 26.2625 6.90302 25.7914 7.32925C25.5332 7.56324 22.0757 10.8188 18.0207 14.3602C14.4466 17.4808 10.4489 20.6564 8.13343 22.3882C4.87585 24.8236 4.24162 25.1775 4.24162 25.1775C4.15626 25.224 4.01256 25.2638 3.90668 25.2638C3.70788 25.2638 3.53501 25.1742 3.42589 25.0329L3.4225 25.0268L3.41486 25.1313C3.76384 25.6957 4.34296 26.3506 4.68007 26.3506C4.78595 26.3506 4.92964 26.3109 5.01608 26.2653C5.01608 26.2653 5.27107 26.1228 6.31373 25.3795" fill="#E2001A"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1932 7.98911C15.4028 7.68385 15.3153 7.45607 15.1748 7.33412L12.9739 5.97999C12.8216 5.87752 12.7211 5.70379 12.7211 5.50412C12.7211 5.19229 12.908 4.95595 13.3337 4.83728C14.6918 4.46501 19.4642 4.27078 21.086 4.27078C21.852 4.27078 23.3679 4.26466 24.3663 4.33103C25.4856 4.40444 26.336 4.63537 26.5466 5.177C26.9605 6.23662 26.2754 6.89049 25.7882 7.33076C25.5299 7.56597 22.0725 10.8214 18.0186 14.3617C14.4433 17.4823 10.4456 20.659 8.1302 22.3908C4.87262 24.8251 4.23946 25.179 4.23946 25.179C4.15303 25.2255 4.00933 25.2653 3.90452 25.2653C3.56633 25.2653 3.30164 25.0074 3.30164 24.6696C3.30164 24.5412 3.34053 24.4216 3.40751 24.3244C3.40751 24.3244 9.82328 15.0954 10.9902 13.5351C12.1571 11.9749 14.9598 8.32449 14.9598 8.32449C14.9598 8.32449 14.9922 8.28258 15.1932 7.98892" fill="white"/>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1H29V15H1V1Z" fill="#E9041E"/>
+                  <path d="M1 15H29V29H1V15Z" fill="black"/>
+                  <path d="M6 14H24V16H6V14Z" fill="white"/>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_16640_6195)">
+                  <path d="M30 24.33C30 27.975 27.975 30 24.33 30H5.67C2.025 30 0 27.975 0 24.33V5.67C0 2.025 2.025 0 5.67 0H24.3375C27.975 0 30 2.025 30 5.67V24.33Z" fill="#FFE600"/>
+                  <path d="M19.29 13.5376V10.6726L20.325 9.63756V12.1201L21.225 13.0201L24.8475 9.39756L25.74 10.2901C25.7325 9.61506 25.5975 7.65756 23.94 6.03005C22.155 4.30505 20.22 5.08505 19.56 5.74505L15.945 9.36005L16.8675 10.2826L15 12.1651L13.1325 10.2976L14.055 9.37506L10.44 5.76005C9.78001 5.10005 7.84501 4.32006 6.06001 6.04506C4.40251 7.67256 4.26751 9.63006 4.26001 10.3051L5.15251 9.41256L8.77501 13.0351L9.67501 12.1351V9.65256L10.71 10.6876V13.5526L12.165 15.0001L4.99501 22.1701L7.83001 24.9976L15 17.8351L22.17 25.0051L25.005 22.1776L17.835 15.0001L19.29 13.5376Z" fill="#2B2D34"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_16640_6195">
+                  <rect width="30" height="30" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_16640_6198)">
+                <path d="M20.625 0H9.375C4.21875 0 0 4.21875 0 9.375V20.625C0 25.7812 4.21875 30 9.375 30H20.625C25.7812 30 30 25.7812 30 20.625V9.375C30 4.21875 25.7812 0 20.625 0Z" fill="#FF5000"/>
+                <path d="M9.28125 11.9062V13.2188H9C8.48438 12.2813 7.5 11.7188 6.375 11.7188C4.54688 11.7188 2.8125 13.4531 2.8125 15.7031C2.8125 17.9531 4.5 19.6406 6.375 19.6406C7.5 19.6406 8.48438 19.0781 9 18.1406H9.28125V19.4531H10.9219V11.9062H9.28125ZM6.84375 18.0937C5.53125 18.0937 4.45313 17.0625 4.45313 15.6563C4.45313 14.2969 5.48438 13.2188 6.84375 13.2188C8.15625 13.2188 9.28125 14.25 9.28125 15.6563C9.28125 17.0625 8.20313 18.0937 6.84375 18.0937Z" fill="white"/>
+                <path d="M17.7656 14.6719H14.9063V13.4531H19.7344V11.9531H13.2656V19.5H17.7656C19.3125 19.5 20.3438 18.4688 20.3438 17.0625C20.3438 15.7031 19.2656 14.6719 17.7656 14.6719ZM17.5781 18H14.9063V16.125H17.5781C18.3281 16.125 18.7031 16.5 18.7031 17.0625C18.7031 17.625 18.3281 18 17.5781 18Z" fill="white"/>
+                <path d="M24.375 15C25.9219 15 27.1875 13.7344 27.1875 12.1875C27.1875 10.6406 25.9219 9.375 24.375 9.375C22.8281 9.375 21.5625 10.6406 21.5625 12.1875C21.5625 13.7344 22.8281 15 24.375 15Z" fill="#00F500"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_16640_6198">
+                <rect width="30" height="30" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1746 8.02469L15.1994 7.98922C15.409 7.68277 15.3215 7.45618 15.181 7.33423L12.9802 5.97884C12.8278 5.87637 12.7273 5.70266 12.7273 5.50409C12.7273 5.19119 12.9143 4.95484 13.34 4.8372C14.697 4.46496 19.4705 4.26967 21.0923 4.26967C21.6552 4.26967 22.6243 4.2675 23.4941 4.29105L23.4563 4.25437C21.0782 2.22469 17.9913 1 14.617 1C7.09596 1 1 7.08789 1 14.599C1 17.9009 2.1777 20.9275 4.13766 23.283C5.84802 20.8272 10.0705 14.7706 10.9964 13.534C12.0628 12.1086 14.4939 8.93732 14.9055 8.39997L14.926 8.37552L15.1746 8.02469Z" fill="#E2001A"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.31394 25.3805C8.61208 27.1479 11.4915 28.2 14.6173 28.2C22.1384 28.2 28.2343 22.1121 28.2343 14.601C28.2343 12.3275 27.6768 10.1855 26.6892 8.30263L26.6903 8.30371C27.1592 7.85267 27.6995 7.13836 27.344 6.24385C27.2338 5.97744 26.7044 5.37304 26.5682 5.22632L26.5866 5.27803C26.9183 6.27721 26.2625 6.90302 25.7914 7.32925C25.5332 7.56324 22.0757 10.8188 18.0207 14.3602C14.4466 17.4808 10.4489 20.6564 8.13343 22.3882C4.87585 24.8236 4.24162 25.1775 4.24162 25.1775C4.15626 25.224 4.01256 25.2638 3.90668 25.2638C3.70788 25.2638 3.53501 25.1742 3.42589 25.0329L3.4225 25.0268L3.41486 25.1313C3.76384 25.6957 4.34296 26.3506 4.68007 26.3506C4.78595 26.3506 4.92964 26.3109 5.01608 26.2653C5.01608 26.2653 5.27107 26.1228 6.31373 25.3795" fill="#E2001A"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1932 7.98911C15.4028 7.68385 15.3153 7.45607 15.1748 7.33412L12.9739 5.97999C12.8216 5.87752 12.7211 5.70379 12.7211 5.50412C12.7211 5.19229 12.908 4.95595 13.3337 4.83728C14.6918 4.46501 19.4642 4.27078 21.086 4.27078C21.852 4.27078 23.3679 4.26466 24.3663 4.33103C25.4856 4.40444 26.336 4.63537 26.5466 5.177C26.9605 6.23662 26.2754 6.89049 25.7882 7.33076C25.5299 7.56597 22.0725 10.8214 18.0186 14.3617C14.4433 17.4823 10.4456 20.659 8.1302 22.3908C4.87262 24.8251 4.23946 25.179 4.23946 25.179C4.15303 25.2255 4.00933 25.2653 3.90452 25.2653C3.56633 25.2653 3.30164 25.0074 3.30164 24.6696C3.30164 24.5412 3.34053 24.4216 3.40751 24.3244C3.40751 24.3244 9.82328 15.0954 10.9902 13.5351C12.1571 11.9749 14.9598 8.32449 14.9598 8.32449C14.9598 8.32449 14.9922 8.28258 15.1932 7.98892" fill="white"/>
+                  </svg>
+              </li>
+              <li>
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1H29V15H1V1Z" fill="#E9041E"/>
+                  <path d="M1 15H29V29H1V15Z" fill="black"/>
+                  <path d="M6 14H24V16H6V14Z" fill="white"/>
+                </svg>
+              </li>
+            </ul>
+          </section>
+          <section class="gk-mortgage__total">
+            <h3 class="visually-hidden">Результаты расчёта импотечного калькулятора</h3>
+            <p>Минимальная ставка 5%</p>
+            <p>платеж: 34 565 ₽/мес</p>
+          </section>
+          <button class="button button-main" type="button">Получить точный расчёт</button>
+        </div>
       </section>
       <section class="wrapper-gk">
         <h2 class="caption-index caption-index--gk">О жилом комплексе «Сиреневый бульвар»</h2>
       </section>
       <section class="wrapper-gk">
-        <h2 class="caption-index caption-index--gk">Инфраструктура</h2>
+        <h2 class="caption-index caption-index--gk">Дом на карте и инфраструктура</h2>
       </section>
       <section class="wrapper-gk">
         <h2 class="caption-index caption-index--gk">Варианты отделки от застройщика</h2>
       </section>
-      <section class="wrapper-gk">
-        <h2 class="caption-index caption-index--gk">О застройщике Ойкумена</h2>
+      <section class="developerAbout wrapper-gk">
+        <h2 class="caption-index caption-index--gk">Участники строительства ЖК «Сиреневый бульвар»</h2>
+        <section class="developer developer--about">
+          <h3><span>Застройщик:</span> ГК Ойкумена</h3>
+          <img src="img/bldg/sirenevy__bulvar/dev__logo/oiku__small.webp" width="" height="auto" alt="Логотип застройщика Ойкумена">
+        </section>
+        <dl>
+          <div>
+            <dt>Год основанния</dt>
+            <dd>1997</dd>
+          </div>
+          <div>
+            <dt>Городов</dt>
+            <dd>10</dd>
+          </div>
+          <div>
+            <dt>Построено</dt>
+            <dd>1 млн м²</dd>
+          </div>
+          <div>
+            <dt>Социальных проектов</dt>
+            <dd>13</dd>
+          </div>
+          <div>
+            <dt>Домов сдано</dt>
+            <dd>37 в 12 ЖК</dd>
+          </div>
+          <div>
+            <dt>Дома строятся</dt>
+            <dd>4 в 3 ЖК</dd>
+          </div>
+          <div>
+            <dt>Домов сдано вовремя</dt>
+            <dd>95%</dd>
+          </div>
+        </dl>
+        <p class="developerAbout__description">
+          <span>
+            Застройщиком комплекса является ООО«ОЛИМП», который входит в Группу Компаний
+            «Ойкумена». Компания «Ойкумена» работает на российском рынке с 1997 года. География проектов компании представлена
+            крупнейшими регионами России, среди которых Москва и Московская область (г. Электросталь), Санкт-Петербург,
+            Калининград, Нижний Новгород и другие.
+          </span>
+          <a href="">Узнать больше о застройщике</a>
+          </p>
       </section>
-      <section class="wrapper-gk">
+      <section class="gk-progress wrapper-gk">
         <h2 class="caption-index caption-index--gk">Ход строительства ЖК «Сиреневый бульвар»</h2>
+        <figure class="gk-progress__imgContainer">
+          <ul>
+            <li>
+              <picture>
+                <source srcset="img/bldg/sirenevy__bulvar/progress/1-large.webp" media="(min-width: 1240px)" />
+                <source srcset="img/bldg/sirenevy__bulvar/progress/1-medium.webp" media="(min-width: 768px)" />
+                <img src="img/bldg/sirenevy__bulvar/progress/1-small.webp" width="360" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" loading="lazy"/>
+              </picture>
+            </li>
+            <li>
+              <picture>
+                <source srcset="img/bldg/sirenevy__bulvar/progress/2-large.webp" media="(min-width: 1240px)" />
+                <source srcset="img/bldg/sirenevy__bulvar/progress/2-medium.webp" media="(min-width: 768px)" />
+                <img src="img/bldg/sirenevy__bulvar/progress/2-small.webp" width="360" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" loading="lazy"/>
+              </picture>
+            </li>
+            <li>
+              <picture>
+                <source srcset="img/bldg/sirenevy__bulvar/progress/3-large.webp" media="(min-width: 1240px)" />
+                <source srcset="img/bldg/sirenevy__bulvar/progress/3-medium.webp" media="(min-width: 768px)" />
+                <img src="img/bldg/sirenevy__bulvar/progress/3-small.webp" width="360" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" loading="lazy"/>
+              </picture>
+            </li>
+            <li>
+              <picture>
+                <source srcset="img/bldg/sirenevy__bulvar/progress/4-large.webp" media="(min-width: 1240px)" />
+                <source srcset="img/bldg/sirenevy__bulvar/progress/4-medium.webp" media="(min-width: 768px)" />
+                <img src="img/bldg/sirenevy__bulvar/progress/4-small.webp" width="360" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" loading="lazy"/>
+              </picture>
+            </li>
+          </ul>
+          <figcaption>Ход строительства во 2 кв. 2024 г.</figcaption>
+        </figure>
+        <p><a href="#">Смотреть все этапы строительства</a></p>
       </section>
       <section class="wrapper-gk">
         <h2 class="caption-index caption-index--gk">Галерея</h2>
@@ -1200,9 +1674,9 @@
         <span class="visually-hidden">Закрыть окно с контактами</span>
       </button>
       <section>
-        <div class="developer developer--modal">
+        <div class="developer developer--modal ">
           <h3><span>Застройщик</span> Ойкумена</h3>
-          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
+          <img src="img/bldg/sirenevy__bulvar/dev__logo/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
         </div>
         <p><a href="tel:+79067418512">+7 401 265 83 18</a></p>
       </section>
@@ -1241,7 +1715,7 @@
       <section>
         <div class="developer developer--modal">
           <h3><span>Застройщик</span> Ойкумена</h3>
-          <img src="img/bldg/sirenevy__bulvar/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
+          <img src="img/bldg/sirenevy__bulvar/dev__logo/logo__developer-1.webp" width="60px" height="auto" alt="Логотип компании Ойкумента" />
         </div>
       </section>
     </section>

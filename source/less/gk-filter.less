@@ -1,0 +1,66 @@
+.gk-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  & li {
+    display: flex;
+  }
+
+  & li:not(:first-child) span:first-child::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -25px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/icons/house.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  & .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    border-radius: 5px;
+
+    & span {
+      position: relative;
+    }
+
+    & span:not(:first-child) {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &--selected {
+      background-color: var(--light-gray);
+      border-color: var(--basic-black);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gk-filter {
+    margin-bottom: 30px;
+  }
+}
+
+.gk-filter--rooms {
+  & li:not(:first-child) span:first-child::after {
+    display: none;
+  }
+
+  & .button {
+    padding: 5px 12px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gk-filter--rooms:first-of-type {
+    margin-bottom: 15px;
+  }
+}

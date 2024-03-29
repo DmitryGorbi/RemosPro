@@ -1,0 +1,52 @@
+.gk-progress {
+  & p {
+    color: var(--blue);
+  }
+}
+
+.gk-progress__imgContainer {
+  margin-bottom: 15px;
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+
+    & li {
+      width: 100%;
+      height: 120px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  & figcaption {
+    font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
+      row-gap: 15px;
+
+      & li {
+        height: 200px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

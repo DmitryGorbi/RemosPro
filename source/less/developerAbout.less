@@ -1,0 +1,45 @@
+.developerAbout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 18px 15px;
+  background-color: var(--extra-light-gray);
+  border-radius: 5px;
+
+  & h2 {
+    margin-bottom: 0px !important;
+  }
+
+  & dl {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light-gray);
+
+    & div {
+    }
+
+    & dd {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    & dt {
+      order: 1;
+      margin-bottom: 5px;
+      font-size: 13px;
+      line-height: 13px;
+    }
+  }
+}
+
+.developerAbout__description {
+  & span {
+    display: none;
+  }
+
+  & a {
+    color: var(--blue);
+  }
+}

@@ -12,3 +12,15 @@ ableLayers.forEach((item, index) => {
     mapTagPopups[index].classList.remove('mapTag__offer--show')
   })
 })
+
+const tableToggle = document.querySelector('.gk-offers__item button');
+const gkTable = document.querySelector('.gk-table');
+const gkTableBody = gkTable.querySelector('tbody');
+const gkTableFooter = gkTable.querySelector('tfoot');
+console.log(tableToggle)
+
+tableToggle.addEventListener('click', () => {
+  gkTable.classList.toggle('visually-hidden');
+  gkTableBody.classList.toggle('visually-hidden');
+  gkTableFooter.classList.toggle('visually-hidden');
+})
