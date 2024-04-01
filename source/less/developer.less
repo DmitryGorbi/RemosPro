@@ -49,8 +49,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--light-gray);
   width: 100%;
   text-align: start;
 
@@ -67,6 +65,24 @@
 
   & img {
     width: 60px;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    align-items: end;
+    column-gap: 30px;
+
+    & h3 {
+      font-size: 30px;
+    }
+
+    & img {
+      width: 100px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    column-gap: 50px;
   }
 }
 
