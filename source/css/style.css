@@ -4259,30 +4259,104 @@ time {
 }
 .gkPromotion p,
 .gkPromotion li {
+  font-size: 15px;
   line-height: 22px;
 }
+.gkPromotion .button-main {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  padding: 5px 14px;
+}
 .gkPromotion__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, min-content);
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
 }
 .gkPromotion__wrapper h3 {
+  display: inline-block;
+  font-weight: 500;
+  -webkit-text-decoration: dashed aquamarine;
+          text-decoration: dashed aquamarine;
+  margin-bottom: 10px;
+}
+.gkPromotion__wrapper section {
+  padding: 10px;
+}
+.gkPromotion__wrapper section {
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .gkPromotion__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    gap: 20px;
+  }
+  .gkPromotion__wrapper section:first-of-type {
+    grid-column: 1/-1;
+  }
+}
+.gkPromotion__payment {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.gkPromotion__payment li {
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--light-blue);
+}
+.gkPromotion__payment li dl {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.gkPromotion__payment li dl dd {
   font-weight: 500;
 }
-.gkPromotion__wrapper section:first-of-type {
-  grid-column: 1/-1;
+.gkPromotion__payment li:first-of-type::before {
+  position: absolute;
+  content: 'На покупку в домах 5.1 и 5.2';
+  top: -17px;
+  right: 0;
+  padding: 2px;
+  font-size: 13px;
+  line-height: 13px;
+  background-color: #FFBB00;
+  border-radius: 2px;
 }
-.gkPromotion__wrapper section:first-of-type ol {
-  list-style-type: disc;
-  list-style-position: inside;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.gkPromotion__payment div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
 }
-::marker {
-  color: var(--blue);
-  width: 15px;
-  height: 15px;
+@media (min-width: 768px) {
+  .gkPromotion__payment {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+.gkPromotion__ending {
+  position: relative;
+  margin-top: 25px;
+  padding-left: 40px;
+}
+.gkPromotion__ending::before {
+  position: absolute;
+  content: '';
+  top: -5px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/icons/real-time.png');
+}
+.gkPromotion__ending time {
+  font-size: 15px;
+  font-weight: 500;
 }
 .gk-mortgage__wrapper {
   display: flex;
