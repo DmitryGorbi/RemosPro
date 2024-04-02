@@ -1,0 +1,35 @@
+.gkPromotion {
+  & p,
+  li {
+    line-height: 22px;
+  }
+}
+
+.gkPromotion__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 20px;
+
+  & h3 {
+    font-weight: 500;
+  }
+
+  & section:first-of-type {
+    grid-column: 1/-1;
+
+    & ol {
+      list-style-type: disc;
+      list-style-position: inside;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+::marker {
+  // margin: 55px;
+  color: var(--blue);
+  width: 15px;
+  height: 15px;
+}

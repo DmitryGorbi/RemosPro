@@ -30,8 +30,6 @@
     align-items: center;
 
     @media (min-width: @desktop-width) {
-      // flex-direction: row;
-      // align-items: start;
       row-gap: 5px;
       column-gap: 40px;
     }
@@ -54,5 +52,13 @@
     column-gap: 15px;
     margin-left: -5px;
     margin-bottom: 10px;
+  }
+
+  & ul:last-of-type {
+    & a {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
   }
 }

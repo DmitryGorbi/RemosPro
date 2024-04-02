@@ -159,10 +159,10 @@ a {
 a:visited {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth, .navbar, .breadcrumbs, .gk-offers) a {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth, .navbar, .breadcrumbs, .gk-offers, .developerAbout, .gk-progress, .page__footer) a {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth, .navbar, .breadcrumbs, .gk-offers) a:focus-visible {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .experts, .new-buildings, .articles, .news, .modal, .auth, .navbar, .breadcrumbs, .gk-offers, .developerAbout, .gk-progress, .page__footer) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #a6e5ff, 0 0 2px 3px #006aff;
 }
 :is(.nav) a {
@@ -239,6 +239,11 @@ a:visited {
        column-gap: 15px;
   margin-left: -5px;
   margin-bottom: 10px;
+}
+.page__footer ul:last-of-type a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 .wrapper-content {
   margin: 0 15px;
@@ -4252,6 +4257,33 @@ time {
     padding: 12px 0;
   }
 }
+.gkPromotion p,
+.gkPromotion li {
+  line-height: 22px;
+}
+.gkPromotion__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 20px;
+}
+.gkPromotion__wrapper h3 {
+  font-weight: 500;
+}
+.gkPromotion__wrapper section:first-of-type {
+  grid-column: 1/-1;
+}
+.gkPromotion__wrapper section:first-of-type ol {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+::marker {
+  color: var(--blue);
+  width: 15px;
+  height: 15px;
+}
 .gk-mortgage__wrapper {
   display: flex;
   flex-direction: column;
@@ -4481,8 +4513,6 @@ time {
 }
 @media (min-width: 768px) {
   .gk-progress__imgContainer ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 15px;
          column-gap: 15px;
     row-gap: 15px;
