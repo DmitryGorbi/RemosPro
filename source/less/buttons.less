@@ -48,3 +48,54 @@
     background-position: center;
   }
 }
+
+.button-main {
+  padding: 14px;
+  width: 100%;
+  color: var(--white);
+  border-radius: 5px;
+  background-color: var(--blue);
+
+  &:hover {
+    background-color: #0046a6;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 14px;
+    width: max-content;
+  }
+}
+
+.button-main--add {
+  @media (min-width: @tablet-width) {
+    height: 35px;
+  }
+}
+
+.button-submit {
+  padding: 14px;
+  width: 100%;
+  color: var(--white);
+  border-radius: 5px;
+  background-color: var(--blue);
+
+  @media (min-width: @tablet-width) {
+    padding: 7px 14px;
+    width: max-content;
+  }
+}
+
+.button-white {
+  padding: 5px 12px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+
+  &--selected {
+    background-color: var(--light-gray);
+    border-color: var(--basic-black);
+  }
+
+  &:hover {
+    background-color: var(--extra-light-gray);
+  }
+}

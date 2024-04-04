@@ -50,10 +50,6 @@
     display: none;
   }
 
-  // & address {
-  //   display: none;
-  // }
-
   .gk__preview-message {
     margin-bottom: 10px;
     font-size: 15px;
@@ -83,9 +79,8 @@
   justify-content: space-between;
   column-gap: 5px;
 
-  & button {
+  & .button {
     flex-grow: 1;
-    padding: 12px 10px;
 
     & span {
       display: none;
@@ -93,8 +88,8 @@
   }
 
   & button:last-child {
-    background-color: var(--white);
     border: 2px solid var(--blue);
+    background-color: var(--white);
     color: var(--blue);
   }
 }
@@ -125,6 +120,7 @@
 @media (min-width: @tablet-width) {
   .gk__preview-contacts {
     width: calc(100% - 80px);
+    // position: static;
   }
 }
 
@@ -168,12 +164,6 @@
       border-radius: 5px;
     }
 
-    // & address {
-    //   display: block;
-    //   margin-bottom: 10px;
-    //   font-style: normal;
-    // }
-
     .gk__preview-message {
       position: static;
       margin-bottom: 15px;
@@ -198,8 +188,6 @@
     width: max-content;
 
     & .button {
-      padding: 10px;
-
       & span {
         display: inline-block;
       }

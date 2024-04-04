@@ -6,7 +6,7 @@
   }
 }
 
-.gk-offers__item {
+.gkOffers__item {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--light-gray);
@@ -27,41 +27,41 @@
 
     & p:last-of-type {
       grid-column: 1/-1;
-      color: rgba(0, 0, 0, .5);
+      color: rgba(0, 0, 0, 0.5);
     }
   }
 
   & .button {
-      position: relative;
-      padding-right: 20px;
-      text-align: right;
-      color: var(--blue);
+    position: relative;
+    padding-right: 20px;
+    text-align: right;
+    color: var(--blue);
 
-      &::after {
-        position: absolute;
-        content: '';
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        width: 16px;
-        height: 16px;
-        background-image: url(../img/icons/arrow.svg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-      }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/icons/arrow.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
+  }
 
-    & .gk-offers__button-wrapper {
-      margin: auto 0 auto auto;
-    }
+  & .gkOffers__button-wrapper {
+    margin: auto 0 auto auto;
+  }
 }
 
-.gk-offers__item:last-of-type {
+.gkOffers__item:last-of-type {
   border-bottom: 1px solid var(--light-gray);
 }
 
 @media (min-width: 600px) {
-  .gk-offers__item {
+  .gkOffers__item {
     justify-content: start;
     padding: 16px 0;
 
@@ -88,7 +88,7 @@
       }
     }
 
-    & .gk-offers__button-wrapper {
+    & .gkOffers__button-wrapper {
       width: 170px;
       text-align: right;
     }
@@ -96,11 +96,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .gk-offers {
+  .gkOffers {
     font-size: inherit;
   }
 
-  .gk-offers__item {
+  .gkOffers__item {
     justify-content: space-between;
     column-gap: 20px;
 
@@ -117,14 +117,14 @@
         margin-right: 0;
         margin-left: auto;
         text-align: right;
-        color: rgba(0, 0, 0, .5);
+        color: rgba(0, 0, 0, 0.5);
       }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .gk-offers__item {
+  .gkOffers__item {
     column-gap: 35px;
     &-wrapper {
       column-gap: 35px;
@@ -133,7 +133,7 @@
   }
 }
 
-.gk-offers__summary {
+.gkOffers__summary {
   display: flex;
   flex-direction: column;
   row-gap: 20px;

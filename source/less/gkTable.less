@@ -1,14 +1,16 @@
 @media (max-width: 599px) {
-  .gk-table {
+  .gkTable {
     & tbody tr {
-      & td:nth-child(2), td:nth-child(3), td:last-child {
+      & td:nth-child(2),
+      td:nth-child(3),
+      td:last-child {
         display: none;
       }
     }
   }
 }
 
-.gk-table {
+.gkTable {
   margin-top: 5px;
   width: 100%;
   border-collapse: collapse;
@@ -29,8 +31,9 @@
       text-align: left;
     }
 
-    & td:nth-child(2), td:nth-child(3) {
-      color: rgba(0, 0, 0, .5);
+    & td:nth-child(2),
+    td:nth-child(3) {
+      color: rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -49,25 +52,25 @@
 }
 
 @media (min-width: @tablet-width) {
-  .gk-table tbody tr {
+  .gkTable tbody tr {
     & td:first-child {
       width: 35%;
     }
 
     & td:not(:first-child) {
-      width: 13%
+      width: 13%;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .gk-table tbody tr {
+  .gkTable tbody tr {
     & td:first-child {
       width: 50%;
     }
 
     & td:not(:first-child) {
-      width: 10%
+      width: 10%;
     }
   }
 }
