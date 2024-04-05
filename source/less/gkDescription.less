@@ -28,7 +28,7 @@
     color: rgba(0, 0, 0, 0.7);
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     & .caption-index {
       margin-bottom: 25px;
     }
@@ -116,13 +116,21 @@
     border-radius: 5px;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 25%;
+  @media (min-width: @tablet-width) {
+    width: 50%;
 
     &::after {
       width: 30px;
       height: 30px;
     }
+  }
+
+  @media (min-width: @large-tablet-width) {
+    width: 33%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
   }
 }
 
@@ -139,7 +147,7 @@
   }
 
   & summary::marker {
-    color: var(--blue);
+    color: var(--basic-green);
   }
 
   & summary {
@@ -147,11 +155,11 @@
     cursor: pointer;
 
     &:hover {
-      color: red;
+      color: var(--basic-green);
     }
 
     &:focus-visible {
-      color: red;
+      color: var(--basic-green);
     }
   }
 

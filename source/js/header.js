@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 
 const mainNav = document.querySelector('.navigation');
 const burgerToggler = mainNav.querySelector('.toggler');
@@ -60,9 +60,9 @@ subMenuButtons.forEach((item, index) => {
     });
     item.setAttribute('aria-expanded', isOpen);
     if (isOpen) {
-      mainNavLinks[index].style.color = 'rgb(0, 106, 255)';
+      mainNavLinks[index].style.color = '#20a052';
       subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
-      subMenuButtonIcon[index].style.fill = 'rgb(0, 106, 255)';
+      subMenuButtonIcon[index].style.fill = '#20a052';
     } else {
       mainNavLinks[index].style.color = 'inherit';
       subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
@@ -119,39 +119,36 @@ buttonLogIn.addEventListener('click', (evt) => {
   }
 });
 
-
 //
 let inputSearch = document.querySelectorAll('.input--modal');
 let popupLocation = document.querySelectorAll('.modal-search');
 
 inputSearch[0].addEventListener('input', () => {
-  popupLocation[0].style.display = "block"
-})
-
+  popupLocation[0].style.display = 'block';
+});
 
 document.addEventListener('keydown', () => {
-  if(isEscEvent) {
+  if (isEscEvent) {
     popupLocation[0].style.display = 'none';
     inputSearch[0].texContent = '';
   }
-})
+});
 
 inputSearch[1].addEventListener('input', () => {
-  popupLocation[1].style.display = "block"
-  console.dir(inputSearch[1])
-})
-
+  popupLocation[1].style.display = 'block';
+  console.dir(inputSearch[1]);
+});
 
 document.addEventListener('keydown', () => {
-  if(isEscEvent) {
+  if (isEscEvent) {
     popupLocation[1].style.display = 'none';
     // inputSearch[1].value = '';
   }
-})
+});
 
-const buttonLocation = document.querySelector('.button-location')
-const modalLocation = document.querySelector('.modal-location')
+const buttonLocation = document.querySelector('.button-location');
+const modalLocation = document.querySelector('.modal-location');
 
 buttonLocation.addEventListener('click', () => {
-  modalLocation.classList.toggle('modal-location--show')
-})
+  modalLocation.classList.toggle('modal-location--show');
+});

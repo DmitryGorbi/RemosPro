@@ -1,4 +1,4 @@
-.wrapper-gk--layout {
+.wrapper-gk--survey {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -35,16 +35,33 @@
   }
 
   & img {
+    position: relative;
+    right: -50%;
+    transform: translateX(-50%);
     margin-bottom: 15px;
-    max-width: 40%;
+    max-width: 50%;
   }
 
   & .button-main {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   & p:last-of-type {
     font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    & ul {
+      gap: 20px;
+    }
+
+    & img {
+      width: 200px;
+    }
+
+    & p:last-of-type {
+      font-size: inherit;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -52,15 +69,11 @@
     max-width: 800px;
     min-width: 600px;
 
-    & ul {
-      flex-direction: row;
-      gap: 20px;
-    }
-
     & img {
       position: absolute;
       top: 0;
-      right: -100px;
+      right: 0;
+      transform: translateX(0);
       width: 200px;
     }
 
