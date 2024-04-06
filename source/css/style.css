@@ -373,6 +373,9 @@ a:visited {
 .button-main:hover {
   background-color: #0a6830;
 }
+.button-main:active {
+  background-color: #053a18;
+}
 @media (min-width: 768px) {
   .button-main {
     padding: 10px 14px;
@@ -3487,6 +3490,9 @@ time {
 .gk__preview-contacts .button-main:last-child:hover {
   background-color: #0a6830;
   color: var(--white);
+}
+.gk__preview-contacts .button-main:last-child:active {
+  background-color: #053a18;
 }
 .gk__image {
   position: relative;
