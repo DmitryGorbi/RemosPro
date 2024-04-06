@@ -18,7 +18,7 @@
   <body class="page__body layout">
     <header class="page-header wrapper-content">
       <div class="page-header__wrapper">
-        <nav class="navigation layout__navigation">
+        <nav class="navigation layout--navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -27,7 +27,7 @@
               <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
             </svg>
           </a>
-          <ul id="nav" class="nav">
+          <ul id="main-nav" class="nav">
             <li class="nav__item">
               <a class="nav__link" href="#">
                 <span>Продажа</span>
@@ -86,14 +86,14 @@
                 </ul>
                 <p class="submenu__title">Гаражи</p>
                 <ul class="submenu__list submenu__list--links">
-                  <li class="">
-                    <a class="" href="#">Гараж</a>
+                  <li>
+                    <a href="#"><span>Гараж</span></a>
                   </li>
-                  <li class="">
-                    <a class="" href="#">Гаражный бокс</a>
+                  <li>
+                    <a href="#"><span>Гаражный бокс</span></a>
                   </li>
-                  <li class="">
-                    <a class="" href="#">Машиноместо</a>
+                  <li>
+                    <a href="#"><span>Машиноместо</span></a>
                   </li>
                 </ul>
               </div>
@@ -154,13 +154,13 @@
                 <p class="submenu__title">Гаражи</p>
                 <ul class="submenu__list submenu__list--links">
                   <li>
-                    <a href="#">Гараж</a>
+                    <a href="#"><span>Гараж</span></a>
                   </li>
                   <li>
-                    <a href="#">Гаражный бокс</a>
+                    <a href="#"><span>Гаражный бокс</span></a>
                   </li>
                   <li>
-                    <a href="#">Машиноместо</a>
+                    <a href="#"><span>Машиноместо</span></a>
                   </li>
                 </ul>
               </div>
@@ -250,21 +250,6 @@
                       <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="#"><span>ЖК Юбилейный</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Крылья</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Небоскрёб</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Квартал Житейский</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Воскрешение</span></a>
-                  </li> -->
                 </ul>
                 <p class="submenu__link-wrapper">
                   <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
@@ -690,7 +675,7 @@
       <section class="nav-section section-wrapper">
         <h2 class="caption-index">Выбирайте из <data value="22075">22075</data> объявлений</h2>
         <div class="nav-section__wrapper">
-          <section class="nav-section_type">
+          <section class="nav-section__type">
             <h3 class="">Купить квартиру</h3>
             <img src="img/decor/new__flat2.webp" alt="" />
             <ul>
@@ -737,7 +722,7 @@
               </li> -->
             </ul>
           </section>
-          <section class="nav-section_type">
+          <section class="nav-section__type">
             <h3>Снять квартиру</h3>
             <img src="img/decor/rent.webp" alt="" />
             <ul>
@@ -773,7 +758,7 @@
               </li>
             </ul>
           </section>
-          <section class="nav-section_type">
+          <section class="nav-section__type">
             <h3>Загородная недвижимость</h3>
             <img src="img/decor/house.webp" alt="" />
             <ul>
@@ -809,7 +794,7 @@
               </li>
             </ul>
           </section>
-          <section class="nav-section_type">
+          <section class="nav-section__type">
             <h3>Коммерческая недвижимость</h3>
             <img src="img/decor/commercion.webp" alt="" />
             <ul>

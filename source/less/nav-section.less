@@ -4,7 +4,7 @@
   row-gap: 25px;
 }
 
-.nav-section_type {
+.nav-section__type {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -40,7 +40,6 @@
     justify-content: space-between;
     column-gap: 10px;
     padding: 12px 5px;
-    color: var(--basic-green);
 
     & data {
       color: var(--clarified-black);
@@ -59,7 +58,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .nav-section_type {
+  .nav-section__type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;

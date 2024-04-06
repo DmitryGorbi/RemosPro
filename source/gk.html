@@ -19,7 +19,7 @@
   <body class="page__body layout layout--gk">
     <header class="page-header page-header--gk wrapper-content">
       <div class="page-header__wrapper">
-        <nav class="navigation layout__navigation">
+        <nav class="navigation layout--navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -88,13 +88,13 @@
                 <p class="submenu__title">Гаражи</p>
                 <ul class="submenu__list submenu__list--links">
                   <li class="">
-                    <a class="" href="#">Гараж</a>
+                    <a class="" href="#"><span>Гараж</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="#">Гаражный бокс</a>
+                    <a class="" href="#"><span>Гаражный бокс</span></a>
                   </li>
                   <li class="">
-                    <a class="" href="#">Машиноместо</a>
+                    <a class="" href="#"><span>Машиноместо</span></a>
                   </li>
                 </ul>
               </div>
@@ -155,13 +155,13 @@
                 <p class="submenu__title">Гаражи</p>
                 <ul class="submenu__list submenu__list--links">
                   <li>
-                    <a href="#">Гараж</a>
+                    <a href="#"><span>Гараж</span></a>
                   </li>
                   <li>
-                    <a href="#">Гаражный бокс</a>
+                    <a href="#"><span>Гаражный бокс</span></a>
                   </li>
                   <li>
-                    <a href="#">Машиноместо</a>
+                    <a href="#"><span>Машиноместо</span></a>
                   </li>
                 </ul>
               </div>
@@ -251,21 +251,6 @@
                       <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="#"><span>ЖК Юбилейный</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Крылья</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Небоскрёб</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Квартал Житейский</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Воскрешение</span></a>
-                  </li> -->
                 </ul>
                 <p class="submenu__link-wrapper">
                   <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
@@ -425,13 +410,13 @@
         </nav>
         <nav class="user-nav">
           <ul class="user-nav__list">
-            <li class="">
+            <li class="user-nav__disabled">
               <a class="user-nav__button" href="auth.html" aria-describedby="login" aria-expanded="false">
                 <span>Войти</span>
                 <span class="visually-hidden" id="login">Личный кабинет</span>
               </a>
             </li>
-            <li class="user-nav__disabled">
+            <li class="">
               <button type="button" class="button user-nav__toggler" href="#" aria-describedby="profile" aria-expanded="false" aria-controls="user-nav">
                 <svg class="user-nav__icon" width="25px" height="18px" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#avatar-profile"></use>
