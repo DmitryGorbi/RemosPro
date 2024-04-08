@@ -15,7 +15,6 @@
     <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
   </head>
 
-  <!-- Нужно все цифры и даты обернуть в семантические теги -->
   <body class="page__body layout layout--gk">
     <header class="page-header page-header--gk wrapper-content">
       <div class="page-header__wrapper">
@@ -450,6 +449,8 @@
       </nav>
     </header>
 
+    <!-- Нужно все цифры и даты обернуть в семантические теги и лоадинг -->
+
     <main id="main" class="page-main page-main--index gk">
       <header class="gk__header">
         <div class="wrapper-content wrapper-content--gk">
@@ -475,8 +476,8 @@
             <div class="gk__preview-logo">
               <img src="img/bldg/sirenevy__bulvar/logo.svg" alt="Логотип жилого комплекса Сиреневый бульвар в г. Калининград" />
             </div>
-            <p class="gk__preview-message">Сдача 2025 г. Есть сданные корпуса.</p>
-            <p class="gk__price">от <data value="4,63">4,63</data> млн до <data value="13,77">13,77</data> млн ₽</p>
+            <p class="gk__preview-message">Сдача <time datetime="2025">2025 г.</time> Есть сданные корпуса.</p>
+            <p class="gk__price">от <data value="4630000">4,63</data> млн до <data value="13770000">13,77</data> млн ₽</p>
             <p class="gk__price-meter">от <data value="110000">110 000 </data>до <data value="140000">140 000</data> ₽/м²</p>
           </section>
           <section class="developer developer--header">
@@ -490,15 +491,16 @@
           </section>
           <section class="navbar">
             <ul>
-              <li><a href="">О проекте</a></li>
-              <li><a href="">Генплан</a></li>
-              <li><a href="">Расположение</a></li>
-              <li><a href="">Квартиры</a></li>
-              <li><a href="">Ипотека</a></li>
-              <li><a href="">Акции</a></li>
-              <li><a href="">Новости</a></li>
-              <li><a href="">Ход строительства</a></li>
-              <li><a href="">О застройщике</a></li>
+              <li><a href="#map">Расположение</a></li>
+              <li><a href="#genPlan">Генплан</a></li>
+              <li><a href="#flats">Квартиры</a></li>
+              <li><a href="#promo">Акции</a></li>
+              <li><a href="#mortgage">Ипотека</a></li>
+              <li><a href="#aboutGk">О проекте</a></li>
+              <li><a href="#gallery">Галерея</a></li>
+              <li><a href="#repair">Отделка</a></li>
+              <li><a href="#aboutDeveloper">О застройщике</a></li>
+              <li><a href="#gkProgress">Ход строительства</a></li>
             </ul>
           </section>
         </div>
@@ -506,8 +508,15 @@
           <picture>
             <source srcset="img/bldg/sirenevy__bulvar/front__large.webp" media="(min-width: 1240px)" />
             <source srcset="img/bldg/sirenevy__bulvar/front__medium.webp" media="(min-width: 768px)" />
-            <img src="img/bldg/sirenevy__bulvar/front__small.webp" width="767" height="auto" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
+            <img src="img/bldg/sirenevy__bulvar/front__small.webp" width="665" height="374" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
           </picture>
+          <!-- <img
+            src="img/bldg/sirenevy__bulvar/front__small.webp"
+            srcset="img/bldg/sirenevy__bulvar/front__medium.webp 1000w, img/bldg/sirenevy__bulvar/front__large.webp 1919w"
+            width="665"
+            height="374"
+            alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар"
+          /> -->
         </div>
       </header>
       <section class="gkAddress wrapper-gk">
@@ -533,6 +542,10 @@
           <div class="gkDescription__item gkDescription__item--star">
             <dt>Класс</dt>
             <dd>Комфорт</dd>
+          </div>
+          <div class="gkDescription__item">
+            <dt>Юр. статус</dt>
+            <dd>Квартиры</dd>
           </div>
           <div class="gkDescription__item gkDescription__item--stages">
             <dt>Этажность</dt>
@@ -596,6 +609,10 @@
                 <div class="gkDescription__item gkDescription__item--ceiling">
                   <dt>Высота потолков</dt>
                   <dd>2.7</dd>
+                </div>
+                <div class="gkDescription__item">
+                  <dt>ЛИфтов в подъезде</dt>
+                  <dd>2-3</dd>
                 </div>
                 <div class="gkDescription__item gkDescription__item--repair">
                   <dt>Варианты отделки</dt>
@@ -716,10 +733,13 @@
           <p class="survey__developerName">Застройщик Ойкумена</p>
         </div>
       </section>
-      <section class="genPlan">
+      <section id="genPlan" class="genPlan">
         <h2 class="visually-hidden">Генплан</h2>
         <div class="genPlan__container">
-          <img src="img/bldg/sirenevy__bulvar/genplan.webp" alt="" />
+          <picture>
+            <source srcset="img/bldg/sirenevy__bulvar/genplan/genplan__large.webp" media="(min-width: 768px)" />
+            <img src="img/bldg/sirenevy__bulvar/genplan/genplan__medium.webp" alt="Генплан ЖК Сиреневый бульвар" />
+          </picture>
           <svg class="genPlan__buildingsLayer" viewBox="0 0 1241 750" fill="transparent" xmlns="http://www.w3.org/2000/svg" id="apartments">
             <path
               class="_disabled"
@@ -818,9 +838,9 @@
                   3 подъезда.
                 </p>
                 <ul>
-                  <li><strong>1-комн. от 40 м</strong> - от 5 млн.</li>
-                  <li><strong>2-комн. от 60 м</strong> - от 10 млн.</li>
-                  <li><strong>3-комн. от 80 м</strong> - от 15 млн.</li>
+                  <li><strong>1-комн. от 40 м²</strong> - от 5 млн.</li>
+                  <li><strong>2-комн. от 60 м²</strong> - от 10 млн.</li>
+                  <li><strong>3-комн. от 80 м²</strong> - от 15 млн.</li>
                 </ul>
                 <a href="">37 квартир в продаже</a>
               </div>
@@ -834,9 +854,9 @@
                 <h3>Дом 5.1</h3>
                 <p>Сдача 4 кв. 2024 года</p>
                 <ul>
-                  <li><strong>1-комн. от 40 м</strong> - от 5 млн.</li>
-                  <li><strong>2-комн. от 60 м</strong> - от 10 млн.</li>
-                  <li><strong>3-комн. от 80 м</strong> - от 15 млн.</li>
+                  <li><strong>1-комн. от 40 м²</strong> - от 5 млн.</li>
+                  <li><strong>2-комн. от 60 м²</strong> - от 10 млн.</li>
+                  <li><strong>3-комн. от 80 м²</strong> - от 15 млн.</li>
                 </ul>
                 <a href="">37 квартир в продаже</a>
               </div>
@@ -850,9 +870,9 @@
                 <h3>Дом 5.2</h3>
                 <p>Сдача 4 кв. 2024 года</p>
                 <ul>
-                  <li><strong>1-комн. от 40 м</strong> - от 5 млн.</li>
-                  <li><strong>2-комн. от 60 м</strong> - от 10 млн.</li>
-                  <li><strong>3-комн. от 80 м</strong> - от 15 млн.</li>
+                  <li><strong>1-комн. от 40 м²</strong> - от 5 млн.</li>
+                  <li><strong>2-комн. от 60 м²</strong> - от 10 млн.</li>
+                  <li><strong>3-комн. от 80 м²</strong> - от 15 млн.</li>
                 </ul>
                 <a href="">37 квартир в продаже</a>
               </div>
@@ -860,7 +880,7 @@
           </div>
         </div>
       </section>
-      <section class="gkOffers wrapper-gk">
+      <section id="flats" class="gkOffers wrapper-gk">
         <h2 class="caption-index caption-index--gk"><span>93 квартиры от застройщика</span> в ЖК «Сиреневый бульвар»</h2>
         <ul class="gkFilter">
           <li>
@@ -955,7 +975,7 @@
           </tbody>
           <tfoot class="visually-hidden">
             <tr>
-              <td colspan="6"><a href="">Смотреть все предложения</a></td>
+              <td colspan="6"><a href="/1-komnatnye-gk-severny-bulvar.html">Смотреть все предложения</a></td>
             </tr>
           </tfoot>
         </table>
@@ -1125,10 +1145,10 @@
           <button class="button button-white" type="button"><span>Вперёд</span></button>
         </section>
       </section>
-      <section class="gkPromotion wrapper-gk">
+      <section id="promo" class="gkPromotion wrapper-gk">
         <h2 class="caption-index caption-index--gk">Акции в ЖК «Сиреневый бульвар»</h2>
         <div class="gkPromotion__wrapper">
-          <section>
+          <article>
             <h3>Рассрочка</h3>
             <ol class="gkPromotion__payment">
               <li>
@@ -1193,26 +1213,26 @@
               </li>
             </ol>
             <p class="gkPromotion__ending">Срок окончания акции: <time datetime="2024-04-30">30 апреля 2024</time></p>
-          </section>
-          <section>
+          </article>
+          <article>
             <h3>Скидка 1%</h3>
             <p>Скидка 1% для всех, кто является участником зарплатного проекта АО «Банк ДОМ.РФ», и для региональных покупателей.</p>
             <p class="gkPromotion__ending">Срок окончания акции: <time datetime="2024-04-30">30 апреля 2024</time></p>
-          </section>
-          <section>
+          </article>
+          <article>
             <h3>Скидка за повторную покупку</h3>
             <p>При повторном заключении договора на приобретение двух- или трехкомнатной квартиры – 1 м² в подарок.</p>
             <p class="gkPromotion__ending">Срок окончания акции: <time datetime="2024-04-30">30 апреля 2024</time></p>
-          </section>
-          <section>
+          </article>
+          <article>
             <h3>Проживание и билеты в подарок</h3>
             <p>Компенсация стоимости проживания 2 суток в гостинице и проездных билетов (суммарно не более 34 тыс. руб.) для дольщика.</p>
             <p class="gkPromotion__ending">Срок окончания акции: <time datetime="2024-04-30">30 апреля 2024</time></p>
-          </section>
+          </article>
         </div>
         <button type="button" class="button button-main">Узнать подробности</button>
       </section>
-      <section class="gkMortgage wrapper-gk">
+      <section id="mortgage" class="gkMortgage wrapper-gk">
         <h2 class="caption-index caption-index--gk">Ипотечные предложения и аккредитованные банки</h2>
         <form class="mortgageFilter" action="">
           <div class="inputRange">
@@ -1443,7 +1463,7 @@
           <button class="button button-main" type="button">Получить точный расчёт</button>
         </div>
       </section>
-      <section class="gkPresentation wrapper-gk">
+      <section id="aboutGk" class="gkPresentation wrapper-gk">
         <h2 class="caption-index caption-index--gk">О жилом комплексе «Сиреневый бульвар»</h2>
         <div class="gkPresentation__wrapper">
           <div class="gkPresentation__video">
@@ -1463,7 +1483,7 @@
           </div>
         </div>
       </section>
-      <section class="gkGallery wrapper-gk">
+      <section id="gallery" class="gkGallery wrapper-gk">
         <h2 class="caption-index caption-index--gk">Галерея</h2>
         <div class="gkGallery__wrapper">
           <article>
@@ -1531,7 +1551,7 @@
           ></iframe>
         </div>
       </section>
-      <section class="gkRepair wrapper-gk">
+      <section id="repair" class="gkRepair wrapper-gk">
         <h2 class="caption-index caption-index--gk">Варианты отделки от застройщика</h2>
         <div class="gkRepair__wrapper">
           <section>
@@ -1567,7 +1587,7 @@
           </section>
         </div>
       </section>
-      <section class="developerAbout wrapper-gk">
+      <section id="aboutDeveloper" class="developerAbout wrapper-gk">
         <h2 class="caption-index caption-index--gk">Участники строительства ЖК «Сиреневый бульвар»</h2>
         <section class="developer developer--about">
           <h3><span>Застройщик:</span> ГК Ойкумена</h3>
@@ -1615,7 +1635,7 @@
           <address>Калининград, ул. Артиллерийская, 56а.</address>
         </span>
       </section>
-      <section class="gkProgress wrapper-gk">
+      <section id="gkProgress" class="gkProgress wrapper-gk">
         <h2 class="caption-index caption-index--gk">Ход строительства ЖК «Сиреневый бульвар»</h2>
         <figure class="gkProgress__imgContainer">
           <ul>
@@ -1765,163 +1785,7 @@
         <button class="button" type="submit">Зарегистрироваться</button>
       </form>
     </section>
-    <section class="modal-location">
-      <div class="modal-location__content">
-        <h2 class="">Выберите регион/город</h2>
-        <button class="button modal-location__button-close" type="button">
-          <span class="visually-hidden">Закрыть окно авторизации</span>
-        </button>
-        <div class="modal-location__wrapper">
-          <form class="modal-location__form" action="">
-            <label class="visually-hidden" for="search-region">Выберите регион или город</label>
-            <input class="input input--field input--modal" id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
-            <div class="modal-location__button">
-              <!-- <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button> -->
-              <button class="button button-main" type="button">Сохранить</button>
-            </div>
-          </form>
-          <div class="modal-search modal-search--location">
-            <p>Алтайсткий край</p>
-            <p>Калининградская область</p>
-            <p>Самарская область</p>
-            <p>Республика Татарстан</p>
-            <p>Ленинградская область</p>
-          </div>
-          <ul class="breadcrumbs breadcrumbs--location">
-            <li>Россия</li>
-            <li>Кабардино-Балкарская республика</li>
-            <li>Нальчик</li>
-          </ul>
-          <div class="modal-location__list">
-            <ul>
-              <li>Санкт-Петербург и ЛО</li>
-              <li>Москва и Московская область</li>
-            </ul>
-            <ul>
-              <li>А</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Б</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>В</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Г</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Д</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Е</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ж</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="modal modal--gk">
+    <section class="modal modal--contacts">
       <h2 class="caption">Контакты застройщика</h2>
       <button class="button modal__button-close" type="button">
         <span class="visually-hidden">Закрыть окно с контактами</span>

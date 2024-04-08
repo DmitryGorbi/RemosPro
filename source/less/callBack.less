@@ -17,19 +17,19 @@
 }
 
 & .callBack__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  & .callBack__form-control {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 7px;
+  }
 
-    & .callBack__form-control {
-      display: flex;
-      flex-direction: column;
-      row-gap: 7px;
-    }
-
-    & button {
-      margin-bottom: 15px;
-    }
+  & button {
+    margin-bottom: 15px;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -61,6 +61,6 @@
   margin-left: 5px;
 
   & a {
-    border-bottom: 1px dashed var(--blue);
+    border-bottom: 1px dashed var(--basic-green);
   }
 }
