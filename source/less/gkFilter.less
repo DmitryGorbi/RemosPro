@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  font-size: 15px;
 
   & li {
     display: flex;
@@ -20,10 +21,11 @@
     background-size: 100%;
   }
 
-  & .button {
+  & .button-white {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5px 10px;
 
     & span {
       position: relative;
@@ -31,6 +33,10 @@
 
     & span:not(:first-child) {
       color: rgba(0, 0, 0, 0.5);
+    }
+
+    & span:not(:first-of-type) {
+      font-size: 14px;
     }
   }
 }

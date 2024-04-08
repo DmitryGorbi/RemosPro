@@ -4176,6 +4176,7 @@ time {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 .gkFilter li {
   display: flex;
@@ -4191,16 +4192,20 @@ time {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.gkFilter .button {
+.gkFilter .button-white {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 5px 10px;
 }
-.gkFilter .button span {
+.gkFilter .button-white span {
   position: relative;
 }
-.gkFilter .button span:not(:first-child) {
+.gkFilter .button-white span:not(:first-child) {
   color: rgba(0, 0, 0, 0.5);
+}
+.gkFilter .button-white span:not(:first-of-type) {
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   .gkFilter {
