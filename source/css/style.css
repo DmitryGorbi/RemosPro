@@ -2176,9 +2176,6 @@ time {
   flex-direction: column;
   row-gap: 20px;
 }
-.auth__form label:hover {
-  color: var(--dark-blue);
-}
 .auth__form fieldset {
   display: flex;
   flex-direction: column;
@@ -2187,7 +2184,7 @@ time {
   border-radius: 5px;
 }
 .auth__form fieldset:hover {
-  border-color: var(--blue);
+  border-color: var(--basic-green);
 }
 .auth__form fieldset legend {
   margin-bottom: 10px;
@@ -2214,7 +2211,7 @@ time {
 .auth__form > div:nth-child(5) {
   flex-direction: row;
   justify-content: space-between;
-  color: var(--blue);
+  color: var(--basic-green);
   text-decoration: underline;
   margin-left: -10px;
   margin-right: -10px;
@@ -2222,8 +2219,8 @@ time {
 .auth__form > div:nth-child(5) a {
   display: block;
   padding: 10px;
-  -webkit-text-decoration: 1px solid var(--blue);
-          text-decoration: 1px solid var(--blue);
+  -webkit-text-decoration: 1px solid var(--basic-green);
+          text-decoration: 1px solid var(--basic-green);
 }
 .auth__form > div:nth-child(4) {
   display: grid;
@@ -2237,20 +2234,7 @@ time {
   top: 1px;
 }
 .auth__form button {
-  background-color: var(--blue);
-  color: var(--white);
-  padding: 14px;
-  border-radius: 5px;
-}
-.auth__form button:hover {
-  padding-top: 13px;
-  padding-bottom: 13px;
-  background-color: #004099;
-  border: 1px solid var(--blue);
-  box-sizing: border-box;
-}
-.auth__form button:active {
-  background-color: #002a66;
+  width: 100%;
 }
 .auth--restore p {
   margin: 0 0 20px 0;
