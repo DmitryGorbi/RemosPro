@@ -130,7 +130,6 @@
 @media (min-width: @tablet-width) {
   .gk__preview-contacts {
     width: calc(100% - 80px);
-    // position: static;
   }
 }
 
@@ -237,5 +236,11 @@
     .gk__image::after {
       background-image: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0));
     }
+  }
+}
+
+.gk__preview-contacts {
+  & .button:first-of-type:hover .modal--contacts {
+    display: block;
   }
 }
