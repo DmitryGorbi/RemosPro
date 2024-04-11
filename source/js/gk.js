@@ -42,15 +42,15 @@ buttonCallBack.addEventListener('click', () => {
   }
 });
 
-const buttonShowTel2 = document.querySelector('.survey__layout .button-main');
+const buttonShowTel2 = document.querySelector('.survey__contacts .button-main');
+const tel = document.querySelector('.survey__contacts a');
+
 buttonShowTel2.addEventListener('click', () => {
-  if (!modalContact.classList.contains('modal--show')) {
-    modalContact.classList.add('modal--show');
-  }
+  buttonShowTel2.style.display = 'none';
+  tel.style.display = 'block';
 });
 
 const buttonShowTel3 = document.querySelector('.gkPromotion .button-main');
-console.log(buttonShowTel3);
 buttonShowTel3.addEventListener('click', () => {
   if (!modalContact.classList.contains('modal--show')) {
     modalContact.classList.add('modal--show');
