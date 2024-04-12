@@ -18,12 +18,18 @@
       display: flex;
       flex-wrap: wrap;
       column-gap: 15px;
-      margin-left: -5px;
-      margin-bottom: 10px;
+      align-content: center;
+      margin: 10px 0 0 -5px;
 
       & a {
         display: block;
-        padding: 10px 5px;
+        padding: 6px 5px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      & ul:first-of-type {
+        margin: 10px 0;
       }
     }
 

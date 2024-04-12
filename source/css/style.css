@@ -2132,12 +2132,17 @@ time {
   flex-wrap: wrap;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  margin-left: -5px;
-  margin-bottom: 10px;
+  align-content: center;
+  margin: 10px 0 0 -5px;
 }
 .footer div ul:first-of-type a {
   display: block;
-  padding: 10px 5px;
+  padding: 6px 5px;
+}
+@media (min-width: 768px) {
+  .footer div ul:first-of-type {
+    margin: 10px 0;
+  }
 }
 @media (min-width: 1240px) {
   .footer div {
@@ -2148,6 +2153,7 @@ time {
 }
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
