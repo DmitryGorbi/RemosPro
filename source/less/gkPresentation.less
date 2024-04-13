@@ -15,12 +15,6 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    & .gkPresentation__video {
-      height: 500px;
-    }
-  }
-
   .gkPresentation__description {
     & p {
       text-indent: 30px;
@@ -30,18 +24,24 @@
     & p:first-of-type {
       margin-bottom: 20px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    & .gkPresentation__video {
+      height: 500px;
+    }
 
     & p {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      width: 50%;
-      text-indent: 30px;
-      line-height: 22px;
+      width: 60%;
     }
+  }
 
-    & p:first-of-type {
-      margin-bottom: 20px;
+  @media (min-width: @desktop-width) {
+    & p {
+      width: 50%;
     }
   }
 }

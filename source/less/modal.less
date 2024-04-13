@@ -20,34 +20,20 @@
   &--reg {
     padding-bottom: 40px;
   }
-}
 
-.modal h2 {
-  margin-bottom: 30px;
+  & h2 {
+    margin-bottom: 30px;
+  }
+
+  & > .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .modal--show {
   display: block;
-}
-
-.modal__button-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background-image: url('../img/icons/close-icon.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
 .modal--contacts {

@@ -18,7 +18,7 @@
   <body class="page__body layout">
     <header class="page-header wrapper-content">
       <div class="page-header__wrapper">
-        <nav class="navigation layout--navigation">
+        <nav class="navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -459,7 +459,7 @@
         </div>
         <div class="search-section__filter">
           <h2>Поиск недвижимости в Кабардино-Балкарской Республике</h2>
-          <form class="filter" action="https://echo.htmlacademy.ru/courses">
+          <form class="filter filter-wrapper" action="https://echo.htmlacademy.ru/courses">
             <fieldset class="filter__fieldset filter__fieldset-js">
               <legend class="visually-hidden-desktop">Выберите тип сделки</legend>
               <button class="button button-filter button-filter--deal" type="button" aria-expanded="false" aria-controls="deal">
@@ -1301,6 +1301,7 @@
       <p><a href="blank.html">Карточка</a></p>
       <p><a href="auth.html">Auth</a></p>
       <p><a href="registration.html">Регистрация</a></p>
+      <p><a href="catalog.html">Каталог</a></p>
     </main>
     <footer class="footer">
       <div class="wrapper-content">
@@ -1332,7 +1333,7 @@
     </footer>
     <section class="modal modal--login auth auth--login">
       <h2 class="caption">Авторизация</h2>
-      <button class="button modal__button-close" type="button">
+      <button class="button button--close" type="button">
         <span class="visually-hidden">Закрыть окно авторизации</span>
       </button>
       <form class="auth__form" method="post" action="">
@@ -1375,7 +1376,7 @@
     </section>
     <section class="modal modal--reg auth auth--reg">
       <h2 class="caption">Регистрация</h2>
-      <button class="button modal__button-close" type="button">
+      <button class="button button--close" type="button">
         <span class="visually-hidden">Закрыть окно регистрации</span>
       </button>
       <form class="auth__form" method="post" action="">
@@ -1430,7 +1431,7 @@
     <section class="modal-location">
       <div class="modal-location__content">
         <h2 class="">Выберите регион/город</h2>
-        <button class="button modal-location__button-close" type="button">
+        <button class="button button--close" type="button">
           <span class="visually-hidden">Закрыть окно авторизации</span>
         </button>
         <div class="modal-location__wrapper">
