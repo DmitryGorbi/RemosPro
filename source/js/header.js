@@ -146,5 +146,5 @@ const buttonLocation = document.querySelector('.button-location');
 const modalLocation = document.querySelector('.modal-location');
 
 buttonLocation.addEventListener('click', () => {
-  modalLocation.classList.toggle('modal-location--show');
+  modalLocation.classList.toggle('show');
 });

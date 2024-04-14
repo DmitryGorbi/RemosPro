@@ -2304,9 +2304,6 @@ time {
   top: 0;
   right: 0;
 }
-.modal--show {
-  display: block;
-}
 .modal--contacts {
   width: 90%;
   border-color: #531d24;
@@ -2338,8 +2335,8 @@ time {
   width: 100%;
   height: 100vh;
   padding: 15px 30px 20px 30px;
-  border-top: 2px solid var(--blue);
-  background-color: var(--light-blue);
+  border-top: 2px solid var(--basic-green);
+  background-color: var(--white);
   z-index: 1;
 }
 @media (min-width: 1240px) {
@@ -2420,7 +2417,7 @@ time {
 }
 .modal-location__list li:not(:first-child):hover {
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--basic-green);
   border-radius: 5px;
 }
 @media (min-width: 1240px) {
@@ -3084,9 +3081,6 @@ time {
   .modal-search p {
     padding: 5px 10px;
   }
-}
-.modal-location--show {
-  display: block;
 }
 .modal-search--filter {
   top: 55px;
