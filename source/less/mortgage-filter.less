@@ -1,4 +1,4 @@
-.mortgageFilter {
+.mortgage-filter {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -16,11 +16,11 @@
     }
   }
 
-  .inputRange__wrapper:has(.input:focus-visible) {
+  .input-range__wrapper:has(.input:focus-visible) {
     border-color: var(--basic-green);
   }
 
-  .inputRange__wrapper:has(.input:hover) {
+  .input-range__wrapper:has(.input:hover) {
     border-color: var(--basic-green);
   }
 
@@ -30,12 +30,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .mortgageFilter {
+  .mortgage-filter {
     flex-direction: row;
     justify-content: space-between;
     column-gap: 15px;
 
-    & .inputRange {
+    & .input-range {
       flex-grow: 1;
     }
   }

@@ -87,31 +87,31 @@ const regModalLink = modalLogin.querySelector('.auth__form-link');
 const onButtonClose = (evt) => {
   let target = evt.target;
   if (target === buttonModalClose) {
-    modalLogin.classList.remove('modal--show');
+    modalLogin.classList.remove('show');
   }
 };
 
 const onEscClose = (evt) => {
   if (isEscEvent(evt)) {
-    modalLogin.classList.remove('modal--show');
+    modalLogin.classList.remove('show');
   }
 };
 
 buttonLogIn.addEventListener('click', (evt) => {
   evt.preventDefault();
-  modalLogin.classList.toggle('modal--show');
+  modalLogin.classList.toggle('show');
   modalLogin.addEventListener('click', onButtonClose);
   inputMail.focus();
 
-  if (!modalLogin.classList.contains('modal--show')) {
+  if (!modalLogin.classList.contains('show')) {
     modalLogin.removeEventListener('click', onButtonClose);
     document.removeEventListener('keydown', onEscClose);
   } else {
     document.addEventListener('keydown', onEscClose);
     regModalLink.addEventListener('click', (evt) => {
       evt.preventDefault();
-      modalLogin.classList.remove('modal--show');
-      modalReg.classList.add('modal--show');
+      modalLogin.classList.remove('show');
+      modalReg.classList.add('show');
     });
   }
 });
