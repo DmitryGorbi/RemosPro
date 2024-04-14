@@ -26,15 +26,14 @@ input[type='radio'] {
 
   &:checked + label .pseudo-radio,
   &:checked + label .pseudo-checkbox {
-    font-weight: 500;
     background-color: var(--light-blue);
     border-color: var(--basic-green);
-    color: var(--blue);
+    // color: var(--basic-green);
   }
 
   &:hover {
     border: 1px solid var(--basic-green);
-    color: var(--dark-blue);
+    color: var(--basic-green);
   }
 
   &:focus + label .pseudo-radio,
@@ -46,12 +45,6 @@ input[type='radio'] {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
   }
 }
-
-// .input-radio {
-//   @media (min-width: @tablet-width) {
-//     -webkit-appearance: block;
-//   }
-// }
 
 .pseudo-radio,
 .pseudo-checkbox {
@@ -65,8 +58,8 @@ input[type='radio'] {
   cursor: pointer;
 
   &:hover {
-    color: var(--dark-blue);
-    border-color: var(--blue);
+    color: var(--basic-green);
+    border-color: var(--basic-green);
   }
 }
 

@@ -16,7 +16,6 @@ const onTogglerClick = (item, evt) => {
   evt.preventDefault();
   const isOpen = item.getAttribute('aria-expanded') === 'false';
   item.setAttribute('aria-expanded', isOpen);
-  console.log('click');
 };
 
 const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
@@ -37,10 +36,8 @@ if (mediaQuery.matches) {
 
 const subMenu = mainNav.querySelectorAll('.submenu');
 const subMenuButtonIcon = mainNav.querySelectorAll('.nav__icon');
-console.log(subMenuButtonIcon);
 
 const mainNavLinks = mainNav.querySelectorAll('.nav__link span');
-// console.log(mainNavLinks.style.color = 'red')
 
 const subMenuButtons = mainNav.querySelectorAll('.nav__toggler');
 
@@ -136,7 +133,6 @@ document.addEventListener('keydown', () => {
 
 inputSearch[1].addEventListener('input', () => {
   popupLocation[1].style.display = 'block';
-  console.dir(inputSearch[1]);
 });
 
 document.addEventListener('keydown', () => {
