@@ -2084,16 +2084,16 @@ time {
     background-repeat: no-repeat;
   }
   .location__item-metro::before {
-    background-image: url('../img/icons/train-svgrepo-com.svg');
+    background-image: url('../img/icons/train.svg');
   }
   .location__item-area::before {
-    background-image: url('../img/icons/pin-location-svgrepo-com.svg');
+    background-image: url('../img/icons/pin.svg');
   }
   .location__item-city::before {
-    background-image: url('../img/icons/map-maps-and-location-svgrepo-com.svg');
+    background-image: url('../img/icons/map.svg');
   }
   .location__item-streets::before {
-    background-image: url('../img/icons/location-svgrepo-com.svg');
+    background-image: url('../img/icons/location.svg');
   }
 }
 @media (min-width: 768px) and (min-width: 1240px) {
