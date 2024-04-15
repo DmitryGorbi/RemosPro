@@ -1,0 +1,68 @@
+a {
+  text-decoration: none;
+  outline: none;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer) a {
+  color: inherit;
+
+  &:focus-visible {
+    // box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px rgb(166, 229, 255), 0 0 2px 3px rgb(0, 106, 255);
+    box-shadow: inset 0 0 0 1px rgb(255, 255, 255), inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
+  }
+}
+
+// green links
+
+:is(.nav-section, .footer) a {
+  color: var(--basic-green);
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  }
+}
+
+:is(.nav) a {
+  color: inherit;
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 1px rgb(255, 255, 255), inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
+  }
+}
+
+:is(.main-nav, .user-actions, .user-nav) svg {
+  fill: var(--basic-green);
+}
+
+// black links
+
+:is(.location, .new-offers__nav) a {
+  &:hover {
+    color: var(--basic-green);
+  }
+
+  &:focus-visible {
+    color: var(--basic-green);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  }
+
+  &:active {
+    color: red;
+  }
+}
+
+:is(.new-bldg) a {
+  &:hover {
+    color: inherit;
+  }
+}
+
+:is(.submenu, .new-buildings, .journal, .experts, .breadcrumbs, .gk-offers) a {
+  &:focus-visible {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  }
+}
