@@ -183,12 +183,15 @@ a:visited {
 :is(.main-nav, .user-actions, .user-nav) svg {
   fill: var(--basic-green);
 }
+:is(.location, .new-offers__nav) a {
+  border-radius: 5px;
+}
 :is(.location, .new-offers__nav) a:hover {
   color: var(--basic-green);
 }
 :is(.location, .new-offers__nav) a:focus-visible {
   color: var(--basic-green);
-  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
 :is(.location, .new-offers__nav) a:active {
   color: red;
@@ -765,10 +768,10 @@ input[type='radio'] {
   flex-wrap: wrap;
   gap: 8px;
 }
-.changeColor {
+.change-color {
   color: var(--basic-green);
 }
-.changeColorRotate {
+.change-color-rotate {
   transform: rotate(180deg);
   color: var(--basic-green);
 }
@@ -2065,7 +2068,7 @@ time {
   margin-left: 10px;
 }
 .location__item .link-underline {
-  padding-left: 10px;
+  padding: 6px 10px;
 }
 @media (min-width: 768px) {
   .location__item {
@@ -2095,13 +2098,7 @@ time {
 }
 @media (min-width: 768px) and (min-width: 1240px) {
   .location__item {
-    padding-left: 85px;
-  }
-  .location__item h3 {
-    margin-left: 0;
-  }
-  .location__item .link-underline {
-    padding-left: 0;
+    padding-left: 75px;
   }
 }
 .location__list {
@@ -2122,16 +2119,15 @@ time {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  padding: 5px 10px;
+  padding: 6px 10px;
 }
 @media (min-width: 1240px) {
   .location__list li a {
-    margin-left: -10px;
+    display: inline-block;
   }
 }
 @media (min-width: 768px) {
   .location__list {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     -moz-column-gap: 20px;
          column-gap: 20px;

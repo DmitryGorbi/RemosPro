@@ -14,7 +14,7 @@
   }
 
   & .link-underline {
-    padding-left: 10px;
+    padding: 6px 10px;
   }
 
   @media (min-width: @tablet-width) {
@@ -47,15 +47,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 85px;
-
-      & h3 {
-        margin-left: 0;
-      }
-
-      & .link-underline {
-        padding-left: 0;
-      }
+      padding-left: 75px;
     }
   }
 }
@@ -77,16 +69,15 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-      padding: 5px 10px;
+      padding: 6px 10px;
 
       @media (min-width: @desktop-width) {
-        margin-left: -10px;
+        display: inline-block;
       }
     }
   }
 
   @media (min-width: @tablet-width) {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
   }

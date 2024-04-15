@@ -60,10 +60,14 @@ subMenuButtons.forEach((item, index) => {
       mainNavLinks[index].style.color = '#20a052';
       subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
       subMenuButtonIcon[index].style.fill = '#20a052';
+      // mainNavLinks[index].classList.add('change-color');
+      // subMenuButtonIcon[index].classList.add('change-color-rotate');
     } else {
       mainNavLinks[index].style.color = 'inherit';
       subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
       subMenuButtonIcon[index].style.fill = 'inherit';
+      // mainNavLinks[index].classList.remove('change-color');
+      // subMenuButtonIcon[index].classList.remove('change-color-rotate');
     }
   });
 });
