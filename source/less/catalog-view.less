@@ -1,0 +1,49 @@
+.catalog-view {
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+
+  & p {
+    font-size: 14px;
+  }
+
+  & p:first-child {
+    font-weight: 500;
+  }
+
+  & p:nth-child(2) {
+    display: none;
+  }
+
+  & p:nth-child(3) {
+    margin-left: auto;
+    margin-right: 5px;
+
+    & span {
+      display: none;
+    }
+  }
+
+  & p:last-child {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    & p {
+      font-size: 15px;
+    }
+
+    & p:nth-child(2) {
+      display: block;
+    }
+
+    & p:nth-child(3) {
+    }
+
+    & p:last-child {
+      display: block;
+    }
+  }
+}

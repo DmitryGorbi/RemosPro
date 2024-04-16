@@ -6,18 +6,20 @@
   & ul {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20px;
-    padding: 0 3px;
+    column-gap: 15px;
+    padding: 2px 5px;
     font-size: 14px;
-    box-shadow: 0 0 10px var(--light-gray);
+    // box-shadow: 0 0 10px var(--light-gray);
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
 
     & a {
       display: flex;
       justify-content: space-between;
       column-gap: 5px;
-      padding: 7px;
+      padding: 7px 5px;
 
       & span:first-child {
+        font-weight: 300;
         color: var(--basic-green);
       }
 
@@ -46,7 +48,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 20px;
+      padding: 0;
       row-gap: 3px;
+      box-shadow: none;
+
+      & a {
+        padding: 10px 0;
+      }
     }
   }
 
