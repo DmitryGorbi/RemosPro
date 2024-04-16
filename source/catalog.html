@@ -450,10 +450,23 @@
 
     <main id="main" class="wrapper-content page-main catalog">
       <h1 class="caption-catalog">Продажа квартир в новостройках ЖК Измайловский Парк, Москва</h1>
-      <section class="catalog__actions">
-        <button class="button" type="button"><span>Фильтр</span></button>
-        <button class="button" type="button"><span>Карта</span></button>
-        <button class="button" type="button"><span>Подписка</span></button>
+      <section class="catalog-actions">
+        <button class="button" type="button">
+          <svg class="" width="18px" height="18px" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
+          </svg>
+          <span>Фильтр</span>
+        </button>
+        <button class="button" type="button">
+          <svg class="" width="18px" height="18px" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#on__map"></use></svg
+          ><span>Карта</span>
+        </button>
+        <button class="button" type="button">
+          <svg class="" width="18px" height="18px" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#mail__icon"></use></svg
+          ><span>Подписка</span>
+        </button>
       </section>
       <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/courses">
         <div class="filter__header">
@@ -1616,32 +1629,56 @@
         <ol class="">
           <li><a href="">Главная</a></li>
           <li><a href="">Недвижимость к Калининграде</a></li>
-          <li>Новстройки</li>
+          <li>Новостройки</li>
         </ol>
       </nav>
-      <section class="catalog__links">
-        <h2 class="visually-hidden">Быстрые ссылки</h2>
+      <aside class="quick-links">
+        <h2 class="">Рекомендуем посмотреть</h2>
         <ul>
-          <li><a href="">Вторичка</a></li>
-          <li><a href="">Новостройки</a></li>
-          <li><a href="">Студии</a></li>
-          <li><a href="">Евротрешки</a></li>
-          <li><a href="">Евродвушки</a></li>
-          <li><a href="">2-комнатные</a></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <a href="">
+              <span>Вторичка</span>
+              <span></span>
+              <span>99 000</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Новостройки</span>
+              <span></span>
+              <span>50 000</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Студии</span>
+              <span></span>
+              <span>11 000</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Евротрешки</span>
+              <span></span>
+              <span>2 000</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Евродвушки</span>
+              <span></span>
+              <span>12 500</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>2-комнатные</span>
+              <span></span>
+              <span>34000</span>
+            </a>
+          </li>
         </ul>
-      </section>
+      </aside>
       <section class="catalog__view">
         <p>Всего объектов: 45</p>
         <p>Подписаться на новые</p>
@@ -1940,6 +1977,6 @@
       </div>
     </section>
     <script src="js/header.js"></script>
-    <script src="js/header.js"></script>
+    <script src="js/filter.js"></script>
   </body>
 </html>

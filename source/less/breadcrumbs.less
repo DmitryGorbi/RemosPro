@@ -1,18 +1,10 @@
 .breadcrumbs {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-
-    & ol {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-
-    & li:not(:last-child) {
-      margin-right: 20px;
-    }
+  & ol {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
 
     & li {
       position: relative;
@@ -20,7 +12,7 @@
       &:not(:last-child)::after {
         position: absolute;
         content: '';
-        top: 6px;
+        top: 10px;
         right: -13px;
         width: 6px;
         height: 6px;
@@ -28,7 +20,16 @@
         border-right: 1px solid var(--gray);
         transform: rotate(45deg);
       }
+
+      & a {
+        display: inline-block;
+        padding: 5px 0;
+      }
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    // display: block;
   }
 }
 

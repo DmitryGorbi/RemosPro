@@ -1,0 +1,26 @@
+.catalog-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5px;
+  font-size: 13px;
+
+  & .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: var(--extra-light-gray);
+
+    &:active {
+      color: var(--white);
+      background-color: var(--basic-green);
+      border-radius: 5px;
+    }
+  }
+
+  & .button:not(:last-child) {
+    // border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

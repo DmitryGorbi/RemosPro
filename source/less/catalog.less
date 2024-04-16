@@ -3,30 +3,11 @@
 
   & h1 {
     order: 1;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
-  .catalog__actions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 30px;
-    font-size: 14px;
-    border-radius: 5px;
-    background-color: var(--light-green);
-
-    & .button {
-      padding: 10px 0;
-
-      &:active {
-        color: var(--white);
-        background-color: var(--basic-green);
-        border-radius: 5px;
-      }
-    }
-
-    & .button:not(:last-child) {
-      border-right: 1px solid rgba(0, 0, 0, 0.1);
-    }
+  .catalog-actions {
+    margin-bottom: 10px;
   }
 
   .catalog__filter {
@@ -34,14 +15,12 @@
   }
 
   & .breadcrumbs {
-    margin-top: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.5);
   }
 
-  & .catalog__links {
-    // display: none;
+  & .quick-links {
     order: 2;
     margin-bottom: 20px;
   }
@@ -51,10 +30,18 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    & p:nth-child(2) {
+      display: none;
+    }
 
     & p:nth-child(3) {
       margin-left: auto;
+    }
+
+    & p:last-child {
+      display: none;
     }
   }
 
@@ -63,22 +50,50 @@
   }
 
   @media (min-width: @tablet-width) {
-    & .catalog__actions {
-      margin-bottom: 0;
+    .breadcrumbs {
+      margin-bottom: 25px;
+    }
+
+    & h1 {
+      margin-bottom: 25px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    & h1 {
-      // font-size: 50px;
+    .catalog-actions {
+      display: none;
     }
 
     & .catalog__filter {
       display: block;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--light-gray);
     }
 
-    .catalog__actions {
-      display: none;
+    .breadcrumbs {
+      margin-bottom: 45px;
+      margin-top: 15px;
+    }
+
+    & h1 {
+      margin-bottom: 45px;
+    }
+
+    .quick-links {
+      margin-bottom: 45px;
+    }
+
+    & .catalog__view {
+      & p:nth-child(2) {
+        display: block;
+      }
+
+      & p:nth-child(3) {
+      }
+
+      & p:last-child {
+        display: block;
+      }
     }
   }
 }
