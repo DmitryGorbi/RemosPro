@@ -19,7 +19,7 @@
   <body class="page__body layout">
     <header class="page-header wrapper-content">
       <div class="page-header__wrapper">
-        <nav class="navigation layout--navigation">
+        <nav class="navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -28,7 +28,7 @@
               <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
             </svg>
           </a>
-          <ul id="nav" class="nav">
+          <ul id="main-nav" class="nav">
             <li class="nav__item">
               <a class="nav__link" href="#">
                 <span>Продажа</span>
@@ -39,64 +39,66 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-sale" class="submenu submenu--links">
-                <p class="submenu__title">Жилая недвижимость</p>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#"><span>Квартиры</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Дома и дачи</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Земельные участоки</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Комнаты</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Таунхаусы</span></a>
-                  </li>
-                </ul>
-                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#"><span>Офис</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ПСН</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Здание</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Производство</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Торговая площадь</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Склад</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Готовый бизнес</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Коммерческая земля</span></a>
-                  </li>
-                </ul>
-                <p class="submenu__title">Гаражи</p>
-                <ul class="submenu__list submenu__list--links">
-                  <li class="">
-                    <a class="" href="#">Гараж</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Гаражный бокс</a>
-                  </li>
-                  <li class="">
-                    <a class="" href="#">Машиноместо</a>
-                  </li>
-                </ul>
+              <div id="submenu-sale" class="nav__submenu">
+                <div class="submenu submenu--links">
+                  <p class="submenu__title">Жилая недвижимость</p>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Квартиры</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Дома и дачи</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Земельные участоки</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Комнаты</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Таунхаусы</span></a>
+                    </li>
+                  </ul>
+                  <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Офис</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>ПСН</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Здание</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Производство</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Торговая площадь</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Склад</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Готовый бизнес</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Коммерческая земля</span></a>
+                    </li>
+                  </ul>
+                  <p class="submenu__title">Гаражи</p>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Гараж</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Гаражный бокс</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Машиноместо</span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="nav__item">
@@ -109,61 +111,63 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-rent" class="submenu submenu--links">
-                <p class="submenu__title">Жилая недвижимость</p>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#"><span>Квартиры</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Дома и дачи</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Комнаты</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Таунхаусы</span></a>
-                  </li>
-                </ul>
-                <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#"><span>Офис</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ПСН</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Здание</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Производство</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Торговая площадь</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Склад</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Готовый бизнес</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Коммерческая земля</span></a>
-                  </li>
-                </ul>
-                <p class="submenu__title">Гаражи</p>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#">Гараж</a>
-                  </li>
-                  <li>
-                    <a href="#">Гаражный бокс</a>
-                  </li>
-                  <li>
-                    <a href="#">Машиноместо</a>
-                  </li>
-                </ul>
+              <div id="submenu-rent" class="nav__submenu">
+                <div class="submenu submenu--links">
+                  <p class="submenu__title">Жилая недвижимость</p>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Квартиры</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Дома и дачи</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Комнаты</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Таунхаусы</span></a>
+                    </li>
+                  </ul>
+                  <a class="submenu__title" href="#">Коммерческая недвижимость</a>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Офис</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>ПСН</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Здание</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Производство</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Торговая площадь</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Склад</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Готовый бизнес</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Коммерческая земля</span></a>
+                    </li>
+                  </ul>
+                  <p class="submenu__title">Гаражи</p>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Гараж</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Гаражный бокс</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Машиноместо</span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="nav__item">
@@ -176,100 +180,87 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-new-bldg" class="submenu submenu--bldg">
-                <p class="submenu__title">Строящиеся ЖК</p>
-                <ul class="submenu__list submenu__list--bldg">
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3>ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3>ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3 class="">ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <li class="bldg-nav">
-                    <a class="bldg-nav__wrapper" href="#">
-                      <h3>ЖК Shagal</h3>
-                      <img src="img/bldg/bldg1.webp" alt="" width="80" />
-                      <p class="bldg-nav__fix">2 кв. 2025</p>
-                      <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
-                    </a>
-                  </li>
-                  <!-- <li>
-                    <a href="#"><span>ЖК Юбилейный</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Крылья</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Небоскрёб</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Квартал Житейский</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Воскрешение</span></a>
-                  </li> -->
-                </ul>
-                <p class="submenu__link-wrapper">
-                  <a href="#"><span>Перейти в каталог новостроек</span></a>
-                </p>
+              <div id="submenu-new-bldg" class="nav__submenu">
+                <div class="submenu submenu--bldg">
+                  <p class="submenu__title">Строящиеся ЖК в Кабардино-Балкарии</p>
+                  <ul class="submenu__list submenu__list--bldg">
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="gk.html">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3>ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3>ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3 class="">ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                    <li class="bldg-nav">
+                      <a class="bldg-nav__wrapper" href="#">
+                        <h3>ЖК Shagal</h3>
+                        <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
+                        <p class="bldg-nav__fix">2 кв. 2025</p>
+                        <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="submenu__link-wrapper">
+                    <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nav__item">
@@ -282,91 +273,93 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="professionals" class="submenu submenu--expert">
-                <p class="submenu__title">Риэлторы</p>
-                <ul class="submenu__list submenu__list--expert">
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
-                      <div>
-                        <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>На Ремос с 2020</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Румянцева Татьяна</h4>
-                      <div>
-                        <img src="img/experts/realtors/realtor_1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>Частный риэлтор</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Румянцева Татьяна</h4>
-                      <div>
-                        <img src="img/experts/realtors/realtor_2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>На Ремос с 2020</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Румянцева Татьяна</h4>
-                      <div>
-                        <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>На Ремос с 2020</p>
-                    </a>
-                  </li>
-                </ul>
-                <p class="submenu__link-wrapper">
-                  <a href="#"><span>Список риэлторов</span></a>
-                </p>
-                <p class="submenu__title">Агентства недвижимости</p>
-                <ul class="submenu__list submenu__list--expert">
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Max Realty Max</h4>
-                      <div>
-                        <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>56 объявлений</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Замоскворечье</h4>
-                      <div>
-                        <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>1 000 объявлений</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Градомир</h4>
-                      <div>
-                        <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>25 объявления</p>
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="expert-card" href="#">
-                      <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
-                      <div>
-                        <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" />
-                      </div>
-                      <p>25 объявления</p>
-                    </a>
-                  </li>
-                </ul>
-                <p class="submenu__link-wrapper">
-                  <a href="#"><span>Список агентств</span></a>
-                </p>
+              <div id="professionals" class="nav__submenu">
+                <div class="submenu submenu--expert">
+                  <p class="submenu__title">Риэлторы</p>
+                  <ul class="submenu__list submenu__list--expert">
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
+                        <div>
+                          <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>На Ремос с 2020</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Румянцева Татьяна</h4>
+                        <div>
+                          <img src="img/experts/realtors/realtor_1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>Частный риэлтор</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Румянцева Татьяна</h4>
+                        <div>
+                          <img src="img/experts/realtors/realtor_2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>На Ремос с 2020</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Румянцева Татьяна</h4>
+                        <div>
+                          <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>На Ремос с 2020</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="submenu__link-wrapper">
+                    <a class="link-underline" href="#"><span>Список риэлторов</span></a>
+                  </p>
+                  <p class="submenu__title">Агентства недвижимости</p>
+                  <ul class="submenu__list submenu__list--expert">
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Max Realty Max</h4>
+                        <div>
+                          <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>56 объявлений</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Замоскворечье</h4>
+                        <div>
+                          <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>1 000 объявлений</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Градомир</h4>
+                        <div>
+                          <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>25 объявления</p>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a class="expert-card" href="#">
+                        <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
+                        <div>
+                          <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
+                        </div>
+                        <p>25 объявления</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="submenu__link-wrapper">
+                    <a class="link-underline" href="#"><span>Список агентств</span></a>
+                  </p>
+                </div>
               </div>
             </li>
             <li class="nav__item">
@@ -379,25 +372,27 @@
                   <use xlink:href="img/icons/sprite.svg#arrow"></use>
                 </svg>
               </button>
-              <div id="submenu-mortgage" class="submenu submenu--links">
-                <p class="submenu__title">Ипотечные сервисы</p>
-                <ul class="submenu__list submenu__list--links">
-                  <li>
-                    <a href="#"><span>Подбор ипотечных программ</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Ипотечный калькулятор</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Калькулятор с досрочным погашением</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Оформить заявку на ипотеку</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>ЖК Воскрешение</span></a>
-                  </li>
-                </ul>
+              <div id="submenu-mortgage" class="nav__submenu">
+                <div class="submenu submenu--links">
+                  <p class="submenu__title">Ипотечные сервисы</p>
+                  <ul class="submenu__list submenu__list--links">
+                    <li>
+                      <a href="#"><span>Подбор ипотечных программ</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Ипотечный калькулятор</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Калькулятор с досрочным погашением</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>Оформить заявку на ипотеку</span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span>ЖК Воскрешение</span></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>

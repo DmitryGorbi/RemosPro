@@ -96,13 +96,37 @@
 }
 
 @media (max-width: 1239px) {
-  .nav__toggler[aria-expanded='false'] + .submenu {
+  .nav__toggler[aria-expanded='false'] + .nav__submenu {
     display: none;
   }
 }
 
+.nav__submenu {
+  grid-column: 1/-1;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 63px;
+    left: 50%;
+    margin-left: -50vw;
+    z-index: 1;
+    width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.6s;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--white);
+    box-shadow: 0 5px 10px 0 var(--light-black);
+
+    &--gk {
+      top: 61px;
+      border-top: 1px solid var(--light-gray);
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
-  .nav__item:hover .submenu {
+  .nav__item:hover .nav__submenu {
     opacity: 1;
     transition-property: opacity, visibility;
     transition-duration: 0.1s, 0.1s;

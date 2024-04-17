@@ -34,7 +34,7 @@ if (mediaQuery.matches) {
   document.removeEventListener('click', clickBurgerToggler);
 }
 
-const subMenu = mainNav.querySelectorAll('.submenu');
+const subMenu = mainNav.querySelectorAll('.nav__submenu');
 const subMenuButtonIcon = mainNav.querySelectorAll('.nav__icon');
 
 const mainNavLinks = mainNav.querySelectorAll('.nav__link span');

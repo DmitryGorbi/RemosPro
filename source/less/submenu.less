@@ -1,7 +1,4 @@
-// скрытие и показ submenu по hover в nav.less
-
 .submenu {
-  grid-column: 1/-1;
   padding: 10px 30px;
   background-color: var(--light);
   border-bottom: 1px solid var(--light-gray);
@@ -9,30 +6,17 @@
   @media (min-width: @desktop-width) {
     display: grid;
     row-gap: 5px;
-    position: absolute;
-    top: 63px;
-    left: 50%;
-    width: 1200px;
-    height: 430px;
+    margin: 0 auto;
     margin-top: 1px;
     padding: 40px 100px 40px 250px;
-    visibility: hidden;
-    opacity: 0;
-    transition-delay: 0.6s;
-    transform: translateX(-50%);
-    z-index: 1;
+    width: 1200px;
+    height: 430px;
     background-color: var(--white);
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 5px 10px 0 var(--light-black);
-
-    &--gk {
-      top: 60px;
-      border-top: 1px solid var(--light-gray);
-    }
   }
 }
 
-.submenu--links, .submenu--expert {
+.submenu--links,
+.submenu--expert {
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, min-content);
