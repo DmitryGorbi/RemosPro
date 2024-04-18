@@ -2571,52 +2571,73 @@ time {
   row-gap: 0;
 }
 .catalog h1 {
-  order: 1;
   margin-bottom: 20px;
 }
-.catalog .catalog-actions {
-  margin-bottom: 10px;
-}
-.catalog .catalog__filter {
-  display: none;
-}
-.catalog .breadcrumbs {
+.catalog > p {
   margin-bottom: 20px;
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.5);
+}
+.catalog .catalog-header {
+  order: -1;
 }
 .catalog .quick-links {
-  order: 2;
-  margin-bottom: 30px;
-}
-.catalog .catalog__list {
-  order: 3;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  .catalog .breadcrumbs {
-    margin-bottom: 25px;
-  }
   .catalog h1 {
     margin-bottom: 25px;
   }
 }
 @media (min-width: 1240px) {
-  .catalog .catalog-actions {
+  .catalog h1 {
+    margin-bottom: 25px;
+  }
+  .catalog > p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .catalog .quick-links {
+    margin-bottom: 45px;
+  }
+}
+.catalog-header .catalog-actions {
+  margin-bottom: 10px;
+}
+.catalog-header .filter {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+  z-index: 10;
+  background-color: var(--white);
+}
+.catalog-header .breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px) {
+  .catalog-header .filter {
+    display: none;
+    position: static;
+  }
+  .catalog-header .breadcrumbs {
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 1240px) {
+  .catalog-header .catalog-actions {
     display: none;
   }
-  .catalog .catalog__filter {
+  .catalog-header .filter {
     display: block;
+    position: static;
     padding-bottom: 25px;
     border-bottom: 1px solid var(--light-gray);
   }
-  .catalog .breadcrumbs {
-    margin-bottom: 45px;
+  .catalog-header .breadcrumbs {
     margin-top: 15px;
-  }
-  .catalog h1 {
-    margin-bottom: 45px;
-  }
-  .catalog .quick-links {
     margin-bottom: 45px;
   }
 }
@@ -2678,7 +2699,7 @@ time {
   .quick-links h2 {
     display: block;
     margin-bottom: 7px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
   }
   .quick-links ul {
@@ -2702,69 +2723,62 @@ time {
     row-gap: 3px;
   }
 }
-.catalog-view {
-  order: 2;
+.catalog-list .catalog-list__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   font-size: 14px;
 }
-.catalog-view p {
-  font-weight: 500;
-}
-.catalog-view button:first-of-type {
+.catalog-list .catalog-list__actions button:first-of-type {
   display: none;
 }
-.catalog-view .catalog-view__sort {
+.catalog-list .catalog-list__actions .catalog-list__actions-sort {
   display: flex;
   align-items: center;
   margin-left: auto;
-  padding: 3px;
+  padding: 5px;
 }
-.catalog-view .catalog-view__sort span {
-  display: none;
-}
-.catalog-view a {
+.catalog-list .catalog-list__actions a {
   display: none;
 }
 @media (min-width: 1240px) {
-  .catalog-view {
+  .catalog-list .catalog-list__actions {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin-bottom: 5px;
     font-size: 15px;
   }
-  .catalog-view button:first-of-type {
+  .catalog-list .catalog-list__actions button:first-of-type {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     -moz-column-gap: 5px;
          column-gap: 5px;
-    margin-left: auto;
   }
-  .catalog-view .catalog-view__sort {
-    margin-left: 0;
+  .catalog-list .catalog-list__actions .catalog-list__actions-sort {
     padding: 0;
   }
-  .catalog-view .catalog-view__sort span {
+  .catalog-list .catalog-list__actions .catalog-list__actions-sort span {
     display: block;
   }
-  .catalog-view .catalog-view__sort svg {
+  .catalog-list .catalog-list__actions .catalog-list__actions-sort svg {
     width: 30px;
     height: 30px;
   }
-  .catalog-view a {
+  .catalog-list .catalog-list__actions a {
     display: flex;
     align-items: center;
     -moz-column-gap: 2px;
          column-gap: 2px;
   }
 }
-.catalogOffer {
+.catalog-offer {
   border: 1px solid var(--light-gray);
   height: 350px;
   border-radius: 5px;
 }
-.catalogOffer:not(:last-of-type) {
+.catalog-offer:not(:last-of-type) {
   margin-bottom: 20px;
 }
 .filter__header {

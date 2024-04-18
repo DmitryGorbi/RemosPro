@@ -1,0 +1,51 @@
+.catalog-header {
+  .catalog-actions {
+    margin-bottom: 10px;
+  }
+
+  .filter {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    z-index: 10;
+    background-color: var(--white);
+  }
+
+  & .breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  @media (min-width: @tablet-width) {
+    .filter {
+      display: none;
+      position: static;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .catalog-actions {
+      display: none;
+    }
+
+    & .filter {
+      display: block;
+      position: static;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .breadcrumbs {
+      margin-top: 15px;
+      margin-bottom: 45px;
+    }
+  }
+}
