@@ -1,7 +1,9 @@
 .deal {
-  @media (max-width: @mobile-width-only) {
-    display: flex;
-    column-gap: 7px;
+  display: flex;
+  column-gap: 7px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
   }
 
   @media (min-width: @tablet-width) {

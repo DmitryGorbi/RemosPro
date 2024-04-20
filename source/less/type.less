@@ -1,10 +1,16 @@
 .type {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   margin-top: 5px;
   padding: 10px 0;
   border: 1px solid var(--light-gray);
   background-color: var(--light);
 
   @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0;
     padding: 0 0 10px 0;
     margin-top: 7px;
     background-color: transparent;
