@@ -626,13 +626,13 @@
                     <label for="min__price" class="price__label">
                       <span class="visually-hidden">Минимальная цена</span>
                     </label>
-                    <input id="min__price" class="input input--field" type="number" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
+                    <input id="min__price" class="input input--field" type="number" min="" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
                   </li>
                   <li class="price__item">
                     <label for="max__price" class="price__label">
                       <span class="visually-hidden">Максимальная цена</span>
                     </label>
-                    <input id="max__price" class="input input--field" type="number" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
+                    <input id="max__price" class="input input--field" type="number" max="" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
                   </li>
                 </ul>
                 <div class="price__switch">

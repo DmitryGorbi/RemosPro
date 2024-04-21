@@ -3,8 +3,6 @@
   flex-direction: column;
   row-gap: 20px;
   font-size: 15px;
-  // width: 100%;
-  overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
     row-gap: 0;
@@ -48,7 +46,7 @@
     row-gap: 25px;
     height: calc(100% - 50px - 80px);
     padding: 20px 30px 20px 30px;
-    overflow: auto;
+    overflow-y: auto;
     border-top: 1px solid var(--light-gray);
     border-bottom: 1px solid var(--light-gray);
   }
@@ -175,19 +173,28 @@
 }
 
 .filter-add__label {
-  &--icon {
-    @media (max-width: @mobile-width-only) {
+  @media (max-width: @mobile-width-only) {
+    &--miter,
+    &--sotka {
       position: relative;
 
       &::after {
         position: absolute;
-        content: 'м²';
         top: 14px;
         right: 10px;
         width: 16px;
         height: 20px;
         color: var(--gray);
       }
+    }
+
+    &--miter::after {
+      content: 'м²';
+    }
+
+    &--sotka::after {
+      content: 'сот.';
+      right: 20px;
     }
   }
 
@@ -242,7 +249,12 @@
   display: flex;
   margin: auto;
 
+  & .button-main {
+    display: none;
+  }
+
   & > .button > span {
+    text-wrap: nowrap;
     border-bottom: 1px dashed var(--basic-green);
   }
 
@@ -251,5 +263,9 @@
     column-gap: 35px;
     min-height: 80px;
     max-height: 80px;
+
+    & .button-main {
+      display: block;
+    }
   }
 }

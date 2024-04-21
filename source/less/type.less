@@ -8,9 +8,7 @@
   background-color: var(--light);
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 0;
+    flex-direction: row;
     padding: 0 0 10px 0;
     margin-top: 7px;
     background-color: transparent;
@@ -20,18 +18,13 @@
 .type__title {
   margin: 0;
   padding: 0 10px;
-  font-weight: 700;
+  font-weight: 500;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
     padding: 10px;
     border-bottom: 1px solid var(--light-gray);
     background-color: var(--extra-light-gray);
-
-    &:nth-of-type(2) {
-      grid-row: 1/2;
-      grid-column: 2/3;
-    }
   }
 }
 
