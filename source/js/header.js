@@ -123,6 +123,7 @@ buttonLogIn.addEventListener('click', (evt) => {
 //
 let inputSearch = document.querySelectorAll('.input--modal');
 let popupLocation = document.querySelectorAll('.modal-search');
+console.log(inputSearch);
 
 inputSearch[0].addEventListener('input', () => {
   popupLocation[0].style.display = 'block';

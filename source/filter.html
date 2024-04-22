@@ -14,7 +14,7 @@
       <form class="filter" action="https://echo.htmlacademy.ru/courses">
         <div class="filter__header">
           <h2>Фильтр поиска</h2>
-          <button class="button button--close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+          <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
         </div>
         <div class="filter-wrapper wrapper-content">
           <fieldset class="filter__fieldset filter__fieldset-js">
@@ -53,36 +53,36 @@
             <div id="type" class="filter__select filter__select-type filter__select--disabled">
               <div class="type">
                 <div>
-                  <p class="type__title">Жилая недвижимость</p>
+                  <p class="type__title">Жилая</p>
                   <ul>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
                       <label for="flat">
-                        <span class="pseudo-radio">Квартиру</span>
+                        <span class="pseudo-radio">Квартира</span>
                       </label>
                     </li>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Квартиру в новостройке" />
                       <label for="new__flat">
-                        <span class="pseudo-radio">Квартиру в новостройке</span>
+                        <span class="pseudo-radio">Квартира в новостройке</span>
                       </label>
                     </li>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="second__hand__flat" value="Квартиру на вторичке" />
                       <label for="second__hand__flat">
-                        <span class="pseudo-radio">Квартиру на вторичке</span>
+                        <span class="pseudo-radio">Квартира на вторичке</span>
                       </label>
                     </li>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="part__flat" value="Долю в квартире" />
                       <label for="part__flat">
-                        <span class="pseudo-radio">Долю в квартире</span>
+                        <span class="pseudo-radio">Доля в квартире</span>
                       </label>
                     </li>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="room" value="Комнату" />
                       <label for="room">
-                        <span class="pseudo-radio">Комнату</span>
+                        <span class="pseudo-radio">Комната</span>
                       </label>
                     </li>
                     <li class="type__item">
@@ -100,7 +100,7 @@
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="part__house" value="Долю в доме" />
                       <label for="part__house">
-                        <span class="pseudo-radio">Долю в доме</span>
+                        <span class="pseudo-radio">Доля в доме</span>
                       </label>
                     </li>
                     <li class="type__item">
@@ -112,7 +112,7 @@
                   </ul>
                 </div>
                 <div>
-                  <p class="type__title">Коммерческая недвижимость</p>
+                  <p class="type__title">Коммерческая</p>
                   <ul>
                     <li class="type__item">
                       <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
@@ -227,6 +227,25 @@
               <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
               <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
             </div>
+            <div class="selected-tags">
+              <ul>
+                <li>
+                  <span>м. Войковская</span>
+                  <span
+                    ><button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button></span
+                  >
+                </li>
+
+                <li>м. Водный стадион</li>
+              </ul>
+            </div>
+            <div class="modal-search modal-search--filter">
+              <p>Алтайсткий край</p>
+              <p>Калининградская область</p>
+              <p>Самарская область</p>
+              <p>Республика Татарстан</p>
+              <p>Ленинградская область</p>
+            </div>
           </fieldset>
 
           <fieldset class="filter__fieldset filter__fieldset-add">
@@ -241,7 +260,7 @@
               <div class="filter-add">
                 <div class="filter-add__header visually-hidden-mobile">
                   <h3 class="filter-add__title">Фильтры</h3>
-                  <button type="button" class="button button--close" aria-expanded="false"><span class="visually-hidden">Закрыть фильтр</span></button>
+                  <button type="button" class="button button-close" aria-expanded="false"><span class="visually-hidden">Закрыть фильтр</span></button>
                 </div>
                 <div class="filter-add__container">
                   <fieldset class="filter__fieldset filter-add__fieldset">

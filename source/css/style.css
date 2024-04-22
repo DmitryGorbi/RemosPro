@@ -335,18 +335,18 @@ a:visited {
 .button--text {
   padding: 7px 5px;
 }
-.button--close {
+.button-close {
   position: relative;
   width: 45px;
   height: 45px;
 }
-.button--close:hover {
+.button-close:hover {
   background-color: var(--extra-light-gray);
 }
-.button--close:active {
+.button-close:active {
   background-color: var(--active);
 }
-.button--close::after {
+.button-close::after {
   content: '';
   position: absolute;
   top: 0;
@@ -2977,13 +2977,17 @@ time {
   margin-top: 5px;
   padding: 10px 0;
   border: 1px solid var(--light-gray);
+  border-radius: 5px;
   background-color: var(--light);
 }
 @media (min-width: 768px) {
   .type {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 0 10px 0;
-    margin-top: 7px;
+    margin-top: 0;
+    width: 450px;
+    border: none;
     background-color: transparent;
   }
 }
@@ -2997,7 +3001,6 @@ time {
     margin-bottom: 10px;
     padding: 10px;
     border-bottom: 1px solid var(--light-gray);
-    background-color: var(--extra-light-gray);
   }
 }
 .type__item:not(:last-child) {
@@ -3006,6 +3009,12 @@ time {
 .type__item label .pseudo-radio {
   position: relative;
   border: none;
+}
+@media (min-width: 768px) {
+  .type__item label .pseudo-radio {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
 }
 .type__item > input:checked + label > span::after {
   position: absolute;
@@ -3129,7 +3138,7 @@ time {
     border: 1px solid var(--gray);
   }
   .search--locate .input--field {
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
   }
   .search--locate input:focus {
     box-shadow: none;
@@ -3208,6 +3217,7 @@ time {
 .modal-search {
   display: none;
   position: absolute;
+  top: 55px;
   z-index: 1;
   padding: 10px 0;
   width: 100%;
@@ -3230,7 +3240,6 @@ time {
   }
 }
 .modal-search--filter {
-  top: 55px;
   left: 0;
 }
 @media (min-width: 768px) {
@@ -3238,9 +3247,6 @@ time {
     top: 44px;
     height: 500px;
   }
-}
-.modal-search--location {
-  top: 55px;
 }
 @media (min-width: 768px) {
   .modal-search--location {
@@ -3252,6 +3258,27 @@ time {
     top: 48px;
     width: 50%;
   }
+}
+.selected-tags ul {
+  display: flex;
+  gap: 5px;
+}
+.selected-tags ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 30px 0 8px;
+  border-radius: 5px;
+  background-color: var(--extra-light-gray);
+}
+.selected-tags ul li .button {
+  width: 20px;
+  height: 20px;
+}
+.selected-tags ul li .button::after {
+  width: 20px;
+  height: 20px;
 }
 .filter-add {
   display: flex;
