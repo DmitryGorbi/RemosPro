@@ -42,6 +42,14 @@
 .nav__item {
   display: grid;
   grid-template-columns: 1fr max-content;
+
+  &:not(:last-of-type) span {
+    border-right: 1px solid var(--gray);
+
+    @media (min-width: @desktop-width) {
+      border: none;
+    }
+  }
 }
 
 .nav__link {
@@ -72,12 +80,9 @@
   }
 }
 
-.nav__link span {
-  display: block;
-  border-right: 1px solid var(--gray);
-
-  @media (min-width: @desktop-width) {
-    border: none;
+.nav__link {
+  & span {
+    display: block;
   }
 }
 
