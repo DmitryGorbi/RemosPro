@@ -18,7 +18,6 @@
   align-items: center;
   margin: 0 -15px;
   padding: 10px 15px 8px 15px;
-  border-bottom: 1px solid var(--light-gray);
 
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -28,7 +27,16 @@
 }
 
 .page-header--gk {
-  & .page-header__wrapper {
+  & .page-header__border {
     border-bottom: none;
   }
+}
+
+.page-header__border {
+  position: absolute;
+  top: 61px;
+  border-bottom: 1px solid var(--light-gray);
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
 }
