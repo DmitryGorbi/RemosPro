@@ -2607,6 +2607,24 @@ time {
     margin-bottom: 45px;
   }
 }
+.page__catalog2 .breadcrumbs {
+  font-size: 13px;
+}
+.page__catalog2 .catalog-header .filter {
+  margin-bottom: 30px;
+}
+@media (min-width: 1240px) {
+  .page__catalog2 h1 {
+    margin-bottom: 25px;
+  }
+  .page__catalog2 > p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .page__catalog2 .quick-links {
+    margin-bottom: 45px;
+  }
+}
 .catalog-header .catalog-actions {
   margin-bottom: 10px;
 }
@@ -3285,7 +3303,6 @@ time {
   font-weight: 300;
 }
 .selected-properties ul li {
-  position: relative;
   display: flex;
   align-items: center;
   padding-left: 8px;
