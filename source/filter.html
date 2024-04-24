@@ -227,18 +227,6 @@
               <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
               <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
             </div>
-            <div class="selected-tags">
-              <ul>
-                <li>
-                  <span>м. Войковская</span>
-                  <span
-                    ><button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button></span
-                  >
-                </li>
-
-                <li>м. Водный стадион</li>
-              </ul>
-            </div>
             <div class="modal-search modal-search--filter">
               <p>Алтайсткий край</p>
               <p>Калининградская область</p>
@@ -247,7 +235,6 @@
               <p>Ленинградская область</p>
             </div>
           </fieldset>
-
           <fieldset class="filter__fieldset filter__fieldset-add">
             <legend class="visually-hidden">Расширенные фильтры поиска</legend>
             <button class="button button-filter button-filter--add" type="button" aria-expanded="false" aria-controls="filter__addition">
@@ -1198,6 +1185,19 @@
             </div>
           </fieldset>
           <button class="button button-submit" type="submit">Искать из 134 000</button>
+          <div class="selected-properties">
+            <ul>
+              <li>
+                <span>м. Войковская</span>
+                <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+              </li>
+              <li>
+                <span>м. Водный стадион</span>
+                <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+              </li>
+            </ul>
+            <button class="button" type="button">Очистить</button>
+          </div>
         </div>
       </form>
     </main>

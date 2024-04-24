@@ -481,7 +481,7 @@
             ><span>Подписка</span>
           </button>
         </section>
-        <form class="filter filter-catalog" action="https://echo.htmlacademy.ru/courses">
+        <form class="filter" action="https://echo.htmlacademy.ru/courses">
           <div class="filter__header">
             <h2>Фильтр поиска</h2>
             <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
@@ -523,36 +523,36 @@
               <div id="type" class="filter__select filter__select-type filter__select--disabled">
                 <div class="type">
                   <div>
-                    <p class="type__title">Жилая недвижимость</p>
+                    <p class="type__title">Жилая</p>
                     <ul>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
                         <label for="flat">
-                          <span class="pseudo-radio">Квартиру</span>
+                          <span class="pseudo-radio">Квартира</span>
                         </label>
                       </li>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Квартиру в новостройке" />
                         <label for="new__flat">
-                          <span class="pseudo-radio">Квартиру в новостройке</span>
+                          <span class="pseudo-radio">Квартира в новостройке</span>
                         </label>
                       </li>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="second__hand__flat" value="Квартиру на вторичке" />
                         <label for="second__hand__flat">
-                          <span class="pseudo-radio">Квартиру на вторичке</span>
+                          <span class="pseudo-radio">Квартира на вторичке</span>
                         </label>
                       </li>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="part__flat" value="Долю в квартире" />
                         <label for="part__flat">
-                          <span class="pseudo-radio">Долю в квартире</span>
+                          <span class="pseudo-radio">Доля в квартире</span>
                         </label>
                       </li>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="room" value="Комнату" />
                         <label for="room">
-                          <span class="pseudo-radio">Комнату</span>
+                          <span class="pseudo-radio">Комната</span>
                         </label>
                       </li>
                       <li class="type__item">
@@ -570,7 +570,7 @@
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="part__house" value="Долю в доме" />
                         <label for="part__house">
-                          <span class="pseudo-radio">Долю в доме</span>
+                          <span class="pseudo-radio">Доля в доме</span>
                         </label>
                       </li>
                       <li class="type__item">
@@ -582,7 +582,7 @@
                     </ul>
                   </div>
                   <div>
-                    <p class="type__title">Коммерческая недвижимость</p>
+                    <p class="type__title">Коммерческая</p>
                     <ul>
                       <li class="type__item">
                         <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
@@ -705,7 +705,6 @@
                 <p>Ленинградская область</p>
               </div>
             </fieldset>
-
             <fieldset class="filter__fieldset filter__fieldset-add">
               <legend class="visually-hidden">Расширенные фильтры поиска</legend>
               <button class="button button-filter button-filter--add" type="button" aria-expanded="false" aria-controls="filter__addition">
@@ -1656,6 +1655,19 @@
               </div>
             </fieldset>
             <button class="button button-submit" type="submit">Искать из 134 000</button>
+            <div class="selected-properties">
+              <ul>
+                <li>
+                  <span>м. Войковская</span>
+                  <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+                </li>
+                <li>
+                  <span>м. Водный стадион</span>
+                  <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+                </li>
+              </ul>
+              <button class="button" type="button">Очистить</button>
+            </div>
           </div>
         </form>
         <nav class="breadcrumbs">
