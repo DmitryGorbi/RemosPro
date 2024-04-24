@@ -451,13 +451,21 @@
         </nav>
       </div>
       <div class="page-header__border"></div>
-      <nav class="breadcrumbs breadcrumbs--gk visually-hidden-mobile-tablet">
-        <ol class="">
-          <li><a href="">Главная</a></li>
-          <li><a href="">Недвижимость к Калининграде</a></li>
-          <li>Новостройки</li>
-        </ol>
-      </nav>
+      <div class="page-header__footer visually-hidden-mobile-tablet page-header__footer--gk">
+        <nav class="breadcrumbs">
+          <ol class="">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Недвижимость к Калининграде</a></li>
+            <li>Новостройки</li>
+          </ol>
+        </nav>
+        <button class="button button-location" type="button" aria-expanded="false">
+          <svg class="" width="18px" height="18px" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#region"></use>
+          </svg>
+          <span>Кабардино-Балкарская республика</span>
+        </button>
+      </div>
     </header>
     <main id="main" class="page-main gk">
       <header class="gk__header">
@@ -1753,7 +1761,7 @@
         </div>
       </form>
     </section>
-    <section class="modal alert show">
+    <section class="modal alert">
       <h2 class="caption">Спасибо за обращение</h2>
       <button class="button button-close" type="button">
         <span class="visually-hidden">Закрыть окно регистрации</span>

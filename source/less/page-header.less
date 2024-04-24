@@ -40,3 +40,34 @@
   left: 50%;
   margin-left: -50vw;
 }
+
+.page-header__footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+}
+
+.page-header__footer--gk {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  & .button-location {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: -26px;
+    color: var(--white);
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+}

@@ -8,6 +8,7 @@
 
     & li {
       position: relative;
+      font-size: 13px;
 
       &:not(:last-child)::after {
         position: absolute;
@@ -25,19 +26,16 @@
         display: inline-block;
         padding: 5px 0;
       }
+
+      @media (min-width: @tablet-width) {
+        font-size: 14px;
+      }
     }
   }
 
   @media (min-width: @tablet-width) {
-    // display: block;
+    // font-size: 14px;
   }
-}
-
-.breadcrumbs--gk {
-  position: absolute;
-  bottom: -25px;
-  color: var(--white);
-  font-size: 13px;
 }
 
 .breadcrumbs--location {
