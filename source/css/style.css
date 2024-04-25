@@ -2761,6 +2761,8 @@ time {
 .catalog-list .catalog-list__header .catalog-list__header-sort {
   display: flex;
   align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   margin-left: auto;
 }
 .catalog-list .catalog-list__header a {
