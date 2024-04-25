@@ -1,19 +1,12 @@
 .button-circle {
   position: relative;
-  display: block;
-  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: var(--extra-light-gray);
-
-  & svg {
-    position: relative;
-    top: 2px;
-    display: block;
-
-    @media (min-width: @tablet-width) {
-      top: 1;
-    }
-  }
 
   &:hover {
     background-color: var(--hover);
@@ -25,7 +18,7 @@
   }
 
   &:active svg {
-    fill: var(--white);
+    stroke: var(--white);
   }
 
   @media (max-width: 340px) {
@@ -35,7 +28,8 @@
   }
 
   @media (min-width: @small-tablet-width) {
-    padding: 11px;
+    width: 40px;
+    height: 40px;
     background-color: var(--extra-light-gray);
   }
 }
@@ -45,14 +39,14 @@
   background-color: rgba(0, 0, 0, 0.5);
 
   & svg {
-    fill: var(--white);
+    stroke: var(--white);
   }
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
 
     & svg {
-      fill: var(--black);
+      stroke: var(--basic-black);
     }
   }
 }
@@ -68,16 +62,14 @@
   }
 
   & svg {
-    position: relative;
-    top: 2px;
-    fill: var(--white);
+    stroke: var(--white);
   }
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
 
     & svg {
-      fill: var(--black);
+      stroke: var(--basic-black);
     }
   }
 

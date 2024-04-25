@@ -10,23 +10,15 @@
 
 .user-actions__add {
   position: relative;
-  display: block;
-  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: var(--extra-light-gray);
 
-  & svg {
-    position: relative;
-    top: 1px;
-    display: block;
-
-    @media (min-width: @tablet-width) {
-      top: 0;
-    }
-  }
-
   &:hover {
-    // background-color: var(--light-blue);
     background-color: var(--hover);
   }
 
@@ -36,13 +28,13 @@
   }
 
   &:active svg {
-    fill: var(--white);
+    stroke: var(--white);
   }
 
   @media (min-width: @small-tablet-width) {
     padding: 11px;
-    display: flex;
-    column-gap: 2px;
+    column-gap: 5px;
+    height: 40px;
     border-radius: 5px;
     background-color: var(--extra-light-gray);
   }

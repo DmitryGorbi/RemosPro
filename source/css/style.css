@@ -196,9 +196,6 @@ a:visited {
 :is(.nav) a:focus-visible {
   box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
-:is(.main-nav, .user-actions, .user-nav) svg {
-  fill: var(--basic-green);
-}
 :is(.location, .new-offers__nav, .breadcrumbs) a {
   border-radius: 5px;
 }
@@ -597,20 +594,13 @@ input[type='radio'] {
 }
 .button-circle {
   position: relative;
-  display: block;
-  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: var(--extra-light-gray);
-}
-.button-circle svg {
-  position: relative;
-  top: 2px;
-  display: block;
-}
-@media (min-width: 768px) {
-  .button-circle svg {
-    top: 1;
-  }
 }
 .button-circle:hover {
   background-color: var(--hover);
@@ -620,7 +610,7 @@ input[type='radio'] {
   color: var(--white) !important;
 }
 .button-circle:active svg {
-  fill: var(--white);
+  stroke: var(--white);
 }
 @media (max-width: 340px) {
   .button-circle--header {
@@ -629,7 +619,8 @@ input[type='radio'] {
 }
 @media (min-width: 641px) {
   .button-circle {
-    padding: 11px;
+    width: 40px;
+    height: 40px;
     background-color: var(--extra-light-gray);
   }
 }
@@ -638,13 +629,13 @@ input[type='radio'] {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .button-circle--gk svg {
-  fill: var(--white);
+  stroke: var(--white);
 }
 .button-circle--gk:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .button-circle--gk:hover svg {
-  fill: var(--black);
+  stroke: var(--basic-black);
 }
 .button-gallery {
   width: 40px;
@@ -656,15 +647,13 @@ input[type='radio'] {
   display: none;
 }
 .button-gallery svg {
-  position: relative;
-  top: 2px;
-  fill: var(--white);
+  stroke: var(--white);
 }
 .button-gallery:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .button-gallery:hover svg {
-  fill: var(--black);
+  stroke: var(--basic-black);
 }
 @media (min-width: 641px) {
   .button-gallery {
@@ -797,6 +786,9 @@ input[type='radio'] {
 }
 .disabled {
   display: none;
+}
+:is(.user-actions, .user-nav, .catalog-list__header) svg {
+  stroke: var(--basic-green);
 }
 .skip-links {
   display: block;
@@ -1343,7 +1335,7 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .button-circle:hover .label-popup,
-  .user-nav__button-profile:hover .label-popup {
+  .user-nav__toggler:hover .label-popup {
     display: block;
     position: absolute;
     bottom: -35px;
@@ -1372,20 +1364,13 @@ input[type='radio'] {
 }
 .user-actions__add {
   position: relative;
-  display: block;
-  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: var(--extra-light-gray);
-}
-.user-actions__add svg {
-  position: relative;
-  top: 1px;
-  display: block;
-}
-@media (min-width: 768px) {
-  .user-actions__add svg {
-    top: 0;
-  }
 }
 .user-actions__add:hover {
   background-color: var(--hover);
@@ -1395,14 +1380,14 @@ input[type='radio'] {
   color: var(--white) !important;
 }
 .user-actions__add:active svg {
-  fill: var(--white);
+  stroke: var(--white);
 }
 @media (min-width: 641px) {
   .user-actions__add {
     padding: 11px;
-    display: flex;
-    -moz-column-gap: 2px;
-         column-gap: 2px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    height: 40px;
     border-radius: 5px;
     background-color: var(--extra-light-gray);
   }
@@ -1437,7 +1422,9 @@ input[type='radio'] {
 }
 .user-nav__toggler {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -1450,26 +1437,12 @@ input[type='radio'] {
   background-color: var(--active);
 }
 .user-nav__toggler:active svg {
-  fill: var(--white);
+  stroke: var(--white);
 }
 @media (min-width: 1240px) {
   .user-nav__toggler {
     width: 40px;
     height: 40px;
-  }
-}
-.user-nav__icon {
-  display: block;
-  position: relative;
-  top: 3px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
-}
-@media (min-width: 1240px) {
-  .user-nav__icon {
-    top: 3px;
-    left: 3px;
   }
 }
 .user-nav__profile {
