@@ -472,8 +472,9 @@
       <h1 class="caption-catalog">Продажа квартир в Московской области</h1>
       <p>Найдено 45 545 объявлений</p>
       <header class="catalog-header">
-        <section class="catalog-actions">
-          <button class="button catalog-actions__filter" type="button">
+        <section class="catalog-menu">
+          <h2 class="visually-hidden">Меню каталога: фильтр, карта, подписка на новые объявления</h2>
+          <button class="button catalog-menu__filter" type="button">
             <svg class="" width="18px" height="18px" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
             </svg>
@@ -1680,7 +1681,7 @@
           </div>
         </form>
       </header>
-      <aside class="quick-links">
+      <section class="quick-links">
         <h2 class="">Может подойти</h2>
         <ul>
           <li>
@@ -1768,18 +1769,17 @@
             </a>
           </li>
         </ul>
-      </aside>
+      </section>
       <section class="catalog-list">
         <h2 class="visually-hidden">Список подходящих объектов</h2>
-        <header class="catalog-list__actions">
-          <h2 class="visually-hidden"></h2>
+        <header class="catalog-list__header">
           <button class="button" type="button">
             <span>Подписаться на новые</span>
-            <svg width="22" height="22" aria-hidden="true">
+            <svg width="23" height="23" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#mail__icon__large"></use>
             </svg>
           </button>
-          <button class="button catalog-list__actions-sort" type="button">
+          <button class="button catalog-list__header-sort" type="button">
             <span>По-умолчанию</span>
             <svg width="30" height="30" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#sort"></use>
@@ -1787,7 +1787,7 @@
           </button>
           <a href="#">
             <span>На карте</span>
-            <svg width="22" height="22" aria-hidden="true">
+            <svg width="23" height="23" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
             </svg>
           </a>

@@ -48,20 +48,24 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 20px;
       padding: 0;
-      row-gap: 3px;
+      row-gap: 17px;
       box-shadow: none;
 
       & a {
-        padding: 10px 0;
+        padding: 3px 0;
       }
     }
   }
 
   @media (min-width: @desktop-width) {
+    & h2 {
+      margin-bottom: 20px;
+    }
+
     & ul {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 20px;
-      row-gap: 3px;
+      // row-gap: 3px;
     }
   }
 }
