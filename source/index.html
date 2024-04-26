@@ -16,7 +16,7 @@
   </head>
 
   <body class="page__body layout">
-    <header class="page-header wrapper-content">
+    <header class="page-header wrapper-content page-header--index">
       <div class="page-header__wrapper">
         <nav class="navigation">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
@@ -451,12 +451,21 @@
         </nav>
       </div>
       <div class="page-header__border"></div>
-      <button class="button button-location" type="button" aria-expanded="false">
-        <svg class="" width="18px" height="18px" aria-hidden="true">
-          <use xlink:href="img/icons/sprite.svg#region"></use>
-        </svg>
-        <span>Кабардино-Балкарская республика</span>
-      </button>
+      <div class="page-header__footer">
+        <nav class="breadcrumbs">
+          <ol class="">
+            <li><a href="">Главная</a></li>
+            <li><a href="">Недвижимость к Калининграде</a></li>
+            <li>Новостройки</li>
+          </ol>
+        </nav>
+        <button class="button button-location" type="button" aria-expanded="false">
+          <svg class="" width="18px" height="18px" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#region"></use>
+          </svg>
+          <span>Кабардино-Балкарская республика</span>
+        </button>
+      </div>
     </header>
 
     <main id="main" class="wrapper-content page-main">

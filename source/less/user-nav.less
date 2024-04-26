@@ -61,14 +61,16 @@
 
 .user-nav__profile {
   position: absolute;
-  top: 59px;
+  top: 62px;
   right: 0;
-  z-index: 1;
-  padding: 10px;
-  width: 100%;
+  // left: 0;
+  padding: 10px 15px;
+  margin: 0 -15px;
+  width: 100vw;
   height: 100vh;
   background-color: var(--white);
   border-radius: 5px;
+  z-index: 2;
 
   & li:last-child {
     border-top: 1px solid var(--gray);
@@ -76,18 +78,20 @@
 
   & a {
     display: block;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    padding: 10px 82px;
+    margin: 0 -40px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 0;
+
+    padding: 5px 0px;
+    margin: 0;
     width: 250px;
     height: max-content;
-    padding: 5px 0px;
     box-shadow: 0 5px 10px 0 var(--light-black);
 
     & li:last-of-type a {
