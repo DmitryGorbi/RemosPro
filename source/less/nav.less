@@ -16,10 +16,6 @@
   z-index: 2;
   overflow: hidden;
 
-  &--gk {
-    top: 62px;
-  }
-
   @media (min-width: @tablet-width) {
     padding: 0 82px;
     margin: 0 -40px;
@@ -122,11 +118,6 @@
     border-radius: 0 0 5px 5px;
     background-color: var(--white);
     box-shadow: 0 5px 10px 0 var(--light-black);
-
-    &--gk {
-      top: 61px;
-      border-top: 1px solid var(--light-gray);
-    }
   }
 }
 
@@ -141,10 +132,23 @@
   }
 }
 
-.nav__item--gk {
-  border-top: 1px solid var(--light-gray);
+.page-header--gk {
+  & .nav {
+    top: 62px;
+  }
+
+  & .nav__item:first-of-type {
+    border-top: 1px solid var(--light-gray);
+  }
 
   @media (min-width: @desktop-width) {
-    border: none;
+    & .nav__item:first-of-type {
+      border-top: none;
+    }
+
+    & .nav__submenu {
+      top: 61px;
+      border-top: 1px solid var(--light-gray);
+    }
   }
 }
