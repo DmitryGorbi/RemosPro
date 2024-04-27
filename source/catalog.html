@@ -467,14 +467,13 @@
         </button>
       </div>
     </header>
-
     <main id="main" class="wrapper-content page-main catalog">
       <h1 class="caption-catalog">Продажа квартир в Московской области</h1>
       <p>Найдено 45 545 объявлений</p>
       <header class="catalog-header">
         <section class="catalog-menu">
           <h2 class="visually-hidden">Меню каталога: фильтр, карта, подписка на новые объявления</h2>
-          <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="user-nav">
+          <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="catalog__filter">
             <svg width="19" height="19" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
             </svg>
@@ -491,7 +490,7 @@
             ><span>Подписка</span>
           </button>
         </section>
-        <form class="filter" action="https://echo.htmlacademy.ru/courses">
+        <form id="catalog__filter" class="filter" action="https://echo.htmlacademy.ru/courses">
           <div class="filter__header">
             <h2>Фильтр поиска</h2>
             <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
@@ -1700,7 +1699,7 @@
           </li>
           <li>
             <a href="">
-              <span>студии</span>
+              <span>в завидовском заповеднике</span>
               <span></span>
               <span>11 000</span>
             </a>
@@ -1771,20 +1770,43 @@
         </ul>
       </section>
       <section class="catalog-list">
-        <h2 class="visually-hidden">Список подходящих объектов</h2>
+        <h2 class="visually-hidden">Список подходящих объявлений</h2>
         <header class="catalog-list__header">
-          <button class="button" type="button">
+          <button class="button catalog-list__button-new" type="button">
             <span>Подписаться на новые</span>
             <svg width="21" height="21" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#mail__icon__large"></use>
             </svg>
           </button>
-          <button class="button catalog-list__header-sort" type="button">
-            <span>По-умолчанию</span>
-            <svg width="21" height="21" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#sort"></use>
-            </svg>
-          </button>
+          <section class="catalog-list__sort sort">
+            <h2 class="visually-hidden">Сортировать объявления</h2>
+            <button class="button catalog-list__button-sort" type="button" aria-expanded="false" aria-controls="sort__list">
+              <span>По умолчанию</span>
+              <svg width="21" height="21" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#sort"></use>
+              </svg>
+            </button>
+            <ul id="sort__list" class="sort__list">
+              <li>
+                <button class="button" type="button">По умолчанию</button>
+              </li>
+              <li>
+                <button class="button" type="button">Новые предложения</button>
+              </li>
+              <li>
+                <button class="button" type="button">По возрастанию цены</button>
+              </li>
+              <li>
+                <button class="button" type="button">По убыванию цены</button>
+              </li>
+              <li>
+                <button class="button" type="button">По возрастанию площади</button>
+              </li>
+              <li>
+                <button class="button" type="button">По убыванию площади</button>
+              </li>
+            </ul>
+          </section>
           <a href="#">
             <span>На карте</span>
             <svg width="21" height="21" aria-hidden="true">
@@ -1798,7 +1820,6 @@
           <article class="catalog-offer"></article>
           <article class="catalog-offer"></article>
         </div>
-
         <footer></footer>
       </section>
     </main>
@@ -1830,6 +1851,42 @@
         </ul>
       </div>
     </footer>
+    <section class="modal modal--subscribe">
+      <h2 class="caption">Подписаться на новые объявления Remos</h2>
+      <button class="button button-close" type="button">
+        <span class="visually-hidden">Закрыть окно авторизации</span>
+      </button>
+      <form class="auth__form" method="post" action="">
+        <div>
+          <label for="mail__subscribe">
+            <span>Email адресс:</span>
+          </label>
+          <input class="input input--field" title="Введите ваш email" id="mail__subscribe" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
+        </div>
+        <fieldset>
+          <legend>Как часто вы хотите получать рассылку?</legend>
+          <div>
+            <input id="once__day" type="radio" name="mailing__frequency" value="" />
+            <label for="once__day"><span>Раз в день</span></label>
+          </div>
+          <div>
+            <input id="three__days" type="radio" name="mailing__frequency" value="" checked />
+            <label for="three__days"><span>Раз в три дня</span></label>
+          </div>
+          <div>
+            <input id="once__week" type="radio" name="mailing__frequency" value="" />
+            <label for="once__week"><span>Раз в неделю</span></label>
+          </div>
+        </fieldset>
+        <div>
+          <input id="mail__agreement" type="checkbox" required checked />
+          <label for="mail__agreement">
+            <span>Согласен с правилами сайта и с политикой конфиденциальности.</span>
+          </label>
+        </div>
+        <button class="button button-main" type="submit">Подписаться</button>
+      </form>
+    </section>
     <section class="modal modal--login auth auth--login">
       <h2 class="caption">Авторизация</h2>
       <button class="button button-close" type="button">
@@ -1857,10 +1914,8 @@
             maxlength="20"
             size="20"
             required
-            aria-describedby="password-validation"
             enterkeyhint="done"
           />
-          <!-- <span id="password-validation">Для регистрации: Пароль должен содержать не менее 8-ми и не более 20 символов</span> -->
         </div>
         <div>
           <input type="checkbox" id="remember" />

@@ -1,10 +1,8 @@
 .modal {
   display: none;
   position: fixed;
-  top: 50vh;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
+  width: 100%;
+  bottom: 0;
   padding: 40px 20px 20px 20px;
   border-top: 2px solid var(--basic-green);
   background-color: var(--white);
@@ -13,8 +11,15 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
+    top: 50vh;
+    left: 50%;
+    bottom: auto;
+    transform: translateX(-50%) translateY(-50%);
     width: 370px;
-    top: 40%;
+
+    &--subscribe {
+      width: 600px;
+    }
   }
 
   &--reg {
@@ -31,10 +36,6 @@
     right: 0;
   }
 }
-
-// .modal--show {
-//   display: block;
-// }
 
 .modal--contacts {
   width: 90%;

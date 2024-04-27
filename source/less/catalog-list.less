@@ -5,14 +5,11 @@
     margin-bottom: 5px;
     font-size: 14px;
 
-    & button:first-of-type {
+    & .catalog-list__button-new {
       display: none;
     }
 
-    & .catalog-list__header-sort {
-      display: flex;
-      align-items: center;
-      column-gap: 4px;
+    & .catalog-list__sort {
       margin-left: auto;
     }
 
@@ -29,14 +26,9 @@
       margin-bottom: 10px;
       font-size: 15px;
 
-      & button:first-of-type {
+      & .catalog-list__button-new {
         display: flex;
-        align-items: center;
-        column-gap: 5px;
-      }
-
-      & .button {
-        align-self: stretch;
+        column-gap: 7px;
         padding: 2px 8px 2px 10px;
         border: 1px solid var(--light-gray);
         background-color: var(--extra-light-gray);
@@ -45,15 +37,6 @@
         &:hover {
           border-color: var(--gray);
           background-color: var(--light-gray);
-        }
-      }
-
-      & .catalog-list__header-sort {
-        column-gap: 3px;
-        padding-right: 6px;
-
-        & span {
-          display: block;
         }
       }
 
