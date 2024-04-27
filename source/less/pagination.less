@@ -2,4 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  & .pagination__item {
+    display: block;
+    padding: 5px 12px;
+    border: 1px solid var(--basic-green);
+    border-radius: 5px;
+
+    &--selected {
+      border-color: var(--basic-black);
+      background-color: var(--extra-light-gray);
+    }
+
+    &:hover {
+      background-color: var(--extra-light-gray);
+    }
+
+    &--disabled {
+      border-color: var(--gray);
+      color: var(--gray);
+    }
+  }
 }
