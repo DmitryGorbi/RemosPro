@@ -5,7 +5,7 @@
     margin-bottom: 5px;
     font-size: 14px;
 
-    & .catalog-list__button-new {
+    & .catalog-list__subscribe {
       display: none;
     }
 
@@ -18,15 +18,21 @@
     }
   }
 
+  & .catalog-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
 
     & .catalog-list__header {
       column-gap: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       font-size: 15px;
 
-      & .catalog-list__button-new {
+      & .catalog-list__subscribe {
         display: flex;
         column-gap: 7px;
         padding: 2px 8px 2px 10px;

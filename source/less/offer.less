@@ -1,0 +1,141 @@
+.offer {
+  // height: 400px;
+  // max-height: 401px;
+  // border: 1px solid var(--light-gray);
+}
+
+.offer__wrapper {
+  display: flex;
+  row-gap: 15px;
+  flex-direction: column;
+}
+
+.offer__img {
+  height: 273px;
+}
+
+.new__img-link {
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 205px 60px;
+  gap: 8px;
+  height: 273px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
+
+.offer__img-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  gap: 8px;
+}
+
+.offer__properties {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  & .offer__link-area span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.offer__properties-title {
+  display: flex;
+  column-gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offer__properties-address {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+& .offer__properties-price {
+  order: -1;
+
+  & p:first-child {
+    margin-bottom: 3px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  & p:last-child {
+    color: var(--dark-gray);
+  }
+}
+
+// .offer {
+//   height: 315px;
+//   // max-height: 401px;
+//   // border: 1px solid var(--light-gray);
+//   border-radius: 5px;
+
+//   @media (min-width: @desktop-width) {
+//     margin: -15px;
+
+//     &:hover {
+//       box-shadow: 0 0 10px var(--light-gray);
+//       border-color: transparent;
+//     }
+//   }
+// }
+
+// .offer__wrapper {
+//   max-height: 100%;
+
+//   & .offer__img {
+//     max-height: 100%;
+
+//     & .new__img-link {
+//       box-sizing: border-box;
+//       display: block;
+//       width: 100%;
+//       max-height: 100%;
+//     }
+
+//     & img {
+//       box-sizing: border-box;
+//       width: 100%;
+//       max-height: 280px;
+//       border-radius: 5px;
+//       object-fit: cover;
+//     }
+//   }
+//   @media (min-width: @desktop-width) {
+//     height: 100%;
+//     border-top: 1px solid var(--light-gray);
+//     display: flex;
+//     padding: 15px;
+
+//     & .offer__img {
+//       width: 33%;
+//       // height: 100%;
+//       box-sizing: border-box;
+
+//       & .new__img-link {
+//         width: 100%;
+//         // max-height: 100%;
+//       }
+
+//       & img {
+//         width: 100%;
+//         height: 100%;
+//         border-radius: 5px;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+// }
