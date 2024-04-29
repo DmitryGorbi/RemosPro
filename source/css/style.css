@@ -634,11 +634,6 @@ input[type='radio'] {
 .button-circle:active svg {
   stroke: var(--white);
 }
-@media (max-width: 340px) {
-  .button-circle--header {
-    display: none;
-  }
-}
 @media (min-width: 641px) {
   .button-circle {
     width: 40px;
@@ -646,17 +641,17 @@ input[type='radio'] {
     background-color: var(--extra-light-gray);
   }
 }
-.button-circle--gk {
+.button-circle--dark {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.button-circle--gk svg {
+.button-circle--dark svg {
   stroke: var(--white);
 }
-.button-circle--gk:hover {
+.button-circle--dark:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.button-circle--gk:hover svg {
+.button-circle--dark:hover svg {
   stroke: var(--basic-black);
 }
 .button-gallery {
@@ -904,6 +899,11 @@ input[type='radio'] {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+}
+@media (max-width: 339px) {
+  .page-header .button-circle {
+    display: none;
+  }
 }
 @media (min-width: 1240px) {
   .page-header {
@@ -2824,7 +2824,7 @@ time {
 .catalog-list .catalog-list__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 40px;
 }
 @media (min-width: 768px) {
   .catalog-list {
@@ -2833,7 +2833,7 @@ time {
   .catalog-list .catalog-list__header {
     -moz-column-gap: 30px;
          column-gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     font-size: 15px;
   }
   .catalog-list .catalog-list__header .catalog-list__subscribe {
@@ -2911,28 +2911,52 @@ time {
   row-gap: 15px;
   flex-direction: column;
 }
-.offer__img {
-  height: 273px;
-}
-.new__img-link {
-  display: grid;
+.offer__img-link {
+  display: flex;
   flex-direction: column;
-  grid-template-rows: 205px 60px;
   gap: 8px;
-  height: 273px;
 }
-.new__img-link img {
+.offer__img-link img {
   width: 100%;
   height: 100%;
   border-radius: 3px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.offer__img-main {
+  position: relative;
+  height: 205px;
+}
+.offer__img-main .button-circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 .offer__img-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 60px;
-  gap: 8px;
+  grid-template-rows: 100%;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  height: 65px;
+}
+.offer__img-list > div {
+  position: relative;
+}
+.offer__img-list > div div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.offer__img-list > div div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  color: var(--white);
 }
 .offer__properties {
   position: relative;
@@ -2940,7 +2964,7 @@ time {
   flex-direction: column;
   row-gap: 5px;
 }
-.offer__properties .offer__link-area span {
+.offer__properties .offer__link-area {
   position: absolute;
   top: 0;
   left: 0;
@@ -2954,9 +2978,10 @@ time {
   font-size: 16px;
   font-weight: 500;
 }
-.offer__properties-address {
+.offer__properties-address a {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+  color: var(--basic-green);
 }
 .offer__properties-price {
   order: -1;
@@ -2968,6 +2993,66 @@ time {
 }
 .offer__properties-price p:last-child {
   color: var(--dark-gray);
+}
+.offer__properties-description {
+  display: none;
+}
+@media (min-width: 1240px) {
+  .offer {
+    margin: -20px;
+  }
+  .offer:hover {
+    box-shadow: 0 0 10px var(--light-gray);
+  }
+  .offer:hover .offer__line {
+    border-color: transparent;
+  }
+  .offer__line {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--light-gray);
+  }
+  .offer__wrapper {
+    display: grid;
+    grid-template-columns: 375px 1fr;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 0;
+    padding: 20px;
+    max-height: 405px;
+  }
+  .offer__img-main {
+    height: 282px;
+  }
+  .offer__img-list {
+    height: 75px;
+  }
+  .offer__properties {
+    row-gap: 5px;
+  }
+  .offer__properties-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .offer__properties-subway {
+    margin-bottom: 15px;
+  }
+  .offer__properties-gk {
+    margin-bottom: 10px;
+  }
+  .offer__properties-price {
+    order: 0;
+  }
+  .offer__properties-description {
+    display: block;
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .offer__content {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+  }
 }
 .filter__header {
   display: flex;

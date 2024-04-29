@@ -4,6 +4,12 @@
   flex-direction: column;
   row-gap: 10px;
 
+  @media (max-width: 339px) {
+    & .button-circle {
+      display: none;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     z-index: 2;
   }
