@@ -1,0 +1,85 @@
+.offer-properties {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 25px;
+
+  & .offer-properties__link-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.offer-properties__title {
+  & h3 {
+    display: flex;
+    column-gap: 10px;
+    // margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.offer-properties__address {
+  & a {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    color: #737a8e;
+  }
+}
+
+.offer-properties__subway {
+  // margin-top: 8px;
+  font-size: 14px;
+}
+
+.offer-properties__gk {
+  // margin-top: 8px;
+}
+
+.offer-properties__price {
+  order: -1;
+  // margin-bottom: 5px;
+}
+
+.offer-properties__description {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .offer-properties {
+    row-gap: 5px;
+    margin-bottom: 0;
+  }
+
+  .offer-properties__title {
+    margin-bottom: 10px;
+
+    & h3 {
+      font-size: 21px;
+    }
+  }
+
+  .offer-properties__subway {
+    margin-bottom: 15px;
+  }
+
+  .offer-properties__gk {
+    margin-bottom: 10px;
+  }
+
+  .offer-properties__price {
+    order: 0;
+  }
+
+  .offer-properties__description {
+    display: block;
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

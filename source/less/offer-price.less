@@ -1,0 +1,25 @@
+.offer-price {
+  display: flex;
+  column-gap: 20px;
+}
+
+.offer-price__wrapper {
+  & p {
+    // margin-bottom: 3px;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  & span {
+    font-size: 15px;
+    color: #737a8e;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offer-price__wrapper {
+    & p {
+      font-size: 22px;
+    }
+  }
+}

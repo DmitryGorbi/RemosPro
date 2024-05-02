@@ -1,4 +1,5 @@
 .offer {
+  font-size: 14px;
 }
 
 .offer__wrapper {
@@ -7,103 +8,19 @@
   flex-direction: column;
 }
 
-.offer__img-link {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  & img {
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
-    object-fit: cover;
-  }
-}
-
-.offer__img-main {
+.offer__content {
   position: relative;
-  height: 205px;
 
-  .button-circle {
+  &::after {
     position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-}
-
-.offer__img-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100%;
-  column-gap: 8px;
-  height: 65px;
-
-  & > div {
-    position: relative;
-
-    & div {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-
-      & span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 13px;
-        color: var(--white);
-      }
-    }
-  }
-}
-
-.offer__properties {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-
-  & .offer__link-area {
-    position: absolute;
+    content: '';
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    width: 21px;
+    height: 21px;
+    background-image: url('../img/icons/top.svg');
+    background-repeat: no-repeat;
   }
-}
-
-.offer__properties-title {
-  display: flex;
-  column-gap: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.offer__properties-address a {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
-  color: var(--basic-green);
-}
-
-& .offer__properties-price {
-  order: -1;
-
-  & p:first-child {
-    margin-bottom: 3px;
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  & p:last-child {
-    color: var(--dark-gray);
-  }
-}
-
-.offer__properties-description {
-  display: none;
 }
 
 @media (min-width: @desktop-width) {
@@ -134,44 +51,23 @@
     max-height: 405px;
   }
 
-  .offer__img-main {
-    height: 282px;
-  }
-
-  .offer__img-list {
-    height: 75px;
-  }
-
-  .offer__properties {
-    row-gap: 5px;
-  }
-
-  .offer__properties-title {
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-
-  .offer__properties-subway {
-    margin-bottom: 15px;
-  }
-
-  .offer__properties-gk {
-    margin-bottom: 10px;
-  }
-
-  .offer__properties-price {
-    order: 0;
-  }
-
-  .offer__properties-description {
-    display: block;
-    margin-top: auto;
-    font-size: 14px;
-    line-height: 19px;
-  }
-
   .offer__content {
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 200px 35px;
+    column-gap: 10px;
+
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: 'Топ';
+      top: auto;
+      bottom: 1px;
+      right: 25px;
+      color: orange;
+    }
   }
 }

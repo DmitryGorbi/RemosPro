@@ -1,0 +1,26 @@
+.offer-gk {
+  & h4 {
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: var(--basic-green);
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 5px;
+
+    & li {
+      padding: 3px 5px;
+      background-color: rgba(255, 221, 87, 0.8);
+      border-radius: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & ul {
+      gap: 10px;
+    }
+  }
+}
