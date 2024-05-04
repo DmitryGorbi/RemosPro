@@ -1,6 +1,12 @@
 .offer-price {
   display: flex;
   column-gap: 20px;
+  align-items: start;
+
+  & .button {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 .offer-price__wrapper {
@@ -17,6 +23,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .offer-price {
+    & .button {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
   .offer-price__wrapper {
     & p {
       font-size: 22px;
