@@ -3030,7 +3030,7 @@ time {
   position: relative;
   height: 205px;
 }
-.offer-images__controls {
+.offer-images__swiper {
   display: none;
 }
 .offer-images__counter {

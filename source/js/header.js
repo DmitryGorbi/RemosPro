@@ -19,7 +19,6 @@ const onTogglerClick = (item, evt) => {
 };
 
 const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
-
 burgerToggler.addEventListener('click', clickBurgerToggler);
 
 mainNav.addEventListener('keyup', (evt) => {
@@ -76,7 +75,6 @@ const userNav = document.querySelector('.user-nav');
 const userNavToggler = userNav.querySelector('.user-nav__toggler');
 
 const clickProfileToggler = onTogglerClick.bind(null, userNavToggler);
-
 userNavToggler.addEventListener('click', clickProfileToggler);
 
 // Модальные окна с регистрацией

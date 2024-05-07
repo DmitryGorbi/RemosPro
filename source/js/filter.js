@@ -5,19 +5,6 @@ const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
 const buttonsTitle = filter.querySelectorAll('.button-filter__title');
 const filterSelect = filter.querySelectorAll('.filter__select');
 
-// Универсальная функция для переключения класса активного элемента
-
-const changeActiveClass = (items, disabledSelector) => {
-  items.forEach((item) => {
-    item.addEventListener('click', () => {
-      items.forEach((el) => {
-        el.classList.remove(disabledSelector);
-      });
-      item.classList.add(disabledSelector);
-    });
-  });
-};
-
 const mediaQueryFilter = window.matchMedia('(min-width: 1240px)');
 
 // // Desktop Filter
