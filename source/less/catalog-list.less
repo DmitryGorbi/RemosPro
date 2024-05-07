@@ -32,7 +32,8 @@
       margin-bottom: 37px;
       font-size: 15px;
 
-      & .catalog-list__subscribe {
+      & .catalog-list__subscribe,
+      a {
         display: flex;
         column-gap: 7px;
         padding: 2px 8px 2px 10px;
@@ -47,16 +48,21 @@
       }
 
       & a {
-        display: flex;
         align-items: center;
-        column-gap: 7px;
+        border: 1px solid transparent;
+        background-color: transparent;
+
+        &:hover {
+          background-color: var(--light-gray);
+          border-color: var(--light-gray);
+
+          & span {
+            color: var(--basic-green);
+          }
+        }
 
         & span {
           border-bottom: 1px dashed var(--basic-green);
-
-          &:hover {
-            color: var(--basic-green);
-          }
         }
       }
     }
