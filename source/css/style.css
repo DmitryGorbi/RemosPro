@@ -825,13 +825,6 @@ input[type='radio'] {
   border-color: var(--gray);
   color: var(--gray);
 }
-.change-color {
-  color: var(--basic-green);
-}
-.change-color-rotate {
-  transform: rotate(180deg);
-  color: var(--basic-green);
-}
 .disabled {
   display: none;
 }
@@ -1140,6 +1133,9 @@ input[type='radio'] {
 .nav__icon {
   position: relative;
   top: 2px;
+}
+.nav__icon--color {
+  fill: var(--basic-green);
 }
 @media (max-width: 1239px) {
   .nav__toggler[aria-expanded='false'] + .nav__submenu {
@@ -3361,9 +3357,6 @@ time {
 .filter__select {
   border-radius: 5px;
 }
-.filter__select--disabled {
-  display: none;
-}
 @media (min-width: 768px) {
   .filter__select {
     position: absolute;
@@ -3373,14 +3366,19 @@ time {
     border: 1px solid var(--light-gray);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: var(--white);
+    z-index: 1;
   }
   .filter__select-add {
     margin: 0;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+    z-index: 2;
   }
+}
+.button-filter[aria-expanded='false'] + .filter__select {
+  display: none;
 }
 @media (max-width: 767px) {
   .filter__select-deal {
@@ -3395,6 +3393,12 @@ time {
 .filter__fieldset-search {
   position: relative;
   flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .filter__select-deal,
+  .filter__select-price {
+    display: block;
+  }
 }
 .filter-wrapper {
   display: flex;
@@ -3423,6 +3427,10 @@ time {
   border-radius: 5px;
   background-color: var(--white);
 }
+.button-filter span,
+.button-filter svg {
+  pointer-events: none;
+}
 .button-filter:active,
 .button-filter:hover {
   border-color: var(--basic-green);
@@ -3443,20 +3451,20 @@ time {
     border: 1px solid var(--gray);
   }
 }
+.button-filter[aria-expanded='false'] .button-filter__icon {
+  transform: rotate(0deg) translateY(-50%);
+}
 .button-filter__icon {
   position: absolute;
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
   fill: var(--basic-green);
+  transform: rotate(180deg) translateY(50%);
 }
 @media (min-width: 768px) {
   .button-filter__icon {
     right: 5px;
   }
-}
-.button-filter__icon--rotate {
-  transform: rotate(180deg) translateY(50%);
 }
 .button-filter--type {
   display: block;
@@ -6518,6 +6526,15 @@ time {
 }
 .show-flex {
   display: flex;
+}
+.rotate180 {
+  transform: rotate(180deg) translateY(50%);
+}
+.change-color {
+  color: var(--basic-green);
+}
+.rotate {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

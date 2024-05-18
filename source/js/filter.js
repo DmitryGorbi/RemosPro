@@ -1,3 +1,5 @@
+import { changeActiveClass, isEscEvent } from './util.js';
+
 const filter = document.querySelector('.filter');
 const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
@@ -5,54 +7,76 @@ const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
 const buttonsTitle = filter.querySelectorAll('.button-filter__title');
 const filterSelect = filter.querySelectorAll('.filter__select');
 
-const mediaQueryFilter = window.matchMedia('(min-width: 1240px)');
+const buttonFilterDeal = filter.querySelector('.button-filter--deal');
+const buttonFilterPrice = filter.querySelector('.button-filter--price');
+console.log(buttonFilterDeal);
 
-// // Desktop Filter
+// Показ/скрытие списка свойств для select type/price на мобиле/десктопе
 
-const isEscEvent = (evt) => {
-  return evt.key === 'Escape' || evt.key === 'Esc';
+const visibilityButtons = () => {
+  const isMobile = window.innerWidth < 768;
+  buttonFilterDeal.setAttribute('aria-expanded', isMobile);
+  buttonFilterPrice.setAttribute('aria-expanded', isMobile);
 };
 
-const isEnterEvent = (evt) => {
-  return evt.key === 'Enter';
+document.addEventListener('DOMContentLoaded', visibilityButtons);
+
+window.addEventListener('resize', visibilityButtons);
+
+const addClass = (el, selector) => {
+  el.classList.add(selector);
 };
 
-// Open Select
+// Toggle Select
 
-const openSelect = (button, select, icon) => {
-  const isEscKeydown = (evt) => {
-    if (isEscEvent(evt)) {
-      closeSelect(select, icon);
-    }
-  };
+const inputClickSelect = (evt) => {
+  let target = evt.target;
+  if (target.matches('input[type="radio"]')) {
+    closeSelect(select, icon);
+  }
+};
 
-  const inputClickSelect = (evt) => {
-    let target = evt.target;
-    if (target.matches('input[type="radio"]')) {
-      closeSelect(select, icon);
-    }
-  };
+const isEscKeydown = () => {
+  if (isEscEvent(evt)) {
+    closeSelect(select, icon);
+  }
+};
 
-  button.addEventListener('click', () => {
-    select.classList.toggle('filter__select--disabled');
-    icon.classList.toggle('button-filter__icon--rotate');
-    document.addEventListener('keydown', isEscKeydown);
-    if (mediaQueryFilter.matches) {
-      filter.addEventListener('click', inputClickSelect);
-    }
+// document.addEventListener('keydown', isEscKeydown);
+//   if (mediaQueryTablet.matches) {
+//     filter.addEventListener('click', inputClickSelect);
+//   }
+
+const selectToggler = (array) => {
+  array.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      const isOpen = element.getAttribute('aria-expanded') === 'false';
+
+      array.forEach((el) => {
+        el.setAttribute('aria-expanded', false);
+      });
+
+      element.setAttribute('aria-expanded', isOpen);
+      // if (isOpen) {
+      //   document.addEventListener('click', isEscKeydown);
+      // }
+      // else {
+      //   window.addEventListener('click', (evt) => {
+      //     element.setAttribute('aria-expanded', false);
+      //   });
+      // }
+    });
   });
 };
 
+selectToggler(buttonsFilter);
+
 const closeSelect = (item, icon) => {
-  item.classList.add('filter__select--disabled');
-  icon.classList.remove('button-filter__icon--rotate');
+  item.classList.remove('show');
+  icon.classList.remove('rotate180');
 };
 
-for (let i = 0; i < buttonsFilter.length; i++) {
-  openSelect(buttonsFilter[i], filterSelect[i], buttonIcon[i]);
-}
-
-// Замена текста в кнопке
+// Change text in a button
 
 const changeButtonsTitle = (fieldset, title) => {
   fieldset.addEventListener('click', (evt) => {
@@ -66,18 +90,4 @@ for (let i = 0; i < buttonsTitle.length; i++) {
   changeButtonsTitle(filterFieldset[i], buttonsTitle[i]);
 }
 
-// Закрытие попапа при клике вне
-
-const windowClick = (select, button) => {
-  window.addEventListener('click', (evt) => {
-    const target = evt.target;
-    if (!target.closest('.filter__select') && !target.closest('.button-filter')) {
-      select.classList.add('filter__select--disabled');
-      button.classList.remove('button-filter__icon--rotate');
-    }
-  });
-};
-
-for (let i = 0; i < filterSelect.length; i++) {
-  windowClick(filterSelect[i], buttonIcon[i]);
-}
+// Close select on click outside

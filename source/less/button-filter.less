@@ -5,6 +5,11 @@
   border-radius: 5px;
   background-color: var(--white);
 
+  & span,
+  svg {
+    pointer-events: none;
+  }
+
   &:active,
   &:hover {
     border-color: var(--basic-green);
@@ -25,20 +30,20 @@
   }
 }
 
+.button-filter[aria-expanded='false'] .button-filter__icon {
+  transform: rotate(0deg) translateY(-50%);
+}
+
 .button-filter__icon {
   position: absolute;
   top: 50%;
   right: 10px;
-  transform: translateY(-50%);
   fill: var(--basic-green);
+  transform: rotate(180deg) translateY(50%);
 
   @media (min-width: @tablet-width) {
     right: 5px;
   }
-}
-
-.button-filter__icon--rotate {
-  transform: rotate(180deg) translateY(50%);
 }
 
 .button-filter--type {

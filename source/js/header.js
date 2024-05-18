@@ -1,22 +1,9 @@
 'use strict';
+import { isEscEvent, onTogglerClick } from './util.js';
 
 const mainNav = document.querySelector('.navigation');
 const burgerToggler = mainNav.querySelector('.toggler');
 const userActionsNav = document.querySelector('.user-actions');
-
-const isEscEvent = (evt) => {
-  return evt.key === 'Escape' || evt.key === 'Esc';
-};
-
-const isEnterEvent = (evt) => {
-  return evt.key === 'Enter';
-};
-
-const onTogglerClick = (item, evt) => {
-  evt.preventDefault();
-  const isOpen = item.getAttribute('aria-expanded') === 'false';
-  item.setAttribute('aria-expanded', isOpen);
-};
 
 const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
 burgerToggler.addEventListener('click', clickBurgerToggler);
@@ -33,43 +20,42 @@ if (mediaQuery.matches) {
   document.removeEventListener('click', clickBurgerToggler);
 }
 
-const subMenu = mainNav.querySelectorAll('.nav__submenu');
 const subMenuButtonIcon = mainNav.querySelectorAll('.nav__icon');
 
 const mainNavLinks = mainNav.querySelectorAll('.nav__link span');
 
 const subMenuButtons = mainNav.querySelectorAll('.nav__toggler');
 
-subMenuButtons.forEach((item, index) => {
-  item.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    const isOpen = item.getAttribute('aria-expanded') === 'false';
-    subMenuButtons.forEach((el, ind) => {
+const subMenuToggler = (array) => {
+  array.forEach((item, index) => {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const isOpen = item.getAttribute('aria-expanded') === 'false';
+
+      array.forEach((el, ind) => {
+        if (isOpen) {
+          el.setAttribute('aria-expanded', false);
+          mainNavLinks[ind].classList.remove('change-color');
+          subMenuButtonIcon[ind].classList.remove('rotate');
+          subMenuButtonIcon[ind].classList.remove('nav__icon--color');
+        }
+      });
+
+      item.setAttribute('aria-expanded', isOpen);
       if (isOpen) {
-        el.setAttribute('aria-expanded', false);
-        mainNavLinks[ind].style.color = 'inherit';
-        subMenuButtonIcon[ind].style.transform = 'rotate(0deg)';
-        subMenuButtonIcon[ind].style.fill = 'inherit';
+        mainNavLinks[index].classList.add('change-color');
+        subMenuButtonIcon[index].classList.add('rotate');
+        subMenuButtonIcon[index].classList.add('nav__icon--color');
       } else {
-        item.setAttribute('aria-expanded', isOpen);
+        mainNavLinks[index].classList.remove('change-color');
+        subMenuButtonIcon[index].classList.remove('rotate');
+        subMenuButtonIcon[index].classList.remove('nav__icon--color');
       }
     });
-    item.setAttribute('aria-expanded', isOpen);
-    if (isOpen) {
-      mainNavLinks[index].style.color = '#20a052';
-      subMenuButtonIcon[index].style.transform = 'rotate(180deg)';
-      subMenuButtonIcon[index].style.fill = '#20a052';
-      // mainNavLinks[index].classList.add('change-color');
-      // subMenuButtonIcon[index].classList.add('change-color-rotate');
-    } else {
-      mainNavLinks[index].style.color = 'inherit';
-      subMenuButtonIcon[index].style.transform = 'rotate(0deg)';
-      subMenuButtonIcon[index].style.fill = 'inherit';
-      // mainNavLinks[index].classList.remove('change-color');
-      // subMenuButtonIcon[index].classList.remove('change-color-rotate');
-    }
   });
-});
+};
+
+subMenuToggler(subMenuButtons);
 
 const userNav = document.querySelector('.user-nav');
 const userNavToggler = userNav.querySelector('.user-nav__toggler');
