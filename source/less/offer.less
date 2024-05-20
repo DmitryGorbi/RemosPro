@@ -23,6 +23,25 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .offer__wrapper {
+    padding: 10px 15px;
+    height: 100%;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
+
+  .offer__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    & .offer__seller {
+      margin-top: auto;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .offer {
     margin: -20px;
@@ -49,6 +68,7 @@
     row-gap: 0;
     padding: 20px;
     max-height: 405px;
+    box-shadow: none;
   }
 
   .offer__content {
@@ -68,6 +88,10 @@
       bottom: 1px;
       right: 25px;
       color: orange;
+    }
+
+    & .offer__seller {
+      margin-top: 0;
     }
   }
 }

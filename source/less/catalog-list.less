@@ -66,5 +66,17 @@
         }
       }
     }
+
+    & .catalog-list__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .catalog-list__wrapper {
+      grid-template-columns: 1fr;
+    }
   }
 }

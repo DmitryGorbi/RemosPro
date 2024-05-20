@@ -35,6 +35,14 @@
   display: none;
 }
 
+@media (min-width: @tablet-width) {
+  .seller {
+    .button-main {
+      width: 100%;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .seller {
     padding: 14px;
@@ -42,7 +50,6 @@
     background-color: var(--extra-light-gray);
 
     .button-main {
-      width: 100%;
       padding: 5px 14px;
       margin-top: 20px;
     }

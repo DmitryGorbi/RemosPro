@@ -1,12 +1,19 @@
 .flats-list {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 10px;
   margin-top: auto;
+  // padding: 10px;
+  // box-shadow: 0 0 10px var(--light-gray);
 
   & ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    // font-weight: 300;
+
+    & li:nth-of-type(even) {
+      color: #737a8e;
+    }
   }
 
   & a {

@@ -1,9 +1,9 @@
 .gk-offers__data {
-  border-top: 1px solid var(--light-gray);
-}
-
-.gk-offers__data:last-child {
   border-bottom: 1px solid var(--light-gray);
+
+  &:first-of-type {
+    border-top: 1px solid var(--light-gray);
+  }
 }
 
 .gk-offers__item {
@@ -73,7 +73,6 @@
       & p:first-of-type {
         margin-right: auto;
         width: 80px;
-        // color: rgba(0, 0, 0, .5);
       }
 
       & p:last-of-type {
