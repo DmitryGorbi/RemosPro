@@ -4930,10 +4930,15 @@ time {
     margin-bottom: 15px;
   }
 }
+.gk-offers__data {
+  border-top: 1px solid var(--light-gray);
+}
+.gk-offers__data:last-child {
+  border-bottom: 1px solid var(--light-gray);
+}
 .gk-offers__item {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--light-gray);
   padding: 12px 0;
 }
 .gk-offers__item-wrapper {
@@ -4974,9 +4979,6 @@ time {
 }
 .gk-offers__item .gk-offers__button-wrapper {
   margin: auto 0 auto auto;
-}
-.gk-offers__item:last-of-type {
-  border-bottom: 1px solid var(--light-gray);
 }
 @media (min-width: 600px) {
   .gk-offers__item {
