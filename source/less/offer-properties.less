@@ -5,12 +5,10 @@
   row-gap: 10px;
   margin-bottom: 25px;
 
-  & .offer-properties__link-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  & .offer-properties__gk-name {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--basic-green);
   }
 }
 
@@ -22,9 +20,10 @@
 }
 
 .offer-properties__address {
+  font-style: normal;
   & a {
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
+    // color: rgba(0, 0, 0, 0.5);
     color: #737a8e;
   }
 }
@@ -32,10 +31,6 @@
 .offer-properties__subway {
   // margin-top: 8px;
   font-size: 14px;
-}
-
-.offer-properties__gk {
-  // margin-top: 8px;
 }
 
 .offer-properties__price {
@@ -50,6 +45,10 @@
   .offer-properties {
     row-gap: 5px;
     margin-bottom: 0;
+
+    & .offer-properties__gk-name {
+      margin-top: 10px;
+    }
   }
 
   .offer-properties__title {
@@ -62,10 +61,6 @@
 
   .offer-properties__subway {
     margin-top: 5px;
-  }
-
-  .offer-properties__gk {
-    margin-top: 10px;
   }
 
   .offer-properties__price {

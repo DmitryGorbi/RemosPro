@@ -3,20 +3,20 @@
   flex-direction: column;
   row-gap: 10px;
   margin-top: auto;
-  // padding: 10px;
-  // box-shadow: 0 0 10px var(--light-gray);
 
   & ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 110px 1fr 1fr 1fr;
     // font-weight: 300;
+    font-size: 14px;
 
-    & li:nth-of-type(even) {
+    & li:nth-of-type(2),
+    li:nth-of-type(3) {
       color: #737a8e;
     }
-  }
 
-  & a {
-    color: var(--basic-green);
+    & a {
+      color: var(--basic-green);
+    }
   }
 }

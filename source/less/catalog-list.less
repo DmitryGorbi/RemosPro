@@ -2,7 +2,7 @@
   & .catalog-list__header {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 14px;
 
     & .catalog-list__subscribe {
@@ -25,11 +25,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 10px;
-
     & .catalog-list__header {
       column-gap: 30px;
-      margin-bottom: 37px;
+      margin-bottom: 15px;
       font-size: 15px;
 
       & .catalog-list__subscribe,
@@ -75,6 +73,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    .catalog-list__header {
+      margin-bottom: 37px;
+    }
     .catalog-list__wrapper {
       grid-template-columns: 1fr;
     }
