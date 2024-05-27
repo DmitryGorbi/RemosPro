@@ -8,48 +8,11 @@
   & li {
     display: flex;
   }
-
-  & li:not(:first-child) span:first-child::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: -25px;
-    width: 17px;
-    height: 17px;
-    background-image: url(../img/icons/house.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  & .button-white {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5px 10px;
-
-    & span {
-      position: relative;
-    }
-
-    & span:not(:first-child) {
-      color: rgba(0, 0, 0, 0.5);
-    }
-
-    & span:not(:first-of-type) {
-      font-size: 14px;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
   .gk-filter {
     margin-bottom: 30px;
-  }
-}
-
-.gk-filter--rooms {
-  & li:not(:first-child) span:first-child::after {
-    display: none;
   }
 }
 
