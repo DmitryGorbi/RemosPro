@@ -1049,16 +1049,15 @@ input[type='radio'] {
   }
 }
 .nav {
-  position: absolute;
+  position: fixed;
   top: 63px;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;
-  margin: 0 -15px;
+  height: auto;
   background-color: var(--white);
   z-index: 2;
-  overflow: hidden;
+  overflow: scroll;
 }
 @media (min-width: 768px) {
   .nav {
@@ -4237,7 +4236,7 @@ input[type='radio'] {
     margin-bottom: 10px;
   }
   .developer--header img {
-    width: 90px;
+    width: 70px;
   }
 }
 .developer--about {
@@ -4286,7 +4285,7 @@ input[type='radio'] {
   margin: 0;
 }
 .developer--modal img {
-  width: 80px;
+  width: 60px;
 }
 .developer--modal span {
   display: block;

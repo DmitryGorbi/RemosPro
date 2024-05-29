@@ -6,7 +6,15 @@ const burgerToggler = mainNav.querySelector('.toggler');
 const userActionsNav = document.querySelector('.user-actions');
 
 const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
-burgerToggler.addEventListener('click', clickBurgerToggler);
+// burgerToggler.addEventListener('click', clickBurgerToggler);
+burgerToggler.addEventListener('click', (evt) => {
+  clickBurgerToggler(evt);
+  if (burgerToggler.getAttribute('aria-expanded') === 'true') {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'scroll';
+  }
+});
 
 mainNav.addEventListener('keyup', (evt) => {
   if (evt.code === 'Escape') {
