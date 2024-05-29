@@ -216,7 +216,7 @@ a:visited {
 :is(.new-bldg) a:hover {
   color: inherit;
 }
-:is(.submenu, .new-buildings, .journal, .experts, .gk-offers, .catalog-menu, .offer-images) a:focus-visible {
+:is(.submenu, .new-buildings, .journal, .experts, .gk-offers, .catalog-menu, .offer-images, .plan-offer) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 :is(.breadcrumbs, .quick-links, .developer-about, .gk-progress, .catalog-list__header, .offer__content) a:focus-visible {
@@ -5654,24 +5654,21 @@ input[type='radio'] {
     font-size: 25px;
   }
 }
-.gk-map > div {
+.gk-map ul {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  row-gap: 8px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.gk-map ul .button {
+  padding: 5px 10px;
+}
+.gk-map .gk-map__wrapper {
   margin: 0 auto;
   max-width: 1950px;
-}
-.gk-map h2 {
-  margin: 0 15px;
-}
-@media (min-width: 768px) {
-  .gk-map h2 {
-    margin: 0 40px;
-  }
-}
-@media (min-width: 1240px) {
-  .gk-map h2 {
-    padding: 0;
-    width: 1100px;
-    margin: 0 auto;
-  }
 }
 .gk-repair__wrapper {
   display: flex;
