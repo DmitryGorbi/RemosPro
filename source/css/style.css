@@ -810,20 +810,24 @@ input[type='radio'] {
   flex-wrap: wrap;
   gap: 8px;
 }
-.pagination .pagination__item {
+.pagination .pagination__item,
+.pagination .button-white {
   display: block;
   padding: 5px 12px;
   border: 1px solid var(--basic-green);
   border-radius: 5px;
 }
-.pagination .pagination__item--selected {
+.pagination .pagination__item--selected,
+.pagination .button-white--selected {
   border-color: var(--basic-black);
   background-color: var(--extra-light-gray);
 }
-.pagination .pagination__item:hover {
+.pagination .pagination__item:hover,
+.pagination .button-white:hover {
   background-color: var(--extra-light-gray);
 }
-.pagination .pagination__item--disabled {
+.pagination .pagination__item--disabled,
+.pagination .button-white--disabled {
   border-color: var(--gray);
   color: var(--gray);
 }
@@ -5683,7 +5687,6 @@ input[type='radio'] {
   margin-bottom: 10px;
   width: 100%;
   border-radius: 5px;
-  cursor: pointer;
 }
 .gk-repair__wrapper ul {
   display: flex;
@@ -5843,6 +5846,7 @@ input[type='radio'] {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  cursor: pointer;
 }
 .gk-progress__imgContainer figcaption {
   font-size: 14px;
