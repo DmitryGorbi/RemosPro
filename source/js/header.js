@@ -45,7 +45,6 @@ const subMenuToggler = (array) => {
           el.setAttribute('aria-expanded', false);
           mainNavLinks[ind].classList.remove('change-color');
           subMenuButtonIcon[ind].classList.remove('rotate');
-          subMenuButtonIcon[ind].classList.remove('nav__icon--color');
         }
       });
 
@@ -53,11 +52,9 @@ const subMenuToggler = (array) => {
       if (isOpen) {
         mainNavLinks[index].classList.add('change-color');
         subMenuButtonIcon[index].classList.add('rotate');
-        subMenuButtonIcon[index].classList.add('nav__icon--color');
       } else {
         mainNavLinks[index].classList.remove('change-color');
         subMenuButtonIcon[index].classList.remove('rotate');
-        subMenuButtonIcon[index].classList.remove('nav__icon--color');
       }
     });
   });

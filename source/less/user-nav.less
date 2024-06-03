@@ -60,34 +60,37 @@
 }
 
 .user-nav__profile {
-  position: absolute;
+  position: fixed;
   top: 62px;
+  left: 0;
   right: 0;
-  // left: 0;
-  padding: 10px 15px;
-  margin: 0 -15px;
+  bottom: 0;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: var(--white);
   border-radius: 5px;
   z-index: 2;
-
-  & li:last-child {
-    border-top: 1px solid var(--gray);
-  }
+  overflow: scroll;
 
   & a {
     display: block;
-    padding: 10px 0;
+    padding: 13px 15px;
+    line-height: 28px;
+    border-bottom: 1px solid var(--light-gray);
   }
 
   @media (min-width: @tablet-width) {
-    padding: 10px 82px;
-    margin: 0 -40px;
+    padding: 0 42px;
+    // margin: 0 -40px;
+
+    & a {
+      padding: 12px 0 13px 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-
+    position: absolute;
+    left: auto;
     padding: 5px 0px;
     margin: 0;
     width: 250px;
@@ -99,7 +102,6 @@
     }
 
     & a {
-      display: block;
       padding: 6px 10px 6px 20px;
     }
   }
