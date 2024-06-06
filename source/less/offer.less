@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.offer__content {
+.offer__content--top {
   position: relative;
 
   &::after {
@@ -100,12 +100,12 @@
     grid-template-columns: 1fr 200px 35px;
     column-gap: 10px;
 
-    &::after {
+    &--top::after {
       top: auto;
       bottom: 0;
     }
 
-    &::before {
+    &--top::before {
       position: absolute;
       content: 'Топ';
       top: auto;
