@@ -1151,7 +1151,7 @@ input[type='radio'] {
     position: absolute;
     top: 63px;
     left: 50%;
-    margin-left: -50vw;
+    transform: translateX(-50vw);
     z-index: 1;
     width: 100vw;
     visibility: hidden;
@@ -1182,7 +1182,6 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .page-header--gk .nav {
-    top: 62px;
     border-top: none;
   }
   .page-header--gk .user-nav__profile {
