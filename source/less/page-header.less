@@ -1,5 +1,5 @@
 .page-header {
-  position: relative;
+  // position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -83,12 +83,16 @@
 
     @media (min-width: @desktop-width) {
       position: absolute;
-      bottom: -26px;
+      top: 65px;
       color: var(--white);
       flex-direction: row;
       justify-content: space-between;
       column-gap: 50px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    // position: relative;
   }
 }
 

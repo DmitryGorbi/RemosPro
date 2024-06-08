@@ -908,7 +908,6 @@ input[type='radio'] {
   color: var(--basic-green);
 }
 .page-header {
-  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -992,13 +991,15 @@ input[type='radio'] {
 @media (min-width: 1240px) {
   .page-header--gk .page-header__footer {
     position: absolute;
-    bottom: -26px;
+    top: 65px;
     color: var(--white);
     flex-direction: row;
     justify-content: space-between;
     -moz-column-gap: 50px;
          column-gap: 50px;
   }
+}
+@media (min-width: 1240px) {
 }
 .page-header--index .breadcrumbs {
   display: none;
@@ -1061,6 +1062,7 @@ input[type='radio'] {
   height: auto;
   background-color: var(--white);
   z-index: 2;
+  overflow: scroll;
 }
 @media (min-width: 768px) {
   .nav {
@@ -1079,6 +1081,7 @@ input[type='radio'] {
     margin: 0;
     height: 100%;
     background-color: transparent;
+    overflow: hidden;
   }
 }
 .nav__item {
@@ -1150,14 +1153,12 @@ input[type='radio'] {
   .nav__submenu {
     position: absolute;
     top: 63px;
-    left: 50%;
-    transform: translateX(-50vw);
+    left: 0;
+    right: 0;
     z-index: 1;
-    width: 100vw;
     visibility: hidden;
     opacity: 0;
     transition-delay: 0.6s;
-    border-radius: 0 0 5px 5px;
     background-color: var(--white);
     box-shadow: 0 5px 10px 0 var(--light-black);
   }
