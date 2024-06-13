@@ -1791,13 +1791,19 @@
           </a>
         </header>
         <div class="catalog-list__wrapper">
-          <!-- новостройка с метро -->
-          <article class="offer">
-            <!-- <div class="offer__line"></div> -->
+          <!-- новостройка с метро c Топ-->
+          <article class="offer offer--land">
             <div class="offer__wrapper">
               <section class="offer-images">
                 <h4 class="visually-hidden">Фотографии объявления</h4>
-                <a class="offer-images__wrapper" href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="offer-images__wrapper"
+                  href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/"
+                  title="4-комн квартира, 90 м², 8/8 этаж"
+                  target="_blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div class="offer-images__main">
                     <picture>
                       <!-- <source srcset="img/bldg/sirenevy__bulvar/main__foto/front__large.webp" media="(min-width: 1240px)" /> -->
@@ -1813,6 +1819,28 @@
                         <use xlink:href="img/icons/sprite.svg#camera__icon"></use>
                       </svg>
                     </div>
+                    <button class="button offer-images__swiper" type="button">
+                      <span class="visually-hidden">Предыдущее изображение</span>
+                      <span>
+                        <svg width="8" height="14" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite.svg#arr__left"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button offer-images__swiper" type="button">
+                      <span class="visually-hidden">Следующее изображение</span>
+                      <span>
+                        <svg width="8" height="14" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite.svg#arr__right"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button-circle button-circle--dark" type="button">
+                      <svg width="20" height="20" aria-hidden="true">
+                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                      </svg>
+                      <span class="label-popup">В избранное</span>
+                    </button>
                   </div>
                   <div class="offer-images__thumbnails">
                     <picture>
@@ -1832,28 +1860,6 @@
                     </div>
                   </div>
                 </a>
-                <button class="button offer-images__swiper" type="button">
-                  <span class="visually-hidden">Предыдущее изображение</span>
-                  <span>
-                    <svg width="8" height="14" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#arr__left"></use>
-                    </svg>
-                  </span>
-                </button>
-                <button class="button offer-images__swiper" type="button">
-                  <span class="visually-hidden">Следующее изображение</span>
-                  <span>
-                    <svg width="8" height="14" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#arr__right"></use>
-                    </svg>
-                  </span>
-                </button>
-                <button class="button button-circle button-circle--dark" type="button">
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                  </svg>
-                  <span class="label-popup">Добавить в избранное</span>
-                </button>
               </section>
               <section class="offer__content offer__content--top">
                 <div class="offer-properties">
@@ -1916,187 +1922,51 @@
                   <button class="button button-main" type="button">Контакты</button>
                 </section>
                 <div class="offer__actions offer-controls">
-                  <button class="button" type="button">
+                  <button class="button offer-controls__button" type="button">
                     <svg width="19" height="19" aria-hidden="true">
                       <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
                     </svg>
-                    <span class="label-popup">Добавить избранное</span>
+                    <span class="label-popup">В избранное</span>
                   </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
+                  <button class="button offer-controls__button" type="button">
+                    <svg width="19" height="19" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite.svg#on__map"></use>
                     </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
+                    <span class="label-popup">На карте</span>
                   </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
+                  <button class="button offer-controls__button" type="button">
+                    <svg width="19" height="19" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite.svg#on__map"></use>
                     </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
+                    <span class="label-popup">Заметка</span>
                   </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
+                  <button class="button offer-controls__button" type="button">
+                    <svg width="19" height="19" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite.svg#on__map"></use>
                     </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
+                    <span class="label-popup">Скрыть</span>
                   </button>
+                  <button class="button offer-controls__button" type="button">
+                    <svg width="19" height="19" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite.svg#on__map"></use>
+                    </svg>
+                    <span class="label-popup">Пожаловаться</span>
+                  </button>
+                </div>
+                <div class="offer__content-footer">
+                  <div class="offer__content-top">
+                    <span class="visually-hidden">К объявлению применена услуга</span>
+                    <span>Топ</span>
+                    <svg width="19" height="19" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite.svg#on__map"></use>
+                    </svg>
+                  </div>
+                  <p class="visually-hidden-mobile-tablet">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
                 </div>
               </section>
             </div>
           </article>
           <!-- новостроука без метро -->
-          <article class="offer">
-            <!-- <div class="offer__line"></div> -->
-            <div class="offer__wrapper">
-              <section class="offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <a class="offer-images__wrapper" href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" target="_blank" rel="noopener noreferrer">
-                  <div class="offer-images__main">
-                    <picture>
-                      <!-- <source srcset="img/bldg/sirenevy__bulvar/main__foto/front__large.webp" media="(min-width: 1240px)" /> -->
-                      <source srcset="img/catalog/novostroyka/card__1/medium.webp" media="(min-width: 500px)" />
-                      <img src="img/catalog/novostroyka/card__1/small.webp" alt="" />
-                    </picture>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                    <div class="offer-images__camera-icon">
-                      <svg width="17" height="10" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#camera__icon"></use>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <picture>
-                      <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="" />
-                    </picture>
-                    <picture>
-                      <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="" />
-                    </picture>
-                    <div class="offer-images__thumbnails-last">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="" />
-                      </picture>
-                      <div>
-                        <span class="visually-hidden">Количество фотографий</span>
-                        <span>+15</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <button class="button offer-images__swiper" type="button">
-                  <span class="visually-hidden">Предыдущее изображение</span>
-                  <span>
-                    <svg width="8" height="14" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#arr__left"></use>
-                    </svg>
-                  </span>
-                </button>
-                <button class="button offer-images__swiper" type="button">
-                  <span class="visually-hidden">Следующее изображение</span>
-                  <span>
-                    <svg width="8" height="14" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#arr__right"></use>
-                    </svg>
-                  </span>
-                </button>
-                <button class="button button-circle button-circle--dark" type="button">
-                  <svg width="20" height="20" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                  </svg>
-                  <span class="label-popup">Добавить в избранное</span>
-                </button>
-              </section>
-              <section class="offer__content offer__content--top">
-                <div class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer"> 4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer"> Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Бульвар Рокосовского</a>
-                    <span class="subway__distance subway__distance--foot">8 минут</span>
-                  </p>
-                  <p class="offer-properties__gk-name">
-                    <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer">ЖК «Сиреневый бульвар»</a>
-                  </p>
-                  <section class="offer-qualities">
-                    <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                    <ul>
-                      <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                      <li>Господдержка</li>
-                      <li>Рассрочка</li>
-                      <li>С отделкой</li>
-                    </ul>
-                  </section>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена объявления</h4>
-                    <div class="offer-price__wrapper">
-                      <span>16 700 000 ₽</span>
-                      <span>185 555 ₽/м²</span>
-                    </div>
-                    <button class="button" type="button" aria-expanded="false" aria-controls="price__chart">
-                      <span class="visually-hidden">Показать историю изменения цены</span>
-                      <svg width="27" height="27" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                      </svg>
-                    </button>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </div>
-                <section class="offer__seller seller">
-                  <h4 class="visually-hidden">Владелец объявления</h4>
-                  <div class="seller__wrapper">
-                    <div class="seller__info">
-                      <p class="seller__type">Агентство недвижимости</p>
-                      <p class="seller__name">
-                        <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                      </p>
-                    </div>
-                    <div class="seller__avatar">
-                      <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                    </div>
-                  </div>
-                  <p class="seller__offers">
-                    <a href="#" target="_blank" rel="noopener noreferrer">смотреть все объявления</a>
-                  </p>
-                  <button class="button button-main" type="button">Контакты</button>
-                </section>
-                <div class="offer__actions offer-controls">
-                  <button class="button" type="button">
-                    <svg width="19" height="19" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                    </svg>
-                    <span class="label-popup">Добавить избранное</span>
-                  </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
-                    </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
-                  </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
-                    </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
-                  </button>
-                  <button class="button" type="button">
-                    <svg width="21" height="21" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
-                    </svg>
-                    <span class="label-popup">Добавить ЖК в избранное</span>
-                  </button>
-                </div>
-              </section>
-            </div>
-          </article>
 
           <!-- вторичка топ с метро -->
 
@@ -2106,7 +1976,52 @@
 
           <!-- вторичка без метро -->
         </div>
-        <footer></footer>
+        <footer class="catalog-list__footer">
+          <h3 class="visually-hidden">Пагинация</h3>
+          <ul class="pagination">
+            <li>
+              <a class="button-white button-white--disabled" href="#">Назад</a>
+            </li>
+            <li>
+              <a class="button-white button-white--selected" href="#">1</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">2</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">3</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">4</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">5</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">6</a>
+            </li>
+            <li>
+              <a class="button-white" href="#">Вперёд</a>
+            </li>
+          </ul>
+        </footer>
+      </section>
+      <section class="faq">
+        <h3 class="visually-hidden">Почему у нас?</h3>
+        <div>
+          <details>
+            <summary>
+              <span>👍 Как купить квартиру в новостройке в Москве на сайте RemosPro.ru?</span>
+            </summary>
+            <p>Ищете объявления о продаже квартир в новостройках в Москве? Воспользуйтесь фильтрами или поиском в разделе.</p>
+          </details>
+          <details>
+            <summary>
+              <span>🍓 Как купить квартиру в новостройке в Москве на сайте RemosPro.ru?</span>
+            </summary>
+            <p>Ищете объявления о продаже квартир в новостройках в Москве? Воспользуйтесь фильтрами или поиском в разделе.</p>
+          </details>
+        </div>
       </section>
     </main>
     <footer class="footer">

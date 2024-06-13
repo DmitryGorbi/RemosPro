@@ -9,19 +9,8 @@
   flex-direction: column;
 }
 
-.offer__content--top {
+.offer__content {
   position: relative;
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    width: 21px;
-    height: 21px;
-    background-image: url('../img/icons/top.svg');
-    background-repeat: no-repeat;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -100,22 +89,50 @@
     grid-template-columns: 1fr 200px 35px;
     column-gap: 10px;
 
-    &--top::after {
-      top: auto;
-      bottom: 0;
-    }
-
-    &--top::before {
-      position: absolute;
-      content: 'Топ';
-      top: auto;
-      bottom: 1px;
-      right: 25px;
-      color: orange;
-    }
-
     & .offer__seller {
       margin-top: 0;
     }
+  }
+}
+
+.offer__content-footer {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  column-gap: 15px;
+  row-gap: 10px;
+  color: #727b82;
+
+  @media (min-width: @desktop-width) {
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.offer__content-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-left: auto;
+
+  & span {
+    color: red;
+  }
+
+  & svg {
+    stroke: red;
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+}
+
+.offer--land {
+  & .label-popups {
+    // display: none;
   }
 }
