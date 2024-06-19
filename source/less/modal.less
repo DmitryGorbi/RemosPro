@@ -13,18 +13,6 @@
     color: var(--basic-green);
   }
 
-  @media (min-width: @tablet-width) {
-    top: 50vh;
-    left: 50%;
-    bottom: auto;
-    transform: translateX(-50%) translateY(-50%);
-    width: 370px;
-
-    &--subscribe {
-      width: 600px;
-    }
-  }
-
   &--reg {
     padding-bottom: 40px;
   }
@@ -37,6 +25,43 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
+  }
+
+  &--map {
+    height: 100vh;
+
+    & .modal__wrapper {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 50vh;
+    left: 50%;
+    bottom: auto;
+    transform: translateX(-50%) translateY(-50%);
+    width: 370px;
+
+    &--subscribe {
+      width: 600px;
+    }
+
+    &--map {
+      width: 470px;
+      height: 70vh;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--map {
+      width: 780px;
+      height: 600px;
+    }
+
+    &--note {
+      width: 580px;
+    }
   }
 }
 

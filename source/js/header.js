@@ -7,6 +7,7 @@ const userActionsNav = document.querySelector('.user-actions');
 
 const clickBurgerToggler = onTogglerClick.bind(null, burgerToggler);
 // burgerToggler.addEventListener('click', clickBurgerToggler);
+
 burgerToggler.addEventListener('click', (evt) => {
   clickBurgerToggler(evt);
   if (burgerToggler.getAttribute('aria-expanded') === 'true') {
@@ -112,7 +113,6 @@ buttonLogIn.addEventListener('click', (evt) => {
 //
 let inputSearch = document.querySelectorAll('.input--modal');
 let popupLocation = document.querySelectorAll('.modal-search');
-console.log(inputSearch);
 
 inputSearch[0].addEventListener('input', () => {
   popupLocation[0].style.display = 'block';
@@ -126,7 +126,7 @@ document.addEventListener('keydown', () => {
 });
 
 inputSearch[1].addEventListener('input', () => {
-  popupLocation[1].style.display = 'block';
+  popupLocation[1].classList.add('show');
 });
 
 document.addEventListener('keydown', () => {

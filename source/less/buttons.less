@@ -19,6 +19,16 @@
   }
 }
 
+.button[disabled] {
+  background-color: var(--extra-light-gray);
+  color: var(--gray);
+
+  &:hover {
+    background-color: var(--gray);
+    color: var(--white);
+  }
+}
+
 :is(.navigation, .user-nav) .button {
   color: inherit;
 

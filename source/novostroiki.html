@@ -171,7 +171,7 @@
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">
-                <span>Каталог новостроек</span>
+                <span>Жилые комплексы</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-bldg">
                 <span class="visually-hidden">Открыть подменю каталога новостроек</span>
@@ -1838,7 +1838,7 @@
                 </a>
               </section>
               <section class="offer__content">
-                <div class="offer-properties">
+                <section class="offer-properties">
                   <h3 class="offer-properties__title">
                     <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer"> ЖК «Сиреневый бульвар» </a>
                   </h3>
@@ -1889,7 +1889,7 @@
                     Малоэтажный комплекс из 16 домов. В каждом доме всего 4 этажа. К тому же есть лифт. Дома кирпичные с толстыми стенами и утепленным фасадом. В каждом корпусе предусмотрены кладовые
                     и колясочные. Квартиры с в...
                   </p>
-                </div>
+                </section>
                 <section class="offer__seller seller">
                   <h4 class="visually-hidden">Владелец объявления</h4>
                   <div class="seller__wrapper">
@@ -2029,133 +2029,40 @@
     <section class="modal modal--subscribe">
       <h2 class="caption">Подписаться на новые объявления Remos</h2>
       <button class="button button-close" type="button">
-        <span class="visually-hidden">Закрыть окно авторизации</span>
+        <span class="visually-hidden">Закрыть окно</span>
       </button>
-      <form class="auth__form" method="post" action="">
-        <div>
-          <label for="mail__subscribe">
-            <span>Email адресс:</span>
-          </label>
-          <input class="input input--field" title="Введите ваш email" id="mail__subscribe" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
-        </div>
-        <fieldset>
-          <legend>Как часто вы хотите получать рассылку?</legend>
+      <div class="modal__wrapper modal__wrapper--subscribe">
+        <form class="modal-form" method="post" action="">
           <div>
-            <input id="once__day" type="radio" name="mailing__frequency" value="" />
-            <label for="once__day"><span>Раз в день</span></label>
+            <label for="mail__subscribe">
+              <span>Email адресс:</span>
+            </label>
+            <input class="input input--field" title="Введите ваш email" id="mail__subscribe" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
           </div>
+          <fieldset>
+            <legend>Как часто вы хотите получать рассылку?</legend>
+            <div>
+              <input id="once__day" type="radio" name="mailing__frequency" value="" />
+              <label for="once__day"><span>Раз в день</span></label>
+            </div>
+            <div>
+              <input id="three__days" type="radio" name="mailing__frequency" value="" checked />
+              <label for="three__days"><span>Раз в три дня</span></label>
+            </div>
+            <div>
+              <input id="once__week" type="radio" name="mailing__frequency" value="" />
+              <label for="once__week"><span>Раз в неделю</span></label>
+            </div>
+          </fieldset>
           <div>
-            <input id="three__days" type="radio" name="mailing__frequency" value="" checked />
-            <label for="three__days"><span>Раз в три дня</span></label>
+            <input id="mail__agreement" type="checkbox" required checked />
+            <label for="mail__agreement">
+              <span>Согласен с <a href="https://www.remospro.ru/rules/">правилами сайта</a> и <a href="https://www.remospro.ru/rules/confidentiality/">политикой конфиденциальности</a>.</span>
+            </label>
           </div>
-          <div>
-            <input id="once__week" type="radio" name="mailing__frequency" value="" />
-            <label for="once__week"><span>Раз в неделю</span></label>
-          </div>
-        </fieldset>
-        <div>
-          <input id="mail__agreement" type="checkbox" required checked />
-          <label for="mail__agreement">
-            <span>Согласен с правилами сайта и с политикой конфиденциальности.</span>
-          </label>
-        </div>
-        <button class="button button-main" type="submit">Подписаться</button>
-      </form>
-    </section>
-    <section class="modal modal--login auth auth--login">
-      <h2 class="caption">Авторизация</h2>
-      <button class="button button-close" type="button">
-        <span class="visually-hidden">Закрыть окно авторизации</span>
-      </button>
-      <form class="auth__form" method="post" action="">
-        <div>
-          <label for="userEmail">
-            <span>Email адресс:</span>
-          </label>
-          <input class="input input--field" title="Введите ваш email" id="userEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
-        </div>
-        <div>
-          <label for="userPassword">
-            <span>Пароль:</span>
-          </label>
-          <input
-            class="input input--field"
-            title="Введите ваш пароль"
-            id="userPassword"
-            type="password"
-            name="password"
-            autocomplete="current-password"
-            value=""
-            maxlength="20"
-            size="20"
-            required
-            enterkeyhint="done"
-          />
-        </div>
-        <div>
-          <input type="checkbox" id="remember" />
-          <label for="remember">Запомнить</label>
-        </div>
-        <button class="button button-main" type="submit">Войти</button>
-        <div>
-          <a class="auth__form-link" href="registration.html">Регистрация</a>
-          <a href="restore-password.html">Восстановить доступ</a>
-        </div>
-      </form>
-    </section>
-    <section class="modal modal--reg auth auth--reg">
-      <h2 class="caption">Регистрация</h2>
-      <button class="button button-close" type="button">
-        <span class="visually-hidden">Закрыть окно регистрации</span>
-      </button>
-      <form class="auth__form" method="post" action="">
-        <div>
-          <label for="userRegEmail">
-            <span>Email адресс:</span>
-          </label>
-          <input class="input input--field" title="Введите ваш email" id="userRegEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
-        </div>
-        <div>
-          <label for="registrationPassword">
-            <span>Пароль:</span>
-          </label>
-          <input
-            class="input input--field"
-            title="Придумайте надежный пароль"
-            id="registrationPassword"
-            type="password"
-            name="password"
-            autocomplete="new-password"
-            value=""
-            maxlength="20"
-            size="20"
-            required
-            enterkeyhint="done"
-          />
-        </div>
-        <fieldset>
-          <legend>Вы профессионал?</legend>
-          <div>
-            <input id="realtor" type="radio" name="profi-type" value="realtor" />
-            <label for="realtor"><span>Риэлтор</span></label>
-          </div>
-          <div>
-            <input id="agency" type="radio" name="profi-type" value="agency" />
-            <label for="agency"><span>Агентство недвижимости</span></label>
-          </div>
-          <div>
-            <input id="builder" type="radio" name="profi-type" value="builder" />
-            <label for="builder"><span>Застройщик</span></label>
-          </div>
-        </fieldset>
-        <div>
-          <input id="agreement" type="checkbox" required checked />
-          <label for="agreement">
-            <span>Согласен с правилами сайта и с политикой конфиденциальности.</span>
-          </label>
-        </div>
-        <button class="button button-main" type="submit">Зарегистрироваться</button>
-      </form>
+          <button class="button button-main" type="submit">Подписаться</button>
+        </form>
+      </div>
     </section>
     <section class="modal-location">
       <div class="modal-location__content">
@@ -2317,6 +2224,6 @@
     </section>
     <script src="js/header.js" type="module"></script>
     <script src="js/filter.js" type="module"></script>
-    <script src="js/catalog.js"></script>
+    <script src="js/catalog.js" type="module"></script>
   </body>
 </html>

@@ -25,4 +25,13 @@ const onTogglerClick = (item, evt) => {
   item.setAttribute('aria-expanded', isOpen);
 };
 
-export { changeActiveClass, isEscEvent, isEnterEvent, onTogglerClick };
+const disableBodyScroll = (block, item, selector) => {
+  const v = block.querySelector(item);
+  if (v.classList.contains(selector)) {
+    document.body.style.overflowY = 'hidden';
+  } else {
+    document.body.style.overflowY = 'scroll';
+  }
+};
+
+export { changeActiveClass, isEscEvent, isEnterEvent, onTogglerClick, disableBodyScroll };
