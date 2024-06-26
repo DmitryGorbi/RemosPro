@@ -13,7 +13,11 @@
 }
 
 .user-nav__button {
-  padding: 13px 12px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 44px;
   border-radius: 5px;
   background-color: var(--extra-light-gray);
 
@@ -27,7 +31,8 @@
   }
 
   @media (min-width: @small-tablet-width) {
-    padding: 11px;
+    padding: 0 11px;
+    height: 40px;
   }
 }
 

@@ -44,12 +44,12 @@
 .page-header__footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 15px;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     column-gap: 50px;
   }
 }
@@ -85,10 +85,10 @@
     @media (min-width: @desktop-width) {
       position: absolute;
       top: 65px;
-      color: var(--white);
       flex-direction: row;
       justify-content: space-between;
       column-gap: 50px;
+      color: var(--white);
     }
   }
 

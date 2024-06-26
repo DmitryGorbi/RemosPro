@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" prefix="og: //ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
@@ -13,12 +13,24 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду</title>
     <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду" />
+    <meta property="og:description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
+    <!-- картинка OG ?? -->
+    <meta property="og:image" content="https://www.remospro.ru/upload/gk/3b5/3b58272a8daee0dadeb13f72f5d35e55.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:url" content="https://www.remospro.ru" />
+    <!-- ? -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RemosPro" />
+    <meta property="og:locale" content="ru_RU" />
   </head>
 
   <body class="page__body layout">
     <header class="page-header wrapper-content page-header--index">
       <div class="page-header__wrapper">
-        <nav class="navigation">
+        <nav class="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -27,10 +39,10 @@
               <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
             </svg>
           </a>
-          <ul id="main-nav" class="nav">
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                <span>Продажа</span>
+          <ul id="main-nav" class="nav" itemprop="about" itemscope="" itemtype="https://schema.org/ItemList">
+            <li class="nav__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+              <a class="nav__link" href="#" itemprop="url">
+                <span itemprop="name">Продажа</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-sale">
                 <span class="visually-hidden">Открыть подменю раздела продажи</span>
@@ -41,68 +53,104 @@
               <div id="submenu-sale" class="nav__submenu">
                 <div class="submenu submenu--links">
                   <p class="submenu__title">Жилая недвижимость</p>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Квартиры</span></a>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Квартиры</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Дома и дачи</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Дома и дачи</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Земельные участоки</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Земельные участоки</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Комнаты</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Комнаты</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Таунхаусы</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Таунхаусы</span>
+                      </a>
                     </li>
                   </ul>
-                  <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Офис</span></a>
+                  <div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <a class="submenu__title" href="#" itemprop="url">
+                      <span itemprop="name">Коммерческая недвижимость</span>
+                    </a>
+                  </div>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Офис</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>ПСН</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">ПСН</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Здание</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Здание</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Производство</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Производство</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Торговая площадь</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Торговая площадь</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Склад</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Склад</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Готовый бизнес</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Готовый бизнес</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Коммерческая земля</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Коммерческая земля</span>
+                      </a>
                     </li>
                   </ul>
                   <p class="submenu__title">Гаражи</p>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Гараж</span></a>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Гараж</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Гаражный бокс</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url"
+                      <span itemprop="name">Гаражный бокс</span>
+                    </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Машиноместо</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Машиноместо</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                <span>Аренда</span>
+            <li class="nav__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+              <a class="nav__link" href="#" itemprop="url">
+                <span itemprop="name">Аренда</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-rent">
                 <span class="visually-hidden">Открыть подменю раздела аренды</span>
@@ -113,65 +161,99 @@
               <div id="submenu-rent" class="nav__submenu">
                 <div class="submenu submenu--links">
                   <p class="submenu__title">Жилая недвижимость</p>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Квартиры</span></a>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Квартиры</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Дома и дачи</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Дома и дачи</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Комнаты</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Комнаты</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Таунхаусы</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Таунхаусы</span>
+                      </a>
                     </li>
                   </ul>
-                  <a class="submenu__title" href="#">Коммерческая недвижимость</a>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Офис</span></a>
+                  <div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <a class="submenu__title" href="#" itemprop="url">
+                      <span itemprop="name">Коммерческая недвижимость</span>
+                    </a>
+                  </div>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Офис</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>ПСН</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">ПСН</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Здание</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Здание</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Производство</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Производство</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Торговая площадь</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Торговая площадь</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Склад</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Склад</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Готовый бизнес</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Готовый бизнес</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Коммерческая земля</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Коммерческая земля</span>
+                      </a>
                     </li>
                   </ul>
                   <p class="submenu__title">Гаражи</p>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Гараж</span></a>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Гараж</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Гаражный бокс</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Гаражный бокс</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Машиноместо</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Машиноместо</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="novostroiki.html">
-                <span>Жилые комплексы</span>
+            <li class="nav__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+              <a class="nav__link" href="novostroiki.html" itemprop="url">
+                <span itemprop="name">Жилые комплексы</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-new-bldg">
                 <span class="visually-hidden">Открыть подменю каталога новостроек</span>
@@ -182,89 +264,91 @@
               <div id="submenu-new-bldg" class="nav__submenu">
                 <div class="submenu submenu--bldg">
                   <p class="submenu__title">Строящиеся ЖК в Калининграде</p>
-                  <ul class="submenu__list submenu__list--bldg">
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="gk.html">
-                        <h3 class="">ЖК Сиреневый бульвар</h3>
+                  <ul class="submenu__list submenu__list--bldg" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="gk.html" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Сиреневый бульвар</h3>
                         <img src="img/bldg/sirenevy__bulvar/main__foto/front__small.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3 class="">ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3>ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3 class="">ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3 class="">ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3>ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3 class="">ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3 class="">ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
-                    <li class="bldg-nav">
-                      <a class="bldg-nav__wrapper" href="#">
-                        <h3>ЖК Shagal</h3>
+                    <li class="bldg-nav" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="bldg-nav__wrapper" href="#" itemprop="url">
+                        <h3 class="" itemprop="name">ЖК Shagal</h3>
                         <img src="img/bldg/bldg1.webp" alt="" width="80" loading="lazy" />
                         <p class="bldg-nav__fix">2 кв. 2025</p>
                         <p class="bldg-nav__name">От 2,3 млн - 10 млн</p>
                       </a>
                     </li>
                   </ul>
-                  <p class="submenu__link-wrapper">
-                    <a class="link-underline" href="#"><span>Перейти в каталог новостроек</span></a>
+                  <p class="submenu__link-wrapper" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <a class="link-underline" href="#" itemprop="url"></a>>
+                      <span itemprop="name">Каталог новостроек</span>
+                    </a>
                   </p>
                 </div>
               </div>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                <span>Специалисты</span>
+            <li class="nav__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+              <a class="nav__link" href="#" itemprop="url">
+                <span itemprop="name">Специалисты</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="professionals">
                 <span class="visually-hidden">Открыть подменю раздела специалистов</span>
@@ -275,37 +359,37 @@
               <div id="professionals" class="nav__submenu">
                 <div class="submenu submenu--expert">
                   <p class="submenu__title">Риэлторы</p>
-                  <ul class="submenu__list submenu__list--expert">
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
+                  <ul class="submenu__list submenu__list--expert" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
                         <div>
                           <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>На Ремос с 2020</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Румянцева Татьяна</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Румянцева Татьяна</h4>
                         <div>
                           <img src="img/experts/realtors/realtor_1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>Частный риэлтор</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Румянцева Татьяна</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Румянцева Татьяна</h4>
                         <div>
                           <img src="img/experts/realtors/realtor_2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>На Ремос с 2020</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Румянцева Татьяна</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Румянцева Татьяна</h4>
                         <div>
                           <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
@@ -313,41 +397,43 @@
                       </a>
                     </li>
                   </ul>
-                  <p class="submenu__link-wrapper">
-                    <a class="link-underline" href="#"><span>Список риэлторов</span></a>
+                  <p class="submenu__link-wrapper itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList"">
+                    <a class="link-underline" href="#" itemprop="url">
+                      <span itemprop="name">Список риэлторов</span>
+                    </a>
                   </p>
                   <p class="submenu__title">Агентства недвижимости</p>
-                  <ul class="submenu__list submenu__list--expert">
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Max Realty Max</h4>
+                  <ul class="submenu__list submenu__list--expert" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Max Realty Max</h4>
                         <div>
                           <img src="img/experts//agencies/agency1.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>56 объявлений</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Замоскворечье</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Замоскворечье</h4>
                         <div>
                           <img src="img/experts/agencies/agency2.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>1 000 объявлений</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Градомир</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Градомир</h4>
                         <div>
                           <img src="img/experts/agencies/agency3.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
                         <p>25 объявления</p>
                       </a>
                     </li>
-                    <li class="">
-                      <a class="expert-card" href="#">
-                        <h4>Мегаполис сервис >Мегаполис сервис >Мегаполис сервис >Мегаполис сервис</h4>
+                    <li class="" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a class="expert-card" href="#" itemprop="url">
+                        <h4 itemprop="name">Мегаполис сервис Мегаполис сервис Мегаполис сервис Мегаполис сервис</h4>
                         <div>
                           <img src="img/experts/agencies/agency6.webp" width="45" height="45" alt="Портретная фотография Румянцевой Татьяны" loading="lazy" />
                         </div>
@@ -355,15 +441,17 @@
                       </a>
                     </li>
                   </ul>
-                  <p class="submenu__link-wrapper">
-                    <a class="link-underline" href="#"><span>Список агентств</span></a>
+                  <p class="submenu__link-wrapper" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <a class="link-underline" href="#" itemprop="url">
+                      <span itemprop="name">Список агентств</span>
+                    </a>
                   </p>
                 </div>
               </div>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                <span>Ипотека</span>
+            <li class="nav__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+              <a class="nav__link" href="#" itemprop="url">
+                <span itemprop="name">Ипотека</span>
               </a>
               <button class="button nav__toggler" type="button" aria-expanded="false" aria-controls="submenu-mortgage">
                 <span class="visually-hidden">Открыть подменю раздела ипотеки</span>
@@ -374,21 +462,31 @@
               <div id="submenu-mortgage" class="nav__submenu">
                 <div class="submenu submenu--links">
                   <p class="submenu__title">Ипотечные сервисы</p>
-                  <ul class="submenu__list submenu__list--links">
-                    <li>
-                      <a href="#"><span>Подбор ипотечных программ</span></a>
+                  <ul class="submenu__list submenu__list--links" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Подбор ипотечных программ</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Ипотечный калькулятор</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Ипотечный калькулятор</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Калькулятор с досрочным погашением</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">Калькулятор с досрочным погашением</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>Оформить заявку на ипотеку</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#">
+                        <span itemprop="name">Оформить заявку на ипотеку</span>
+                      </a>
                     </li>
-                    <li>
-                      <a href="#"><span>ЖК Воскрешение</span></a>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
+                      <a href="#" itemprop="url">
+                        <span itemprop="name">ЖК Воскрешение</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -452,16 +550,30 @@
       </div>
       <div class="page-header__border"></div>
       <div class="page-header__footer">
-        <nav class="breadcrumbs">
-          <ol class="">
-            <li><a href="">Главная</a></li>
-            <li><a href="">Недвижимость к Калининграде</a></li>
-            <li>Новостройки</li>
+        <nav class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <ol>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a href="" itemprop="item">
+                <span itemprop="name">Главная</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <a href="" itemprop="item">
+                <span itemprop="name">Недвижимость в Калининграде</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+              <span itemprop="name">Жилые комплексы</span>
+              <meta itemprop="position" content="3" />
+              <!-- <link href="" itemprop="item"> -->
+            </li>
           </ol>
         </nav>
-        <button class="button button-location" type="button" aria-expanded="false">
+        <button class="button button-location" type="button">
           <svg class="" width="18px" height="18px" aria-hidden="true">
-            <use xlink:href="img/icons/sprite.svg#region"></use>
+            <use xlink:href="img/icons/sprite.svg#location"></use>
           </svg>
           <span>Кабардино-Балкарская республика</span>
         </button>
@@ -695,13 +807,13 @@
                   <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
                   <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
                 </div>
-                <div class="modal-search modal-search--filter">
-                  <p>Алтайсткий край</p>
-                  <p>Калининградская область</p>
-                  <p>Самарская область</p>
-                  <p>Республика Татарстан</p>
-                  <p>Ленинградская область</p>
-                </div>
+                <ul class="modal-search modal-search--filter">
+                  <li><button class="button" type="button">Алтайсткий край</button></li>
+                  <li><button class="button" type="button">Калининградская область</button></li>
+                  <li><button class="button" type="button">Самарская область</button></li>
+                  <li><button class="button" type="button">Республика Татарстан</button></li>
+                  <li><button class="button" type="button">Ленинградская область</button></li>
+                </ul>
               </fieldset>
 
               <button class="button button-submit" type="submit">Искать из 134 000</button>
@@ -1471,159 +1583,195 @@
       </form>
     </section>
     <section class="modal-location">
-      <div class="modal-location__content">
-        <h2 class="">Выберите регион/город</h2>
+      <div class="modal-location__wrapper">
+        <h2 class="modal-location__title">Выбор региона или города</h2>
         <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть окно авторизации</span>
+          <span class="visually-hidden">Закрыть модальное окно</span>
         </button>
-        <div class="modal-location__wrapper">
-          <form class="modal-location__form" action="">
-            <label class="visually-hidden" for="search-region">Выберите регион или город</label>
-            <input class="input input--field input--modal" id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
+        <div class="modal-location__content">
+          <div class="modal-location__form">
+            <div class="modal-location__search">
+              <label class="visually-hidden" for="search-region">Выберите регион или город</label>
+              <input id="search-region" class="modal-location__input input--modal" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
+              <button class="button modal-location__search-button disabled" type="button" aria-label="Закрыть подсказки"></button>
+              <div class="modal-location__search-icon show"></div>
+            </div>
             <div class="modal-location__button">
-              <!-- <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button> -->
               <button class="button button-main" type="button">Сохранить</button>
             </div>
-          </form>
-          <div class="modal-search modal-search--location">
-            <p>Алтайсткий край</p>
-            <p>Калининградская область</p>
-            <p>Самарская область</p>
-            <p>Республика Татарстан</p>
-            <p>Ленинградская область</p>
+            <ul class="modal-search modal-search--location">
+              <li><button class="button" type="button">Алтайсткий край</button></li>
+              <li><button class="button" type="button">Калининградская область</button></li>
+              <li><button class="button" type="button">Самарская область</button></li>
+              <li><button class="button" type="button">Республика Татарстан</button></li>
+              <li><button class="button" type="button">Ленинградская область</button></li>
+            </ul>
           </div>
           <div class="breadcrumbs breadcrumbs--location">
             <ol>
-              <li>Россия</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Нальчик</li>
+              <li><span role="button" tabindex="0">Россия</span></li>
+              <li><span role="button" tabindex="0">Кабардино-Балкарская республика</span></li>
+              <li><span>Нальчик</span></li>
             </ol>
           </div>
+          <div class="modal-location__favorite">
+            <p class="visually-hidden-desktop">Популярные регионы</p>
+            <ul class="modal-location__favorite-list">
+              <li><button class="button" type="button">Москва</button></li>
+              <li><button class="button" type="button">Санкт-Петербург</button></li>
+              <li><button class="button" type="button">Калининград</button></li>
+              <li><button class="button" type="button">Самара</button></li>
+              <li><button class="button" type="button">Екатеринбург</button></li>
+              <li><button class="button" type="button">Казань</button></li>
+              <li><button class="button" type="button">Краснодар</button></li>
+              <li><button class="button" type="button">Сочи</button></li>
+            </ul>
+          </div>
           <div class="modal-location__list">
-            <ul>
-              <li>Санкт-Петербург и ЛО</li>
-              <li>Москва и Московская область</li>
-            </ul>
-            <ul>
-              <li>А</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Б</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>В</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Г</li>
-              <li>Кабардино-Балкарская республика Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Д</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Е</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ж</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-              <li>Ленинградская область</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
-            <ul>
-              <li>Ё</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-              <li>Кабардино-Балкарская республика</li>
-            </ul>
+            <div>
+              <ul>
+                <li>А</li>
+                <li><button class="button" type="button">Алтайский край</button></li>
+                <li><button class="button" type="button">Амурская область</button></li>
+                <li><button class="button" type="button">Архангельская область</button></li>
+                <li><button class="button" type="button">Астраханская область</button></li>
+              </ul>
+              <ul>
+                <li>Б</li>
+                <li><button class="button" type="button">Белгородская область</button></li>
+                <li><button class="button" type="button">Брянская область</button></li>
+              </ul>
+              <ul>
+                <li>В</li>
+                <li><button class="button" type="button">Владимирская область</button></li>
+                <li><button class="button" type="button">Волгоградская область</button></li>
+                <li><button class="button" type="button">Вологодская область</button></li>
+                <li><button class="button" type="button">Воронежская область</button></li>
+              </ul>
+              <ul>
+                <li>Е</li>
+                <li><button class="button" type="button">Еврейская АО</button></li>
+              </ul>
+              <ul>
+                <li>З</li>
+                <li><button class="button" type="button">Забайскальский край</button></li>
+              </ul>
+              <ul>
+                <li>И</li>
+                <li><button class="button" type="button">Иваноская область</button></li>
+                <li><button class="button" type="button">Иркутская область</button></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>К</li>
+                <li><button class="button" type="button">Кабардино-Балкарская республика</button></li>
+                <li><button class="button" type="button">Калининградская область</button></li>
+                <li><button class="button" type="button">Калужская область</button></li>
+                <li><button class="button" type="button">Камчатский край</button></li>
+                <li><button class="button" type="button">Карачаево-Черкесская Республика</button></li>
+                <li><button class="button" type="button">Кемероская область</button></li>
+                <li><button class="button" type="button">Кировская область край</button></li>
+                <li><button class="button" type="button">Краснодарский край</button></li>
+                <li><button class="button" type="button">Красноярский край</button></li>
+                <li><button class="button" type="button">Курганская область</button></li>
+                <li><button class="button" type="button">Курская область</button></li>
+              </ul>
+              <ul>
+                <li>Л</li>
+                <li><button class="button" type="button">Липецая область</button></li>
+              </ul>
+              <ul>
+                <li>М</li>
+                <li><button class="button" type="button">Магаданская область</button></li>
+                <li><button class="button" type="button">Моква и МО</button></li>
+                <li><button class="button" type="button">Мурманская область</button></li>
+              </ul>
+              <ul>
+                <li>Н</li>
+                <li><button class="button" type="button">Нижегородская область</button></li>
+                <li><button class="button" type="button">Новгородская область</button></li>
+                <li><button class="button" type="button">Новосибирская область</button></li>
+              </ul>
+              <ul>
+                <li>О</li>
+                <li><button class="button" type="button">Омская область</button></li>
+                <li><button class="button" type="button">Оренбургская область</button></li>
+                <li><button class="button" type="button">Орловская область</button></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>П</li>
+                <li><button class="button" type="button">Пензенская область</button></li>
+                <li><button class="button" type="button">Пермский край</button></li>
+                <li><button class="button" type="button">Приморский край</button></li>
+                <li><button class="button" type="button">Псковская область</button></li>
+              </ul>
+              <ul>
+                <li>Р</li>
+                <li><button class="button" type="button">Республика Адыгея</button></li>
+                <li><button class="button" type="button">Республика Алтай</button></li>
+                <li><button class="button" type="button">Республика Башкортостан</button></li>
+                <li><button class="button" type="button">Республика Бурятия</button></li>
+                <li><button class="button" type="button">Республика Дагестан</button></li>
+                <li><button class="button" type="button">Республика Ингушетия</button></li>
+                <li><button class="button" type="button">Республика Калмыкия</button></li>
+                <li><button class="button" type="button">Республика Карелия</button></li>
+                <li><button class="button" type="button">Республика Коми</button></li>
+                <li><button class="button" type="button">Республика Крым</button></li>
+                <li><button class="button" type="button">Республика Марий Эл</button></li>
+                <li><button class="button" type="button">Республика Мордовия</button></li>
+                <li><button class="button" type="button">Республика Саха (Якутия)</button></li>
+                <li><button class="button" type="button">Республика Северная Осетия - Алания</button></li>
+                <li><button class="button" type="button">Республика Татарстан</button></li>
+                <li><button class="button" type="button">Республика Тыва</button></li>
+                <li><button class="button" type="button">Республика Хакасия</button></li>
+                <li><button class="button" type="button">Ростовская область</button></li>
+                <li><button class="button" type="button">Рязанская область</button></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>С</li>
+                <li><button class="button" type="button">Самарская область</button></li>
+                <li><button class="button" type="button">Санкт-Петербург и ЛО</button></li>
+                <li><button class="button" type="button">Саратоская область</button></li>
+                <li><button class="button" type="button">Сахалинская область</button></li>
+                <li><button class="button" type="button">Свердловская область</button></li>
+                <li><button class="button" type="button">Севастополь</button></li>
+                <li><button class="button" type="button">Смоленская область</button></li>
+                <li><button class="button" type="button">Ставропольский край</button></li>
+              </ul>
+              <ul>
+                <li>Т</li>
+                <li><button class="button" type="button">Тамбовская область</button></li>
+                <li><button class="button" type="button">Тверская область</button></li>
+                <li><button class="button" type="button">Томская область</button></li>
+                <li><button class="button" type="button">Тульская область</button></li>
+                <li><button class="button" type="button">Тюменская область</button></li>
+              </ul>
+              <ul>
+                <li>У</li>
+                <li><button class="button" type="button">Удмурдская Республика</button></li>
+                <li><button class="button" type="button">Ульяноская область</button></li>
+              </ul>
+              <ul>
+                <li>Х</li>
+                <li><button class="button" type="button">Хабароский клай</button></li>
+              </ul>
+              <ul>
+                <li>Ч</li>
+                <li><button class="button" type="button">Челябиская область</button></li>
+                <li><button class="button" type="button">Чеченская Республика</button></li>
+                <li><button class="button" type="button">Чувашская Республикка</button></li>
+                <li><button class="button" type="button">Чукотский АО</button></li>
+              </ul>
+              <ul>
+                <li>Я</li>
+                <li><button class="button" type="button">Ярославская область</button></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

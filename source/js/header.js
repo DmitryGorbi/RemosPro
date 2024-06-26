@@ -113,6 +113,15 @@ buttonLogIn.addEventListener('click', (evt) => {
 //
 let inputSearch = document.querySelectorAll('.input--modal');
 let popupLocation = document.querySelectorAll('.modal-search');
+console.log(inputSearch);
+
+const buttonLocation = document.querySelector('.button-location');
+const modalLocation = document.querySelector('.modal-location');
+
+buttonLocation.addEventListener('click', () => {
+  console.log('click');
+  modalLocation.classList.toggle('show');
+});
 
 inputSearch[0].addEventListener('input', () => {
   popupLocation[0].style.display = 'block';
@@ -126,19 +135,12 @@ document.addEventListener('keydown', () => {
 });
 
 inputSearch[1].addEventListener('input', () => {
-  popupLocation[1].classList.add('show');
+  popupLocation[1].style.display = 'block';
 });
 
 document.addEventListener('keydown', () => {
   if (isEscEvent) {
     popupLocation[1].style.display = 'none';
-    // inputSearch[1].value = '';
+    inputSearch[1].textContent = '';
   }
-});
-
-const buttonLocation = document.querySelector('.button-location');
-const modalLocation = document.querySelector('.modal-location');
-
-buttonLocation.addEventListener('click', () => {
-  modalLocation.classList.toggle('show');
 });

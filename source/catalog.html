@@ -455,15 +455,15 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="/">Главная</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_nedvizhimosti_v_kaliningrade.html">Недвижимость к Калининграде</a></li>
-            <li>Новостройки</li>
+            <li><a href="https://www.remospro.ru/catalog/prodazha_nedvizhimosti_v_kaliningrade.html">Недвижимость в Московской области</a></li>
+            <li>Квартиры</li>
           </ol>
         </nav>
-        <button class="button button-location" type="button" aria-expanded="false">
+        <button class="button button-location" type="button">
           <svg class="" width="18px" height="18px" aria-hidden="true">
-            <use xlink:href="img/icons/sprite.svg#region"></use>
+            <use xlink:href="img/icons/sprite.svg#location"></use>
           </svg>
-          <span>Кабардино-Балкарская республика</span>
+          <span>Московская область</span>
         </button>
       </div>
     </header>
@@ -472,7 +472,7 @@
       <p>Найдено 45 545 объявлений</p>
       <header class="catalog-header">
         <section class="catalog-menu">
-          <h2 class="visually-hidden">Меню каталога: фильтр, карта, подписка на новые объявления</h2>
+          <h2 class="visually-hidden">Меню каталога: фильтр, объявления на карте, подписка на новые объявления</h2>
           <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="catalog__filter">
             <svg width="19" height="19" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
@@ -481,13 +481,15 @@
           </button>
           <a href="#">
             <svg width="19" height="19" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#on__map"></use></svg
-            ><span>Карта</span>
+              <use xlink:href="img/icons/sprite.svg#on__map"></use>
+            </svg>
+            <span>Карта</span>
           </a>
           <button class="button" type="button">
             <svg width="19" height="19" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#mail__icon"></use></svg
-            ><span>Подписка</span>
+              <use xlink:href="img/icons/sprite.svg#mail__icon"></use>
+            </svg>
+            <span>Подписка</span>
           </button>
         </section>
         <form id="catalog__filter" class="filter" action="https://echo.htmlacademy.ru/courses">
@@ -1864,16 +1866,21 @@
               <section class="offer__content offer__content--top">
                 <section class="offer-properties">
                   <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer"> 4-комн квартира, 90 м², 8/8 этаж </a>
+                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
                   </h3>
                   <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer"> Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
                   </address>
                   <p class="offer-properties__subway subway">
+                    <svg class="subway__icon" width="18" height="13" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
+                    </svg>
+                    <span class="visually-hidden">метро </span>
                     <a href="#" target="_blank" rel="noopener noreferrer">Бульвар Рокосовского</a>
-                    <span class="subway__distance subway__distance--foot">8 минут</span>
+                    <span>~ 8 мин.</span>
+                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
                   </p>
-                  <p class="offer-properties__gk-name">
+                  <p class="offer-properties__gk">
                     <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer">ЖК «Сиреневый бульвар»</a>
                   </p>
                   <section class="offer-qualities">
@@ -1886,17 +1893,20 @@
                     </ul>
                   </section>
                   <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена объявления</h4>
-                    <div class="offer-price__wrapper">
-                      <span>16 700 000 ₽</span>
-                      <span>185 555 ₽/м²</span>
+                    <h4 class="visually-hidden">Цена в объявлении</h4>
+                    <div class="offer-price__value">
+                      <data value="16700000">16 700 000 ₽</data>
+                      <data value="185555">185 555 ₽/м²</data>
                     </div>
-                    <button class="button" type="button" aria-expanded="false" aria-controls="price__chart">
-                      <span class="visually-hidden">Показать историю изменения цены</span>
-                      <svg width="27" height="27" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                      </svg>
-                    </button>
+                    <div class="offer-price__history">
+                      <button class="button" type="button" aria-expanded="false" aria-controls="price__chart">
+                        <span class="visually-hidden">Показать историю изменения цены</span>
+                        <svg width="27" height="27" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
+                        </svg>
+                      </button>
+                      <div id="price__chart"></div>
+                    </div>
                   </section>
                   <p class="offer-properties__description">
                     Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
@@ -1923,12 +1933,12 @@
                     <button class="button button-main" type="button">Контакты</button>
                   </section>
                   <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false" aria-controls="offer__controls">
-                      <img
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0xMyAxNmMwIDEuNjU0IDEuMzQ2IDMgMyAzczMtMS4zNDYgMy0zLTEuMzQ2LTMtMy0zLTMgMS4zNDYtMyAzek0xMyAyNmMwIDEuNjU0IDEuMzQ2IDMgMyAzczMtMS4zNDYgMy0zLTEuMzQ2LTMtMy0zLTMgMS4zNDYtMyAzek0xMyA2YzAgMS42NTQgMS4zNDYgMyAzIDNzMy0xLjM0NiAzLTMtMS4zNDYtMy0zLTMtMyAxLjM0Ni0zIDN6IiBmaWxsPSIjNjY2NjY2IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIj4KICAgIDwvcGF0aD4KICA8L2c+Cjwvc3ZnPgo="
-                      />
+                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
+                      <svg width="25" height="25" aria-hidden="true">
+                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
+                      </svg>
                     </button>
-                    <ul id="offer__controls" class="offer-controls__wrapper">
+                    <ul class="offer-controls__wrapper">
                       <li>
                         <button class="button offer-controls__item" type="button">
                           <svg width="20" height="20" aria-hidden="true">
@@ -1976,16 +1986,8 @@
                   <div class="offer__content-top">
                     <p class="visually-hidden">К объявлению применена услуга</p>
                     <span>Топ</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 512 512">
-                      <g>
-                        <path
-                          d="M476.389 246.231c-1.317 2.634-4.028 4.26-6.972 4.26h-80.094C384.21 430.51 203.727 547.631 39.975 488.218c-3.098-1.084-5.112-4.028-5.112-7.281s2.092-6.197 5.112-7.281c94.502-34.082 158.717-123.085 161.893-223.164h-79.862a7.651 7.651 0 0 1-6.894-4.26 7.728 7.728 0 0 1 .775-8.133L289.631 11.216c1.472-1.937 3.718-3.021 6.119-3.021s4.725 1.085 6.197 3.021l173.59 226.882c1.781 2.323 2.091 5.5.852 8.133z"
-                          fill="gold"
-                          opacity="1"
-                          data-original="#000000"
-                          class=""
-                        ></path>
-                      </g>
+                    <svg width="23" height="24" aria-hidden="true">
+                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
                     </svg>
                   </div>
                   <p class="visually-hidden-mobile-tablet">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
@@ -2032,23 +2034,6 @@
             </li>
           </ul>
         </footer>
-      </section>
-      <section class="faq">
-        <h3 class="visually-hidden">Почему у нас?</h3>
-        <div>
-          <details>
-            <summary>
-              <span>👍 Как купить квартиру в новостройке в Москве на сайте RemosPro.ru?</span>
-            </summary>
-            <p>Ищете объявления о продаже квартир в новостройках в Москве? Воспользуйтесь фильтрами или поиском в разделе.</p>
-          </details>
-          <details>
-            <summary>
-              <span>🍓 Как купить квартиру в новостройке в Москве на сайте RemosPro.ru?</span>
-            </summary>
-            <p>Ищете объявления о продаже квартир в новостройках в Москве? Воспользуйтесь фильтрами или поиском в разделе.</p>
-          </details>
-        </div>
       </section>
     </main>
     <footer class="footer">
