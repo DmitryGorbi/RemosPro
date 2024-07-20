@@ -10,13 +10,23 @@
 
 .new-offers__nav {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 20px;
+  align-items: baseline;
+  column-gap: 10px;
 
-  & a {
-    display: block;
-    padding: 5px 0;
-    color: inherit;
+  & > span {
+    font-weight: 500;
+  }
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+    & a {
+      display: block;
+      padding: 5px 0;
+      color: inherit;
+    }
   }
 }
 

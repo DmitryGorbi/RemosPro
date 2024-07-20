@@ -28,7 +28,7 @@
   </head>
 
   <body class="page__body layout">
-    <header class="page-header wrapper-content page-header--index">
+    <header class="page-header wrapper-content">
       <div class="page-header__wrapper">
         <nav class="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
           <button class="button toggler" type="button" aria-expanded="false" aria-controls="main-nav">
@@ -550,7 +550,8 @@
       </div>
       <div class="page-header__border"></div>
       <div class="page-header__footer">
-        <nav class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <!-- Крошки в качестве примера. На главной использоваться не будут -->
+        <nav class="breadcrumbs visually-hidden" itemscope="" itemtype="http://schema.org/BreadcrumbList">
           <ol>
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
               <a href="" itemprop="item">
@@ -590,7 +591,8 @@
           </picture>
         </div>
         <div class="search-section__filter">
-          <h2>Поиск недвижимости в Кабардино-Балкарской Республике</h2>
+          <!-- <h2>Поиск недвижимости в Кабардино-Балкарской Республике</h2> -->
+          <h2>Поиск недвижимости в Москве</h2>
           <form class="filter filter-wrapper" action="https://echo.htmlacademy.ru/courses">
             <div class="filter__header">
               <h2>Фильтр поиска</h2>
@@ -983,20 +985,23 @@
       </section>
       <section class="new-offers section-wrapper">
         <h2 class="caption-index">Свежие предложения</h2>
-        <ul class="new-offers__nav">
-          <li>
-            <a href="#"><span class="span-active">Квартиры</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Новостройки</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Дома</span></a>
-          </li>
-          <li>
-            <a href="#"><span>Офисы</span></a>
-          </li>
-        </ul>
+        <div class="new-offers__nav">
+          <span>Продажа:</span>
+          <ul>
+            <li>
+              <a href="#"><span class="span-active">квартиры</span></a>
+            </li>
+            <li>
+              <a href="#"><span>новостройки</span></a>
+            </li>
+            <li>
+              <a href="#"><span>дома</span></a>
+            </li>
+            <li>
+              <a href="#"><span>офисы</span></a>
+            </li>
+          </ul>
+        </div>
         <div class="new-offers__wrapper">
           <article class="new-offer">
             <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
@@ -1218,20 +1223,20 @@
               <img src="img/bldg/sirenevy__bulvar/main__foto/front__index.webp" alt="" width="334" loading="lazy" />
               <p class="new-bldg__finish"><span>Сдача 2 кв. 2025</span></p>
               <!-- <ul class="new-bldg__list">
-                <li>Студии</li>
-                <li>от 25 м²</li>
-                <li>от 2,4 млн ₽</li>
-              </ul>
-              <ul class="new-bldg__list">
-                <li>1-комн.</li>
-                <li>от 35 м²</li>
-                <li>от 5,5 млн ₽</li>
-              </ul>
-              <ul class="new-bldg__list">
-                <li>2-комн.</li>
-                <li>от 55 м²</li>
-                <li>от 8,5 млн ₽</li>
-              </ul> -->
+                  <li>Студии</li>
+                  <li>от 25 м²</li>
+                  <li>от 2,4 млн ₽</li>
+                </ul>
+                <ul class="new-bldg__list">
+                  <li>1-комн.</li>
+                  <li>от 35 м²</li>
+                  <li>от 5,5 млн ₽</li>
+                </ul>
+                <ul class="new-bldg__list">
+                  <li>2-комн.</li>
+                  <li>от 55 м²</li>
+                  <li>от 8,5 млн ₽</li>
+                </ul> -->
               <p class="new-bldg___price">Стоимость от 2,4 млн - до 9,9 млн ₽</p>
               <p class="new-bldg___square">Площадь от м² 35 - 108 м²</p>
               <p>В продаже 454 квартиры</p>
@@ -1275,6 +1280,76 @@
             </a>
           </li>
         </ul>
+        <!-- <article class="new-bldg">
+            <div class="new-bldg__content">
+              <h3 class="offer-title">
+                <a href="">ЖК Сиреневый бульвар</a>
+              </h3>
+              <address class="offer-address">Москва, 1-я Ямского поля, вл. 2</address>
+              <section class="offer-qualities">
+                <h4 class="visually-hidden">Особенности и преимущества жилого комплекса</h4>
+                <dl>
+                  <div>
+                    <dt>Сдача:</dt>
+                    <dd><time datetime="2025-W24">2 кв. 2025 г.</time></dd>
+                  </div>
+                  <div>
+                    <dt>Класс ЖК:</dt>
+                    <dd>комфорт</dd>
+                  </div>
+                  <div>
+                    <dt>Корпусов:</dt>
+                    <dd>16</dd>
+                  </div>
+                </dl>
+              </section>
+              <p class="new-bldg__price">Стоимость от 2,4 млн - до 9,9 млн ₽</p>
+              <p class="new-bldg__square">Площадь от 35 м² - 108 м²</p>
+              <section class="flats-list">
+                <h4 class="visually-hidden">Квартиры в продаже: комнатность, площадь, цена, количество</h4>
+                <ul>
+                  <li><a href="">1-комн.</a></li>
+                  <li>от 28.10 м²</li>
+                  <li>от 119.2 млн. ₽</li>
+                  <li>16 <span class="text-short">предл.</span><span class="text-long">предложений</span></li>
+                </ul>
+                <ul>
+                  <li><a href="">2-комн.</a></li>
+                  <li>от 28.10 м²</li>
+                  <li>от 19.2 млн. ₽</li>
+                  <li>6 <span class="text-short">предл.</span><span class="text-long">предложений</span></li>
+                </ul>
+                <ul>
+                  <li><a href="">3-комн.</a></li>
+                  <li>от 28.10 м²</li>
+                  <li>от 319.2 млн. ₽</li>
+                  <li>6 <span class="text-short">предл.</span><span class="text-long">предложений</span></li>
+                </ul>
+                <p>Всего в продаже <a href="">97 квартир</a></p>
+              </section>
+              <section class="seller seller--index">
+                <h4 class="visually-hidden">Владелец объявления</h4>
+                <div class="seller__wrapper">
+                  <div class="seller__info">
+                    <p class="seller__type">Застройщик</p>
+                    <p class="seller__name">
+                      <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">
+                        <span>Ойкумена</span>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="seller__avatar">
+                    <img src="img/catalog/user/oiku.webp" width="40" height="40" alt="Логотип застройщика Ойкумена" />
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="new-bldg__image">
+              <picture>
+                <img src="img/bldg/sirenevy__bulvar/main__foto/front__index.webp" alt="" width="334" loading="lazy" />
+              </picture>
+            </div>
+          </article> -->
       </section>
       <section class="journal section-wrapper">
         <h2 class="caption-index">Журнал</h2>
@@ -1352,7 +1427,7 @@
       </section>
       <section class="location section-wrapper">
         <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
-        <section class="location__item location__item-metro">
+        <section class="location__item">
           <h3>Квартиры у метро</h3>
           <ul class="location__list">
             <li><a href="#">Автозаводская</a></li>
@@ -1388,9 +1463,11 @@
             <li><a href="#">Щукинская</a></li>
             <li><a href="#">Электрозаводская</a></li> -->
           </ul>
-          <a class="link-underline" href="#"><span>Показать всё</span></a>
+          <a class="link-underline" href="#">
+            <span>Показать всё</span>
+          </a>
         </section>
-        <section class="location__item location__item-area">
+        <section class="location__item">
           <h3>Квартиры в районе</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -1406,9 +1483,11 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#"><span>Показать всё</span></a>
+          <a class="link-underline" href="#">
+            <span>Показать всё</span>
+          </a>
         </section>
-        <section class="location__item location__item-city">
+        <section class="location__item">
           <h3>Квартиры в Округах</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -1424,9 +1503,11 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#"><span>Показать всё</span></a>
+          <a class="link-underline" href="#">
+            <span>Показать всё</span>
+          </a>
         </section>
-        <section class="location__item location__item-streets">
+        <section class="location__item">
           <h3>Квартиры на улицах</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -1442,7 +1523,9 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#"><span>Показать всё</span></a>
+          <a class="link-underline" href="#">
+            <span>Показать всё</span>
+          </a>
         </section>
       </section>
 
@@ -1461,6 +1544,7 @@
           <li><a href="">Условия использования</a></li>
           <li><a href="">Публикации</a></li>
           <li><a href="">Обратная связь</a></li>
+          <li><a href="for_developers.html">Застройщикам</a></li>
         </ul>
         <ul class="social-list">
           <li>
