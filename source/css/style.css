@@ -200,10 +200,10 @@ a {
 a:visited {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
+:is(.submenu__list--links, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a:focus-visible {
+:is(.submenu__list--links, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a:focus-visible {
   box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
 :is(.nav-section, .footer, .developer-about, .gk-progress) a {
@@ -211,12 +211,6 @@ a:visited {
 }
 :is(.nav-section, .footer) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
-}
-:is(.nav) a {
-  color: inherit;
-}
-:is(.nav) a:focus-visible {
-  box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
 :is(.location, .new-offers__nav, .breadcrumbs, .expert-card) a {
   border-radius: 5px;
@@ -237,7 +231,7 @@ a:visited {
 :is(.new-bldg) a:hover {
   color: inherit;
 }
-:is(.submenu, .new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer) a:focus-visible {
+:is(.new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 :is(.breadcrumbs, .quick-links, .developer-about, .gk-progress, .catalog-list__header, .offer__content) a:focus-visible {
@@ -659,8 +653,7 @@ input[type='radio'] {
   color: var(--green);
 }
 .link-underline:focus-visible {
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 .button-circle {
   position: relative;
@@ -1155,6 +1148,9 @@ input[type='radio'] {
   line-height: 28px;
   border-bottom: 1px solid var(--light-gray);
 }
+.nav__link:focus-visible {
+  box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
+}
 @media (min-width: 768px) {
   .nav__link {
     padding: 12px 0 13px 0;
@@ -1400,7 +1396,7 @@ input[type='radio'] {
   white-space: nowrap;
   overflow: hidden;
 }
-.expert-card h4 span:has(a:focus-visible) {
+.expert-card h4:has(a:focus-visible) {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 .expert-card div {

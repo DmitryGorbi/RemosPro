@@ -8,7 +8,7 @@ a {
   }
 }
 
-:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
+:is(.submenu__list--links, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
   color: inherit;
 
   &:focus-visible {
@@ -26,14 +26,6 @@ a {
 :is(.nav-section, .footer) a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
-  }
-}
-
-:is(.nav) a {
-  color: inherit;
-
-  &:focus-visible {
-    box-shadow: inset 0 0 0 1px rgb(255, 255, 255), inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
   }
 }
 
@@ -72,7 +64,7 @@ a {
   }
 }
 
-:is(.submenu, .new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer) a {
+:is(.new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer) a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
   }
@@ -108,9 +100,3 @@ a {
     padding: 12px 0;
   }
 }
-
-// :is(.experts__link-wrapper) a {
-//   &:hover {
-//     color: var(--green);
-//   }
-// }
