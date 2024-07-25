@@ -1,7 +1,7 @@
 .expert-card {
   width: 100%;
   font-size: 14px;
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 45px 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 10px;
@@ -13,6 +13,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+    & span:has(a:focus-visible) {
+      box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+    }
   }
 
   & div {

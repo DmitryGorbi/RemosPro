@@ -200,10 +200,10 @@ a {
 a:visited {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer) a {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
   color: inherit;
 }
-:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer) a:focus-visible {
+:is(.navigation, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a:focus-visible {
   box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
 :is(.nav-section, .footer, .developer-about, .gk-progress) a {
@@ -218,10 +218,10 @@ a:visited {
 :is(.nav) a:focus-visible {
   box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
-:is(.location, .new-offers__nav, .breadcrumbs) a {
+:is(.location, .new-offers__nav, .breadcrumbs, .expert-card) a {
   border-radius: 5px;
 }
-:is(.location, .new-offers__nav, .breadcrumbs) a:hover {
+:is(.location, .new-offers__nav, .breadcrumbs, .expert-card) a:hover {
   color: var(--basic-green);
 }
 :is(.location, .new-offers__nav) a {
@@ -237,7 +237,7 @@ a:visited {
 :is(.new-bldg) a:hover {
   color: inherit;
 }
-:is(.submenu, .new-buildings, .journal, .experts, .gk-offers, .catalog-menu, .offer-images, .plan-offer) a:focus-visible {
+:is(.submenu, .new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 :is(.breadcrumbs, .quick-links, .developer-about, .gk-progress, .catalog-list__header, .offer__content) a:focus-visible {
@@ -652,8 +652,15 @@ input[type='radio'] {
   accent-color: var(--basic-green);
 }
 .link-underline span {
-  color: var(--basic-green);
   border-bottom: 1px dashed var(--basic-green);
+  color: var(--basic-green);
+}
+.link-underline:hover span {
+  color: var(--green);
+}
+.link-underline:focus-visible {
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }
 .button-circle {
   position: relative;
@@ -1379,7 +1386,7 @@ input[type='radio'] {
 .expert-card {
   width: 100%;
   font-size: 14px;
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 45px 1fr;
   grid-template-rows: 1fr 1fr;
   -moz-column-gap: 10px;
@@ -1392,6 +1399,9 @@ input[type='radio'] {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.expert-card h4 span:has(a:focus-visible) {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 .expert-card div {
   width: 45px;
@@ -3320,8 +3330,15 @@ input[type='radio'] {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.offer-images__wrapper--novostroiky {
+  grid-template-rows: 250px;
+}
 .offer-images__main {
   position: relative;
+}
+.offer-images__main a {
+  display: block;
+  height: 100%;
 }
 .offer-images__main .offer-images__camera,
 .offer-images__main .button-circle {
@@ -4280,12 +4297,12 @@ input[type='radio'] {
   border-bottom: 1px dashed var(--basic-green);
 }
 @media (min-width: 768px) {
-  .search:has(input:focus) {
+  .search:has(input:focus-visible) {
     box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
     outline: none;
   }
 }
-.search--keywords:has(input:focus) {
+.search--keywords:has(input:focus-visible) {
   box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
   outline: none;
 }
