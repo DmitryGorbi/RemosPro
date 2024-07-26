@@ -1,59 +1,39 @@
 .new-offer {
+  display: grid;
+  grid-template-areas:
+    'photo'
+    'data';
+  row-gap: 10px;
   min-width: calc(50% - 15px);
+  border-radius: 5px;
+  font-size: 14px;
+  // border: 1px solid var(--light-gray);
+}
+
+.new-offers__image {
+  grid-area: photo;
+
+  & a {
+    display: block;
+  }
 
   & img {
     border-radius: 5px;
   }
-
-  & p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-    padding: 15px 15px 37px 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px var(--light-gray);
-    transition: transform 0.3s;
-
-    & img {
-      margin-bottom: 10px;
-    }
-
-    &::after {
-      position: absolute;
-      content: 'new';
-      bottom: 10px;
-      right: 15px;
-      padding: 0 5px;
-      border: 2px solid var(--blue);
-      border-radius: 5px;
-    }
-
-    & p:not(:last-of-type) {
-      margin-bottom: 5px;
-    }
-  }
 }
 
-.new-offer__link {
+.new-offer__data {
+  grid-area: data;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  font-size: 14px;
-  color: inherit;
-}
+  white-space: nowrap;
+  overflow: hidden;
 
-.new-offer:has(.new-offer__link:focus) {
-  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
-  transform: scale(1.01);
-}
-
-.new-offer:has(.new-offer__link:hover) {
-  @media (min-width: @tablet-width) {
-    transform: scale(1.03);
+  & li,
+  address {
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 
@@ -61,8 +41,8 @@
   font-size: 15px;
   font-weight: 700;
 
-  @media (min-width: @tablet-width) {
-    font-size: 17px;
+  & span {
+    font-weight: 500;
   }
 }
 
@@ -70,4 +50,57 @@
   padding: 3px 5px;
   border: 1px solid var(--gray);
   border-radius: 5px;
+
+  &:hover {
+    border-color: var(--basic-green);
+    color: var(--basic-green);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .new-offer {
+    row-gap: 10px;
+    box-shadow: 0 0 10px var(--light-gray);
+
+    &:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s;
+    }
+
+    &:hover .new-offer__properties {
+      border-color: var(--basic-green);
+    }
+
+    &:hover .new-offer__properties a {
+      color: var(--basic-green);
+    }
+  }
+
+  .new-offer__data {
+    position: relative;
+    row-gap: 7px;
+    padding: 10px 15px 37px 15px;
+
+    &::after {
+      position: absolute;
+      content: 'new';
+      bottom: 10px;
+      right: 15px;
+      padding: 0 5px;
+      border: 2px solid var(--basic-green);
+      border-radius: 5px;
+    }
+  }
+
+  .new-offer__properties a {
+    display: block;
+
+    &:hover {
+      color: var(--green) !important;
+    }
+  }
+
+  .new-offer__price {
+    font-size: 17px;
+  }
 }

@@ -1021,15 +1021,33 @@
         <div class="new-offers__wrapper">
           <article class="new-offer">
             <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
-            <a class="new-offer__link" href="#">
-              <img src="img/offers/building.webp" alt="" loading="lazy" />
-              <p class="new-offer__price">38 500 000 ₽</p>
-              <p class="new-offer__properties">3-комн. · 95.20 м² · 3/9 этаж</p>
-              <p>Тюмень, мкр Суходолье, ул. Монтажников, 43</p>
-              <p class="subway">Войковская, <span class="subway__distance subway__distance--foot">10 минут</span></p>
-            </a>
+            <ul class="new-offer__data">
+              <li class="new-offer__price"><data value="3850000">38 500 000</data> &#x20bd;</li>
+              <li class="new-offer__properties">
+                <a href="" aria-label="Перейти к объявлению">3-комн. · 95.20 <abbr title="квадратный метр">м²</abbr> · 3/9 этаж</a>
+              </li>
+              <li>
+                <address>Тюмень, мкр Суходолье, ул. Монтажников, 43</address>
+              </li>
+              <li class="subway">
+                <svg class="subway__icon" width="18" height="13" aria-hidden="true">
+                  <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
+                </svg>
+                <span class="visually-hidden">метро </span>
+                <span>Бульвар Рокосовского</span>
+                <span>~ 8 мин.</span>
+                <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+              </li>
+            </ul>
+            <div class="new-offers__image">
+              <a href="#" aria-label="Перейти к объявлению">
+                <picture>
+                  <img src="img/offers/building.webp" alt="Фото 3-комн. · 95.20 м² · 3/9 этаж, Тюмень, мкр Суходолье, ул. Монтажников, 43" loading="lazy" />
+                </picture>
+              </a>
+            </div>
           </article>
-          <article class="new-offer">
+          <!-- <article class="new-offer">
             <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
             <a class="new-offer__link" href="#">
               <img src="img/offers/building.webp" alt="" loading="lazy" />
@@ -1038,8 +1056,8 @@
               <p>Тула, мкр Мелиораторов, ул. Сидора Путилова, 41</p>
               <p class="subway">Войковская, <span class="subway__distance subway__distance--foot">10 минут</span></p>
             </a>
-          </article>
-          <article class="new-offer">
+          </article> -->
+          <!-- <article class="new-offer">
             <h3 class="visually-hidden">Продажа 4-комн. квартиры на ул. Усиевича 4</h3>
             <a class="new-offer__link" href="#">
               <img src="img/offers/building.webp" alt="" loading="lazy" />
@@ -1098,7 +1116,7 @@
               <p title="Наро-Фоминский городской округ » коттеджный пос. Загородный">Наро-Фоминский городской округ » коттеджный пос. Загородный</p>
               <p class="subway">Войковская, <span class="subway__distance subway__distance--foot">10 минут</span></p>
             </a>
-          </article>
+          </article> -->
         </div>
         <a href="#" target="">Смотреть весь список</a>
       </section>
