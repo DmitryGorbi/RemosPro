@@ -4,7 +4,8 @@
     'photo'
     'data';
   row-gap: 10px;
-  min-width: calc(50% - 15px);
+  grid-template-rows: min-content;
+  // min-width: calc(50% - 15px);
   border-radius: 5px;
   font-size: 14px;
   // border: 1px solid var(--light-gray);
@@ -38,7 +39,7 @@
 }
 
 .new-offer__price {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
 
   & span {
@@ -50,17 +51,23 @@
   padding: 3px 5px;
   border: 1px solid var(--gray);
   border-radius: 5px;
-
-  &:hover {
-    border-color: var(--basic-green);
-    color: var(--basic-green);
-  }
 }
 
 @media (min-width: @tablet-width) {
   .new-offer {
+    position: relative;
     row-gap: 10px;
     box-shadow: 0 0 10px var(--light-gray);
+
+    &::after {
+      position: absolute;
+      content: 'new';
+      bottom: 10px;
+      right: 15px;
+      padding: 0 5px;
+      border: 2px solid var(--basic-green);
+      border-radius: 5px;
+    }
 
     &:hover {
       transform: scale(1.01);
@@ -77,19 +84,8 @@
   }
 
   .new-offer__data {
-    position: relative;
     row-gap: 7px;
     padding: 10px 15px 37px 15px;
-
-    &::after {
-      position: absolute;
-      content: 'new';
-      bottom: 10px;
-      right: 15px;
-      padding: 0 5px;
-      border: 2px solid var(--basic-green);
-      border-radius: 5px;
-    }
   }
 
   .new-offer__properties a {

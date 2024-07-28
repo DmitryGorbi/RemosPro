@@ -1,10 +1,13 @@
 .bldg-nav {
-  display: grid;
-  column-gap: 10px;
-  row-gap: 3px;
-  grid-template-columns: max-content 1fr;
-  grid-template-rows: repeat(3, 16px);
   // min-width: 100%;
+
+  & a {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 3px;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(3, 16px);
+  }
 
   & h3,
   p {
@@ -12,10 +15,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-  }
-
-  & h3:has(a:focus-visible) {
-    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
   }
 
   & img {

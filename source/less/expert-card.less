@@ -1,37 +1,31 @@
 .expert-card {
-  width: 100%;
-  font-size: 14px;
   display: inline-grid;
   grid-template-columns: 45px 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 10px;
   row-gap: 5px;
-  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
 
-  & h4 {
-    margin-top: 3px;
+  & h4,
+  p {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
-    &:has(a:focus-visible) {
-      box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
-    }
   }
 
-  & div {
-    width: 45px;
-    height: 45px;
-    grid-column: 1/2;
-    grid-row: 1/4;
-    border: 1px solid var(--light-gray);
-    border-radius: 5px;
+  & h4 {
+    margin-top: 3px;
   }
 
   & img {
-    height: 100%;
-    border-radius: 5px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 100%;
+    height: 45px;
     object-fit: cover;
     object-position: top;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
   }
 }

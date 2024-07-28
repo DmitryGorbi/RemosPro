@@ -8,7 +8,7 @@ a {
   }
 }
 
-:is(.submenu__list--links, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
+:is(.navigation, .nav, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
   color: inherit;
 
   &:focus-visible {
@@ -23,7 +23,7 @@ a {
   color: var(--basic-green);
 }
 
-:is(.nav-section, .footer, .new-offers__image, .new-offer) a {
+:is(.nav-section, .footer, .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert) a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
   }
@@ -31,7 +31,7 @@ a {
 
 //  links hover
 
-:is(.bldg-nav, .location, .new-offers__nav, .breadcrumbs, .expert-card) a {
+:is(.location, .new-offers__nav, .breadcrumbs) a {
   // border-radius: 5px;
 
   &:hover {
@@ -74,29 +74,5 @@ a {
   &:focus-visible {
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
-  }
-}
-
-// links like button
-
-.link-button {
-  padding: 12px 0;
-  border: 1px solid var(--gray);
-  background-color: var(--extra-light-gray);
-  border-radius: 5px;
-  font-weight: 500;
-  text-align: center;
-
-  &:hover {
-    border: 1px solid var(--gray);
-    background-color: var(--light-gray);
-  }
-
-  &:active {
-    background-color: var(--gray);
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 12px 0;
   }
 }
