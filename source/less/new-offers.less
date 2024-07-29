@@ -8,6 +8,17 @@
   }
 }
 
+.new-offers__section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.new-offers__wrapper {
+  display: grid;
+  row-gap: 35px;
+}
+
 .new-offers__nav {
   display: flex;
   align-items: baseline;
@@ -34,11 +45,12 @@
   border-bottom: 2px solid var(--basic-green);
 }
 
-.new-offers__wrapper {
+.new-offers__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 15px;
   row-gap: 20px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     padding: 20px;
@@ -49,7 +61,8 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
-    max-width: 1200px;
+    margin-bottom: 15px;
+    // max-width: 1200px;
     border: none;
   }
 }
