@@ -1,0 +1,37 @@
+.offer-aside {
+  display: flex;
+  flex-direction: column;
+  // row-gap: 20px;
+
+  & .offer-aside__deal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    & .offer-aside__deal {
+      row-gap: 30px;
+      padding: 20px;
+      box-shadow: 0 0 10px var(--light-gray);
+      border-radius: 5px;
+    }
+
+    & .seller {
+      padding: 0;
+      background-color: transparent;
+      // box-shadow: 0 0 10px var(--light-gray);
+      border-radius: 5px;
+
+      & .seller__wrapper {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 20px;
+      }
+
+      & .button {
+        padding: 10px 14px;
+      }
+    }
+  }
+}

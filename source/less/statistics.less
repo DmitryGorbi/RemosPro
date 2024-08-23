@@ -1,0 +1,130 @@
+.statistics {
+  .section-title {
+    margin-bottom: 15px;
+  }
+
+  & dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0;
+    margin-bottom: 20px;
+
+    & div {
+      width: 50%;
+    }
+
+    & dt {
+      margin-bottom: 3px;
+      font-size: 13px;
+      color: #888888;
+    }
+
+    & dd {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .statistics__table {
+    margin-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100vw - 30px);
+
+    & table {
+      width: 100%;
+      white-space: nowrap;
+      font-size: 14px;
+      border-collapse: collapse;
+
+      & tr th:first-child {
+        padding-left: 11px;
+      }
+
+      & tr td:first-child {
+        padding-left: 11px;
+        color: var(--basic-green);
+      }
+
+      & th {
+        padding: 11px;
+        font-weight: 500;
+        text-align: start;
+        background-color: #f6f6f6;
+        line-height: 24px;
+        color: #666666;
+      }
+
+      & td {
+        position: relative;
+        padding: 11px;
+        white-space: nowrap;
+        border-bottom: 1px solid #e5e5e5;
+      }
+    }
+  }
+
+  .badge-down,
+  .badge-up {
+    display: inline-block;
+    margin-right: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    opacity: 0.7;
+  }
+
+  .badge-down {
+    background-color: var(--basic-green);
+  }
+
+  .badge-up {
+    background-color: red;
+  }
+
+  .statistics__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+
+    & dl {
+      gap: 0 50px;
+
+      & div {
+        width: max-content;
+      }
+
+      & dt {
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+
+      & dd {
+        font-size: 24px;
+      }
+    }
+
+    .statistics__table {
+      width: 100%;
+
+      & table {
+        & th {
+          padding: 11px 0;
+        }
+
+        & td {
+          padding: 20px 0;
+          width: max-content;
+        }
+      }
+    }
+
+    .statistics__text {
+      font-size: 15px;
+    }
+  }
+}

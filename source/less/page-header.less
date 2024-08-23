@@ -33,11 +33,12 @@
 
 .page-header__border {
   position: absolute;
-  top: 61px;
+  top: 62px;
   border-bottom: 1px solid var(--light-gray);
   width: 100vw;
   left: 50%;
   margin-left: -50vw;
+  z-index: 1;
 }
 
 .page-header__footer {
@@ -46,10 +47,10 @@
   row-gap: 15px;
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 50px;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+    // column-gap: 50px;
   }
 }
 

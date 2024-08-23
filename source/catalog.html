@@ -474,7 +474,7 @@
                 <svg width="17" height="17" aria-hidden="true">
                   <use xlink:href="img/icons/sprite.svg#icon-plus"></use>
                 </svg>
-                <span class="visually-hidden-mobile">Разместить объявление</span>
+                <span class="visually-hidden-small-mobile">Разместить объявление</span>
               </a>
             </li>
           </ul>
@@ -514,21 +514,21 @@
       </div>
       <div class="page-header__border"></div>
       <div class="page-header__footer">
-        <nav class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <nav class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
           <ol>
-            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
               <a href="" itemprop="item">
                 <span itemprop="name">Главная</span>
               </a>
               <meta itemprop="position" content="1" />
             </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
               <a href="" itemprop="item">
                 <span itemprop="name">Недвижимость в Московской области</span>
               </a>
               <meta itemprop="position" content="2" />
             </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
               <span itemprop="name">Квартиры</span>
               <meta itemprop="position" content="3" />
               <!-- <link href="" itemprop="item"> -->
@@ -802,7 +802,7 @@
               </button>
               <div id="filter__addition" class="filter__select filter__select-add filter__select--disabled">
                 <div class="filter-add">
-                  <div class="filter-add__header visually-hidden-mobile">
+                  <div class="filter-add__header visually-hidden-small-mobile">
                     <h3 class="filter-add__title">Фильтры</h3>
                     <button type="button" class="button button-close" aria-expanded="false"><span class="visually-hidden">Закрыть фильтр</span></button>
                   </div>
@@ -1759,7 +1759,7 @@
         </form>
       </header>
       <section class="quick-links">
-        <h3 class="visually-hidden-mobile">Может подойти</h3>
+        <h3 class="visually-hidden-small-mobile">Может подойти</h3>
         <ul>
           <li>
             <a href="#">вторичка</a>
@@ -1875,7 +1875,7 @@
               <section class="offer-images">
                 <h4 class="visually-hidden">Фотографии объявления</h4>
                 <div class="offer-images__wrapper">
-                  <div class="offer-images__main">
+                  <div class="offer-images__main slider">
                     <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
                       <picture>
                         <!-- <source srcset="img/bldg/sirenevy__bulvar/main__foto/front__large.webp" media="(min-width: 1240px)" />
@@ -1894,7 +1894,7 @@
                       </svg>
                       <span class="label-popup">В избранное</span>
                     </button>
-                    <button class="button offer-images__swiper" type="button">
+                    <button class="button slider__control slider__control--left" type="button">
                       <span class="visually-hidden">Предыдущее изображение</span>
                       <span>
                         <svg width="8" height="14" aria-hidden="true">
@@ -1902,7 +1902,7 @@
                         </svg>
                       </span>
                     </button>
-                    <button class="button offer-images__swiper" type="button">
+                    <button class="button slider__control slider__control--right" type="button">
                       <span class="visually-hidden">Следующее изображение</span>
                       <span>
                         <svg width="8" height="14" aria-hidden="true">
@@ -1962,15 +1962,15 @@
                   <section class="offer-properties__price offer-price">
                     <h4 class="visually-hidden">Цена в объявлении</h4>
                     <div class="offer-price__value">
-                      <data value="16700000">16 700 000 ₽</data>
-                      <data value="185555">185 555 ₽/м²</data>
+                      <data value="16700000">166 700 000 &#x20bd;</data>
+                      <data value="185555">185 555 &#x20bd;/м²</data>
                     </div>
                     <div class="offer-price__history">
-                      <button class="button" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <span class="visually-hidden">Показать историю изменения цены</span>
-                        <svg width="27" height="27" aria-hidden="true">
+                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
+                        <svg width="35" height="35" aria-hidden="true">
                           <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
                         </svg>
+                        <span class="label-popup">Показать историю цены</span>
                       </button>
                       <div id="price__chart"></div>
                     </div>
@@ -2131,7 +2131,7 @@
         </ul>
       </div>
     </footer>
-    <section class="modal modal--subscribe">
+    <div class="modal modal--subscribe">
       <h2 class="caption">Подписаться на новые объявления Remos</h2>
       <button class="button button-close" type="button">
         <span class="visually-hidden">Закрыть окно</span>
@@ -2168,7 +2168,7 @@
           <button class="button button-main" type="submit">Подписаться</button>
         </form>
       </div>
-    </section>
+    </div>
     <div class="controls-modal">
       <div class="modal modal--map">
         <h2 class="caption visually-hidden">На карте</h2>
@@ -2204,18 +2204,22 @@
         <button class="button button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
-        <div class="modal__wrapper modal__wrapper--note">
-          <div class="modal-note">
-            <div class="modal-note__header">
-              <p>4-комн квартира, 90 м², 8/8 этаж</p>
-              <p>Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1</p>
-            </div>
-            <div class="modal-note__form">
-              <input type="hidden" name="id" value="8651609" />
-              <input type="hidden" name="deal_type" value="100" />
-              <input type="hidden" name="realty_type" value="110" />
-              <textarea name="note" placeholder="Ваша заметка"></textarea>
+        <div class="modal-note">
+          <div class="modal-note__header">
+            <p>4-комн квартира, 90 м², 8/8 этаж</p>
+            <p>Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1</p>
+          </div>
+          <div class="modal-note__form">
+            <input type="hidden" name="id" value="8651609" />
+            <input type="hidden" name="deal_type" value="100" />
+            <input type="hidden" name="realty_type" value="110" />
+            <label class="visually-hidden" for="note__message">
+              <span>Ваша заметка</span>
+            </label>
+            <textarea class="textarea" id="note__message" name="note" placeholder="Ваша заметка"></textarea>
+            <div class="modal-note__buttons">
               <button class="button button-main" type="button" disabled>Сохранить</button>
+              <button class="button button-main" type="button" disabled>Удалить</button>
             </div>
           </div>
         </div>

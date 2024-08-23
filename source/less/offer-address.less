@@ -1,5 +1,28 @@
 .offer-address {
-  line-height: 22px;
-  font-style: normal;
-  color: #737a8e;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  font-size: 16px;
+  line-height: 18px;
+
+  & address span {
+    color: #737a8e;
+    color: #666666;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  & a {
+    display: inline-block;
+    padding: 2px 0;
+    color: var(--basic-green);
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+  }
 }
