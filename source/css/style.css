@@ -7537,7 +7537,6 @@ textarea {
 }
 .card-image__wrapper:hover .slider {
   display: block;
-  height: 70%;
 }
 @media (min-width: 768px) {
   .card-image__wrapper img {
@@ -7557,22 +7556,20 @@ textarea {
   font-size: 14px;
 }
 .card-image__controls .button {
-  padding: 2px 8px;
+  display: flex;
+  gap: 0 4px;
+  padding: 3px 8px;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   white-space: nowrap;
   font-weight: 700;
-  line-height: 24px;
 }
-.card-image__controls .button:first-of-type {
-  display: none;
-}
-.card-image__controls .button:nth-of-type(2) {
-  display: none;
+.card-image__controls .button span {
+  line-height: 20px;
 }
 .card-image__controls svg {
-  fill: var(--white);
+  stroke: var(--white);
 }
 @media (min-width: 768px) {
   .card-image__controls {
@@ -7584,12 +7581,6 @@ textarea {
   }
   .card-image__controls .button {
     font-weight: 400;
-  }
-  .card-image__controls .button:first-of-type {
-    display: block;
-  }
-  .card-image__controls .button:nth-of-type(2) {
-    display: block;
   }
 }
 .card-controls ul {
