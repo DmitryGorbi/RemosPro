@@ -14,29 +14,31 @@
   display: none;
   width: 50px;
   height: 55%;
-  z-index: 2;
+  // z-index: 2;
 
   &--left {
     left: 0;
 
-    & span svg {
-      margin: auto 0 auto 9px;
+    & span {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjIxNzIxMSA2LjQ1MzcyTDYuMjc3MDUgMC4yMjM2NTdDNi40MTcyIDAuMDc5NDQ2NSA2LjYwNDMgMCA2LjgwMzggMEM3LjAwMzI5IDAgNy4xOTAzOSAwLjA3OTQ0NjUgNy4zMzA1NSAwLjIyMzY1N0w3Ljc3NjgxIDAuNjgyMzUyQzguMDY3MiAwLjk4MTI0NCA4LjA2NzIgMS40NjcwMyA3Ljc3NjgxIDEuNzY1NDdMMi42ODgyMiA2Ljk5NzFMNy43ODI0NiAxMi4yMzQ1QzcuOTIyNjEgMTIuMzc4NyA4IDEyLjU3MSA4IDEyLjc3NkM4IDEyLjk4MTIgNy45MjI2MSAxMy4xNzM0IDcuNzgyNDYgMTMuMzE3OEw3LjMzNjE5IDEzLjc3NjNDNy4xOTU5MyAxMy45MjA2IDcuMDA4OTQgMTQgNi44MDk0NCAxNEM2LjYwOTk1IDE0IDYuNDIyODUgMTMuOTIwNiA2LjI4MjY5IDEzLjc3NjNMMC4yMTcyMTEgNy41NDA1OUMwLjA3NjcyMjQgNy4zOTU5MiAtMC4wMDA0NDEwMDkgNy4yMDI3NyAxLjgyMzUyZS0wNiA2Ljk5NzQ0Qy0wLjAwMDQ0MTAwOSA2Ljc5MTMxIDAuMDc2NzIyNCA2LjU5ODI3IDAuMjE3MjExIDYuNDUzNzJaIiBmaWxsPSIjMjBBMDUyIi8+Cjwvc3ZnPgo=);
     }
   }
 
   &--right {
     right: 0;
 
-    & span svg {
-      margin: auto 0 auto 13px;
+    & span {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03Ljc4Mjc5IDYuNDUzNzJMMS43MjI5NSAwLjIyMzY1N0MxLjU4MjggMC4wNzk0NDY1IDEuMzk1NyAwIDEuMTk2MiAwQzAuOTk2NzA2IDAgMC44MDk2MDkgMC4wNzk0NDY1IDAuNjY5NDUzIDAuMjIzNjU3TDAuMjIzMTg4IDAuNjgyMzUyQy0wLjA2NzE5OTggMC45ODEyNDQgLTAuMDY3MTk5OCAxLjQ2NzAzIDAuMjIzMTg4IDEuNzY1NDdMNS4zMTE3OCA2Ljk5NzFMMC4yMTc1NDIgMTIuMjM0NUMwLjA3NzM4NTEgMTIuMzc4NyAwIDEyLjU3MSAwIDEyLjc3NkMwIDEyLjk4MTIgMC4wNzczODUxIDEzLjE3MzQgMC4yMTc1NDIgMTMuMzE3OEwwLjY2MzgwNyAxMy43NzYzQzAuODA0MDc0IDEzLjkyMDYgMC45OTEwNiAxNCAxLjE5MDU2IDE0QzEuMzkwMDUgMTQgMS41NzcxNSAxMy45MjA2IDEuNzE3MzEgMTMuNzc2M0w3Ljc4Mjc5IDcuNTQwNTlDNy45MjMyOCA3LjM5NTkyIDguMDAwNDQgNy4yMDI3NyA4IDYuOTk3NDRDOC4wMDA0NCA2Ljc5MTMxIDcuOTIzMjggNi41OTgyNyA3Ljc4Mjc5IDYuNDUzNzJaIiBmaWxsPSIjMjBBMDUyIi8+Cjwvc3ZnPgo=);
     }
   }
 
   & span:last-of-type {
-    display: flex;
+    display: inline-block;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--light-gray);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
