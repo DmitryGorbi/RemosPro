@@ -1,12 +1,16 @@
 .offer-aside {
   display: flex;
   flex-direction: column;
-  // row-gap: 20px;
+  row-gap: 20px;
 
   & .offer-aside__deal {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+  }
+
+  & .offer-aside__statistics {
+    font-size: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,6 +36,12 @@
       & .button {
         padding: 10px 14px;
       }
+    }
+
+    & .offer-aside__statistics {
+      padding: 20px;
+      box-shadow: 0 0 10px var(--light-gray);
+      border-radius: 5px;
     }
   }
 }
