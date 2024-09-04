@@ -1,18 +1,16 @@
 .accordeon {
-  & details {
-    border-bottom: 1px solid var(--light-gray);
-
-    &:first-of-type {
-      border-top: 1px solid var(--light-gray);
-    }
-  }
-
   & summary {
     position: relative;
-    padding: 20px 0;
+    padding: 20px 15px;
+    margin: 0 -15px;
     font-size: 15px;
     line-height: 20px;
+    background-color: #f6f6f6;
     cursor: pointer;
+
+    &:hover {
+      background-color: var(--light-gray);
+    }
   }
 
   & summary::marker {
@@ -23,7 +21,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
+    right: 15px;
     content: '';
     width: 20px;
     height: 20px;
@@ -43,20 +41,33 @@
   }
 
   & ul {
-    margin-bottom: 10px;
+    margin: 0 -15px;
+    padding: 10px 15px 15px;
     font-size: 14px;
+    background-color: #f6f6f6;
 
     & li:not(:last-child) {
       margin-bottom: 5px;
     }
 
     & a {
-      display: block;
+      display: inline-block;
       padding: 5px 0;
       color: var(--basic-green);
     }
   }
-}
 
-.accordeon--documents {
+  @media (min-width: @tablet-width) {
+    & summary {
+      margin: 0;
+      background-color: #f6f6f6;
+      border-radius: 5px;
+    }
+
+    & ul {
+      margin: 0;
+      padding-left: 23px;
+      border-radius: 0 0 5px 5px;
+    }
+  }
 }

@@ -1200,11 +1200,10 @@
             </section>
           </section>
         </div>
-        <section class="card__aside offer-aside">
-          <h2 class="visually-hidden">Информация по сделке</h2>
+        <div class="card__aside offer-aside">
           <div class="offer-aside__deal">
             <section class="offer-price">
-              <h3 class="visually-hidden">Цена в объявлении</h3>
+              <h2 class="visually-hidden">Цена в объявлении</h2>
               <div class="offer-price__value">
                 <data value="16700000">166 700 000 &#x20bd;</data>
                 <data value="185555">185 555 &#x20bd;/м²</data>
@@ -1217,7 +1216,7 @@
                   <span class="label-popup">Показать историю цены</span>
                 </button>
                 <section class="offer-price__chart price-chart">
-                  <h4>История цены</h4>
+                  <h3>История цены</h3>
                   <button class="button button-close" type="button">
                     <span class="visually-hidden">Закрыть окно</span>
                   </button>
@@ -1255,7 +1254,7 @@
               </div>
             </section>
             <section class="deal-terms">
-              <h3 class="section-title">&#9997; Условия сделки</h3>
+              <h2 class="section-title">&#9997; Условия сделки</h2>
               <ul>
                 <li>
                   <span>Продажа</span>
@@ -1312,9 +1311,12 @@
           </div>
           <section class="offer-aside__statistics">
             <h3 class="visually-hidden">Статистика объявления</h3>
-            <p>&#128064; 6 просмотров, 10 дней на сайте</p>
+            <p>
+              <span>&#128064;</span>
+              <span> 6 просмотров, 10 дней на сайте </span>
+            </p>
           </section>
-        </section>
+        </div>
       </article>
       <section class="card__documents accordeon">
         <details>
@@ -1336,70 +1338,99 @@
           </ul>
         </details>
       </section>
-      <div class="card__extra">
-        <section class="card__statistics statistics">
-          <h2 class="section-title">Сравнение стоимости данного предложения со средними ценами в регионе, населённом пункте</h2>
-          <dl>
-            <div>
-              <dt>Комнат</dt>
-              <dd>1</dd>
-            </div>
-            <div>
-              <dt>Метраж</dt>
-              <dd>37 м²</dd>
-            </div>
-            <div>
-              <dt>Цена</dt>
-              <dd><data value="16700000">16 700 000 &#x20bd;</data></dd>
-            </div>
-            <div>
-              <dt>Цена за метр</dt>
-              <dd><data value="135109">135 109 &#x20bd;/м²</data></dd>
-            </div>
-          </dl>
-          <div class="statistics__table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Средние значения по:</th>
-                  <th>Метраж</th>
-                  <th>Разница</th>
-                  <th>Цена, &#x20bd;</th>
-                  <th>Разница</th>
-                  <th>За метр, &#x20bd;</th>
-                  <th>Разница</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="/catalog/prodazha_kvartir_vtorichka_v_moskovskoy_oblasti.html">Московская область</a></td>
-                  <td>36.43 м²</td>
-                  <td><span class="badge-down"></span> +1.55%</td>
-                  <td>6 254 427</td>
-                  <td><span class="badge-down"></span> -25.11%</td>
-                  <td>173 415</td>
-                  <td><span class="badge-down"></span> -28.35%</td>
-                </tr>
-                <tr>
-                  <td><a href="/catalog/prodazha_kvartir_vtorichka_zvenigorod_moskovskaya_oblast.html">Звенигород</a></td>
-                  <td>36.94 м²</td>
-                  <td><span class="badge-up"></span> +0.17%</td>
-                  <td>5 038 895</td>
-                  <td><span class="badge-down"></span> -0.80%</td>
-                  <td>136 832</td>
-                  <td><span class="badge-down"></span> -1.28%</td>
-                </tr>
-              </tbody>
-            </table>
+      <section class="card__statistics statistics">
+        <h2 class="section-title">Сравнение стоимости данного предложения со средними ценами в регионе, населённом пункте</h2>
+        <dl>
+          <div>
+            <dt>Комнат</dt>
+            <dd>1</dd>
           </div>
-          <p class="statistics__text">
-            В таблице показано на сколько в процентном отношении метраж, цена и стоимость за квадратный метр данного предложения - <b>1-комн квартиры, 37 м², 6/9 этаж</b>, - отличаются от средних
-            значений похожих предложений по региону, населенному пункту, району или округу. Зеленый цвет в столбце "Разница" сигнализирует о том, что указанный в столбце слева параметр данного
-            объявления выгоднее средних значений аналогичных объектов на рынке. Красный цвет сигнализирует об обратном.
-          </p>
-        </section>
-      </div>
-      <div class="card__"></div>
+          <div>
+            <dt>Метраж</dt>
+            <dd>37 м²</dd>
+          </div>
+          <div>
+            <dt>Цена</dt>
+            <dd><data value="16700000">16 700 000 &#x20bd;</data></dd>
+          </div>
+          <div>
+            <dt>Цена за метр</dt>
+            <dd><data value="135109">135 109 &#x20bd;/м²</data></dd>
+          </div>
+        </dl>
+        <div class="statistics__table">
+          <table>
+            <thead>
+              <tr>
+                <th>Средние значения по:</th>
+                <th>Метраж</th>
+                <th>Разница</th>
+                <th>Цена, &#x20bd;</th>
+                <th>Разница</th>
+                <th>За метр, &#x20bd;</th>
+                <th>Разница</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/catalog/prodazha_kvartir_vtorichka_v_moskovskoy_oblasti.html">Московская область</a></td>
+                <td>36.43 м²</td>
+                <td><span class="badge-down"></span> +1.55%</td>
+                <td>6 254 427</td>
+                <td><span class="badge-down"></span> -25.11%</td>
+                <td>173 415</td>
+                <td><span class="badge-down"></span> -28.35%</td>
+              </tr>
+              <tr>
+                <td><a href="/catalog/prodazha_kvartir_vtorichka_zvenigorod_moskovskaya_oblast.html">Звенигород</a></td>
+                <td>36.94 м²</td>
+                <td><span class="badge-up"></span> +0.17%</td>
+                <td>5 038 895</td>
+                <td><span class="badge-down"></span> -0.80%</td>
+                <td>136 832</td>
+                <td><span class="badge-down"></span> -1.28%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="statistics__text">
+          В таблице показано на сколько в процентном отношении метраж, цена и стоимость за квадратный метр данного предложения - <b>1-комн квартиры, 37 м², 6/9 этаж</b>, - отличаются от средних
+          значений похожих предложений по региону, населенному пункту, району или округу. Зеленый цвет в столбце "Разница" сигнализирует о том, что указанный в столбце слева параметр данного
+          объявления выгоднее средних значений аналогичных объектов на рынке. Красный цвет сигнализирует об обратном.
+        </p>
+      </section>
+      <section class="card__mortgage mortgage-form">
+        <h2 class="section-title">Сервис одновременной подачи заявки в несколько банков</h2>
+        <p>Актуальные процентные ставки на покупку вторичной квартиры ведущих российских банков.</p>
+        <div class="mortgage-form__wrapper">
+          <div class="mortgage-form__item">
+            <label for="price">Цена недвижимости</label>
+            <div class="search search--locate">
+              <input id="price" class="input input--field" type="number" />
+              <div>&#x20bd;</div>
+            </div>
+          </div>
+          <div class="mortgage-form__item">
+            <label for="credit">Сумма кредита</label>
+            <div class="search search--locate">
+              <input id="credit" class="input input--field" type="number" />
+              <div>&#x20bd;</div>
+            </div>
+          </div>
+          <div class="mortgage-form__item">
+            <label for="years">Срок кредита</label>
+            <div class="mortgage-form__input search search--locate">
+              <input id="years" class="input" type="number" />
+            </div>
+          </div>
+          <div class="mortgage-form__item">
+            <label for="contribution">Перврначальный взнос, <span>30%</span></label>
+            <div class="mortgage-form__input search search--locate">
+              <input id="contribution" class="input" type="number" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="wrapper-content">

@@ -1,0 +1,26 @@
+.mortgage-form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.mortgage-form__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 14px;
+}
+
+.mortgage-form__input {
+}
+
+@media (min-width: @tablet-width) {
+  .mortgage-form {
+    padding: 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+  }
+
+  .mortgage-form__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}

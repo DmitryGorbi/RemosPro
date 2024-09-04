@@ -66,14 +66,14 @@
 
 .user-nav__profile {
   position: fixed;
-  top: 62px;
+  top: 64px;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100vw;
   height: auto;
   background-color: var(--white);
-  border-radius: 5px;
+
   z-index: 2;
 
   & a {
@@ -93,12 +93,14 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
+    top: 51px;
     left: auto;
     padding: 5px 0px;
     margin: 0;
     width: 250px;
     height: max-content;
     box-shadow: 0 5px 10px 0 var(--light-black);
+    border-radius: 0 0 5px 5px;
 
     & a {
       padding: 6px 10px 6px 20px;

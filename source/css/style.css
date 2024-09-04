@@ -254,6 +254,7 @@ a:visited {
   font-weight: 400;
   color: var(--basic-black);
   background-color: var(--white);
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   .page__body {
@@ -583,6 +584,7 @@ input[type='radio'] {
   color: #666666;
 }
 .input {
+  border: none;
   -webkit-appearance: none;
   outline: none;
 }
@@ -1015,32 +1017,31 @@ textarea {
   align-items: center;
   margin: 0 -15px;
   padding: 10px 15px 8px 15px;
+  background-color: var(--white);
 }
 @media (min-width: 1240px) {
   .page-header__wrapper {
     margin: 0;
-    padding: 3px 0 0 0;
-    z-index: 2;
+    padding: 0;
   }
 }
 .page-header__border {
   position: absolute;
-  top: 62px;
+  top: 63px;
   border-bottom: 1px solid var(--light-gray);
   width: 100vw;
   left: 50%;
   margin-left: -50vw;
-  z-index: 1;
+}
+@media (min-width: 1240px) {
+  .page-header__border {
+    top: 58px;
+  }
 }
 .page-header__footer {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-}
-@media (min-width: 1240px) {
-}
-.page-header--gk .page-header__border {
-  border-bottom: none;
 }
 .page-header--gk .page-header__footer {
   display: flex;
@@ -1069,7 +1070,7 @@ textarea {
 @media (min-width: 1240px) {
   .page-header--gk .page-header__footer {
     position: absolute;
-    top: 65px;
+    top: 61px;
     flex-direction: row;
     justify-content: space-between;
     -moz-column-gap: 50px;
@@ -1128,7 +1129,7 @@ textarea {
 }
 .nav {
   position: fixed;
-  top: 63px;
+  top: 64px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1194,9 +1195,9 @@ textarea {
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
-    height: 2px;
+    height: 3px;
     background: var(--basic-green);
   }
 }
@@ -1231,7 +1232,7 @@ textarea {
 @media (min-width: 1240px) {
   .nav__submenu {
     position: absolute;
-    top: 63px;
+    top: 59px;
     left: 0;
     right: 0;
     z-index: 1;
@@ -1250,28 +1251,6 @@ textarea {
     transition-timing-function: linear, linear;
     transition-delay: 0.4s;
     visibility: visible;
-  }
-}
-.page-header--gk .nav {
-  top: 62px;
-  border-top: 1px solid var(--light-gray);
-}
-.page-header--gk .user-nav__profile {
-  border-top: 1px solid var(--light-gray);
-  border-radius: 0;
-}
-@media (min-width: 1240px) {
-  .page-header--gk .nav {
-    border-top: none;
-  }
-  .page-header--gk .user-nav__profile {
-    border-top: none;
-    border-radius: 5px;
-    top: 50px;
-  }
-  .page-header--gk .nav__submenu {
-    top: 61px;
-    border-top: 1px solid var(--light-gray);
   }
 }
 .submenu {
@@ -1613,14 +1592,13 @@ textarea {
 }
 .user-nav__profile {
   position: fixed;
-  top: 62px;
+  top: 64px;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100vw;
   height: auto;
   background-color: var(--white);
-  border-radius: 5px;
   z-index: 2;
 }
 .user-nav__profile a {
@@ -1640,6 +1618,7 @@ textarea {
 @media (min-width: 1240px) {
   .user-nav__profile {
     position: absolute;
+    top: 51px;
     left: auto;
     padding: 5px 0px;
     margin: 0;
@@ -1647,6 +1626,7 @@ textarea {
     height: -moz-max-content;
     height: max-content;
     box-shadow: 0 5px 10px 0 var(--light-black);
+    border-radius: 0 0 5px 5px;
   }
   .user-nav__profile a {
     padding: 6px 10px 6px 20px;
@@ -4042,18 +4022,17 @@ textarea {
     margin: auto 0;
   }
 }
-.accordeon details {
-  border-bottom: 1px solid var(--light-gray);
-}
-.accordeon details:first-of-type {
-  border-top: 1px solid var(--light-gray);
-}
 .accordeon summary {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 15px;
+  margin: 0 -15px;
   font-size: 15px;
   line-height: 20px;
+  background-color: #f6f6f6;
   cursor: pointer;
+}
+.accordeon summary:hover {
+  background-color: var(--light-gray);
 }
 .accordeon summary::marker {
   content: none;
@@ -4062,7 +4041,7 @@ textarea {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: 15px;
   content: '';
   width: 20px;
   height: 20px;
@@ -4079,16 +4058,30 @@ textarea {
   font-weight: 400;
 }
 .accordeon ul {
-  margin-bottom: 10px;
+  margin: 0 -15px;
+  padding: 10px 15px 15px;
   font-size: 14px;
+  background-color: #f6f6f6;
 }
 .accordeon ul li:not(:last-child) {
   margin-bottom: 5px;
 }
 .accordeon ul a {
-  display: block;
+  display: inline-block;
   padding: 5px 0;
   color: var(--basic-green);
+}
+@media (min-width: 768px) {
+  .accordeon summary {
+    margin: 0;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+  }
+  .accordeon ul {
+    margin: 0;
+    padding-left: 23px;
+    border-radius: 0 0 5px 5px;
+  }
 }
 .mark {
   position: relative;
@@ -5058,6 +5051,7 @@ textarea {
   font-size: 13px;
 }
 .gk {
+  margin-top: 2px;
   margin-bottom: 40px;
 }
 .gk .caption-index {
@@ -5173,6 +5167,9 @@ textarea {
   }
 }
 @media (min-width: 1240px) {
+  .gk {
+    margin-top: 1px;
+  }
   .gk__header {
     grid-template-rows: repeat(20, 5%);
     height: calc(100vh - 61px);
@@ -7032,6 +7029,13 @@ textarea {
 .offer-aside .offer-aside__statistics {
   font-size: 14px;
 }
+.offer-aside .offer-aside__statistics p {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+  color: #737a8e;
+}
 @media (min-width: 1240px) {
   .offer-aside .offer-aside__deal {
     row-gap: 30px;
@@ -7373,7 +7377,7 @@ textarea {
 }
 .card {
   row-gap: 25px;
-  margin-top: -40px;
+  margin-top: -38px;
 }
 .card__content {
   position: relative;
@@ -7472,7 +7476,10 @@ textarea {
   .card__documents {
     grid-column: 1/2;
   }
-  .card__extra {
+  .card__statistics {
+    grid-column: 1/2;
+  }
+  .card__mortgage {
     grid-column: 1/2;
   }
 }
@@ -7959,9 +7966,6 @@ textarea {
 .document-templates {
   background-color: var(--light-green);
 }
-.statistics .section-title {
-  margin-bottom: 15px;
-}
 .statistics dl {
   display: flex;
   flex-wrap: wrap;
@@ -8064,6 +8068,26 @@ textarea {
   }
   .statistics .statistics__text {
     font-size: 15px;
+  }
+}
+.mortgage-form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.mortgage-form__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .mortgage-form {
+    padding: 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+  }
+  .mortgage-form__wrapper {
+    grid-template-columns: 1fr 1fr;
   }
 }
 .offer-developers h1 {
