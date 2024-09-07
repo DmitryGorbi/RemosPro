@@ -212,14 +212,23 @@ a:visited {
 :is(.navigation, .nav, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a:focus-visible {
   box-shadow: inset 0 0 0 1px #ffffff, inset 0 0 2px 3px #74d099, inset 0 0 2px 3px #20a052;
 }
-:is(.nav-section, .footer, .developer-about, .gk-progress) a {
+:is(.nav-section, .footer, .developer-about, .gk-progress, .card__gk) a {
   color: var(--basic-green);
+}
+:is(.nav-section, .footer, .developer-about, .gk-progress, .card__gk) a:hover {
+  color: var(--green);
+}
+:is(.nav-section, .footer, .developer-about, .gk-progress, .card__gk) a:active {
+  color: var(--dark-green);
 }
 :is(.nav-section, .footer, .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert, .subway) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 :is(.location, .new-offers__nav, .breadcrumbs) a:hover {
   color: var(--basic-green);
+}
+:is(.location, .new-offers__nav, .breadcrumbs) a:active {
+  color: var(--green);
 }
 :is(.location, .new-offers__nav) a {
   border-radius: 5px;
@@ -593,15 +602,14 @@ input[type='radio'] {
   background-color: var(--light-blue);
   border-color: var(--basic-green);
 }
-.input:hover {
-  border: 1px solid var(--basic-green);
-  color: var(--basic-green);
-}
 .input:focus-visible + label .pseudo-radio,
 .input:focus-visible + label .pseudo-checkbox {
   box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }
-.input:focus-visible {
+:is(.modal-form) input:hover {
+  border: 1px solid var(--basic-green);
+}
+:is(.modal-form) input:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }
 .pseudo-radio,
@@ -830,30 +838,43 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-.input-range .input-range__wrapper {
-  position: relative;
+.input-range label {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.input-range output {
+  font-size: 14px;
+  padding: 3px 3px 2px 3px;
+  border: 2px solid var(--basic-green);
+  border-radius: 5px;
+}
+.input-range__wrapper:has(.input:focus-visible) {
+  border-color: var(--basic-green);
+}
+.input-range__wrapper:has(.input:hover) {
+  border-color: var(--basic-green);
+}
+.input-range__wrapper {
+  display: flex;
+  align-items: center;
   border: 1px solid var(--gray);
-  border-radius: 5px 5px 0 0;
-  border-bottom: 2px solid var(--gray);
+  border-radius: 5px 5px 5px 4px;
 }
-.input-range .input-range__wrapper input {
-  width: calc(100% - 34px);
+.input-range__wrapper input {
+  flex-grow: 1;
   border: none;
+  box-shadow: none;
 }
-.input-range .input-range__wrapper span {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  padding: 0 12px;
+.input-range__wrapper div {
+  padding: 0 10px;
 }
 .input-range__control {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   transform: translateY(50%);
   left: 80%;
-  width: 29px;
-  height: 29px;
+  width: 28px;
+  height: 28px;
   box-shadow: 0 0 10px var(--light-gray);
   border: 1px solid var(--light-gray);
   background-color: var(--white);
@@ -861,16 +882,16 @@ textarea {
 }
 @media (min-width: 1240px) {
   .input-range__control {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
   }
 }
 .input-range__scale {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
-  width: 80%;
-  height: 2px;
+  width: calc(80% + 14px);
+  height: 4px;
   background-color: var(--basic-green);
 }
 .pagination {
@@ -1458,7 +1479,8 @@ textarea {
   .user-nav__toggler:hover .label-popup,
   .offer-controls__item:hover .label-popup,
   .card-controls__item:hover .label-popup,
-  .offer-price__control:hover .label-popup {
+  .offer-price__control:hover .label-popup,
+  .banks li:hover .label-popup {
     display: block;
     position: absolute;
     z-index: 1;
@@ -1479,7 +1501,8 @@ textarea {
   .button-circle:hover .label-popup,
   .user-nav__toggler:hover .label-popup,
   .card-controls__item:hover .label-popup,
-  .offer-price__control:hover .label-popup {
+  .offer-price__control:hover .label-popup,
+  .banks li:hover .label-popup {
     bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
@@ -1965,6 +1988,11 @@ textarea {
 }
 .subway__icon {
   fill: #ff0000;
+}
+@media (min-width: 1240px) {
+  .subway {
+    font-size: 15px;
+  }
 }
 .experts h3 {
   font-size: 21px;
@@ -3515,6 +3543,7 @@ textarea {
     align-items: center;
     -moz-column-gap: 10px;
          column-gap: 10px;
+    font-size: 15px;
   }
 }
 .offer-properties {
@@ -6224,26 +6253,9 @@ textarea {
 .gk-mortgage__banks h3 {
   margin-bottom: 20px;
 }
-.gk-mortgage__banks ul {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  row-gap: 5px;
-}
-.gk-mortgage__banks ul li {
-  text-align: center;
-}
 @media (min-width: 768px) {
   .gk-mortgage__banks {
     margin-bottom: 0;
-  }
-  .gk-mortgage__banks ul {
-    display: flex;
-    flex-wrap: wrap;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-  }
-  .gk-mortgage__banks ul li {
-    text-align: left;
   }
 }
 .gk-mortgage__total {
@@ -6288,40 +6300,42 @@ textarea {
     font-size: 20px;
   }
 }
+.banks ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 5px;
+}
+.banks ul li {
+  text-align: center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .banks ul {
+    display: flex;
+    flex-wrap: wrap;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .banks ul li {
+    text-align: left;
+    position: relative;
+  }
+}
 .mortgage-filter {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   row-gap: 20px;
   margin-bottom: 25px;
 }
-.mortgage-filter label {
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-.mortgage-filter label span {
-  padding: 2px 5px;
-  font-weight: 500;
-  border: 1px solid var(--basic-green);
-  border-radius: 5px;
-}
-.mortgage-filter .input-range__wrapper:has(.input:focus-visible) {
-  border-color: var(--basic-green);
-}
-.mortgage-filter .input-range__wrapper:has(.input:hover) {
-  border-color: var(--basic-green);
-}
-.mortgage-filter .input {
-  box-shadow: none;
-}
 @media (min-width: 768px) {
   .mortgage-filter {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 15px;
          column-gap: 15px;
   }
-  .mortgage-filter .input-range {
-    flex-grow: 1;
+}
+@media (min-width: 1240px) {
+  .mortgage-filter {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .gk-presentation__wrapper .gk-presentation__video {
@@ -7385,6 +7399,10 @@ textarea {
   flex-direction: column;
   row-gap: 25px;
 }
+.card__gk {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
 .card__metro {
   margin-top: 10px;
 }
@@ -7446,6 +7464,9 @@ textarea {
   }
   .card__content .card__wrapper {
     width: 775px;
+  }
+  .card__content .card__gk {
+    margin-bottom: 8px;
   }
   .card__content .card__aside {
     width: 400px;
@@ -8070,24 +8091,65 @@ textarea {
     font-size: 15px;
   }
 }
-.mortgage-form__wrapper {
+.mortgage-section {
+  padding: 15px 15px 20px 15px;
+  box-shadow: 0 0 10px var(--light-gray);
+}
+.mortgage-section > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.mortgage-section .mortgage-section__form {
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .mortgage-section {
+    padding: 15px;
+  }
+  .mortgage-section__form {
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .mortgage-section__request {
+    margin-top: 25px;
+  }
+  .mortgage-section__request p:first-of-type {
+    font-size: 12px;
+    padding: 2px 0 2px 40px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDBDNi43MTU2MSAwIDAgNi43MTU4NCAwIDE1QzAgMjMuMjg0NiA2LjcxNTYxIDMwIDE1IDMwQzIzLjI4NDQgMzAgMzAgMjMuMjg0NiAzMCAxNUMzMCA2LjcxNTg0IDIzLjI4NDQgMCAxNSAwWk0xNSAyMi41QzEzLjk2NDQgMjIuNSAxMy4xMjUgMjEuNjYwOSAxMy4xMjUgMjAuNjI1QzEzLjEyNSAxOS41ODk1IDEzLjk2NDQgMTguNzUgMTUgMTguNzVDMTYuMDM1NiAxOC43NSAxNi44NzUgMTkuNTg5NSAxNi44NzUgMjAuNjI1QzE2Ljg3NSAyMS42NjA5IDE2LjAzNTYgMjIuNSAxNSAyMi41Wk0xNi44NzUgMTUuOTM3NUgxMy4xMjVMMTIuMTg3NSA4LjQzNzVDMTIuMTg3NSA3LjkxOTc3IDEyLjYwNzMgNy41IDEzLjEyNSA3LjVIMTYuODc1QzE3LjM5MjcgNy41IDE3LjgxMjUgNy45MTk3NyAxNy44MTI1IDguNDM3NUwxNi44NzUgMTUuOTM3NVoiIGZpbGw9IiNFNUU1RTUiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+  }
+}
+.mortgage-form {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 20px 15px;
 }
-.mortgage-form__item {
+.mortgage-form__result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.mortgage-form__output {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  font-size: 14px;
+}
+.mortgage-form__output span {
+  font-size: 13px;
+}
+.mortgage-form__output output {
+  padding: 12px 0 13px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: var(--light-green);
+  border: 1px solid var(--gray);
 }
 @media (min-width: 768px) {
   .mortgage-form {
-    padding: 15px;
-    box-shadow: 0 0 10px var(--light-gray);
-  }
-  .mortgage-form__wrapper {
     grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
   }
 }
 .offer-developers h1 {

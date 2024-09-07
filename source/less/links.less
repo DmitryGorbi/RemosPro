@@ -19,8 +19,16 @@ a {
 
 // green links
 
-:is(.nav-section, .footer, .developer-about, .gk-progress) a {
+:is(.nav-section, .footer, .developer-about, .gk-progress, .card__gk) a {
   color: var(--basic-green);
+
+  &:hover {
+    color: var(--green);
+  }
+
+  &:active {
+    color: var(--dark-green);
+  }
 }
 
 :is(.nav-section, .footer, .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert, .subway) a {
@@ -32,12 +40,15 @@ a {
 //  links hover
 
 :is(.location, .new-offers__nav, .breadcrumbs) a {
-  // border-radius: 5px;
-
   &:hover {
     color: var(--basic-green);
   }
+
+  &:active {
+    color: var(--green);
+  }
 }
+
 
 // focus
 

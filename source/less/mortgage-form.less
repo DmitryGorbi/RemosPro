@@ -1,26 +1,55 @@
-.mortgage-form__wrapper {
+.mortgage-form {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 20px 15px;
 }
 
-.mortgage-form__item {
+
+
+.mortgage-form__result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.mortgage-form__output {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  font-size: 14px;
-}
 
-.mortgage-form__input {
+  & span {
+    font-size: 13px;
+  }
+
+  & output {
+    padding: 12px 0 13px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    // text-align: center;
+    border-radius: 5px;
+    background-color: var(--light-green);
+    border: 1px solid var(--gray);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .mortgage-form {
-    padding: 15px;
-    box-shadow: 0 0 10px var(--light-gray);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .mortgage-form {
+
   }
 
-  .mortgage-form__wrapper {
-    grid-template-columns: 1fr 1fr;
+  .mortgage-form__input {
+
+    & input {
+    }
+
+    & div {
+    }
   }
 }

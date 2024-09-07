@@ -1,0 +1,25 @@
+.banks {
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 5px;
+
+    & li {
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 10px;
+
+      & li {
+        text-align: left;
+        position: relative;
+      }
+    }
+  }
+}

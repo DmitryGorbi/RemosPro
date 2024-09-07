@@ -121,28 +121,8 @@
     margin-bottom: 20px;
   }
 
-  & ul {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    row-gap: 5px;
-
-    & li {
-      text-align: center;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-
-    & ul {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 10px;
-
-      & li {
-        text-align: left;
-      }
-    }
   }
 }
 
