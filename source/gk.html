@@ -633,15 +633,8 @@
             <picture>
               <source srcset="img/bldg/sirenevy__bulvar/main__foto/front__large.webp" media="(min-width: 1240px)" />
               <source srcset="img/bldg/sirenevy__bulvar/main__foto/front__medium.webp" media="(min-width: 768px)" />
-              <img src="img/bldg/sirenevy__bulvar/main__foto/front__small.webp" width="665" height="374" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
+              <img fetchPriority="high" src="img/bldg/sirenevy__bulvar/main__foto/front__small.webp" width="665" height="374" alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар" />
             </picture>
-            <!-- <img
-              src="img/bldg/sirenevy__bulvar/front__small.webp"
-              srcset="img/bldg/sirenevy__bulvar/front__medium.webp 1000w, img/bldg/sirenevy__bulvar/front__large.webp 1919w"
-              width="665"
-              height="374"
-              alt="Проектная фотография внутренней территории ЖК Сиреневый бульвар"
-            /> -->
           </div>
         </header>
         <section class="gk-address wrapper-gk">
@@ -1577,7 +1570,7 @@
             <div class="input-range">
               <label for="property__price">Стоимость недвижимости</label>
               <div class="input-range__wrapper">
-                <input id="property__price" class="input input--field" type="number" value="10000000" inputmode="numeric"/>
+                <input id="property__price" class="input input--field" type="number" value="10000000" inputmode="numeric" />
                 <div>&#x20bd;</div>
               </div>
               <div class="input-range__scale"></div>
@@ -1586,7 +1579,7 @@
             <div class="input-range">
               <label for="credit__value">Сумма кредита</label>
               <div class="input-range__wrapper">
-                <input id="credit__value" class="input input--field" type="number" inputmode="numeric"/>
+                <input id="credit__value" class="input input--field" type="number" inputmode="numeric" />
                 <div>&#x20bd;</div>
               </div>
               <div class="input-range__scale"></div>
@@ -1595,7 +1588,7 @@
             <div class="input-range">
               <label for="contribution">Первоначальный взнос, <output for="credit__value property__price">20%</output></label>
               <div class="input-range__wrapper">
-                <input id="contribution" class="input input--field" type="number" value="2000000" inputmode="numeric"/>
+                <input id="contribution" class="input input--field" type="number" value="2000000" inputmode="numeric" />
                 <div>&#x20bd;</div>
               </div>
               <div class="input-range__scale"></div>
@@ -1604,7 +1597,7 @@
             <div class="input-range">
               <label for="mortgage__years">Срок</label>
               <div class="input-range__wrapper">
-                <input id="mortgage__years" class="input input--field" type="number" value="15" inputmode="numeric"/>
+                <input id="mortgage__years" class="input input--field" type="number" value="15" inputmode="numeric" />
                 <!-- <span>лет</span> -->
               </div>
               <div class="input-range__scale"></div>
