@@ -1,0 +1,17 @@
+.twin-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (min-width: @desktop-width) {
+  .twin-list {
+    padding: 15px 15px 20px 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
+
+  .twin-list__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

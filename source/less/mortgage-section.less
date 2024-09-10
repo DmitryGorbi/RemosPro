@@ -1,6 +1,7 @@
 .mortgage-section {
   padding: 15px 15px 20px 15px;
   box-shadow: 0 0 10px var(--light-gray);
+  border-radius: 5px;
 
   & > p {
     margin-bottom: 20px;
@@ -12,28 +13,41 @@
   }
 }
 
+.mortgage-section__request {
+  margin-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .mortgage-section {
     padding: 15px;
-
   }
 
   .mortgage-section__form {
-    // padding-bottom: 30px;
     border-bottom: 1px solid var(--light-gray);
   }
 
   .mortgage-section__request {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
     margin-top: 25px;
 
     & p:first-of-type {
+      grid-column: 1/-1;
       font-size: 12px;
       padding: 2px 0 2px 40px;
       background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDBDNi43MTU2MSAwIDAgNi43MTU4NCAwIDE1QzAgMjMuMjg0NiA2LjcxNTYxIDMwIDE1IDMwQzIzLjI4NDQgMzAgMzAgMjMuMjg0NiAzMCAxNUMzMCA2LjcxNTg0IDIzLjI4NDQgMCAxNSAwWk0xNSAyMi41QzEzLjk2NDQgMjIuNSAxMy4xMjUgMjEuNjYwOSAxMy4xMjUgMjAuNjI1QzEzLjEyNSAxOS41ODk1IDEzLjk2NDQgMTguNzUgMTUgMTguNzVDMTYuMDM1NiAxOC43NSAxNi44NzUgMTkuNTg5NSAxNi44NzUgMjAuNjI1QzE2Ljg3NSAyMS42NjA5IDE2LjAzNTYgMjIuNSAxNSAyMi41Wk0xNi44NzUgMTUuOTM3NUgxMy4xMjVMMTIuMTg3NSA4LjQzNzVDMTIuMTg3NSA3LjkxOTc3IDEyLjYwNzMgNy41IDEzLjEyNSA3LjVIMTYuODc1QzE3LjM5MjcgNy41IDE3LjgxMjUgNy45MTk3NyAxNy44MTI1IDguNDM3NUwxNi44NzUgMTUuOTM3NVoiIGZpbGw9IiNFNUU1RTUiLz4KPC9zdmc+Cg==);
       background-repeat: no-repeat;
     }
+
+    & p:last-of-type {
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    & .button {
+      width: 100%;
+    }
   }
 }
-
-@media (min-width: @desktop-width) {
-  }

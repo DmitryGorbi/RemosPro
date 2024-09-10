@@ -1,58 +1,58 @@
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-300'), url('../fonts/Roboto-300.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-300.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-300 Italic'), url('../fonts/Roboto-Italic-300.woff2') format('woff2');
   font-weight: 300;
   font-style: italic;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-Italic-300.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-400'), url('../fonts/Roboto-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto Italic'), local('Roboto-400 Italic'), url('../fonts/Roboto-Italic-400.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-Italic-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-500'), url('../fonts/Roboto-500.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-500.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-500 Italic'), url('../fonts/Roboto-Italic-500.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-Italic-500.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-700'), url('../fonts/Roboto-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-700.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-700 Italic'), url('../fonts/Roboto-Italic-700.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-  src: local('Roboto'), url('../fonts/Roboto-Italic-700.woff2') format('woff2');
 }
 .page,
 .page__body {
@@ -63,7 +63,7 @@
   padding: 0;
   width: auto;
   font-size: 16px;
-  font-family: 'Roboto', 'Arial', 'Oswald', sans-serif;
+  font-family: Roboto, 'Arial', 'Oswald', sans-serif;
   font-weight: 400;
   color: var(--basic-black);
   background-color: var(--white);
@@ -880,12 +880,6 @@ textarea {
   background-color: var(--white);
   border-radius: 50%;
 }
-@media (min-width: 1240px) {
-  .input-range__control {
-    width: 20px;
-    height: 20px;
-  }
-}
 .input-range__scale {
   position: absolute;
   bottom: -1px;
@@ -893,6 +887,17 @@ textarea {
   width: calc(80% + 14px);
   height: 4px;
   background-color: var(--basic-green);
+}
+@media (min-width: 768px) {
+  .input-range__wrapper input {
+    padding: 11px 9px 11px 9px;
+  }
+}
+@media (min-width: 1240px) {
+  .input-range__control {
+    width: 20px;
+    height: 20px;
+  }
 }
 .pagination {
   display: flex;
@@ -1884,7 +1889,7 @@ textarea {
     border: none;
   }
 }
-.new-offer {
+.offer-preview {
   display: grid;
   grid-template-areas: 'photo' 'data';
   row-gap: 10px;
@@ -1892,16 +1897,16 @@ textarea {
   border-radius: 5px;
   font-size: 14px;
 }
-.new-offers__image {
+.offer-preview__image {
   grid-area: photo;
 }
-.new-offers__image a {
+.offer-preview__image a {
   display: block;
 }
-.new-offers__image img {
+.offer-preview__image img {
   border-radius: 5px;
 }
-.new-offer__data {
+.offer-preview__data {
   grid-area: data;
   display: flex;
   flex-direction: column;
@@ -1909,30 +1914,30 @@ textarea {
   white-space: nowrap;
   overflow: hidden;
 }
-.new-offer__data li,
-.new-offer__data address {
+.offer-preview__data li,
+.offer-preview__data address {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.new-offer__price {
+.offer-preview__price {
   font-size: 16px;
   font-weight: 700;
 }
-.new-offer__price span {
+.offer-preview__price span {
   font-weight: 500;
 }
-.new-offer__properties {
+.offer-preview__properties {
   padding: 3px 5px;
   border: 1px solid var(--gray);
   border-radius: 5px;
 }
 @media (min-width: 768px) {
-  .new-offer {
+  .offer-preview {
     position: relative;
     row-gap: 10px;
     box-shadow: 0 0 10px var(--light-gray);
   }
-  .new-offer::after {
+  .offer-preview::after {
     position: absolute;
     content: 'new';
     bottom: 10px;
@@ -1941,32 +1946,32 @@ textarea {
     border: 2px solid var(--basic-green);
     border-radius: 5px;
   }
-  .new-offer:hover {
+  .offer-preview:hover {
     transform: scale(1.01);
     transition: transform 0.3s;
   }
-  .new-offer:hover .new-offer__properties {
+  .offer-preview:hover .offer-preview__properties {
     border-color: var(--basic-green);
   }
-  .new-offer:hover .new-offer__properties a {
+  .offer-preview:hover .offer-preview__properties a {
     color: var(--basic-green);
   }
-  .new-offer__data {
+  .offer-preview__data {
     row-gap: 7px;
     padding: 10px 15px 37px 15px;
   }
-  .new-offer__properties a {
+  .offer-preview__properties a {
     display: block;
   }
-  .new-offer__properties a:hover {
+  .offer-preview__properties a:hover {
     color: var(--green) !important;
   }
-  .new-offer__price {
+  .offer-preview__price {
     font-size: 17px;
   }
 }
 .subway {
-  font-size: 16px;
+  font-size: 15px;
 }
 .subway__distance {
   position: relative;
@@ -1991,7 +1996,7 @@ textarea {
 }
 @media (min-width: 1240px) {
   .subway {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .experts h3 {
@@ -4123,6 +4128,15 @@ textarea {
   width: 15px;
   height: 15px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NzgwMCAxNzc4MDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9IiI+CiAgPGc+CiAgICA8Y2lyY2xlIGN4PSI4ODkwMCIgY3k9Ijg4OTAwIiByPSI4ODkwMCIgZmlsbD0iI2ZmNDE0MSIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iI2ZmNDE0MSIgY2xhc3M9IiI+CiAgICA8L2NpcmNsZT4KICAgIDxnIGZpbGw9IiNmZmYiPgogICAgICA8cGF0aCBkPSJtMTAwMzQ3IDQ0MjAwLTMzNjUgNjgzMTJjLTIyNCA0NTUwLTM2MzcgODI5Mi04MDgyIDgyOTJzLTc4NTgtMzczNy04MDgyLTgyOTJsLTMzNjUtNjgzMTJjLTYxMy0xMjUxMyAyMzUwOC0xMjUwOSAyMjg5NCAwek04ODkwMSAxMjY4MjBjNDQ2MiAwIDgwODEgMzYxOSA4MDgxIDgwODJzLTM2MTkgODA4Mi04MDgxIDgwODJjLTQ0NjMgMC04MDgyLTM2MTktODA4Mi04MDgyczM2MTktODA4MiA4MDgyLTgwODJ6IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjZmZmZmZmIj4KICAgICAgPC9wYXRoPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==);
+}
+.control-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 15px;
+}
+.control-list .button {
+  padding: 4px 10px 3px;
 }
 .flats-list {
   display: flex;
@@ -7503,14 +7517,23 @@ textarea {
   .card__mortgage {
     grid-column: 1/2;
   }
+  .card__same {
+    grid-column: 1/2;
+  }
+  .card__map {
+    grid-column: 1/2;
+  }
+  .card__another {
+    grid-column: 1/3;
+  }
 }
-.offer-preview ul {
+.offer-tersely ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 8px;
   line-height: 20px;
 }
-.offer-preview ul li {
+.offer-tersely ul li {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: max-content max-content;
@@ -7522,32 +7545,32 @@ textarea {
   background-color: #f6f6fa;
   border-radius: 5px;
 }
-.offer-preview ul li .offer-preview__icon {
+.offer-tersely ul li .offer-tersely__icon {
   grid-row: 1/-1;
   font-size: 24px;
   line-height: 26px;
 }
-.offer-preview ul li .offer-preview__dl {
+.offer-tersely ul li .offer-tersely__dl {
   font-size: 12px;
   color: #737a8e;
 }
-.offer-preview ul li span {
+.offer-tersely ul li span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 @media (min-width: 768px) {
-  .offer-preview ul {
+  .offer-tersely ul {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
   }
-  .offer-preview ul li {
+  .offer-tersely ul li {
     -moz-column-gap: 15px;
          column-gap: 15px;
     padding: 12px 15px;
     font-size: 16px;
   }
-  .offer-preview ul li .offer-preview__dl {
+  .offer-tersely ul li .offer-tersely__dl {
     font-size: 13px;
   }
 }
@@ -8061,6 +8084,7 @@ textarea {
   .statistics {
     padding: 15px;
     box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
   }
   .statistics dl {
     gap: 0 50px;
@@ -8094,6 +8118,7 @@ textarea {
 .mortgage-section {
   padding: 15px 15px 20px 15px;
   box-shadow: 0 0 10px var(--light-gray);
+  border-radius: 5px;
 }
 .mortgage-section > p {
   margin-bottom: 20px;
@@ -8101,6 +8126,9 @@ textarea {
 }
 .mortgage-section .mortgage-section__form {
   padding-bottom: 30px;
+}
+.mortgage-section__request {
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .mortgage-section {
@@ -8110,13 +8138,25 @@ textarea {
     border-bottom: 1px solid var(--light-gray);
   }
   .mortgage-section__request {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
     margin-top: 25px;
   }
   .mortgage-section__request p:first-of-type {
+    grid-column: 1/-1;
     font-size: 12px;
     padding: 2px 0 2px 40px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDBDNi43MTU2MSAwIDAgNi43MTU4NCAwIDE1QzAgMjMuMjg0NiA2LjcxNTYxIDMwIDE1IDMwQzIzLjI4NDQgMzAgMzAgMjMuMjg0NiAzMCAxNUMzMCA2LjcxNTg0IDIzLjI4NDQgMCAxNSAwWk0xNSAyMi41QzEzLjk2NDQgMjIuNSAxMy4xMjUgMjEuNjYwOSAxMy4xMjUgMjAuNjI1QzEzLjEyNSAxOS41ODk1IDEzLjk2NDQgMTguNzUgMTUgMTguNzVDMTYuMDM1NiAxOC43NSAxNi44NzUgMTkuNTg5NSAxNi44NzUgMjAuNjI1QzE2Ljg3NSAyMS42NjA5IDE2LjAzNTYgMjIuNSAxNSAyMi41Wk0xNi44NzUgMTUuOTM3NUgxMy4xMjVMMTIuMTg3NSA4LjQzNzVDMTIuMTg3NSA3LjkxOTc3IDEyLjYwNzMgNy41IDEzLjEyNSA3LjVIMTYuODc1QzE3LjM5MjcgNy41IDE3LjgxMjUgNy45MTk3NyAxNy44MTI1IDguNDM3NUwxNi44NzUgMTUuOTM3NVoiIGZpbGw9IiNFNUU1RTUiLz4KPC9zdmc+Cg==);
     background-repeat: no-repeat;
+  }
+  .mortgage-section__request p:last-of-type {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .mortgage-section__request .button {
+    width: 100%;
   }
 }
 .mortgage-form {
@@ -8150,6 +8190,131 @@ textarea {
   .mortgage-form {
     grid-template-columns: 1fr 1fr;
     row-gap: 25px;
+  }
+}
+.card-map {
+  padding: 15px 15px 20px 15px;
+  box-shadow: 0 0 10px var(--light-gray);
+}
+.card-map ul {
+  margin-bottom: 10px;
+}
+.card-map__wrapper {
+  height: 300px;
+}
+@media (min-width: 768px) {
+  .card-map {
+    border-radius: 5px;
+  }
+  .card-map__wrapper {
+    height: 400px;
+  }
+}
+.same-variants__filter {
+  display: grid;
+  gap: 8px 0;
+  margin-bottom: 20px;
+}
+.same-variants__list {
+  margin-bottom: 10px;
+}
+@media (min-width: 640px) {
+  .same-variants {
+    padding: 15px 15px 20px 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
+  .same-variants > .button {
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) {
+  .same-variants {
+    padding: 15px 15px 20px 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
+  .same-variants__filter {
+    grid-template-columns: 1fr 1fr;
+  }
+  .same-variants__filter ul:first-of-type {
+    grid-column: 1/-1;
+  }
+}
+.small-card {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 14px;
+}
+.small-card:first-of-type {
+  border-top: 1px solid var(--light-gray);
+}
+.small-card h3 {
+  grid-column: 2/-1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--basic-green);
+}
+.small-card img {
+  grid-row: 1/3;
+  width: 120px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.small-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 3px;
+}
+.small-card__content p {
+  line-height: 1.1rem;
+}
+.small-card__price {
+  grid-column: 1/3;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .small-card {
+    grid-template-columns: max-content 1fr max-content;
+  }
+  .small-card h3 {
+    grid-column: 2/3;
+  }
+  .small-card img {
+    grid-row: 1/3;
+  }
+  .small-card__price {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    flex-direction: column;
+    row-gap: 3px;
+    align-items: end;
+    font-size: 14px;
+  }
+}
+.twin-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+@media (min-width: 1240px) {
+  .twin-list {
+    padding: 15px 15px 20px 15px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
+  .twin-list__wrapper {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .offer-developers h1 {
