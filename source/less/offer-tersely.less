@@ -19,9 +19,15 @@
 
       & .offer-tersely__icon {
         grid-row: 1/-1;
-        font-size: 24px;
-        line-height: 26px;
-        // margin: auto;
+
+        & svg {
+          width: 23px;
+          height: 23px;
+        }
+
+        .path-thin {
+          stroke-width: 2;
+        }
       }
 
       & .offer-tersely__dl {
@@ -36,8 +42,10 @@
       }
     }
   }
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .offer-tersely {
     & ul {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 12px;
@@ -45,8 +53,19 @@
       & li {
         column-gap: 15px;
         padding: 12px 15px;
-        // padding-left: 20px;
         font-size: 16px;
+
+        & .offer-tersely__icon {
+          & svg {
+            width: 35px;
+            height: 35px;
+
+
+            & path {
+              stroke: rgba(0, 0, 0, .7);
+            }
+          }
+        }
 
         & .offer-tersely__dl {
           font-size: 13px;

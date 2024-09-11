@@ -1,0 +1,28 @@
+.art-preview {
+    display: grid;
+    gap: 15px;
+
+    & h3 {
+      font-size: 14px;
+      line-height: 120%;
+      font-weight: 400;
+      order: 1;
+    }
+
+    & img {
+      border-radius: 5px;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .art-preview {
+
+      & h3 {
+        font-size: 15px;
+      }
+
+      & img {
+        border-radius: 5px;
+      }
+    }
+  }
