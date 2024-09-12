@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: 'Roboto';
-  src: local('Roboto'), local('Roboto-400'), url('../fonts/Roboto-400.woff2') format('woff2');
+  src: local('Roboto'), local('Roboto Regular'), url('../fonts/Roboto-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -930,9 +930,6 @@ textarea {
 }
 :is(.user-actions, .user-nav, .catalog-list__header, .catalog-menu) svg {
   stroke: var(--basic-green);
-}
-:is(.card-controls) svg {
-  stroke: rgba(0, 0, 0);
 }
 .dot-list li {
   position: relative;
@@ -7424,6 +7421,7 @@ textarea {
   position: absolute;
   top: 10px;
   right: 0;
+  left: 0;
 }
 .card__price {
   margin-bottom: 15px;
@@ -7454,6 +7452,9 @@ textarea {
   }
   .card__title {
     margin-bottom: 25px;
+  }
+  .card__actions {
+    left: auto;
   }
   .card__img {
     margin-bottom: 30px;
@@ -7740,25 +7741,45 @@ textarea {
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
-.card-controls .card-controls__item .button {
+.card-controls__item:first-of-type {
+  margin-right: auto;
+}
+.card-controls__item:not(:first-of-type) svg {
+  stroke: rgba(0, 0, 0);
+}
+.card-controls__item:first-of-type svg {
+  transform: rotate(90deg);
+}
+.card-controls__item .button,
+.card-controls__item a {
   display: flex;
   padding: 7px 10px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   border: 1px solid transparent;
 }
-.card-controls .card-controls__item .button:hover {
+.card-controls__item .button:hover,
+.card-controls__item a:hover {
   background-color: var(--light-gray);
 }
-.card-controls .card-controls__item .button:active {
+.card-controls__item .button:active,
+.card-controls__item a:active {
   background-color: var(--gray);
+}
+@media (min-width: 768px) {
+  .card-controls__item:first-of-type {
+    display: none;
+  }
 }
 @media (min-width: 1240px) {
   .card-controls ul {
     -moz-column-gap: 10px;
          column-gap: 10px;
   }
-  .card-controls .card-controls__item .button {
+  .card-controls__item:first-of-type {
+    display: none;
+  }
+  .card-controls__item .button {
     position: relative;
     padding: 3px 11px;
     border-color: var(--gray);

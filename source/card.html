@@ -532,7 +532,7 @@
         </nav>
       </div>
       <div class="page-header__border"></div>
-      <div class="page-header__footer page-header__footer--card visually-hidden-mobile">
+      <div class="page-header__footer visually-hidden-mobile">
         <button class="button button-location" type="button">
           <svg class="" width="18px" height="18px" aria-hidden="true">
             <use xlink:href="img/icons/sprite.svg#location"></use>
@@ -586,7 +586,6 @@
             <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
               <span itemprop="name">Кунцевская улица</span>
               <meta itemprop="position" content="8" />
-              <!-- <link href="" itemprop="item"> -->
             </li>
           </ol>
         </nav>
@@ -601,7 +600,7 @@
           </h1>
           <section class="card__gk">
             <h2 class="visually-hidden">Квартира находится в комплексе</h2>
-            <a href="#">ЖК Сиреневый бульвар</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">ЖК Сиреневый бульвар</a>
           </section>
           <section class="card__price card__price--top offer-price">
             <h2 class="visually-hidden">Цена в объявлении</h2>
@@ -647,7 +646,7 @@
                   <span class="visually-hidden">Закрыть окно</span>
                 </button>
                 <label class="visually-hidden" for="price-subscribe-mob">Введите свой e-mail</label>
-                <input class="input" type="email" id="price-subscribe-mob" placeholder="Введите свой e-mail" autofocus />
+                <input class="input" type="email" id="price-subscribe-mob" placeholder="Введите свой e-mail" autofocus inputmode="email" />
                 <button class="button button-main" type="button">Подписаться</button>
                 <p>При подписке вы принимаете условия пользовательского соглашения</p>
               </div>
@@ -677,6 +676,13 @@
           </p>
           <div class="card__actions card-controls">
             <ul>
+              <li class="card-controls__item">
+                <a href="#" aria-label="Перейти в каталог">
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                  </svg>
+                </a>
+              </li>
               <li class="card-controls__item">
                 <button class="button" type="button">
                   <svg width="20" height="20" aria-hidden="true">
@@ -751,10 +757,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -763,7 +774,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.6355 13.1351V10.0105L25.0841 10.0105L21.5 10.0105L18 10.0105L13.0093 10.0105L9.45794 5H5.19626V10.0105L2.35514 10.0105V13.1351H5.19626L5.18692 31.5M28.6355 13.1351V18M28.6355 13.1351H25.0841H21.5H18H13.0093L13 31.5M19.271 24.5816V31.7684H38V24.5816M19.271 24.5816H38M19.271 24.5816L28.6355 18M38 24.5816L28.6355 18M26.6355 27.4737V29.2632M30.1869 27.4737V29.2632M15.8505 36.7562H13.0093M13.0093 36.7562H2H5.19626L5.18692 31.5M13.0093 36.7562L13 31.5M13 31.5H5.18692" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M28.6355 13.1351V10.0105L25.0841 10.0105L21.5 10.0105L18 10.0105L13.0093 10.0105L9.45794 5H5.19626V10.0105L2.35514 10.0105V13.1351H5.19626L5.18692 31.5M28.6355 13.1351V18M28.6355 13.1351H25.0841H21.5H18H13.0093L13 31.5M19.271 24.5816V31.7684H38V24.5816M19.271 24.5816H38M19.271 24.5816L28.6355 18M38 24.5816L28.6355 18M26.6355 27.4737V29.2632M30.1869 27.4737V29.2632M15.8505 36.7562H13.0093M13.0093 36.7562H2H5.19626L5.18692 31.5M13.0093 36.7562L13 31.5M13 31.5H5.18692"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Готовность:</span>
@@ -772,8 +790,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"/>
-                      </svg>
+                      <path
+                        d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Комнатность</span>
                   <span>Студия</span>
@@ -781,8 +805,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl"> Общая площадь: </span>
@@ -791,9 +819,16 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24" stroke="black" stroke-width="1.6"/>
-                      <path d="M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 24.5871C14.8515 24.5871 16.3522 23.1125 16.3522 21.2935C16.3522 19.4746 14.8515 18 13 18C11.1485 18 9.6478 19.4746 9.6478 21.2935C9.6478 23.1125 11.1485 24.5871 13 24.5871ZM13 24.5871C10.4043 24.5871 8.26811 26.5194 8 28.9999M13 24.5871C15.5958 24.5871 17.732 26.5196 18 29" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24" stroke="black" stroke-width="1.6" />
+                      <path d="M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6" />
+                      <path
+                        d="M13 24.5871C14.8515 24.5871 16.3522 23.1125 16.3522 21.2935C16.3522 19.4746 14.8515 18 13 18C11.1485 18 9.6478 19.4746 9.6478 21.2935C9.6478 23.1125 11.1485 24.5871 13 24.5871ZM13 24.5871C10.4043 24.5871 8.26811 26.5194 8 28.9999M13 24.5871C15.5958 24.5871 17.732 26.5196 18 29"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Жилая площадь:</span>
@@ -802,14 +837,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>Этаж: 1 из 17</span>
@@ -820,10 +859,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -832,7 +876,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.6355 13.1351V10.0105L25.0841 10.0105L21.5 10.0105L18 10.0105L13.0093 10.0105L9.45794 5H5.19626V10.0105L2.35514 10.0105V13.1351H5.19626L5.18692 31.5M28.6355 13.1351V18M28.6355 13.1351H25.0841H21.5H18H13.0093L13 31.5M19.271 24.5816V31.7684H38V24.5816M19.271 24.5816H38M19.271 24.5816L28.6355 18M38 24.5816L28.6355 18M26.6355 27.4737V29.2632M30.1869 27.4737V29.2632M15.8505 36.7562H13.0093M13.0093 36.7562H2H5.19626L5.18692 31.5M13.0093 36.7562L13 31.5M13 31.5H5.18692" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M28.6355 13.1351V10.0105L25.0841 10.0105L21.5 10.0105L18 10.0105L13.0093 10.0105L9.45794 5H5.19626V10.0105L2.35514 10.0105V13.1351H5.19626L5.18692 31.5M28.6355 13.1351V18M28.6355 13.1351H25.0841H21.5H18H13.0093L13 31.5M19.271 24.5816V31.7684H38V24.5816M19.271 24.5816H38M19.271 24.5816L28.6355 18M38 24.5816L28.6355 18M26.6355 27.4737V29.2632M30.1869 27.4737V29.2632M15.8505 36.7562H13.0093M13.0093 36.7562H2H5.19626L5.18692 31.5M13.0093 36.7562L13 31.5M13 31.5H5.18692"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Готовность:</span>
@@ -841,7 +892,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 14.6666H36M28.0038 10.6666V4M11.9962 10.6666V4M13.5 23.5L19 29L27 21M9.34617 36H30.6538C33.6064 36 36 33.6053 36 30.6512V12.0155C36 9.06142 33.6064 6.66664 30.6538 6.66664H9.34617C6.39356 6.66664 4 9.06142 4 12.0155V30.6512C4 33.6053 6.39356 36 9.34617 36Z" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path
+                        d="M4 14.6666H36M28.0038 10.6666V4M11.9962 10.6666V4M13.5 23.5L19 29L27 21M9.34617 36H30.6538C33.6064 36 36 33.6053 36 30.6512V12.0155C36 9.06142 33.6064 6.66664 30.6538 6.66664H9.34617C6.39356 6.66664 4 9.06142 4 12.0155V30.6512C4 33.6053 6.39356 36 9.34617 36Z"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Год постройки:</span>
@@ -850,8 +908,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"/>
-                      </svg>
+                      <path
+                        d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Комнатность</span>
                   <span>5-комнатная</span>
@@ -859,8 +923,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -869,14 +937,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>Этаж: 1 из 17</span>
@@ -887,10 +959,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости</span>
@@ -899,8 +976,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -909,14 +990,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажей в доме:</span>
                   <span>3 этажа</span>
@@ -924,7 +1009,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.4 7C17.9034 7 22.5229 12.7562 23.2695 20.2224C23.7681 25.2088 26.7884 29.5913 31.2705 31.8324C34.8728 33.6335 37.9427 36.4141 40.1767 39.7651M40.9999 19.7676H23.2169M20.7861 13.4191H41M40.9999 32.4647H32.4488M25.1795 26.1162H40.9999M32.5352 7V13.4191M32.5352 19.7676V26.1162M36.7676 13.4191V19.7676M36.7676 26.1162V32.4647M28.3029 13.4191V19.7676M24.0705 7V13.4191M38.9999 7H9C7.89543 7 7 7.89543 7 9V39C7 40.1046 7.89543 41 9 41H38.9999C40.1045 41 40.9999 40.1046 40.9999 39V9C40.9999 7.89543 40.1045 7 38.9999 7Z" stroke="black" stroke-width="1.6" stroke-miterlimit="10"/>
+                      <path
+                        d="M10.4 7C17.9034 7 22.5229 12.7562 23.2695 20.2224C23.7681 25.2088 26.7884 29.5913 31.2705 31.8324C34.8728 33.6335 37.9427 36.4141 40.1767 39.7651M40.9999 19.7676H23.2169M20.7861 13.4191H41M40.9999 32.4647H32.4488M25.1795 26.1162H40.9999M32.5352 7V13.4191M32.5352 19.7676V26.1162M36.7676 13.4191V19.7676M36.7676 26.1162V32.4647M28.3029 13.4191V19.7676M24.0705 7V13.4191M38.9999 7H9C7.89543 7 7 7.89543 7 9V39C7 40.1046 7.89543 41 9 41H38.9999C40.1045 41 40.9999 40.1046 40.9999 39V9C40.9999 7.89543 40.1045 7 38.9999 7Z"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Метериал стен:</span>
@@ -933,8 +1023,16 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6"/>
-                      <path d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path
+                        d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Площадь участка:</span>
@@ -943,7 +1041,11 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Статус участка:</span>
@@ -955,10 +1057,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости</span>
@@ -967,9 +1074,17 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6"/>
-                      <path d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path
+                        d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Площадь участка:</span>
                   <span>15 соток</span>
@@ -977,7 +1092,11 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Статус участка:</span>
@@ -989,10 +1108,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости</span>
@@ -1001,8 +1125,14 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"/>
-                      </svg>
+                      <path
+                        d="M19.7343 34.8333H6.51418M19.7343 34.8333V16.2733C19.7343 15.6327 19.2088 15.1133 18.5605 15.1133H16.213M19.7343 34.8333H22.0817M6.51418 34.8333V16.2733C6.51418 15.6327 7.03968 15.1133 7.68792 15.1133H16.213M6.51418 34.8333H4.16669M9.35868 26.2194H11.1879M33.8192 34.8333H16.213H13.8655M33.8192 34.8333V6.99333C33.8192 6.35268 33.2937 5.83333 32.6455 5.83333H17.3868C16.7385 5.83333 16.213 6.35268 16.213 6.99333V15.1133M33.8192 34.8333H36.1667M28.4702 22.4324H31.1415"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Комнатность</span>
                   <span>5-комнатная</span>
@@ -1010,10 +1140,17 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24" stroke="black" stroke-width="1.6"/>
-                      <path d="M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 24.5871C14.8515 24.5871 16.3522 23.1125 16.3522 21.2935C16.3522 19.4746 14.8515 18 13 18C11.1485 18 9.6478 19.4746 9.6478 21.2935C9.6478 23.1125 11.1485 24.5871 13 24.5871ZM13 24.5871C10.4043 24.5871 8.26811 26.5194 8 28.9999M13 24.5871C15.5958 24.5871 17.732 26.5196 18 29" stroke="black" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24" stroke="black" stroke-width="1.6" />
+                      <path d="M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6" />
+                      <path
+                        d="M13 24.5871C14.8515 24.5871 16.3522 23.1125 16.3522 21.2935C16.3522 19.4746 14.8515 18 13 18C11.1485 18 9.6478 19.4746 9.6478 21.2935C9.6478 23.1125 11.1485 24.5871 13 24.5871ZM13 24.5871C10.4043 24.5871 8.26811 26.5194 8 28.9999M13 24.5871C15.5958 24.5871 17.732 26.5196 18 29"
+                        stroke="black"
+                        stroke-width="1.6"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Площадь комнаты:</span>
                   <span>37.5 <abbr title="квадратный метр">м²</abbr></span>
@@ -1026,14 +1163,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность</span>
                   <span>3 из 12</span>
@@ -1044,10 +1185,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости</span>
@@ -1056,9 +1202,17 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5" stroke="black" stroke-width="1.6"/>
-                      <path d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M30.46 10H34C35.6569 10 37 11.3431 37 13V32C37 33.6569 35.6569 35 34 35H6C4.34315 35 3 33.6569 3 32V13C3 11.3431 4.34315 10 6 10H24M21 6.5L24.5 10L21 13.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path
+                        d="M12.5 26.9872H14.7622C16.5504 26.9872 18 25.5376 18 23.7494V22.2615C18 21.295 17.2165 20.5115 16.25 20.5115V20.5115M12.5 26.9872H10.2378C8.44962 26.9872 7 25.5376 7 23.7494V22.2615C7 21.295 7.7835 20.5115 8.75 20.5115V20.5115M12.5 26.9872V31M12.5 26.9872V22.8516M14.5 20.5115H16.25M16.25 20.5115V19.75C16.25 17.6789 14.5711 16 12.5 16V16V16C10.4289 16 8.75 17.6789 8.75 19.75V20.5115M8.75 20.5115H10.5"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Площадь участка:</span>
                   <span>15 соток</span>
@@ -1066,7 +1220,11 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M23.8533 19.2308H26.3574C28.9804 19.2308 31.1067 17.1045 31.1067 14.4815V12.0402C31.1067 10.7656 30.0734 9.73231 28.7988 9.73231V9.73231M23.8533 19.2308H21.3492C18.7263 19.2308 16.6 17.1045 16.6 14.4815V12.0402C16.6 10.7656 17.6333 9.73231 18.9079 9.73231V9.73231M23.8533 19.2308V25.6M23.8533 19.2308V13.9762M26.4909 9.73231H28.7988M28.7988 9.73231V8.94546C28.7988 6.21416 26.5846 4 23.8533 4V4V4C21.122 4 18.9079 6.21416 18.9079 8.94546V9.73231M18.9079 9.73231H21.2158M14.5 9.73231H8C5.23858 9.73231 3 11.9709 3 14.7323V30C3 32.7614 5.23858 35 8 35H32C34.7614 35 37 32.7614 37 30V13.7323C37 11.5232 35.2091 9.73231 33 9.73231V9.73231"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Разрешенное использование:</span>
@@ -1078,10 +1236,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1090,8 +1253,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1110,14 +1277,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>Этаж: 1 из 17</span>
@@ -1128,10 +1299,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1140,8 +1316,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1160,14 +1340,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>Этаж: 1 из 17</span>
@@ -1178,10 +1362,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1190,8 +1379,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1205,14 +1398,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>Этаж: 1 из 17</span>
@@ -1223,10 +1420,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1235,8 +1437,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1245,14 +1451,18 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6"/>
-                      </svg>
+                      <path
+                        d="M24 36V8C24 6.89543 23.1045 6 22 6H8.35712C7.25255 6 6.35712 6.89543 6.35712 8V36M24 36H6.35712M24 36H31.5C33.1569 36 34.5 34.6569 34.5 33V16.5M6.35712 36H2M34.5 16.5L31 20M34.5 16.5L38 20"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M13 28V25H10V28H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 21V18H10V21H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M13 14V11H10V14H13Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 28V25H17V28H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 21V18H17V21H20Z" stroke="black" stroke-width="1.6" />
+                      <path d="M20 14V11H17V14H20Z" stroke="black" stroke-width="1.6" />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Этажность:</span>
                   <span>17</span>
@@ -1263,10 +1473,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1275,8 +1490,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1293,8 +1512,11 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M43 42.8C43.4418 42.8 43.8 42.4418 43.8 42C43.8 41.5582 43.4418 41.2 43 41.2V42.8ZM5 41.2C4.55817 41.2 4.2 41.5582 4.2 42C4.2 42.4418 4.55817 42.8 5 42.8V41.2ZM34.247 10.0405L34.2471 9.24051L33.447 9.24046V10.0405H34.247ZM34.2585 13.4532L33.4585 13.4581L33.4634 14.2582L34.2636 14.2532L34.2585 13.4532ZM35.9136 10.0406L35.9136 10.8406H35.9136V10.0406ZM5 36.4392C4.55817 36.4392 4.2 36.7974 4.2 37.2392C4.2 37.6811 4.55817 38.0392 5 38.0392V36.4392ZM30.832 37.2392V38.0392H31.632V37.2392H30.832ZM22.0415 26.5341L21.3755 26.9773L21.6129 27.3341H22.0415V26.5341ZM17.0163 18.983L17.6823 18.5398L17.4449 18.183H17.0163V18.983ZM5 18.183C4.55817 18.183 4.2 18.5412 4.2 18.983C4.2 19.4248 4.55817 19.783 5 19.783V18.183ZM5 25.7341C4.55817 25.7341 4.2 26.0923 4.2 26.5341C4.2 26.9759 4.55817 27.3341 5 27.3341V25.7341ZM35.6772 19.7979V42H37.2772V19.7979H35.6772ZM43 41.2H5V42.8H43V41.2ZM40.7864 18.9979H31.0965V20.5979H40.7864V18.9979ZM29.8965 17.7979V8H28.2965V17.7979H29.8965ZM31.0965 6.8H40.7864V5.2H31.0965V6.8ZM41.9864 8V17.7979H43.5864V8H41.9864ZM33.447 10.0405V16.7161H35.047V10.0405H33.447ZM36.8359 11.7431C36.8359 12.2275 36.419 12.6457 35.9136 12.6457V14.2457C37.2741 14.2457 38.4359 13.1394 38.4359 11.7431H36.8359ZM35.9136 12.6457C35.6798 12.6457 35.2639 12.6476 34.9084 12.6494C34.7302 12.6504 34.5665 12.6513 34.4473 12.652C34.3878 12.6524 34.3393 12.6527 34.3058 12.6529C34.289 12.653 34.2759 12.6531 34.2671 12.6531C34.2626 12.6531 34.2592 12.6532 34.257 12.6532C34.2558 12.6532 34.255 12.6532 34.2544 12.6532C34.2541 12.6532 34.2539 12.6532 34.2537 12.6532C34.2536 12.6532 34.2536 12.6532 34.2535 12.6532C34.2535 12.6532 34.2535 12.6532 34.2535 12.6532C34.2535 12.6532 34.2535 12.6532 34.2585 13.4532C34.2636 14.2532 34.2636 14.2532 34.2636 14.2532C34.2636 14.2532 34.2636 14.2532 34.2636 14.2532C34.2637 14.2532 34.2637 14.2532 34.2638 14.2532C34.2639 14.2532 34.2641 14.2532 34.2644 14.2532C34.265 14.2532 34.2658 14.2532 34.267 14.2531C34.2692 14.2531 34.2726 14.2531 34.277 14.2531C34.2858 14.253 34.2988 14.2529 34.3156 14.2528C34.349 14.2526 34.3974 14.2523 34.4568 14.252C34.5757 14.2513 34.739 14.2504 34.9168 14.2494C35.2731 14.2475 35.6848 14.2457 35.9136 14.2457V12.6457ZM34.2585 13.4532C35.0585 13.4483 35.0585 13.4483 35.0585 13.4483C35.0585 13.4483 35.0585 13.4483 35.0585 13.4483C35.0585 13.4482 35.0585 13.4482 35.0585 13.4481C35.0585 13.4479 35.0585 13.4477 35.0585 13.4474C35.0585 13.4468 35.0585 13.446 35.0585 13.4448C35.0585 13.4424 35.0585 13.4389 35.0584 13.4344C35.0584 13.4252 35.0583 13.4117 35.0582 13.3944C35.058 13.3597 35.0577 13.3096 35.0573 13.2481C35.0566 13.1249 35.0557 12.9557 35.0548 12.7718C35.0529 12.4031 35.051 11.9777 35.051 11.7431H33.451C33.451 11.9825 33.4529 12.4121 33.4548 12.78C33.4557 12.9643 33.4567 13.1338 33.4574 13.2572C33.4577 13.3189 33.458 13.3691 33.4582 13.4039C33.4583 13.4213 33.4584 13.4348 33.4585 13.444C33.4585 13.4486 33.4585 13.4521 33.4585 13.4545C33.4585 13.4556 33.4585 13.4565 33.4585 13.4571C33.4585 13.4574 33.4585 13.4577 33.4585 13.4578C33.4585 13.4579 33.4585 13.458 33.4585 13.458C33.4585 13.458 33.4585 13.458 33.4585 13.458C33.4585 13.458 33.4585 13.4581 34.2585 13.4532ZM35.051 11.7431C35.051 11.5472 35.05 11.1204 35.049 10.7437C35.0485 10.5552 35.048 10.3788 35.0476 10.2495C35.0475 10.1849 35.0473 10.132 35.0472 10.0953C35.0471 10.077 35.0471 10.0627 35.0471 10.053C35.0471 10.0481 35.047 10.0444 35.047 10.0419C35.047 10.0406 35.047 10.0397 35.047 10.039C35.047 10.0387 35.047 10.0385 35.047 10.0383C35.047 10.0383 35.047 10.0382 35.047 10.0381C35.047 10.0381 35.047 10.0381 35.047 10.0381C35.047 10.0381 35.047 10.0381 34.247 10.0405C33.447 10.0429 33.447 10.0429 33.447 10.0429C33.447 10.043 33.447 10.043 33.447 10.043C33.447 10.043 33.447 10.0431 33.447 10.0432C33.447 10.0433 33.447 10.0436 33.447 10.0439C33.447 10.0445 33.447 10.0455 33.447 10.0467C33.447 10.0492 33.4471 10.0529 33.4471 10.0578C33.4471 10.0675 33.4471 10.0817 33.4472 10.1001C33.4473 10.1367 33.4475 10.1895 33.4476 10.2541C33.448 10.3833 33.4485 10.5595 33.449 10.748C33.45 11.1253 33.451 11.5498 33.451 11.7431H35.051ZM34.247 10.8405L35.9136 10.8406L35.9137 9.24061L34.2471 9.24051L34.247 10.8405ZM35.9136 10.8406C36.419 10.8406 36.8359 11.2588 36.8359 11.7431H38.4359C38.4359 10.3469 37.2741 9.24061 35.9136 9.24061V10.8406ZM5 38.0392H14.898V36.4392H5V38.0392ZM24.4742 38.0392H30.832V36.4392H24.4742V38.0392ZM31.632 37.2392V32.0743H30.032V37.2392H31.632ZM31.632 32.0743C31.632 28.5787 28.8187 25.7341 25.3351 25.7341V27.3341C27.9232 27.3341 30.032 29.4505 30.032 32.0743H31.632ZM25.3351 25.7341H22.0415V27.3341H25.3351V25.7341ZM22.7075 26.0909L17.6823 18.5398L16.3503 19.4262L21.3755 26.9773L22.7075 26.0909ZM17.0163 18.183H5V19.783H17.0163V18.183ZM5 27.3341H22.6004V25.7341H5V27.3341ZM23.6742 37.1742C23.6742 39.4035 21.8828 41.2 19.6861 41.2V42.8C22.7782 42.8 25.2742 40.2753 25.2742 37.1742H23.6742ZM19.6861 41.2C17.4894 41.2 15.698 39.4035 15.698 37.1742H14.098C14.098 40.2753 16.594 42.8 19.6861 42.8V41.2ZM15.698 37.1742C15.698 34.9448 17.4894 33.1483 19.6861 33.1483V31.5483C16.5939 31.5483 14.098 34.0731 14.098 37.1742H15.698ZM19.6861 33.1483C21.8827 33.1483 23.6742 34.9448 23.6742 37.1742H25.2742C25.2742 34.0731 22.7783 31.5483 19.6861 31.5483V33.1483ZM30.832 31.2743L26.6978 31.2743V32.8743L30.832 32.8743V31.2743ZM40.7864 6.8C41.4491 6.8 41.9864 7.33726 41.9864 8H43.5864C43.5864 6.4536 42.3328 5.2 40.7864 5.2V6.8ZM29.8965 8C29.8965 7.33726 30.4337 6.8 31.0965 6.8V5.2C29.5501 5.2 28.2965 6.4536 28.2965 8H29.8965ZM31.0965 18.9979C30.4337 18.9979 29.8965 18.4606 29.8965 17.7979H28.2965C28.2965 19.3443 29.5501 20.5979 31.0965 20.5979V18.9979ZM40.7864 20.5979C42.3328 20.5979 43.5864 19.3443 43.5864 17.7979H41.9864C41.9864 18.4606 41.4491 18.9979 40.7864 18.9979V20.5979Z" fill="black"/>
-                      </svg>
+                      <path
+                        d="M43 42.8C43.4418 42.8 43.8 42.4418 43.8 42C43.8 41.5582 43.4418 41.2 43 41.2V42.8ZM5 41.2C4.55817 41.2 4.2 41.5582 4.2 42C4.2 42.4418 4.55817 42.8 5 42.8V41.2ZM34.247 10.0405L34.2471 9.24051L33.447 9.24046V10.0405H34.247ZM34.2585 13.4532L33.4585 13.4581L33.4634 14.2582L34.2636 14.2532L34.2585 13.4532ZM35.9136 10.0406L35.9136 10.8406H35.9136V10.0406ZM5 36.4392C4.55817 36.4392 4.2 36.7974 4.2 37.2392C4.2 37.6811 4.55817 38.0392 5 38.0392V36.4392ZM30.832 37.2392V38.0392H31.632V37.2392H30.832ZM22.0415 26.5341L21.3755 26.9773L21.6129 27.3341H22.0415V26.5341ZM17.0163 18.983L17.6823 18.5398L17.4449 18.183H17.0163V18.983ZM5 18.183C4.55817 18.183 4.2 18.5412 4.2 18.983C4.2 19.4248 4.55817 19.783 5 19.783V18.183ZM5 25.7341C4.55817 25.7341 4.2 26.0923 4.2 26.5341C4.2 26.9759 4.55817 27.3341 5 27.3341V25.7341ZM35.6772 19.7979V42H37.2772V19.7979H35.6772ZM43 41.2H5V42.8H43V41.2ZM40.7864 18.9979H31.0965V20.5979H40.7864V18.9979ZM29.8965 17.7979V8H28.2965V17.7979H29.8965ZM31.0965 6.8H40.7864V5.2H31.0965V6.8ZM41.9864 8V17.7979H43.5864V8H41.9864ZM33.447 10.0405V16.7161H35.047V10.0405H33.447ZM36.8359 11.7431C36.8359 12.2275 36.419 12.6457 35.9136 12.6457V14.2457C37.2741 14.2457 38.4359 13.1394 38.4359 11.7431H36.8359ZM35.9136 12.6457C35.6798 12.6457 35.2639 12.6476 34.9084 12.6494C34.7302 12.6504 34.5665 12.6513 34.4473 12.652C34.3878 12.6524 34.3393 12.6527 34.3058 12.6529C34.289 12.653 34.2759 12.6531 34.2671 12.6531C34.2626 12.6531 34.2592 12.6532 34.257 12.6532C34.2558 12.6532 34.255 12.6532 34.2544 12.6532C34.2541 12.6532 34.2539 12.6532 34.2537 12.6532C34.2536 12.6532 34.2536 12.6532 34.2535 12.6532C34.2535 12.6532 34.2535 12.6532 34.2535 12.6532C34.2535 12.6532 34.2535 12.6532 34.2585 13.4532C34.2636 14.2532 34.2636 14.2532 34.2636 14.2532C34.2636 14.2532 34.2636 14.2532 34.2636 14.2532C34.2637 14.2532 34.2637 14.2532 34.2638 14.2532C34.2639 14.2532 34.2641 14.2532 34.2644 14.2532C34.265 14.2532 34.2658 14.2532 34.267 14.2531C34.2692 14.2531 34.2726 14.2531 34.277 14.2531C34.2858 14.253 34.2988 14.2529 34.3156 14.2528C34.349 14.2526 34.3974 14.2523 34.4568 14.252C34.5757 14.2513 34.739 14.2504 34.9168 14.2494C35.2731 14.2475 35.6848 14.2457 35.9136 14.2457V12.6457ZM34.2585 13.4532C35.0585 13.4483 35.0585 13.4483 35.0585 13.4483C35.0585 13.4483 35.0585 13.4483 35.0585 13.4483C35.0585 13.4482 35.0585 13.4482 35.0585 13.4481C35.0585 13.4479 35.0585 13.4477 35.0585 13.4474C35.0585 13.4468 35.0585 13.446 35.0585 13.4448C35.0585 13.4424 35.0585 13.4389 35.0584 13.4344C35.0584 13.4252 35.0583 13.4117 35.0582 13.3944C35.058 13.3597 35.0577 13.3096 35.0573 13.2481C35.0566 13.1249 35.0557 12.9557 35.0548 12.7718C35.0529 12.4031 35.051 11.9777 35.051 11.7431H33.451C33.451 11.9825 33.4529 12.4121 33.4548 12.78C33.4557 12.9643 33.4567 13.1338 33.4574 13.2572C33.4577 13.3189 33.458 13.3691 33.4582 13.4039C33.4583 13.4213 33.4584 13.4348 33.4585 13.444C33.4585 13.4486 33.4585 13.4521 33.4585 13.4545C33.4585 13.4556 33.4585 13.4565 33.4585 13.4571C33.4585 13.4574 33.4585 13.4577 33.4585 13.4578C33.4585 13.4579 33.4585 13.458 33.4585 13.458C33.4585 13.458 33.4585 13.458 33.4585 13.458C33.4585 13.458 33.4585 13.4581 34.2585 13.4532ZM35.051 11.7431C35.051 11.5472 35.05 11.1204 35.049 10.7437C35.0485 10.5552 35.048 10.3788 35.0476 10.2495C35.0475 10.1849 35.0473 10.132 35.0472 10.0953C35.0471 10.077 35.0471 10.0627 35.0471 10.053C35.0471 10.0481 35.047 10.0444 35.047 10.0419C35.047 10.0406 35.047 10.0397 35.047 10.039C35.047 10.0387 35.047 10.0385 35.047 10.0383C35.047 10.0383 35.047 10.0382 35.047 10.0381C35.047 10.0381 35.047 10.0381 35.047 10.0381C35.047 10.0381 35.047 10.0381 34.247 10.0405C33.447 10.0429 33.447 10.0429 33.447 10.0429C33.447 10.043 33.447 10.043 33.447 10.043C33.447 10.043 33.447 10.0431 33.447 10.0432C33.447 10.0433 33.447 10.0436 33.447 10.0439C33.447 10.0445 33.447 10.0455 33.447 10.0467C33.447 10.0492 33.4471 10.0529 33.4471 10.0578C33.4471 10.0675 33.4471 10.0817 33.4472 10.1001C33.4473 10.1367 33.4475 10.1895 33.4476 10.2541C33.448 10.3833 33.4485 10.5595 33.449 10.748C33.45 11.1253 33.451 11.5498 33.451 11.7431H35.051ZM34.247 10.8405L35.9136 10.8406L35.9137 9.24061L34.2471 9.24051L34.247 10.8405ZM35.9136 10.8406C36.419 10.8406 36.8359 11.2588 36.8359 11.7431H38.4359C38.4359 10.3469 37.2741 9.24061 35.9136 9.24061V10.8406ZM5 38.0392H14.898V36.4392H5V38.0392ZM24.4742 38.0392H30.832V36.4392H24.4742V38.0392ZM31.632 37.2392V32.0743H30.032V37.2392H31.632ZM31.632 32.0743C31.632 28.5787 28.8187 25.7341 25.3351 25.7341V27.3341C27.9232 27.3341 30.032 29.4505 30.032 32.0743H31.632ZM25.3351 25.7341H22.0415V27.3341H25.3351V25.7341ZM22.7075 26.0909L17.6823 18.5398L16.3503 19.4262L21.3755 26.9773L22.7075 26.0909ZM17.0163 18.183H5V19.783H17.0163V18.183ZM5 27.3341H22.6004V25.7341H5V27.3341ZM23.6742 37.1742C23.6742 39.4035 21.8828 41.2 19.6861 41.2V42.8C22.7782 42.8 25.2742 40.2753 25.2742 37.1742H23.6742ZM19.6861 41.2C17.4894 41.2 15.698 39.4035 15.698 37.1742H14.098C14.098 40.2753 16.594 42.8 19.6861 42.8V41.2ZM15.698 37.1742C15.698 34.9448 17.4894 33.1483 19.6861 33.1483V31.5483C16.5939 31.5483 14.098 34.0731 14.098 37.1742H15.698ZM19.6861 33.1483C21.8827 33.1483 23.6742 34.9448 23.6742 37.1742H25.2742C25.2742 34.0731 22.7783 31.5483 19.6861 31.5483V33.1483ZM30.832 31.2743L26.6978 31.2743V32.8743L30.832 32.8743V31.2743ZM40.7864 6.8C41.4491 6.8 41.9864 7.33726 41.9864 8H43.5864C43.5864 6.4536 42.3328 5.2 40.7864 5.2V6.8ZM29.8965 8C29.8965 7.33726 30.4337 6.8 31.0965 6.8V5.2C29.5501 5.2 28.2965 6.4536 28.2965 8H29.8965ZM31.0965 18.9979C30.4337 18.9979 29.8965 18.4606 29.8965 17.7979H28.2965C28.2965 19.3443 29.5501 20.5979 31.0965 20.5979V18.9979ZM40.7864 20.5979C42.3328 20.5979 43.5864 19.3443 43.5864 17.7979H41.9864C41.9864 18.4606 41.4491 18.9979 40.7864 18.9979V20.5979Z"
+                        fill="black"
+                      />
+                    </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
                   <span>Гараж</span>
@@ -1302,8 +1524,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1325,10 +1551,15 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="21" height="21" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="path-thin" d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714" stroke="black" stroke-width="1.6"/>
-                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6"/>
-                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6"/>
+                      <path
+                        class="path-thin"
+                        d="M9.35714 42H27V12C27 10.8954 26.1046 10 25 10H11.3571C10.2526 10 9.35714 10.8954 9.35714 12V28.5789M9.35714 42V28.5789M9.35714 42H4V30.5789C4 29.4744 4.89543 28.5789 6 28.5789H9.35714"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path class="path-thin" d="M44 42V24C44 22.8954 43.1046 22 42 22H34C32.8954 22 32 22.8954 32 24V42H44ZM44 42H47" stroke="black" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M35 27H37M35 31H37M39 27H41M39 31H41" stroke="black" stroke-width="1.6" />
+                      <path d="M13.5 15H16.5M13.5 19H16.5M13.5 23H16.5M20 15H23M20 19H23M20 23H23M13.5 27H16.5M20 27H23M13.5 31H16.5M20 31H23" stroke="black" stroke-width="1/6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Тип недвижимости:</span>
@@ -1337,8 +1568,12 @@
                 <li>
                   <span class="offer-tersely__icon">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35" stroke="black" stroke-width="1.6"/>
-                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6"/>
+                      <path
+                        d="M28.46 10H34C35.6569 10 37 11.3431 37 13V22.5597M37 22.5597V32C37 33.6569 35.6569 35 34 35H24.5M37 22.5597H30.5H24.5M3 22.5597V32C3 33.6569 4.34315 35 6 35H24.5M3 22.5597V13C3 11.3431 4.34315 10 6 10H22.5M3 22.5597H11H24.5M24.5 22.5597V35"
+                        stroke="black"
+                        stroke-width="1.6"
+                      />
+                      <path d="M20 6.5L23.5 10L20 13.5" stroke="black" stroke-width="1.6" />
                     </svg>
                   </span>
                   <span class="offer-tersely__dl">Общая площадь:</span>
@@ -1504,8 +1739,7 @@
                   <span>возможна</span>
                 </li>
               </ul>
-              <a href="#">
-                </span>Платеж по ипотеке от <data value="192167"> 192 167 </data> &#x20bd; в месяц</a>
+              <a href="#">Платеж по ипотеке от <data value="192167"> 192 167 </data> &#x20bd; в месяц</a>
             </section>
             <section class="card__author seller">
               <h3 class="visually-hidden">Владелец объявления:</h3>
@@ -2044,7 +2278,7 @@
         <div class="media-list__wrapper">
           <article class="art-preview">
             <h3><a href="#" aria-label="Перейти к статье"></a>Перепланировка квартиры: что можно узаконить, что запрещено, с какими перепланировками можно взять квартиру в ипотеку</h3>
-            <img src="img/articles__pictires/article1.webp" alt="">
+            <img src="img/articles__pictires/article1.webp" alt="" />
           </article>
         </div>
       </section>
