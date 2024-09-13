@@ -1,13 +1,12 @@
 .offer-address {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3px;
   font-size: 16px;
   line-height: 18px;
 
-  & address span {
-    color: #737a8e;
-    color: #666666;
+  & address {
+    margin-bottom: 5px;
+    & span {
+      color: #666666;
+    }
 
     & a {
       color: inherit;
@@ -19,11 +18,17 @@
     padding: 2px 0;
     color: var(--basic-green);
   }
+}
 
-  @media (min-width: @desktop-width) {
-    flex-direction: row;
+@media (min-width: @desktop-width) {
+  .offer-address {
+    display: flex;
     align-items: center;
     column-gap: 10px;
     font-size: 15px;
+
+    & address {
+      margin-bottom: 0;
+    }
   }
 }

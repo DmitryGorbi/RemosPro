@@ -64,27 +64,42 @@
   }
 }
 
-.button-main {
+.button-main,
+.button-cancel {
   padding: 14px;
   width: 100%;
   color: var(--white);
   border-radius: 5px;
   text-align: center;
   text-wrap: nowrap;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 14px;
+    width: max-content;
+  }
+}
+
+.button-main {
   background-color: var(--basic-green);
 
   &:hover {
-    // background-color: #0046a6;
     background-color: var(--green);
   }
 
   &:active {
     background-color: var(--dark-green);
   }
+}
 
-  @media (min-width: @tablet-width) {
-    padding: 10px 14px;
-    width: max-content;
+.button-cancel {
+  background-color: var(--light-red);
+
+  &:hover {
+    background-color: var(--red);
+  }
+
+  &:active {
+    background-color: var(--red-burgundy);
   }
 }
 

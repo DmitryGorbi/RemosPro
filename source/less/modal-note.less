@@ -15,30 +15,20 @@
   & .textarea {
     margin-bottom: 20px;
   }
+}
 
-  & .modal-note__buttons {
-    display: flex;
-    gap: 0 5px;
+& .modal-note__buttons {
+  display: flex;
+  gap: 0 5px;
 
-    & .button-main {
-      width: calc(50% - 5px);
-    }
-
-    & .button-main:last-child {
-      background-color: var(--light-red);
-
-      &:hover {
-        background-color: var(--red);
-      }
-
-      &:active {
-        background-color: var(--red-burgundy);
-      }
-    }
+  & .button {
+    width: calc(50% - 5px);
   }
+}
 
-  @media (min-width: @desktop-width) {
-    & .button-main {
+@media (min-width: @desktop-width) {
+  .modal-note__buttons {
+    & .button {
       width: 100%;
     }
   }
