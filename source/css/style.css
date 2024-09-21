@@ -1431,14 +1431,15 @@ textarea {
   width: 100%;
   font-size: 14px;
 }
-.expert-card h4,
+.expert-card h3,
 .expert-card p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.expert-card h4 {
+.expert-card h3 {
   margin-top: 3px;
+  font-size: 14px;
 }
 .expert-card img {
   grid-column: 1/2;
@@ -1917,6 +1918,7 @@ textarea {
   display: block;
 }
 .offer-preview__image img {
+  width: 100%;
   border-radius: 5px;
 }
 .offer-preview__data {
@@ -1936,9 +1938,6 @@ textarea {
   font-size: 16px;
   font-weight: 700;
 }
-.offer-preview__price span {
-  font-weight: 500;
-}
 .offer-preview__properties {
   padding: 3px 5px;
   border: 1px solid var(--gray);
@@ -1946,18 +1945,8 @@ textarea {
 }
 @media (min-width: 768px) {
   .offer-preview {
-    position: relative;
     row-gap: 10px;
     box-shadow: 0 0 10px var(--light-gray);
-  }
-  .offer-preview::after {
-    position: absolute;
-    content: 'new';
-    bottom: 10px;
-    right: 15px;
-    padding: 0 5px;
-    border: 2px solid var(--basic-green);
-    border-radius: 5px;
   }
   .offer-preview:hover {
     transform: scale(1.01);
@@ -1969,9 +1958,24 @@ textarea {
   .offer-preview:hover .offer-preview__properties a {
     color: var(--basic-green);
   }
+  .offer-preview--new {
+    position: relative;
+  }
+  .offer-preview--new::after {
+    position: absolute;
+    content: 'new';
+    bottom: 10px;
+    right: 15px;
+    padding: 0 5px;
+    border: 2px solid var(--basic-green);
+    border-radius: 5px;
+  }
+  .offer-preview--new .offer-preview__data {
+    padding-bottom: 37px;
+  }
   .offer-preview__data {
     row-gap: 7px;
-    padding: 10px 15px 37px 15px;
+    padding: 10px 15px;
   }
   .offer-preview__properties a {
     display: block;
@@ -2820,7 +2824,7 @@ textarea {
 }
 .modal-note__header p:first-child {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .modal-note__form .textarea {
   margin-bottom: 20px;
@@ -3637,7 +3641,7 @@ textarea {
   display: block;
   margin-bottom: 2px;
   font-size: 23px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .offer-price__value data:last-child {
   font-size: 15px;
@@ -3684,10 +3688,18 @@ textarea {
   .offer-price__history {
     margin-left: auto;
   }
-  .offer-price__history .offer-price__control {
+  .offer-price__control {
     position: relative;
     width: 35px;
     height: 35px;
+  }
+  .offer-price__chart {
+    position: absolute;
+    top: 40px;
+    bottom: auto;
+    right: -20px;
+    left: auto;
+    width: 400px;
   }
   .offer-price__follow {
     margin-right: auto;
@@ -3698,6 +3710,7 @@ textarea {
   border-top: 2px solid var(--basic-green);
   background-color: var(--white);
   box-shadow: 0 0 100vmax 100vmax rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 .price-chart .button-close {
   position: absolute;
@@ -3727,16 +3740,8 @@ textarea {
   font-size: 13px;
   color: #888888;
 }
-.price-chart ul li span:nth-child(2) {
-  grid-row: 2/3;
-  grid-column: 1/2;
-  font-size: 14px;
-}
 .price-chart ul li span:nth-child(3) {
-  grid-row: 2/3;
-  grid-column: 2/3;
   margin-left: auto;
-  font-size: 14px;
 }
 .price-chart ul li .price-chart__down {
   color: var(--basic-green);
@@ -3907,7 +3912,7 @@ textarea {
     row-gap: 20px;
   }
   .seller__name {
-    font-weight: 500;
+    font-weight: 700;
   }
   .seller__avatar img {
     width: 60px;
@@ -5075,7 +5080,6 @@ textarea {
   display: block;
   margin-bottom: 5px;
   font-size: 13px;
-  font-weight: 300;
 }
 .developer--about img {
   width: 60px;
@@ -6247,11 +6251,6 @@ textarea {
     font-size: inherit;
   }
 }
-.gk-mortgage__item-percent,
-.gk-mortgage__item-amount,
-.gk-mortgage__item-time {
-  font-weight: 300;
-}
 .gk-mortgage__result {
   padding: 15px;
   box-shadow: 0 0 10px var(--light-gray);
@@ -6434,7 +6433,7 @@ textarea {
   display: inline-block;
   padding: 3px 10px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -7680,7 +7679,7 @@ textarea {
 .section-title {
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .section-title {
@@ -7845,9 +7844,6 @@ textarea {
 .card-properties li span:first-child {
   color: #737a8e;
 }
-.card-properties li span:nth-child(3) {
-  font-weight: 500;
-}
 .card-properties li::before {
   position: absolute;
   content: '';
@@ -7977,6 +7973,7 @@ textarea {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjUuOTM4MSAxOC4zNDQ4QzI1LjkzODEgMTguMDMyNyAyNS42OTEgMTYuNzIzNiAyNC45NzcgMTUuMjk0OUMyNS4xNjY4IDEyLjg1MzUgMjUuNDExOSA2Ljg2NjkxIDIzLjY0MzEgNS4xODEwOEMyMy40ODE3IDUuMDI3MTUgMjMuMjUzMSA0Ljk2NTk5IDIzLjAzNjQgNS4wMTg0MUMyMC42NjM4IDUuNTkzMDQgMTguNzE1NCA3LjI3NDExIDE3Ljc5NjUgOS41NDI2MUMxNi4yNDY3IDkuMTc3NzMgMTQuNzQwNCA5LjE3MDMxIDEzLjIyMjUgOS41Mzc5N0MxMy4xOTgyIDkuNTQzODQgMTIuMDM5NiA2LjAwMDc4IDcuOTgzNzcgNS4wMTg0MUM3Ljc2NyA0Ljk2NTk5IDcuNTM4NTEgNS4wMjcyMyA3LjM3NzA0IDUuMTgxMDhDNS4yNzEzNSA3LjE4ODE4IDYuMDUyMTUgMTUuMjM5NiA2LjAzNjQxIDE1LjI2ODZDNi4wMzY0MSAxNS4zMjM0IDUuMjg3MjIgMTYuNTI1NCA1LjA1OTc5IDE4LjM2MzVDNC44MzE5MSAyMC4wMzA2IDUuMzI4ODcgMjEuMjAwNiA1LjMyODg3IDIxLjI0MjJDNi42OTI1NCAyNS4wNDA5IDExLjQ1NDkgMjYgMTUuNSAyNkMxOS41NDI2IDI2IDI0LjMxNDEgMjUuMDM5NCAyNS42NzEyIDIxLjI0MjJDMjUuNjcxMiAyMS4yMzgxIDI2LjE3MTIgMTkuOTQ2NCAyNS45MzgxIDE4LjM0NDhaTTIyLjk0OTEgNi40MDM4NEMyNC4wMjM0IDguMTY3NDMgMjMuNzY3OCAxMy40MzIgMjMuNzY0MiAxMy40Mjc5QzIyLjQ1NzYgMTEuNzkyMiAyMC43ODggMTAuNjA4MSAxOS4wNTI3IDkuOTM3NTFDMTkuNzkyNCA4LjE5NjIyIDIxLjI0MjcgNi45Mzc5OSAyMi45NDkxIDYuNDAzODRaTTguMDcwODggNi40MDM4QzkuNzc5MDIgNi45MzgzMSAxMS4yMjY1IDguMTk3NzQgMTEuOTY0OSA5LjkzMDk4QzEwLjIxOTggMTAuNjAwMiA4LjU1MTEyIDExLjc4ODYgNy4yNTA3IDEzLjQwOTRDNy4xOTI1MyAxMS42ODAxIDcuMTczMDYgNy44NzUzMiA4LjA3MDg4IDYuNDAzOFpNMjIuMTQwNSAyMy4zNTM3QzE4Ljg5MDggMjUuMTQyMSAxMi4xMTE3IDI1LjE0MzUgOC44NTk1OSAyMy4zNTM3QzguMDYxNDYgMjIuOTE0NCA3LjQ0OTQzIDIyLjM3MyA3LjAyNTk3IDIxLjczNDRIOC45NDExNkM5LjMwMzM4IDIxLjczNDQgOS41OTcwNSAyMS40NDA2IDkuNTk3MDUgMjEuMDc4MkM5LjU5NzA1IDIwLjcxNTcgOS4zMDMzOCAyMC40MjE5IDguOTQxMTYgMjAuNDIxOUg2LjQ1NDEyQzYuMzQ5NDcgMTkuOTk2IDYuMzA3MzcgMTkuNTQxMyA2LjMxOTI2IDE5LjEwOTRIOC45NDExNkM5LjMwMzM4IDE5LjEwOTQgOS41OTcwNSAxOC44MTU2IDkuNTk3MDUgMTguNDUzMUM5LjU5NzA1IDE4LjA5MDcgOS4zMDMzOCAxNy43OTY5IDguOTQxMTYgMTcuNzk2OUg2LjQ4ODE1QzcuMTU2MzMgMTQuODg3NyA5LjY5MTUgMTEuOTg5NSAxMy4wMDQ4IDEwLjk1ODhDMTguMzE0NSA5LjMwOTY4IDIzLjQ4NTcgMTMuMzI4NSAyNC41MTIgMTcuNzk2OUgyMi4wNTg5QzIxLjY5NjcgMTcuNzk2OSAyMS40MDMxIDE4LjA5MDcgMjEuNDAzMSAxOC40NTMxQzIxLjQwMzEgMTguODE1NiAyMS42OTY3IDE5LjEwOTQgMjIuMDU4OSAxOS4xMDk0SDI0LjY4MDhDMjQuNjkyNyAxOS41NDA5IDI0LjY1MDcgMTkuOTk1NiAyNC41NDYgMjAuNDIxOUgyMi4wNTg5QzIxLjY5NjcgMjAuNDIxOSAyMS40MDMxIDIwLjcxNTcgMjEuNDAzMSAyMS4wNzgyQzIxLjQwMzEgMjEuNDQwNiAyMS42OTY3IDIxLjczNDQgMjIuMDU4OSAyMS43MzQ0SDIzLjk3NDFDMjMuNTUwNiAyMi4zNzMgMjIuOTM4NiAyMi45MTQ0IDIyLjE0MDUgMjMuMzUzN1oiIGZpbGw9IiMyMEEwNTIiLz4KPHBhdGggZD0iTTE5LjEwNzQgMjAuOTE0MUMxOC43NDUyIDIwLjkxNDEgMTguNDUxNSAyMS4yMDc5IDE4LjQ1MTUgMjEuNTcwM0MxOC40NTE1IDIyLjIwMzYgMTcuOTM2NiAyMi43MTg4IDE3LjMwMzcgMjIuNzE4OEMxNi43ODI4IDIyLjcxODggMTYuMzQyMSAyMi4zNjk3IDE2LjIwMjQgMjEuODkzMUMxNy4zMDI0IDIxLjM1MDkgMTcuODg3MyAxOS41OTI1IDE3LjExOTMgMTguODMwMUMxNi42NjUyIDE4LjM3OTMgMTYuMDA4NCAxOC40NTc5IDE1LjMzMTcgMTguNDUyMkMxNC44MDk4IDE4LjQ0ODYgMTQuMjY5OCAxOC40NDQgMTMuODgwOCAxOC44MzAxQzEzLjEwNDIgMTkuNjAxMSAxMy43MDg4IDIxLjM1NjQgMTQuNzk3NyAyMS44OTMxQzE0LjY1NzkgMjIuMzY5NyAxNC4yMTcyIDIyLjcxODggMTMuNjk2MyAyMi43MTg4QzEzLjA2MzUgMjIuNzE4OCAxMi41NDg1IDIyLjIwMzYgMTIuNTQ4NSAyMS41NzAzQzEyLjU0ODUgMjEuMjA3OSAxMi4yNTQ5IDIwLjkxNDEgMTEuODkyNyAyMC45MTQxQzExLjUzMDQgMjAuOTE0MSAxMS4yMzY4IDIxLjIwNzkgMTEuMjM2OCAyMS41NzAzQzExLjIzNjggMjMuODExNiAxMy45ODg4IDI0Ljg3MzEgMTUuNSAyMy4yNDExQzE3LjAxMDUgMjQuODcyMyAxOS43NjMzIDIzLjgxMzMgMTkuNzYzMyAyMS41NzAzQzE5Ljc2MzMgMjEuMjA3OSAxOS40Njk3IDIwLjkxNDEgMTkuMTA3NCAyMC45MTQxWk0xNi4xNTU4IDE5Ljc3NjlDMTYuMTQ5NiAyMC4yMzk4IDE1Ljc2MjggMjAuNzUgMTUuNSAyMC43NUMxNS4yMzcyIDIwLjc1IDE0Ljg1MDQgMjAuMjM5OCAxNC44NDQyIDE5Ljc3NjlDMTQuOTk5MyAxOS43NTgyIDE2LjAxNDcgMTkuNzU5OSAxNi4xNTU4IDE5Ljc3NjlaIiBmaWxsPSIjMjBBMDUyIi8+CjxwYXRoIGQ9Ik0xMi4zODQ2IDE3LjE0MDZDMTMuMDE3NSAxNy4xNDA2IDEzLjUzMjQgMTYuNjI1NSAxMy41MzI0IDE1Ljk5MjJDMTMuNTMyNCAxNS4zNTg5IDEzLjAxNzUgMTQuODQzOCAxMi4zODQ2IDE0Ljg0MzhDMTEuNzUxNiAxNC44NDM4IDExLjIzNjggMTUuMzU4OSAxMS4yMzY4IDE1Ljk5MjJDMTEuMjM2OCAxNi42MjU1IDExLjc1MTYgMTcuMTQwNiAxMi4zODQ2IDE3LjE0MDZaIiBmaWxsPSIjMjBBMDUyIi8+CjxwYXRoIGQ9Ik0xOC42MTU1IDE0Ljg0MzhDMTcuOTgyNiAxNC44NDM4IDE3LjQ2NzcgMTUuMzU4OSAxNy40Njc3IDE1Ljk5MjJDMTcuNDY3NyAxNi42MjU1IDE3Ljk4MjYgMTcuMTQwNiAxOC42MTU1IDE3LjE0MDZDMTkuMjQ4NCAxNy4xNDA2IDE5Ljc2MzMgMTYuNjI1NSAxOS43NjMzIDE1Ljk5MjJDMTkuNzYzMyAxNS4zNTg5IDE5LjI0ODQgMTQuODQzOCAxOC42MTU1IDE0Ljg0MzhaIiBmaWxsPSIjMjBBMDUyIi8+Cjwvc3ZnPgo=);
 }
 .deal-terms {
+  white-space: nowrap;
   border-radius: 10px;
 }
 .deal-terms .section-title {
@@ -8003,25 +8000,28 @@ textarea {
 }
 .deal-terms a {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 5px;
-  margin: 0 auto;
+  padding: 2px 0;
   font-size: 14px;
   border: 1px solid var(--gray);
   border-radius: 4px;
 }
-.deal-terms a span {
-  margin-right: 6px;
+.deal-terms a div {
+  padding-left: 30px;
+  line-height: 29px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNTkzMjIgMTguODQzMVYzOUM5LjU5MzIyIDQwLjEwNDYgMTAuNDg4NyA0MSAxMS41OTMyIDQxSDM2LjQwNjhDMzcuNTExMyA0MSAzOC40MDY4IDQwLjEwNDYgMzguNDA2OCAzOVYyNi41NTU1TTcgMjEuMTE4NkwyMi4wODU0IDcuNzI4MDVDMjIuNTk0NCA3LjI3NTE3IDIzLjI2NTEgNyAyNCA3QzI0LjczNDkgNyAyNS40MDU2IDcuMjc1MTcgMjUuOTE0NiA3LjcyODA1TDQxIDIxLjExODYiIHN0cm9rZT0iIzIwYTA1MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjkuMzMzMyAyMkwxOC42NjY3IDM1TTIxLjMzMzMgMjQuNkMyMS4zMzMzIDI2LjAzNTkgMjAuMTM5NCAyNy4yIDE4LjY2NjcgMjcuMkMxNy4xOTM5IDI3LjIgMTYgMjYuMDM1OSAxNiAyNC42QzE2IDIzLjE2NDEgMTcuMTkzOSAyMiAxOC42NjY3IDIyQzIwLjEzOTQgMjIgMjEuMzMzMyAyMy4xNjQxIDIxLjMzMzMgMjQuNlpNMzIgMzIuNEMzMiAzMy44MzU5IDMwLjgwNjEgMzUgMjkuMzMzMyAzNUMyNy44NjA2IDM1IDI2LjY2NjcgMzMuODM1OSAyNi42NjY3IDMyLjRDMjYuNjY2NyAzMC45NjQxIDI3Ljg2MDYgMjkuOCAyOS4zMzMzIDI5LjhDMzAuODA2MSAyOS44IDMyIDMwLjk2NDEgMzIgMzIuNFoiIHN0cm9rZT0iIzIwYTA1MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 @media (min-width: 768px) {
   .deal-terms ul {
     flex-direction: row;
+    flex-wrap: wrap;
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
   .deal-terms ul li {
-    width: 50%;
+    width: calc(50% - 20px);
   }
 }
 @media (min-width: 1240px) {
@@ -8104,7 +8104,6 @@ textarea {
 }
 .statistics dl dd {
   font-size: 16px;
-  font-weight: 500;
 }
 .statistics .statistics__table {
   margin-bottom: 20px;
@@ -8127,7 +8126,6 @@ textarea {
 }
 .statistics .statistics__table table th {
   padding: 11px;
-  font-weight: 500;
   text-align: start;
   background-color: #f6f6f6;
   line-height: 24px;
@@ -8231,7 +8229,6 @@ textarea {
   }
   .mortgage-section__request p:last-of-type {
     font-size: 17px;
-    font-weight: 500;
   }
   .mortgage-section__request .button {
     width: 100%;
@@ -8259,7 +8256,7 @@ textarea {
 .mortgage-form__output output {
   padding: 12px 0 13px 15px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 5px;
   background-color: var(--light-green);
   border: 1px solid var(--gray);
@@ -8335,7 +8332,6 @@ textarea {
 .small-card h3 {
   grid-column: 2/-1;
   font-size: 15px;
-  font-weight: 500;
   color: var(--basic-green);
 }
 .small-card img {
@@ -8416,7 +8412,11 @@ textarea {
   order: 1;
 }
 .art-preview img {
+  width: 100%;
   border-radius: 5px;
+}
+.art-preview p {
+  order: 1;
 }
 @media (min-width: 500px) {
   .art-preview h3 {
@@ -8425,6 +8425,19 @@ textarea {
   .art-preview img {
     border-radius: 5px;
   }
+}
+.ads {
+  width: 100%;
+  background-color: pink;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+}
+.ads--left {
+  height: 300px;
+}
+.ads--right {
+  height: 400px;
 }
 .offer-developers h1 {
   margin-bottom: 20px;

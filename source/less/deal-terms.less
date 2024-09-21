@@ -1,6 +1,5 @@
 .deal-terms {
-  // padding: 15px;
-  // background-color: #fff5f6;
+  white-space: nowrap;
   border-radius: 10px;
 
   & .section-title {
@@ -30,26 +29,29 @@
 
   & a {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 5px;
-    margin: 0 auto;
+    padding: 2px 0;
     font-size: 14px;
     border: 1px solid var(--gray);
     border-radius: 4px;
 
-    & span {
-      margin-right: 6px;
+    & div {
+      padding-left: 30px;
+      line-height: 29px;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNTkzMjIgMTguODQzMVYzOUM5LjU5MzIyIDQwLjEwNDYgMTAuNDg4NyA0MSAxMS41OTMyIDQxSDM2LjQwNjhDMzcuNTExMyA0MSAzOC40MDY4IDQwLjEwNDYgMzguNDA2OCAzOVYyNi41NTU1TTcgMjEuMTE4NkwyMi4wODU0IDcuNzI4MDVDMjIuNTk0NCA3LjI3NTE3IDIzLjI2NTEgNyAyNCA3QzI0LjczNDkgNyAyNS40MDU2IDcuMjc1MTcgMjUuOTE0NiA3LjcyODA1TDQxIDIxLjExODYiIHN0cm9rZT0iIzIwYTA1MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjkuMzMzMyAyMkwxOC42NjY3IDM1TTIxLjMzMzMgMjQuNkMyMS4zMzMzIDI2LjAzNTkgMjAuMTM5NCAyNy4yIDE4LjY2NjcgMjcuMkMxNy4xOTM5IDI3LjIgMTYgMjYuMDM1OSAxNiAyNC42QzE2IDIzLjE2NDEgMTcuMTkzOSAyMiAxOC42NjY3IDIyQzIwLjEzOTQgMjIgMjEuMzMzMyAyMy4xNjQxIDIxLjMzMzMgMjQuNlpNMzIgMzIuNEMzMiAzMy44MzU5IDMwLjgwNjEgMzUgMjkuMzMzMyAzNUMyNy44NjA2IDM1IDI2LjY2NjcgMzMuODM1OSAyNi42NjY3IDMyLjRDMjYuNjY2NyAzMC45NjQxIDI3Ljg2MDYgMjkuOCAyOS4zMzMzIDI5LjhDMzAuODA2MSAyOS44IDMyIDMwLjk2NDEgMzIgMzIuNFoiIHN0cm9rZT0iIzIwYTA1MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);
+      background-repeat: no-repeat;
+      background-position: left top;
     }
   }
 
   @media (min-width: @tablet-width) {
     & ul {
       flex-direction: row;
+      flex-wrap: wrap;
       column-gap: 20px;
 
       & li {
-        width: 50%;
+        width: calc(50% - 20px);
       }
     }
   }
