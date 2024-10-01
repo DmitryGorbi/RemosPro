@@ -11,7 +11,7 @@
 }
 
 .card__gk {
-  margin-bottom: 10px;
+  margin-top: 10px;
   font-size: 16px;
 }
 
@@ -27,7 +27,11 @@
 }
 
 .card__price {
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.card__address {
+  margin-top: 15px;
 }
 
 .card__wrapper {
@@ -38,10 +42,6 @@
 & .card__img {
   order: -1;
   margin: 0 -15px 20px -15px;
-}
-
-.card__title {
-  margin-bottom: 15px;
 }
 
 .card__data {
@@ -59,9 +59,9 @@
   .card {
     margin-top: 0;
   }
-
-  .card__title {
-    margin-bottom: 25px;
+  .card__gk {
+    margin-top: 3px;
+    font-size: 1.6rem;
   }
 
   .card__actions {
@@ -72,6 +72,10 @@
     margin-bottom: 30px;
     border-radius: 5px;
   }
+
+  .card__price {
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -79,47 +83,48 @@
     display: grid;
     grid-template-columns: 775px 400px;
     column-gap: 25px;
-
-    & h1 {
-      margin-bottom: 10px;
-    }
   }
 
   .card__content {
     grid-column: 1/-1;
     flex-direction: row;
     column-gap: 25px;
+  }
 
-    & .card__wrapper {
-      width: 775px;
-    }
+  .card__wrapper {
+    width: 775px;
+  }
 
-    & .card__gk {
-      margin-bottom: 8px;
-    }
+  .card__address span {
+    font-size: 14px;
+  }
 
-    & .card__aside {
-      width: 400px;
-    }
+  .card__metro {
+    margin-top: 4px;
+    margin-bottom: 5px;
+  }
 
-    & .card__price {
-      display: none;
-    }
+  .card__aside {
+    width: 400px;
+  }
 
-    & .card__actions {
-      position: static;
-      grid-area: controls;
-      margin: 13px 0 15px;
-    }
+  .card__price {
+    display: none;
+  }
 
-    & .offer-price {
-      margin-bottom: 0;
-    }
+  .card__actions {
+    position: static;
+    grid-area: controls;
+    margin: 20px 0 15px;
+  }
 
-    & .card__img {
-      order: 0;
-      margin: 0;
-    }
+  .offer-price {
+    margin-bottom: 0;
+  }
+
+  .card__img {
+    order: 0;
+    margin: 0;
   }
 
   .card__documents {
