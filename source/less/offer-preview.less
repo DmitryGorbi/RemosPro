@@ -1,32 +1,18 @@
-.offer-preview {
+.offer-preview__wrapper {
   display: grid;
   grid-template-areas:
     'photo'
     'data';
   row-gap: 10px;
   grid-template-rows: min-content;
-  border-radius: 5px;
   font-size: 14px;
-}
-
-.offer-preview__image {
-  grid-area: photo;
-
-  & a {
-    display: block;
-  }
-
-  & img {
-    width: 100%;
-    border-radius: 5px;
-  }
 }
 
 .offer-preview__data {
   grid-area: data;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 7px;
   white-space: nowrap;
   overflow: hidden;
 
@@ -37,34 +23,23 @@
   }
 }
 
+.offer-preview__image {
+  grid-area: photo;
+
+  & img {
+    width: 100%;
+  }
+}
+
 .offer-preview__price {
   font-size: 16px;
   font-weight: 500;
-}
-
-.offer-preview__properties {
-  padding: 3px 5px;
-  border: 1px solid var(--gray);
-  border-radius: 5px;
 }
 
 @media (min-width: @tablet-width) {
   .offer-preview {
     row-gap: 10px;
     box-shadow: 0 0 10px var(--light-gray);
-
-    &:hover {
-      transform: scale(1.01);
-      transition: transform 0.3s;
-    }
-
-    &:hover .offer-preview__properties {
-      border-color: var(--basic-green);
-    }
-
-    &:hover .offer-preview__properties a {
-      color: var(--basic-green);
-    }
   }
 
   .offer-preview--new {
@@ -86,19 +61,11 @@
   }
 
   .offer-preview__data {
-    row-gap: 7px;
-    padding: 10px 15px;
-  }
-
-  .offer-preview__properties a {
-    display: block;
-
-    &:hover {
-      color: var(--green) !important;
-    }
+    row-gap: 8px;
+    padding: 10px 15px 15px;
   }
 
   .offer-preview__price {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
