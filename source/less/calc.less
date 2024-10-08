@@ -1,0 +1,23 @@
+.calc-simple {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 100px;
+  row-gap: 30px;
+
+  .input-range:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.calc__wrapper {
+  background-color: lightgray;
+}
+
+.output__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 10px 50px;
+  background-color: tomato;
+  color: var(--white);
+}

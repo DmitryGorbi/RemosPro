@@ -28,22 +28,23 @@
   border: 1px solid var(--gray);
   border-radius: 5px 5px 5px 4px;
 
-  & input {
+  & .input {
     flex-grow: 1;
     border: none;
     box-shadow: none;
   }
 
-  & div {
-    padding: 0 10px;
+  & .input-range__rub {
+    // padding: 0 10px;
+    text-align: center;
+    width: 30px;
   }
 }
 
 .input-range__control {
   position: absolute;
   bottom: 1px;
-  transform: translateY(50%);
-  left: 80%;
+  transform: translate(80%, 50%);
   width: 28px;
   height: 28px;
   box-shadow: 0 0 10px var(--light-gray);
@@ -56,7 +57,7 @@
   position: absolute;
   bottom: -1px;
   left: 0;
-  width: calc(80% + 14px);
+  width: 80%;
   height: 4px;
   background-color: var(--basic-green);
 }
