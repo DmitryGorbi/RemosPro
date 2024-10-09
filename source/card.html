@@ -721,11 +721,11 @@
               </button>
             </li>
           </ul>
-          <section class="card__img card-image">
+          <section class="card__img card-image no-image">
             <h2 class="visually-hidden">Фотографии объявления</h2>
             <div class="card-image__wrapper slider">
               <button class="button card-image__button" type="button" title="Увеличить фото объявления">
-                <img src="img/card/b6eab983e2d7f6b1c1401043bd578cf7.jpg" width="360" height="320" alt="3-комн квартира, 74 м², 6/17 этаж" />
+                <!-- <img src="img/card/b6eab983e2d7f6b1c1401043bd578cf7.jpg" width="360" height="320" alt="3-комн квартира, 74 м², 6/17 этаж" /> -->
               </button>
               <button class="button slider__control slider__control--left" type="button">
                 <span class="visually-hidden">Предыдущее изображение</span>
@@ -1997,7 +1997,7 @@
             <label for="property__price">Цена недвижимости</label>
             <div class="input-range__wrapper">
               <input id="property__price" class="input input--field" type="number" inputmode="numeric" />
-              <div>&#x20bd;</div>
+              <div class="input-range__rub">&#x20bd;</div>
               <div class="input-range__scale"></div>
               <div class="input-range__control"></div>
             </div>
@@ -2005,8 +2005,8 @@
           <div class="input-range">
             <label for="credit__value">Сумма кредита</label>
             <div class="input-range__wrapper">
-              <input id="credit__value" class="input input--field" type="number" inputmode="numeric" />
-              <div>&#x20bd;</div>
+              <input id="credit__value" class="input input--field" type="number" value="1500000" inputmode="numeric" />
+              <div class="input-range__rub">&#x20bd;</div>
               <div class="input-range__scale"></div>
               <div class="input-range__control"></div>
             </div>
@@ -2016,7 +2016,7 @@
             <output for="property__price credit__value">30%</output>
             <div class="input-range__wrapper">
               <input id="contribution" class="input input--field" type="number" inputmode="numeric" />
-              <div>&#x20bd;</div>
+              <div class="input-range__rub">&#x20bd;</div>
               <div class="input-range__scale"></div>
               <div class="input-range__control"></div>
             </div>

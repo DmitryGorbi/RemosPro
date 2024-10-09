@@ -35,31 +35,32 @@
   }
 
   & .input-range__rub {
-    // padding: 0 10px;
     text-align: center;
     width: 30px;
   }
 }
 
+.input-range__scale {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 80%;
+  height: 4px;
+  background-color: var(--basic-green);
+}
+
 .input-range__control {
   position: absolute;
   bottom: 1px;
-  transform: translate(80%, 50%);
+  left: 80%;
+  transform: translate(-50%, 50%);
   width: 28px;
   height: 28px;
+  cursor: pointer;
   box-shadow: 0 0 10px var(--light-gray);
   border: 1px solid var(--light-gray);
   background-color: var(--white);
   border-radius: 50%;
-}
-
-.input-range__scale {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 80%;
-  height: 4px;
-  background-color: var(--basic-green);
 }
 
 @media (min-width: @tablet-width) {

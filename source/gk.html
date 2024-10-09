@@ -1566,44 +1566,44 @@
         </section>
         <section id="mortgage" class="gk-mortgage wrapper-gk">
           <h2 class="caption-index caption-index--gk">Ипотечные предложения и аккредитованные банки</h2>
-          <form class="mortgage-filter" action="">
+          <div class="mortgage-filter">
             <div class="input-range">
-              <label for="property__price">Стоимость недвижимости</label>
+              <label for="property__price">Цена недвижимости</label>
               <div class="input-range__wrapper">
-                <input id="property__price" class="input input--field" type="number" value="10000000" inputmode="numeric" />
-                <div>&#x20bd;</div>
+                <input id="property__price" class="input input--field" type="number" inputmode="numeric" />
+                <div class="input-range__rub">&#x20bd;</div>
+                <div class="input-range__scale"></div>
+                <div class="input-range__control"></div>
               </div>
-              <div class="input-range__scale"></div>
-              <div class="input-range__control"></div>
             </div>
             <div class="input-range">
               <label for="credit__value">Сумма кредита</label>
               <div class="input-range__wrapper">
-                <input id="credit__value" class="input input--field" type="number" inputmode="numeric" />
-                <div>&#x20bd;</div>
+                <input id="credit__value" class="input input--field" type="number" value="1500000" inputmode="numeric" />
+                <div class="input-range__rub">&#x20bd;</div>
+                <div class="input-range__scale"></div>
+                <div class="input-range__control"></div>
               </div>
-              <div class="input-range__scale"></div>
-              <div class="input-range__control"></div>
             </div>
             <div class="input-range">
-              <label for="contribution">Первоначальный взнос, <output for="credit__value property__price">20%</output></label>
+              <label for="contribution">Перврначальный взнос,</label>
+              <output for="property__price credit__value">30%</output>
               <div class="input-range__wrapper">
-                <input id="contribution" class="input input--field" type="number" value="2000000" inputmode="numeric" />
-                <div>&#x20bd;</div>
+                <input id="contribution" class="input input--field" type="number" inputmode="numeric" />
+                <div class="input-range__rub">&#x20bd;</div>
+                <div class="input-range__scale"></div>
+                <div class="input-range__control"></div>
               </div>
-              <div class="input-range__scale"></div>
-              <div class="input-range__control"></div>
             </div>
             <div class="input-range">
-              <label for="mortgage__years">Срок</label>
+              <label for="mortgage__years">Срок кредита, лет</label>
               <div class="input-range__wrapper">
-                <input id="mortgage__years" class="input input--field" type="number" value="15" inputmode="numeric" />
-                <!-- <span>лет</span> -->
+                <input id="mortgage__years" class="input input--field" type="number" inputmode="numeric" />
+                <div class="input-range__scale"></div>
+                <div class="input-range__control"></div>
               </div>
-              <div class="input-range__scale"></div>
-              <div class="input-range__control"></div>
             </div>
-          </form>
+          </div>
           <div class="gk-mortgage__wrapper">
             <section class="gk-mortgage__item">
               <h3>Семейная ипотека</h3>
