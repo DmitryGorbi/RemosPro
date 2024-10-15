@@ -49,8 +49,3 @@ form.addEventListener('input', () => {
 //   const transform = new DOMMatrixReadOnly(style.transform);
 //   console.log(transform);
 // });
-
-let x = 3;
-let b = NaN;
-
-alert(x != b);

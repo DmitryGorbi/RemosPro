@@ -10,7 +10,31 @@
 
   <body class="page__body">
     <header></header>
-    <div class="main-search">
+    <div class="wrapper-content">
+      <section class="catalog-menu">
+        <h2 class="visually-hidden">Меню каталога: фильтр, объявления на карте, подписка на новые объявления</h2>
+        <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="catalog__filter">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
+          </svg>
+          <span>Фильтры</span>
+        </button>
+        <a href="#">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#on__map"></use>
+          </svg>
+          <span>Карта</span>
+        </a>
+        <button class="button" type="button">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#mail__icon"></use>
+          </svg>
+          <span>Подписка</span>
+        </button>
+      </section>
+    </div>
+
+    <div class="main-search main-search--adaprive">
       <form class="filter" action="https://echo.htmlacademy.ru/courses">
         <div class="filter__header">
           <h2>Фильтр поиска</h2>

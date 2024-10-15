@@ -20,7 +20,6 @@ const visibilityButtons = () => {
 };
 
 document.addEventListener('DOMContentLoaded', visibilityButtons);
-
 window.addEventListener('resize', visibilityButtons);
 
 const addClass = (el, selector) => {
@@ -78,16 +77,16 @@ const closeSelect = (item, icon) => {
 
 // Change text in a button
 
-const changeButtonsTitle = (fieldset, title) => {
-  fieldset.addEventListener('click', (evt) => {
-    if (evt.target.matches('input[type="radio"]')) {
-      title.textContent = evt.target.value;
-    }
-  });
-};
+// const changeButtonsTitle = (fieldset, title) => {
+//   fieldset.addEventListener('click', (evt) => {
+//     if (evt.target.matches('input[type="radio"]')) {
+//       title.textContent = evt.target.value;
+//     }
+//   });
+// };
 
-for (let i = 0; i < buttonsTitle.length; i++) {
-  changeButtonsTitle(filterFieldset[i], buttonsTitle[i]);
-}
+// for (let i = 0; i < buttonsTitle.length; i++) {
+//   changeButtonsTitle(filterFieldset[i], buttonsTitle[i]);
+// }
 
 // Close select on click outside

@@ -1,6 +1,11 @@
-.caption {
-  font-weight: 400;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
 
+.caption {
   &--h1 {
     font-size: 1.37rem;
     line-height: 1.18em;
@@ -14,14 +19,11 @@
 
 .caption-index {
   margin: 0 0 25px 0;
-  font-weight: 500;
   font-size: 1.35rem;
   line-height: 1.3em;
 
   @media (min-width: @tablet-width) {
     font-size: 1.5rem;
-    line-height: 1em;
-    font-weight: 400;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,17 +36,84 @@
 }
 
 .caption-catalog {
-  font-weight: 500;
   font-size: 1.1em;
   line-height: 1.3em;
 
   @media (min-width: @tablet-width) {
     font-size: 1.3rem;
     line-height: 1em;
-    font-weight: 500;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 1.6rem;
   }
+}
+
+.card-caption {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  font-size: 15px;
+  font-weight: 500;
+
+  & span:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    padding: 2px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 4px;
+    background-color: rgb(241, 241, 244);
+
+    &::before {
+      content: '';
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: rgb(255, 90, 80);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .card-caption {
+    column-gap: 7px;
+    font-size: 26px;
+
+    & span:first-child {
+      position: static;
+      padding: 0;
+      font-size: inherit;
+      border-radius: 0;
+      background-color: transparent;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-caption {
+    font-size: 29px;
+  }
+}
+
+.section-title {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+.caption-article {
+  font-size: 36px;
+  line-height: 105%;
 }
