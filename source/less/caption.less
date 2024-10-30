@@ -55,6 +55,7 @@ h4 {
   column-gap: 7px;
   font-size: 15px;
   font-weight: 500;
+  line-height: 16px;
 
   & span:first-child {
     position: relative;
@@ -63,7 +64,7 @@ h4 {
     column-gap: 7px;
     padding: 2px 12px;
     font-size: 12px;
-    line-height: 16px;
+
     border-radius: 4px;
     background-color: rgb(241, 241, 244);
 
@@ -79,11 +80,13 @@ h4 {
 
 @media (min-width: @tablet-width) {
   .card-caption {
-    column-gap: 7px;
+    display: block;
     font-size: 26px;
+    line-height: 110%;
 
     & span:first-child {
       position: static;
+      display: inline-block;
       padding: 0;
       font-size: inherit;
       border-radius: 0;
