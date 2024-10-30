@@ -1,61 +1,35 @@
-.button-filter {
-  position: relative;
-  padding: 13px 10px;
-  border: 1px solid var(--gray);
-  border-radius: 5px;
-  background-color: var(--white);
+@media (min-width: @desktop-width) {
+  .button-filter {
+    // position: relative;
+    padding: 6px 6px 6px 10px;
+    border: 1px solid var(--gray);
+    // border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
 
-  & span,
-  svg {
-    pointer-events: none;
-  }
+    // & span,
+    // svg {
+    //   pointer-events: none;
+    // }
 
-  &:active,
-  &:hover {
-    border-color: var(--basic-green);
-  }
-
-  &--deal,
-  &--price {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: block;
+    &:active,
+    &:hover {
+      border-color: var(--basic-green);
     }
   }
 
-  @media (min-width: @tablet-width) {
-    padding: 7px 25px 7px 10px;
-    border: 1px solid var(--gray);
+  .button-filter__icon {
+    // position: absolute;
+    // top: 50%;
+    // right: 5px;
+    fill: var(--basic-green);
+    transform: rotate(180deg);
   }
-}
 
-.button-filter[aria-expanded='false'] .button-filter__icon {
-  transform: rotate(0deg) translateY(-50%);
-}
-
-.button-filter__icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  fill: var(--basic-green);
-  transform: rotate(180deg) translateY(50%);
-
-  @media (min-width: @tablet-width) {
-    right: 5px;
-  }
-}
-
-.button-filter--type {
-  display: block;
-  width: 100%;
-  text-align: start;
-  border: 1px solid var(--gray);
-  background-color: var(--white);
-}
-
-.button-filter--add {
-  @media (max-width: @mobile-width-only) {
-    width: 100%;
+  .button-filter[aria-expanded='false'] .button-filter__icon {
+    transform: rotate(0deg);
   }
 }

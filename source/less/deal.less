@@ -1,41 +1,36 @@
 .deal {
   display: flex;
   column-gap: 7px;
+}
 
-  @media (min-width: @tablet-width) {
+.deal__item {
+  width: 50%;
+}
+
+@media (min-width: @desktop-width) {
+  .deal {
     flex-direction: column;
-  }
 
-  @media (min-width: @tablet-width) {
     & > .deal__item > label > span {
       width: 120px;
       height: 40px;
     }
   }
-}
 
-.deal__item {
-  width: 50%;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
+  .deal__item {
     width: auto;
     text-align: start;
     font-weight: 400;
     border: none;
-  }
 
-  & .pseudo-radio {
-    position: relative;
-
-    @media (min-width: @tablet-width) {
+    & .pseudo-radio {
+      position: relative;
+      text-align: start;
       border: none;
     }
   }
-}
 
-.deal__item > input:checked + label > span::after {
-  @media (min-width: @tablet-width) {
+  .deal__item > input:checked + label > span::after {
     position: absolute;
     content: '';
     width: 20px;

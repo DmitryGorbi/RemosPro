@@ -1,20 +1,15 @@
-.filter__header {
+.filter {
+  height: 100vh;
+}
+
+.filter__content {
+  padding: 20px 15px 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-
-  & h2 {
-    line-height: 26px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
+  flex-direction: column;
+  row-gap: 25px;
+  height: calc(100% - 59px - 81px);
+  overflow-y: auto;
+  line-height: 20px;
 }
 
 .filter__fieldset {
@@ -23,67 +18,109 @@
   border: none;
 
   & legend {
-    padding-bottom: 3px;
-  }
-
-  &-add {
-    @media (max-width: @mobile-width-only) {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      order: 1;
-    }
+    padding-bottom: 8px;
+    font-weight: 500;
   }
 }
 
-.filter__select {
-  border-radius: 5px;
-  // display: none;
+.filter__footer {
+  display: grid;
+  // flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 35px;
+  padding: 16px 15px;
+  border-top: 1px solid rgb(209, 209, 213);
 
-  @media (min-width: @tablet-width) {
+  & > .button > span {
+    // text-wrap: nowrap;
+
+    width: max-content;
+    border-bottom: 1px dashed var(--basic-green);
+  }
+
+  & .button {
+    // width: calc(50% - 35px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filter__content {
+    padding: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    display: flex;
+    column-gap: 10px;
+    padding: 0;
+    height: auto;
+    z-index: 10;
+  }
+
+  .filter__content {
+    flex-grow: 1;
+    padding: 0;
+    // margin: 0;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 10px;
+    overflow: visible;
+  }
+
+  .filter__item {
+    position: relative;
+  }
+
+  .filter__item:last-of-type {
+    flex-grow: 1;
+  }
+
+  .button-filter[aria-expanded='false'] + .filter__fieldset {
+    display: none;
+  }
+
+  .filter__fieldset {
+    z-index: 1;
+  }
+
+  .filter__fieldset-deal,
+  .filter__fieldset-type,
+  .filter__fieldset-price,
+  .filter__fieldset-rooms,
+  .filter__fieldset-add {
     position: absolute;
-    margin-top: 7px;
+    top: 40px;
     width: max-content;
     border: 1px solid var(--light-gray);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: var(--white);
+    border-radius: 5px;
+  }
+
+  .filter__fieldset-type,
+  .filter__fieldset-rooms,
+  .filter__fieldset-price {
+    padding: 15px;
+  }
+
+  .filter__fieldset-add {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
     z-index: 1;
+  }
 
-    &-add {
-      margin: 0;
-      top: 58%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
-      z-index: 2;
+  .filter__footer {
+    display: block;
+    padding: 0;
+    border: none;
+
+    & .button-submit {
+      height: 100%;
     }
-  }
-}
-
-.button-filter[aria-expanded='false'] + .filter__select {
-  display: none;
-}
-
-.filter__select-deal {
-  @media (max-width: @mobile-width-only) {
-    display: block;
-  }
-}
-
-.filter__select-price {
-  @media (max-width: @mobile-width-only) {
-    display: block;
-  }
-}
-
-.filter__fieldset-search {
-  position: relative;
-  flex-grow: 1;
-}
-
-@media (max-width: @mobile-width-only) {
-  .filter__select-deal,
-  .filter__select-price {
-    display: block;
   }
 }

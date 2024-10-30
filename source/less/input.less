@@ -15,21 +15,28 @@ input[type='radio'] {
 }
 
 ::placeholder {
-  // color: #8593a5;
   color: #666666;
 }
 
 .input {
-  border: none;
-  // position: relative;
-  -webkit-appearance: none;
+  // border: none;
+  // -webkit-appearance: none;
   outline: none;
-  // appearance: none;
 
   &:checked + label .pseudo-radio,
   &:checked + label .pseudo-checkbox {
     background-color: var(--light-blue);
     border-color: var(--basic-green);
+  }
+
+  &:checked + label .pseudo-radio {
+    padding: 12px 14px;
+    border-width: 2px;
+  }
+
+  &:checked + label .pseudo-checkbox {
+    padding: 12px 19px;
+    border-width: 2px;
   }
 
   &:focus-visible + label .pseudo-radio,
@@ -38,21 +45,12 @@ input[type='radio'] {
   }
 }
 
-:is(.modal-form) input:hover {
-  border: 1px solid var(--basic-green);
-}
-
-:is(.modal-form) input:focus-visible {
-  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
-}
-
 .pseudo-radio,
 .pseudo-checkbox {
   display: block;
   width: 100%;
   line-height: 20px;
-  font-size: inherit;
-  font-family: inherit;
+  text-align: center;
   border: 1px solid var(--gray);
   border-radius: 5px;
   cursor: pointer;
@@ -65,16 +63,32 @@ input[type='radio'] {
 
 .pseudo-radio {
   padding: 13px 15px;
-
-  @media (min-width: @tablet-width) {
-    padding: 9px 16px;
-  }
 }
 
 .pseudo-checkbox {
   padding: 13px 20px;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
+  .pseudo-radio {
+    padding: 9px 15px;
+  }
+
+  .input {
+    &:checked + label .pseudo-radio {
+      padding: 9px 15px;
+      border-width: 1px;
+    }
+  }
+
+  .input {
+    &:checked + label .pseudo-checkbox {
+      padding: 9px 15px;
+      border-width: 1px;
+    }
+  }
+
+  .pseudo-checkbox {
     padding: 9px 16px;
   }
 }
@@ -88,15 +102,22 @@ input[type='radio'] {
   font-family: inherit;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  outline: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     padding: 9px;
+  }
+
+  &:focus-visible {
+    border-color: var(--basic-green);
+  }
+
+  &:hover {
+    border-color: var(--basic-green);
   }
 }
 
 .input-checkbox {
-  border-radius: 5px;
+  border-radius: 20px;
   width: 20px;
   height: 20px;
   accent-color: var(--basic-green);
@@ -104,4 +125,12 @@ input[type='radio'] {
 
 .invalid-field {
   border-color: red;
+}
+
+:is(.modal-form) input:hover {
+  border: 1px solid var(--basic-green);
+}
+
+:is(.modal-form) input:focus-visible {
+  box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }

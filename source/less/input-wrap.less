@@ -1,0 +1,27 @@
+.input-wrap-rub,
+.input-wrap-sot,
+.input-wrap-miter {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 20px;
+    color: var(--gray);
+  }
+}
+
+.input-wrap-rub::after {
+  content: '₽';
+}
+
+.input-wrap-sot {
+  content: 'сот.';
+}
+
+.input-wrap-miter {
+  content: 'м²';
+}

@@ -569,234 +569,6 @@
         <div class="search-section__filter">
           <!-- <h2>Поиск недвижимости в Кабардино-Балкарской Республике</h2> -->
           <h2>Поиск недвижимости в Москве</h2>
-          <form class="filter filter-wrapper" action="https://echo.htmlacademy.ru/courses">
-            <div class="filter__header">
-              <h2>Фильтр поиска</h2>
-              <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
-            </div>
-            <div class="filter-wrapper wrapper-content">
-              <fieldset class="filter__fieldset filter__fieldset-js">
-                <legend class="visually-hidden-desktop">Выберите тип сделки</legend>
-                <button class="button button-filter button-filter--deal" type="button" aria-expanded="false" aria-controls="deal">
-                  <span class="button-filter__title">Купить</span>
-                  <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
-                  </svg>
-                </button>
-                <div id="deal" class="filter__select filter__select-deal filter__select--disabled">
-                  <ul class="deal">
-                    <li class="deal__item">
-                      <input id="deal_type_buy" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Купить" checked />
-                      <label for="deal_type_buy">
-                        <span class="pseudo-radio">Купить</span>
-                      </label>
-                    </li>
-                    <li class="deal__item">
-                      <input id="deal_type_rent" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Снять" />
-                      <label for="deal_type_rent">
-                        <span class="pseudo-radio">Снять</span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-              <fieldset class="filter__fieldset filter__fieldset-js">
-                <legend class="visually-hidden-desktop">Тип недвижимости</legend>
-                <button class="button button-filter button-filter--type" type="button" aria-expanded="false" aria-controls="type">
-                  <span class="button-filter__title">Квартиру</span>
-                  <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
-                  </svg>
-                </button>
-                <div id="type" class="filter__select filter__select-type filter__select--disabled">
-                  <div class="type">
-                    <div>
-                      <p class="type__title">Жилая недвижимость</p>
-                      <ul>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="flat" value="Квартиру" checked />
-                          <label for="flat">
-                            <span class="pseudo-radio">Квартиру</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="new__flat" value="Квартиру в новостройке" />
-                          <label for="new__flat">
-                            <span class="pseudo-radio">Квартиру в новостройке</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="second__hand__flat" value="Квартиру на вторичке" />
-                          <label for="second__hand__flat">
-                            <span class="pseudo-radio">Квартиру на вторичке</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="part__flat" value="Долю в квартире" />
-                          <label for="part__flat">
-                            <span class="pseudo-radio">Долю в квартире</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="room" value="Комнату" />
-                          <label for="room">
-                            <span class="pseudo-radio">Комнату</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="house" value="Дом" />
-                          <label for="house">
-                            <span class="pseudo-radio">Дом</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="townhouse" value="Таунхаус" />
-                          <label for="townhouse">
-                            <span class="pseudo-radio">Таунхаус</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="part__house" value="Долю в доме" />
-                          <label for="part__house">
-                            <span class="pseudo-radio">Долю в доме</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="land" value="Земельный участок" />
-                          <label for="land">
-                            <span class="pseudo-radio">Земельный участок</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p class="type__title">Коммерческая недвижимость</p>
-                      <ul>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="office" value="Офис" />
-                          <label for="office">
-                            <span class="pseudo-radio">Офис</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="psn" value="ПСН" />
-                          <label for="psn">
-                            <span class="pseudo-radio">ПСН</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="building" value="Здание" />
-                          <label for="building">
-                            <span class="pseudo-radio">Здание</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="manufacture" value="Производство" />
-                          <label for="manufacture">
-                            <span class="pseudo-radio">Производство</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="trade__area" value="Торговая площадь" />
-                          <label for="trade__area">
-                            <span class="pseudo-radio">Торговая площадь</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="stock" value="Склад" />
-                          <label for="stock">
-                            <span class="pseudo-radio">Склад</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="ready__business" value="Готовый бизнес" />
-                          <label for="ready__business">
-                            <span class="pseudo-radio">Готовый бизнес</span>
-                          </label>
-                        </li>
-                        <li class="type__item">
-                          <input class="visually-hidden input" type="radio" name="type" id="commercial__land" value="Коммерческая земля" />
-                          <label for="commercial__land">
-                            <span class="pseudo-radio">Коммерческая земля</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filter__fieldset filter__fieldset-price">
-                <legend class="visually-hidden-desktop">Цена</legend>
-                <button class="button button-filter button-filter--price" type="button" aria-expanded="false" aria-controls="price">
-                  <span class="">Цена</span>
-                  <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
-                  </svg>
-                </button>
-                <div id="price" class="filter__select filter__select-price filter__select--disabled">
-                  <div class="price">
-                    <ul class="price__list">
-                      <li class="price__item">
-                        <label for="min__price" class="price__label">
-                          <span class="visually-hidden">Минимальная цена</span>
-                        </label>
-                        <input id="min__price" class="input input--field" type="number" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
-                      </li>
-                      <li class="price__item">
-                        <label for="max__price" class="price__label">
-                          <span class="visually-hidden">Максимальная цена</span>
-                        </label>
-                        <input id="max__price" class="input input--field" type="number" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
-                      </li>
-                    </ul>
-                    <div class="price__switch">
-                      <input id="all__price" class="visually-hidden input" type="radio" name="price__type" value="all__price" checked />
-                      <label for="all__price" class="price__switch-label">
-                        <span class="pseudo-radio">Цена за всё</span>
-                      </label>
-                      <input id="meter__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
-                      <label for="meter__price" class="price__switch-label">
-                        <span class="pseudo-radio">Цена за м²</span>
-                      </label>
-                    </div>
-                    <!-- <p>Найдено: 3 560 000 объявлений</p> -->
-                    <button class="button button-main" type="submit">Применить</button>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="filter__fieldset filter__fieldset-search">
-                <legend class="visually-hidden-desktop">Поиск адреса, района, шоссе и тд</legend>
-                <div class="search search--locate">
-                  <label for="filter-place">
-                    <span class="visually-hidden">Введите название гео-объекта</span>
-                  </label>
-                  <input
-                    id="filter-place"
-                    class="input input--field input--modal"
-                    type="text"
-                    name="filter[place]"
-                    data-deal="100"
-                    data-type="115"
-                    value=""
-                    inputmode="search"
-                    placeholder="Город, метро, район, шоссе, улица или ЖК"
-                    autocomplete="off"
-                  />
-                  <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
-                  <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
-                </div>
-                <ul class="modal-search modal-search--filter">
-                  <li><button class="button" type="button">Алтайсткий край</button></li>
-                  <li><button class="button" type="button">Калининградская область</button></li>
-                  <li><button class="button" type="button">Самарская область</button></li>
-                  <li><button class="button" type="button">Республика Татарстан</button></li>
-                  <li><button class="button" type="button">Ленинградская область</button></li>
-                </ul>
-              </fieldset>
-
-              <button class="button button-submit" type="submit">Искать из 134 000</button>
-            </div>
-          </form>
         </div>
       </section>
       <section class="nav-section section-wrapper">
@@ -1538,7 +1310,7 @@
       </section>
       <span><a href="calc.html">Калькулятор</a></span>
       <span><a href="filter.html">Filter</a></span>
-      <span><a href="filter_adaptive.html">Filter Adaptive</a></span>
+      <span><a href="filter_phone_planshet.html">Фильтр для телефона и планшета</a></span>
       <p><a href="card.html">Карточка</a></p>
       <p><a href="auth.html">Auth</a></p>
       <p><a href="registration.html">Регистрация</a></p>
@@ -1685,16 +1457,25 @@
         </button>
         <div class="modal-location__content">
           <div class="modal-location__form">
-            <div class="modal-location__search">
-              <label class="visually-hidden" for="search-region">Выберите регион или город</label>
-              <input id="search-region" class="modal-location__input input--modal" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
-              <button class="button modal-location__search-button disabled" type="button" aria-label="Закрыть подсказки"></button>
-              <div class="modal-location__search-icon show"></div>
+            <div class="search-field">
+              <label class="visually-hidden" for="search-region">Выберите регион, город, район, учицу или ЖК</label>
+              <input id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
+              <button class="button search-field__button" type="button">
+                <span class="visually-hidden">Очистить поле подсказок</span>
+                <span
+                  ><svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path
+                      stroke="none"
+                      d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
+                    ></path></svg
+                ></span>
+              </button>
+              <div class="search-field__icon"></div>
             </div>
             <div class="modal-location__button">
               <button class="button button-main" type="button">Сохранить</button>
             </div>
-            <ul class="modal-search modal-search--location">
+            <ul class="hints hints--location">
               <li><button class="button" type="button">Алтайсткий край</button></li>
               <li><button class="button" type="button">Калининградская область</button></li>
               <li><button class="button" type="button">Самарская область</button></li>

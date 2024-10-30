@@ -248,24 +248,13 @@
 .filter-add__footer {
   display: flex;
   margin: auto;
-
-  & .button-main {
-    display: none;
-  }
+  align-items: center;
+  column-gap: 35px;
+  min-height: 80px;
+  max-height: 80px;
 
   & > .button > span {
     text-wrap: nowrap;
     border-bottom: 1px dashed var(--basic-green);
-  }
-
-  @media (min-width: @tablet-width) {
-    align-items: center;
-    column-gap: 35px;
-    min-height: 80px;
-    max-height: 80px;
-
-    & .button-main {
-      display: block;
-    }
   }
 }

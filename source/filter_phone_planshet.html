@@ -10,17 +10,38 @@
 
   <body class="page__body">
     <header></header>
-    <div class="main-search">
+    <div class="wrapper-content">
+      <section class="catalog-menu">
+        <h2 class="visually-hidden">Меню каталога: фильтр, объявления на карте, подписка на новые объявления</h2>
+        <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="catalog__filter">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
+          </svg>
+          <span>Фильтры</span>
+        </button>
+        <a href="#">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#on__map"></use>
+          </svg>
+          <span>Карта</span>
+        </a>
+        <button class="button" type="button">
+          <svg width="19" height="19" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#mail__icon"></use>
+          </svg>
+          <span>Подписка</span>
+        </button>
+      </section>
+    </div>
+
+    <div class="main-search main-search--adaptive">
+      <div class="main-search__header">
+        <h3>Найдено 4 596</h3>
+      </div>
       <form class="filter" action="https://echo.htmlacademy.ru/courses">
         <div class="filter__content">
           <div class="filter__item">
-            <button class="button button-filter" type="button" aria-expanded="false" aria-controls="deal">
-              <span class="button-filter__title">Купить</span>
-              <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <fieldset id="deal" class="filter__fieldset filter__fieldset-deal">
+            <fieldset id="deal" class="filter__fieldset">
               <legend class="visually-hidden-desktop">Тип сделки</legend>
               <ul class="deal">
                 <li class="deal__item">
@@ -39,13 +60,7 @@
             </fieldset>
           </div>
           <div class="filter__item">
-            <button class="button button-filter" type="button" aria-expanded="false" aria-controls="type">
-              <span class="button-filter__title">Квартиру</span>
-              <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <fieldset id="type" class="filter__fieldset filter__fieldset-type">
+            <fieldset class="filter__fieldset">
               <legend class="visually-hidden-desktop">Тип недвижимости</legend>
               <ul class="type-estate">
                 <li>
@@ -67,7 +82,7 @@
                   </label>
                 </li>
               </ul>
-              <!-- <fieldset class="filter__fieldset real-estate">
+              <fieldset class="filter__fieldset real-estate">
                 <legend>Жилая недвижимость</legend>
                 <ul class="real-estate__list">
                   <li>
@@ -107,9 +122,8 @@
                     </label>
                   </li>
                 </ul>
-                <button class="button button-main" type="button">Применить</button>
-              </fieldset> -->
-              <fieldset class="filter__fieldset real-estate">
+              </fieldset>
+              <!-- <fieldset class="filter__fieldset real-estate">
                 <legend>Коммерческая недвижимость</legend>
                 <ul class="real-estate__list">
                   <li>
@@ -161,8 +175,7 @@
                     </label>
                   </li>
                 </ul>
-                <button class="button button-main" type="button">Применить</button>
-              </fieldset>
+              </fieldset> -->
               <!-- <fieldset class="filter__fieldset real-estate">
                 <legend>Гаражи</legend>
                 <ul class="real-estate__list">
@@ -185,17 +198,10 @@
                     </label>
                   </li>
                 </ul>
-                <button class="button button-main" type="button">Применить</button>
               </fieldset> -->
             </fieldset>
           </div>
           <div class="filter__item">
-            <button class="button button-filter" type="button" aria-expanded="false" aria-controls="rooms__count">
-              <span class="button-filter__title">Комнатность</span>
-              <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
             <fieldset id="rooms__count" class="filter__fieldset filter__fieldset-rooms filter-rooms">
               <legend class="visually-hidden-desktop">Количество комнат</legend>
               <ul class="filter-rooms__list">
@@ -242,16 +248,9 @@
                   </label>
                 </li>
               </ul>
-              <button class="button button-main" type="button">Применить</button>
             </fieldset>
           </div>
           <div class="filter__item">
-            <button class="button button-filter" type="button" aria-expanded="false" aria-controls="price">
-              <span class="">Цена</span>
-              <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
             <fieldset id="price" class="filter__fieldset filter__fieldset-price filter-price">
               <legend class="visually-hidden-desktop">Цена</legend>
               <ul class="filter-price__list">
@@ -282,16 +281,181 @@
                   </label>
                 </li>
               </ul>
-              <button class="button button-main" type="submit">Применить</button>
             </fieldset>
           </div>
           <div class="filter__item">
-            <button class="button button-filter" type="button" aria-expanded="false" aria-controls="filter__addition">
-              <span class="">Фильтры</span>
-              <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
+            <fieldset class="filter__fieldset filter__fieldset-search">
+              <legend class="visually-hidden-desktop">Поиск адреса, района, ЖК, метро и тд</legend>
+              <div class="search search--locate">
+                <label for="filter-place">
+                  <span class="visually-hidden">Введите название гео-объекта</span>
+                </label>
+                <input id="filter-place" class="input input--field" type="text" inputmode="search" placeholder="Город, метро, район, шоссе, улица или ЖК" autocomplete="off" />
+                <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
+                <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
+              </div>
+              <div class="selected-properties">
+                <ul>
+                  <li>
+                    <span>м. Войковская</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Закрыть фильтр</span>
+                    </button>
+                  </li>
+                  <li>
+                    <span>м. Водный стадион</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Закрыть фильтр</span>
+                    </button>
+                  </li>
+                </ul>
+                <button class="button" type="button">Очистить</button>
+              </div>
+              <div class="search-geo search-geo--object show">
+                <div class="search-geo__wrapper">
+                  <div class="search-geo__header">
+                    <div class="search-field search-geo__input">
+                      <label class="visually-hidden" for="search-region">Выберите регион, город, район, улицу или ЖК</label>
+                      <input id="search-region" type="text" placeholder="Город, район, улица, метро или ЖК" inputmode="search" autocomplete="off" />
+                      <button class="button search-field__button disabled" type="button">
+                        <span class="visually-hidden">Очистить поле подсказок</span>
+                        <span>
+                          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                            <path
+                              stroke="none"
+                              d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
+                            ></path>
+                          </svg>
+                        </span>
+                      </button>
+                      <!-- <div class="search-field__icon"></div> -->
+                    </div>
+                    <div class="search-geo__hints hints show">
+                      <div class="hints__section hints__section-city">
+                        <p class="hints__title hints__title-city">Город</p>
+                        <ul>
+                          <li>Москва</li>
+                          <li>Калининград, Калининградская область</li>
+                          <li>Тольяти, Самарская область</li>
+                          <li>Набережные Челны, Республика Татарстан</li>
+                          <li>Сестрорецк, Ленинградская область</li>
+                        </ul>
+                      </div>
+                      <div class="hints__section hints__section-gk">
+                        <p class="hints__title hints__title-gk">Жилой комплекс</p>
+                        <ul>
+                          <li>Сиреневый бульвар</li>
+                          <li>Крылья</li>
+                          <li>Дом на набережной</li>
+                          <li>Дом художников</li>
+                          <li>Ленинградская ривьера</li>
+                        </ul>
+                      </div>
+                      <div class="hints__section hints__section-address">
+                        <p class="hints__title hints__title-address">Адрес</p>
+                        <ul>
+                          <li>Алтайсткий край</li>
+                          <li>Калининградская область</li>
+                          <li>Самарская область</li>
+                          <li>Республика Татарстан</li>
+                          <li>Ленинградская область</li>
+                        </ul>
+                      </div>
+                      <div class="hints__section hints__section-metro">
+                        <p class="hints__title hints__title-metro">Метро</p>
+                        <ul>
+                          <li>Сокол</li>
+                          <li>Войковская</li>
+                          <li>Тверская</li>
+                          <li>Площадь революции</li>
+                          <li>Ховрино</li>
+                        </ul>
+                      </div>
+                      <div class="hints__section hints__section-area">
+                        <p class="hints__title hints__title-area">Район</p>
+                        <ul>
+                          <li>Алтайсткий край</li>
+                          <li>Калининградская область</li>
+                          <li>Самарская область</li>
+                          <li>Республика Татарстан</li>
+                          <li>Ленинградская область</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button search-geo__close" type="button">
+                    <span class="visually-hidden">Вернуться к фильтрам</span>
+                    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                      <path stroke="none" d="M29.41 8.59a2 2 0 00-2.83 0L16 19.17 5.41 8.59a2 2 0 00-2.83 2.83l12 12a2 2 0 002.82 0l12-12a2 2 0 00.01-2.83z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="search-geo search-geo--subway">
+                <div class="search-geo__wrapper">
+                  <div class="search-geo__header">
+                    <div class="search-field search-geo__input">
+                      <label class="visually-hidden" for="search-region">Выберите название станции метро</label>
+                      <input id="search-region" type="text" placeholder="Название станции метро" inputmode="search" autocomplete="off" />
+                      <button class="button search-field__button" type="button">
+                        <span class="visually-hidden">Очистить поле подсказок</span>
+                        <span>
+                          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                            <path
+                              stroke="none"
+                              d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
+                            ></path>
+                          </svg>
+                        </span>
+                      </button>
+                      <!-- <div class="search-field__icon"></div> -->
+                    </div>
+                    <div class="search-geo__hints hints">
+                      <div class="hints__section hints__section-metro">
+                        <p class="hints__title hints__title-metro">Метро</p>
+                        <ul>
+                          <li>Сокол</li>
+                          <li>Войковская</li>
+                          <li>Тверская</li>
+                          <li>Площадь революции</li>
+                          <li>Ховрино</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                    <li>Преображенская площадь</li>
+                  </ul>
+                  <div class="search-geo__footer">
+                    <button class="button button-white" type="button">Сбросить</button>
+                    <button class="button button-main" type="button">Применить</button>
+                  </div>
+                  <button class="button search-geo__close" type="button">
+                    <span class="visually-hidden">Вернуться к фильтрам</span>
+                    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                      <path stroke="none" d="M29.41 8.59a2 2 0 00-2.83 0L16 19.17 5.41 8.59a2 2 0 00-2.83 2.83l12 12a2 2 0 002.82 0l12-12a2 2 0 00.01-2.83z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="filter__item">
             <fieldset class="filter__fieldset filter__fieldset-add">
               <legend class="visually-hidden">Расширенные фильтры поиска</legend>
               <div id="filter__addition" class="filter__select filter__select-add">
@@ -344,11 +508,11 @@
                       <div class="filter-add__wrapper">
                         <input id="notapart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="2" />
                         <label for="notapart">
-                          <span class="pseudo-radio">Без апартаментов</span>
+                          <span class="pseudo-checkbox">Без апартаментов</span>
                         </label>
                         <input id="apart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="1" />
                         <label for="apart">
-                          <span class="pseudo-radio">Только апартаменты</span>
+                          <span class="pseudo-checkbox">Только апартаменты</span>
                         </label>
                       </div>
                     </fieldset>
@@ -1195,100 +1359,20 @@
                       </div>
                     </fieldset>
                   </div>
-                  <div class="filter-add__footer">
-                    <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button>
-                    <button class="button button-main" type="button">Смотреть объявления</button>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <div class="filter__item">
-            <fieldset class="filter__fieldset filter__fieldset-search">
-              <legend class="visually-hidden-desktop">Поиск адреса, района, шоссе и тд</legend>
-              <div class="search search--locate">
-                <label for="filter-place">
-                  <span class="visually-hidden">Введите название гео-объекта</span>
-                </label>
-                <input id="filter-place" class="input input--field" type="text" inputmode="search" placeholder="Город, метро, район, шоссе, улица или ЖК" autocomplete="off" />
-                <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
-                <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
-              </div>
-              <div class="hints hints--filter">
-                <div class="hints__section hints__section-city">
-                  <p class="hints__title">Город</p>
-                  <ul>
-                    <li>Москва</li>
-                    <li>Калининград, Калининградская область</li>
-                    <li>Тольяти, Самарская область</li>
-                    <li>Набережные Челны, Республика Татарстан</li>
-                    <li>Сестрорецк, Ленинградская область</li>
-                  </ul>
-                </div>
-                <div class="hints__section hints__section-gk">
-                  <p class="hints__title">Жилой комплекс</p>
-                  <ul>
-                    <li>Сиреневый бульвар</li>
-                    <li>Крылья</li>
-                    <li>Дом на набережной</li>
-                    <li>Дом художников</li>
-                    <li>Ленинградская ривьера</li>
-                  </ul>
-                </div>
-                <div class="hints__section hints__section-adress">
-                  <p class="hints__title">Адрес</p>
-                  <ul>
-                    <li>Алтайсткий край</li>
-                    <li>Калининградская область</li>
-                    <li>Самарская область</li>
-                    <li>Республика Татарстан</li>
-                    <li>Ленинградская область</li>
-                  </ul>
-                </div>
-                <div class="hints__section hints__section-metro">
-                  <p class="hints__title">Метро</p>
-                  <ul>
-                    <li>Сокол</li>
-                    <li>Войковская</li>
-                    <li>Тверская</li>
-                    <li>Площадь революции</li>
-                    <li>Ховрино</li>
-                  </ul>
-                </div>
-                <div class="hints__section hints__section-area">
-                  <p class="hints__title">Район</p>
-                  <ul>
-                    <li>Алтайсткий край</li>
-                    <li>Калининградская область</li>
-                    <li>Самарская область</li>
-                    <li>Республика Татарстан</li>
-                    <li>Ленинградская область</li>
-                  </ul>
                 </div>
               </div>
             </fieldset>
           </div>
         </div>
         <div class="filter__footer">
+          <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button>
           <button class="button button-submit" type="submit">Искать</button>
         </div>
       </form>
-      <h1>Filter</h1>
-      <!-- <div class="selected-properties">
-        <ul>
-          <li>
-            <span>м. Войковская</span>
-            <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
-          </li>
-          <li>
-            <span>м. Водный стадион</span>
-            <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
-          </li>
-        </ul>
-        <button class="button" type="button">Очистить</button>
-      </div> -->
+      <div class="main-search__footer">
+        <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
+      </div>
     </div>
-
     <footer></footer>
     <script src="js/filter.js" type="module"></script>
     <section class="modal">

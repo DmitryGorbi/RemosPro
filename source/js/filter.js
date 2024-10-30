@@ -5,22 +5,20 @@ const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
 const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
 const buttonsTitle = filter.querySelectorAll('.button-filter__title');
-const filterSelect = filter.querySelectorAll('.filter__select');
 
 const buttonFilterDeal = filter.querySelector('.button-filter--deal');
 const buttonFilterPrice = filter.querySelector('.button-filter--price');
-console.log(buttonFilterDeal);
 
 // Показ/скрытие списка свойств для select type/price на мобиле/десктопе
 
-const visibilityButtons = () => {
-  const isMobile = window.innerWidth < 768;
-  buttonFilterDeal.setAttribute('aria-expanded', isMobile);
-  buttonFilterPrice.setAttribute('aria-expanded', isMobile);
-};
+// const visibilityButtons = () => {
+//   const isMobile = window.innerWidth < 768;
+//   buttonFilterDeal.setAttribute('aria-expanded', isMobile);
+//   buttonFilterPrice.setAttribute('aria-expanded', isMobile);
+// };
 
-document.addEventListener('DOMContentLoaded', visibilityButtons);
-window.addEventListener('resize', visibilityButtons);
+// document.addEventListener('DOMContentLoaded', visibilityButtons);
+// window.addEventListener('resize', visibilityButtons);
 
 const addClass = (el, selector) => {
   el.classList.add(selector);
@@ -50,7 +48,6 @@ const selectToggler = (array) => {
   array.forEach((element, index) => {
     element.addEventListener('click', () => {
       const isOpen = element.getAttribute('aria-expanded') === 'false';
-
       array.forEach((el) => {
         el.setAttribute('aria-expanded', false);
       });
@@ -90,3 +87,15 @@ const closeSelect = (item, icon) => {
 // }
 
 // Close select on click outside
+
+// const filterMobile = filter.querySelector('.main-search--adaptive');
+
+if (document.querySelector('.catalog-menu__filter') && document.querySelector('.main-search--adaptive')) {
+  const filterMobile = document.querySelector('.main-search--adaptive');
+  const mobileFilterButton = document.querySelector('.catalog-menu__filter');
+  console.log(filterMobile);
+  mobileFilterButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    filterMobile.classList.toggle('show');
+  });
+}

@@ -1,0 +1,25 @@
+.type-estate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  & li {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type-estate {
+    margin-bottom: 15px;
+
+    & input:checked + label .pseudo-radio {
+      padding: 3px 13px;
+    }
+
+    & .pseudo-radio {
+      padding: 3px 13px;
+    }
+  }
+}

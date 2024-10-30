@@ -1,0 +1,58 @@
+.filter-rooms__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-size: 14px;
+}
+
+@media (max-width: @mobile-tablet-width) {
+  .filter-rooms__list input:checked + label .filter-rooms__control {
+    padding: 12px 19px;
+    border-width: 2px;
+    border-color: var(--basic-green);
+    background-color: var(--light-blue);
+  }
+
+  .filter-rooms__control {
+    display: block;
+    padding: 13px 20px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-rooms {
+    & .button-main {
+      padding: 6px;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .filter-rooms__list {
+    flex-direction: column;
+    row-gap: 10px;
+    width: 200px;
+    font-size: 15px;
+
+    & li {
+      display: flex;
+      align-items: center;
+    }
+
+    & label {
+      padding: 2px 2px 2px 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    & input {
+      width: 19px;
+      height: 18px;
+      border-radius: 3px;
+      accent-color: var(--basic-green);
+    }
+  }
+}

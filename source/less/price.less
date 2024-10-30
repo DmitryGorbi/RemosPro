@@ -1,86 +1,54 @@
-.price {
+.filter-price {
   display: flex;
   flex-direction: column;
   row-gap: 7px;
-
-  @media (min-width: @tablet-width) {
-    padding: 10px;
-  }
 }
 
-.price__list {
+.filter-price__list {
   display: flex;
   column-gap: 7px;
-  flex-grow: 1;
 
-  @media (min-width: @tablet-width) {
-    max-width: 300px;
+  & li {
+    flex-grow: 1;
+  }
+
+  & label {
+    display: inline-block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 14px;
   }
 }
 
-.price__item {
-  flex-grow: 1;
-
-  @media (min-width: @tablet-width) {
-    max-width: 300px;
-
-    & input {
-      padding: 5px 10px;
-    }
-  }
-}
-
-.price__label {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 3px;
-  align-items: center;
-
-  &::after {
-    position: absolute;
-    content: '₽';
-    top: 16px;
-    right: 5px;
-    width: 16px;
-    height: 20px;
-    color: var(--gray);
-
-    @media (min-width: @tablet-width) {
-      top: 6px;
-    }
-  }
-}
-
-.price__label + input {
-  @media (min-width: @tablet-width) {
-    padding: 5px 25px 5px 10px;
-  }
-}
-
-.price .button {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    padding: 6px;
-    margin-top: 7px;
-    width: 100%;
-  }
-}
-
-.price__switch {
+.filter-price__switch {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 7px;
 }
 
-@media (min-width: @tablet-width) {
-  & .price__switch .pseudo-radio {
+@media (min-width: @desktop-width) {
+  .filter-price {
+    & .button-main {
+      display: block;
+      padding: 6px;
+      margin-top: 7px;
+      width: 100%;
+    }
+  }
+
+  .filter-price__list {
+    max-width: 300px;
+
+    & .input {
+      padding: 5px 25px 5px 10px;
+    }
+  }
+
+  .filter-price__switch .pseudo-radio {
     padding: 5px;
   }
-}
 
-.price__switch-label {
-  text-align: center;
+  .filter-price__switch .input:checked + label .pseudo-radio {
+    padding: 5px;
+  }
 }

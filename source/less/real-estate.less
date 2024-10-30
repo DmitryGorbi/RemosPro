@@ -1,0 +1,40 @@
+.real-estate__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 16px;
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    & label {
+      padding: 3px 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .real-estate {
+    & .button-main {
+      padding: 6px;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  .real-estate__list {
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 15px;
+
+    & input {
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      accent-color: var(--basic-green);
+    }
+  }
+}

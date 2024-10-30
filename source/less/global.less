@@ -16,21 +16,10 @@ html {
   outline: none;
 }
 
-.visually-hidden-desktop {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    outline: none;
-  }
-}
+// .visually-hidden-desktop {
+//   @media (min-width: @tablet-width) {
+//   }
+// }
 
 .visually-hidden-mobile {
   @media (max-width: 767px) {
@@ -64,7 +53,7 @@ html {
   }
 }
 
-.visually-hidden-mobile-tablet {
+.v-h-m-t {
   @media (max-width: 1239px) {
     position: absolute;
     width: 1px;

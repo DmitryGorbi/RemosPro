@@ -1,12 +1,12 @@
 // Универсальная функция для переключения класса активного элемента
 
-const changeActiveClass = (items, disabledSelector) => {
+const changeActiveClass = (items, selector) => {
   items.forEach((item) => {
     item.addEventListener('click', () => {
       items.forEach((el) => {
-        el.classList.remove(disabledSelector);
+        el.classList.remove(selector);
       });
-      item.classList.add(disabledSelector);
+      item.classList.add(selector);
     });
   });
 };
