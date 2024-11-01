@@ -25,15 +25,23 @@
 
 .offer-preview__image {
   grid-area: photo;
+  height: 120px;
 
   & img {
     width: 100%;
+    height: 100%;
   }
 }
 
 .offer-preview__price {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (min-width: @large-mobile-width) {
+  .offer-preview__image {
+    height: 170px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -60,6 +68,10 @@
     }
   }
 
+  .offer-preview__image {
+    height: 190px;
+  }
+
   .offer-preview__data {
     row-gap: 8px;
     padding: 10px 15px 15px;
@@ -67,5 +79,11 @@
 
   .offer-preview__price {
     font-size: 19px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .offer-preview__image {
+    height: 200px;
   }
 }
