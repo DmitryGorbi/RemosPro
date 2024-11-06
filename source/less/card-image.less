@@ -1,18 +1,18 @@
 .card-image__wrapper {
   position: relative;
   height: 320px;
+  background-color: var(--gray-background);
 
   & .card-image__button {
     height: 100%;
     width: 100%;
     border: 1px solid var(--light-gray);
-    background-color: var(--extra-light-gray);
   }
 
   & img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &:hover .slider {
@@ -22,6 +22,7 @@
   @media (min-width: @tablet-width) {
     & img {
       border-radius: 5px;
+      object-fit: contain;
     }
   }
 
@@ -45,7 +46,7 @@
 
     & span {
       padding-left: 23px;
-      font-weight: 700;
+      font-weight: 500;
       white-space: nowrap;
       background: no-repeat left;
     }

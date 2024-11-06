@@ -203,6 +203,9 @@ abbr {
 select {
   outline: none;
 }
+b {
+  font-weight: 500;
+}
 a {
   text-decoration: none;
   outline: none;
@@ -331,6 +334,7 @@ a {
   --light-red: rgba(255, 0, 0, 0.6);
   --red: rgba(255, 0, 0);
   --red-burgundy: #b00000;
+  --gray-background: #f6f6fa;
 }
 .button {
   padding: 0;
@@ -1410,7 +1414,7 @@ textarea {
   margin-top: 15px;
   padding: 5px 0;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 1240px) {
   .submenu__title {
@@ -2017,6 +2021,8 @@ textarea {
 .offer-preview__image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .offer-preview__price {
   font-size: 16px;
@@ -4150,7 +4156,7 @@ textarea {
   margin: 0 -15px;
   padding: 10px 15px 15px;
   font-size: 14px;
-  background-color: #f6f6f6;
+  background-color: var(--gray-background);
 }
 .accordion ul li:not(:last-child) {
   margin-bottom: 5px;
@@ -4163,7 +4169,7 @@ textarea {
 @media (min-width: 768px) {
   .accordion summary {
     margin: 0;
-    background-color: #f6f6f6;
+    background-color: var(--gray-background);
     border-radius: 5px;
   }
   .accordion ul {
@@ -7685,18 +7691,40 @@ textarea {
   }
 }
 .card-removed {
-  padding: 0 20px;
+  margin: 0 -15px;
+  padding: 20px 10px;
   border-radius: 5px;
-  background-color: var(--extra-light-gray);
+  background-color: var(--gray-background);
 }
 .card-removed h3 {
   margin-bottom: 5px;
+  font-size: 16px;
 }
 .card-removed div {
-  padding: 20px 60px;
+  padding: 5px 5px 5px 60px;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left top;
   background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nNDYnIGhlaWdodD0nNDYnIHZpZXdCb3g9JzAgMCA0NiA0NicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMjMgNDZDMTAuMzE3NiA0NiAwIDM1LjY4MjQgMCAyM0MwIDEwLjMxNzYgMTAuMzE3NiAwIDIzIDBDMzUuNjgyNCAwIDQ2IDEwLjMxNzYgNDYgMjNDNDYgMzUuNjgyNCAzNS42ODI0IDQ2IDIzIDQ2Wk0yMyAzLjI4NTYxQzEyLjEyOTYgMy4yODU2MSAzLjI4NTYxIDEyLjEyOTYgMy4yODU2MSAyM0MzLjI4NTYxIDMzLjg3MDQgMTIuMTI5NiA0Mi43MTQ0IDIzIDQyLjcxNDRDMzMuODcwNCA0Mi43MTQ0IDQyLjcxNDQgMzMuODcwNCA0Mi43MTQ0IDIzQzQyLjcxNDQgMTIuMTI5NiAzMy44NzA0IDMuMjg1NjEgMjMgMy4yODU2MVonIGZpbGw9JyM5OTk5OTknLz48cGF0aCBkPSdNMzEuMjE0NCAzMi44NTcyQzMwLjc5MzkgMzIuODU3MiAzMC4zNzM1IDMyLjY5NjggMzAuMDUyNyAzMi4zNzU3TDEzLjYyNDMgMTUuOTQ3M0MxMi45ODI0IDE1LjMwNTQgMTIuOTgyNCAxNC4yNjU5IDEzLjYyNDMgMTMuNjI0M0MxNC4yNjU5IDEyLjk4MjggMTUuMzA1NyAxMi45ODI0IDE1Ljk0NzMgMTMuNjI0M0wzMi4zNzU3IDMwLjA1MjdDMzMuMDE3NiAzMC42OTQ2IDMzLjAxNzYgMzEuNzM0MSAzMi4zNzU3IDMyLjM3NTdDMzIuMDU0OSAzMi42OTY4IDMxLjYzNDggMzIuODU3MiAzMS4yMTQ0IDMyLjg1NzJaJyBmaWxsPScjOTk5OTk5Jy8+PHBhdGggZD0nTTE0Ljc4NTYgMzIuODU3MkMxNC4zNjUyIDMyLjg1NzIgMTMuOTQ1MSAzMi42OTY4IDEzLjYyNDMgMzIuMzc1N0MxMi45ODI0IDMxLjczNDEgMTIuOTgyNCAzMC42OTQzIDEzLjYyNDMgMzAuMDUyN0wzMC4wNTI3IDEzLjYyNDNDMzAuNjk0NiAxMi45ODI0IDMxLjczNDEgMTIuOTgyNCAzMi4zNzU3IDEzLjYyNDNDMzMuMDE3MiAxNC4yNjU5IDMzLjAxNzYgMTUuMzA1NyAzMi4zNzU3IDE1Ljk0NzNMMTUuOTQ3MyAzMi4zNzU3QzE1LjYyNjUgMzIuNjk2OCAxNS4yMDYxIDMyLjg1NzIgMTQuNzg1NiAzMi44NTcyWicgZmlsbD0nIzk5OTk5OScvPjwvc3ZnPgo=);
+}
+.card-removed p {
+  font-size: 15px;
+}
+@media (min-width: 1240px) {
+  .card-removed {
+    grid-column: 1/-1;
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .card-removed div {
+    padding: 10px 60px;
+    background-position: left center;
+  }
+  .card-removed h3 {
+    font-size: 18px;
+  }
+  .card-removed p {
+    font-size: 16px;
+  }
 }
 .top {
   position: relative;
@@ -7790,18 +7818,18 @@ textarea {
 .card-image__wrapper {
   position: relative;
   height: 320px;
+  background-color: var(--gray-background);
 }
 .card-image__wrapper .card-image__button {
   height: 100%;
   width: 100%;
   border: 1px solid var(--light-gray);
-  background-color: var(--extra-light-gray);
 }
 .card-image__wrapper img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-image__wrapper:hover .slider {
   display: block;
@@ -7809,6 +7837,8 @@ textarea {
 @media (min-width: 768px) {
   .card-image__wrapper img {
     border-radius: 5px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (min-width: 1240px) {
@@ -7831,7 +7861,7 @@ textarea {
 }
 .card-image__controls .button span {
   padding-left: 23px;
-  font-weight: 700;
+  font-weight: 500;
   white-space: nowrap;
   background: no-repeat left;
 }
@@ -7902,6 +7932,7 @@ textarea {
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
+  z-index: 1;
 }
 .card-controls__item:first-of-type {
   margin-right: auto;
@@ -8263,9 +8294,10 @@ textarea {
 .statistics .statistics__table table th {
   padding: 11px;
   text-align: start;
-  background-color: #f6f6f6;
+  background-color: var(--gray-background);
   line-height: 24px;
   color: #666666;
+  font-weight: 500;
 }
 .statistics .statistics__table table td {
   position: relative;
@@ -8393,7 +8425,7 @@ textarea {
 .mortgage-form__output output {
   padding: 12px 0 13px 15px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 5px;
   background-color: var(--light-green);
   border: 1px solid var(--gray);
@@ -8482,6 +8514,7 @@ textarea {
   height: 80px;
 }
 .small-card__img img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -8604,10 +8637,7 @@ textarea {
 }
 .ads {
   width: 100%;
-  background-color: pink;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 30px;
+  background-color: var(--gray-background);
 }
 .ads--left {
   height: 300px;
