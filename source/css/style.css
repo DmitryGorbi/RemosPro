@@ -7959,6 +7959,9 @@ textarea {
 .card-controls__item a:active {
   background-color: var(--gray);
 }
+.icon-color svg {
+  stroke: red !important;
+}
 @media (min-width: 768px) {
   .card-controls__item:first-of-type {
     display: none;
