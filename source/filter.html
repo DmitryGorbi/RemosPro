@@ -24,13 +24,13 @@
               <legend class="visually-hidden-desktop">Тип сделки</legend>
               <ul class="deal">
                 <li class="deal__item">
-                  <input id="deal_type_buy" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Купить" checked />
+                  <input id="deal_type_buy" class="visually-hidden input" type="radio" checked />
                   <label for="deal_type_buy">
                     <span class="pseudo-radio">Купить</span>
                   </label>
                 </li>
                 <li class="deal__item">
-                  <input id="deal_type_rent" class="visually-hidden input" type="radio" name="filter[deal_type]" value="Снять" />
+                  <input id="deal_type_rent" class="visually-hidden input" type="radio" />
                   <label for="deal_type_rent">
                     <span class="pseudo-radio">Снять</span>
                   </label>
@@ -49,137 +49,137 @@
               <legend class="visually-hidden-desktop">Тип недвижимости</legend>
               <ul class="type-estate">
                 <li>
-                  <input id="residential__estate" class="visually-hidden input" type="radio" name="filter[property_type]" value="Купить" checked />
+                  <input id="residential__estate" class="visually-hidden input" type="radio" checked />
                   <label for="residential__estate">
                     <span class="pseudo-radio">Жилая</span>
                   </label>
                 </li>
                 <li>
-                  <input id="comm__estate" class="visually-hidden input" type="radio" name="filter[property_type]" value="Снять" />
+                  <input id="comm__estate" class="visually-hidden input" type="radio" />
                   <label for="comm__estate">
                     <span class="pseudo-radio">Коммерческая</span>
                   </label>
                 </li>
                 <li>
-                  <input id="garage__estate" class="visually-hidden input" type="radio" name="filter[property_type]" value="Снять" />
+                  <input id="garage__estate" class="visually-hidden input" type="radio" />
                   <label for="garage__estate">
                     <span class="pseudo-radio">Гаражи</span>
                   </label>
                 </li>
               </ul>
-              <!-- <fieldset class="filter__fieldset real-estate">
+              <fieldset class="filter__fieldset real-estate">
                 <legend>Жилая недвижимость</legend>
                 <ul class="real-estate__list">
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="new__flat" value="Квартиру в новостройке" checked />
+                    <input class="input-checkbox" type="checkbox" id="new__flat" checked />
                     <label for="new__flat">
                       <span>Квартира в новостройке</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="second__hand__flat" value="Квартиру на вторичке" checked />
+                    <input class="input-checkbox" type="checkbox" id="second__hand__flat" checked />
                     <label for="second__hand__flat">
-                      <span>Квартира во вторичке</span>
+                      <span>Квартира на вторичке</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="room" value="Комнату" />
+                    <input class="input-checkbox" type="checkbox" id="room" />
                     <label for="room">
                       <span>Комната</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="house" value="Дом" />
+                    <input class="input-checkbox" type="checkbox" id="house" />
                     <label for="house">
                       <span>Дом</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="townhouse" value="Таунхаус" />
+                    <input class="input-checkbox" type="checkbox" id="townhouse" />
                     <label for="townhouse">
                       <span>Таунхаус</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="land" value="Земельный участок" />
+                    <input class="input-checkbox" type="checkbox" id="land" />
                     <label for="land">
                       <span>Земельный участок</span>
                     </label>
                   </li>
                 </ul>
                 <button class="button button-main" type="button">Применить</button>
-              </fieldset> -->
-              <fieldset class="filter__fieldset real-estate">
+              </fieldset>
+              <!-- <fieldset class="filter__fieldset real-estate">
                 <legend>Коммерческая недвижимость</legend>
                 <ul class="real-estate__list">
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="office" value="Офис" checked />
+                    <input class="input-checkbox" type="checkbox" id="office" checked />
                     <label for="office">
                       <span>Офис</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="psn" value="ПСН" />
+                    <input class="input-checkbox" type="checkbox" id="psn" />
                     <label for="psn">
                       <span>ПСН</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="building" value="Здание" />
+                    <input class="input-checkbox" type="checkbox" id="building" />
                     <label for="building">
                       <span>Здание</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="manufacture" value="Производство" />
+                    <input class="input-checkbox" type="checkbox" id="manufacture" />
                     <label for="manufacture">
                       <span>Производство</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="trade__area" value="Торговая площадь" />
+                    <input class="input-checkbox" type="checkbox" id="trade__area" />
                     <label for="trade__area">
                       <span>Торговая площадь</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="stock" value="Склад" />
+                    <input class="input-checkbox" type="checkbox" id="stock" />
                     <label for="stock">
                       <span>Склад</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="ready__business" value="Готовый бизнес" />
+                    <input class="input-checkbox" type="checkbox" id="ready__business" />
                     <label for="ready__business">
                       <span>Готовый бизнес</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="commercial__land" value="Коммерческая земля" />
+                    <input class="input-checkbox" type="checkbox" id="commercial__land" />
                     <label for="commercial__land">
                       <span>Коммерческая земля</span>
                     </label>
                   </li>
                 </ul>
                 <button class="button button-main" type="button">Применить</button>
-              </fieldset>
+              </fieldset> -->
               <!-- <fieldset class="filter__fieldset real-estate">
                 <legend>Гаражи</legend>
                 <ul class="real-estate__list">
                   <li>
-                    <input class="input-checkbox" type="checkbox" name="type" id="type__garage" value="Гараж" checked />
+                    <input class="input-checkbox" type="checkbox" id="type__garage" checked />
                     <label for="type__garage">
                       <span>Гараж</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="parking__place" value="Парковочное место" />
+                    <input class="input-checkbox" type="checkbox" id="parking__place" />
                     <label for="parking__place">
                       <span>Машиноместо</span>
                     </label>
                   </li>
                   <li>
-                    <input class="input-checkbox" type="checkbox" id="parking__box" value="Бокс" />
+                    <input class="input-checkbox" type="checkbox" id="parking__box" />
                     <label for="parking__box">
                       <span>Бокс</span>
                     </label>
@@ -200,43 +200,43 @@
               <legend class="visually-hidden-desktop">Количество комнат</legend>
               <ul class="filter-rooms__list">
                 <li>
-                  <input id="studio" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="200" />
+                  <input id="studio" class="v-h-m-t" type="checkbox" />
                   <label for="studio">
                     <span class="filter-rooms__control">Студия</span>
                   </label>
                 </li>
                 <li>
-                  <input id="one__room" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="1" checked />
+                  <input id="one__room" class="v-h-m-t" type="checkbox" checked />
                   <label for="one__room">
                     <span class="filter-rooms__control">1<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="two__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="2" />
+                  <input id="two__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="two__rooms">
                     <span class="filter-rooms__control">2<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="three__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="3" />
+                  <input id="three__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="three__rooms">
                     <span class="filter-rooms__control">3<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="four__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="4" />
+                  <input id="four__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="four__rooms">
                     <span class="filter-rooms__control">4<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="five__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="5" />
+                  <input id="five__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="five__rooms">
                     <span class="filter-rooms__control">5<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="six__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="6" />
+                  <input id="six__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="six__rooms">
                     <span class="filter-rooms__control">6+<span class="v-h-m-t"> комнат и более</span></span>
                   </label>
@@ -287,18 +287,20 @@
           </div>
           <div class="filter__item">
             <button class="button button-filter" type="button" aria-expanded="false" aria-controls="filter__addition">
-              <span class="">Фильтры</span>
+              <span>Фильтры</span>
               <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#arrow"></use>
               </svg>
             </button>
-            <fieldset class="filter__fieldset filter__fieldset-add">
+            <fieldset id="filter__addition" class="filter__fieldset filter__fieldset-add">
               <legend class="visually-hidden">Расширенные фильтры поиска</legend>
-              <div id="filter__addition" class="filter__select filter__select-add">
+              <div class="filter__select filter__select-add">
                 <div class="filter-add">
                   <div class="filter-add__header visually-hidden-small-mobile">
                     <h3 class="filter-add__title">Фильтры</h3>
-                    <button type="button" class="button button-close" aria-expanded="false"><span class="visually-hidden">Закрыть фильтр</span></button>
+                    <button type="button" class="button button-close">
+                      <span class="visually-hidden">Закрыть фильтр</span>
+                    </button>
                   </div>
                   <div class="filter-add__container">
                     <fieldset class="filter__fieldset filter-add__fieldset">
@@ -1210,11 +1212,11 @@
                 <label for="filter-place">
                   <span class="visually-hidden">Введите название гео-объекта</span>
                 </label>
-                <input id="filter-place" class="input input--field" type="text" inputmode="search" placeholder="Город, метро, район, шоссе, улица или ЖК" autocomplete="off" />
-                <button class="button search__button" type="button"><span class="search__locate-name">Метро</span></button>
-                <button class="button search__button" type="button"><span class="search__locate-name">Район</span></button>
+                <input id="filter-place" class="input input--field" type="text" placeholder="Город, метро, район, шоссе, улица или ЖК" inputmode="search" autocomplete="off" />
+                <button class="button search__button" type="button" aria-label="Перейти к списку"><span class="search__locate-name">Метро</span></button>
+                <button class="button search__button" type="button" aria-label="Перейти к списку"><span class="search__locate-name">Район</span></button>
               </div>
-              <div class="hints hints--filter">
+              <div class="hints hints--geo">
                 <div class="hints__section hints__section-city">
                   <p class="hints__title">Город</p>
                   <ul>
@@ -1248,21 +1250,40 @@
                 <div class="hints__section hints__section-metro">
                   <p class="hints__title">Метро</p>
                   <ul>
-                    <li>Сокол</li>
-                    <li>Войковская</li>
-                    <li>Тверская</li>
-                    <li>Площадь революции</li>
-                    <li>Ховрино</li>
+                    <li>
+                      <span class="subway-mark m-line-2"></span>
+                      <span>Сокол</span>
+                    </li>
+                    <li>
+                      <span class="subway-mark m-line-2"></span>
+                      <span>Войковская</span>
+                    </li>
+                    <li>
+                      <span class="subway-mark m-line-2"></span>
+                      <span>Тверская</span>
+                    </li>
+                    <li>
+                      <span class="subway-mark m-line-3"></span>
+                      <span>Площадь революции</span>
+                    </li>
+                    <li>
+                      <span class="subway-mark m-line-5"></span>
+                      <span>Таганская</span>
+                    </li>
+                    <li>
+                      <span class="subway-mark m-line-1"></span>
+                      <span class="">Красносельская</span>
+                    </li>
                   </ul>
                 </div>
                 <div class="hints__section hints__section-area">
                   <p class="hints__title">Район</p>
                   <ul>
-                    <li>Алтайсткий край</li>
-                    <li>Калининградская область</li>
-                    <li>Самарская область</li>
-                    <li>Республика Татарстан</li>
-                    <li>Ленинградская область</li>
+                    <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                    <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                    <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                    <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                    <li>Рудничный р-н, Геленджик, Краснодарский край</li>
                   </ul>
                 </div>
               </div>
@@ -1273,30 +1294,2573 @@
           <button class="button button-submit" type="submit">Искать</button>
         </div>
       </form>
-      <h1>Filter</h1>
-      <!-- <div class="selected-properties">
+      <section class="selected-properties selected-properties--filter">
+        <h4 class="visually-hidden">Выбранные фильтры</h4>
         <ul>
           <li>
-            <span>м. Войковская</span>
+            <span class="subway-mark m-line-2"></span>
+            <span>Войковская</span>
+            <button class="button button-close" type="button">
+              <span class="visually-hidden">Удалить свойство</span>
+            </button>
+          </li>
+          <li>
+            <span class="subway-mark m-line-1"></span>
+            <span class="">Красносельская</span>
+            <button class="button button-close" type="button">
+              <span class="visually-hidden">Удалить свойство</span>
+            </button>
+          </li>
+          <li>
+            <span>р-н Коптево</span>
             <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
           </li>
           <li>
-            <span>м. Водный стадион</span>
+            <span>2-х комнатная</span>
             <button class="button button-close" type="button"><span class="visually-hidden">Закрыть фильтр</span></button>
           </li>
         </ul>
         <button class="button" type="button">Очистить</button>
-      </div> -->
+      </section>
     </div>
 
     <footer></footer>
     <script src="js/filter.js" type="module"></script>
-    <section class="modal">
-      <h2 class="caption">Метро</h2>
-      <button class="button button-close" type="button">
-        <span class="visually-hidden">Закрыть окно авторизации</span>
-      </button>
-      <div></div>
-    </section>
+    <div class="geo-modal geo-modal--subway">
+      <section class="geo-modal__wrapper">
+        <h2 class="visually-hidden">Фильтр по станциям метро</h2>
+        <div class="geo-modal__header">
+          <div class="search-field geo-modal__input">
+            <label class="visually-hidden" for="search-region">Введите название станции метро</label>
+            <input id="search-region" type="text" placeholder="Название станции метро" inputmode="search" autocomplete="off" />
+            <button class="button search-field__button" type="button">
+              <span class="visually-hidden">Удалить текст</span>
+              <span>
+                <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                  <path
+                    stroke="none"
+                    d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+            <div class="search-field__icon"></div>
+          </div>
+          <section class="selected-properties geo-modal__selected">
+            <h3 class="visually-hidden">Выбранные станции</h3>
+            <ul>
+              <li>
+                <span class="subway-mark m-line-2"></span>
+                <span>Войковская</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span class="subway-mark m-line-1"></span>
+                <span class="">Красносельская</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span class="subway-mark m-line-2"></span>
+                <span>Войковская</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span class="subway-mark m-line-1"></span>
+                <span class="">Красносельская</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <div class="geo-modal__hints hints">
+            <div class="hints__section hints__section-metro">
+              <p class="hints__title hints__title-metro">Метро</p>
+              <ul>
+                <li>
+                  <span class="subway-mark m-line-2"></span>
+                  <span>Сокол</span>
+                </li>
+                <li>
+                  <span class="subway-mark m-line-2"></span>
+                  <span>Войковская</span>
+                </li>
+                <li>
+                  <span class="subway-mark m-line-2"></span>
+                  <span>Тверская</span>
+                </li>
+                <li>
+                  <span class="subway-mark m-line-3"></span>
+                  <span>Площадь революции</span>
+                </li>
+                <li>
+                  <span class="subway-mark m-line-5"></span>
+                  <span>Таганская</span>
+                </li>
+                <li>
+                  <span class="subway-mark m-line-1"></span>
+                  <span class="">Красносельская</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section class="geo-list geo-modal__body">
+          <h2 class="visually-hidden">Список станций метро Москвы</h2>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-1">1</span>Сокольническая линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="03" type="checkbox" />
+                <label for="03">Бульвар Рокоссовского</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="02" type="checkbox" />
+                <label for="02">Черкизовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="01" type="checkbox" />
+                <label for="01">Преображенская площадь</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="0" type="checkbox" />
+                <label for="0">Сокольники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="1" type="checkbox" />
+                <label for="1">Красносельская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="2" type="checkbox" />
+                <label for="2">Комсомольская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="3" type="checkbox" />
+                <label for="3">Красные Ворота</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="4" type="checkbox" />
+                <label for="4">Чистые пруды</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="5" type="checkbox" />
+                <label for="5">Лубянка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="6" type="checkbox" />
+                <label for="6">Охотный Ряд</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="7" type="checkbox" />
+                <label for="7">Библиотека им. Ленина</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="8" type="checkbox" />
+                <label for="8">Кропоткинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="9" type="checkbox" />
+                <label for="9">Парк культуры</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="10" type="checkbox" />
+                <label for="10">Фрунзенская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="11" type="checkbox" />
+                <label for="11">Спортивная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="12" type="checkbox" />
+                <label for="12">Воробьёвы горы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="13" type="checkbox" />
+                <label for="13">Университет</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="14" type="checkbox" />
+                <label for="14">Проспект Вернадского</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="15" type="checkbox" />
+                <label for="15">Юго-Западная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="16" type="checkbox" />
+                <label for="16">Тропарёво</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="17" type="checkbox" />
+                <label for="17">Румянцево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="18" type="checkbox" />
+                <label for="18">Саларьево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="19" type="checkbox" />
+                <label for="19">Филатов Луг</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="20" type="checkbox" />
+                <label for="20">Проклеено</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="21" type="checkbox" />
+                <label for="21">Ольховая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="22" type="checkbox" />
+                <label for="22">Новомосковская (Коммунарка)</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="23" type="checkbox" />
+                <label for="23">Потапово</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-2">2</span>Замоскворецкая линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="24" type="checkbox" />
+                <label for="24">Ховрино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="25" type="checkbox" />
+                <label for="25">Беломорская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="26" type="checkbox" />
+                <label for="26">Речной вокзал</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="27" type="checkbox" />
+                <label for="27">Водный стадион</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="28" type="checkbox" />
+                <label for="28">Войковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="29" type="checkbox" />
+                <label for="29">Сокол</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="30" type="checkbox" />
+                <label for="30">Аэропорт</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="31" type="checkbox" />
+                <label for="31">Динамо</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="32" type="checkbox" />
+                <label for="32">Белорусская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="33" type="checkbox" />
+                <label for="33">Маяковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="34" type="checkbox" />
+                <label for="34">Тверская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="35" type="checkbox" />
+                <label for="35">Театральная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="36" type="checkbox" />
+                <label for="36">Новокузнецкая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="37" type="checkbox" />
+                <label for="37">Павелецкая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="38" type="checkbox" />
+                <label for="38">Автозаводская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="39" type="checkbox" />
+                <label for="39">Технопарк</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="40" type="checkbox" />
+                <label for="40">Коломенская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="41" type="checkbox" />
+                <label for="41">Каширская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="42" type="checkbox" />
+                <label for="42">Кантемировская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="43" type="checkbox" />
+                <label for="43">Царицыно</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="44" type="checkbox" />
+                <label for="44">Орехово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="45" type="checkbox" />
+                <label for="45">Домодедовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="46" type="checkbox" />
+                <label for="46">Красногвардейская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="47" type="checkbox" />
+                <label for="47">Алма-Атинская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-3">3</span>Арбатско-Покровская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="48" type="checkbox" />
+                <label for="48">Щёлковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="49" type="checkbox" />
+                <label for="49">Первомайская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="50" type="checkbox" />
+                <label for="50">Измайловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="51" type="checkbox" />
+                <label for="51">Партизанская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="52" type="checkbox" />
+                <label for="52">Семёновская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="53" type="checkbox" />
+                <label for="53">Электрозаводская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="54" type="checkbox" />
+                <label for="54">Бауманская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="55" type="checkbox" />
+                <label for="55">Курская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="56" type="checkbox" />
+                <label for="56">Площадь Революции</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="57" type="checkbox" />
+                <label for="57">Арбатская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="58" type="checkbox" />
+                <label for="58">Смоленская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="59" type="checkbox" />
+                <label for="59">Киевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="60" type="checkbox" />
+                <label for="60">Парк Победы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="61" type="checkbox" />
+                <label for="61">Славянский бульвар</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="62" type="checkbox" />
+                <label for="62">Кунцевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="63" type="checkbox" />
+                <label for="63">Молодёжная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="64" type="checkbox" />
+                <label for="64">Крылатское</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="65" type="checkbox" />
+                <label for="65">Строгино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="66" type="checkbox" />
+                <label for="66">Мякинино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="67" type="checkbox" />
+                <label for="67">Волоколамская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="68" type="checkbox" />
+                <label for="68">Митино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="69" type="checkbox" />
+                <label for="69">Пятницкое шоссе</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-4">4</span>Филевская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="70" type="checkbox" />
+                <label for="70">Кунцевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="71" type="checkbox" />
+                <label for="71">Пионерская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="72" type="checkbox" />
+                <label for="72">Филёвский парк</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="73" type="checkbox" />
+                <label for="73">Багратионовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="74" type="checkbox" />
+                <label for="74">Фили</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="75" type="checkbox" />
+                <label for="75">Кутузовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="76" type="checkbox" />
+                <label for="76">Студенческая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="77" type="checkbox" />
+                <label for="77">Киевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="78" type="checkbox" />
+                <label for="78">Смоленская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="79" type="checkbox" />
+                <label for="79">Арбатская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="80" type="checkbox" />
+                <label for="80">Александровский сад</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="81" type="checkbox" />
+                <label for="81">Выставочная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="82" type="checkbox" />
+                <label for="82">Международная</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-5">5</span>Кольцевая линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="83" type="checkbox" />
+                <label for="83">Проспект Мира</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="84" type="checkbox" />
+                <label for="84">Комсомольская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="85" type="checkbox" />
+                <label for="85">Курская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="86" type="checkbox" />
+                <label for="86">Таганская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="87" type="checkbox" />
+                <label for="87">Павелецкая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="88" type="checkbox" />
+                <label for="88">Добрынинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="89" type="checkbox" />
+                <label for="89">Октябрьская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="90" type="checkbox" />
+                <label for="90">Парк культуры</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="91" type="checkbox" />
+                <label for="91">Киевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="92" type="checkbox" />
+                <label for="92">Краснопресненская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="93" type="checkbox" />
+                <label for="93">Белорусская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="94" type="checkbox" />
+                <label for="94">Новослободская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-6">6</span>Калужско-Рижская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="95" type="checkbox" />
+                <label for="95">Медведково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="96" type="checkbox" />
+                <label for="96">Бабушкинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="97" type="checkbox" />
+                <label for="97">Свиблово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="98" type="checkbox" />
+                <label for="98">Ботанический сад</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="99" type="checkbox" />
+                <label for="99">ВДНХ</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="100" type="checkbox" />
+                <label for="100">Алексеевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="101" type="checkbox" />
+                <label for="101">Рижская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="102" type="checkbox" />
+                <label for="102">Проспект Мира</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="103" type="checkbox" />
+                <label for="103">Сухаревская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="104" type="checkbox" />
+                <label for="104">Тургеневская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="105" type="checkbox" />
+                <label for="105">Китай-город</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="106" type="checkbox" />
+                <label for="106">Третьяковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="107" type="checkbox" />
+                <label for="107">Октябрьская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="108" type="checkbox" />
+                <label for="108">Шаболовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="109" type="checkbox" />
+                <label for="109">Ленинский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="110" type="checkbox" />
+                <label for="110">Академическая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="111" type="checkbox" />
+                <label for="111">Профсоюзная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="112" type="checkbox" />
+                <label for="112">Новые Черёмушки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="113" type="checkbox" />
+                <label for="113">Калужская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="114" type="checkbox" />
+                <label for="114">Беляево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="115" type="checkbox" />
+                <label for="115">Коньково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="116" type="checkbox" />
+                <label for="116">Тёплый Стан</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="117" type="checkbox" />
+                <label for="117">Ясенево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="118" type="checkbox" />
+                <label for="118">Новоясеневская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-7">7</span>Таганско-Краснопресненская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="119" type="checkbox" />
+                <label for="119">Планерная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="120" type="checkbox" />
+                <label for="120">Сходненская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="121" type="checkbox" />
+                <label for="121">Тушинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="122" type="checkbox" />
+                <label for="122">Спартак</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="123" type="checkbox" />
+                <label for="123">Щукинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="124" type="checkbox" />
+                <label for="124">Октябрьское Поле</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="125" type="checkbox" />
+                <label for="125">Полежаевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="126" type="checkbox" />
+                <label for="126">Беговая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="127" type="checkbox" />
+                <label for="127">Улица 1905 года</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="128" type="checkbox" />
+                <label for="128">Баррикадная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="129" type="checkbox" />
+                <label for="129">Пушкинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="130" type="checkbox" />
+                <label for="130">Кузнецкий Мост</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="131" type="checkbox" />
+                <label for="131">Китай-город</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="132" type="checkbox" />
+                <label for="132">Таганская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="133" type="checkbox" />
+                <label for="133">Пролетарская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="134" type="checkbox" />
+                <label for="134">Волгоградский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="135" type="checkbox" />
+                <label for="135">Текстильщики</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="136" type="checkbox" />
+                <label for="136">Кузьминки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="137" type="checkbox" />
+                <label for="137">Рязанский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="138" type="checkbox" />
+                <label for="138">Выхино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="139" type="checkbox" />
+                <label for="139">Лермонтовский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="140" type="checkbox" />
+                <label for="140">Жулебино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="141" type="checkbox" />
+                <label for="141">Котельники</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-8">8</span>Калининская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="142" type="checkbox" />
+                <label for="142">Новокосино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="143" type="checkbox" />
+                <label for="143">Новогиреево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="144" type="checkbox" />
+                <label for="144">Перово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="145" type="checkbox" />
+                <label for="145">Шоссе Энтузиастов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="146" type="checkbox" />
+                <label for="146">Авиамоторная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="147" type="checkbox" />
+                <label for="147">Площадь Ильича</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="148" type="checkbox" />
+                <label for="148">Марксистская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="149" type="checkbox" />
+                <label for="149">Третьяковская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-8a">8А</span>Солнцевская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="150" type="checkbox" />
+                <label for="150">Деловой центр</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="151" type="checkbox" />
+                <label for="151">Парк Победы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="152" type="checkbox" />
+                <label for="152">Минская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="153" type="checkbox" />
+                <label for="153">Ломоносовский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="154" type="checkbox" />
+                <label for="154">Раменки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="155" type="checkbox" />
+                <label for="155">Мичуринский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="156" type="checkbox" />
+                <label for="156">Озёрная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="157" type="checkbox" />
+                <label for="157">Говорово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="158" type="checkbox" />
+                <label for="158">Солнцево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="159" type="checkbox" />
+                <label for="159">Боровское шоссе</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="160" type="checkbox" />
+                <label for="160">Новопеределкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="161" type="checkbox" />
+                <label for="161">Рассказовка</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-9">9</span>Серпуховско-Тимирязевская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="162" type="checkbox" />
+                <label for="162">Алтуфьево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="163" type="checkbox" />
+                <label for="163">Бибирево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="164" type="checkbox" />
+                <label for="164">Отрадное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="165" type="checkbox" />
+                <label for="165">Владыкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="166" type="checkbox" />
+                <label for="166">Петровско-Разумовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="167" type="checkbox" />
+                <label for="167">Тимирязевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="168" type="checkbox" />
+                <label for="168">Дмитровская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="169" type="checkbox" />
+                <label for="169">Савёловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="170" type="checkbox" />
+                <label for="170">Менделеевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="171" type="checkbox" />
+                <label for="171">Цветной бульвар</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="172" type="checkbox" />
+                <label for="172">Чеховская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="173" type="checkbox" />
+                <label for="173">Боровицкая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="174" type="checkbox" />
+                <label for="174">Полянка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="175" type="checkbox" />
+                <label for="175">Серпуховская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="176" type="checkbox" />
+                <label for="176">Тульская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="177" type="checkbox" />
+                <label for="177">Нагатинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="178" type="checkbox" />
+                <label for="178">Нагорная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="179" type="checkbox" />
+                <label for="179">Нахимовский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="180" type="checkbox" />
+                <label for="180">Севастопольская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="181" type="checkbox" />
+                <label for="181">Чертановская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="182" type="checkbox" />
+                <label for="182">Южная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="183" type="checkbox" />
+                <label for="183">Пражская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="184" type="checkbox" />
+                <label for="184">Улица Академика Янгеля</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="185" type="checkbox" />
+                <label for="185">Аннино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="186" type="checkbox" />
+                <label for="186">Бульвар Дмитрия Донского</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-10">10</span>Люблинско-Дмитровская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="187" type="checkbox" />
+                <label for="187">Селигерская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="188" type="checkbox" />
+                <label for="188">Верхние Лихоборы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="189" type="checkbox" />
+                <label for="189">Окружная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="190" type="checkbox" />
+                <label for="190">Петровско-Разумовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="191" type="checkbox" />
+                <label for="192">Фонвизинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="193" type="checkbox" />
+                <label for="193">Бутырская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="194" type="checkbox" />
+                <label for="194">Марьина Роща</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="195" type="checkbox" />
+                <label for="195">Достоевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="196" type="checkbox" />
+                <label for="196">Трубная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="197" type="checkbox" />
+                <label for="128">Сретенский бульвар</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="198" type="checkbox" />
+                <label for="198">Чкаловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="199" type="checkbox" />
+                <label for="199">Римская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="200" type="checkbox" />
+                <label for="200">Крестьянская Застава</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="201" type="checkbox" />
+                <label for="201">Дубровка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="202" type="checkbox" />
+                <label for="202">Кожуховская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="203" type="checkbox" />
+                <label for="203">Печатники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="204" type="checkbox" />
+                <label for="204">Волжская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="205" type="checkbox" />
+                <label for="205">Люблино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="206" type="checkbox" />
+                <label for="206">Братиславская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="207" type="checkbox" />
+                <label for="207">Марьино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="208" type="checkbox" />
+                <label for="208">Борисово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="209" type="checkbox" />
+                <label for="209">Шипиловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="210" type="checkbox" />
+                <label for="210">Зябликово</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-11">11</span>Большая кольцевая линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="211" type="checkbox" />
+                <label for="211">Марьина Роща</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="212" type="checkbox" />
+                <label for="212">Савёловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="213" type="checkbox" />
+                <label for="213">Петровский парк</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="214" type="checkbox" />
+                <label for="214">ЦСКА</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="215" type="checkbox" />
+                <label for="215">Хорошёвская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="216" type="checkbox" />
+                <label for="216">Народное Ополчение</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="217" type="checkbox" />
+                <label for="217">Мнёвники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="218" type="checkbox" />
+                <label for="218">Терехово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="219" type="checkbox" />
+                <label for="219">Кунцевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="220" type="checkbox" />
+                <label for="220">Давыдково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="221" type="checkbox" />
+                <label for="221">Аминьевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="222" type="checkbox" />
+                <label for="222">Мичуринский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="223" type="checkbox" />
+                <label for="223">Проспект Вернадского</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="224" type="checkbox" />
+                <label for="224">Новаторская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="225" type="checkbox" />
+                <label for="225">Воронцовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="226" type="checkbox" />
+                <label for="226">Зюзино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="227" type="checkbox" />
+                <label for="227">Каховская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="228" type="checkbox" />
+                <label for="228">Варшавская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="229" type="checkbox" />
+                <label for="229">Каширская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="230" type="checkbox" />
+                <label for="230">Кленовый бульвар</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="231" type="checkbox" />
+                <label for="231">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="232" type="checkbox" />
+                <label for="232">Печатники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="233" type="checkbox" />
+                <label for="233">Текстильщики</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="234" type="checkbox" />
+                <label for="234">Нижегородская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="235" type="checkbox" />
+                <label for="235">Авиамоторная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="236" type="checkbox" />
+                <label for="236">Лефортово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="237" type="checkbox" />
+                <label for="237">Электрозаводская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="238" type="checkbox" />
+                <label for="238">Сокольники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="239" type="checkbox" />
+                <label for="239">Рижская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="240" type="checkbox" />
+                <label for="240">Шелепиха</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="241" type="checkbox" />
+                <label for="241">Деловой центр</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-12">12</span>Бутовская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="242" type="checkbox" />
+                <label for="242">Бунинская аллея</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="243" type="checkbox" />
+                <label for="243">Улица Горчакова</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="244" type="checkbox" />
+                <label for="244">Бульвар Адмирала Ушакова</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="245" type="checkbox" />
+                <label for="245">Улица Скобелевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="246" type="checkbox" />
+                <label for="246">Улица Старокачаловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="247" type="checkbox" />
+                <label for="247">Лесопарковая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="248" type="checkbox" />
+                <label for="248">Битцевский парк</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-14">14</span>Московское центральное кольцо</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="249" type="checkbox" />
+                <label for="249">Окружная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="250" type="checkbox" />
+                <label for="250">Владыкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="251" type="checkbox" />
+                <label for="251">Ботанический сад</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="252" type="checkbox" />
+                <label for="252">Ростокино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="253" type="checkbox" />
+                <label for="253">Белокаменная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="254" type="checkbox" />
+                <label for="254">Бульвар Рокоссовского</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="255" type="checkbox" />
+                <label for="255">Локомотив</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="256" type="checkbox" />
+                <label for="256">Измайлово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="257" type="checkbox" />
+                <label for="257">Соколиная Гора</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="258" type="checkbox" />
+                <label for="258">Шоссе Энтузиастов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="259" type="checkbox" />
+                <label for="259">Андроновка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="260" type="checkbox" />
+                <label for="260">Нижегородская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="261" type="checkbox" />
+                <label for="261">Новохохловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="262" type="checkbox" />
+                <label for="262">Угрешская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="263" type="checkbox" />
+                <label for="263">Дубровка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="264" type="checkbox" />
+                <label for="264">Автозаводская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="265" type="checkbox" />
+                <label for="265">ЗИЛ</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="266" type="checkbox" />
+                <label for="266">Верхние Котлы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="267" type="checkbox" />
+                <label for="267">Крымская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="268" type="checkbox" />
+                <label for="268">Площадь Гагарина</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="269" type="checkbox" />
+                <label for="269">Лужники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="270" type="checkbox" />
+                <label for="270">Кутузовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="271" type="checkbox" />
+                <label for="271">Москва-Сити</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="272" type="checkbox" />
+                <label for="272">Шелепиха</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="273" type="checkbox" />
+                <label for="273">Хорошёво</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="274" type="checkbox" />
+                <label for="274">Зорге</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="275" type="checkbox" />
+                <label for="275">Панфиловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="276" type="checkbox" />
+                <label for="276">Стрешнево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="277" type="checkbox" />
+                <label for="277">Балтийская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="278" type="checkbox" />
+                <label for="278">Коптево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="279" type="checkbox" />
+                <label for="279">Лихоборы</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-15">15</span>Некрасовская линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="280" type="checkbox" />
+                <label for="280">Некрасовка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="281" type="checkbox" />
+                <label for="281">Лухмановская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="282" type="checkbox" />
+                <label for="282">Косино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="283" type="checkbox" />
+                <label for="283">Юго-Восточная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="284" type="checkbox" />
+                <label for="284">Окская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="285" type="checkbox" />
+                <label for="285">Стахановская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="286" type="checkbox" />
+                <label for="286">Нижегородская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="287" type="checkbox" />
+                <label for="287">Авиамоторная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="288" type="checkbox" />
+                <label for="288">Электрозаводская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-d1">D1</span>МЦД-1 (Белорусско-Савёловский)</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="289" type="checkbox" />
+                <label for="289">Лобня</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="290" type="checkbox" />
+                <label for="290">Шереметьевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="291" type="checkbox" />
+                <label for="291">Хлебниково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="292" type="checkbox" />
+                <label for="292">Водники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="293" type="checkbox" />
+                <label for="293">Долгопрудная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="294" type="checkbox" />
+                <label for="294">Новодачная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="295" type="checkbox" />
+                <label for="295">Марк</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="296" type="checkbox" />
+                <label for="296">Лианозово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="297" type="checkbox" />
+                <label for="297">Бескудниково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="298" type="checkbox" />
+                <label for="298">Дегунино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="299" type="checkbox" />
+                <label for="299">Окружная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="300" type="checkbox" />
+                <label for="300">Тимирязевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="301" type="checkbox" />
+                <label for="301">Савеловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="302" type="checkbox" />
+                <label for="302">Белорусская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="303" type="checkbox" />
+                <label for="303">Беговая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="304" type="checkbox" />
+                <label for="304">Тестовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="305" type="checkbox" />
+                <label for="305">Фили</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="306" type="checkbox" />
+                <label for="306">Славянский бульвар</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="307" type="checkbox" />
+                <label for="307">Кунцевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="308" type="checkbox" />
+                <label for="308">Рабочий Посёлок</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="309" type="checkbox" />
+                <label for="309">Сетунь</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="310" type="checkbox" />
+                <label for="310">Немчиновка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="311" type="checkbox" />
+                <label for="311">Сколково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="312" type="checkbox" />
+                <label for="312">Баковка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="313" type="checkbox" />
+                <label for="313">Одинцово</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-subway">
+            <h3 class="geo-list__title"><span class="m-line-d2">D2</span>МЦД-2 (Курско-Рижский)</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="314" type="checkbox" />
+                <label for="314">Нахабино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="315" type="checkbox" />
+                <label for="315">Аникеевка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="316" type="checkbox" />
+                <label for="316">Опалиха</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="317" type="checkbox" />
+                <label for="317">Красногорская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="318" type="checkbox" />
+                <label for="318">Павшино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="319" type="checkbox" />
+                <label for="319">Пенягино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="320" type="checkbox" />
+                <label for="320">Волоколамская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="321" type="checkbox" />
+                <label for="321">Трикотажная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="322" type="checkbox" />
+                <label for="322">Тушинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="323" type="checkbox" />
+                <label for="323">Щукинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="324" type="checkbox" />
+                <label for="324">Стрешнево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="325" type="checkbox" />
+                <label for="325">Красный Балтиец</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="326" type="checkbox" />
+                <label for="326">Гражданская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="327" type="checkbox" />
+                <label for="327">Дмитровская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="328" type="checkbox" />
+                <label for="328">Марьина Роща</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="329" type="checkbox" />
+                <label for="329">Рижская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="330" type="checkbox" />
+                <label for="330">Площадь трёх вокзалов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="331" type="checkbox" />
+                <label for="331">Курская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="332" type="checkbox" />
+                <label for="332">Москва-Товарная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="333" type="checkbox" />
+                <label for="333">Калитники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="334" type="checkbox" />
+                <label for="334">Новохохловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="335" type="checkbox" />
+                <label for="335">Текстильщики</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="336" type="checkbox" />
+                <label for="336">Печатники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="337" type="checkbox" />
+                <label for="337">Люблино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="338" type="checkbox" />
+                <label for="338">Депо</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="339" type="checkbox" />
+                <label for="339">Перерва</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="340" type="checkbox" />
+                <label for="340">Курьяново</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="341" type="checkbox" />
+                <label for="341">Москворечье</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="342" type="checkbox" />
+                <label for="342">Царицыно</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="343" type="checkbox" />
+                <label for="343">Покровское</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="344" type="checkbox" />
+                <label for="344">Красный Строитель</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="345" type="checkbox" />
+                <label for="345">Битца</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="346" type="checkbox" />
+                <label for="346">Бутово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="347" type="checkbox" />
+                <label for="347">Щербинка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="348" type="checkbox" />
+                <label for="348">Остафьево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="349" type="checkbox" />
+                <label for="349">Силикатная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="350" type="checkbox" />
+                <label for="350">Подольск</label>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <div class="geo-modal__footer">
+          <div>
+            <button class="button button-white" type="button">Сбросить</button>
+            <button class="button button-main" type="button">Применить</button>
+          </div>
+        </div>
+        <button type="button" class="button button-close">
+          <span class="visually-hidden">Закрыть фильтр</span>
+        </button>
+      </section>
+    </div>
+    <div class="geo-modal geo-modal--area">
+      <section class="geo-modal__wrapper">
+        <h2 class="visually-hidden">Фильтр по районам</h2>
+        <div class="geo-modal__header">
+          <div class="search-field geo-modal__input">
+            <label class="visually-hidden" for="search-region">Название района</label>
+            <input id="search-region" type="text" placeholder="Название района" inputmode="search" autocomplete="off" />
+            <button class="button search-field__button" type="button">
+              <span class="visually-hidden">Удалить текст</span>
+              <span>
+                <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                  <path
+                    stroke="none"
+                    d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+            <div class="search-field__icon"></div>
+          </div>
+          <section class="selected-properties geo-modal__selected">
+            <h3 class="visually-hidden">Выбранные районы</h3>
+            <ul>
+              <li>
+                <span>Войковский</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span class="">Красносельский</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span>Войковский</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+              <li>
+                <span class="">Красносельский</span>
+                <button class="button button-close" type="button">
+                  <span class="visually-hidden">Удалить свойство</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <div class="geo-modal__hints hints">
+            <div class="hints__section hints__section-area">
+              <p class="hints__title hints__title-area">Район:</p>
+              <ul>
+                <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+                <li>Рудничный р-н, Геленджик, Краснодарский край</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section class="geo-list geo-modal__body">
+          <h2 class="visually-hidden">Список районов Москвы</h2>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+          <section class="geo-list__item geo-list__item-area">
+            <h3 class="geo-list__title">
+              <input class="input-checkbox" id="yuao" type="checkbox" />
+              <label for="yuao">ЮАО</label>
+            </h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="500" type="checkbox" />
+                <label for="500">Бирюлёво Восточное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="501" type="checkbox" />
+                <label for="501">Бирюлёво Западное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="502" type="checkbox" />
+                <label for="502">Братеево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="503" type="checkbox" />
+                <label for="503">Даниловский</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="504" type="checkbox" />
+                <label for="504">Донской</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="505" type="checkbox" />
+                <label for="505">Зябликово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="506" type="checkbox" />
+                <label for="506">Москворечье Сабурово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="507" type="checkbox" />
+                <label for="507">Нагатино-Садовники</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="508" type="checkbox" />
+                <label for="508">Нагатинский Затон</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="509" type="checkbox" />
+                <label for="509">Нагорный</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="510" type="checkbox" />
+                <label for="510">Орехово-Борисово Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="511" type="checkbox" />
+                <label for="511">Орехово-Борисово Южное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="512" type="checkbox" />
+                <label for="512">Царицино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="513" type="checkbox" />
+                <label for="513">Чертаново Северное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="514" type="checkbox" />
+                <label for="514">Чертаново Центральное</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="515" type="checkbox" />
+                <label for="515">Чертаново южное</label>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <div class="geo-modal__footer">
+          <div>
+            <button class="button button-white" type="button">Сбросить</button>
+            <button class="button button-main" type="button">Применить</button>
+          </div>
+        </div>
+        <button type="button" class="button button-close">
+          <span class="visually-hidden">Закрыть фильтр</span>
+        </button>
+      </section>
+    </div>
   </body>
 </html>

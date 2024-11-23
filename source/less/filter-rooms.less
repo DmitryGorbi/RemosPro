@@ -33,12 +33,13 @@
 
   .filter-rooms__list {
     flex-direction: column;
-    row-gap: 10px;
+    gap: 8px 0;
     width: 200px;
     font-size: 15px;
 
     & li {
-      display: flex;
+      display: grid;
+      grid-template-columns: max-content 1fr;
       align-items: center;
     }
 
@@ -49,10 +50,35 @@
     }
 
     & input {
-      width: 19px;
-      height: 18px;
+      position: relative;
+      width: 17px;
+      height: 17px;
+      background: none;
       border-radius: 3px;
-      accent-color: var(--basic-green);
+      border: 1px solid #666;
+      -webkit-appearance: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transition: transform 0.2s ease-in-out;
+        border-bottom: 2px solid var(--basic-green);
+        border-right: 2px solid var(--basic-green);
+        transform: translateX(-50%) rotate(40deg) scale(0);
+        width: 40%;
+        height: 60%;
+      }
+    }
+
+    & input:checked {
+      border-color: var(--basic-green);
+      box-shadow: inset 0 0 20px 3px var(--light-green);
+
+      &::before {
+        transform: translateX(-50%) rotate(40deg) scale(1);
+      }
     }
   }
 }

@@ -1,3 +1,62 @@
-.subway-list {
-  
+.geo-list {
+  padding: 15px 0 15px;
+}
+
+.geo-list__item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  & li {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    line-height: 20px;
+  }
+
+  & label {
+    flex-grow: 1;
+    line-height: 22px;
+  }
+}
+
+.geo-list__title {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 22px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    font-size: 14px;
+    color: var(--white);
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .geo-list__item ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 15px;
+  }
+
+  .geo-list__item input {
+    width: 20px;
+    height: 20px;
+  }
 }

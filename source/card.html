@@ -658,7 +658,7 @@
                   <span class="visually-hidden">Закрыть окно</span>
                 </button>
                 <label class="visually-hidden" for="price-subscribe-mob">Введите свой e-mail</label>
-                <input class="input" type="email" id="price-subscribe-mob" placeholder="Введите свой e-mail" autofocus inputmode="email" />
+                <input class="input" type="email" id="price-subscribe-mob" placeholder="Введите свой e-mail" autofocus nputmode="email" autocomplete="email" />
                 <button class="button button-main" type="button">Подписаться</button>
                 <p>При подписке вы принимаете условия пользовательского соглашения</p>
               </div>
@@ -1745,7 +1745,7 @@
                 <li class="icon-tv">Телевизор</li>
                 <li class="icon-shower">Душевая кабина</li>
                 <li class="icon-bath">Ванная</li>
-                <li class="icon-interne">Интернет</li>
+                <li class="icon-internet">Интернет</li>
                 <li class="icon-parking">Парковка</li>
                 <li class="icon-gas">Газ</li>
                 <li class="icon-electricity">Электричество</li>
@@ -1831,7 +1831,7 @@
                     <span class="visually-hidden">Закрыть окно</span>
                   </button>
                   <label class="visually-hidden" for="price-subscribe">Введите свой e-mail</label>
-                  <input class="input" type="email" id="price-subscribe" placeholder="Введите свой e-mail" />
+                  <input class="input" type="email" id="price-subscribe" inputmode="email" autocomplete="email" placeholder="Введите свой e-mail" />
                   <button class="button button-main" type="button">Подписаться</button>
                   <p>При подписке вы принимаете условия пользовательского соглашения</p>
                 </div>
@@ -1894,7 +1894,7 @@
               <p class="seller__offers">
                 <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
               </p>
-              <button class="button button-main" type="button">Показать телефон</button>
+              <a class="button button-main">Показать телефон</a>
             </section>
           </div>
           <section class="offer-aside__statistics">
@@ -2553,7 +2553,7 @@
           </label>
           <input class="input input--field" id="abuser__tel" type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
           <label class="visually-hidden" for="abuser__email">
-            <span>Email адресс</span>
+            <span>Email адрес</span>
           </label>
           <input
             class="input input--field"
@@ -2562,7 +2562,6 @@
             name="item[user_email]"
             inputmode="email"
             autocomplete="email"
-            value=""
             placeholder="Ваша электронная почта"
             data-validate="email"
             required
@@ -2571,7 +2570,7 @@
             <span>Ваше сообщние</span>
           </label>
           <textarea class="textarea" id="abuser__message" name="item[user_text]" autocomplete="off" data-validate="noempty" placeholder="Текст жалобы"></textarea>
-          <button class="button button-main" type="button" data-target=".abuse-form" data-action="abuse/add" data-callback="addAbuse">Отправить</button>
+          <button class="button button-main" type="button">Отправить</button>
         </div>
       </div>
     </div>

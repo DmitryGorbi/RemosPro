@@ -1,0 +1,54 @@
+.search-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-controls__item {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+  padding: 13px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--light-gray);
+  }
+}
+
+.search-controls__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: var(--basic-green);
+
+  & svg {
+    stroke: white;
+  }
+}
+
+.search-controls__icon--metro {
+  & svg {
+    fill: white;
+  }
+}
+
+.search-controls__name {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 1px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/icons/arrow.svg');
+    transform: rotate(-90deg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
