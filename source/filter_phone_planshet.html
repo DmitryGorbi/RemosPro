@@ -206,43 +206,43 @@
               <legend class="visually-hidden-desktop">Количество комнат</legend>
               <ul class="filter-rooms__list">
                 <li>
-                  <input id="studio" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="200" />
+                  <input id="studio" class="v-h-m-t" type="checkbox" />
                   <label for="studio">
                     <span class="filter-rooms__control">Студия</span>
                   </label>
                 </li>
                 <li>
-                  <input id="one__room" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="1" checked />
+                  <input id="one__room" class="v-h-m-t" type="checkbox" checked />
                   <label for="one__room">
                     <span class="filter-rooms__control">1<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="two__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="2" />
+                  <input id="two__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="two__rooms">
                     <span class="filter-rooms__control">2<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="three__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="3" />
+                  <input id="three__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="three__rooms">
                     <span class="filter-rooms__control">3<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="four__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="4" />
+                  <input id="four__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="four__rooms">
                     <span class="filter-rooms__control">4<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="five__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="5" />
+                  <input id="five__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="five__rooms">
                     <span class="filter-rooms__control">5<span class="v-h-m-t">-комнатная</span></span>
                   </label>
                 </li>
                 <li>
-                  <input id="six__rooms" class="v-h-m-t" type="checkbox" name="filter[rooms][]" value="6" />
+                  <input id="six__rooms" class="v-h-m-t" type="checkbox" />
                   <label for="six__rooms">
                     <span class="filter-rooms__control">6+<span class="v-h-m-t"> комнат и более</span></span>
                   </label>
@@ -257,13 +257,13 @@
                 <li>
                   <label for="min__price">Минимум</label>
                   <div class="input-wrap-rub">
-                    <input id="min__price" class="input input--field" type="number" name="filter[price][from]" value="" inputmode="numeric" placeholder="Цена от" />
+                    <input id="min__price" class="input input--field" type="number" inputmode="numeric" placeholder="Цена от" />
                   </div>
                 </li>
                 <li>
                   <label for="max__price">Максимум</label>
                   <div class="input-wrap-rub">
-                    <input id="max__price" class="input input--field" type="number" name="filter[price][to]" value="" inputmode="numeric" placeholder="до" />
+                    <input id="max__price" class="input input--field" type="number" inputmode="numeric" placeholder="до" />
                   </div>
                 </li>
               </ul>
@@ -459,909 +459,903 @@
             </fieldset>
           </div>
           <div class="filter__item">
-            <fieldset class="filter__fieldset filter__fieldset-add">
+            <fieldset id="filter__addition" class="filter__fieldset filter__fieldset-add">
               <legend class="visually-hidden">Расширенные фильтры поиска</legend>
-              <div id="filter__addition" class="filter__select filter__select-add">
-                <div class="filter-add">
-                  <div class="filter-add__header visually-hidden-small-mobile">
-                    <h3 class="filter-add__title">Фильтры</h3>
-                    <button type="button" class="button button-close" aria-expanded="false"><span class="visually-hidden">Закрыть фильтр</span></button>
-                  </div>
-                  <div class="filter-add__container">
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Площадь, м²</legend>
-                      <div class="filter-add__sublist">
-                        <div>
-                          <p>Общая</p>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">от</span>
-                            <input class="input input--field" type="number" name="filter[area_all][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
-                          </label>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">до</span>
-                            <input class="input input--field" type="number" name="filter[area_all][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
-                          </label>
-                        </div>
-                        <div>
-                          <p>Жилая</p>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">от</span>
-                            <input class="input input--field" type="number" name="filter[area_living][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
-                          </label>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">до</span>
-                            <input class="input input--field" type="number" name="filter[area_living][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
-                          </label>
-                        </div>
-                        <div>
-                          <p>Кухня</p>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">от</span>
-                            <input class="input input--field" type="number" name="filter[area_kitchen][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
-                          </label>
-                          <label class="filter-add__label filter-add__label--miter">
-                            <span class="visually-hidden">до</span>
-                            <input class="input input--field" type="number" name="filter[area_kitchen][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Апартаменты</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="notapart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="2" />
-                        <label for="notapart">
-                          <span class="pseudo-checkbox">Без апартаментов</span>
-                        </label>
-                        <input id="apart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="1" />
-                        <label for="apart">
-                          <span class="pseudo-checkbox">Только апартаменты</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Планировка</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="isolated" class="visually-hidden input" type="radio" name="filter[rooms_type]" value="100" />
-                        <label for="isolated">
-                          <span class="pseudo-checkbox">Изолированная</span>
-                        </label>
-                        <input id="adjacent" class="visually-hidden input" type="radio" name="filter[rooms_type]" value="200" />
-                        <label for="adjacent">
-                          <span class="pseudo-checkbox">Смежная</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[is_plan]" value="1" />
-                          <span>С фото планировки</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Санузел</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="shared__bathroom" class="visually-hidden input" type="radio" name="filter[bathroom_type]" value="1" />
-                        <label for="shared__bathroom">
-                          <span class="pseudo-checkbox">Совмещенный</span>
-                        </label>
-                        <input id="separate__bathroom" class="visually-hidden input" type="radio" name="filter[bathroom_type]" value="2" />
-                        <label for="separate__bathroom">
-                          <span class="pseudo-checkbox">Раздельный</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[many_bathrooms]" value="1" />
-                          <span>Несколько</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип ремонта</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="designer__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="300" />
-                        <label for="designer__repair">
-                          <span class="pseudo-checkbox">Дизайнерский</span>
-                        </label>
-                        <input id="euro__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="200" />
-                        <label for="euro__repair">
-                          <span class="pseudo-checkbox">Евро</span>
-                        </label>
-                        <input id="cosmetic__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="100" />
-                        <label for="cosmetic__repair">
-                          <span class="pseudo-checkbox">Косметический</span>
-                        </label>
-                        <input id="absent__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="10" />
-                        <label for="absent__repair">
-                          <span class="pseudo-checkbox">Отсутствует</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Этаж</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[floor][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[floor][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[floor_no_first]" value="100" />
-                          <span>Не первый</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[floor_no_last]" value="100" />
-                          <span>Не последний</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[floor_last]" value="100" />
-                          <span>Последний</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип дома</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="panel" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="100" />
-                        <label for="panel">
-                          <span class="pseudo-checkbox">Панельный</span>
-                        </label>
-                        <input id="brick__monolithic" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="200" />
-                        <label for="brick__monolithic">
-                          <span class="pseudo-checkbox">Кирпично-монолитный</span>
-                        </label>
-                        <input id="monolithic" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="300" />
-                        <label for="monolithic">
-                          <span class="pseudo-checkbox">Монолитный</span>
-                        </label>
-                        <input id="block" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="400" />
-                        <label for="block">
-                          <span class="pseudo-checkbox">Блочный</span>
-                        </label>
-                        <input id="brick" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="500" />
-                        <label for="brick">
-                          <span class="pseudo-checkbox">Кирпичный</span>
-                        </label>
-                        <input id="wood" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="600" />
-                        <label for="wood">
-                          <span class="pseudo-checkbox">Деревянный</span>
-                        </label>
-                        <input id="stalin" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="700" />
-                        <label for="stalin">
-                          <span class="pseudo-checkbox">Сталинский</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Этажность дома</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Год постройки</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[building_year][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[building_year][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Наличие лифтов</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="elevator" class="visually-hidden input" type="radio" name="filter[lift_type]" value="100" />
-                        <label for="elevator">
-                          <span class="pseudo-radio">Есть любой</span>
-                        </label>
-                        <input id="big__elevator" class="visually-hidden input" type="radio" name="filter[lift_type]" value="200" />
-                        <label for="big__elevator">
-                          <span class="pseudo-radio">Есть грузовой</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Наличие балкона</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="balcony" class="visually-hidden input" type="checkbox" name="filter[balcony_type][]" value="100" />
-                        <label for="balcony">
-                          <span class="pseudo-checkbox">Балкон</span>
-                        </label>
-                        <input id="loggia" class="visually-hidden input" type="checkbox" name="filter[balcony_type][]" value="200" />
-                        <label for="loggia">
-                          <span class="pseudo-checkbox">Лоджия</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Вид из окна</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="street__view" class="visually-hidden input" type="checkbox" name="filter[windows][]" value="300" />
-                        <label for="street__view">
-                          <span class="pseudo-checkbox">На улицу</span>
-                        </label>
-                        <input id="view__yard" class="visually-hidden input" type="checkbox" name="filter[windows][]" value="200" />
-                        <label for="view__yard">
-                          <span class="pseudo-checkbox">Во двор</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип продажи</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="alternative" class="visually-hidden input" type="radio" name="filter[sale_type]" value="100" />
-                        <label for="alternative">
-                          <span class="pseudo-checkbox">Альтернативная</span>
-                        </label>
-                        <input id="free__sale" class="visually-hidden input" type="radio" name="filter[sale_type]" value="200" />
-                        <label for="free__sale">
-                          <span class="pseudo-checkbox">Свободная</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
-                          <span>Возможна ипотека</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Парковка</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="underground" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="200" />
-                        <label for="underground">
-                          <span class="pseudo-checkbox">Подземная</span>
-                        </label>
-                        <input id="ground" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="300" />
-                        <label for="ground">
-                          <span class="pseudo-checkbox">Наземная</span>
-                        </label>
-                        <input id="multi__level" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="400" />
-                        <label for="multi__level">
-                          <span class="pseudo-checkbox">Многоуровневая</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Время до метро, мин</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="on__transport" class="visually-hidden input" type="radio" name="filter[mitero_time_type]" value="100" />
-                        <label for="on__transport">
-                          <span class="pseudo-checkbox">Транспортом</span>
-                        </label>
-                        <input id="on__foot" class="visually-hidden input" type="radio" name="filter[mitero_time_type]" value="200" />
-                        <label for="on__foot">
-                          <span class="pseudo-checkbox">Пешком</span>
-                        </label>
-                        <div class="filter-add__way">
-                          <input id="5__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="5" />
-                          <label for="5__min">
-                            <span class="pseudo-checkbox">5 м</span>
-                          </label>
-                          <input id="7__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="7" />
-                          <label for="7__min">
-                            <span class="pseudo-checkbox">7 м</span>
-                          </label>
-                          <input id="10__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="10" />
-                          <label for="10__min">
-                            <span class="pseudo-checkbox">10 м</span>
-                          </label>
-                          <input id="15__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="15" />
-                          <label for="15__min">
-                            <span class="pseudo-checkbox">15 м</span>
-                          </label>
-                          <input id="20__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="20" />
-                          <label for="20__min">
-                            <span class="pseudo-checkbox">20 м</span>
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Дата публикации</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="one__day" class="visually-hidden input" type="radio" data-value="50" data-selected="false" value="1" name="publication__date" value="100" />
-                        <label for="one__day">
-                          <span class="pseudo-checkbox">за 1 день</span>
-                        </label>
-                        <input id="two__days" class="visually-hidden input" type="radio" data-value="100" data-selected="false" value="2" name="publication__date" value="200" />
-                        <label for="two__days">
-                          <span class="pseudo-checkbox">за 2 дня</span>
-                        </label>
-                        <input id="one__week" class="visually-hidden input" type="radio" data-value="200" data-selected="false" value="one__week" name="publication__date" value="100" />
-                        <label for="one__week">
-                          <span class="pseudo-checkbox">за неделю</span>
-                        </label>
-                        <input id="one__month" class="visually-hidden input" type="radio" data-value="300" data-selected="false" value="one__month" name="publication__date" value="200" />
-                        <label for="one__month">
-                          <span class="pseudo-checkbox">за месяц</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Объявление содержит</legend>
-                      <div class="filter-add__wrapper">
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
-                          <span>Фотографии</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
-                          <span>Видео</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Условия сделки</legend>
-                      <div class="filter-add__wrapper">
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[owner_deposit]" value="1" />
-                          <span>Без залога</span>
-                        </label>
-                        <label class="filter-add__label filter-add__label--checkbox">
-                          <input class="input-checkbox" type="checkbox" name="filter[no_prepaid]" value="1" />
-                          <span>Без предоплаты</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset filter-add__search">
-                      <legend class="filter-add__legend">
-                        Поиск по ключевым<br />
-                        словам
-                      </legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--keywords">
-                        <div>
-                          <label for="keywords">Объявления содержат слова:</label>
-                          <div class="search search--keywords">
-                            <input id="keywords" class="input input--field" type="text" name="add" data-name="keywords" placeholder="Введите слово или фразу" inputmode="search" autocomplete="off" />
-                            <button class="button search__button" type="button"><span>Добавить</span></button>
-                          </div>
-                        </div>
-                        <div>
-                          <label for="exclude__keywords">Объявления исключают слова:</label>
-                          <div class="search search--keywords">
-                            <input
-                              id="exclude__keywords"
-                              class="input input--field"
-                              type="text"
-                              name="add"
-                              data-name="exclude_keywords"
-                              placeholder="Введите слово или фразу"
-                              inputmode="search"
-                              autocomplete="off"
-                            />
-                            <button class="button search__button" type="button"><span>Добавить</span></button>
-                          </div>
-                        </div>
-                        <div>
-                          <label for="locality__keywords">Название населённого пункта содержит слово:</label>
-                          <div class="search search--keywords">
-                            <input
-                              id="locality__keywords"
-                              class="input input--field"
-                              type="text"
-                              name="add"
-                              data-name="locality_keywords"
-                              placeholder="Введите слово или фразу"
-                              inputmode="search"
-                              autocomplete="off"
-                            />
-                            <button class="button search__button" type="button"><span>Добавить</span></button>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Срок аренды</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="long__rent" class="visually-hidden input" type="radio" name="filter[rent_time][]" value="100" />
-                        <label for="long__rent">
-                          <span class="pseudo-radio">Длительно</span>
-                        </label>
-                        <input id="short__rent" class="visually-hidden input" type="radio" name="filter[rent_time][]" value="200" />
-                        <label for="short__rent">
-                          <span class="pseudo-radio">Посуточно</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Удобства</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="room__furniture" class="visually-hidden input" type="checkbox" name="filter[is_room_furniture]" value="1" />
-                        <label for="room__furniture">
-                          <span class="pseudo-checkbox">Мебель в комнатах</span>
-                        </label>
-                        <input id="dishwasher" class="visually-hidden input" type="checkbox" name="filter[is_dishwasher]" value="1" />
-                        <label for="dishwasher">
-                          <span class="pseudo-checkbox">Посудомоечная машина</span>
-                        </label>
-                        <input id="tv" class="visually-hidden input" type="checkbox" name="filter[is_tv]" value="1" />
-                        <label for="tv">
-                          <span class="pseudo-checkbox">Телевизор</span>
-                        </label>
-                        <input id="kitchen__furniture" class="visually-hidden input" type="checkbox" name="filter[is_kitchen_furniture]" value="1" />
-                        <label for="kitchen__furniture">
-                          <span class="pseudo-checkbox">Мебель на кухне</span>
-                        </label>
-                        <input id="washer" class="visually-hidden input" type="checkbox" name="filter[is_washer]" value="1" />
-                        <label for="washer">
-                          <span class="pseudo-checkbox">Стиральная машина</span>
-                        </label>
-                        <input id="internet" class="visually-hidden input" type="checkbox" name="filter[is_internet]" value="1" />
-                        <label for="internet">
-                          <span class="pseudo-checkbox">Интернет</span>
-                        </label>
-                        <input id="fridge" class="visually-hidden input" type="checkbox" name="filter[is_fridge]" value="1" />
-                        <label for="fridge">
-                          <span class="pseudo-checkbox">Холодильник</span>
-                        </label>
-                        <input id="conditioner" class="visually-hidden input" type="checkbox" name="filter[is_conditioner]" value="1" />
-                        <label for="conditioner">
-                          <span class="pseudo-checkbox">Кондиционер</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Условия проживания</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="kids" class="visually-hidden input" type="checkbox" name="filter[is_kids]" value="1" />
-                        <label for="kids">
-                          <span class="pseudo-checkbox">Можно с детьми</span>
-                        </label>
-                        <input id="animals" class="visually-hidden input" type="checkbox" name="filter[is_animals]" value="1" />
-                        <label for="animals">
-                          <span class="pseudo-checkbox">Можно с животными</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Комнат в квартире</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="two__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="2" />
-                        <label for="two__room">
-                          <span class="pseudo-checkbox">2</span>
-                        </label>
-                        <input id="three__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="3" />
-                        <label for="three__room">
-                          <span class="pseudo-checkbox">3</span>
-                        </label>
-                        <input id="four__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="4" />
-                        <label for="four__room">
-                          <span class="pseudo-checkbox">4</span>
-                        </label>
-                        <input id="five__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="5" />
-                        <label for="five__room">
-                          <span class="pseudo-checkbox">5</span>
-                        </label>
-                        <input id="six__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="6" />
-                        <label for="six__room">
-                          <span class="pseudo-checkbox">6</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Комнат на покупку</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="one__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="1" />
-                        <label for="one__rooms__deal">
-                          <span class="pseudo-checkbox">1</span>
-                        </label>
-                        <input id="two__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="2" />
-                        <label for="two__rooms__deal">
-                          <span class="pseudo-checkbox">2</span>
-                        </label>
-                        <input id="three__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="3" />
-                        <label for="three__rooms__deal">
-                          <span class="pseudo-checkbox">3</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип дома</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="type__house" class="visually-hidden input" type="radio" data-value="50" data-selected="false" value="1" name="publication__date" value="100" />
-                        <label for="type__house">
-                          <span class="pseudo-checkbox">Дом</span>
-                        </label>
-                        <input id="type__townhouse" class="visually-hidden input" type="radio" data-value="100" data-selected="false" value="2" name="publication__date" value="200" />
-                        <label for="type__townhouse">
-                          <span class="pseudo-checkbox">Таунхаус</span>
-                        </label>
-                        <input id="type__part" class="visually-hidden input" type="radio" data-value="200" data-selected="false" value="one__week" name="publication__date" value="100" />
-                        <label for="type__part">
-                          <span class="pseudo-checkbox">Часть дома</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Площадь дома</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
+              <div class="filter-add">
+                <div class="filter-add__body">
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь, м²</legend>
+                    <div class="filter-add__sublist">
+                      <div>
+                        <p>Общая</p>
                         <label class="filter-add__label filter-add__label--miter">
                           <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[area_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                          <input class="input input--field" type="number" name="filter[area_all][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
                         </label>
+                        <label class="filter-add__label filter-add__label--miter">
+                          <span class="visually-hidden">до</span>
+                          <input class="input input--field" type="number" name="filter[area_all][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </label>
+                      </div>
+                      <div>
+                        <p>Жилая</p>
+                        <label class="filter-add__label filter-add__label--miter">
+                          <span class="visually-hidden">от</span>
+                          <input class="input input--field" type="number" name="filter[area_living][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </label>
+                        <label class="filter-add__label filter-add__label--miter">
+                          <span class="visually-hidden">до</span>
+                          <input class="input input--field" type="number" name="filter[area_living][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </label>
+                      </div>
+                      <div>
+                        <p>Кухня</p>
+                        <label class="filter-add__label filter-add__label--miter">
+                          <span class="visually-hidden">от</span>
+                          <input class="input input--field" type="number" name="filter[area_kitchen][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </label>
+                        <label class="filter-add__label filter-add__label--miter">
+                          <span class="visually-hidden">до</span>
+                          <input class="input input--field" type="number" name="filter[area_kitchen][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Апартаменты</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="notapart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="2" />
+                      <label for="notapart">
+                        <span class="pseudo-checkbox">Без апартаментов</span>
+                      </label>
+                      <input id="apart" class="visually-hidden input" type="radio" name="filter[is_apartment]" value="1" />
+                      <label for="apart">
+                        <span class="pseudo-checkbox">Только апартаменты</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Планировка</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="isolated" class="visually-hidden input" type="radio" name="filter[rooms_type]" value="100" />
+                      <label for="isolated">
+                        <span class="pseudo-checkbox">Изолированная</span>
+                      </label>
+                      <input id="adjacent" class="visually-hidden input" type="radio" name="filter[rooms_type]" value="200" />
+                      <label for="adjacent">
+                        <span class="pseudo-checkbox">Смежная</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[is_plan]" value="1" />
+                        <span>С фото планировки</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Санузел</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="shared__bathroom" class="visually-hidden input" type="radio" name="filter[bathroom_type]" value="1" />
+                      <label for="shared__bathroom">
+                        <span class="pseudo-checkbox">Совмещенный</span>
+                      </label>
+                      <input id="separate__bathroom" class="visually-hidden input" type="radio" name="filter[bathroom_type]" value="2" />
+                      <label for="separate__bathroom">
+                        <span class="pseudo-checkbox">Раздельный</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[many_bathrooms]" value="1" />
+                        <span>Несколько</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип ремонта</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="designer__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="300" />
+                      <label for="designer__repair">
+                        <span class="pseudo-checkbox">Дизайнерский</span>
+                      </label>
+                      <input id="euro__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="200" />
+                      <label for="euro__repair">
+                        <span class="pseudo-checkbox">Евро</span>
+                      </label>
+                      <input id="cosmetic__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="100" />
+                      <label for="cosmetic__repair">
+                        <span class="pseudo-checkbox">Косметический</span>
+                      </label>
+                      <input id="absent__repair" class="visually-hidden input" type="checkbox" name="filter[repair][]" value="10" />
+                      <label for="absent__repair">
+                        <span class="pseudo-checkbox">Отсутствует</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Этаж</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[floor][from]" value="" placeholder="от" autocomplete="off" inputmode="numeric" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[floor][to]" value="" placeholder="до" autocomplete="off" inputmode="numeric" />
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[floor_no_first]" value="100" />
+                        <span>Не первый</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[floor_no_last]" value="100" />
+                        <span>Не последний</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[floor_last]" value="100" />
+                        <span>Последний</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип дома</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="panel" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="100" />
+                      <label for="panel">
+                        <span class="pseudo-checkbox">Панельный</span>
+                      </label>
+                      <input id="brick__monolithic" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="200" />
+                      <label for="brick__monolithic">
+                        <span class="pseudo-checkbox">Кирпично-монолитный</span>
+                      </label>
+                      <input id="monolithic" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="300" />
+                      <label for="monolithic">
+                        <span class="pseudo-checkbox">Монолитный</span>
+                      </label>
+                      <input id="block" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="400" />
+                      <label for="block">
+                        <span class="pseudo-checkbox">Блочный</span>
+                      </label>
+                      <input id="brick" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="500" />
+                      <label for="brick">
+                        <span class="pseudo-checkbox">Кирпичный</span>
+                      </label>
+                      <input id="wood" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="600" />
+                      <label for="wood">
+                        <span class="pseudo-checkbox">Деревянный</span>
+                      </label>
+                      <input id="stalin" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="700" />
+                      <label for="stalin">
+                        <span class="pseudo-checkbox">Сталинский</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажность дома</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Год постройки</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[building_year][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[building_year][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Наличие лифтов</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="elevator" class="visually-hidden input" type="radio" name="filter[lift_type]" value="100" />
+                      <label for="elevator">
+                        <span class="pseudo-radio">Есть любой</span>
+                      </label>
+                      <input id="big__elevator" class="visually-hidden input" type="radio" name="filter[lift_type]" value="200" />
+                      <label for="big__elevator">
+                        <span class="pseudo-radio">Есть грузовой</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Наличие балкона</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="balcony" class="visually-hidden input" type="checkbox" name="filter[balcony_type][]" value="100" />
+                      <label for="balcony">
+                        <span class="pseudo-checkbox">Балкон</span>
+                      </label>
+                      <input id="loggia" class="visually-hidden input" type="checkbox" name="filter[balcony_type][]" value="200" />
+                      <label for="loggia">
+                        <span class="pseudo-checkbox">Лоджия</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Вид из окна</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="street__view" class="visually-hidden input" type="checkbox" name="filter[windows][]" value="300" />
+                      <label for="street__view">
+                        <span class="pseudo-checkbox">На улицу</span>
+                      </label>
+                      <input id="view__yard" class="visually-hidden input" type="checkbox" name="filter[windows][]" value="200" />
+                      <label for="view__yard">
+                        <span class="pseudo-checkbox">Во двор</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип продажи</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="alternative" class="visually-hidden input" type="radio" name="filter[sale_type]" value="100" />
+                      <label for="alternative">
+                        <span class="pseudo-checkbox">Альтернативная</span>
+                      </label>
+                      <input id="free__sale" class="visually-hidden input" type="radio" name="filter[sale_type]" value="200" />
+                      <label for="free__sale">
+                        <span class="pseudo-checkbox">Свободная</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
+                        <span>Возможна ипотека</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Парковка</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="underground" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="200" />
+                      <label for="underground">
+                        <span class="pseudo-checkbox">Подземная</span>
+                      </label>
+                      <input id="ground" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="300" />
+                      <label for="ground">
+                        <span class="pseudo-checkbox">Наземная</span>
+                      </label>
+                      <input id="multi__level" class="visually-hidden input" type="checkbox" name="filter[parking_type][]" value="400" />
+                      <label for="multi__level">
+                        <span class="pseudo-checkbox">Многоуровневая</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Время до метро, мин</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="on__transport" class="visually-hidden input" type="radio" name="filter[mitero_time_type]" value="100" />
+                      <label for="on__transport">
+                        <span class="pseudo-checkbox">Транспортом</span>
+                      </label>
+                      <input id="on__foot" class="visually-hidden input" type="radio" name="filter[mitero_time_type]" value="200" />
+                      <label for="on__foot">
+                        <span class="pseudo-checkbox">Пешком</span>
+                      </label>
+                      <div class="filter-add__way">
+                        <input id="5__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="5" />
+                        <label for="5__min">
+                          <span class="pseudo-checkbox">5 м</span>
+                        </label>
+                        <input id="7__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="7" />
+                        <label for="7__min">
+                          <span class="pseudo-checkbox">7 м</span>
+                        </label>
+                        <input id="10__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="10" />
+                        <label for="10__min">
+                          <span class="pseudo-checkbox">10 м</span>
+                        </label>
+                        <input id="15__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="15" />
+                        <label for="15__min">
+                          <span class="pseudo-checkbox">15 м</span>
+                        </label>
+                        <input id="20__min" class="visually-hidden input" type="radio" name="filter[mitero_time]" value="20" />
+                        <label for="20__min">
+                          <span class="pseudo-checkbox">20 м</span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Дата публикации</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="one__day" class="visually-hidden input" type="radio" data-value="50" data-selected="false" value="1" name="publication__date" value="100" />
+                      <label for="one__day">
+                        <span class="pseudo-checkbox">за 1 день</span>
+                      </label>
+                      <input id="two__days" class="visually-hidden input" type="radio" data-value="100" data-selected="false" value="2" name="publication__date" value="200" />
+                      <label for="two__days">
+                        <span class="pseudo-checkbox">за 2 дня</span>
+                      </label>
+                      <input id="one__week" class="visually-hidden input" type="radio" data-value="200" data-selected="false" value="one__week" name="publication__date" value="100" />
+                      <label for="one__week">
+                        <span class="pseudo-checkbox">за неделю</span>
+                      </label>
+                      <input id="one__month" class="visually-hidden input" type="radio" data-value="300" data-selected="false" value="one__month" name="publication__date" value="200" />
+                      <label for="one__month">
+                        <span class="pseudo-checkbox">за месяц</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Объявление содержит</legend>
+                    <div class="filter-add__wrapper">
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
+                        <span>Фотографии</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[is_mortgage]" value="1" />
+                        <span>Видео</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия сделки</legend>
+                    <div class="filter-add__wrapper">
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[owner_deposit]" value="1" />
+                        <span>Без залога</span>
+                      </label>
+                      <label class="filter-add__label filter-add__label--checkbox">
+                        <input class="input-checkbox" type="checkbox" name="filter[no_prepaid]" value="1" />
+                        <span>Без предоплаты</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset filter-add__search">
+                    <legend class="filter-add__legend">
+                      Поиск по ключевым<br />
+                      словам
+                    </legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--keywords">
+                      <div>
+                        <label for="keywords">Объявления содержат слова:</label>
+                        <div class="search search--keywords">
+                          <input id="keywords" class="input input--field" type="text" name="add" data-name="keywords" placeholder="Введите слово или фразу" inputmode="search" autocomplete="off" />
+                          <button class="button search__button" type="button"><span>Добавить</span></button>
+                        </div>
+                      </div>
+                      <div>
+                        <label for="exclude__keywords">Объявления исключают слова:</label>
+                        <div class="search search--keywords">
+                          <input
+                            id="exclude__keywords"
+                            class="input input--field"
+                            type="text"
+                            name="add"
+                            data-name="exclude_keywords"
+                            placeholder="Введите слово или фразу"
+                            inputmode="search"
+                            autocomplete="off"
+                          />
+                          <button class="button search__button" type="button"><span>Добавить</span></button>
+                        </div>
+                      </div>
+                      <div>
+                        <label for="locality__keywords">Название населённого пункта содержит слово:</label>
+                        <div class="search search--keywords">
+                          <input
+                            id="locality__keywords"
+                            class="input input--field"
+                            type="text"
+                            name="add"
+                            data-name="locality_keywords"
+                            placeholder="Введите слово или фразу"
+                            inputmode="search"
+                            autocomplete="off"
+                          />
+                          <button class="button search__button" type="button"><span>Добавить</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Срок аренды</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="long__rent" class="visually-hidden input" type="radio" name="filter[rent_time][]" value="100" />
+                      <label for="long__rent">
+                        <span class="pseudo-radio">Длительно</span>
+                      </label>
+                      <input id="short__rent" class="visually-hidden input" type="radio" name="filter[rent_time][]" value="200" />
+                      <label for="short__rent">
+                        <span class="pseudo-radio">Посуточно</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Удобства</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="room__furniture" class="visually-hidden input" type="checkbox" name="filter[is_room_furniture]" value="1" />
+                      <label for="room__furniture">
+                        <span class="pseudo-checkbox">Мебель в комнатах</span>
+                      </label>
+                      <input id="dishwasher" class="visually-hidden input" type="checkbox" name="filter[is_dishwasher]" value="1" />
+                      <label for="dishwasher">
+                        <span class="pseudo-checkbox">Посудомоечная машина</span>
+                      </label>
+                      <input id="tv" class="visually-hidden input" type="checkbox" name="filter[is_tv]" value="1" />
+                      <label for="tv">
+                        <span class="pseudo-checkbox">Телевизор</span>
+                      </label>
+                      <input id="kitchen__furniture" class="visually-hidden input" type="checkbox" name="filter[is_kitchen_furniture]" value="1" />
+                      <label for="kitchen__furniture">
+                        <span class="pseudo-checkbox">Мебель на кухне</span>
+                      </label>
+                      <input id="washer" class="visually-hidden input" type="checkbox" name="filter[is_washer]" value="1" />
+                      <label for="washer">
+                        <span class="pseudo-checkbox">Стиральная машина</span>
+                      </label>
+                      <input id="internet" class="visually-hidden input" type="checkbox" name="filter[is_internet]" value="1" />
+                      <label for="internet">
+                        <span class="pseudo-checkbox">Интернет</span>
+                      </label>
+                      <input id="fridge" class="visually-hidden input" type="checkbox" name="filter[is_fridge]" value="1" />
+                      <label for="fridge">
+                        <span class="pseudo-checkbox">Холодильник</span>
+                      </label>
+                      <input id="conditioner" class="visually-hidden input" type="checkbox" name="filter[is_conditioner]" value="1" />
+                      <label for="conditioner">
+                        <span class="pseudo-checkbox">Кондиционер</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия проживания</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="kids" class="visually-hidden input" type="checkbox" name="filter[is_kids]" value="1" />
+                      <label for="kids">
+                        <span class="pseudo-checkbox">Можно с детьми</span>
+                      </label>
+                      <input id="animals" class="visually-hidden input" type="checkbox" name="filter[is_animals]" value="1" />
+                      <label for="animals">
+                        <span class="pseudo-checkbox">Можно с животными</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат в квартире</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="two__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="2" />
+                      <label for="two__room">
+                        <span class="pseudo-checkbox">2</span>
+                      </label>
+                      <input id="three__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="3" />
+                      <label for="three__room">
+                        <span class="pseudo-checkbox">3</span>
+                      </label>
+                      <input id="four__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="4" />
+                      <label for="four__room">
+                        <span class="pseudo-checkbox">4</span>
+                      </label>
+                      <input id="five__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="5" />
+                      <label for="five__room">
+                        <span class="pseudo-checkbox">5</span>
+                      </label>
+                      <input id="six__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="6" />
+                      <label for="six__room">
+                        <span class="pseudo-checkbox">6</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат на покупку</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="one__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="1" />
+                      <label for="one__rooms__deal">
+                        <span class="pseudo-checkbox">1</span>
+                      </label>
+                      <input id="two__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="2" />
+                      <label for="two__rooms__deal">
+                        <span class="pseudo-checkbox">2</span>
+                      </label>
+                      <input id="three__rooms__deal" class="visually-hidden input" type="checkbox" name="filter[rooms_deal][]" value="3" />
+                      <label for="three__rooms__deal">
+                        <span class="pseudo-checkbox">3</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип дома</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="type__house" class="visually-hidden input" type="radio" data-value="50" data-selected="false" value="1" name="publication__date" value="100" />
+                      <label for="type__house">
+                        <span class="pseudo-checkbox">Дом</span>
+                      </label>
+                      <input id="type__townhouse" class="visually-hidden input" type="radio" data-value="100" data-selected="false" value="2" name="publication__date" value="200" />
+                      <label for="type__townhouse">
+                        <span class="pseudo-checkbox">Таунхаус</span>
+                      </label>
+                      <input id="type__part" class="visually-hidden input" type="radio" data-value="200" data-selected="false" value="one__week" name="publication__date" value="100" />
+                      <label for="type__part">
+                        <span class="pseudo-checkbox">Часть дома</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь дома</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label filter-add__label--miter">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[area_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
 
-                        <label class="filter-add__label filter-add__label--miter">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[area_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Площадь участка в сотках</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label filter-add__label--sotka">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[area_land][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label filter-add__label--sotka">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[area_land][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Этажей в доме</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="one__floor" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="1" />
-                        <label for="one__floor">
-                          <span class="pseudo-checkbox">1</span>
-                        </label>
-                        <input id="two__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="2" />
-                        <label for="two__floors">
-                          <span class="pseudo-checkbox">2</span>
-                        </label>
-                        <input id="three__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="3" />
-                        <label for="three__floors">
-                          <span class="pseudo-checkbox">3</span>
-                        </label>
-                        <input id="four__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="4" />
-                        <label for="four__floors">
-                          <span class="pseudo-checkbox">4</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Комнат в доме</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="house__one__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="1" />
-                        <label for="house__one__room">
-                          <span class="pseudo-checkbox">1</span>
-                        </label>
-                        <input id="house__two__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="2" />
-                        <label for="house__two__rooms">
-                          <span class="pseudo-checkbox">2</span>
-                        </label>
-                        <input id="house__three__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="3" />
-                        <label for="house__three__rooms">
-                          <span class="pseudo-checkbox">3</span>
-                        </label>
-                        <input id="house__four__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="4" />
-                        <label for="house__four__rooms">
-                          <span class="pseudo-checkbox">4</span>
-                        </label>
-                        <input id="house__five__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="5" />
-                        <label for="house__five__rooms">
-                          <span class="pseudo-checkbox">5</span>
-                        </label>
-                        <input id="house__six__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="6" />
-                        <label for="house__six__rooms">
-                          <span class="pseudo-checkbox">6</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Материал дома</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="house__brick" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="200" />
-                        <label for="house__brick">
-                          <span class="pseudo-checkbox">Кирпичный</span>
-                        </label>
-                        <input id="house__monolithic" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="400" />
-                        <label for="house__monolithic">
-                          <span class="pseudo-checkbox">Монолитный</span>
-                        </label>
-                        <input id="house__wood" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="100" />
-                        <label for="house__wood">
-                          <span class="pseudo-checkbox">Деревянный</span>
-                        </label>
-                        <input id="house__panel" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="300" />
-                        <label for="house__panel">
-                          <span class="pseudo-checkbox">Щитовой</span>
-                        </label>
-                        <input id="house__frame" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="600" />
-                        <label for="house__frame">
-                          <span class="pseudo-checkbox">Каркасный</span>
-                        </label>
-                        <input id="house__block" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="1000" />
-                        <label for="house__block">
-                          <span class="pseudo-checkbox">Блочный</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Коммуникации</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="electricity" class="visually-hidden input" type="checkbox" name="filter[is_electricity]" value="1" />
-                        <label for="electricity">
-                          <span class="pseudo-checkbox">Электричество</span>
-                        </label>
-                        <input id="sewerage" class="visually-hidden input" type="checkbox" name="filter[is_sewerage]" value="1" />
-                        <label for="sewerage">
-                          <span class="pseudo-checkbox">Канализация</span>
-                        </label>
-                        <input id="water" class="visually-hidden input" type="checkbox" name="filter[is_water]" value="1" />
-                        <label for="water">
-                          <span class="pseudo-checkbox">Водоснабжение</span>
-                        </label>
-                        <input id="gaz" class="visually-hidden input" type="checkbox" name="filter[is_gaz]" value="1" />
-                        <label for="gaz">
-                          <span class="pseudo-checkbox">Газ</span>
-                        </label>
-                        <input id="heating" class="visually-hidden input" type="checkbox" name="filter[is_heating]" value="600" />
-                        <label for="heating">
-                          <span class="pseudo-checkbox">Отопление</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Санузел</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="toilet__in" class="visually-hidden input" type="radio" value="1" name="filter[toilet]" value="100" />
-                        <label for="toilet__in">
-                          <span class="pseudo-checkbox">В доме</span>
-                        </label>
-                        <input id="toilet__out" class="visually-hidden input" type="radio" value="2" name="filter[toilet]" value="200" />
-                        <label for="toilet__out">
-                          <span class="pseudo-checkbox">На улице</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Статус участка</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="ihc" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="100" />
-                        <label for="ihc">
-                          <span class="pseudo-checkbox">ИЖС</span>
-                        </label>
-                        <input id="gardening" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="200" />
-                        <label for="gardening">
-                          <span class="pseudo-checkbox">Садоводство</span>
-                        </label>
-                        <input id="dnp" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="300" />
-                        <label for="dnp">
-                          <span class="pseudo-checkbox">ДНП</span>
-                        </label>
-                        <input id="farming" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="400" />
-                        <label for="farming">
-                          <span class="pseudo-checkbox">Фермерское хозяйство</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Удобства</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="sauna" class="visually-hidden input" type="checkbox" name="filter[is_sauna]" value="1" />
-                        <label for="sauna">
-                          <span class="pseudo-checkbox">Баня</span>
-                        </label>
-                        <input id="garage" class="visually-hidden input" type="checkbox" name="filter[is_garage]" value="1" />
-                        <label for="garage">
-                          <span class="pseudo-checkbox">Гараж</span>
-                        </label>
-                        <input id="pool" class="visually-hidden input" type="checkbox" name="filter[is_pool]" value="1" />
-                        <label for="pool">
-                          <span class="pseudo-checkbox">Бассейн</span>
-                        </label>
-                        <input id="security" class="visually-hidden input" type="checkbox" name="filter[is_security]" value="1" />
-                        <label for="security">
-                          <span class="pseudo-checkbox">Охрана</span>
-                        </label>
-                        <input id="house__room__furniture" class="visually-hidden input" type="checkbox" name="filter[is_room_furniture]" value="1" />
-                        <label for="house__room__furniture">
-                          <span class="pseudo-checkbox">Мебель в комнатах</span>
-                        </label>
-                        <input id="house__dishwasher" class="visually-hidden input" type="checkbox" name="filter[is_dishwasher]" value="1" />
-                        <label for="house__dishwasher">
-                          <span class="pseudo-checkbox">Посудомоечная машина</span>
-                        </label>
-                        <input id="house__tv" class="visually-hidden input" type="checkbox" name="filter[is_tv]" value="1" />
-                        <label for="house__tv">
-                          <span class="pseudo-checkbox">Телевизор</span>
-                        </label>
-                        <input id="house__kitchen__furniture" class="visually-hidden input" type="checkbox" name="filter[is_kitchen_furniture]" value="1" />
-                        <label for="house__kitchen__furniture">
-                          <span class="pseudo-checkbox">Мебель на кухне</span>
-                        </label>
-                        <input id="house__washer" class="visually-hidden input" type="checkbox" name="filter[is_washer]" value="1" />
-                        <label for="house__washer">
-                          <span class="pseudo-checkbox">Стиральная машина</span>
-                        </label>
-                        <input id="house__internet" class="visually-hidden input" type="checkbox" name="filter[is_internet]" value="1" />
-                        <label for="house__internet">
-                          <span class="pseudo-checkbox">Интернет</span>
-                        </label>
-                        <input id="house__fridge" class="visually-hidden input" type="checkbox" name="filter[is_fridge]" value="1" />
-                        <label for="house__fridge">
-                          <span class="pseudo-checkbox">Холодильник</span>
-                        </label>
-                        <input id="house__conditioner" class="visually-hidden input" type="checkbox" name="filter[is_conditioner]" value="1" />
-                        <label for="house__conditioner">
-                          <span class="pseudo-checkbox">Кондиционер</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Особенности</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="dacha" class="visually-hidden input" type="checkbox" name="filter[is_dacha]" value="1" />
-                        <label for="dacha">
-                          <span class="pseudo-checkbox">Дача</span>
-                        </label>
-                        <input id="village" class="visually-hidden input" type="checkbox" name="filter[is_village]" value="1" />
-                        <label for="village">
-                          <span class="pseudo-checkbox">Дом в деревне</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Этаж</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[floor][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[floor][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">В здании</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип здания</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="center" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="300" />
-                        <label for="center">
-                          <span class="pseudo-checkbox">Бизнес-центр</span>
-                        </label>
-                        <input id="structure" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="1800" />
-                        <label for="structure">
-                          <span class="pseudo-checkbox">Отдельно стоящее здание</span>
-                        </label>
-                        <input id="residential__building" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="3350" />
-                        <label for="residential__building">
-                          <span class="pseudo-checkbox">Помещение в жилом доме</span>
-                        </label>
-                        <input id="storage" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="3500" />
-                        <label for="storage">
-                          <span class="pseudo-checkbox">Складской комплекс</span>
-                        </label>
-                        <input id="mall" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="4100" />
-                        <label for="mall">
-                          <span class="pseudo-checkbox">Торговый центр</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Класс здания</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="class__a+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="100" />
-                        <label for="class__a+">
-                          <span class="pseudo-checkbox">А+</span>
-                        </label>
-                        <input id="class__a" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="200" />
-                        <label for="class__a">
-                          <span class="pseudo-checkbox">А</span>
-                        </label>
-                        <input id="class__b+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="300" />
-                        <label for="class__b+">
-                          <span class="pseudo-checkbox">В+</span>
-                        </label>
-                        <input id="class__b" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="400" />
-                        <label for="class__b">
-                          <span class="pseudo-checkbox">В</span>
-                        </label>
-                        <input id="class__c+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="400" />
-                        <label for="class__c+">
-                          <span class="pseudo-checkbox">С+</span>
-                        </label>
-                        <input id="class__c" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="500" />
-                        <label for="class__c">
-                          <span class="pseudo-checkbox">С</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Вход</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="general__entrance" class="visually-hidden input" type="checkbox" name="filter[access_type][]" value="100" />
-                        <label for="general__entrance">
-                          <span class="pseudo-checkbox">Общий</span>
-                        </label>
-                        <input id="separate__entrance" class="visually-hidden input" type="checkbox" name="filter[access_type][]" value="200" />
-                        <label for="separate__entrance">
-                          <span class="pseudo-checkbox">Отдельный</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Тип договора</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="direct__rental" class="visually-hidden input" type="checkbox" name="filter[rent_type][]" value="100" />
-                        <label for="direct__rental">
-                          <span class="pseudo-checkbox">Прямая аренда</span>
-                        </label>
-                        <input id="sublease" class="visually-hidden input" type="checkbox" name="filter[rent_type][]" value="200" />
-                        <label for="sublease">
-                          <span class="pseudo-checkbox">Субаренда</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Возможное назначение</legend>
-                      <div class="filter-add__wrapper">
-                        <input id="bank" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="1500" />
-                        <label for="bank">
-                          <span class="pseudo-checkbox">Помещение для банка</span>
-                        </label>
-                        <input id="medical" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="6900" />
-                        <label for="medical">
-                          <span class="pseudo-checkbox">Медицинский центр</span>
-                        </label>
-                        <input id="grocery" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="8700" />
-                        <label for="grocery">
-                          <span class="pseudo-checkbox">Продуктовый магазин</span>
-                        </label>
-                        <input id="beauty" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="9600" />
-                        <label for="beauty">
-                          <span class="pseudo-checkbox">Салон красоты</span>
-                        </label>
-                        <input id="travel" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="13200" />
-                        <label for="travel">
-                          <span class="pseudo-checkbox">Турагентство</span>
-                        </label>
-                        <input id="showroom" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="14200" />
-                        <label for="showroom">
-                          <span class="pseudo-checkbox">Шоурум</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset class="filter__fieldset filter-add__fieldset">
-                      <legend class="filter-add__legend">Высота потолков, м.</legend>
-                      <div class="filter-add__wrapper filter-add__wrapper--field">
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">от</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
-                        </label>
-                        <label class="filter-add__label">
-                          <span class="visually-hidden">до</span>
-                          <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
-                        </label>
-                      </div>
-                    </fieldset>
-                  </div>
+                      <label class="filter-add__label filter-add__label--miter">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[area_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь участка в сотках</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label filter-add__label--sotka">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[area_land][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label filter-add__label--sotka">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[area_land][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажей в доме</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="one__floor" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="1" />
+                      <label for="one__floor">
+                        <span class="pseudo-checkbox">1</span>
+                      </label>
+                      <input id="two__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="2" />
+                      <label for="two__floors">
+                        <span class="pseudo-checkbox">2</span>
+                      </label>
+                      <input id="three__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="3" />
+                      <label for="three__floors">
+                        <span class="pseudo-checkbox">3</span>
+                      </label>
+                      <input id="four__floors" class="visually-hidden input" type="checkbox" name="filter[floor_all][]" value="4" />
+                      <label for="four__floors">
+                        <span class="pseudo-checkbox">4</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат в доме</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="house__one__room" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="1" />
+                      <label for="house__one__room">
+                        <span class="pseudo-checkbox">1</span>
+                      </label>
+                      <input id="house__two__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="2" />
+                      <label for="house__two__rooms">
+                        <span class="pseudo-checkbox">2</span>
+                      </label>
+                      <input id="house__three__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="3" />
+                      <label for="house__three__rooms">
+                        <span class="pseudo-checkbox">3</span>
+                      </label>
+                      <input id="house__four__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="4" />
+                      <label for="house__four__rooms">
+                        <span class="pseudo-checkbox">4</span>
+                      </label>
+                      <input id="house__five__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="5" />
+                      <label for="house__five__rooms">
+                        <span class="pseudo-checkbox">5</span>
+                      </label>
+                      <input id="house__six__rooms" class="visually-hidden input" type="checkbox" name="filter[rooms][]" value="6" />
+                      <label for="house__six__rooms">
+                        <span class="pseudo-checkbox">6</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Материал дома</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="house__brick" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="200" />
+                      <label for="house__brick">
+                        <span class="pseudo-checkbox">Кирпичный</span>
+                      </label>
+                      <input id="house__monolithic" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="400" />
+                      <label for="house__monolithic">
+                        <span class="pseudo-checkbox">Монолитный</span>
+                      </label>
+                      <input id="house__wood" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="100" />
+                      <label for="house__wood">
+                        <span class="pseudo-checkbox">Деревянный</span>
+                      </label>
+                      <input id="house__panel" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="300" />
+                      <label for="house__panel">
+                        <span class="pseudo-checkbox">Щитовой</span>
+                      </label>
+                      <input id="house__frame" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="600" />
+                      <label for="house__frame">
+                        <span class="pseudo-checkbox">Каркасный</span>
+                      </label>
+                      <input id="house__block" class="visually-hidden input" type="checkbox" name="filter[house_material][]" value="1000" />
+                      <label for="house__block">
+                        <span class="pseudo-checkbox">Блочный</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Коммуникации</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="electricity" class="visually-hidden input" type="checkbox" name="filter[is_electricity]" value="1" />
+                      <label for="electricity">
+                        <span class="pseudo-checkbox">Электричество</span>
+                      </label>
+                      <input id="sewerage" class="visually-hidden input" type="checkbox" name="filter[is_sewerage]" value="1" />
+                      <label for="sewerage">
+                        <span class="pseudo-checkbox">Канализация</span>
+                      </label>
+                      <input id="water" class="visually-hidden input" type="checkbox" name="filter[is_water]" value="1" />
+                      <label for="water">
+                        <span class="pseudo-checkbox">Водоснабжение</span>
+                      </label>
+                      <input id="gaz" class="visually-hidden input" type="checkbox" name="filter[is_gaz]" value="1" />
+                      <label for="gaz">
+                        <span class="pseudo-checkbox">Газ</span>
+                      </label>
+                      <input id="heating" class="visually-hidden input" type="checkbox" name="filter[is_heating]" value="600" />
+                      <label for="heating">
+                        <span class="pseudo-checkbox">Отопление</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Санузел</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="toilet__in" class="visually-hidden input" type="radio" value="1" name="filter[toilet]" value="100" />
+                      <label for="toilet__in">
+                        <span class="pseudo-checkbox">В доме</span>
+                      </label>
+                      <input id="toilet__out" class="visually-hidden input" type="radio" value="2" name="filter[toilet]" value="200" />
+                      <label for="toilet__out">
+                        <span class="pseudo-checkbox">На улице</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Статус участка</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="ihc" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="100" />
+                      <label for="ihc">
+                        <span class="pseudo-checkbox">ИЖС</span>
+                      </label>
+                      <input id="gardening" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="200" />
+                      <label for="gardening">
+                        <span class="pseudo-checkbox">Садоводство</span>
+                      </label>
+                      <input id="dnp" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="300" />
+                      <label for="dnp">
+                        <span class="pseudo-checkbox">ДНП</span>
+                      </label>
+                      <input id="farming" class="visually-hidden input" type="checkbox" name="filter[land_type][]" value="400" />
+                      <label for="farming">
+                        <span class="pseudo-checkbox">Фермерское хозяйство</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Удобства</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="sauna" class="visually-hidden input" type="checkbox" name="filter[is_sauna]" value="1" />
+                      <label for="sauna">
+                        <span class="pseudo-checkbox">Баня</span>
+                      </label>
+                      <input id="garage" class="visually-hidden input" type="checkbox" name="filter[is_garage]" value="1" />
+                      <label for="garage">
+                        <span class="pseudo-checkbox">Гараж</span>
+                      </label>
+                      <input id="pool" class="visually-hidden input" type="checkbox" name="filter[is_pool]" value="1" />
+                      <label for="pool">
+                        <span class="pseudo-checkbox">Бассейн</span>
+                      </label>
+                      <input id="security" class="visually-hidden input" type="checkbox" name="filter[is_security]" value="1" />
+                      <label for="security">
+                        <span class="pseudo-checkbox">Охрана</span>
+                      </label>
+                      <input id="house__room__furniture" class="visually-hidden input" type="checkbox" name="filter[is_room_furniture]" value="1" />
+                      <label for="house__room__furniture">
+                        <span class="pseudo-checkbox">Мебель в комнатах</span>
+                      </label>
+                      <input id="house__dishwasher" class="visually-hidden input" type="checkbox" name="filter[is_dishwasher]" value="1" />
+                      <label for="house__dishwasher">
+                        <span class="pseudo-checkbox">Посудомоечная машина</span>
+                      </label>
+                      <input id="house__tv" class="visually-hidden input" type="checkbox" name="filter[is_tv]" value="1" />
+                      <label for="house__tv">
+                        <span class="pseudo-checkbox">Телевизор</span>
+                      </label>
+                      <input id="house__kitchen__furniture" class="visually-hidden input" type="checkbox" name="filter[is_kitchen_furniture]" value="1" />
+                      <label for="house__kitchen__furniture">
+                        <span class="pseudo-checkbox">Мебель на кухне</span>
+                      </label>
+                      <input id="house__washer" class="visually-hidden input" type="checkbox" name="filter[is_washer]" value="1" />
+                      <label for="house__washer">
+                        <span class="pseudo-checkbox">Стиральная машина</span>
+                      </label>
+                      <input id="house__internet" class="visually-hidden input" type="checkbox" name="filter[is_internet]" value="1" />
+                      <label for="house__internet">
+                        <span class="pseudo-checkbox">Интернет</span>
+                      </label>
+                      <input id="house__fridge" class="visually-hidden input" type="checkbox" name="filter[is_fridge]" value="1" />
+                      <label for="house__fridge">
+                        <span class="pseudo-checkbox">Холодильник</span>
+                      </label>
+                      <input id="house__conditioner" class="visually-hidden input" type="checkbox" name="filter[is_conditioner]" value="1" />
+                      <label for="house__conditioner">
+                        <span class="pseudo-checkbox">Кондиционер</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Особенности</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="dacha" class="visually-hidden input" type="checkbox" name="filter[is_dacha]" value="1" />
+                      <label for="dacha">
+                        <span class="pseudo-checkbox">Дача</span>
+                      </label>
+                      <input id="village" class="visually-hidden input" type="checkbox" name="filter[is_village]" value="1" />
+                      <label for="village">
+                        <span class="pseudo-checkbox">Дом в деревне</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Этаж</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[floor][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[floor][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">В здании</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип здания</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="center" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="300" />
+                      <label for="center">
+                        <span class="pseudo-checkbox">Бизнес-центр</span>
+                      </label>
+                      <input id="structure" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="1800" />
+                      <label for="structure">
+                        <span class="pseudo-checkbox">Отдельно стоящее здание</span>
+                      </label>
+                      <input id="residential__building" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="3350" />
+                      <label for="residential__building">
+                        <span class="pseudo-checkbox">Помещение в жилом доме</span>
+                      </label>
+                      <input id="storage" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="3500" />
+                      <label for="storage">
+                        <span class="pseudo-checkbox">Складской комплекс</span>
+                      </label>
+                      <input id="mall" class="visually-hidden input" type="checkbox" name="filter[building_type][]" value="4100" />
+                      <label for="mall">
+                        <span class="pseudo-checkbox">Торговый центр</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Класс здания</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="class__a+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="100" />
+                      <label for="class__a+">
+                        <span class="pseudo-checkbox">А+</span>
+                      </label>
+                      <input id="class__a" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="200" />
+                      <label for="class__a">
+                        <span class="pseudo-checkbox">А</span>
+                      </label>
+                      <input id="class__b+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="300" />
+                      <label for="class__b+">
+                        <span class="pseudo-checkbox">В+</span>
+                      </label>
+                      <input id="class__b" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="400" />
+                      <label for="class__b">
+                        <span class="pseudo-checkbox">В</span>
+                      </label>
+                      <input id="class__c+" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="400" />
+                      <label for="class__c+">
+                        <span class="pseudo-checkbox">С+</span>
+                      </label>
+                      <input id="class__c" class="visually-hidden input" type="checkbox" name="filter[building_class][]" value="500" />
+                      <label for="class__c">
+                        <span class="pseudo-checkbox">С</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Вход</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="general__entrance" class="visually-hidden input" type="checkbox" name="filter[access_type][]" value="100" />
+                      <label for="general__entrance">
+                        <span class="pseudo-checkbox">Общий</span>
+                      </label>
+                      <input id="separate__entrance" class="visually-hidden input" type="checkbox" name="filter[access_type][]" value="200" />
+                      <label for="separate__entrance">
+                        <span class="pseudo-checkbox">Отдельный</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип договора</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="direct__rental" class="visually-hidden input" type="checkbox" name="filter[rent_type][]" value="100" />
+                      <label for="direct__rental">
+                        <span class="pseudo-checkbox">Прямая аренда</span>
+                      </label>
+                      <input id="sublease" class="visually-hidden input" type="checkbox" name="filter[rent_type][]" value="200" />
+                      <label for="sublease">
+                        <span class="pseudo-checkbox">Субаренда</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Возможное назначение</legend>
+                    <div class="filter-add__wrapper">
+                      <input id="bank" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="1500" />
+                      <label for="bank">
+                        <span class="pseudo-checkbox">Помещение для банка</span>
+                      </label>
+                      <input id="medical" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="6900" />
+                      <label for="medical">
+                        <span class="pseudo-checkbox">Медицинский центр</span>
+                      </label>
+                      <input id="grocery" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="8700" />
+                      <label for="grocery">
+                        <span class="pseudo-checkbox">Продуктовый магазин</span>
+                      </label>
+                      <input id="beauty" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="9600" />
+                      <label for="beauty">
+                        <span class="pseudo-checkbox">Салон красоты</span>
+                      </label>
+                      <input id="travel" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="13200" />
+                      <label for="travel">
+                        <span class="pseudo-checkbox">Турагентство</span>
+                      </label>
+                      <input id="showroom" class="visually-hidden input" type="checkbox" name="filter[possible_appointment][]" value="14200" />
+                      <label for="showroom">
+                        <span class="pseudo-checkbox">Шоурум</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="filter__fieldset filter-add__fieldset">
+                    <legend class="filter-add__legend">Высота потолков, м.</legend>
+                    <div class="filter-add__wrapper filter-add__wrapper--field">
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">от</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][from]" value="" placeholder="от" inputmode="numeric" autocomplete="off" />
+                      </label>
+                      <label class="filter-add__label">
+                        <span class="visually-hidden">до</span>
+                        <input class="input input--field" type="number" name="filter[floor_all][to]" value="" placeholder="до" inputmode="numeric" autocomplete="off" />
+                      </label>
+                    </div>
+                  </fieldset>
                 </div>
               </div>
             </fieldset>

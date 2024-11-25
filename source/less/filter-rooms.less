@@ -13,6 +13,14 @@
     background-color: var(--light-blue);
   }
 
+  .filter-rooms__list input:hover + label .filter-rooms__control {
+    border-color: var(--basic-green);
+  }
+
+  .filter-rooms__list input:focus-visible + label .filter-rooms__control {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
+  }
+
   .filter-rooms__control {
     display: block;
     padding: 13px 20px;
