@@ -6,9 +6,9 @@
   &::after {
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 8px;
     transform: translateY(-50%);
-    width: 16px;
+    width: max-content;
     height: 20px;
     color: var(--gray);
   }
@@ -18,10 +18,17 @@
   content: '₽';
 }
 
-.input-wrap-sot {
+.input-wrap-sot::after {
   content: 'сот.';
 }
 
-.input-wrap-miter {
+.input-wrap-miter::after {
   content: 'м²';
+}
+
+@media (min-width: @desktop-width) {
+  .input-wrap-sot::after,
+  .input-wrap-miter::after {
+    content: none;
+  }
 }

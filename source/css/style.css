@@ -391,9 +391,6 @@ a {
 :is(.sort__list) button:hover {
   color: var(--basic-green);
 }
-.button--text {
-  padding: 7px 5px;
-}
 .button-close {
   position: absolute;
   top: 0;
@@ -682,24 +679,24 @@ input[type='radio'] {
   font-size: inherit;
   font-family: inherit;
 }
-.input:checked + label .pseudo-radio,
+.input:checked + label .filter-control,
 .input:checked + label .pseudo-checkbox {
   background-color: var(--light-blue);
   border-color: var(--basic-green);
 }
-.input:checked + label .pseudo-radio {
+.input:checked + label .filter-control {
   padding: 12px 14px;
   border-width: 2px;
 }
 .input:checked + label .pseudo-checkbox {
-  padding: 12px 19px;
+  padding: 12px 14px;
   border-width: 2px;
 }
-.input:focus-visible + label .pseudo-radio,
+.input:focus-visible + label .filter-control,
 .input:focus-visible + label .pseudo-checkbox {
   box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }
-.pseudo-radio,
+.filter-control,
 .pseudo-checkbox {
   display: block;
   width: 100%;
@@ -708,22 +705,19 @@ input[type='radio'] {
   border: 1px solid var(--gray);
   border-radius: 5px;
 }
-.pseudo-radio:hover,
+.filter-control:hover,
 .pseudo-checkbox:hover {
   color: var(--basic-green);
   border-color: var(--basic-green);
 }
-.pseudo-radio {
+.filter-control {
   padding: 13px 15px;
 }
 .pseudo-checkbox {
-  padding: 13px 20px;
+  padding: 13px 15px;
 }
 @media (min-width: 1240px) {
-  .pseudo-radio {
-    padding: 9px 15px;
-  }
-  .input:checked + label .pseudo-radio {
+  .input:checked + label .filter-control {
     padding: 9px 15px;
     border-width: 1px;
   }
@@ -731,8 +725,11 @@ input[type='radio'] {
     padding: 9px 15px;
     border-width: 1px;
   }
+  .filter-control {
+    padding: 9px 15px;
+  }
   .pseudo-checkbox {
-    padding: 9px 16px;
+    padding: 9px 15px;
   }
 }
 .input--field {
@@ -784,8 +781,8 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .input-checkbox {
-    width: 17px;
-    height: 17px;
+    width: 19px;
+    height: 19px;
   }
 }
 .invalid-field {
@@ -1086,20 +1083,27 @@ textarea {
 .input-wrap-miter::after {
   position: absolute;
   top: 50%;
-  right: 5px;
+  right: 8px;
   transform: translateY(-50%);
-  width: 16px;
+  width: -moz-max-content;
+  width: max-content;
   height: 20px;
   color: var(--gray);
 }
 .input-wrap-rub::after {
   content: '₽';
 }
-.input-wrap-sot {
+.input-wrap-sot::after {
   content: 'сот.';
 }
-.input-wrap-miter {
+.input-wrap-miter::after {
   content: 'м²';
+}
+@media (min-width: 1240px) {
+  .input-wrap-sot::after,
+  .input-wrap-miter::after {
+    content: none;
+  }
 }
 .skip-links {
   display: block;
@@ -4488,19 +4492,22 @@ textarea {
   .filter__fieldset-price,
   .filter__fieldset-rooms,
   .filter__fieldset-add {
+    width: -moz-max-content;
+    width: max-content;
+    border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+  .filter__fieldset-deal,
+  .filter__fieldset-type,
+  .filter__fieldset-price,
+  .filter__fieldset-rooms {
     position: absolute;
     top: 40px;
     width: -moz-max-content;
     width: max-content;
     border: 1px solid var(--light-gray);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    background-color: var(--white);
-    border-radius: 5px;
-  }
-  .filter__fieldset-type,
-  .filter__fieldset-rooms,
-  .filter__fieldset-price {
-    padding: 15px;
   }
   .filter__fieldset-add {
     position: fixed;
@@ -4509,6 +4516,11 @@ textarea {
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
     z-index: 1;
+  }
+  .filter__fieldset-type,
+  .filter__fieldset-rooms,
+  .filter__fieldset-price {
+    padding: 15px;
   }
   .filter__footer {
     display: block;
@@ -5225,21 +5237,59 @@ textarea {
   flex-direction: column;
   row-gap: 35px;
 }
-.filter-add__sublist {
+.filter-add__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.filter-add__space {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.filter-add__sublist div {
+.filter-add__space li {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 7px;
-       column-gap: 7px;
+  gap: 5px 7px;
   align-items: center;
 }
-.filter-add__sublist p {
+.filter-add__space p {
   grid-column: 1/3;
-  margin: 0 10px 0 0;
+}
+.filter-add__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.filter-add__legend {
+  font-size: 16px;
+}
+.filter-add__legend br {
+  display: none;
+}
+.filter-add__list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 7px;
+}
+.filter-add__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 7px;
+}
+.filter-add__check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+.filter-add__check-list li {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+}
+.filter-add__selected {
+  margin-top: 10px;
 }
 @media (min-width: 1240px) {
   .filter-add {
@@ -5258,41 +5308,20 @@ textarea {
     right: -10px;
   }
   .filter-add__body {
-    row-gap: 25px;
+    gap: 0;
     height: calc(100% - 50px - 80px);
-    padding: 20px 30px 20px 30px;
+    padding: 10px 15px;
     overflow-y: auto;
     border-top: 1px solid var(--light-gray);
     border-bottom: 1px solid var(--light-gray);
   }
-  .filter-add__sublist {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
-  .filter-add__sublist div {
-    display: flex;
-    -moz-column-gap: 4px;
-         column-gap: 4px;
-  }
-}
-.filter-add__fieldset {
-  display: flex;
-  flex-direction: column;
-  row-gap: 7px;
-}
-@media (min-width: 768px) {
-  .filter-add__fieldset {
+  .filter-add__item {
+    padding: 12px 15px;
     border-radius: 5px;
   }
-  .filter-add__fieldset:hover {
-    border-color: var(--basic-green);
+  .filter-add__item:hover {
+    background-color: var(--extra-light-gray);
   }
-}
-@media (min-width: 1240px) {
   .filter-add__fieldset {
     position: relative;
     display: grid;
@@ -5302,16 +5331,6 @@ textarea {
     align-content: center;
     padding: 0;
   }
-}
-.filter-add__legend {
-  margin: 0;
-  font-weight: 400;
-  font-size: 16px;
-}
-.filter-add__legend br {
-  display: none;
-}
-@media (min-width: 1240px) {
   .filter-add__legend {
     grid-column: 1/2;
     position: absolute;
@@ -5320,91 +5339,32 @@ textarea {
   .filter-add__legend br {
     display: block;
   }
-}
-.filter-add__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  -moz-column-gap: 7px;
-       column-gap: 7px;
-  row-gap: 5px;
-}
-@media (min-width: 768px) {
-  .filter-add__wrapper--field {
+  .filter-add__wrapper {
+    grid-column: 2/3;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+  .filter-add__space {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .filter-add__space li {
+    display: flex;
     -moz-column-gap: 4px;
          column-gap: 4px;
   }
-}
-.filter-add__wrapper--field .filter-add__label:first-child,
-.filter-add__wrapper--field .filter-add__label:nth-child(2) {
-  flex-basis: calc(50% - 3.5px);
-}
-@media (min-width: 768px) {
-  .filter-add__wrapper--field .filter-add__label:first-child,
-  .filter-add__wrapper--field .filter-add__label:nth-child(2) {
+  .filter-add__space li p {
+    margin-right: 5px;
+  }
+  .filter-add__list-grid input {
     max-width: 80px;
   }
-}
-@media (min-width: 768px) {
-  .filter-add__wrapper {
-    grid-column: 2/3;
-  }
-}
-.filter-add__item {
-  flex-grow: 1;
-}
-@media (min-width: 768px) {
-  .filter-add__sublist > div > .filter-add__label:first-of-type > .input,
-  .filter-add__wrapper--field .filter-add__label:first-of-type .input {
-    border-radius: 5px 0 0 5px;
-  }
-  .filter-add__sublist > div > .filter-add__label:nth-of-type(even) > .input,
-  .filter-add__wrapper--field .filter-add__label:nth-of-type(even) .input {
-    border-radius: 0 5px 5px 0;
-  }
-}
-@media (max-width: 767px) {
-  .filter-add__label--miter,
-  .filter-add__label--sotka {
-    position: relative;
-  }
-  .filter-add__label--miter::after,
-  .filter-add__label--sotka::after {
-    position: absolute;
-    top: 14px;
-    right: 10px;
-    width: 16px;
-    height: 20px;
-    color: var(--gray);
-  }
-  .filter-add__label--miter::after {
-    content: 'м²';
-  }
-  .filter-add__label--sotka::after {
-    content: 'сот.';
-    right: 20px;
-  }
-}
-.filter-add__label--checkbox {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-  margin: 10px 0 0 10px;
-}
-.filter-add__label--checkbox > span {
-  padding: 9px 0;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .filter-add__label--checkbox {
-    -moz-column-gap: 0;
-         column-gap: 0;
-    margin: 0 0 0 10px;
-  }
-  .filter-add__label--checkbox > span {
-    padding: 9px 10px;
-    cursor: pointer;
+  .filter-add__check-list {
+    flex-direction: row;
+    gap: 0 25px;
   }
 }
 .filter-add__way {
@@ -5419,13 +5379,12 @@ textarea {
     margin-left: 10px;
   }
 }
-.filter-add__wrapper--keywords {
-  display: flex;
+.filter-add__keywords {
   flex-direction: column;
   align-items: stretch;
   row-gap: 15px;
 }
-.filter-add__wrapper--keywords label {
+.filter-add__keywords label {
   display: block;
   margin-bottom: 3px;
   font-size: 14px;

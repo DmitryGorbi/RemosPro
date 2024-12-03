@@ -26,29 +26,29 @@ input[type='radio'] {
   font-size: inherit;
   font-family: inherit;
 
-  &:checked + label .pseudo-radio,
+  &:checked + label .filter-control,
   &:checked + label .pseudo-checkbox {
     background-color: var(--light-blue);
     border-color: var(--basic-green);
   }
 
-  &:checked + label .pseudo-radio {
+  &:checked + label .filter-control {
     padding: 12px 14px;
     border-width: 2px;
   }
 
   &:checked + label .pseudo-checkbox {
-    padding: 12px 19px;
+    padding: 12px 14px;
     border-width: 2px;
   }
 
-  &:focus-visible + label .pseudo-radio,
+  &:focus-visible + label .filter-control,
   &:focus-visible + label .pseudo-checkbox {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
   }
 }
 
-.pseudo-radio,
+.filter-control,
 .pseudo-checkbox {
   display: block;
   width: 100%;
@@ -64,21 +64,17 @@ input[type='radio'] {
   }
 }
 
-.pseudo-radio {
+.filter-control {
   padding: 13px 15px;
 }
 
 .pseudo-checkbox {
-  padding: 13px 20px;
+  padding: 13px 15px;
 }
 
 @media (min-width: @desktop-width) {
-  .pseudo-radio {
-    padding: 9px 15px;
-  }
-
   .input {
-    &:checked + label .pseudo-radio {
+    &:checked + label .filter-control {
       padding: 9px 15px;
       border-width: 1px;
     }
@@ -91,8 +87,12 @@ input[type='radio'] {
     }
   }
 
+  .filter-control {
+    padding: 9px 15px;
+  }
+
   .pseudo-checkbox {
-    padding: 9px 16px;
+    padding: 9px 15px;
   }
 }
 
@@ -151,8 +151,8 @@ input[type='radio'] {
 
 @media (min-width: @desktop-width) {
   .input-checkbox {
-    width: 17px;
-    height: 17px;
+    width: 19px;
+    height: 19px;
   }
 }
 
