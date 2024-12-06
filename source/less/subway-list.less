@@ -1,8 +1,8 @@
-.geo-list {
+.subway-list {
   padding: 15px 0 15px;
 }
 
-.geo-list__item {
+.subway-list__item {
   &:not(:last-child) {
     margin-bottom: 25px;
     padding-bottom: 27px;
@@ -28,7 +28,7 @@
   }
 }
 
-.geo-list__title {
+.subway-list__title {
   display: flex;
   align-items: center;
   gap: 0 15px;
@@ -49,13 +49,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .geo-list__item ul {
+  .subway-list__item ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 15px;
   }
 
-  .geo-list__item input {
+  .subway-list__item input {
     width: 20px;
     height: 20px;
   }

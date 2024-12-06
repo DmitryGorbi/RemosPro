@@ -76,7 +76,8 @@ const modalLogin = document.querySelector('.modal--login');
 const modalReg = document.querySelector('.modal--reg');
 const buttonModalClose = document.querySelector('.modal__button-close');
 const inputMail = document.getElementById('userEmail');
-const regModalLink = modalLogin.querySelector('.auth__form-link');
+// const regModalLink = modalLogin.querySelector('.user-nav__button');
+// console.log(regModalLink);
 
 const onButtonClose = (evt) => {
   let target = evt.target;
@@ -123,24 +124,24 @@ buttonLocation.addEventListener('click', () => {
   modalLocation.classList.toggle('show');
 });
 
-inputSearch[0].addEventListener('input', () => {
-  popupLocation[0].style.display = 'block';
-});
+// inputSearch[0].addEventListener('input', () => {
+//   popupLocation[0].style.display = 'block';
+// });
 
-document.addEventListener('keydown', () => {
-  if (isEscEvent) {
-    popupLocation[0].style.display = 'none';
-    inputSearch[0].texContent = '';
-  }
-});
+// document.addEventListener('keydown', () => {
+//   if (isEscEvent) {
+//     popupLocation[0].style.display = 'none';
+//     inputSearch[0].texContent = '';
+//   }
+// });
 
-inputSearch[1].addEventListener('input', () => {
-  popupLocation[1].style.display = 'block';
-});
+// inputSearch[1].addEventListener('input', () => {
+//   popupLocation[1].style.display = 'block';
+// });
 
-document.addEventListener('keydown', () => {
-  if (isEscEvent) {
-    popupLocation[1].style.display = 'none';
-    inputSearch[1].textContent = '';
-  }
-});
+// document.addEventListener('keydown', () => {
+//   if (isEscEvent) {
+//     popupLocation[1].style.display = 'none';
+//     inputSearch[1].textContent = '';
+//   }
+// });

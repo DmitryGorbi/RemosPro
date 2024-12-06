@@ -1308,6 +1308,8 @@
           </a>
         </section>
       </section>
+      <span><a href="catalog_mobile.html">Каталог мобильный</a></span>
+      <span><a href="catalog_desktop.html">Каталог дектопный</a></span>
       <span><a href="calc.html">Калькулятор</a></span>
       <span><a href="filter.html">Filter</a></span>
       <span><a href="filter_phone_planshet.html">Фильтр для телефона и планшета</a></span>
@@ -1452,58 +1454,83 @@
     <section class="modal-location">
       <div class="modal-location__wrapper">
         <h2 class="modal-location__title">Выбор региона или города</h2>
-        <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
-        </button>
-        <div class="modal-location__content">
-          <div class="modal-location__form">
-            <div class="search-field">
-              <label class="visually-hidden" for="search-region">Выберите регион, город, район, учицу или ЖК</label>
-              <input id="search-region" type="text" placeholder="Выберите регион или город" inputmode="search" autocomplete="off" />
+        <div class="modal-location__form">
+          <div class="search-field modal-location__search">
+            <label class="visually-hidden" for="search-region">Введите название региона или города</label>
+            <input id="search-region" type="text" placeholder="Регион или город" inputmode="search" autocomplete="off" />
+            <div class="search-field__control">
               <button class="button search-field__button" type="button">
-                <span class="visually-hidden">Очистить поле подсказок</span>
-                <span
-                  ><svg viewBox="0 0 32 32" aria-hidden="true">
+                <span class="visually-hidden">Удалить текст</span>
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
                     <path
                       stroke="none"
                       d="M16 2a14 14 0 1014 14A14 14 0 0016 2zm5.71 18.29a1 1 0 010 1.42 1 1 0 01-1.42 0L16 17.41l-4.29 4.3a1 1 0 01-1.42 0 1 1 0 010-1.42l4.3-4.29-4.3-4.29a1 1 0 011.42-1.42l4.29 4.3 4.29-4.3a1 1 0 011.42 1.42L17.41 16z"
-                    ></path></svg
-                ></span>
+                    ></path>
+                  </svg>
+                </span>
               </button>
-              <div class="search-field__icon"></div>
             </div>
-            <div class="modal-location__button">
-              <button class="button button-main" type="button">Сохранить</button>
+            <div class="search-field__icon"></div>
+          </div>
+          <div class="modal-location__hints hints">
+            <div class="hints__section hints__section-city">
+              <p class="hints__title hints__title-city">Город</p>
+              <ul>
+                <li>
+                  <span>Сокол</span>
+                </li>
+                <li>
+                  <span>Войковская</span>
+                </li>
+                <li>
+                  <span>Тверская</span>
+                </li>
+                <li>
+                  <span>Площадь революции</span>
+                </li>
+                <li>
+                  <span>Таганская</span>
+                </li>
+                <li>
+                  <span>Красносельская</span>
+                </li>
+              </ul>
             </div>
-            <ul class="hints hints--location">
-              <li><button class="button" type="button">Алтайсткий край</button></li>
-              <li><button class="button" type="button">Калининградская область</button></li>
-              <li><button class="button" type="button">Самарская область</button></li>
-              <li><button class="button" type="button">Республика Татарстан</button></li>
-              <li><button class="button" type="button">Ленинградская область</button></li>
-            </ul>
           </div>
-          <div class="breadcrumbs breadcrumbs--location">
-            <ol>
-              <li><span role="button" tabindex="0">Россия</span></li>
-              <li><span role="button" tabindex="0">Кабардино-Балкарская республика</span></li>
-              <li><span>Нальчик</span></li>
-            </ol>
-          </div>
-          <div class="modal-location__favorite">
-            <p class="visually-hidden-desktop">Популярные регионы</p>
-            <ul class="modal-location__favorite-list">
-              <li><button class="button" type="button">Москва</button></li>
-              <li><button class="button" type="button">Санкт-Петербург</button></li>
-              <li><button class="button" type="button">Калининград</button></li>
-              <li><button class="button" type="button">Самара</button></li>
-              <li><button class="button" type="button">Екатеринбург</button></li>
-              <li><button class="button" type="button">Казань</button></li>
-              <li><button class="button" type="button">Краснодар</button></li>
-              <li><button class="button" type="button">Сочи</button></li>
-            </ul>
-          </div>
-          <div class="modal-location__list">
+        </div>
+        <div class="breadcrumbs breadcrumbs--location">
+          <ol>
+            <li>
+              <span role="button" tabindex="0">Россия</span>
+            </li>
+            <li>
+              <span role="button" tabindex="0">Кабардино-Балкарская республика</span>
+            </li>
+            <li>
+              <span>Нальчик</span>
+            </li>
+          </ol>
+        </div>
+        <div class="modal-location__selected">
+          <div></div>
+          <p>Пушкино, Московская область</p>
+        </div>
+        <!-- <div class="modal-location__favorite">
+          <h3 class="visually-hidden-desktop">Популярные регионы</h3>
+          <ul class="modal-location__favorite-list">
+            <li><button class="button" type="button">Москва</button></li>
+            <li><button class="button" type="button">Санкт-Петербург</button></li>
+            <li><button class="button" type="button">Калининград</button></li>
+            <li><button class="button" type="button">Самара</button></li>
+            <li><button class="button" type="button">Екатеринбург</button></li>
+            <li><button class="button" type="button">Казань</button></li>
+            <li><button class="button" type="button">Краснодар</button></li>
+            <li><button class="button" type="button">Сочи</button></li>
+          </ul>
+        </div> -->
+        <div class="modal-location__section">
+          <div class="geo-list">
             <div>
               <ul>
                 <li>А</li>
@@ -1650,9 +1677,15 @@
             </div>
           </div>
         </div>
+        <div class="modal-location__footer">
+          <button class="button button-main" type="button">Применить</button>
+        </div>
+        <button type="button" class="button button-close">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
       </div>
     </section>
     <script src="js/header.js" type="module"></script>
-    <script src="js/filter.js" type="module"></script>
+    <!-- <script src="js/filter.js" type="module"></script> -->
   </body>
 </html>

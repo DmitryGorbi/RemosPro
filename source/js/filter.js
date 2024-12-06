@@ -99,3 +99,34 @@ if (document.querySelector('.catalog-menu__filter') && document.querySelector('.
     filterMobile.classList.toggle('show');
   });
 }
+
+let buttonSubway = document.querySelector('.search__button-js-metro');
+let subwayModal = document.querySelector('.geo-modal--subway');
+
+buttonSubway.addEventListener('click', () => {
+  subwayModal.classList.toggle('show');
+});
+
+let buttonArea = document.querySelector('.search__button-js-area');
+let areaModal = document.querySelector('.geo-modal--area');
+
+buttonArea.addEventListener('click', () => {
+  areaModal.classList.toggle('show');
+});
+
+let inputSearch = document.querySelectorAll('.input-hints');
+let hintModals = document.querySelectorAll('.hints');
+let inputSearchButtons = document.querySelectorAll('.search-field__control');
+console.log(inputSearchButtons);
+
+for (let i = 0; i < inputSearch.length; i++) {
+  inputSearch[i].addEventListener('input', () => {
+    hintModals[i].classList.add('show');
+  });
+}
+
+for (let i = 0; i < inputSearchButtons.length; i++) {
+  inputSearch[i].addEventListener('input', () => {
+    inputSearchButtons[i].classList.add('show');
+  });
+}
