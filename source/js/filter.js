@@ -5,7 +5,7 @@ const buttonsFilter = filter.querySelectorAll('.button-filter');
 const buttonIcon = filter.querySelectorAll('.button-filter__icon');
 const filterFieldset = filter.querySelectorAll('.filter__fieldset-js');
 const buttonsTitle = filter.querySelectorAll('.button-filter__title');
-
+const buttonClose = document.querySelectorAll('.button-close');
 const buttonFilterDeal = filter.querySelector('.button-filter--deal');
 const buttonFilterPrice = filter.querySelector('.button-filter--price');
 
@@ -128,5 +128,13 @@ for (let i = 0; i < inputSearch.length; i++) {
 for (let i = 0; i < inputSearchButtons.length; i++) {
   inputSearch[i].addEventListener('input', () => {
     inputSearchButtons[i].classList.add('show');
+  });
+}
+
+for (let i = 0; i < inputSearchButtons.length; i++) {
+  inputSearchButtons[i].addEventListener('click', () => {
+    hintModals[i].classList.remove('show');
+    inputSearchButtons[i].classList.remove('show');
+    inputSearch[i].value = '';
   });
 }

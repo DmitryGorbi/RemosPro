@@ -3496,6 +3496,10 @@ textarea {
 }
 .offer__aside {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .offer__aside .offer__actions {
   margin-top: auto;
@@ -3586,6 +3590,12 @@ textarea {
   }
   .offer__content .offer__seller {
     margin-top: 0;
+  }
+  .offer__aside {
+    display: grid;
+    grid-template-columns: 1fr 35px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
   .offer__aside .offer__actions {
     margin-top: 0;
@@ -4049,19 +4059,12 @@ textarea {
   color: var(--white);
   border-radius: 3px;
 }
-.seller .button-main {
-  position: fixed;
-  bottom: 0;
-  left: 15px;
-  right: 15px;
-  width: calc(100% - 30px);
-  z-index: 3;
-}
 .seller__wrapper {
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
+  margin-bottom: 10px;
 }
 .seller__info {
   display: flex;
@@ -4092,7 +4095,7 @@ textarea {
 }
 @media (min-width: 1240px) {
   .seller {
-    padding: 14px;
+    padding: 10px;
     height: -moz-max-content;
     height: max-content;
     background-color: var(--extra-light-gray);
