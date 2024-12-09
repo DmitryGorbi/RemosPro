@@ -16,12 +16,16 @@
 .offer__aside {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 48px;
+  // grid-template-columns: 1fr 48px;
   column-gap: 5px;
 
   & .offer__actions {
     margin-top: auto;
   }
+}
+
+.delete-class .offer__aside {
+  grid-template-columns: 1fr 48px;
 }
 
 .offer__content-footer {
@@ -49,11 +53,6 @@
   & span {
     color: orange;
     font-weight: 500;
-  }
-
-  & svg {
-    // width: 20px;
-    // height: 18px;
   }
 }
 
@@ -109,7 +108,7 @@
 
   .offer__wrapper {
     display: grid;
-    grid-template-columns: 375px 1fr;
+    grid-template-columns: 345px 1fr;
     column-gap: 20px;
     row-gap: 0;
     padding: 20px;
@@ -119,22 +118,31 @@
 
   .offer__content {
     display: grid;
-    grid-template-columns: 1fr 200px;
-    column-gap: 10px;
+    grid-template-columns: 1fr 235px;
+    column-gap: 20px;
 
     & .offer__seller {
       margin-top: 0;
     }
   }
 
+  .delete-class .offer__seller {
+    padding: 14px;
+  }
+
   .offer__aside {
     display: grid;
-    grid-template-columns: 1fr 35px;
+    // grid-template-columns: 1fr 35px;
     column-gap: 10px;
+    font-size: 14px;
 
     & .offer__actions {
       margin-top: 0;
     }
+  }
+
+  .delete-class .offer__aside {
+    grid-template-columns: 1fr 35px;
   }
 
   .offer__content-footer {

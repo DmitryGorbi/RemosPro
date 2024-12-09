@@ -1,6 +1,5 @@
 .offer-images__wrapper {
   display: grid;
-  grid-template-rows: 250px 65px;
   gap: 8px;
   border-radius: 5px;
 
@@ -11,7 +10,11 @@
     object-fit: cover;
   }
 
-  &--novostroiky {
+  &--paid {
+    grid-template-rows: 250px 65px;
+  }
+
+  &--free {
     grid-template-rows: 250px;
   }
 }
@@ -46,45 +49,6 @@
   & .button-circle {
     right: 10px;
   }
-
-  // & .offer-images__swiper {
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   padding: 10px;
-  //   display: none;
-  //   width: 50px;
-  //   height: 55%;
-  //   z-index: 2;
-
-  //   &:nth-of-type(2) {
-  //     left: 0;
-
-  //     & span svg {
-  //       margin: auto 0 auto 9px;
-  //     }
-  //   }
-
-  //   &:nth-of-type(3) {
-  //     right: 0;
-
-  //     & span svg {
-  //       margin: auto 0 auto 13px;
-  //     }
-  //   }
-
-  //   & span:last-of-type {
-  //     display: flex;
-  //     width: 30px;
-  //     height: 30px;
-  //     border-radius: 50%;
-  //     background-color: var(--light-gray);
-  //   }
-  // }
-
-  // &:hover .offer-images__swiper {
-  //   display: block;
-  // }
 }
 
 .offer-images__counter {
@@ -110,21 +74,16 @@
 
 @media (min-width: @desktop-width) {
   & .offer-images__wrapper {
-    display: grid;
-    grid-template-rows: 282px 75px;
-    gap: 8px;
-    border-radius: 5px;
+    &--paid {
+      grid-template-rows: 282px 75px;
+    }
 
-    &--novostroiky {
-      grid-template-rows: 340px;
+    &--free {
+      grid-template-rows: 282px;
     }
   }
 
   .offer-images__main {
-    & .offer-images__swiper {
-      height: 100%;
-    }
-
     & .button-circle {
       display: none;
     }
