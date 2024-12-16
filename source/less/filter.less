@@ -9,7 +9,6 @@
   row-gap: 35px;
   height: calc(100% - 59px - 81px);
   overflow-y: auto;
-  line-height: 20px;
 }
 
 .filter__fieldset {
@@ -23,9 +22,12 @@
   }
 }
 
+.filter__selected {
+  margin-top: 10px;
+}
+
 .filter__footer {
   display: grid;
-  // flex-wrap: wrap;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   column-gap: 35px;
@@ -48,7 +50,6 @@
   .filter {
     display: flex;
     column-gap: 10px;
-    padding: 0;
     height: auto;
     z-index: 10;
   }

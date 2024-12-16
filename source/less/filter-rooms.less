@@ -2,12 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  font-size: 14px;
 }
 
 @media (max-width: @mobile-tablet-width) {
+  .filter-rooms__list li:first-child .filter-rooms__control {
+    width: min-content;
+  }
+
   .filter-rooms__list input:checked + label .filter-rooms__control {
-    padding: 12px 19px;
+    padding: 12px 19px 13px 19px;
     border-width: 2px;
     border-color: var(--basic-green);
     background-color: var(--light-blue);
@@ -22,8 +25,13 @@
   }
 
   .filter-rooms__control {
-    display: block;
-    padding: 13px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    padding: 13px 20px 14px 20px;
+    height: 48px;
+    width: 48px;
     border: 1px solid var(--gray);
     border-radius: 4px;
     cursor: pointer;

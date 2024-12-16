@@ -1,9 +1,4 @@
 @media (min-width: @desktop-width) {
-  .modal-location__section {
-    // height: calc(100% -200px);
-    // overflow-y: auto;
-  }
-
   .geo-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -17,9 +12,6 @@
     & div {
       display: inline-block;
       width: 100%;
-    }
-
-    & ul {
     }
 
     & ul:not(:last-child) {
@@ -47,6 +39,15 @@
         color: var(--white);
         background-color: var(--basic-green);
       }
+    }
+  }
+
+  .geo-list__selected {
+    background-color: var(--basic-green);
+    color: var(--white);
+
+    &:hover {
+      color: var(--white) !important;
     }
   }
 }

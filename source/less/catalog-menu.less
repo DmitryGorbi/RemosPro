@@ -1,8 +1,11 @@
 .catalog-menu {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 5px;
   font-size: 13px;
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+  }
 
   & .button,
   a {
@@ -11,19 +14,22 @@
     justify-content: center;
     column-gap: 5px;
     padding: 10px 0;
+    width: 100%;
     border-radius: 5px;
     background-color: var(--extra-light-gray);
+
+    &:hover {
+      background-color: var(--light-gray);
+    }
 
     &:active {
       color: var(--white);
       background-color: var(--basic-green);
       border-radius: 5px;
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    & h2 {
-      display: none;
+    &:active svg {
+      stroke: var(--white);
     }
   }
 }

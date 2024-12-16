@@ -33,7 +33,7 @@ input[type='radio'] {
   }
 
   &:checked + label .filter-control {
-    padding: 12px 14px;
+    padding: 12px 14px 13px 14px;
     border-width: 2px;
   }
 
@@ -50,13 +50,11 @@ input[type='radio'] {
 
 .filter-control,
 .pseudo-checkbox {
-  display: block;
-  width: 100%;
-  line-height: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  // cursor: pointer;
 
   &:hover {
     color: var(--basic-green);
@@ -65,7 +63,8 @@ input[type='radio'] {
 }
 
 .filter-control {
-  padding: 13px 15px;
+  padding: 13px 15px 14px 15px;
+  // height: 48px;
 }
 
 .pseudo-checkbox {
@@ -99,8 +98,7 @@ input[type='radio'] {
 .input--field {
   display: block;
   width: 100%;
-  padding: 13px 30px 13px 15px;
-  line-height: 20px;
+  padding: 14px 30px 14px 15px;
   border: 1px solid var(--gray);
   border-radius: 5px;
 

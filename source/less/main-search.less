@@ -11,7 +11,7 @@
   padding: 16px;
   text-align: center;
   border-bottom: 1px solid rgb(209, 209, 213);
-  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   & h3 {
     line-height: 26px;
@@ -21,7 +21,6 @@
 }
 
 .main-search__footer .button {
-  position: absolute;
   top: 6px;
   right: 0;
 }
@@ -37,9 +36,17 @@
   .main-search {
     display: block;
     position: static;
-    padding-top: 20px;
     margin: 0 auto;
     width: 1200px;
     box-shadow: none;
+  }
+
+  .main-search__form {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .main-search__selected {
+    margin-top: 8px;
   }
 }

@@ -11,9 +11,11 @@
   .deal {
     flex-direction: column;
 
-    & > .deal__item > label > span {
+    & .filter-control {
+      justify-content: start;
       width: 120px;
       height: 40px;
+      border: none;
     }
   }
 
@@ -30,7 +32,7 @@
     }
   }
 
-  .deal__item > input:checked + label > span::after {
+  .deal__item > input:checked + label .filter-control::after {
     position: absolute;
     content: '';
     width: 20px;

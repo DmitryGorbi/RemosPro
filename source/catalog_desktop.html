@@ -9,6 +9,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/source/img/favicons/favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="/source/img/favicons/safari-pinned-tab.svg" color="#20a052" />
+    <link rel="preload" href="fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Десктопный каталог</title>
     <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
@@ -543,33 +546,12 @@
       </div>
     </header>
     <main id="main" class="wrapper-content page-main catalog">
-      <h1 class="caption-catalog">Продажа квартир в Московской области</h1>
+      <h1 class="catalog__title catalog-caption">Продажа квартир в Московской области</h1>
       <p>Найдено 45 545 объявлений</p>
       <header class="catalog-header">
-        <!-- <section class="catalog-menu">
-          <h2 class="visually-hidden">Меню каталога: фильтр, объявления на карте, подписка на новые объявления</h2>
-          <button class="button catalog-menu__filter" type="button" aria-expanded="false" aria-controls="catalog__filter">
-            <svg width="19" height="19" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#filter__icon"></use>
-            </svg>
-            <span>Фильтры</span>
-          </button>
-          <a href="#">
-            <svg width="19" height="19" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-            </svg>
-            <span>Карта</span>
-          </a>
-          <button class="button" type="button">
-            <svg width="19" height="19" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#mail__icon"></use>
-            </svg>
-            <span>Подписка</span>
-          </button>
-        </section> -->
         <section class="main-search">
           <h2 class="visually-hidden">Фильтр поиска недвижимости</h2>
-          <form class="filter" action="https://echo.htmlacademy.ru/courses">
+          <form class="filter main-search__form" action="https://echo.htmlacademy.ru/courses">
             <div class="filter__content">
               <div class="filter__item">
                 <button class="button button-filter" type="button" aria-expanded="false" aria-controls="deal">
@@ -810,7 +792,7 @@
                 </fieldset>
               </div>
               <div class="filter__item">
-                <button class="button button-filter" type="button" aria-expanded="false" aria-controls="filter__addition">
+                <button class="button button-filter mark" type="button" aria-expanded="false" aria-controls="filter__addition">
                   <span>Фильтры</span>
                   <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
                     <use xlink:href="img/icons/sprite.svg#arrow"></use>
@@ -819,9 +801,6 @@
                 <div id="filter__addition" class="filter-add filter__fieldset filter__fieldset-add">
                   <div class="filter-add__header">
                     <h3 class="filter-add__title">Фильтры</h3>
-                    <button type="button" class="button button-close">
-                      <span class="visually-hidden">Закрыть фильтр</span>
-                    </button>
                   </div>
                   <div class="filter-add__body">
                     <div class="filter-add__item">
@@ -853,11 +832,11 @@
                             </li>
                             <li>
                               <p>Кухня</p>
-                              <label for="kitchen__min" class="visually-hidden">минимум </label>
+                              <label for="kitchen__min" class="visually-hidden">минимум</label>
                               <div class="input-wrap-miter">
                                 <input id="kitchen__min" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
                               </div>
-                              <label for="kitchen__max" class="visually-hidden">>максимум </label>
+                              <label for="kitchen__max" class="visually-hidden">максимум</label>
                               <div class="input-wrap-miter">
                                 <input id="kitchen__max" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                               </div>
@@ -964,12 +943,12 @@
                         <legend class="filter-add__legend">Тип ремонта</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="repair__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="repair__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="designer__repair" class="visually-hidden input" type="checkbox" />
                               <label for="designer__repair">
@@ -993,6 +972,23 @@
                               <label for="absent__repair">
                                 <span class="filter-control">Отсутствует</span>
                               </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="filter-add__item">
+                      <fieldset class="filter-add__fieldset">
+                        <legend class="filter-add__legend">Этажность дома</legend>
+                        <div class="filter-add__wrapper">
+                          <ul class="filter-add__list-grid">
+                            <li>
+                              <label for="ground__floor" class="visually-hidden">от</label>
+                              <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                            </li>
+                            <li>
+                              <label for="top__floor" class="visually-hidden">до</label>
+                              <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                             </li>
                           </ul>
                         </div>
@@ -1034,12 +1030,12 @@
                         <legend class="filter-add__legend">Тип дома</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="wall__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="wall__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="panel" class="visually-hidden input" type="checkbox" />
                               <label for="panel">
@@ -1081,23 +1077,6 @@
                               <label for="stalin">
                                 <span class="filter-control">Сталинский</span>
                               </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </fieldset>
-                    </div>
-                    <div class="filter-add__item">
-                      <fieldset class="filter-add__fieldset">
-                        <legend class="filter-add__legend">Этажность дома</legend>
-                        <div class="filter-add__wrapper">
-                          <ul class="filter-add__list-grid">
-                            <li>
-                              <label for="ground__floor" class="visually-hidden">от</label>
-                              <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
-                            </li>
-                            <li>
-                              <label for="top__floor" class="visually-hidden">до</label>
-                              <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                             </li>
                           </ul>
                         </div>
@@ -1239,13 +1218,13 @@
                         <legend class="filter-add__legend">Парковка</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="parking__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="parking__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
                             </li>
-                            <li>
+                            <li> -->
                               <input id="underground__parking" class="visually-hidden input" type="checkbox" />
                               <label for="underground__parking">
                                 <span class="filter-control">Подземная</span>
@@ -1410,25 +1389,25 @@
                               <h3 class="visually-hidden">Выбранные слова</h3>
                               <ul>
                                 <li>
-                                  <span>Войковский</span>
+                                  <span>ижс</span>
                                   <button class="button button-close" type="button">
                                     <span class="visually-hidden">Удалить свойство</span>
                                   </button>
                                 </li>
                                 <li>
-                                  <span>Красносельский</span>
+                                  <span>снт</span>
                                   <button class="button button-close" type="button">
                                     <span class="visually-hidden">Удалить свойство</span>
                                   </button>
                                 </li>
                                 <li>
-                                  <span>Войковский</span>
+                                  <span>лес</span>
                                   <button class="button button-close" type="button">
                                     <span class="visually-hidden">Удалить свойство</span>
                                   </button>
                                 </li>
                                 <li>
-                                  <span>Красносельский</span>
+                                  <span>озеро</span>
                                   <button class="button button-close" type="button">
                                     <span class="visually-hidden">Удалить свойство</span>
                                   </button>
@@ -1489,12 +1468,12 @@
                         <legend class="filter-add__legend">Условия проживания</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="conditions__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="conditions__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="kids" class="visually-hidden input" type="checkbox" />
                               <label for="kids">
@@ -1515,13 +1494,13 @@
                       <fieldset class="filter-add__fieldset">
                         <legend class="filter-add__legend">Комнат в квартире</legend>
                         <div class="filter-add__wrapper">
-                          <ul class="filter-add__list">
-                            <li>
+                          <ul class="filter-add__list filter-add__list--square">
+                            <!-- <li>
                               <input id="room__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="room__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="two__room" class="visually-hidden input" type="checkbox" />
                               <label for="two__room">
@@ -1560,13 +1539,13 @@
                       <fieldset class="filter-add__fieldset">
                         <legend class="filter-add__legend">Комнат на покупку</legend>
                         <div class="filter-add__wrapper">
-                          <ul class="filter-add__list">
-                            <li>
+                          <ul class="filter-add__list filter-add__list--square">
+                            <!-- <li>
                               <input id="rooms__deal__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="rooms__deal__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="one__room__deal" class="visually-hidden input" type="checkbox" />
                               <label for="one__room__deal">
@@ -1628,11 +1607,11 @@
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list-grid">
                             <li>
-                              <label for="house__square__from" class="visually-hidden">минимум</label>
+                              <label for="house__square__from" class="visually-hidden">Минимум</label>
                               <input id="house__square__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
                             </li>
                             <li>
-                              <label for="house__square__to" class="visually-hidden">максимум</label>
+                              <label for="house__square__to" class="visually-hidden">Максимум</label>
                               <input id="house__square__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                             </li>
                           </ul>
@@ -1645,11 +1624,11 @@
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list-grid">
                             <li>
-                              <label for="land__square__from" class="visually-hidden">минимум</label>
+                              <label for="land__square__from" class="visually-hidden">Минимум</label>
                               <input id="land__square__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
                             </li>
                             <li>
-                              <label for="land__square__to" class="visually-hidden">максимум</label>
+                              <label for="land__square__to" class="visually-hidden">Максимум</label>
                               <input id="land__square__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                             </li>
                           </ul>
@@ -1660,13 +1639,13 @@
                       <fieldset class="filter-add__fieldset">
                         <legend class="filter-add__legend">Этажей в доме</legend>
                         <div class="filter-add__wrapper">
-                          <ul class="filter-add__list">
-                            <li>
+                          <ul class="filter-add__list filter-add__list--square">
+                            <!-- <li>
                               <input id="floors__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="floors__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="one__floor" class="visually-hidden input" type="checkbox" />
                               <label for="one__floor">
@@ -1699,13 +1678,13 @@
                       <fieldset class="filter-add__fieldset">
                         <legend class="filter-add__legend">Комнат в доме</legend>
                         <div class="filter-add__wrapper">
-                          <ul class="filter-add__list">
-                            <li>
+                          <ul class="filter-add__list filter-add__list--square">
+                            <!-- <li>
                               <input id="house__rooms__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="house__rooms__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="house__one__room" class="visually-hidden input" type="checkbox" />
                               <label for="house__one__room">
@@ -1751,12 +1730,12 @@
                         <legend class="filter-add__legend">Материал дома</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="construction__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="construction__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="house__brick" class="visually-hidden input" type="checkbox" />
                               <label for="house__brick">
@@ -1802,12 +1781,12 @@
                         <legend class="filter-add__legend">Коммуникации</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="utilities__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="utilities__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="electricity" class="visually-hidden input" type="checkbox" />
                               <label for="electricity">
@@ -1874,12 +1853,12 @@
                         <legend class="filter-add__legend">Статус участка</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="lang__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="lang__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="ihc" class="visually-hidden input" type="checkbox" />
                               <label for="ihc">
@@ -1913,12 +1892,12 @@
                         <legend class="filter-add__legend">Удобства</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="comfort__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="comfort__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="room__furniture" class="visually-hidden input" type="checkbox" />
                               <label for="room__furniture">
@@ -2061,12 +2040,12 @@
                         <legend class="filter-add__legend">Тип здания</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="type__building__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="center" class="visually-hidden input" type="checkbox" />
                               <label for="center">
@@ -2105,13 +2084,13 @@
                       <fieldset class="filter-add__fieldset">
                         <legend class="filter-add__legend">Класс здания</legend>
                         <div class="filter-add__wrapper">
-                          <ul class="filter-add__list">
-                            <li>
+                          <ul class="filter-add__list filter-add__list--square">
+                            <!-- <li>
                               <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="type__building__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="class__a+" class="visually-hidden input" type="checkbox" />
                               <label for="class__a+">
@@ -2211,12 +2190,12 @@
                         <legend class="filter-add__legend">Возможное назначение</legend>
                         <div class="filter-add__wrapper">
                           <ul class="filter-add__list">
-                            <li>
+                            <!-- <li>
                               <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
                               <label for="type__building__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
+                            </li> -->
                             <li>
                               <input id="medical" class="visually-hidden input" type="checkbox" />
                               <label for="medical">
@@ -2279,6 +2258,9 @@
                     <button class="button button--text" type="reset"><span>Сбросить фильтры</span></button>
                     <button class="button button-main" type="button">Смотреть объявления</button>
                   </div>
+                  <button type="button" class="button button-close">
+                    <span class="visually-hidden">Закрыть фильтр</span>
+                  </button>
                 </div>
               </div>
               <div class="filter__item">
@@ -2384,7 +2366,7 @@
             </div>
           </form>
           <section class="selected-properties main-search__selected">
-            <h4 class="visually-hidden">Выбранные фильтры</h4>
+            <h4 class="visually-hidden">Выбранные свойства</h4>
             <ul>
               <li>
                 <span class="subway-mark m-line-2"></span>
@@ -3534,9 +3516,11 @@
           </ul>
         </footer>
       </section>
-      <section class="location section-wrapper">
+    </main>
+    <section class="location">
+      <div class="location__wrapper">
         <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
-        <section class="location__item">
+        <section class="location__item location__item-metro">
           <h3>Квартиры у метро</h3>
           <ul class="location__list">
             <li><a href="#">Автозаводская</a></li>
@@ -3572,11 +3556,11 @@
             <li><a href="#">Щукинская</a></li>
             <li><a href="#">Электрозаводская</a></li> -->
           </ul>
-          <a class="link-underline" href="#">
+          <button class="button link-underline" type="button">
             <span>Показать всё</span>
-          </a>
+          </button>
         </section>
-        <section class="location__item">
+        <section class="location__item location__item-area">
           <h3>Квартиры в районе</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -3592,11 +3576,11 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#">
+          <button class="button link-underline" type="button">
             <span>Показать всё</span>
-          </a>
+          </button>
         </section>
-        <section class="location__item">
+        <section class="location__item location__item-district">
           <h3>Квартиры в Округах</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -3612,11 +3596,11 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#">
+          <button class="button link-underline" type="button">
             <span>Показать всё</span>
-          </a>
+          </button>
         </section>
-        <section class="location__item">
+        <section class="location__item location__item-street">
           <h3>Квартиры на улицах</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -3632,13 +3616,12 @@
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
-          <a class="link-underline" href="#">
+          <button class="button link-underline" type="button">
             <span>Показать всё</span>
-          </a>
+          </button>
         </section>
-      </section>
-    </main>
-
+      </div>
+    </section>
     <footer class="footer">
       <div class="wrapper-content">
         <p>© Remos 2023 - Недвижимость в Московской области</p>
@@ -6426,19 +6409,6 @@
           <div></div>
           <p>Пушкино, Московская область</p>
         </div>
-        <!-- <div class="modal-location__favorite">
-          <h3 class="visually-hidden-desktop">Популярные регионы</h3>
-          <ul class="modal-location__favorite-list">
-            <li><button class="button" type="button">Москва</button></li>
-            <li><button class="button" type="button">Санкт-Петербург</button></li>
-            <li><button class="button" type="button">Калининград</button></li>
-            <li><button class="button" type="button">Самара</button></li>
-            <li><button class="button" type="button">Екатеринбург</button></li>
-            <li><button class="button" type="button">Казань</button></li>
-            <li><button class="button" type="button">Краснодар</button></li>
-            <li><button class="button" type="button">Сочи</button></li>
-          </ul>
-        </div> -->
         <div class="modal-location__section">
           <div class="geo-list">
             <div>
@@ -6488,7 +6458,7 @@
                 <li><button class="button" type="button">Краснодарский край</button></li>
                 <li><button class="button" type="button">Красноярский край</button></li>
                 <li><button class="button" type="button">Курганская область</button></li>
-                <li><button class="button" type="button">Курская область</button></li>
+                <li><button class="button geo-list__selected" type="button">Курская область</button></li>
               </ul>
               <ul>
                 <li>Л</li>
