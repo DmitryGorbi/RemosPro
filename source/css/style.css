@@ -3111,50 +3111,31 @@ textarea {
 .catalog {
   row-gap: 0;
 }
-.catalog h1 {
+.catalog .catalog__title h1 {
   margin-bottom: 20px;
 }
-.catalog > p {
+.catalog__header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+  margin-bottom: 25px;
+}
+.catalog__title h1 {
   margin-bottom: 20px;
 }
-.catalog .catalog-header {
+.catalog__filter {
   order: -1;
 }
-.catalog .quick-links {
-  margin-bottom: 20px;
-}
 @media (min-width: 768px) {
-  .catalog h1 {
-    margin-bottom: 25px;
-  }
-  .catalog > p {
-    margin-bottom: 30px;
-  }
-  .catalog .quick-links {
-    margin-bottom: 30px;
-  }
-}
-@media (min-width: 1240px) {
-  .catalog h1 {
-    margin-bottom: 25px;
-  }
-  .catalog > p {
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-  .catalog .quick-links {
+  .catalog__header {
+    gap: 35px 0;
+    margin-top: 40px;
     margin-bottom: 45px;
   }
 }
-.catalog-header {
-  margin-bottom: 20px;
-}
 @media (min-width: 1240px) {
-  .catalog-header {
-    margin: 40px 0;
-  }
-  .catalog-header .catalog-menu {
-    display: none;
+  .catalog__title > p {
+    font-size: 18px;
   }
 }
 .catalog-gk {

@@ -545,11 +545,13 @@
         </button>
       </div>
     </header>
-    <main id="main" class="wrapper-content page-main catalog">
-      <h1 class="catalog__title catalog-caption">Продажа квартир в Московской области</h1>
-      <p>Найдено 45 545 объявлений</p>
-      <header class="catalog-header">
-        <section class="main-search">
+    <main id="main" class="page-main catalog">
+      <header class="catalog__header wrapper-content">
+        <div class="catalog__title">
+          <h1 class="catalog-caption">Продажа квартир в Московской области</h1>
+          <p>Найдено 45 545 объявлений</p>
+        </div>
+        <section class="catalog__filter main-search">
           <h2 class="visually-hidden">Фильтр поиска недвижимости</h2>
           <form class="filter main-search__form" action="https://echo.htmlacademy.ru/courses">
             <div class="filter__content">
@@ -1223,8 +1225,8 @@
                               <label for="parking__care">
                                 <span class="filter-control">Неважно</span>
                               </label>
-                            </li>
-                            <li> -->
+                            </li> -->
+                            <li>
                               <input id="underground__parking" class="visually-hidden input" type="checkbox" />
                               <label for="underground__parking">
                                 <span class="filter-control">Подземная</span>
@@ -2400,73 +2402,73 @@
             <button class="button" type="button">Очистить</button>
           </section>
         </section>
+        <section class="catalog__links quick-links">
+          <h3 class="visually-hidden-small-mobile">Может подойти</h3>
+          <ul>
+            <li>
+              <a href="#">вторичка</a>
+              <span></span>
+              <span>99 000</span>
+            </li>
+            <li>
+              <a href="#">новостройки</a>
+              <span></span>
+              <span>50 000</span>
+            </li>
+            <li>
+              <a href="#">в завидовском заповеднике</a>
+              <span></span>
+              <span>11 000</span>
+            </li>
+            <li>
+              <a href="#">евротрешки</a>
+              <span></span>
+              <span>2 000</span>
+            </li>
+            <li>
+              <a href="#">ближайшее подмосковье</a>
+              <span></span>
+              <span>12 500</span>
+            </li>
+            <li>
+              <a href="#">2-комнатные</a>
+              <span></span>
+              <span>34000</span>
+            </li>
+            <li>
+              <a href="#">вторичка</a>
+              <span></span>
+              <span>99 000</span>
+            </li>
+            <li>
+              <a href="#">новостройки</a>
+              <span></span>
+              <span>50 000</span>
+            </li>
+            <li>
+              <a href="#">студии</a>
+              <span></span>
+              <span>11 000</span>
+            </li>
+            <li>
+              <a href="#">евротрешки</a>
+              <span></span>
+              <span>2 000</span>
+            </li>
+            <li>
+              <a href="#">ближайшее подмосковье</a>
+              <span></span>
+              <span>12 500</span>
+            </li>
+            <li>
+              <a href="#">2-комнатные</a>
+              <span></span>
+              <span>34000</span>
+            </li>
+          </ul>
+        </section>
       </header>
-      <section class="quick-links">
-        <h3 class="visually-hidden-small-mobile">Может подойти</h3>
-        <ul>
-          <li>
-            <a href="#">вторичка</a>
-            <span></span>
-            <span>99 000</span>
-          </li>
-          <li>
-            <a href="#">новостройки</a>
-            <span></span>
-            <span>50 000</span>
-          </li>
-          <li>
-            <a href="#">в завидовском заповеднике</a>
-            <span></span>
-            <span>11 000</span>
-          </li>
-          <li>
-            <a href="#">евротрешки</a>
-            <span></span>
-            <span>2 000</span>
-          </li>
-          <li>
-            <a href="#">ближайшее подмосковье</a>
-            <span></span>
-            <span>12 500</span>
-          </li>
-          <li>
-            <a href="#">2-комнатные</a>
-            <span></span>
-            <span>34000</span>
-          </li>
-          <li>
-            <a href="#">вторичка</a>
-            <span></span>
-            <span>99 000</span>
-          </li>
-          <li>
-            <a href="#">новостройки</a>
-            <span></span>
-            <span>50 000</span>
-          </li>
-          <li>
-            <a href="#">студии</a>
-            <span></span>
-            <span>11 000</span>
-          </li>
-          <li>
-            <a href="#">евротрешки</a>
-            <span></span>
-            <span>2 000</span>
-          </li>
-          <li>
-            <a href="#">ближайшее подмосковье</a>
-            <span></span>
-            <span>12 500</span>
-          </li>
-          <li>
-            <a href="#">2-комнатные</a>
-            <span></span>
-            <span>34000</span>
-          </li>
-        </ul>
-      </section>
-      <section class="catalog-list">
+      <section class="catalog__body catalog-list wrapper-content">
         <h2 class="visually-hidden">Список подходящих объявлений</h2>
         <header class="catalog-list__header">
           <button class="button catalog-list__subscribe" type="button">
@@ -3522,112 +3524,112 @@
           </ul>
         </footer>
       </section>
+      <section class="catalog__district location">
+        <div class="location__wrapper">
+          <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
+          <section class="location__item location__item-metro">
+            <h3>Квартиры у метро</h3>
+            <ul class="location__list">
+              <li><a href="#">Автозаводская</a></li>
+              <li><a href="#">Авиамоторная</a></li>
+              <li><a href="#">Академическая</a></li>
+              <li><a href="#">Александровский сад</a></li>
+              <li><a href="#">Алексеевская</a></li>
+              <li><a href="#">Улица Академика Королева</a></li>
+              <li><a href="#">Сокол</a></li>
+              <li><a href="#">Войковская</a></li>
+              <li><a href="#">Менделеевская</a></li>
+              <li><a href="#">Динамо</a></li>
+              <li><a href="#">Марьина Роща</a></li>
+              <li><a href="#">Говорово</a></li>
+              <li><a href="#">Бульвар Дмитрия Донского</a></li>
+              <li><a href="#">Нагатинская</a></li>
+              <li><a href="#">Рижская</a></li>
+              <li><a href="#">Свиблово</a></li>
+              <!-- <li><a href="#">Семеновская</a></li>
+              <li><a href="#">Новогиреево</a></li>
+              <li><a href="#">Шелепиха</a></li>
+              <li><a href="#">Печатники</a></li>
+              <li><a href="#">Красные ворота</a></li>
+              <li><a href="#">Бульвар адмирала Ушакова</a></li>
+              <li><a href="#">Марьино</a></li>
+              <li><a href="#">Кузнецкий мост</a></li>
+              <li><a href="#">Охотный ряд</a></li>
+              <li><a href="#">Румянцево</a></li>
+              <li><a href="#">Севастопольская</a></li>
+              <li><a href="#">Университет</a></li>
+              <li><a href="#">Щукинская</a></li>
+              <li><a href="#">Электрозаводская</a></li>
+              <li><a href="#">Щукинская</a></li>
+              <li><a href="#">Электрозаводская</a></li> -->
+            </ul>
+            <button class="button link-underline" type="button">
+              <span>Показать всё</span>
+            </button>
+          </section>
+          <section class="location__item location__item-area">
+            <h3>Квартиры в районе</h3>
+            <ul class="location__list">
+              <li><a href="#">Хорошево-Мневники</a></li>
+              <li><a href="#">Марьино</a></li>
+              <li><a href="#">Орехово-Борисово Северное</a></li>
+              <li><a href="#">Строгино</a></li>
+              <li><a href="#">Тверской</a></li>
+              <li><a href="#">Дорогомилово</a></li>
+              <li><a href="#">Северное Измайлово</a></li>
+              <li><a href="#">Южное Медввеедково</a></li>
+              <li><a href="#">Лефортово</a></li>
+              <li><a href="#">Коньково</a></li>
+              <li><a href="#">Орехово-Борисово Южное</a></li>
+              <li><a href="#">Роостокино</a></li>
+            </ul>
+            <button class="button link-underline" type="button">
+              <span>Показать всё</span>
+            </button>
+          </section>
+          <section class="location__item location__item-district">
+            <h3>Квартиры в Округах</h3>
+            <ul class="location__list">
+              <li><a href="#">Хорошево-Мневники</a></li>
+              <li><a href="#">Марьино</a></li>
+              <li><a href="#">Орехово-Борисово Северное</a></li>
+              <li><a href="#">Строгино</a></li>
+              <li><a href="#">Тверской</a></li>
+              <li><a href="#">Дорогомилово</a></li>
+              <li><a href="#">Северное Измайлово</a></li>
+              <li><a href="#">Южное Медввеедково</a></li>
+              <li><a href="#">Лефортово</a></li>
+              <li><a href="#">Коньково</a></li>
+              <li><a href="#">Орехово-Борисово Южное</a></li>
+              <li><a href="#">Роостокино</a></li>
+            </ul>
+            <button class="button link-underline" type="button">
+              <span>Показать всё</span>
+            </button>
+          </section>
+          <section class="location__item location__item-street">
+            <h3>Квартиры на улицах</h3>
+            <ul class="location__list">
+              <li><a href="#">Хорошево-Мневники</a></li>
+              <li><a href="#">Марьино</a></li>
+              <li><a href="#">Орехово-Борисово Северное</a></li>
+              <li><a href="#">Строгино</a></li>
+              <li><a href="#">Тверской</a></li>
+              <li><a href="#">Дорогомилово</a></li>
+              <li><a href="#">Северное Измайлово</a></li>
+              <li><a href="#">Южное Медввеедково</a></li>
+              <li><a href="#">Лефортово</a></li>
+              <li><a href="#">Коньково</a></li>
+              <li><a href="#">Орехово-Борисово Южное</a></li>
+              <li><a href="#">Роостокино</a></li>
+            </ul>
+            <button class="button link-underline" type="button">
+              <span>Показать всё</span>
+            </button>
+          </section>
+        </div>
+      </section>
     </main>
-    <section class="location">
-      <div class="location__wrapper">
-        <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
-        <section class="location__item location__item-metro">
-          <h3>Квартиры у метро</h3>
-          <ul class="location__list">
-            <li><a href="#">Автозаводская</a></li>
-            <li><a href="#">Авиамоторная</a></li>
-            <li><a href="#">Академическая</a></li>
-            <li><a href="#">Александровский сад</a></li>
-            <li><a href="#">Алексеевская</a></li>
-            <li><a href="#">Улица Академика Королева</a></li>
-            <li><a href="#">Сокол</a></li>
-            <li><a href="#">Войковская</a></li>
-            <li><a href="#">Менделеевская</a></li>
-            <li><a href="#">Динамо</a></li>
-            <li><a href="#">Марьина Роща</a></li>
-            <li><a href="#">Говорово</a></li>
-            <li><a href="#">Бульвар Дмитрия Донского</a></li>
-            <li><a href="#">Нагатинская</a></li>
-            <li><a href="#">Рижская</a></li>
-            <li><a href="#">Свиблово</a></li>
-            <!-- <li><a href="#">Семеновская</a></li>
-            <li><a href="#">Новогиреево</a></li>
-            <li><a href="#">Шелепиха</a></li>
-            <li><a href="#">Печатники</a></li>
-            <li><a href="#">Красные ворота</a></li>
-            <li><a href="#">Бульвар адмирала Ушакова</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Кузнецкий мост</a></li>
-            <li><a href="#">Охотный ряд</a></li>
-            <li><a href="#">Румянцево</a></li>
-            <li><a href="#">Севастопольская</a></li>
-            <li><a href="#">Университет</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li> -->
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="location__item location__item-area">
-          <h3>Квартиры в районе</h3>
-          <ul class="location__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
-            <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
-            <li><a href="#">Роостокино</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="location__item location__item-district">
-          <h3>Квартиры в Округах</h3>
-          <ul class="location__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
-            <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
-            <li><a href="#">Роостокино</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="location__item location__item-street">
-          <h3>Квартиры на улицах</h3>
-          <ul class="location__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
-            <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
-            <li><a href="#">Роостокино</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-      </div>
-    </section>
     <footer class="footer">
       <div class="wrapper-content">
         <p>© Remos 2023 - Недвижимость в Московской области</p>
