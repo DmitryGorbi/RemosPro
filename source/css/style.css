@@ -715,7 +715,7 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .input:checked + label .filter-control {
-    padding: 9px 15px;
+    padding: 7px 13px;
     border-width: 1px;
   }
   .input:checked + label .pseudo-checkbox {
@@ -723,7 +723,7 @@ input[type='radio'] {
     border-width: 1px;
   }
   .filter-control {
-    padding: 9px 15px;
+    padding: 7px 13px;
   }
   .pseudo-checkbox {
     padding: 9px 15px;
@@ -738,7 +738,7 @@ input[type='radio'] {
 }
 @media (min-width: 1240px) {
   .input--field {
-    padding: 9px;
+    padding: 7px 8px 8px 8px;
   }
 }
 .input--field:focus-visible {
