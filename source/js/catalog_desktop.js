@@ -5,9 +5,10 @@ subscribeControl.addEventListener('click', () => {
   subscribeModal.classList.toggle('show');
 });
 
-let sortControl = document.querySelector('.catalog-list__button-sort');
+let sortControl = document.querySelector('.sort__control');
 let sortModal = document.querySelector('.sort__list');
 
 sortControl.addEventListener('click', () => {
-  sortModal.classList.add('show');
+  const isOpen = sortControl.getAttribute('aria-expanded') === 'false';
+  sortControl.setAttribute('aria-expanded', isOpen);
 });

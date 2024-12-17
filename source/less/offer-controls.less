@@ -32,10 +32,6 @@
     background-color: white;
     box-shadow: 0 0 100vmax 100vmax rgba(0, 0, 0, 0.3);
     border-radius: 5px 5px 0 0;
-
-    & li:first-child {
-      display: none;
-    }
   }
 
   & .offer-controls__item {
@@ -58,20 +54,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    .offer-controls__toggler {
-      display: none;
-    }
-
     & .offer-controls__wrapper {
       position: static;
-      display: flex;
-      flex-direction: column;
-      row-gap: 10px;
       padding: 0;
       box-shadow: none;
 
-      & li:first-child {
-        display: block;
+      & ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
       }
     }
 

@@ -5,11 +5,13 @@ subscribeControl.addEventListener('click', () => {
   subscribeModal.classList.toggle('show');
 });
 
-let sortControl = document.querySelector('.catalog-list__button-sort');
+let sortControl = document.querySelector('.sort__control');
 let sortModal = document.querySelector('.sort__list');
 
 sortControl.addEventListener('click', () => {
-  sortModal.classList.toggle('show');
+  // sortModal.classList.toggle('show');
+  const isOpen = sortControl.getAttribute('aria-expanded') === 'false';
+  sortControl.setAttribute('aria-expanded', isOpen);
 });
 
 let geoControl = document.querySelector('.search__button-js-geo');
