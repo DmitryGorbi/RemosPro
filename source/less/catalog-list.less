@@ -9,6 +9,11 @@
   font-size: 14px;
 }
 
+.catalog-list__subscribe,
+.catalog-list__map {
+  display: none;
+}
+
 .catalog-list__sort {
   margin-left: auto;
 }
@@ -36,6 +41,10 @@
 @media (min-width: @desktop-width) {
   .catalog-list__header {
     margin-bottom: 37px;
+  }
+
+  .catalog-list__map {
+    display: block;
   }
 
   .catalog-list__subscribe,

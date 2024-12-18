@@ -73,7 +73,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  & .offer-images__wrapper {
+  .offer-images__wrapper {
     &--paid {
       grid-template-rows: 282px 75px;
     }
@@ -83,7 +83,11 @@
     }
   }
 
-  & .offer-images__camera {
+  .offer-images__main .button-circle {
+    display: none;
+  }
+
+  .offer-images__camera {
     left: auto;
     right: 10px;
   }
