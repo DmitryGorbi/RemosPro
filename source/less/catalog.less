@@ -4,21 +4,12 @@
   & .catalog__title h1 {
     margin-bottom: 20px;
   }
-
-  & > p {
-    // margin-bottom: 20px;
-  }
-
-  & .quick-links {
-    // margin-bottom: 20px;
-  }
 }
 
 .catalog__header {
   display: flex;
   flex-direction: column;
   gap: 25px 0;
-  // margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -26,8 +17,16 @@
   margin-bottom: 20px;
 }
 
+.catalog__body {
+  margin-bottom: 40px;
+}
+
 .catalog__filter {
   order: -1;
+}
+
+.catalog__stats {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,19 +36,9 @@
     margin-bottom: 45px;
   }
 
-  .catalog__title h1 {
-    // margin-bottom: 25px;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .catalog__title {
-    & > p {
-      font-size: 18px;
-      // margin-bottom: 40px;
-    }
-  }
-
   .catalog__ads div,
   .catalog__agents div {
     background-color: tomato;
@@ -57,5 +46,9 @@
     font-size: 40px;
     color: var(--white);
     text-align: center;
+  }
+
+  .catalog__body {
+    margin-bottom: 60px;
   }
 }

@@ -2531,7 +2531,6 @@ textarea {
 }
 .location {
   font-size: 14px;
-  background-color: var(--light);
   border-radius: 5px;
 }
 .location__item {
@@ -2567,7 +2566,7 @@ textarea {
 }
 @media (min-width: 768px) {
   .location__item {
-    padding: 20px 30px;
+    padding: 20px 0;
   }
   .location__list {
     grid-template-columns: repeat(3, 1fr);
@@ -2579,6 +2578,10 @@ textarea {
   .location__wrapper {
     width: 1200px;
     margin: 0 auto;
+  }
+  .location__item {
+    padding: 15px 5px;
+    margin: 0 -10px;
   }
   .location__list {
     grid-template-columns: repeat(5, 1fr);
@@ -3123,8 +3126,14 @@ textarea {
 .catalog__title h1 {
   margin-bottom: 20px;
 }
+.catalog__body {
+  margin-bottom: 40px;
+}
 .catalog__filter {
   order: -1;
+}
+.catalog__stats {
+  margin-bottom: 40px;
 }
 @media (min-width: 768px) {
   .catalog__header {
@@ -3134,9 +3143,6 @@ textarea {
   }
 }
 @media (min-width: 1240px) {
-  .catalog__title > p {
-    font-size: 18px;
-  }
   .catalog__ads div,
   .catalog__agents div {
     background-color: tomato;
@@ -3144,6 +3150,9 @@ textarea {
     font-size: 40px;
     color: var(--white);
     text-align: center;
+  }
+  .catalog__body {
+    margin-bottom: 60px;
   }
 }
 .catalog-gk {
@@ -3326,9 +3335,6 @@ textarea {
     padding: 3px 0;
   }
 }
-.catalog-list {
-  margin-bottom: 30px;
-}
 .catalog-list__header {
   display: flex;
   flex-wrap: wrap;
@@ -3397,6 +3403,7 @@ textarea {
   }
   .catalog-list__wrapper {
     grid-template-columns: 1fr;
+    margin-bottom: 50px;
   }
 }
 .sort {
@@ -4272,7 +4279,7 @@ textarea {
   margin: 0 -15px;
   font-size: 15px;
   line-height: 20px;
-  background-color: #f6f6f6;
+  background-color: var(--gray-background);
   cursor: pointer;
 }
 .accordion summary:hover {
@@ -4304,19 +4311,31 @@ textarea {
   font-size: 15px;
   font-weight: 400;
 }
-.accordion ul {
+.accordion ul,
+.accordion .accordion__body {
   margin: 0 -15px;
   padding: 10px 15px 15px;
   font-size: 14px;
   background-color: var(--gray-background);
 }
-.accordion ul li:not(:last-child) {
+.accordion ul li:not(:last-child),
+.accordion .accordion__body li:not(:last-child) {
   margin-bottom: 5px;
 }
-.accordion ul a {
+.accordion ul a,
+.accordion .accordion__body a {
   display: inline-block;
   padding: 5px 0;
   color: var(--basic-green);
+}
+.accordion--stats h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
 }
 @media (min-width: 768px) {
   .accordion summary {
@@ -4324,10 +4343,14 @@ textarea {
     background-color: var(--gray-background);
     border-radius: 5px;
   }
-  .accordion ul {
+  .accordion ul,
+  .accordion .accordion__body {
     margin: 0;
     padding-left: 23px;
     border-radius: 0 0 5px 5px;
+  }
+  .accordion--stats h2 {
+    font-size: 16px;
   }
 }
 .mark {
