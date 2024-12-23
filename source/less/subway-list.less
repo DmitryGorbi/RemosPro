@@ -4,22 +4,21 @@
 
 .subway-list__item {
   &:not(:last-child) {
-    margin-bottom: 25px;
-    padding-bottom: 27px;
     border-bottom: 1px solid var(--light-gray);
   }
 
-  & ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+  &:not(:first-of-type) {
+    margin-top: 14px;
   }
 
-  & li {
-    display: flex;
-    align-items: center;
-    column-gap: 15px;
-    line-height: 20px;
+  & ul {
+    & li {
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+      padding-bottom: 15px;
+      line-height: 20px;
+    }
   }
 
   & label {
@@ -37,7 +36,7 @@
   line-height: 22px;
 
   span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 23px;
@@ -50,13 +49,17 @@
 
 @media (min-width: @tablet-width) {
   .subway-list__item ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 15px;
+    columns: 2;
   }
 
   .subway-list__item input {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .subway-list__item ul {
+    columns: 3;
   }
 }

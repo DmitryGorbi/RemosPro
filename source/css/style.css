@@ -5213,20 +5213,17 @@ textarea {
   padding: 15px 0 15px;
 }
 .subway-list__item:not(:last-child) {
-  margin-bottom: 25px;
-  padding-bottom: 27px;
   border-bottom: 1px solid var(--light-gray);
 }
-.subway-list__item ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
+.subway-list__item:not(:first-of-type) {
+  margin-top: 14px;
 }
-.subway-list__item li {
+.subway-list__item ul li {
   display: flex;
   align-items: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
+  padding-bottom: 15px;
   line-height: 20px;
 }
 .subway-list__item label {
@@ -5242,7 +5239,7 @@ textarea {
   line-height: 22px;
 }
 .subway-list__title span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 23px;
@@ -5253,13 +5250,18 @@ textarea {
 }
 @media (min-width: 768px) {
   .subway-list__item ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 15px;
+    -moz-columns: 2;
+         columns: 2;
   }
   .subway-list__item input {
     width: 20px;
     height: 20px;
+  }
+}
+@media (min-width: 1240px) {
+  .subway-list__item ul {
+    -moz-columns: 3;
+         columns: 3;
   }
 }
 .selected-properties {
