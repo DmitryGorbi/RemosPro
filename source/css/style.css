@@ -3133,6 +3133,9 @@ textarea {
   order: -1;
 }
 .catalog__stats {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
   margin-bottom: 40px;
 }
 @media (min-width: 768px) {
@@ -4314,7 +4317,7 @@ textarea {
 .accordion ul,
 .accordion .accordion__body {
   margin: 0 -15px;
-  padding: 10px 15px 15px;
+  padding: 5px 15px 15px;
   font-size: 14px;
   background-color: var(--gray-background);
 }
@@ -4328,9 +4331,23 @@ textarea {
   padding: 5px 0;
   color: var(--basic-green);
 }
+.accordion .accordion__body p {
+  margin-bottom: 10px;
+}
 .accordion--stats h2 {
   font-size: 15px;
   font-weight: 500;
+}
+.accordion__table {
+  border-spacing: 0 8px;
+}
+.accordion__table td {
+  padding: 0;
+  vertical-align: initial;
+}
+.accordion__table td:first-child {
+  display: block;
+  margin-right: 10px;
 }
 .accordion--stats {
   display: flex;
@@ -8637,39 +8654,6 @@ textarea {
 .statistics dl dd {
   font-size: 16px;
 }
-.statistics .statistics__table {
-  margin-bottom: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: calc(100vw - 30px);
-}
-.statistics .statistics__table table {
-  width: 100%;
-  white-space: nowrap;
-  font-size: 14px;
-  border-collapse: collapse;
-}
-.statistics .statistics__table table tr th:first-child {
-  padding-left: 11px;
-}
-.statistics .statistics__table table tr td:first-child {
-  padding-left: 11px;
-  color: var(--basic-green);
-}
-.statistics .statistics__table table th {
-  padding: 11px;
-  text-align: start;
-  background-color: var(--gray-background);
-  line-height: 24px;
-  color: #666666;
-  font-weight: 500;
-}
-.statistics .statistics__table table td {
-  position: relative;
-  padding: 11px;
-  white-space: nowrap;
-  border-bottom: 1px solid #e5e5e5;
-}
 .statistics .badge-down,
 .statistics .badge-up {
   display: inline-block;
@@ -8685,7 +8669,44 @@ textarea {
 .statistics .badge-up {
   background-color: red;
 }
-.statistics .statistics__text {
+.statistics__table {
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: calc(100vw - 30px);
+}
+.statistics__table table {
+  width: 100%;
+  white-space: nowrap;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.statistics__table table tr th:first-child {
+  padding-left: 11px;
+}
+.statistics__table table tr td:first-child {
+  padding-left: 11px;
+  color: var(--basic-green);
+}
+.statistics__table table th {
+  padding: 11px;
+  text-align: start;
+  background-color: var(--gray-background);
+  line-height: 24px;
+  color: #666666;
+  font-weight: 500;
+}
+.statistics__table table td {
+  position: relative;
+  padding: 11px;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e5e5;
+}
+.statistics__table--catalog {
+  margin: 0 -15px;
+  width: 100vw;
+}
+.statistics__text {
   font-size: 14px;
   line-height: 22px;
   color: #666666;
@@ -8710,18 +8731,21 @@ textarea {
   .statistics dl dd {
     font-size: 24px;
   }
-  .statistics .statistics__table {
+  .statistics__table {
     width: 100%;
   }
-  .statistics .statistics__table table th {
+  .statistics__table table th {
     padding: 11px 0;
   }
-  .statistics .statistics__table table td {
+  .statistics__table table td {
     padding: 20px 0;
     width: -moz-max-content;
     width: max-content;
   }
-  .statistics .statistics__text {
+  .statistics__table--catalog {
+    margin: 0;
+  }
+  .statistics__text {
     font-size: 15px;
   }
 }

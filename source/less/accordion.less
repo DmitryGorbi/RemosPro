@@ -47,7 +47,7 @@
   & ul,
   .accordion__body {
     margin: 0 -15px;
-    padding: 10px 15px 15px;
+    padding: 5px 15px 15px;
     font-size: 14px;
     background-color: var(--gray-background);
 
@@ -62,9 +62,27 @@
     }
   }
 
+  .accordion__body p {
+    margin-bottom: 10px;
+  }
+
   &--stats h2 {
     font-size: 15px;
     font-weight: 500;
+  }
+}
+
+.accordion__table {
+  border-spacing: 0 8px;
+
+  & td {
+    padding: 0;
+    vertical-align: initial;
+
+    &:first-child {
+      display: block;
+      margin-right: 10px;
+    }
   }
 }
 
