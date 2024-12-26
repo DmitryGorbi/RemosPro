@@ -1,29 +1,42 @@
 .experts {
+  overflow-x: scroll;
+
   & h3 {
     font-size: 21px;
     font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.experts--catalog {
+  & h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
   }
 
-  @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-
-    & h2 {
-      grid-column: 1/-1;
-    }
+  .experts__wrapper {
+    flex-direction: row;
 
     & h3 {
-      font-size: 23px;
+      font-size: 18px;
     }
   }
+}
+
+.experts__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  overflow-x: scroll;
 }
 
 .experts__realtors,
 .experts__agencies {
   display: grid;
   grid-template-columns: 1fr;
-  flex-direction: column;
+  grid-template-rows: min-content 1fr min-content;
   row-gap: 25px;
   padding: 15px;
   background-color: var(--light);
@@ -34,34 +47,32 @@
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 10px;
-  }
 }
 
 .experts__link-wrapper {
-  // margin-top: auto;
-  position: relative;
+  padding-top: 11px;
+  border-top: 1px solid var(--light-gray);
+}
 
-  &::before {
-    position: absolute;
-    content: '';
-    top: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 1px;
-    background-color: var(--light-gray);
+@media (min-width: @tablet-width) {
+  .experts {
+    & h3 {
+      font-size: 23px;
+    }
   }
 
-  & a {
-    @media (min-width: @tablet-width) {
-      display: flex;
-      margin-left: auto;
-      width: max-content;
-    }
+  .experts__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .experts__list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content;
+    column-gap: 10px;
   }
 }

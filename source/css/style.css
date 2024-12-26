@@ -2210,29 +2210,37 @@ textarea {
     font-size: 14px;
   }
 }
+.experts {
+  overflow-x: scroll;
+}
 .experts h3 {
   font-size: 21px;
   font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-@media (min-width: 768px) {
-  .experts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
-  .experts h2 {
-    grid-column: 1/-1;
-  }
-  .experts h3 {
-    font-size: 23px;
-  }
+.experts--catalog h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.experts--catalog .experts__wrapper {
+  flex-direction: row;
+}
+.experts--catalog .experts__wrapper h3 {
+  font-size: 18px;
+}
+.experts__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  overflow-x: scroll;
 }
 .experts__realtors,
 .experts__agencies {
   display: grid;
   grid-template-columns: 1fr;
-  flex-direction: column;
+  grid-template-rows: min-content 1fr min-content;
   row-gap: 25px;
   padding: 15px;
   background-color: var(--light);
@@ -2243,33 +2251,27 @@ textarea {
   flex-direction: column;
   row-gap: 25px;
 }
+.experts__link-wrapper {
+  padding-top: 11px;
+  border-top: 1px solid var(--light-gray);
+}
+@media (min-width: 768px) {
+  .experts h3 {
+    font-size: 23px;
+  }
+  .experts__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+  }
+}
 @media (min-width: 1240px) {
   .experts__list {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: min-content;
     -moz-column-gap: 10px;
          column-gap: 10px;
-  }
-}
-.experts__link-wrapper {
-  position: relative;
-}
-.experts__link-wrapper::before {
-  position: absolute;
-  content: '';
-  top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 1px;
-  background-color: var(--light-gray);
-}
-@media (min-width: 768px) {
-  .experts__link-wrapper a {
-    display: flex;
-    margin-left: auto;
-    width: -moz-max-content;
-    width: max-content;
   }
 }
 .new-buildings__wrapper {
@@ -3146,8 +3148,13 @@ textarea {
   }
 }
 @media (min-width: 1240px) {
-  .catalog__ads div,
-  .catalog__agents div {
+  .catalog__agents {
+    margin: 20px 0;
+  }
+  .catalog__agents h2 {
+    font-size: 1.6rem;
+  }
+  .catalog__ads div {
     background-color: tomato;
     height: 300px;
     font-size: 40px;
