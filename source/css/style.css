@@ -2854,7 +2854,7 @@ textarea {
     margin: 0 0 30px;
   }
   .modal-location__section {
-    height: calc(100vh - 425px);
+    max-height: calc(100vh - 425px);
   }
   .modal-location__footer {
     display: flex;
@@ -2868,25 +2868,14 @@ textarea {
 }
 @media (min-width: 1240px) {
   .geo-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
     margin-left: -10px;
     padding-left: 10px;
-    height: -moz-max-content;
-    height: max-content;
     max-height: calc(100vh - 430px);
     overflow: auto;
   }
-  .geo-list div {
-    display: inline-block;
-    width: 100%;
-  }
-  .geo-list ul:not(:last-child) {
-    margin-bottom: 25px;
-  }
-  .geo-list ul li:first-child {
-    margin-bottom: 10px;
+  .geo-list p {
+    position: relative;
+    top: 5px;
     font-weight: 500;
     font-size: 16px;
   }
@@ -2903,6 +2892,16 @@ textarea {
   .geo-list ul li .button:active {
     color: var(--white);
     background-color: var(--basic-green);
+  }
+  .geo-list__wrapper {
+    width: 100%;
+    -moz-columns: 3;
+         columns: 3;
+  }
+  .geo-list__wrapper div {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 0 10px;
   }
   .geo-list__selected {
     background-color: var(--basic-green);
@@ -3138,7 +3137,6 @@ textarea {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  margin-bottom: 40px;
 }
 @media (min-width: 768px) {
   .catalog__header {
