@@ -63,27 +63,26 @@
   height: 47px;
   top: 12px;
   left: 4px;
-  border-radius: 50%;
 
   & .button {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     transform: rotate(90deg);
+    border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjMjBhMDUyIj4KICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0yOS40MSA4LjU5YTIgMiAwIDAwLTIuODMgMEwxNiAxOS4xNyA1LjQxIDguNTlhMiAyIDAgMDAtMi44MyAyLjgzbDEyIDEyYTIgMiAwIDAwMi44MiAwbDEyLTEyYTIgMiAwIDAwLjAxLTIuODN6Ij48L3BhdGg+Cjwvc3ZnPgo=);
-  }
 
-  &:hover {
-    background-color: var(--extra-light-gray);
-  }
+    &:hover {
+      background-color: var(--extra-light-gray);
+    }
 
-  &:active {
-    background-color: var(--active);
+    &:active {
+      background-color: var(--light-gray);
 
-    & svg {
-      fill: var(--white);
+      & svg {
+        fill: var(--white);
+      }
     }
   }
 }
@@ -95,8 +94,8 @@
   }
 
   .geo-modal__close {
-    top: 20px;
-    left: 7px;
+    // top: 20px;
+    // left: 7px;
   }
 
   .geo-modal__footer {
