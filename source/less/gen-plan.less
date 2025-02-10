@@ -3,16 +3,6 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
-    max-width: 1950px;
-
-    & h2 {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }
 
 .gen-plan__container {
@@ -34,10 +24,67 @@
     right: 0;
     width: 100%;
     height: 100%;
+  }
+}
 
-    & .able:hover {
-      fill: rgba(0, 0, 0, 0.4);
-      transition: opacity 0.3 ease;
+.polygon:hover {
+  transition: opacity 0.3 ease;
+}
+
+.polygon-sb {
+  opacity: 0.5;
+
+  &:hover {
+    fill: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.polygon-sb--tr {
+  transform: translateX(5px);
+}
+
+.polygon-bk-1235 {
+  fill: #afcd524d;
+  stroke-width: 2px;
+  stroke: #afcd52cc;
+
+  &:hover {
+    fill: #afcd5280;
+    stroke: #afcd52e6;
+  }
+}
+
+.polygon-bk-6 {
+  fill: #5d95e64d;
+  stroke-width: 2px;
+  stroke: #5d95e6cc;
+
+  &:hover {
+    fill: #5d95e680;
+    stroke-width: 1.5px;
+    stroke: #5d95e6e6;
+  }
+}
+
+.polygon-bk-79 {
+  fill: #5ab3a540;
+  stroke-width: 2px;
+  stroke: #5ab3a5cc;
+
+  &:hover {
+    fill: #5ab3a580;
+    stroke: #5ab3a5e6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gen-plan {
+    width: 100%;
+    max-width: 1950px;
+
+    & h2 {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

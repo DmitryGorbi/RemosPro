@@ -6,6 +6,11 @@
   }
 }
 
+.caption-catalog ~ p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 .catalog__header {
   display: flex;
   flex-direction: column;
@@ -48,6 +53,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .caption-catalog ~ p {
+    margin-bottom: 30px;
+  }
+
   .catalog__agents {
     margin: 20px 0;
 
