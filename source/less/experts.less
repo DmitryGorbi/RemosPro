@@ -1,13 +1,6 @@
-.experts {
-  overflow-x: scroll;
-
-  & h3 {
-    font-size: 21px;
-    font-weight: 400;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+.experts h3 {
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .experts--catalog {
@@ -26,27 +19,26 @@
 }
 
 .experts__wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   row-gap: 20px;
-  overflow-x: scroll;
 }
 
 .experts__realtors,
 .experts__agencies {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  row-gap: 25px;
+  row-gap: 20px;
   padding: 15px;
-  background-color: var(--light);
   border-radius: 5px;
 }
 
 .experts__list {
   display: flex;
-  flex-direction: column;
-  row-gap: 25px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.experts__list-item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .experts__link-wrapper {
@@ -54,25 +46,56 @@
   border-top: 1px solid var(--light-gray);
 }
 
+.experts__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid var(--basic-green);
+    border-right: 2px solid var(--basic-green);
+    transform: rotate(45deg);
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .experts {
-    & h3 {
-      font-size: 23px;
-    }
+  .experts h3 {
+    font-size: 20px;
   }
 
-  .experts__wrapper {
+  .experts__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .experts__wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+  }
+
   .experts__list {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: min-content;
+    gap: 25px;
+  }
+
+  .experts__realtors,
+  .experts__agencies {
+    padding: 20px 25px;
+  }
+
+  .experts__list-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .experts__link {
     column-gap: 10px;
+    padding: 5px 0;
+    width: max-content;
   }
 }

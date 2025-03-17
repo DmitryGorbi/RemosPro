@@ -1,10 +1,10 @@
-const form = document.querySelector('.calc-simple');
-const percentInput = form.querySelector('.input--percent');
-const creditInput = form.querySelector('.input--credit');
-const monthInput = form.querySelector('.input--month');
-const outputCommonPayment = form.querySelector('.output--payment');
-const outputDebtPayment = form.querySelector('.output--debt');
-const outputPercentPayment = form.querySelector('.output--percent');
+const form = document.querySelector(".calc-simple");
+const percentInput = form.querySelector(".input--percent");
+const creditInput = form.querySelector(".input--credit");
+const monthInput = form.querySelector(".input--month");
+const outputCommonPayment = form.querySelector(".output--payment");
+const outputDebtPayment = form.querySelector(".output--debt");
+const outputPercentPayment = form.querySelector(".output--percent");
 
 const calc = () => {
   let monthPercent = percentInput.value / 100 / 12; // Процент в месяц
@@ -12,14 +12,14 @@ const calc = () => {
   let monthPayment = (creditInput.value * monthPercent * commonPercent) / (commonPercent - 1);
   let percentPayment = creditInput.value * monthPercent;
   let debtPayment = monthPayment - percentPayment;
-  outputCommonPayment.value = monthPayment.toFixed(0) + ' ₽';
-  outputDebtPayment.value = debtPayment.toFixed(0) + ' ₽';
-  outputPercentPayment.value = percentPayment.toFixed(0) + ' ₽';
+  outputCommonPayment.value = monthPayment.toFixed(0) + " ₽";
+  outputDebtPayment.value = debtPayment.toFixed(0) + " ₽";
+  outputPercentPayment.value = percentPayment.toFixed(0) + " ₽";
 };
 
 calc();
 
-form.addEventListener('input', () => {
+form.addEventListener("input", () => {
   calc();
 });
 

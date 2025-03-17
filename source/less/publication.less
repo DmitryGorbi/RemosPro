@@ -1,0 +1,184 @@
+// Если не будет предложения пополнения кошелька под основным блоком, то обертку нужно удалить и удалить лишние стили
+
+.publication {
+  display: flex; // удалить
+  flex-direction: column; //удалить
+}
+
+.publication__wrapper {
+  position: relative;
+  padding: 15px 15px;
+  background-color: var(--light-green);
+}
+
+.publication__content {
+  margin-bottom: 16px;
+
+  & h2 {
+    margin-bottom: 13px;
+  }
+
+  & p {
+    font-size: 12px;
+    color: #666666;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-bottom: 10px;
+
+    & li {
+      padding-left: 24px;
+      font-size: 14px;
+      line-height: 18px;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNiAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjQ5NSA4Ljk5NDk3QzEzLjc2ODMgOC43MjE2MSAxMy43NjgzIDguMjc4MzkgMTMuNDk1IDguMDA1MDNMOS4wNDAyIDMuNTUwMjVDOC43NjY4NCAzLjI3Njg5IDguMzIzNjIgMy4yNzY4OSA4LjA1MDI1IDMuNTUwMjVDNy43NzY4OSAzLjgyMzYyIDcuNzc2ODkgNC4yNjY4NCA4LjA1MDI1IDQuNTQwMkwxMi4wMTAxIDguNUw4LjA1MDI1IDEyLjQ1OThDNy43NzY4OSAxMi43MzMyIDcuNzc2ODkgMTMuMTc2NCA4LjA1MDI1IDEzLjQ0OTdDOC4zMjM2MiAxMy43MjMxIDguNzY2ODQgMTMuNzIzMSA5LjA0MDIgMTMuNDQ5N0wxMy40OTUgOC45OTQ5N1pNMiA5LjJIMTNWNy44SDJWOS4yWiIgZmlsbD0iIzIwQTA1MiIvPgo8L3N2Zz4K);
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+}
+
+.publication__img {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+
+  & img {
+    width: 108px;
+    height: 113px;
+  }
+}
+
+.publication__button a {
+  display: block;
+  padding: 9px 20px 9px 36px;
+  max-width: max-content;
+  font-size: 15px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgOC44ODg4OUwxNSA4Ljg4ODg5VjYuNjY2NjdIOVYxSDdWNi42NjY2N0gxVjguODg4ODlMNyA4Ljg4ODg5VjE1SDlWOC44ODg4OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=);
+  background-repeat: no-repeat;
+  background-position: 8% center;
+}
+
+.publication__promo {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  & a {
+    display: block;
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: red;
+  }
+}
+// удалить и всё что ниже
+.publication__promo--bottom {
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 0 15px 0 20px;
+  font-size: 14px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE3NzgwMCAxNzc4MDAiPgogIDxnPgogICAgPGNpcmNsZSBjeD0iODg5MDAiIGN5PSI4ODkwMCIgcj0iODg5MDAiIGZpbGw9IiNmZjQxNDEiPgogICAgPC9jaXJjbGU+CiAgICA8ZyBmaWxsPSIjZmZmIj4KICAgICAgPHBhdGggZD0ibTEwMDM0NyA0NDIwMC0zMzY1IDY4MzEyYy0yMjQgNDU1MC0zNjM3IDgyOTItODA4MiA4Mjkycy03ODU4LTM3MzctODA4Mi04MjkybC0zMzY1LTY4MzEyYy02MTMtMTI1MTMgMjM1MDgtMTI1MDkgMjI4OTQgMHpNODg5MDEgMTI2ODIwYzQ0NjIgMCA4MDgxIDM2MTkgODA4MSA4MDgycy0zNjE5IDgwODItODA4MSA4MDgyYy00NDYzIDAtODA4Mi0zNjE5LTgwODItODA4MnMzNjE5LTgwODIgODA4Mi04MDgyeiIgZmlsbD0iI2ZmZmZmZiI+CiAgICAgIDwvcGF0aD4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=);
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .publication {
+    margin: 0 auto;
+    width: calc(100% - 80px);
+  }
+
+  .publication__wrapper {
+    display: flex;
+    column-gap: 45px;
+    padding: 25px 25px 0 25px;
+    border-radius: 5px;
+  }
+
+  .publication__img {
+    position: relative;
+    left: 0px;
+    top: 17px;
+    order: -1;
+
+    & img {
+      width: 130px;
+      height: 136px;
+    }
+  }
+
+  .publication__button {
+    margin: auto 0 25px auto;
+
+    & a {
+      padding: 10px 24px 10px 38px;
+      background-position: 10% center;
+    }
+  }
+
+  .publication__promo a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: red;
+    border-radius: 0 5px 0 5px;
+  }
+
+  .publication__promo--bottom {
+    margin-left: 0;
+
+    & a {
+      padding: 8px 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .publication {
+    width: 1200px;
+  }
+
+  .publication__wrapper {
+    column-gap: 60px;
+    padding: 32px 40px 0 102px;
+  }
+
+  .publication__img {
+    position: static;
+
+    & img {
+      width: 204px;
+      height: 214px;
+    }
+  }
+
+  .publication__content {
+    margin-top: 20px;
+    margin-right: 121px;
+
+    & h2 {
+      margin-bottom: 24px;
+    }
+
+    & ul {
+      & li {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .publication__button {
+    margin-bottom: 40px;
+
+    & a {
+      padding: 14px 24px 14px 48px;
+    }
+  }
+}

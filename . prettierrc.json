@@ -1,10 +1,14 @@
 {
+  "printWidth": 101,
   "trailingComma": "es5",
   "tabWidth": 2,
-  "semi": false,
+  "useTabs": true,
+  "semi": true,
   "singleQuote": false,
   "jsxSingleQuote": false,
   "prettier.prettierPath": "",
-  "prettier.withNodeModules": false
-  // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "prettier.withNodeModules": false,
+  "jsxBracketSameLine": true,
+  "bracketSameLine": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

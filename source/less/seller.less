@@ -30,14 +30,6 @@
   display: none;
 }
 
-.seller {
-  .button-main {
-    display: block;
-    margin-top: 10px;
-    width: 100%;
-  }
-}
-
 .seller__phone a {
   display: block;
   padding: 15px 0 14px 0;
@@ -47,14 +39,6 @@
   border-radius: 5px;
 }
 
-@media (min-width: @tablet-width) {
-  .seller {
-    .button-main {
-      margin-top: 10px;
-    }
-  }
-}
-
 @media (min-width: @desktop-width) {
   .seller {
     padding: 14px;
@@ -62,8 +46,10 @@
     background-color: var(--extra-light-gray);
 
     .button-main {
+      position: static;
       padding: 5px 14px;
       margin-top: 20px;
+      width: 100%;
     }
   }
 

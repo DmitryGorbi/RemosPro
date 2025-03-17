@@ -4,7 +4,7 @@ a {
   color: inherit;
 }
 
-:is(.navigation, .nav, .user-actions, .user-nav, .nav-section, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
+:is(.navigation, .nav, .user-actions, .user-nav, .seo-nav, .modal, .auth, .navbar, .developer-about, .gk-progress, .page__footer, .offer-images__main) a {
   color: inherit;
 
   &:focus-visible {
@@ -15,7 +15,7 @@ a {
 
 // green links
 
-:is(.nav-section, .footer, .developer-about, .gk-progress, .card__gk) a {
+:is(.seo-nav, .footer, .developer-about, .gk-progress, .card__gk) a {
   color: var(--basic-green);
 
   &:hover {
@@ -27,7 +27,7 @@ a {
   }
 }
 
-:is(.nav-section, .footer, .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert, .subway) a {
+:is(.seo-nav, .index-nav, .footer, .new-bldg__list .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert, .subway) a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
   }
@@ -44,7 +44,6 @@ a {
     color: var(--green);
   }
 }
-
 
 // focus
 
@@ -65,12 +64,6 @@ a {
   }
 }
 
-:is(.new-bldg) a {
-  &:hover {
-    color: inherit;
-  }
-}
-
 :is(.new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer, .deal-terms, .statistics__table) a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
@@ -81,5 +74,31 @@ a {
   &:focus-visible {
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
+  }
+}
+
+:is(.index-nav, .new-bldg__list) a {
+  background-color: var(--backgound-gray);
+
+  &:hover {
+    background-color: #efeffa;
+  }
+
+  &:active {
+    background-color: #ebebfe;
+  }
+}
+
+:is(.experts__list-item) a {
+  &:focus {
+    background-color: #ebebfe;
+  }
+
+  &:hover {
+    background-color: #efeffa;
+  }
+
+  &:active {
+    background-color: #ebebfe;
   }
 }

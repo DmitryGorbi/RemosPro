@@ -97,9 +97,12 @@
       font-size: 20px;
     }
 
+    & article {
+      padding: 15px 10px 20px 10px;
+    }
+
     & article:first-of-type {
       grid-column: 1/-1;
-      padding-bottom: 20px;
     }
 
     & article:not(:first-of-type) {
@@ -107,6 +110,12 @@
       grid-template-rows: min-content 1fr min-content;
       padding: 15px 10px 20px 10px;
     }
+  }
+
+  .gk-promotion__modifire {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    height: 100%;
   }
 
   .gk-promotion__payment {
@@ -119,6 +128,10 @@
 @media (min-width: @desktop-width) {
   .gk-promotion__wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gk-promotion__wrapper article:first-of-type:has(.gk-promotion__modifire) {
+    grid-column: 1/2;
   }
 
   .gk-promotion__payment {
