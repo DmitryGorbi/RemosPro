@@ -1,8 +1,32 @@
 .expert-card {
   display: grid;
-  width: 48px;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 48px;
+  column-gap: 10px;
+  width: 100%;
   height: 48px;
   font-size: 14px;
+}
+
+.expert-card__about {
+  grid-column: 2/3;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  & h4,
+  h3 {
+    margin: 3px 0 5px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.expert-card__avatar {
+  grid-column: 1/2;
+  grid-row: 1/2;
 
   & img {
     width: 100%;
@@ -14,33 +38,16 @@
   }
 }
 
-.expert-card__about {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-
-  & h4 {
-    margin: 3px 0 5px 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
+.expert-card--body {
+  width: 48px;
 }
 
 @media (min-width: @tablet-width) {
   .expert-card {
     display: grid;
-    grid-template-columns: 48px 1fr;
-    grid-template-rows: 48px;
-    column-gap: 10px;
     padding: 2px;
     width: 100%;
     height: 52px;
     border-radius: 5px;
-  }
-
-  & img {
-    grid-column: 1/2;
-    grid-row: 1/2;
   }
 }

@@ -1,8 +1,6 @@
-// Если не будет предложения пополнения кошелька под основным блоком, то обертку нужно удалить и удалить лишние стили
-
 .publication {
-  display: flex; // удалить
-  flex-direction: column; //удалить
+  display: flex;
+  flex-direction: column;
 }
 
 .publication__wrapper {
@@ -62,27 +60,13 @@
 }
 
 .publication__promo {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  & a {
-    display: block;
-    padding: 3px 5px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--white);
-    background-color: red;
-  }
-}
-// удалить и всё что ниже
-.publication__promo--bottom {
-  margin-top: 15px;
-  margin-left: 15px;
-  padding: 0 15px 0 20px;
+  margin: 15px 15px 0 15px;
+  padding-left:25px;
   font-size: 14px;
+  line-height: 20px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE3NzgwMCAxNzc4MDAiPgogIDxnPgogICAgPGNpcmNsZSBjeD0iODg5MDAiIGN5PSI4ODkwMCIgcj0iODg5MDAiIGZpbGw9IiNmZjQxNDEiPgogICAgPC9jaXJjbGU+CiAgICA8ZyBmaWxsPSIjZmZmIj4KICAgICAgPHBhdGggZD0ibTEwMDM0NyA0NDIwMC0zMzY1IDY4MzEyYy0yMjQgNDU1MC0zNjM3IDgyOTItODA4MiA4Mjkycy03ODU4LTM3MzctODA4Mi04MjkybC0zMzY1LTY4MzEyYy02MTMtMTI1MTMgMjM1MDgtMTI1MDkgMjI4OTQgMHpNODg5MDEgMTI2ODIwYzQ0NjIgMCA4MDgxIDM2MTkgODA4MSA4MDgycy0zNjE5IDgwODItODA4MSA4MDgyYy00NDYzIDAtODA4Mi0zNjE5LTgwODItODA4MnMzNjE5LTgwODIgODA4Mi04MDgyeiIgZmlsbD0iI2ZmZmZmZiI+CiAgICAgIDwvcGF0aD4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=);
   background-repeat: no-repeat;
+  background-position: left 6%;
 }
 
 @media (min-width: @tablet-width) {
@@ -119,22 +103,12 @@
     }
   }
 
-  .publication__promo a {
-    display: block;
-    padding: 5px 10px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--white);
-    background-color: red;
-    border-radius: 0 5px 0 5px;
-  }
-
-  .publication__promo--bottom {
-    margin-left: 0;
+  .publication__promo {
+    font-size: 15px;
+    margin: 15px 0 0 0;
 
     & a {
       padding: 8px 5px;
-      font-size: 14px;
     }
   }
 }

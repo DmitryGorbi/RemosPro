@@ -2,7 +2,6 @@
 <html class="page" lang="ru" prefix="og: //ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/source/img/favicons/apple-touch-icon.png" />
@@ -10,18 +9,19 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/source/img/favicons/favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="/source/img/favicons/safari-pinned-tab.svg" color="#20a052" />
+    <link rel="preload" href="fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="img/index/banner__small.webp" as="image" />
+    <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду</title>
     <meta name="description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
-    <!-- OpenGraph -->
     <meta property="og:title" content="Remos Недвижимость | Сервис поиска квартир, домов, коммерческой недвижимости для продажи и в аренду" />
     <meta property="og:description" content="Купля-продажа, аренда недвижимости. Размещение объявлений. Ежедневное обновление базы." />
-    <!-- картинка OG ?? -->
-    <meta property="og:image" content="https://www.remospro.ru/upload/gk/3b5/3b58272a8daee0dadeb13f72f5d35e55.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
+    <meta property="og:image" content="img/index/banner__small.webp" />
+    <meta property="og:image:width" content="767" />
+    <meta property="og:image:height" content="297" />
     <meta property="og:url" content="https://www.remospro.ru" />
-    <!-- ? -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="RemosPro" />
     <meta property="og:locale" content="ru_RU" />
@@ -358,7 +358,9 @@
                           <h3 itemprop="name">Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts/realtors/realtor__rumyntseva.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts/realtors/realtor__rumyntseva.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -367,7 +369,9 @@
                           <h3 itemprop="name">Румянцева Татьяна</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts/realtors/realtor_1.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts/realtors/realtor_1.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -376,7 +380,9 @@
                           <h3 itemprop="name">Румянцева Татьяна</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts/realtors/realtor_2.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts/realtors/realtor_2.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -385,7 +391,9 @@
                           <h3 itemprop="name">Румянцева Татьяна</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts/realtors/realtor_3.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts/realtors/realtor_3.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                   </ul>
@@ -402,7 +410,9 @@
                           <h3 itemprop="name">Max Realty Max</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts//agencies/agency1.webp" width="48" height="48" alt="Логотип агентства недвижимости Max Realty" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts//agencies/agency1.webp" width="48" height="48" alt="Логотип агентства недвижимости Max Realty" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -411,7 +421,9 @@
                           <h3 itemprop="name">Замоскворечье</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts//agencies/agency2.webp" width="48" height="48" alt="Логотип агентства недвижимости Замоскворечье" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts//agencies/agency2.webp" width="48" height="48" alt="Логотип агентства недвижимости Замоскворечье" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -420,7 +432,9 @@
                           <h3 itemprop="name">Градомир</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts//agencies/agency3.webp" width="48" height="48" alt="Логотип агентства недвижимости Градомир" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts//agencies/agency3.webp" width="48" height="48" alt="Логотип агентства недвижимости Градомир" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                     <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ItemList">
@@ -429,7 +443,9 @@
                           <h3 itemprop="name">Авангард</h3>
                           <p>На Ремос с 2020</p>
                         </div>
-                        <img src="img/experts//agencies/agency4.webp" width="48" height="48" alt="Логотип агентства недвижимости Авангард" loading="lazy" />
+                        <div class="expert-card__avatar">
+                          <img src="img/experts//agencies/agency4.webp" width="48" height="48" alt="Логотип агентства недвижимости Авангард" loading="lazy" />
+                        </div>
                       </a>
                     </li>
                   </ul>
@@ -1052,8 +1068,9 @@
             <div class="publication__content">
               <h2 class="caption-index">Подайте объявление</h2>
               <ul>
-                <li>Стоимость 2 руб/сут</li>
-                <li>Простая модерация</li>
+                <li>Стоимость от 0.3 коп/сут</li>
+                <li>Объявления по всей России</li>
+                <!-- <li>Простая модерация</li> -->
                 <li>Принимаем XML - фиды</li>
               </ul>
               <p>* Потребуется регистрация</p>
@@ -1064,13 +1081,10 @@
             <div class="publication__button">
               <a class="button-main" href="https://www.remospro.ru/registration/">Разместить <span class="v-h-m-t">объявление</span></a>
             </div>
-            <!-- <p class="publication__promo">
-              <a href="#">Пополним <span class="visually-hidden-small-mobile">кошелёк</span> на 10 000</a>
-            </p> -->
           </div>
-          <p class="publication__promo--bottom">
-            <span>Пополним кошелёк на <b>10 000 р</b>.</span>
-            <a class="link-underline" href="#"><span>Узнать подробности.</span></a>
+          <p class="publication__promo">
+            <span>Дарим бонус <b>10 000 р</b> на счёт при регистрации.</span>
+            <a class="link-underline" href="#"><span>Узнайте подробности.</span></a>
           </p>
         </section>
         <section class="experts wrapper-content">
@@ -1080,57 +1094,69 @@
               <h3>Риелторы</h3>
               <ul class="experts__list">
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor__rumyntseva.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor__rumyntseva.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor_1.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor_1.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor_2.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor_2.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor_3.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor_3.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor_4.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor_4.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу риелтора">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу риелтора">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Румянцева Татьяна</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts/realtors/realtor_5.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts/realtors/realtor_5.webp" width="48" height="48" alt="Риелтор Румянцева Татьяна" loading="lazy" />
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -1144,57 +1170,69 @@
               <h3>Агентства недвижимости</h3>
               <ul class="experts__list">
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Max Realty Max</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency1.webp" width="48" height="48" alt="Логотип агентства недвижимости Max Realty" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency1.webp" width="48" height="48" alt="Логотип агентства недвижимости Max Realty" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Замоскворечье</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency2.webp" width="48" height="48" alt="Логотип агентства недвижимости Замоскворечье" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency2.webp" width="48" height="48" alt="Логотип агентства недвижимости Замоскворечье" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Градомир</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency3.webp" width="48" height="48" alt="Логотип агентства недвижимости Градомир" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency3.webp" width="48" height="48" alt="Логотип агентства недвижимости Градомир" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Авангард</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency4.webp" width="48" height="48" alt="Логотип агентства недвижимости Авангард" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency4.webp" width="48" height="48" alt="Логотип агентства недвижимости Авангард" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>АэНБИ</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency5.webp" width="48" height="48" alt="Логотип агентства недвижимости АэНБИ" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency5.webp" width="48" height="48" alt="Логотип агентства недвижимости АэНБИ" loading="lazy" />
+                    </div>
                   </a>
                 </li>
                 <li class="experts__list-item">
-                  <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
+                  <a class="expert-card expert-card--body" href="#" aria-label="Перйти на страницу агентства">
                     <div class="expert-card__about visually-hidden-mobile">
                       <h4>Мегаполис сервис Мегаполис сервис Мегаполис сервис Мегаполис сервис</h4>
                       <p>На Ремос с 2020</p>
                     </div>
-                    <img src="img/experts//agencies/agency6.webp" width="48" height="48" alt="Логотип агентства недвижимости Мегаполис сервис" loading="lazy" />
+                    <div class="expert-card__avatar">
+                      <img src="img/experts//agencies/agency6.webp" width="48" height="48" alt="Логотип агентства недвижимости Мегаполис сервис" loading="lazy" />
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -1566,7 +1604,7 @@
                 </article>
               </div>
               <div class="new-offers__link">
-                <a class="link-button" href="#">Смотреть весь список</a>
+                <a class="link-button" href="https://www.remospro.ru/catalog/prodazha_kvartir_vtorichka_v_moskve.html">Смотреть весь список</a>
               </div>
             </div>
             <div class="new-offers__section">
@@ -1574,10 +1612,7 @@
                 <span>Аренда:</span>
                 <ul>
                   <li>
-                    <button class="button" type="button"><span class="span-active">Вторичка</span></button>
-                  </li>
-                  <li>
-                    <button class="button" type="button"><span>новостройки</span></button>
+                    <button class="button" type="button"><span class="span-active">квартиры</span></button>
                   </li>
                   <li>
                     <button class="button" type="button"><span>дома</span></button>
@@ -1590,7 +1625,7 @@
               <div class="new-offers__list">
                 <h3 class="visually-hidden">Аренда квартир в Москве</h3>
                 <!-- квартира -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда 3-комн квартиры Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1620,7 +1655,7 @@
                   </a>
                 </article>
                 <!-- квартира -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда 4-комн квартиры Тула, мкр Мелиораторов, ул. Сидора Путилова, 41</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1639,7 +1674,7 @@
                   </a>
                 </article>
                 <!-- house -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда дома 480 метров Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1658,7 +1693,7 @@
                   </a>
                 </article>
                 <!-- office -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда офиса 300 метров Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1688,7 +1723,7 @@
                   </a>
                 </article>
                 <!-- квартира -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда 3-комн квартиры Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1718,7 +1753,7 @@
                   </a>
                 </article>
                 <!-- квартира -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда 4-комн квартиры Тула, мкр Мелиораторов, ул. Сидора Путилова, 41</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1737,7 +1772,7 @@
                   </a>
                 </article>
                 <!-- house -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда дома 480 метров Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1756,7 +1791,7 @@
                   </a>
                 </article>
                 <!-- office -->
-                <article class="offer-preview">
+                <article class="offer-preview offer-preview--new">
                   <h4 class="visually-hidden">Аренда офиса 300 метров Тюмень, мкр Суходолье, ул. Монтажников, 43</h4>
                   <a class="offer-preview__wrapper" href="#" aria-label="Перейти к объявлению">
                     <ul class="offer-preview__data">
@@ -1787,7 +1822,7 @@
                 </article>
               </div>
               <div class="new-offers__link">
-                <a class="link-button" href="#">Смотреть весь список</a>
+                <a class="link-button" href="https://www.remospro.ru/catalog/arenda_kvartir_v_moskve.html">Смотреть весь список</a>
               </div>
             </div>
           </div>
@@ -1804,7 +1839,7 @@
                     <time datetime="2018-10-21">21 октября 2018 г.</time>
                   </div>
                   <div class="articles__picture">
-                    <img src="img/articles__pictires/article5.webp" alt="" width="370" loading="lazy" />
+                    <img src="img/articles__pictires/article5.webp" alt="Альт из статьи" width="90" height="80" loading="lazy" />
                   </div>
                   <a href="" aria-label="Перейти к статье"></a>
                 </li>
@@ -1814,7 +1849,7 @@
                     <time datetime="2018-10-21">21 октября 2018 г.</time>
                   </div>
                   <div class="articles__picture">
-                    <img src="img/articles__pictires/article4.webp" alt="" width="100" loading="lazy" />
+                    <img src="img/articles__pictires/article4.webp" alt="Альт из статьи" width="90" height="80" loading="lazy" />
                   </div>
                   <a href="" aria-label="Перейти к статье"></a>
                 </li>
@@ -1824,7 +1859,7 @@
                     <time datetime="2018-10-21">21 октября 2018 г.</time>
                   </div>
                   <div class="articles__picture">
-                    <img src="img/articles__pictires/article3.webp" alt="" width="100" loading="lazy" />
+                    <img src="img/articles__pictires/article3.webp" alt="Альт из статьи" width="90" height="80" loading="lazy" />
                   </div>
                   <a href="" aria-label="Перейти к статье"></a>
                 </li>
@@ -1834,7 +1869,7 @@
                     <time datetime="2018-10-21">21 октября 2018 г.</time>
                   </div>
                   <div class="articles__picture">
-                    <img src="img/articles__pictires/article2.webp" alt="" width="100" loading="lazy" />
+                    <img src="img/articles__pictires/article2.webp" alt="Альт из статьи" width="90" height="80" loading="lazy" />
                   </div>
                   <a href="" aria-label="Перейти к статье"></a>
                 </li>
@@ -1844,7 +1879,7 @@
                     <time datetime="2018-10-21">21 октября 2018 г.</time>
                   </div>
                   <div class="articles__picture">
-                    <img src="img/articles__pictires/article1.webp" alt="" width="100" loading="lazy" />
+                    <img src="img/articles__pictires/article1.webp" alt="Альт из статьи" width="90" height="80" loading="lazy" />
                   </div>
                   <a href="" aria-label="Перейти к статье"></a>
                 </li>
@@ -1922,6 +1957,9 @@
                 </li>
                 <li>
                   <a href="https://www.remospro.ru/novostroyki_v_moskve/buninskiye_kvartaly/"><span>Бунинские кврталы</span></a>
+                </li>
+                <li>
+                  <a href="https://www.remospro.ru/novostroyki_v_moskve/skandinaviya/"><span>Скандинавия</span></a>
                 </li>
               </ul>
             </div>
@@ -2021,7 +2059,23 @@
     <section class="page__body-district location">
       <div class="location__wrapper">
         <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
-        <section class="location__item location__item-metro">
+        <section class="location__item">
+          <h3>Квартиры в жилых комплексах</h3>
+          <ul class="location__list">
+            <li><a href="#">Деснаречье</a></li>
+            <li><a href="#">Дом на Зорге</a></li>
+            <li><a href="#">Родные кварталы</a></li>
+            <li><a href="#">Южные сады</a></li>
+            <li><a href="#">Прокшино</a></li>
+            <li><a href="#">Дзен-кварталы</a></li>
+            <li><a href="#">Бунинские кварталы</a></li>
+            <li><a href="#">Скандинавия</a></li>
+          </ul>
+          <!-- <button class="button link-underline" type="button">
+            <span>Показать всё</span>
+          </button> -->
+        </section>
+        <section class="location__item">
           <h3>Квартиры у метро</h3>
           <ul class="location__list">
             <li><a href="#">Автозаводская</a></li>
@@ -2040,28 +2094,28 @@
             <li><a href="#">Нагатинская</a></li>
             <li><a href="#">Рижская</a></li>
             <li><a href="#">Свиблово</a></li>
-            <!-- <li><a href="#">Семеновская</a></li>
+            <li><a href="#">Семеновская</a></li>
             <li><a href="#">Новогиреево</a></li>
-            <li><a href="#">Шелепиха</a></li>
-            <li><a href="#">Печатники</a></li>
-            <li><a href="#">Красные ворота</a></li>
-            <li><a href="#">Бульвар адмирала Ушакова</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Кузнецкий мост</a></li>
-            <li><a href="#">Охотный ряд</a></li>
-            <li><a href="#">Румянцево</a></li>
-            <li><a href="#">Севастопольская</a></li>
-            <li><a href="#">Университет</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li> -->
+            <!-- <li><a href="#">Шелепиха</a></li>
+              <li><a href="#">Печатники</a></li>
+              <li><a href="#">Красные ворота</a></li>
+              <li><a href="#">Бульвар адмирала Ушакова</a></li>
+              <li><a href="#">Марьино</a></li>
+              <li><a href="#">Кузнецкий мост</a></li>
+              <li><a href="#">Охотный ряд</a></li>
+              <li><a href="#">Румянцево</a></li>
+              <li><a href="#">Севастопольская</a></li>
+              <li><a href="#">Университет</a></li>
+              <li><a href="#">Щукинская</a></li>
+              <li><a href="#">Электрозаводская</a></li>
+              <li><a href="#">Щукинская</a></li>
+              <li><a href="#">Электрозаводская</a></li> -->
           </ul>
           <button class="button link-underline" type="button">
             <span>Показать всё</span>
           </button>
         </section>
-        <section class="location__item location__item-area">
+        <section class="location__item">
           <h3>Квартиры в районе</h3>
           <ul class="location__list">
             <li><a href="#">Хорошево-Мневники</a></li>
@@ -2076,46 +2130,92 @@
             <li><a href="#">Коньково</a></li>
             <li><a href="#">Орехово-Борисово Южное</a></li>
             <li><a href="#">Роостокино</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="location__item location__item-district">
-          <h3>Квартиры в Округах</h3>
-          <ul class="location__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
-            <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
+            <li><a href="#">Роостокино</a></li>
+            <li><a href="#">Роостокино</a></li>
+            <li><a href="#">Роостокино</a></li>
+            <li><a href="#">Роостокино</a></li>
+            <li><a href="#">Роостокино</a></li>
             <li><a href="#">Роостокино</a></li>
           </ul>
           <button class="button link-underline" type="button">
             <span>Показать всё</span>
           </button>
         </section>
-        <section class="location__item location__item-street">
-          <h3>Квартиры на улицах</h3>
+        <section class="location__item">
+          <h3>Квартиры в округах</h3>
           <ul class="location__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
+            <li><a href="#">ВАО</a></li>
+            <li><a href="#">ЮВАО</a></li>
+            <li><a href="#">ЮАО</a></li>
+            <li><a href="#">ЮЗАО</a></li>
+            <li><a href="#">ЗАО</a></li>
+            <li><a href="#">СЗАО</a></li>
+            <li><a href="#">ЦАО</a></li>
+          </ul>
+          <!-- <button class="button link-underline" type="button">
+            <span>Показать всё</span>
+          </button> -->
+        </section>
+        <section class="location__item">
+          <h3>Недвижимость в городах Москвы</h3>
+          <ul class="location__list">
+            <li><a href="#">Москва</a></li>
+            <li><a href="#">Зеленоград</a></li>
+            <li><a href="#">Московский</a></li>
+            <li><a href="#">Троицк</a></li>
+            <li><a href="#">Щербанка</a></li>
+          </ul>
+          <!-- <button class="button link-underline" type="button">
+            <span>Показать всё</span>
+          </button> -->
+        </section>
+        <section class="location__item">
+          <h3>Недвижимость в городах Московской области</h3>
+          <ul class="location__list">
+            <li><a href="#">Химки</a></li>
+            <li><a href="#">Реутов</a></li>
+            <li><a href="#">Мытищи</a></li>
+            <li><a href="#">Одинцово</a></li>
+            <li><a href="#">Королёв</a></li>
+            <li><a href="#">Пушкино</a></li>
+            <li><a href="#">Балашиха</a></li>
+            <li><a href="#">Сергиев-Посад</a></li>
+            <li><a href="#">Дмитров</a></li>
             <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
-            <li><a href="#">Роостокино</a></li>
+            <li><a href="#">Яхрома</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+            <li><a href="#">Шатура</a></li>
+          </ul>
+          <button class="button link-underline" type="button">
+            <span>Показать всё</span>
+          </button>
+        </section>
+        <section class="location__item">
+          <h3>Недвижимость в регионах</h3>
+          <ul class="location__list">
+            <li><a href="#">Белгородская область</a></li>
+            <li><a href="#">Вологодская область</a></li>
+            <li><a href="#">Краснодарский край</a></li>
+            <li><a href="#">Ленинградская область</a></li>
+            <li><a href="#">Санкт-Петербург</a></li>
+            <li><a href="#">Московская область</a></li>
+            <li><a href="#">Нижегородская область</a></li>
+            <li><a href="#">Новосибирская область</a></li>
+            <li><a href="#">Пензенская область</a></li>
+            <li><a href="#">Республика Башкортостан</a></li>
+            <li><a href="#">Ростовская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
+            <li><a href="#">Самарская область</a></li>
           </ul>
           <button class="button link-underline" type="button">
             <span>Показать всё</span>
@@ -2136,6 +2236,9 @@
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="catalog_novostroiki.html">Каталог новостроек</a></li>
         <li><a href="razmestit-obyavlenie.html">Разместить объявление</a></li>
+        <li><a href="card-gk.html">Карточка GK</a></li>
+        <li><a href="catalog_desktop_gk.html">Каталог десктоп GK</a></li>
+        <li><a href="catalog_mobile_gk.html">Каталог мобильный GK</a></li>
       </ul>
     </div>
     <footer class="footer">
