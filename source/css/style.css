@@ -2114,7 +2114,6 @@ textarea {
   }
   .publication__content {
     margin-top: 20px;
-    margin-right: 121px;
   }
   .publication__content h2 {
     margin-bottom: 24px;
@@ -2128,6 +2127,9 @@ textarea {
   }
   .publication__button a {
     padding: 14px 24px 14px 48px;
+  }
+  .publication__promo {
+    margin: 20px 0 0 0;
   }
 }
 .experts h3 {
@@ -2418,7 +2420,7 @@ textarea {
   border-top: 1px solid var(--light-gray);
   font-weight: 500;
 }
-.new-bldg__builder div {
+.new-bldg__builder a {
   display: flex;
   align-items: center;
   -moz-column-gap: 15px;
