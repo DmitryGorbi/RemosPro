@@ -1,0 +1,39 @@
+.templates__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+
+.templates__header {
+  & p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.templates__picture {
+  height: 170px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.templates__body {
+  display: grid;
+  row-gap: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .templates__content {
+    width: 700px;
+  }
+
+  .templates__picture {
+    height: 220px;
+  }
+}
