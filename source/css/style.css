@@ -544,23 +544,6 @@ a {
     padding: 12px 0;
   }
 }
-.button-link-container {
-  display: grid;
-  grid-template-rows: 48px;
-}
-.button-link-container .button-main {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
-  order: 1;
-}
-.button-link-container a {
-  grid-row: 1/1;
-  grid-column: 1/-1;
-  margin: auto;
-  font-size: 22px;
-  color: var(--basic-black);
-  font-weight: 500;
-}
 .layout {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
@@ -3660,7 +3643,7 @@ textarea {
   .gk-intro__header {
     padding: 5px 15px 15px 10px;
   }
-  .gk-intro__contacts button {
+  .gk-intro__contacts a {
     font-size: 16px;
   }
   .gk-intro__media {
@@ -9683,7 +9666,8 @@ textarea {
   line-height: 26px;
   color: #121212;
 }
-.dct__main .button {
+.dct__main .button-main {
+  display: block;
   margin-bottom: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -9699,7 +9683,7 @@ textarea {
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
-  .dct__main .button {
+  .dct__main .button-main {
     margin-bottom: 30px;
     padding-top: 15px;
     padding-bottom: 15px;
