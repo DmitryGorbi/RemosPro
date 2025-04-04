@@ -1,5 +1,3 @@
-"use strict";
-
 const svgMap = document.querySelector(".gen-plan__layer");
 const ableLayers = svgMap.querySelectorAll(".able");
 const mapTagPopups = document.querySelectorAll(".map-tag__offer");

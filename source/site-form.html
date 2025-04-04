@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+</head>
+<body class="add-form-bg is_chrome">
+
+<div id="object-form">
+  <form id="item-image-form" class="hide">
+    <input type="file" name="item_image[]" id="item_image" multiple="">
+    <button id="item_image_submit" class="js-submit" data-target="#item-image-form" data-action="item/image" data-callback="itemImageMultiple">Сохранить
+    </button>
+  </form>
+
+  <form id="item-plan-form" class="hide">
+     <input type="file" name="item_plan[]" id="item_plan" multiple="">
+     <button id="item_plan_submit" class="js-submit" data-target="#item-plan-form" data-action="item/plan" data-callback="itemPlanMultiple">Сохранить
+      </button>
+  </form>
+
+  <form id="item-edit-form" class="js-form" method="post" action="/local/form/item/save.php">
+    <input type="hidden" class="input" name="item_id" value="0">
+    <div id="object-form-header">
+      <div id="object-form-header-all">
+        <a href="/my/items/" class="back">← Мои объекты</a>
+        <a href="/rules/ad_requirements/" target="_blank" class="rules">Правила размещения</a>
+      </div>
+      <div class="control-line control-line-deal-realty">
+        <span class="title">Тип сделки<b>*</b></span>
+        <div id="objects-type-switch">
+          <input type="hidden" name="item[deal_type]" value="100">
+          <span class="deal-type-switch switch" id="item-edit-form-deal">
+            <a href="#" data-deal="100" class="active">Продать</a>
+            <a href="#" data-deal="200" class="">Сдать</a>
+          </span>
+          <span class="realty-type-switcher-wrapper">
+            <span class="realty-type-switcher">
+              <ul>
+                <li>
+                  <span>Квартиру на вторичке</span>
+                  <i></i>
+                  <ul>
+                    <li>
+                      <div class="caption">Жилая недвижимость</div>
+                      <div class="items">
+                        <!-- мой вариант -->
+                        <label><input type="radio" name="item[realty_type]" value="100" checked="">
+                          <span class="active">Квартиру на вторичке</span>
+                        </label>
+                          <!-- end -->
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="110">Квартиру в новостройке</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="130">Комнату</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="200">Дом</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="210">Таунхаус</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="120">Долю в кв-ре</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="220">Часть дома</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="300">Зем. участок</label>
+                        </span>
+                      </div>
+                      <div class="caption">Коммерческая недвижимость</div>
+                      <div class="items">
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="400">Офис</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="500">Торг. площадь</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="600">ПСН</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="700">Склад</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="800">Здание</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="900">Готовый бизнес</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="1000">Производство</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="1100">Коммерческую землю</label>
+                        </span>
+                        <span class="">
+                          <label><input type="radio" name="item[realty_type]" value="1200">Гараж</label>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </span>
+          </span>
+        </div>
+      </div>
+      <!-- deal & object type  -->
+
+      <!-- address -->
+      <div class="control-line">
+        <span class="title address-title">Адрес<b>*</b> <a href="#" class="js-popup-view f-right" data-action="item/popup/address">Трудности с вводом адреса?</a></span>
+        <ymaps style="z-index: 40000; display: block; position: absolute; width: 672px; top: 271px; left: 30px;"></ymaps>
+        <input type="text" class="input address" id="address-suggest" name="item[address_line]" data-title="Адрес" value="" autocomplete="off">
+      </div>
+      <!-- / address --><!-- map -->
+      <!-- <div id="ymap" style=""><ymaps class="ymaps-2-1-79-map" style="width: 732px; height: 329px;"><ymaps class="ymaps-2-1-79-map ymaps-2-1-79-i-ua_js_yes ymaps-2-1-79-map-bg ymaps-2-1-79-islets_map-lang-ru" style="width: 732px; height: 329px;"><ymaps class="ymaps-2-1-79-inner-panes"><ymaps class="ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none" unselectable="on" style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 2500; cursor: url(&quot;https://api-maps.yandex.ru/2.1.79/build/release/images/cursor/grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.79/build/release/images/cursor/grab.cur&quot;), move;"></ymaps><ymaps class="ymaps-2-1-79-ground-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 501;"><ymaps style="z-index: 150; position: absolute;"><canvas height="1170" width="1976" style="position: absolute; width: 988px; height: 585px; left: -128px; top: -128px;"></canvas></ymaps></ymaps><ymaps class="ymaps-2-1-79-copyrights-pane" style="height: 0px; inset: auto 0px 0px; position: absolute; z-index: 5002;"><ymaps><ymaps class="ymaps-2-1-79-copyright ymaps-2-1-79-copyright_logo_no" style=""><ymaps class="ymaps-2-1-79-copyright__fog">…</ymaps><ymaps class="ymaps-2-1-79-copyright__wrap"><ymaps class="ymaps-2-1-79-copyright__layout"><ymaps class="ymaps-2-1-79-copyright__content-cell"><ymaps class="ymaps-2-1-79-copyright__content"><ymaps class="ymaps-2-1-79-copyright__text">© Яндекс</ymaps><ymaps class="ymaps-2-1-79-copyright__agreement">&nbsp;<a class="ymaps-2-1-79-copyright__link" target="_blank" href="https://yandex.ru/legal/maps_termsofuse/?lang=ru" rel="noopener">Условия использования</a></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-79-copyright__logo-cell"><a class="ymaps-2-1-79-copyright__logo" href="" target="_blank"></a></ymaps></ymaps></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-79-map-copyrights-promo"><ymaps><ymaps class="ymaps-2-1-79-gotoymaps" title="Как добраться"><ymaps class="ymaps-2-1-79-gotoymaps__container"><ymaps class="ymaps-2-1-79-gotoymaps__pin"></ymaps><ymaps class="ymaps-2-1-79-gotoymaps__text-container"><ymaps class="ymaps-2-1-79-gotoymaps__text">Как добраться</ymaps></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-79-gototaxi" title="Доехать на такси" style=""><ymaps class="ymaps-2-1-79-gototaxi__container"><ymaps class="ymaps-2-1-79-gototaxi__pin"></ymaps><ymaps class="ymaps-2-1-79-gototaxi__text-container"><ymaps class="ymaps-2-1-79-gototaxi__text">Доехать на такси</ymaps></ymaps></ymaps></ymaps><a class="ymaps-2-1-79-gototech" target="_blank" href="https://tech.yandex.ru/maps/mapsapi/?from=api-maps ">Создать свою карту</a></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-79-controls-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 4503;"><ymaps class="ymaps-2-1-79-controls__toolbar" style="margin-top: 10px;"><ymaps class="ymaps-2-1-79-controls__toolbar_left"></ymaps><ymaps class="ymaps-2-1-79-controls__toolbar_right"></ymaps></ymaps><ymaps class="ymaps-2-1-79-controls__bottom" style="top: 329px;"></ymaps></ymaps><ymaps class="ymaps-2-1-79-places-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2004;"><ymaps class="ymaps-2-1-79-placemark-overlay ymaps-2-1-79-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 366px; top: 165px;"><ymaps><ymaps class="ymaps-2-1-79-image " style="position: absolute; left: -20px; top: -65px; width: 34px; height: 59px; opacity: 1; background-position: 0px 0px; background-size: 34px 59px; background-image: url(&quot;https://www.remospro.ru/static/i/icon-ymap-baloon.png&quot;);"></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></div> -->
+      <input type="hidden" id="address_latitude" name="item[latitude]" value="">
+      <input type="hidden" id="address_longitude" name="item[longitude]" value="">
+    </div>
+    <!-- / map --><!-- metro -->
+    <div class="control-line-wrapper metro-wrapper">
+      <div class="col-metro">
+        <div class="control-line">
+          <span class="title">Метро</span>
+          <input type="text" class="input" name="item[metro]" id="address_metro" value="">
+        </div>
+      </div>
+
+      <div class="col-metro">
+        <div class="control-line">
+          <span class="title">Удаленность от метро, минут</span>
+          <span class="metro-time">
+            <select class="select" name="item[metro_time]" style="display: none;">
+              <option value="" selected="">-</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+            <ul class="fake-select">
+              <li><span>-</span>
+                <i></i>
+                <ul>
+                  <li data-value="" data-selected="true" class="selected">-</li>
+                  <li data-value="5" data-selected="false" class="">5</li>
+                  <li data-value="7" data-selected="false" class="">7</li>
+                  <li data-value="10" data-selected="false" class="">10</li>
+                  <li data-value="15" data-selected="false" class="">15</li>
+                  <li data-value="20" data-selected="false" class="">20</li>
+                </ul>
+              </li>
+            </ul>
+          </span>
+          <span class="metro-time-type">
+            <select class="select" name="item[metro_time_type]" style="display: none;">
+              <option value="" selected="">Выбрать</option>
+              <option value="100">транспортом</option>
+              <option value="200">пешком</option>
+            </select>
+            <ul class="fake-select">
+              <li><span>Выбрать</span>
+                <i></i>
+                <ul>
+                  <li data-value="" data-selected="true" class="selected">Выбрать</li>
+                  <li data-value="100" data-selected="false" class="">транспортом</li>
+                  <li data-value="200" data-selected="false" class="">пешком</li>
+                </ul>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- / metro -->
+</div>
+<div id="object-form-body">
+
+  <!-- half-block -->
+  <div class="control-line">
+    <div class="col-1">
+      <span class="title">Кол-во комнат<b>*</b></span>
+        <span class="rooms">
+          <select class="select" name="item[rooms]" id="item_rooms" style="display: none;"><option value="" selected="">-</option><option value="200">Студия</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6+</option><option value="100">Свободная планировка</option></select>        <ul class="fake-select"><li><span>-</span><i></i><ul><li data-value="" data-selected="true" class="selected">-</li><li data-value="200" data-selected="false" class="">Студия</li><li data-value="1" data-selected="false" class="">1</li><li data-value="2" data-selected="false" class="">2</li><li data-value="3" data-selected="false" class="">3</li><li data-value="4" data-selected="false" class="">4</li><li data-value="5" data-selected="false" class="">5</li><li data-value="6" data-selected="false" class="">6+</li><li data-value="100" data-selected="false" class="">Свободная планировка</li></ul></li></ul></span>
+    </div>
+    <div class="col-1">
+      <span class="title">&nbsp;</span>
+      <label class="cb-label"><input type="checkbox" class="cb" name="item[is_apartment]" id="app-new-is_apartment" value="1" style="display: none;"> Апартаменты</label>    </div>
+    <div class="clear-both"></div>
+  </div>
+  <!-- / half-block -->
+
+  <!-- area -->
+<div class="area-wrapper">
+  <div class="col-1">
+    <span class="title">Площадь<b>*</b></span>
+
+    <div class="area table-inputs">
+      <div class="input-title">
+        <span>Общая</span>
+        <span>Жилая</span>
+        <span>Кухня</span>
+      </div>
+      <div class="input-fields">
+        <input type="text" class="input" name="item[area_all]" value="" data-title="Площадь">        <input type="text" class="input" name="item[area_living]" value="" data-title="Площадь">        <input type="text" class="input" name="item[area_kitchen]" value="" data-title="Площадь">      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="rooms-area" style="display: none;">
+      <span class="title">Площадь комнат(ы)</span>
+
+      <div class="input-line">
+                  <input type="text" class="input input_rooms_item" name="item[area_rooms][]" value="" data-title="Площадь комнат" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                    <input type="text" class="input input_rooms_item" name="item[area_rooms][]" data-title="Площадь комнат" value="" style="display: none;">                </div>
+    </div>
+    <div class="rooms-type" style="display: none;">
+      <label class="rb-label"><input type="radio" class="rb" name="item[rooms_type]" value="100" style="display: none;"> Изолированные</label><label class="rb-label"><input type="radio" class="rb" name="item[rooms_type]" value="200" style="display: none;"> Смежные</label><label class="rb-label"><input type="radio" class="rb" name="item[rooms_type]" value="300" style="display: none;"> Смежно-изолированные</label>    </div>
+  </div>
+</div>
+<!-- / area -->
+
+<!-- floor -->
+<div class="floor-wrapper">
+  <div class="col-1">
+    <span class="title">Этажность<b>*</b></span>
+
+    <div class="floor table-inputs">
+      <div class="input-title">
+        <span>Этаж</span>
+        <span>В доме</span>
+      </div>
+      <div class="input-fields">
+        <input type="text" class="input" name="item[floor]" value="">        <input type="text" class="input" name="item[floor_all]" value="">      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="height">
+      <span class="title">Высота потолка</span>
+      <input type="text" class="input" name="item[ceiling_height]" value="">    </div>
+  </div>
+</div>
+<!-- / floor -->
+
+<!-- repair -->
+<div class="control-line repair-wrapper">
+  <span class="title">Ремонт</span>
+  <label class="rb-label"><input type="radio" class="rb" name="item[repair]" value="300" style="display: none;"> Дизайнерский</label><label class="rb-label"><input type="radio" class="rb" name="item[repair]" value="200" style="display: none;"> Евро</label><label class="rb-label"><input type="radio" class="rb" name="item[repair]" value="100" style="display: none;"> Косметический</label><label class="rb-label"><input type="radio" class="rb" name="item[repair]" value="10" style="display: none;"> Отсутствует</label></div>
+<!-- / repair -->
+
+  <!-- building type -->
+  <div class="building-type-wrapper">
+    <div class="col-1">
+      <span class="title">Тип дома</span>
+        <span class="rooms">
+          <select class="select" name="item[building_type]" style="display: none;"><option value="" selected="">Выбрать</option><option value="100">Панельный</option><option value="200">Кирпично-монолитный</option><option value="300">Монолитный</option><option value="400">Блочный</option><option value="500">Кирпичный</option><option value="600">Деревянный</option><option value="700">Сталинский</option></select>        <ul class="fake-select"><li><span>Выбрать</span><i></i><ul><li data-value="" data-selected="true" class="selected">Выбрать</li><li data-value="100" data-selected="false" class="">Панельный</li><li data-value="200" data-selected="false" class="">Кирпично-монолитный</li><li data-value="300" data-selected="false" class="">Монолитный</li><li data-value="400" data-selected="false" class="">Блочный</li><li data-value="500" data-selected="false" class="">Кирпичный</li><li data-value="600" data-selected="false" class="">Деревянный</li><li data-value="700" data-selected="false" class="">Сталинский</li></ul></li></ul></span>
+    </div>
+    <div class="col-2">
+      <span class="title">Серия</span>
+      <input type="text" class="input" name="item[building_series]" value="">    </div>
+    <div class="col-3">
+      <span class="title">Год постройки</span>
+      <input type="text" class="input" name="item[building_year]" value="" maxlength="4">    </div>
+  </div>
+  <!-- / building type -->
+<!-- half-block -->
+<div class="control-line float-blocks-wrapper">
+  <div class="col-1">
+    <span class="title">Окна</span>
+        <label class="cb-label"><input type="checkbox" class="cb" name="item[windows]" value="200" style="display: none;"> Двор</label><label class="cb-label"><input type="checkbox" class="cb" name="item[windows]" value="300" style="display: none;"> Улица</label>  </div>
+  <div class="col-1">
+    <span class="title">Мусоропровод</span>
+        <label class="cb-label"><input type="checkbox" class="cb" name="item[rubbish_chute]" value="200" style="display: none;"> Есть</label>  </div>
+</div>
+<!-- / half-block -->
+
+<!-- half-block -->
+<div class="control-line float-blocks-wrapper">
+  <div class="col-1">
+    <span class="title">Лоджия</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[loggia]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[loggia]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[loggia]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+  <div class="col-1">
+    <span class="title">Балкон</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[balcony]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[balcony]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[balcony]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+</div>
+<!-- / half-block -->
+
+<!-- half-block -->
+<div class="control-line float-blocks-wrapper">
+  <div class="col-1">
+    <span class="title">Совмещеных санузлов</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_split]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_split]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_split]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+  <div class="col-1">
+    <span class="title">Раздельных санузлов</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_separate]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_separate]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[bathroom_separate]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+</div>
+<!-- / half-block -->
+
+<!-- half-block -->
+<div class="control-line float-blocks-wrapper">
+  <div class="col-1">
+    <span class="title">Пассажирских лифтов</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[passenger_elevators]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[passenger_elevators]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[passenger_elevators]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+  <div class="col-1">
+    <span class="title">Грузовых лифтов</span>
+
+    <div class="cb-list-line cb-list-line-radio">
+      <label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[freight_elevators]" value="1" style="display: none;"> 1</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[freight_elevators]" value="2" style="display: none;"> 2</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="item[freight_elevators]" value="3" style="display: none;"> 3+</label>    </div>
+  </div>
+</div>
+<!-- / half-block -->
+  <!-- description -->
+<div class="control-line description-wrapper">
+  <span class="title">Описание</span>
+  <textarea class="textarea" name="item[description]" placeholder="Описание"></textarea></div>
+<!-- / description -->
+  <!-- photo-block -->
+<div class="control-line photo-wrapper block-plan">
+  <span class="title">Планировка<small>Перетащите файлы сюда или выберите на компьютере</small></span>
+
+  <div class="photo-box block-item-plan">
+    <div class="legend">Максимальный размер фотографии — 10 МБ, не более 4 файлов</div>
+    <div class="photo-box-items js-dropzone" data-callback="itemPlan" data-max-items="4" data-parent=".block-plan">
+      <ul class="ui-sortable">
+        <li class="not-sorted hover submit js-fake-file-input" data-real-input="#item_plan"></li>
+              </ul>
+    </div>
+    <div class="photo-box-items-progress hide">
+      <div class="pb-progress">
+        <div class="pb-progress-text">
+          Загрузка фото <span></span> из <i></i>
+        </div>
+        <div class="pb-progress-status"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / photo-block --><!-- photo-block -->
+<div class="control-line photo-wrapper block-image">
+  <span class="title">Фото<small>Перетащите файлы сюда или выберите на компьютере</small></span>
+
+  <div class="photo-box block-item-image">
+    <div class="legend">Постарайтесь показать все важные особенности и детали. Можно добавить вид из окна, фото
+      подъезда или план квартиры. Первая фотография будет отображаться в результатах поиска, выберите удачную.
+      Максимальный размер фотографии — 10 МБ, не более 20 файлов
+    </div>
+    <div class="photo-box-items js-dropzone" data-callback="itemImage" data-max-items="20" data-parent=".block-image">
+      <ul class="ui-sortable">
+        <li class="not-sorted hover submit js-fake-file-input" data-real-input="#item_image"></li>
+              </ul>
+    </div>
+    <div class="photo-box-items-progress hide">
+      <div class="pb-progress">
+        <div class="pb-progress-text">
+          Загрузка фото <span></span> из <i></i>
+        </div>
+        <div class="pb-progress-status"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / photo-block -->
+<!-- address -->
+<div class="control-line video">
+  <span class="title">Видео</span>
+  <div class="legend">Прямая ссылка на видео с вашим объектом с YouTube, без сокращений и счётчиков переходов. Cсылка должна быть без параметра таймкода, например &amp;t=2s.</div>
+    <input type="text" class="input video js-video-url" name="item[video]" value=""></div>
+<!-- / address -->
+  <!-- price -->
+<div class="control-line price-wrapper input-dropdown-wrapper">
+  <span class="title">Цена<b>*</b></span>
+  <input type="text" class="input" name="item[price]" value="" data-format="price" data-title="Цена">
+  <span class="dropdown">
+      <select class="select" name="item[currency]" style="display: none;"><option value="100">рублей</option><option value="200">долларов</option><option value="300">евро</option></select>    <ul class="fake-select"><li><span>рублей</span><i></i><ul><li data-value="100" data-selected="true" class="selected">рублей</li><li data-value="200" data-selected="false" class="">долларов</li><li data-value="300" data-selected="false" class="">евро</li></ul></li></ul></span>
+</div>
+<!-- / price -->
+
+<!-- saletype -->
+  <div class="control-line sale-type-wrapper">
+    <span class="title">Тип продажи<b>*</b></span>
+    <label class="rb-label"><input type="radio" class="rb" name="item[sale_type]" value="100" style="display: none;"> Альтернативная</label><label class="rb-label"><input type="radio" class="rb" name="item[sale_type]" value="200" style="display: none;"> Свободная</label>  </div>
+<!-- / saletype -->
+
+  <div class="control-line">
+    <div>
+      <label class="cb-label"><input type="checkbox" class="cb" name="item[is_mortgage]" id="app-new-is_mortgage" value="1" style="display: none;"> Возможна ипотека</label>    </div>
+  </div>
+
+<!-- phone-block -->
+<div class="control-line phone-wrapper">
+  <span class="title">Контактный телефон</span>
+      <label class="rb-label checked"><input type="radio" class="rb" name="item[id_phone]" value="45995" checked="" style="display: none;"> 9067418512</label>  </div>
+<!-- phone-block -->
+
+<!-- status -->
+<div class="control-line sale-type-wrapper hide">
+  <span class="title">Статус объявления</span>
+  <label class="rb-label checked"><input type="radio" class="rb item_status" name="item[status]" value="100" checked="" style="display: none;"> Сохранить как черновик</label><label class="rb-label"><input type="radio" class="rb item_status" name="item[status]" value="200" style="display: none;"> Опубликовать</label></div>
+<!-- / status -->
+    <!-- service -->
+
+    <a name="catalog-top-service-block"></a>
+  <div class="control-line service-top-wrapper" id="catalog-top-service-block">
+    <span class="title">Условия размещения</span>
+      <div class="st-variants">
+        <input type="hidden" value="1" id="service-catalog-top-activate" name="service[top]">
+
+        <div class="active" data-value="100">
+          <span>Поднять объявление в ТОП <i class="icon-catalog-top"></i></span>
+
+          <div class="service-top-period cb-list-line cb-list-line-radio">
+            <label class="cb-list-label"><input type="checkbox" class="cb-list" name="service[period]" value="1" style="display: none;"> Сутки</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="service[period]" value="7" style="display: none;"> 7 дней</label><label class="cb-list-label checked"><input type="checkbox" class="cb-list" name="service[period]" value="14" checked="" style="display: none;"> 14 дней</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="service[period]" value="21" style="display: none;"> 21 день</label><label class="cb-list-label"><input type="checkbox" class="cb-list" name="service[period]" value="28" style="display: none;"> 28 дней</label>          </div>
+        </div>
+        <div class="" data-value="200">
+          <span>Бесплатно</span>
+        </div>
+      </div>
+      <div class="legend">Срок публикации объявления 28 дней</div>
+      </div>
+  <!-- / service -->
+      <div class="control-line service-price-wrapper">
+      Итоговая стоимость: <span class="price">150</span> ₽<span class="economy" style="display: inline;">(экономия <i>18</i> руб.)</span>
+    </div>
+    <script>var catalogTopPriceArray = {"1":12,"7":84,"14":150,"21":210,"28":260};</script>
+
+</div>
+
+
+  <div id="object-form-footer" class="o-hidden">
+
+
+    <span class="button hover inverse-button button-ok">Опубликовать и оплатить</span>
+
+          <span class="button hover button-no"><span>Сохранить как черновик</span></span>
+      <button class="cancel-button hover js-form-cancel" data-form-block="#item-edit-form"><span>Сбросить параметры</span>
+
+      </button><button id="edit-form-send-button" class="inverse-button hide hover js-submit" data-target="#item-edit-form" data-action="item/save" data-callback="itemSave">Сохранить
+      </button>
+
+
+
+
+    <div class="rules-checkbox" id="object-form-footer-rules" style="display: block;">
+      <label class="cb-label checked"><input type="checkbox" class="cb" name="rules_is_agree" value="1" checked="" style="display: none;"> Согласен с
+        <a href="/rules/" target="_blank" class="cb-link">условиями размещения</a></label>
+    </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

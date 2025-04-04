@@ -1,4 +1,3 @@
-"use strict";
 import { isEscEvent, onTogglerClick } from "./util.js";
 
 const mainNav = document.querySelector(".navigation");
