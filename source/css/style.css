@@ -9648,6 +9648,10 @@ textarea {
   border-right: 2px solid var(--basic-green);
   transform: rotate(45deg);
 }
+.templates-list li a:hover,
+.templates-list li a:focus {
+  color: var(--basic-green);
+}
 @media (min-width: 768px) {
   .templates-list {
     font-size: 15px;
