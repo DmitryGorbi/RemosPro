@@ -3212,12 +3212,11 @@ textarea {
     width: 1200px;
     height: -moz-max-content;
     height: max-content;
-    max-height: calc(100vh - 80px);
     z-index: 13;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
   }
   .modal-location__wrapper {
-    padding: 30px 40px;
+    padding: 30px 40px 20px;
   }
   .modal-location__wrapper .button-close {
     left: auto;
@@ -3245,7 +3244,7 @@ textarea {
   .modal-location__footer {
     display: flex;
     margin: 20px -40px 0 -40px;
-    padding: 15px 40px 0 40px;
+    padding: 20px 40px 0 40px;
   }
   .modal-location__footer .button-main {
     margin: 0 auto;
@@ -5084,6 +5083,7 @@ textarea {
     border: none;
   }
   .deal__item {
+    position: relative;
     width: auto;
     text-align: start;
     font-weight: 400;
@@ -5096,12 +5096,12 @@ textarea {
   }
   .deal__item > input:checked + label .filter-control::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     top: 10px;
     right: 10px;
-    background-image: url('../img/icons/check-lg.svg');
+    background-image: url("../img/icons/check-lg.svg");
     background-repeat: no-repeat;
   }
 }
@@ -5146,7 +5146,6 @@ textarea {
   .real-estate .button-main {
     padding: 6px;
     margin-top: 10px;
-    width: 100%;
   }
   .real-estate__list {
     flex-direction: column;

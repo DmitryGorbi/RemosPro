@@ -581,7 +581,7 @@
                   <legend class="visually-hidden-desktop">Тип сделки</legend>
                   <ul class="deal">
                     <li class="deal__item">
-                      <input id="deal_type_buy" class="visually-hidden input" type="radio" checked />
+                      <input id="deal_type_buy" class="visually-hidden input" type="radio" checked/>
                       <label for="deal_type_buy">
                         <span class="filter-control">Купить</span>
                       </label>
@@ -640,12 +640,20 @@
                         <label for="room">Комната</label>
                       </li>
                       <li>
+                        <input class="input-checkbox" type="checkbox" id="part__flat" />
+                        <label for="part__flat">Доля в квартире</label>
+                      </li>
+                      <li>
                         <input class="input-checkbox" type="checkbox" id="house" />
                         <label for="house">Дом</label>
                       </li>
                       <li>
                         <input class="input-checkbox" type="checkbox" id="townhouse" />
                         <label for="townhouse">Таунхаус</label>
+                      </li>
+                      <li>
+                        <input class="input-checkbox" type="checkbox" id="part__house" />
+                        <label for="part__house">Часть дома</label>
                       </li>
                       <li>
                         <input class="input-checkbox" type="checkbox" id="land" />
@@ -770,7 +778,7 @@
               </div>
               <div class="filter__item">
                 <button class="button button-filter" type="button" aria-expanded="false" aria-controls="price">
-                  <span class="">Цена</span>
+                  <span class="button-filter__title">Цена</span>
                   <svg class="button-filter__icon" width="18px" height="18px" aria-hidden="true">
                     <use xlink:href="img/icons/sprite.svg#arrow"></use>
                   </svg>
@@ -781,13 +789,13 @@
                     <li>
                       <label for="min__price">Минимум</label>
                       <div class="input-wrap-rub">
-                        <input id="min__price" class="input input--field" type="number" inputmode="numeric" placeholder="Цена от" />
+                        <input id="min__price" class="input input--field" type="number" inputmode="numeric" placeholder="Цена от" autocomplete="off"/>
                       </div>
                     </li>
                     <li>
                       <label for="max__price">Максимум</label>
                       <div class="input-wrap-rub">
-                        <input id="max__price" class="input input--field" type="number" inputmode="numeric" placeholder="до" />
+                        <input id="max__price" class="input input--field" type="number" inputmode="numeric" placeholder="до" autocomplete="off"/>
                       </div>
                     </li>
                   </ul>

@@ -20,6 +20,7 @@
   }
 
   .deal__item {
+    position: relative;
     width: auto;
     text-align: start;
     font-weight: 400;
@@ -34,12 +35,12 @@
 
   .deal__item > input:checked + label .filter-control::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     top: 10px;
     right: 10px;
-    background-image: url('../img/icons/check-lg.svg');
+    background-image: url("../img/icons/check-lg.svg");
     background-repeat: no-repeat;
   }
 }
