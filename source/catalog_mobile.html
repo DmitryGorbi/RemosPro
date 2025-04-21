@@ -2856,33 +2856,6 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Апартаменты</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__list">
-                        <li>
-                          <input id="apart__care" class="visually-hidden input" type="radio" checked />
-                          <label for="apart__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="notapart" class="visually-hidden input" type="radio" />
-                          <label for="notapart">
-                            <span class="filter-control">Без апартаментов</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="apart" class="visually-hidden input" type="radio" />
-                          <label for="apart">
-                            <span class="filter-control">Только апартаменты</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
                     <legend class="filter-add__legend">Планировка</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
@@ -2949,15 +2922,9 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Тип ремонта</legend>
+                    <legend class="filter-add__legend">Ремонт</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="repair__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="repair__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="designer__repair" class="visually-hidden input" type="checkbox" />
                           <label for="designer__repair">
@@ -2988,16 +2955,53 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Этажность дома</legend>
+                    <legend class="filter-add__legend">Наличие балкона</legend>
                     <div class="filter-add__wrapper">
-                      <ul class="filter-add__list-grid">
+                      <ul class="filter-add__list">
                         <li>
-                          <label for="ground__floor" class="visually-hidden">от</label>
-                          <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                          <input id="balcony__care" class="visually-hidden input" type="radio" checked />
+                          <label for="balcony__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
                         </li>
                         <li>
-                          <label for="top__floor" class="visually-hidden">до</label>
-                          <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                          <input id="balcony" class="visually-hidden input" type="radio" />
+                          <label for="balcony">
+                            <span class="filter-control">Балкон</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="loggia" class="visually-hidden input" type="radio" />
+                          <label for="loggia">
+                            <span class="filter-control">Лоджия</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Вид из окон</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="view__care" class="visually-hidden input" type="radio" checked />
+                          <label for="view__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="street__view" class="visually-hidden input" type="radio" />
+                          <label for="street__view">
+                            <span class="filter-control">На улицу</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="view__yard" class="visually-hidden input" type="radio" />
+                          <label for="view__yard">
+                            <span class="filter-control">Во двор</span>
+                          </label>
                         </li>
                       </ul>
                     </div>
@@ -3036,15 +3040,26 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажность дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="ground__floor" class="visually-hidden">от</label>
+                          <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="top__floor" class="visually-hidden">до</label>
+                          <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
                     <legend class="filter-add__legend">Тип дома</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="wall__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="wall__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="panel" class="visually-hidden input" type="checkbox" />
                           <label for="panel">
@@ -3137,102 +3152,9 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Наличие балкона</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__list">
-                        <li>
-                          <input id="balcony__care" class="visually-hidden input" type="radio" checked />
-                          <label for="balcony__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="balcony" class="visually-hidden input" type="radio" />
-                          <label for="balcony">
-                            <span class="filter-control">Балкон</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="loggia" class="visually-hidden input" type="radio" />
-                          <label for="loggia">
-                            <span class="filter-control">Лоджия</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Вид из окна</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__list">
-                        <li>
-                          <input id="view__care" class="visually-hidden input" type="radio" checked />
-                          <label for="view__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="street__view" class="visually-hidden input" type="radio" />
-                          <label for="street__view">
-                            <span class="filter-control">На улицу</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="view__yard" class="visually-hidden input" type="radio" />
-                          <label for="view__yard">
-                            <span class="filter-control">Во двор</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Тип продажи</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__list">
-                        <li>
-                          <input id="sale__care" class="visually-hidden input" type="radio" checked />
-                          <label for="sale__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="alternative__sale" class="visually-hidden input" type="radio" />
-                          <label for="alternative__sale">
-                            <span class="filter-control">Альтернативная</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="free__sale" class="visually-hidden input" type="radio" />
-                          <label for="free__sale">
-                            <span class="filter-control">Свободная</span>
-                          </label>
-                        </li>
-                      </ul>
-                      <ul class="filter-add__check-list">
-                        <li>
-                          <input id="mortgage__possible" class="input-checkbox" type="checkbox" />
-                          <label for="mortgage__possible">Возможна ипотека</label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
                     <legend class="filter-add__legend">Парковка</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="parking__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="parking__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="underground__parking" class="visually-hidden input" type="checkbox" />
                           <label for="underground__parking">
@@ -3249,6 +3171,33 @@
                           <input id="multi__parking" class="visually-hidden input" type="checkbox" />
                           <label for="multi__parking">
                             <span class="filter-control">Многоуровневая</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Апартаменты</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="apart__care" class="visually-hidden input" type="radio" checked />
+                          <label for="apart__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="notapart" class="visually-hidden input" type="radio" />
+                          <label for="notapart">
+                            <span class="filter-control">Без апартаментов</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="apart" class="visually-hidden input" type="radio" />
+                          <label for="apart">
+                            <span class="filter-control">Только апартаменты</span>
                           </label>
                         </li>
                       </ul>
@@ -3310,6 +3259,114 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип продажи</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="sale__care" class="visually-hidden input" type="radio" checked />
+                          <label for="sale__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="alternative__sale" class="visually-hidden input" type="radio" />
+                          <label for="alternative__sale">
+                            <span class="filter-control">Альтернативная</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="free__sale" class="visually-hidden input" type="radio" />
+                          <label for="free__sale">
+                            <span class="filter-control">Свободная</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="mortgage__possible" class="input-checkbox" type="checkbox" />
+                          <label for="mortgage__possible">Возможна ипотека</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Оформление</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="sale__care" class="visually-hidden input" type="radio" checked />
+                          <label for="sale__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="law__214" class="visually-hidden input" type="radio" />
+                          <label for="alternative__sale">
+                            <span class="filter-control">214-ФЗ</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="assignation" class="visually-hidden input" type="radio" />
+                          <label for="assignation">
+                            <span class="filter-control">Переуступка</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="mortgage__possible" class="input-checkbox" type="checkbox" />
+                          <label for="mortgage__possible">Возможна ипотека</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия проживания</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="kids" class="visually-hidden input" type="checkbox" />
+                          <label for="kids">
+                            <span class="filter-control">Можно с детьми</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="animals" class="visually-hidden input" type="checkbox" />
+                          <label for="animals">
+                            <span class="filter-control">Можно с животными</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия аренды</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="no__commission" class="input-checkbox" type="checkbox" />
+                          <label for="no__commission">Без комиссии</label>
+                        </li>
+                        <li>
+                          <input id="no__guarantee" class="input-checkbox" type="checkbox" />
+                          <label for="no__guarantee">Без залога</label>
+                        </li>
+                        <li>
+                          <input id="no__deposit" class="input-checkbox" type="checkbox" />
+                          <label for="no__deposit">Без предоплаты</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
                     <legend class="filter-add__legend">Дата публикации</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
@@ -3359,23 +3416,6 @@
                         <li>
                           <input id="whith__video" class="input-checkbox" type="checkbox" />
                           <label for="whith__video">Видео</label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Условия аренды</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__check-list">
-                        <li>
-                          <input id="no__guarantee" class="input-checkbox" type="checkbox" />
-                          <label for="no__guarantee">Без залога</label>
-                        </li>
-                        <li>
-                          <input id="no__deposit" class="input-checkbox" type="checkbox" />
-                          <label for="no__deposit">Без предоплаты</label>
                         </li>
                       </ul>
                     </div>
@@ -3476,42 +3516,9 @@
                 </div>
                 <div class="filter-add__item">
                   <fieldset class="filter-add__fieldset">
-                    <legend class="filter-add__legend">Условия проживания</legend>
-                    <div class="filter-add__wrapper">
-                      <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="conditions__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="conditions__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
-                        <li>
-                          <input id="kids" class="visually-hidden input" type="checkbox" />
-                          <label for="kids">
-                            <span class="filter-control">Можно с детьми</span>
-                          </label>
-                        </li>
-                        <li>
-                          <input id="animals" class="visually-hidden input" type="checkbox" />
-                          <label for="animals">
-                            <span class="filter-control">Можно с животными</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="filter-add__item">
-                  <fieldset class="filter-add__fieldset">
                     <legend class="filter-add__legend">Комнат в квартире</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list filter-add__list--square">
-                        <!-- <li>
-                          <input id="room__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="room__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="two__room" class="visually-hidden input" type="checkbox" />
                           <label for="two__room">
@@ -3551,12 +3558,6 @@
                     <legend class="filter-add__legend">Комнат на покупку</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list filter-add__list--square">
-                        <!-- <li>
-                          <input id="rooms__deal__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="rooms__deal__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="one__room__deal" class="visually-hidden input" type="checkbox" />
                           <label for="one__room__deal">
@@ -3657,12 +3658,6 @@
                     <legend class="filter-add__legend">Этажей в доме</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list filter-add__list--square">
-                        <!-- <li>
-                          <input id="floors__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="floors__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="one__floor" class="visually-hidden input" type="checkbox" />
                           <label for="one__floor">
@@ -3696,12 +3691,6 @@
                     <legend class="filter-add__legend">Комнат в доме</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list filter-add__list--square">
-                        <!-- <li>
-                          <input id="house__rooms__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="house__rooms__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="house__one__room" class="visually-hidden input" type="checkbox" />
                           <label for="house__one__room">
@@ -3747,12 +3736,6 @@
                     <legend class="filter-add__legend">Материал дома</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="construction__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="construction__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="house__brick" class="visually-hidden input" type="checkbox" />
                           <label for="house__brick">
@@ -3798,12 +3781,6 @@
                     <legend class="filter-add__legend">Коммуникации</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="utilities__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="utilities__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="electricity" class="visually-hidden input" type="checkbox" />
                           <label for="electricity">
@@ -3870,12 +3847,6 @@
                     <legend class="filter-add__legend">Статус участка</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="lang__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="lang__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="ihc" class="visually-hidden input" type="checkbox" />
                           <label for="ihc">
@@ -3909,12 +3880,6 @@
                     <legend class="filter-add__legend">Удобства</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="comfort__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="comfort__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="room__furniture" class="visually-hidden input" type="checkbox" />
                           <label for="room__furniture">
@@ -3996,12 +3961,6 @@
                     <legend class="filter-add__legend">Особенности дома</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="peculiarities__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="peculiarities__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="dacha" class="visually-hidden input" type="checkbox" />
                           <label for="dacha">
@@ -4057,12 +4016,6 @@
                     <legend class="filter-add__legend">Тип здания</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="type__building__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="center" class="visually-hidden input" type="checkbox" />
                           <label for="center">
@@ -4102,12 +4055,6 @@
                     <legend class="filter-add__legend">Класс здания</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list filter-add__list--square">
-                        <!-- <li>
-                          <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="type__building__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="class__a+" class="visually-hidden input" type="checkbox" />
                           <label for="class__a+">
@@ -4207,12 +4154,6 @@
                     <legend class="filter-add__legend">Возможное назначение</legend>
                     <div class="filter-add__wrapper">
                       <ul class="filter-add__list">
-                        <!-- <li>
-                          <input id="type__building__care" class="visually-hidden input" type="checkbox" checked />
-                          <label for="type__building__care">
-                            <span class="filter-control">Неважно</span>
-                          </label>
-                        </li> -->
                         <li>
                           <input id="medical" class="visually-hidden input" type="checkbox" />
                           <label for="medical">
@@ -4474,6 +4415,7 @@
         </div>
         <section class="subway-list geo-modal__body">
           <h2 class="visually-hidden">Список станций метро Москвы</h2>
+          <p>Такой станции нет. Укажите другую.</p>
           <section class="subway-list__item subway-list__item-subway">
             <h3 class="subway-list__title"><span class="m-line-1">1</span>Сокольническая линия</h3>
             <ul>
@@ -4571,7 +4513,7 @@
               </li>
               <li>
                 <input class="input-checkbox" id="20" type="checkbox" />
-                <label for="20">Проклеено</label>
+                <label for="20">Прокшино</label>
               </li>
               <li>
                 <input class="input-checkbox" id="21" type="checkbox" />
@@ -4830,11 +4772,11 @@
               </li>
               <li>
                 <input class="input-checkbox" id="81" type="checkbox" />
-                <label for="81">Выставочная</label>
+                <label for="81">Деловой центр</label>
               </li>
               <li>
                 <input class="input-checkbox" id="82" type="checkbox" />
-                <label for="82">Международная</label>
+                <label for="82">Москва-Сити</label>
               </li>
             </ul>
           </section>
@@ -5130,52 +5072,60 @@
             <h3 class="subway-list__title"><span class="m-line-8a">8А</span>Солнцевская линия</h3>
             <ul>
               <li>
-                <input class="input-checkbox" id="150" type="checkbox" />
-                <label for="150">Деловой центр</label>
+                <input class="input-checkbox" id="1161" type="checkbox" />
+                <label for="1161">Аэропорт Внуково</label>
               </li>
               <li>
-                <input class="input-checkbox" id="151" type="checkbox" />
-                <label for="151">Парк Победы</label>
+                <input class="input-checkbox" id="0161" type="checkbox" />
+                <label for="0161">Пыхтино</label>
               </li>
               <li>
-                <input class="input-checkbox" id="152" type="checkbox" />
-                <label for="152">Минская</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="153" type="checkbox" />
-                <label for="153">Ломоносовский проспект</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="154" type="checkbox" />
-                <label for="154">Раменки</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="155" type="checkbox" />
-                <label for="155">Мичуринский проспект</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="156" type="checkbox" />
-                <label for="156">Озёрная</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="157" type="checkbox" />
-                <label for="157">Говорово</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="158" type="checkbox" />
-                <label for="158">Солнцево</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="159" type="checkbox" />
-                <label for="159">Боровское шоссе</label>
+                <input class="input-checkbox" id="161" type="checkbox" />
+                <label for="161">Рассказовка</label>
               </li>
               <li>
                 <input class="input-checkbox" id="160" type="checkbox" />
                 <label for="160">Новопеределкино</label>
               </li>
               <li>
-                <input class="input-checkbox" id="161" type="checkbox" />
-                <label for="161">Рассказовка</label>
+                <input class="input-checkbox" id="159" type="checkbox" />
+                <label for="159">Боровское шоссе</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="158" type="checkbox" />
+                <label for="158">Солнцево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="157" type="checkbox" />
+                <label for="157">Говорово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="156" type="checkbox" />
+                <label for="156">Озёрная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="155" type="checkbox" />
+                <label for="155">Мичуринский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="154" type="checkbox" />
+                <label for="154">Раменки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="153" type="checkbox" />
+                <label for="153">Ломоносовский проспект</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="152" type="checkbox" />
+                <label for="152">Минская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="151" type="checkbox" />
+                <label for="151">Парк Победы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="150" type="checkbox" />
+                <label for="150">Деловой центр</label>
               </li>
             </ul>
           </section>
@@ -5288,6 +5238,18 @@
             <h3 class="subway-list__title"><span class="m-line-10">10</span>Люблинско-Дмитровская линия</h3>
             <ul>
               <li>
+                <input class="input-checkbox" id="0187" type="checkbox" />
+                <label for="0187">Физтех</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="1187" type="checkbox" />
+                <label for="1187">Лианозово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="2187" type="checkbox" />
+                <label for="2187">Яхромская</label>
+              </li>
+              <li>
                 <input class="input-checkbox" id="187" type="checkbox" />
                 <label for="187">Селигерская</label>
               </li>
@@ -5305,7 +5267,7 @@
               </li>
               <li>
                 <input class="input-checkbox" id="191" type="checkbox" />
-                <label for="192">Фонвизинская</label>
+                <label for="191">Фонвизинская</label>
               </li>
               <li>
                 <input class="input-checkbox" id="193" type="checkbox" />
@@ -5325,7 +5287,7 @@
               </li>
               <li>
                 <input class="input-checkbox" id="197" type="checkbox" />
-                <label for="128">Сретенский бульвар</label>
+                <label for="197">Сретенский бульвар</label>
               </li>
               <li>
                 <input class="input-checkbox" id="198" type="checkbox" />
@@ -5685,31 +5647,60 @@
               </li>
               <li>
                 <input class="input-checkbox" id="282" type="checkbox" />
-                <label for="282">Косино</label>
+                <label for="282">Улица Дмитриевского</label>
               </li>
               <li>
                 <input class="input-checkbox" id="283" type="checkbox" />
-                <label for="283">Юго-Восточная</label>
+                <label for="283">Косино</label>
               </li>
               <li>
                 <input class="input-checkbox" id="284" type="checkbox" />
-                <label for="284">Окская</label>
+                <label for="284">Юго-Восточная</label>
               </li>
               <li>
                 <input class="input-checkbox" id="285" type="checkbox" />
-                <label for="285">Стахановская</label>
-              </li>
-              <li>
-                <input class="input-checkbox" id="286" type="checkbox" />
-                <label for="286">Нижегородская</label>
+                <label for="285">Окская</label>
               </li>
               <li>
                 <input class="input-checkbox" id="287" type="checkbox" />
-                <label for="287">Авиамоторная</label>
+                <label for="287">Стахановская</label>
               </li>
               <li>
                 <input class="input-checkbox" id="288" type="checkbox" />
-                <label for="288">Электрозаводская</label>
+                <label for="288">Нижегородская</label>
+              </li>
+            </ul>
+          </section>
+          <section class="subway-list__item subway-list__item-subway">
+            <h3 class="subway-list__title"><span class="m-line-16">16</span>Троицкая линия</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="425" type="checkbox" />
+                <label for="425">Новомосковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="426" type="checkbox" />
+                <label for="426">Коммунарка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="427" type="checkbox" />
+                <label for="427">Корниловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="428" type="checkbox" />
+                <label for="428">Тютчевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="429" type="checkbox" />
+                <label for="429">Генерала Тюленева</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="430" type="checkbox" />
+                <label for="430">Университет дружбы народов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="431" type="checkbox" />
+                <label for="431">Новаторская</label>
               </li>
             </ul>
           </section>
@@ -5968,6 +5959,312 @@
               <li>
                 <input class="input-checkbox" id="350" type="checkbox" />
                 <label for="350">Подольск</label>
+              </li>
+            </ul>
+          </section>
+          <section class="subway-list__item subway-list__item-subway">
+            <h3 class="subway-list__title"><span class="m-line-d3">D3</span>МЦД-3 (Ленинградско-Казанский)</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="351" type="checkbox" />
+                <label for="351">Зеленоград-Крюково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="352" type="checkbox" />
+                <label for="352">Фирсановка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="353" type="checkbox" />
+                <label for="353">Сходня</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="354" type="checkbox" />
+                <label for="354">Подрезково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="355" type="checkbox" />
+                <label for="355">Новоподрезково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="356" type="checkbox" />
+                <label for="356">Молжаниново</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="357" type="checkbox" />
+                <label for="357">Химки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="358" type="checkbox" />
+                <label for="358">Левобережная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="359" type="checkbox" />
+                <label for="359">Ховрино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="360" type="checkbox" />
+                <label for="360">Грачёвская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="361" type="checkbox" />
+                <label for="361">Моссельмаш</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="362" type="checkbox" />
+                <label for="362">Лихоборы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="363" type="checkbox" />
+                <label for="363">Петровско-Разумовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="364" type="checkbox" />
+                <label for="364">Останкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="365" type="checkbox" />
+                <label for="365">Митьково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="366" type="checkbox" />
+                <label for="366">Электрозаводская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="367" type="checkbox" />
+                <label for="367">Сортировочкая</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="368" type="checkbox" />
+                <label for="368">Авиамоторная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="369" type="checkbox" />
+                <label for="369">Андроновка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="370" type="checkbox" />
+                <label for="370">Перово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="371" type="checkbox" />
+                <label for="371">Плющево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="372" type="checkbox" />
+                <label for="372">Вешняки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="373" type="checkbox" />
+                <label for="373">Выхино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="374" type="checkbox" />
+                <label for="374">Косино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="375" type="checkbox" />
+                <label for="375">Ухтомская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="376" type="checkbox" />
+                <label for="376">Люберцы</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="377" type="checkbox" />
+                <label for="377">Панки</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="378" type="checkbox" />
+                <label for="378">Томилино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="379" type="checkbox" />
+                <label for="379">Красково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="380" type="checkbox" />
+                <label for="380">Малаховка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="381" type="checkbox" />
+                <label for="381">Удельная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="382" type="checkbox" />
+                <label for="382">Быково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="383" type="checkbox" />
+                <label for="383">Ильинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="384" type="checkbox" />
+                <label for="384">Отдых</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="385" type="checkbox" />
+                <label for="385">Кратово</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="386" type="checkbox" />
+                <label for="386">Есенинская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="387" type="checkbox" />
+                <label for="387">Фабрачная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="388" type="checkbox" />
+                <label for="388">Раменское</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="389" type="checkbox" />
+                <label for="389">Ипподром</label>
+              </li>
+            </ul>
+          </section>
+          <section class="subway-list__item subway-list__item-subway">
+            <h3 class="subway-list__title"><span class="m-line-d4">D4</span>МЦД-4 (Калужско-Нижегородский)</h3>
+            <ul>
+              <li>
+                <input class="input-checkbox" id="390" type="checkbox" />
+                <label for="390">Железнодорожная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="391" type="checkbox" />
+                <label for="391">Ольгино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="392" type="checkbox" />
+                <label for="392">Кучино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="393" type="checkbox" />
+                <label for="393">Салтыковская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="394" type="checkbox" />
+                <label for="394">Никольское</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="395" type="checkbox" />
+                <label for="395">Реутов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="396" type="checkbox" />
+                <label for="396">Новогиреево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="397" type="checkbox" />
+                <label for="397">Кусково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="398" type="checkbox" />
+                <label for="398">Чухлинка</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="399" type="checkbox" />
+                <label for="399">Нижегородская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="400" type="checkbox" />
+                <label for="400">Серп и Молот</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="401" type="checkbox" />
+                <label for="401">Курская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="402" type="checkbox" />
+                <label for="402">Площадь трёх вокзалов</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="403" type="checkbox" />
+                <label for="403">Марьина роща</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="404" type="checkbox" />
+                <label for="404">Савёловская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="405" type="checkbox" />
+                <label for="405">Белорусская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="406" type="checkbox" />
+                <label for="406">Москва-Сити</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="407" type="checkbox" />
+                <label for="407">Кутузовская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="408" type="checkbox" />
+                <label for="408">Поклонная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="409" type="checkbox" />
+                <label for="409">Минская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="410" type="checkbox" />
+                <label for="410">Матвеевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="411" type="checkbox" />
+                <label for="411">Аминьевская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="412" type="checkbox" />
+                <label for="412">Очаково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="413" type="checkbox" />
+                <label for="413">Мещерская</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="414" type="checkbox" />
+                <label for="414">Солнечная</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="415" type="checkbox" />
+                <label for="415">Переделкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="416" type="checkbox" />
+                <label for="416">Мичуринец</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="417" type="checkbox" />
+                <label for="417">Внуково</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="418" type="checkbox" />
+                <label for="418">Лесной Городок</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="419" type="checkbox" />
+                <label for="419">Толстопальцево</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="420" type="checkbox" />
+                <label for="420">Кокошкино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="421" type="checkbox" />
+                <label for="421">Санино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="422" type="checkbox" />
+                <label for="422">Крёкшино</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="423" type="checkbox" />
+                <label for="423">Победа</label>
+              </li>
+              <li>
+                <input class="input-checkbox" id="424" type="checkbox" />
+                <label for="424">Апрелевка</label>
               </li>
             </ul>
           </section>

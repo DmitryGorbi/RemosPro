@@ -373,8 +373,11 @@ a {
   --m-12-line: #bac8e8;
   --m-14-line: #f9bcd1;
   --m-15-line: #de64a1;
+  --m-16-line: #187244;
   --m-d1-line: #faa400;
   --m-d2-line: #ea4184;
+  --m-d3-line: #e15d28;
+  --m-d4-line: #3bb181;
 }
 .button {
   padding: 0;
@@ -2669,11 +2672,20 @@ textarea {
 .m-line-15 {
   background-color: var(--m-15-line);
 }
+.m-line-16 {
+  background-color: var(--m-16-line);
+}
 .m-line-d1 {
   background-color: var(--m-d1-line);
 }
 .m-line-d2 {
   background-color: var(--m-d2-line);
+}
+.m-line-d3 {
+  background-color: var(--m-d3-line);
+}
+.m-line-d4 {
+  background-color: var(--m-d4-line);
 }
 @media (min-width: 1240px) {
   .subway {
@@ -3173,6 +3185,9 @@ textarea {
   position: relative;
   margin-bottom: 10px;
 }
+.modal-location__search {
+  height: 47px;
+}
 .modal-location__hints {
   top: 60px;
   left: 0;
@@ -3226,6 +3241,9 @@ textarea {
   .modal-location__title {
     padding: 0 40px 25px 40px;
     margin: 0 -40px 20px -40px;
+  }
+  .modal-location__search {
+    height: 40px;
   }
   .modal-location__wrapper .breadcrumbs {
     margin-bottom: 20px;
@@ -5315,6 +5333,7 @@ textarea {
   }
   .search--locate {
     border: 1px solid var(--gray);
+    height: 34px;
   }
   .search--locate .input--field {
     border-radius: 5px;
@@ -5330,10 +5349,10 @@ textarea {
     border-bottom: 1px dashed var(--basic-green);
   }
   .search--locate .search__button {
-    padding: 6px 7px;
+    padding: 0 9px;
+    border-radius: 0;
   }
-  .search--locate .search__button:nth-of-type(2) {
-    border: none;
+  .search--locate .search__button:last-child {
     border-radius: 0 5px 5px 0;
   }
   .search--keywords .search__button {
@@ -5423,13 +5442,14 @@ textarea {
 }
 .search-field__control {
   display: none;
+  height: 100%;
 }
 .search-field__button {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
-  height: 45px;
+  height: 100%;
 }
 .search-field__button:hover {
   background-color: var(--hover);
@@ -5441,7 +5461,7 @@ textarea {
 }
 .search-field__icon {
   width: 45px;
-  height: 45px;
+  height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjEzNjIgMjYuMTkxNUMyMy45OTk2IDI4LjI3MzMgMjEuMDczNSAyOS41NTY4IDE3Ljg0NTggMjkuNTU2OEMxMS4zMDM2IDI5LjU1NjggNiAyNC4yODM0IDYgMTcuNzc4NEM2IDExLjI3MzQgMTEuMzAzNiA2IDE3Ljg0NTggNkMyNC4zODgxIDYgMjkuNjkxNiAxMS4yNzM0IDI5LjY5MTYgMTcuNzc4NEMyOS42OTE2IDIxLjA3NDEgMjguMzMwMyAyNC4wNTM3IDI2LjEzNjIgMjYuMTkxNVpNMjYuMTM2MiAyNi4xOTE1TDM0IDM0IiBzdHJva2U9IiMwNTNhMTgiIHN0cm9rZS13aWR0aD0iMy42Ii8+Cjwvc3ZnPgo=);
   background-repeat: no-repeat;
   background-position: center right 10px;
@@ -5453,7 +5473,6 @@ textarea {
   .search-field__button,
   .search-field__icon {
     width: 39px;
-    height: 38px;
   }
 }
 .geo-modal {
@@ -5495,6 +5514,7 @@ textarea {
 }
 .geo-modal__input {
   margin-left: 40px;
+  height: 46px;
 }
 .geo-modal__footer {
   margin: auto -15px 0 -15px;
@@ -5570,6 +5590,7 @@ textarea {
   .geo-modal__input {
     margin-left: 0;
     width: 100%;
+    height: 40px;
   }
   .geo-modal__footer {
     padding: 10px 20px 0;
@@ -5658,6 +5679,9 @@ textarea {
 }
 .subway-list {
   padding: 15px 0 15px;
+}
+.subway-list p {
+  text-align: center;
 }
 .subway-list__item:not(:last-child) {
   border-bottom: 1px solid var(--light-gray);
