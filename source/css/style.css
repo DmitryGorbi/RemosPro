@@ -567,8 +567,12 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 500;
+}
+h5 {
+  margin: 0;
 }
 .caption--h1 {
   font-size: 1.37rem;
@@ -4066,6 +4070,8 @@ textarea {
 .offer-images__main a {
   display: block;
   height: 100%;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
 }
 .offer-images__main .offer-images__camera,
 .offer-images__main .button-circle {
@@ -4227,6 +4233,9 @@ textarea {
 .offer-properties__subway {
   font-size: 14px;
 }
+.offer-properties__benefits {
+  margin-top: 12px;
+}
 .offer-properties__price {
   order: -1;
 }
@@ -4345,7 +4354,8 @@ textarea {
   top: 0;
   right: 0;
 }
-.price-chart h3 {
+.price-chart h3,
+.price-chart h5 {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 400;
@@ -4459,7 +4469,6 @@ textarea {
   -moz-column-gap: 10px;
        column-gap: 10px;
   row-gap: 5px;
-  margin-top: 12px;
   font-size: 13px;
 }
 .offer-qualities ul li {

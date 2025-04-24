@@ -2276,13 +2276,13 @@
         <span class="visually-hidden">Закрыть окно авторизации</span>
       </button>
       <form class="modal-form" method="post" action="">
-        <div>
+        <div class="modal-form__email">
           <label for="userEmail">
             <span>Email адресс:</span>
           </label>
           <input class="input input--field" title="Введите ваш email" id="userEmail" type="email" name="email" inputmode="email" autocomplete="email" required enterkeyhint="next" />
         </div>
-        <div>
+        <div class="modal-form__password">
           <label for="userPassword">
             <span>Пароль:</span>
           </label>
@@ -2300,12 +2300,12 @@
             enterkeyhint="done"
           />
         </div>
-        <div>
+        <div class="modal-form__storage">
           <input type="checkbox" id="remember" />
           <label for="remember">Запомнить</label>
         </div>
         <button class="button button-main" type="submit">Войти</button>
-        <div>
+        <div class="modal-form__footer">
           <a class="modal-form__link" href="registration.html">Регистрация</a>
           <a href="restore-password.html">Восстановить доступ</a>
         </div>
