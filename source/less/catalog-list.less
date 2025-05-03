@@ -21,6 +21,20 @@
   margin-bottom: 35px;
 }
 
+.catalog-list__empty {
+  & div {
+    padding: 15px;
+    border: 1px solid var(--basic-green);
+    border-radius: 5px;
+
+    & p:first-child {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .catalog-list__header {
     column-gap: 30px;
