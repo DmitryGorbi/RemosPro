@@ -1,29 +1,34 @@
 .modal-abuse {
-  & .modal-abuse__select {
-    position: relative;
+  & .button-main {
+    width: 100%;
+  }
+}
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: calc(50% - 13px);
-      right: 7px;
-      width: 14px;
-      height: 14px;
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNy45OTk5OCAxMkM3Ljc4NDkyIDEyIDcuNTY5ODggMTEuOTE2IDcuNDA1OTEgMTEuNzQ4M0wyLjI0NjE3IDYuNDY4MDRDMS45MTc5NCA2LjEzMjE1IDEuOTE3OTQgNS41ODc1NyAyLjI0NjE3IDUuMjUxODFDMi41NzQyNiA0LjkxNjA2IDMuMTA2MzIgNC45MTYwNiAzLjQzNDU4IDUuMjUxODFMNy45OTk5OCA5LjkyNDA0TDEyLjU2NTQgNS4yNTE5OEMxMi44OTM2IDQuOTE2MjMgMTMuNDI1NiA0LjkxNjIzIDEzLjc1MzcgNS4yNTE5OEMxNC4wODIxIDUuNTg3NzMgMTQuMDgyMSA2LjEzMjMxIDEzLjc1MzcgNi40NjgyTDguNTk0MDUgMTEuNzQ4NEM4LjQzIDExLjkxNjIgOC4yMTQ5NyAxMiA3Ljk5OTk4IDEyWiIgZmlsbD0iIzIwYTA1MiIvPgo8L3N2Zz4K);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
+.modal-abuse__select {
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 7px);
+    right: 7px;
+    width: 14px;
+    height: 14px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNy45OTk5OCAxMkM3Ljc4NDkyIDEyIDcuNTY5ODggMTEuOTE2IDcuNDA1OTEgMTEuNzQ4M0wyLjI0NjE3IDYuNDY4MDRDMS45MTc5NCA2LjEzMjE1IDEuOTE3OTQgNS41ODc1NyAyLjI0NjE3IDUuMjUxODFDMi41NzQyNiA0LjkxNjA2IDMuMTA2MzIgNC45MTYwNiAzLjQzNDU4IDUuMjUxODFMNy45OTk5OCA5LjkyNDA0TDEyLjU2NTQgNS4yNTE5OEMxMi44OTM2IDQuOTE2MjMgMTMuNDI1NiA0LjkxNjIzIDEzLjc1MzcgNS4yNTE5OEMxNC4wODIxIDUuNTg3NzMgMTQuMDgyMSA2LjEzMjMxIDEzLjc1MzcgNi40NjgyTDguNTk0MDUgMTEuNzQ4NEM4LjQzIDExLjkxNjIgOC4yMTQ5NyAxMiA3Ljk5OTk4IDEyWiIgZmlsbD0iIzIwYTA1MiIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
   }
 
   & select {
-    margin-bottom: 10px;
     padding: 14px;
     width: 100%;
     font-size: 16px;
     color: #666666;
+    background-color: var(--white);
     white-space: wrap;
-    border-color: var(--gray);
+    border: 1px solid var(--gray);
     border-radius: 5px;
     appearance: none;
 
@@ -31,15 +36,15 @@
       box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
     }
   }
+}
 
-  & .modal-abuse__form {
-    & .input,
-    & .textarea {
-      margin-bottom: 10px;
-    }
+.modal-abuse__form {
+  & .input,
+  & .textarea {
+    margin-bottom: 15px;
   }
 
-  & .button-main {
-    width: 100%;
+  & .input {
+    padding: 14px 30px 14px 15px;
   }
 }

@@ -1,0 +1,31 @@
+.realtors__header {
+  display: grid;
+  row-gap: 20px;
+
+  & h1 {
+    font-size: 25px;
+  }
+}
+
+.realtors__nav {
+  order: -1;
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 10px;
+
+  & a {
+    line-height: 25px;
+  }
+}
+
+.realtors__nav-active {
+  border-bottom: 3px solid var(--basic-green);
+}
+
+@media (min-width: @desktop-width) {
+  .realtors__header {
+    padding: 20px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+  }
+}

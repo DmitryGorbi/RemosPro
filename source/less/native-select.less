@@ -1,48 +1,40 @@
-.form-select {
-  margin: auto;
-  display: flex;
-  column-gap: 10px;
-  margin: 200px auto 300px auto;
-}
-
-.native__form {
-  margin-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 20px;
-  row-gap: 10px;
-}
-
-.select-wrapper {
+.native-select {
   position: relative;
-}
+  height: 100%;
 
-.select-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 13px;
-  right: 2px;
-  width: 20px;
-  height: 20px;
-  margin-top: -2px;
-  pointer-events: none;
-  background-image: url('../img/icons/arrow.svg');
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(50% - 7px);
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNNy45OTk5OCAxMkM3Ljc4NDkyIDEyIDcuNTY5ODggMTEuOTE2IDcuNDA1OTEgMTEuNzQ4M0wyLjI0NjE3IDYuNDY4MDRDMS45MTc5NCA2LjEzMjE1IDEuOTE3OTQgNS41ODc1NyAyLjI0NjE3IDUuMjUxODFDMi41NzQyNiA0LjkxNjA2IDMuMTA2MzIgNC45MTYwNiAzLjQzNDU4IDUuMjUxODFMNy45OTk5OCA5LjkyNDA0TDEyLjU2NTQgNS4yNTE5OEMxMi44OTM2IDQuOTE2MjMgMTMuNDI1NiA0LjkxNjIzIDEzLjc1MzcgNS4yNTE5OEMxNC4wODIxIDUuNTg3NzMgMTQuMDgyMSA2LjEzMjMxIDEzLjc1MzcgNi40NjgyTDguNTk0MDUgMTEuNzQ4NEM4LjQzIDExLjkxNjIgOC4yMTQ5NyAxMiA3Ljk5OTk4IDEyWiIgZmlsbD0iIzIwYTA1MiIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    pointer-events: none;
+  }
 
-.native__select {
-  // max-width: 200px;
-  padding: 9px 20px 9px 9px;
-  margin: 0;
-  border-color: var(--gray);
-  border: 1px solid  var(--gray);
-  border-radius: 5px;
-  background-color: white;
-  font-size: 15px;
-  appearance: none;
+  & select {
+    padding: 0 15px;
+    height: 100%;
+    width: 100%;
+    font-family: inherit;
+    color: #666666;
+    white-space: wrap;
+    border: 1px solid var(--gray);
+    background-color: var(--white);
+    border-radius: 5px;
+    appearance: none;
 
-  &:hover {
-    border-color: var(--blue);
+    &:focus-visible {
+      box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
+    }
+
+    &:hover {
+      border-color: var(--basic-green);
+    }
   }
 }
+

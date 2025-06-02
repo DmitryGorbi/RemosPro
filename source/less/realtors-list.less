@@ -1,0 +1,33 @@
+.realtors-list h2 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.realtors-list__wrapper {
+  padding: 8px 0;
+
+  background-color: var(--extra-light-gray);
+}
+
+.realtors-list__footer {
+  margin: 20px auto 0 auto;
+  width: max-content;
+}
+
+@media (min-width: @desktop-width) {
+  .realtors-list h2 {
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .realtors-list__wrapper {
+    padding: 0;
+    background-color: var(--white);
+  }
+
+  .realtors-list__footer {
+    margin-top: 30px;
+  }
+}
