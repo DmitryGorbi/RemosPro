@@ -1,58 +1,45 @@
-.journal__wrapper {
-  display: grid;
+.journal {
   row-gap: 15px;
+}
 
-  & h3 {
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+.journal__ads {
+  position: relative;
+  height: 200px;
+  border-radius: 5px;
 
-  & section {
-    & li {
-      position: relative;
-      background-color: #f6f6fa;
-      border-radius: 5px;
+  // кдалить после прода
 
-      & a {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-radius: 5px;
-      }
-
-      &:hover {
-        background-color: #EFEFFA;
-
-        & p {
-          color: var(--basic-green);
-        }
-      }
-    }
-  }
-
-  & time {
-    margin-top: auto;
-    font-size: 12px;
+  & p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 40px;
+    color: red;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .journal__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 15px;
+  .journal {
+    row-gap: 30px;
+  }
+
+  .journal__header {
+    grid-column: 1/-1;
+  }
+
+  .journal__ads {
+    height: 250px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .journal__wrapper {
-    grid-template-columns: 2fr 1fr;
+  .journal__header {
+    grid-column: 1/-1;
+  }
 
-    & h3 {
-      font-size: 24px;
-    }
+  .journal__ads {
+    height: 270px;
   }
 }

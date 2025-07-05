@@ -1,0 +1,173 @@
+.doc__header {
+  & h1 {
+    margin-bottom: 15px;
+  }
+}
+
+.doc__aside {
+  background-color: var(--gray-background);
+  border-radius: 7px;
+}
+
+.doc__header-action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+
+  & a {
+    padding: 5px 35px 5px 5px;
+    border-radius: 5px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQ3Mi42MTUgNDcyLjYxNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOiBuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogICAgPGc+CiAgICAgPHBhdGggZD0iTTQ2Mi43NjkgMTEyLjI3MWgtMjguMTI0VjkxLjEwOGE5Ljg0NiA5Ljg0NiAwIDAgMC01Ljk4MS05LjA1NmMtNTkuMzk2LTI1LjM1NS0xMzIuNDczLTE0LjYwOS0xOTIuMzU3IDI3Ljg2NUMxNzYuNDI0IDY3LjQ0MyAxMDMuMzQ1IDU2LjcgNDMuOTUxIDgyLjA1MmE5Ljg0NiA5Ljg0NiAwIDAgMC01Ljk4MSA5LjA1NnYyMS4xNjNIOS44NDZjLTUuNDM3IDAtOS44NDYgNC40MDgtOS44NDYgOS44NDZ2MjcyLjE1MWMwIDUuNDM4IDQuNDA5IDkuODQ2IDkuODQ2IDkuODQ2aDQ1Mi45MjNjNS40MzggMCA5Ljg0Ni00LjQwOSA5Ljg0Ni05Ljg0NnYtMjcyLjE1YzAtNS40MzgtNC40MDgtOS44NDctOS44NDYtOS44NDd6TTE5LjY5MiAzODQuNDIyVjEzMS45NjRIMzcuOTd2MjMxLjI5NWE5Ljg0NyA5Ljg0NyAwIDAgMCAxMy43MTEgOS4wNTVjNDYuMTItMTkuNjg4IDEwMS44MTYtMTQuNzY0IDE1MS4yNSAxMi4xMDhIMTkuNjkyem0yMDYuNzctOC45OGMtMzUuOTM2LTIyLjktNzUuOTExLTM0Ljc5LTExNC40OTgtMzQuNzktMTguNjI5IDAtMzYuOTMyIDIuNzcxLTU0LjMwMSA4LjQxM1YxMjIuMjMyYzAtLjAzOS4wMDYtLjA3Ni4wMDYtLjExNHMtLjAwNS0uMDc2LS4wMDYtLjExNFY5Ny43NjhjNTIuNTE3LTE5LjY4NCAxMTYuMTk3LTguNjc2IDE2OC43OTkgMjkuMzE1djI0OC4zNTl6bTE5LjY5Mi0yNDguMzU5YzUyLjYwMS0zNy45OTIgMTE2LjI4NS00OC45OTkgMTY4Ljc5OS0yOS4zMTV2MjQuMjM1YzAgLjAzOC0uMDA2LjA3Ni0uMDA2LjExNHMuMDA1LjA3Ni4wMDYuMTE0djIyNi44MzJjLTUzLjM0OC0xNy4zMjktMTE1LjUxNS03LjU3Ni0xNjguNzk5IDI2LjM3OFYxMjcuMDgzem0yMDYuNzY5IDI1Ny4zMzloLTE4My4yNGM0OS40MzUtMjYuODcyIDEwNS4xMy0zMS43OTUgMTUxLjI1MS0xMi4xMDhhOS44NDYgOS44NDYgMCAwIDAgMTMuNzExLTkuMDU1VjEzMS45NjRoMTguMjc4djI1Mi40NTh6IiBmaWxsPSIjMjBhMDUyIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIj48L3BhdGg+CiAgICA8L2c+Cjwvc3ZnPgogICAgICAgICAgICAgIA==);
+    background-repeat: no-repeat;
+    background-position: 95%, center;
+
+    &:hover {
+      background-color: var(--light-gray);
+    }
+  }
+}
+
+.doc__header-info {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #737a8e;
+
+  & p:last-of-type {
+    margin-left: auto;
+  }
+}
+
+.doc__header-img {
+  margin-bottom: 20px;
+  height: 170px;
+  border-radius: 7px;
+}
+
+.doc__header-img,
+.doc__body-picture {
+  & img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.doc__body-picture {
+  height: 270px;
+}
+
+.doc__description {
+  margin-bottom: 30px;
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.doc__body {
+  & h2 {
+    margin-top: 30px;
+  }
+
+  & p {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  & > p {
+    margin-top: 12px;
+  }
+
+  & > p:not(:last-of-type) {
+    // margin-bottom: 12px;
+  }
+
+  & h3 {
+    margin-top: 25px;
+  }
+}
+
+.doc__body-picture,
+.doc__body-figure {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.doc__body-offtop {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.doc__body-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .doc__header {
+    & h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .doc__header-img {
+    height: 300px;
+  }
+
+  .doc__description {
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .doc__nav {
+    padding: 20px 25px 20px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 7px;
+  }
+
+  .doc__body {
+    & h2 {
+      margin-top: 40px;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  .doc__body-picture {
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .doc {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+  }
+
+  .doc__header-info {
+    & p:last-of-type {
+      margin-left: 50px;
+    }
+  }
+
+  .doc__header-img {
+    height: 340px;
+  }
+
+  .doc__description {
+    margin-bottom: 25px;
+    font-size: 19px;
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  .doc__body-picture {
+    height: 400px;
+  }
+}

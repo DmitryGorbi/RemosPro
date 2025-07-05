@@ -1,0 +1,25 @@
+.callout {
+  display: flex;
+  column-gap: 10px;
+  align-items: baseline;
+  padding: 10px 15px;
+  overflow-wrap: break-word;
+  background-color: var(--backgound-gray);
+  border-radius: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .callout {
+    padding: 15px 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .callout {
+    padding: 20px;
+
+    & p {
+      line-height: 30px;
+    }
+  }
+}

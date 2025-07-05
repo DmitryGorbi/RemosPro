@@ -15,7 +15,7 @@ a {
 
 // green links
 
-:is(.seo-nav, .footer, .developer-about, .gk-progress, .card__gk, .catalog__title, .cookies) a {
+:is(.seo-nav ul, .footer, .developer-about, .gk-progress, .card__gk, .catalog__title, .cookies) a {
   color: var(--basic-green);
 
   &:hover {
@@ -35,7 +35,7 @@ a {
 
 //  links hover
 
-:is(.new-offers__nav, .breadcrumbs, .offer-properties__title, .footer-links) a {
+:is(.new-offers__nav, .breadcrumbs, .offer-properties__title, .footer-links, .media-header__nav) a {
   &:hover {
     color: var(--basic-green);
   }
@@ -64,7 +64,21 @@ a {
   }
 }
 
-:is(.new-buildings, .journal, .gk-offers, .catalog-menu, .offer-images__main, .plan-offer, .deal-terms, .statistics__table) a {
+:is(
+    .publication__button,
+    .new-offers__list,
+    .gk-offers,
+    .catalog-menu,
+    .offer-images__main,
+    .plan-offer,
+    .new-bldg,
+    .deal-terms,
+    .statistics__table,
+    .articles-section__list,
+    .news-section__list,
+    .posts-section__list
+  )
+  a {
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
   }
@@ -100,5 +114,36 @@ a {
 
   &:active {
     background-color: #ebebfe;
+  }
+}
+
+.link-selected {
+  border-bottom: 3px solid var(--basic-green);
+}
+
+// links like button
+
+.link-button {
+  padding: 13px 0;
+  color: var(--white);
+  background-color: var(--basic-green);
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--green);
+  }
+
+  &:active {
+    background-color: var(--dark-green);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 0;
   }
 }

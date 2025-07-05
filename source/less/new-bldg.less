@@ -7,7 +7,7 @@
 }
 
 .new-bldg__header {
-  height: 210px;
+  min-height: 210px;
 
   & img {
     height: 100%;
@@ -36,8 +36,7 @@
   padding: 0 10px;
   margin-bottom: 10px;
 
-  & h3,
-  p,
+  & p,
   address {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -54,7 +53,7 @@
 }
 
 .new-bldg__finish {
-  padding: 7px 10px;
+  padding: 7px 0;
   font-size: 14px;
 
   & span {
@@ -104,11 +103,6 @@
 @media (min-width: @tablet-width) {
   .new-bldg__content {
     padding: 0 15px;
-  }
-
-  .new-bldg__finish {
-    margin: 0 -15px;
-    padding: 7px 22px;
   }
 }
 

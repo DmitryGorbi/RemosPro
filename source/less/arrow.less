@@ -1,0 +1,42 @@
+.arrow-after-right::after,
+.arrow-after-rightdown::after,
+.arrow-before-left::before {
+  content: "";
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid var(--basic-green);
+  border-right: 2px solid var(--basic-green);
+}
+
+.arrow-after-right,
+.arrow-after-rightdown,
+.arrow-before-left {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.arrow-after-right,
+.arrow-before-left {
+  justify-content: space-between;
+}
+
+.arrow-after-right::after {
+  transform: rotate(45deg);
+}
+
+.arrow-before-left::before {
+  transform: rotate(225deg);
+}
+
+.arrow-after-rightdown {
+  justify-content: center;
+  column-gap: 7px;
+
+  &::after {
+    position: relative;
+    top: -2px;
+    transform: rotate(135deg);
+  }
+}

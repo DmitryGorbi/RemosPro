@@ -1,14 +1,18 @@
 .new-buildings {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  margin-bottom: -4px;
+  padding-bottom: 4px;
 }
 
 .new-buildings__title {
   padding: 0 15px;
+  margin-bottom: 9px;
 }
 
 .new-buildings__list {
   display: inline-flex;
+  padding-top: 4px;
   width: 100%;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -43,6 +47,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .new-buildings__title {
+    margin-bottom: 11px;
+  }
+
   .new-buildings__title,
   .new-buildings__footer {
     padding: 0 40px;
@@ -63,12 +71,15 @@
   }
 }
 
-
-
 @media (min-width: @desktop-width) {
   .new-buildings {
     margin: 0 auto;
     width: 1200px;
+    overflow-x: visible;
+  }
+
+  .new-buildings__title {
+    margin-bottom: 16px;
   }
 
   .new-buildings__title,
@@ -82,7 +93,7 @@
     justify-content: space-between;
     column-gap: 20px;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: visible;
 
     &::before,
     &::after {

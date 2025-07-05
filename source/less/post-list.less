@@ -1,0 +1,32 @@
+.post-list {
+  display: grid;
+  row-gap: 10px;
+  padding-left: 20px;
+  list-style: disc;
+
+  & li {
+    position: relative;
+    font-size: 17px;
+    line-height: 25px;
+
+    &::marker {
+      font-size: 22px;
+      color: var(--basic-green);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .post-list {
+    padding-left: 30px;
+
+    & li {
+      font-size: 18px;
+      line-height: 27px;
+
+      &::marker {
+        font-size: 25px;
+      }
+    }
+  }
+}

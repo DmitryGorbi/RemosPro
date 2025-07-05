@@ -1,0 +1,42 @@
+.post-structure {
+  & ul {
+    display: grid;
+    row-gap: 5px;
+  }
+
+  & a {
+    display: block;
+    padding: 4px 0;
+    color: #737a8e;
+    text-decoration: underline solid var(--gray) 1px;
+    text-underline-offset: 3px;
+    line-height: 22px;
+  }
+}
+
+.post-structure__title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (min-width: @tablet-width) {
+  .post-structure {
+    & ul {
+      & a {
+        font-size: 16px;
+      }
+    }
+  }
+  .post-structure__title {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post-structure__title {
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+}

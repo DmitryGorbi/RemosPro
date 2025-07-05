@@ -1,0 +1,35 @@
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+  .journal-nav {
+    & ul {
+      display: grid;
+      row-gap: 10px;
+    }
+  }
+
+  .journal-nav__link {
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 15px;
+    background-color: #f6f6fa;
+    border-radius: 5px;
+
+
+    &:hover {
+      background-color: #efeffa;
+    }
+
+    &--selected {
+      background-color: var(--hover);
+
+      &::after {
+        width: 12px !important;
+        height: 12px !important;
+        border-right-width: 3px !important;
+        border-top-width: 3px !important;
+      }
+    }
+  }
+}

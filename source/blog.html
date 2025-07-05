@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" prefix="og: //ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,20 +9,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/source/img/favicons/favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="/source/img/favicons/safari-pinned-tab.svg" color="#20a052" />
-    <link rel="preload" href="fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Риэлторы в Московской области - услуги, рейтинг, отзывы - Ремос</title>
-    <meta name="description" content="Все риэлторы в Московской области. Список риэлторов. Рейтинг. Отзывы. Выбор услуг. Контактная информация. Объявления." />
-    <meta property="og:title" content="Риэлторы в Московской области - Рейтинг | Отзывы" />
-    <meta property="og:description" content="Все риэлторы в Московской области. Список риэлторов. Рейтинг. Отзывы. Выбор услуг. Контактная информация. Объявления." />
-    <!-- Нужно сделать какую-то картинку с аватарками -->
-    <meta property="og:image" content="/source/img/catalog/og-logo.png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
+
+    <title>Блог Ремос: новости компании и всё о работе сервиса</title>
+    <meta name="description" content="Блог РемосПро - новости компании, всё о работе сервиса, полезная информация, частые вопросы, сотрудничество с партнерами" />
+    <meta property="og:title" content="Блог Ремос: новости компании и всё о работе сервиса" />
+    <meta property="og:description" content="Блог РемосПро - новости компании, всё о работе сервиса, полезная информация, частые вопросы, сотрудничество с партнерами" />
+    <!-- Нужно сделать картинку для микроразметки -->
+    <meta property="og:image" content="img/" />
+    <meta property="og:image:width" content="767" />
+    <meta property="og:image:height" content="297" />
+    <meta property="og:url" content="https://www.remospro.ru/blog/" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.remospro.ru/rieltory_v_moskovskoy_oblasti/" />
     <meta property="og:site_name" content="RemosPro" />
     <meta property="og:locale" content="ru_RU" />
   </head>
@@ -529,19 +530,19 @@
         <nav class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
           <ol>
             <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-              <a href="" itemprop="item">
+              <a href="/" itemprop="item">
                 <span itemprop="name">Главная</span>
               </a>
               <meta itemprop="position" content="1" />
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-              <a href="https://www.remospro.ru/realtors/" itemprop="item">
-                <span itemprop="name">Риелторы</span>
+              <a href="https://www.remospro.ru/journal/" itemprop="item">
+                <span itemprop="name">Журнал</span>
               </a>
               <meta itemprop="position" content="2" />
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
-              <span itemprop="name">Московская область</span>
+              <span itemprop="name">Блог Ремос</span>
               <meta itemprop="position" content="3" />
               <!-- <link href="" itemprop="item"> -->
             </li>
@@ -555,340 +556,153 @@
         </button>
       </div>
     </header>
-    <main class="page-main realtors">
-      <header class="realtors__header wrapper-content">
-        <h1>Риелторы в Московской области</h1>
-        <ul class="realtors__nav">
-          <li>
-            <a class="link-selected" href="https://www.remospro.ru/rieltory_v_moskovskoy_oblasti/">Риелторы</a>
-          </li>
-          <li>
-            <a href="https://www.remospro.ru/agentstva_v_moskovskoy_oblasti/">Агентства</a>
-          </li>
-        </ul>
-        <form class="realtors__form agents-search" action="#">
-          <div class="agents-search__item">
-            <label class="visually-hidden" for="realtors__region">Выберите регион</label>
-            <div class="native-select">
-              <select name="region" id="realtors__region">
-                <option value="petersburg">Кабардино-Балкарская республика</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-                <option value="petersburg">Санкт-Петербург</option>
-                <option value="samara">Самара</option>
-                <option value="perm">Пермь</option>
-                <option value="novosibirsk">Новосибирск</option>
-              </select>
-            </div>
-          </div>
-          <div class="agents-search__item">
-            <label class="visually-hidden" for="specialization">Специализация</label>
-            <div class="native-select">
-              <select name="specialization" id="specialization">
-                <option value="">Любая сделка</option>
-                <option value="">Аренда</option>
-                <option value="">Покупка/продажа</option>
-              </select>
-            </div>
-          </div>
-          <div class="agents-search__item">
-            <label class="visually-hidden" for="realtor__realty__type">Тип недвижимости</label>
-            <div class="native-select">
-              <select name="realtor__realty__type" id="realtor__realty__type">
-                <option value="">Тип недвижимости</option>
-                <option value="">Жилая</option>
-                <option value="">Коммерческая</option>
-              </select>
-            </div>
-          </div>
-          <div class="agents-search__item search-field">
-            <label class="visually-hidden" for="agent__name">Имя риелтора</label>
-            <input id="agent__name" type="text" placeholder="Имя риелтора" inputmode="search" autocomplete="off" />
-            <div class="search-field__icon"></div>
-          </div>
-          <div class="agents-search__item">
-            <button class="button button-submit" type="submit">Искать</button>
-          </div>
-        </form>
+    <main class="page-main wrapper-content journal journal--inner">
+      <header class="journal__header media-header">
+        <p class="media-header__title">Журнал <span>Ремос</span></p>
+        <nav class="media-header__nav">
+          <ul>
+            <li>
+              <a href="/">Главная</a>
+            </li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Статьи о недвижимости</a></li>
+            <li>
+              <a class="link-selected" href="">Блог <span>Ремос</span></a>
+            </li>
+            <li><a href="">Жилые комплексы</a></li>
+          </ul>
+        </nav>
       </header>
-      <section class="realtors-list">
-        <div class="wrapper-content">
-          <h2>Найдено 34 риелтора</h2>
-        </div>
-        <div class="realtors-list__wrapper">
-          <article class="realtor">
-            <a class="realtor__wrapper" href="#">
-              <div class="realtor__info">
-                <div class="realtor__data">
-                  <h3>Андрей Меньшиков</h3>
-                  <p>Частный риелтор</p>
-                  <p>5 лет и 1 мес. на Ремос</p>
+      <section class="journal__media posts-section">
+        <div class="posts-section__wrapper posts-section__wrapper--2col">
+          <div class="posts-section__header posts-section__header--inner">
+            <h1 class="posts-section__title posts-section__title--inner">Новости компании</h1>
+          </div>
+          <aside class="journal-nav">
+            <ul>
+              <li><a class="journal-nav__link arrow-after-right journal-nav__link--selected" href="">Новости компании</a></li>
+              <li><a class="journal-nav__link arrow-after-right" href="">Публикация объявлений</a></li>
+              <li><a class="journal-nav__link arrow-after-right" href="">Задать вопрос</a></li>
+            </ul>
+          </aside>
+          <ul class="posts-section__list posts-grid posts-grid--3fr">
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h2>Сколько стоит подключить коммуникации к участку</h2>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
                 </div>
-                <div class="realtor__info-avatat">
-                  <img src="img/realtors/923c6307d9745d3bc79914533a3d307a.jpg" alt="Риелтор Андрей Меньшиков" />
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article5.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
                 </div>
-              </div>
-              <div class="realtor__reviews">
-                <div class="realtor__reviews-stars">
-                  <span>5.0</span>
-                  <img src="/img/realtors/star.svg" alt="" />
-                  <span>5 отзывов</span>
-                </div>
-                <p class="realtor__reviews-last">
-                  Ольга: Удачно завершила сделку по покупке квартиры и на радостях хочу поделиться хорошим опытом сотрудническва с Дмитрием! Дмитрий очень помог в процессе вы ...
-                </p>
-              </div>
-              <div class="realtor__offers">
-                <span>5 объектов</span>
-                <span>в работе</span>
-              </div>
-            </a>
-          </article>
-          <article class="realtor">
-            <a class="realtor__wrapper" href="#">
-              <div class="realtor__info">
-                <div class="realtor__data">
-                  <h3>Евгений Домнич</h3>
-                  <p>Бест недвижимость</p>
-                  <p>15 лет и 1 мес. на Ремос</p>
-                </div>
-                <div class="realtor__info-avatat">
-                  <img src="img/realtors/domnich.jpg" alt="Риелтор Евгений Домнич" />
-                </div>
-              </div>
-              <div class="realtor__reviews">
-                <div class="realtor__reviews-stars">
-                  <span>0.0</span>
-                  <img src="/img/realtors/star.svg" alt="" />
-                  <span>0 отзывов</span>
-                </div>
-                <!-- <p class="realtor__reviews-last">
-                  Виктор: Удачно завершила сделку по покупке квартиры и на радостях хочу поделиться хорошим опытом сотрудническва с Дмитрием! Дмитрий очень помог в процессе вы ...
-                </p> -->
-              </div>
-              <div class="realtor__offers">
-                <span>Нет объектов</span>
-                <span>в работе</span>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="realtors-list__footer">
-          <ul class="pagination">
-            <li>
-              <a class="button-white button-white--disabled" href="#">Назад</a>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
-            <li>
-              <a class="button-white button-white--selected" href="#">1</a>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Можно ли купить землю на материнский капитал? Можно ли купить землю на материнский капитал?</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article4.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
-            <li>
-              <a class="button-white" href="#">2</a>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Сколько стоит подключить коммуникации к участку</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article3.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
-            <li>
-              <a class="button-white" href="#">...</a>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Сколько стоит подключить коммуникации к участку</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article2.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
-            <li>
-              <a class="button-white" href="#">6</a>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Сколько стоит подключить коммуникации к участку</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article5.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
-            <li>
-              <a class="button-white" href="#">Вперёд</a>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Можно ли купить землю на материнский капитал? Можно ли купить землю на материнский капитал?</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article4.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
+            </li>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Сколько стоит подключить коммуникации к участку</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article3.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
+            </li>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Можно ли купить землю на материнский капитал? Можно ли купить землю на материнский капитал?</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article4.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
+            </li>
+            <li class="posts-grid__item">
+              <article class="post-preview">
+                <div class="post-preview__content">
+                  <h3>Сколько стоит подключить коммуникации к участку</h3>
+                  <time datetime="2018-10-21">21 октября 2018 г.</time>
+                </div>
+                <div class="post-preview__picture">
+                  <img src="img/articles__pictires/article2.webp" alt="Альт пропишу руками в админке либо оставлю пустым" width="90" height="80" loading="lazy" />
+                </div>
+                <a href="" aria-label="Перейти к статье"></a>
+              </article>
             </li>
           </ul>
-        </div>
-      </section>
-      <section class="wrapper-content">
-        <h2 class="visually-hidden">Часто задаваемы вопросы</h2>
-        <div class="accordion accordion--agents">
-          <details>
-            <summary>
-              <h3>Почему стоит обратиться к риелтору?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>
-                Обращение к риелтору упрощает покупку или продажу недвижимости. Он экономит время, подбирает подходящие варианты, проверяет юридическую чистоту, проводит переговоры и сопровождает
-                сделку, оценивает объект, устанавливает конкурентную цену, размещает объявления и оформляет документы, минимизируя риски. В итоге делает процесс безопаснее и эффективнее.
-              </p>
-              <!-- <p>
-                Обращение к риелтору упрощает покупку или продажу недвижимости. Он экономит время, подбирает подходящие варианты, проверяет юридическую чистоту, проводит переговоры и сопровождает
-                сделку. Риелтор оценивает объект, устанавливает конкурентную цену, размещает объявления и оформляет документы, минимизируя риски. Плюсы: профессионализм, знание рынка, удобство.
-                Минусы: расходы на услуги, необходимость выбора надежного специалиста. В итоге, риелтор делает процесс безопаснее и эффективнее.
-              </p> -->
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h3>Что входит в услуги риелтора в Московской области?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>Полная услуга риелтора при покупке или продаже квартиры включает:</p>
-              <ol>
-                <li>&#10004; Консультация и помощь: оценка потребностей, консультации по рынку, подбор квартиры или определение цены для продажи.</li>
-                <li>&#10004; Поиск и продвижение: поиск объектов для покупки, размещение объявлений для продажи.</li>
-                <li>&#10004; Проверка документов: анализ юридической чистоты сделки.</li>
-                <li>&#10004; Организация сделки: сопровождение переговоров, показов, подписания договора аванса/задатка.</li>
-                <li>&#10004; Ипотека: помощь с документами, выбором программы и получением решения банка.</li>
-                <li>&#10004; Составление договоров: подготовка предварительного договора, договора купли-продажи и других документов, часто с привлечением юриста.</li>
-                <li>
-                  &#10004; Сопровождение сделки через риелтора: организация расчетов (например, через банковскую ячейку или аккредитив), участие в подписании договора и передаче квартиры (акт
-                  приема-передачи).
-                </li>
-              </ol>
-
-              <p>Работа через риелтора упрощает процесс покупки или продажи квартиры, экономит время и снижает риски.</p>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h3>Сколько стоят услуги риелтора в Московской области?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>Комиссия риелтора зависит от объёма работ и стоимости недвижимости. По договорённости с клиентом это может быть процент от сделки или фиксированная цена.</p>
-              <p>
-                Обычно покупатель платит риелтору за услуги по подбору квартиры, проверке документов и сопровождению сделки (2–4% от стоимости или фиксированная сумма 50 000–300 000 руб. - зависит от
-                стоимости объекта). Для продавца аналогичный расчёт.
-              </p>
-              <p>Оплата услуг риелтора происходит после завершения сделки.</p>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h3>Кто оплачивает риелтора?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>Услуги риелтора оплачивает заинтересованая сторона заключивная с ним договор. Но не всегда так - в аренде квартир зачастую платит арендатор.</p>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h3>Как найти профессионального риелтора в Московской области?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>
-                Если вам нужен хороший риелтор в Московской области для покупки или продажи квартиры воспользуйтесь формой поиска на Ремос. В результате выдачи будет Топ риелторов. Делайте свой выбор на
-                основе отзывов, стажа в профессии и количества объектов.
-              </p>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h3>Берёт ли риелтор комиссию за покупку новостройки?</h3>
-            </summary>
-            <div class="accordion__body">
-              <p>Когда недвижимость приобретается у застройщика по ДДУ, то платит риелтору сам застройщик. В случае покупки у физического лица по переуступке, то комиссия такая же как на вторичке.</p>
-            </div>
-          </details>
+          <div class="posts-section__footer posts-section__footer--inner">
+            <button class="button button-white" type="button">
+              <span class="arrow-after-rightdown">Показать больше</span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
-    <div class="footer-links">
-      <div class="footer-links__wrapper">
-        <section class="footer-links__item footer-links__item-realtors">
-          <h3>Риелторы в других регионах</h3>
-          <ul class="footer-links__list">
-            <li><a href="#">Архангельская область</a></li>
-            <li><a href="#">Астраханская область</a></li>
-            <li><a href="#">Белгородская область</a></li>
-            <li><a href="#">Вологодская область</a></li>
-            <li><a href="#">Тюменская область</a></li>
-            <li><a href="#">Ярославская область</a></li>
-            <li><a href="#">Тульская область</a></li>
-            <li><a href="#">Московская область</a></li>
-            <li><a href="#">Московская область</a></li>
-            <li><a href="#">Воронежская область</a></li>
-            <li><a href="#">Калининградская область</a></li>
-            <li><a href="#">Курская область</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-      </div>
-    </div>
     <footer class="footer">
       <div class="wrapper-content">
         <p>© Remos 2023 - Недвижимость в Московской области</p>
@@ -897,6 +711,7 @@
           <li><a href="">Условия использования</a></li>
           <li><a href="">Публикации</a></li>
           <li><a href="">Обратная связь</a></li>
+          <li><a href="for_developers.html">Застройщикам</a></li>
         </ul>
         <ul class="social-list">
           <li>
@@ -917,9 +732,7 @@
         </ul>
       </div>
     </footer>
-    <script src="js/catalog_desktop.js" type="module"></script>
     <script src="js/header.js" type="module"></script>
-    <script src="js/filter.js" type="module"></script>
-    <script src="js/catalog.js" type="module"></script>
+    <!-- <script src="js/filter.js" type="module"></script> -->
   </body>
 </html>
