@@ -9826,6 +9826,7 @@ textarea {
   margin-bottom: 8px;
 }
 .realtor__wrapper {
+  position: relative;
   display: grid;
   padding: 16px 15px;
   background-color: var(--white);
@@ -9833,6 +9834,14 @@ textarea {
 .realtor__wrapper:hover {
   background-color: var(--extra-light-gray);
   border-bottom-color: #0000;
+}
+.realtor__wrapper a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+}
+.realtor__wrapper a:focus-visible {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 .realtor__info {
   display: flex;
@@ -9866,10 +9875,12 @@ textarea {
   margin-bottom: 3px;
 }
 .realtor__reviews-stars {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 16px max-content;
   align-items: start;
   -moz-column-gap: 5px;
        column-gap: 5px;
+  line-height: 16px;
 }
 .realtor__reviews-last {
   display: none;
@@ -9934,22 +9945,27 @@ textarea {
     color: var(--basic-black);
   }
 }
-.journal {
-  row-gap: 15px;
+.journal__media-title {
+  margin-bottom: 10px;
+}
+.journal__media-title h1 {
+  font-size: 20px;
+  font-weight: 400;
 }
 .journal__ads {
   position: relative;
   height: 200px;
   border-radius: 5px;
 }
-.journal__ads p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  font-size: 40px;
-  color: red;
+.journal__media-footer {
+  margin-top: 15px;
+}
+.journal__media-footer .button-white {
+  padding: 13px 30px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #f6f6fa;
+  border: none;
 }
 @media (min-width: 768px) {
   .journal {
@@ -9963,8 +9979,20 @@ textarea {
   }
 }
 @media (min-width: 1240px) {
-  .journal__header {
-    grid-column: 1/-1;
+  .journal {
+    row-gap: 60px;
+  }
+  .journal__media-title {
+    margin-bottom: 20px;
+  }
+  .journal__media-title h1 {
+    font-size: 27px;
+  }
+  .journal__media-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
   .journal__ads {
     height: 270px;
@@ -10082,46 +10110,24 @@ textarea {
   font-size: 20px;
   line-height: 30px;
 }
-@media (min-width: 1240px) {
-  .posts-section__wrapper--2col {
-    grid-template-columns: 250px 1fr;
-    gap: 0 15px;
-  }
-  .posts-section__header--inner {
-    grid-column: 1/-1;
-    margin-bottom: 7px;
-  }
-  .posts-section__title {
-    line-height: 35px;
-  }
-  .posts-section__title--inner {
-    font-size: 24px;
-  }
-  .posts-section__footer {
-    margin-top: 20px;
-  }
-  .posts-section__footer--inner {
-    grid-column: 2/3;
-  }
-  .posts-section__footer .button-white {
-    padding: 13px 30px;
-    width: 100%;
-    font-size: 16px;
-    background-color: #f6f6fa;
-    border: none;
-  }
-}
-.posts-grid {
+.posts-section__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 @media (min-width: 1240px) {
-  .posts-grid--3fr {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .posts-grid--4fr {
+  .posts-section__list {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+.posts-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+@media (min-width: 1240px) {
+  .posts-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .post-preview {
@@ -10439,6 +10445,17 @@ textarea {
   .post-list li::marker {
     font-size: 25px;
   }
+}
+.featured-article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+}
+.featured-article a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 .templates__content {
   display: flex;

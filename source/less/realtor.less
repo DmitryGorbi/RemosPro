@@ -3,6 +3,7 @@
 }
 
 .realtor__wrapper {
+  position: relative;
   display: grid;
   padding: 16px 15px;
   background-color: var(--white);
@@ -10,8 +11,17 @@
   &:hover {
     background-color: var(--extra-light-gray);
     border-bottom-color: #0000;
-    // transition: 0.3s ease;
   }
+
+  & a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+  }
+
+  & a:focus-visible {
+      box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+    }
 }
 
 .realtor__info {
@@ -50,9 +60,11 @@
 }
 
 .realtor__reviews-stars {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 16px max-content;
   align-items: start;
   column-gap: 5px;
+  line-height: 16px;
 }
 
 .realtor__reviews-last {
