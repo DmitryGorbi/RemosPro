@@ -72,6 +72,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
+
+  .experts__list-item:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -87,10 +91,6 @@
   .experts__realtors,
   .experts__agencies {
     padding: 20px 25px;
-  }
-
-  .experts__list-item:not(:last-child) {
-    margin-right: 0;
   }
 
   .experts__link {

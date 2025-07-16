@@ -24,6 +24,10 @@
   }
 }
 
+.expert-card__title {
+
+}
+
 .expert-card__avatar {
   grid-column: 1/2;
   grid-row: 1/2;
@@ -49,5 +53,23 @@
     width: 100%;
     height: 52px;
     border-radius: 5px;
+  }
+}
+
+:is(.experts__list-item) a {
+  &:focus {
+    background-color: #ebebfe;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
+  }
+
+  &:hover {
+    background-color: #efeffa;
+  }
+
+  &:active {
+    background-color: #ebebfe;
   }
 }
