@@ -14,9 +14,9 @@
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Риэлторы в Московской области - услуги, рейтинг, отзывы - Ремос</title>
-    <meta name="description" content="Все риэлторы в Московской области. Список риэлторов. Рейтинг. Отзывы. Выбор услуг. Контактная информация. Объявления." />
+    <meta name="description" content="Ремос - каталог риэлторов в Московской области, рейтинг,  отзывы, выбор услуг, контакты, объявления." />
     <meta property="og:title" content="Риэлторы в Московской области - Рейтинг | Отзывы" />
-    <meta property="og:description" content="Все риэлторы в Московской области. Список риэлторов. Рейтинг. Отзывы. Выбор услуг. Контактная информация. Объявления." />
+    <meta property="og:description" content="Ремос - каталог риэлторов в Московской области, рейтинг,  отзывы, выбор услуг, контакты, объявления." />
     <!-- Нужно сделать какую-то картинку с аватарками -->
     <meta property="og:image" content="/source/img/catalog/og-logo.png" />
     <meta property="og:image:width" content="400" />
@@ -667,22 +667,24 @@
             </div>
           </div>
           <div class="agents-search__item">
-            <label class="visually-hidden" for="specialization">Специализация</label>
+            <label class="visually-hidden" for="realtor__realty__type">Специализация</label>
             <div class="native-select">
-              <select name="specialization" id="specialization">
+              <select name="specialization" id="realtor__realty__type">
                 <option value="">Любая сделка</option>
-                <option value="">Аренда</option>
-                <option value="">Покупка/продажа</option>
+                <option value="">Аренда жилой недвижимости</option>
+                <option value="">Аренда коммерческой недвижимости</option>
+                <option value="">Купля/продажа жилой недвижимости</option>
+                <option value="">Купля/продажа коммерческой недвижимости</option>
               </select>
             </div>
           </div>
           <div class="agents-search__item">
-            <label class="visually-hidden" for="realtor__realty__type">Тип недвижимости</label>
+            <label class="visually-hidden" for="realtor__type">Статус агента</label>
             <div class="native-select">
-              <select name="realtor__realty__type" id="realtor__realty__type">
-                <option value="">Тип недвижимости</option>
-                <option value="">Жилая</option>
-                <option value="">Коммерческая</option>
+              <select name="realtor__type" id="realtor__type">
+                <option value="">Статус риелтора</option>
+                <option value="">Частный</option>
+                <option value="">В агентстве</option>
               </select>
             </div>
           </div>
@@ -709,8 +711,8 @@
                   <p>Частный риелтор</p>
                   <p>5 лет и 1 мес. на Ремос</p>
                 </div>
-                <div class="realtor__info-avatat">
-                  <img src="img/realtors/923c6307d9745d3bc79914533a3d307a.jpg" alt="Риелтор Андрей Меньшиков" />
+                <div class="realtor__avatar realtor__avatar--1 realtor__avatar--userpic">
+                  <!-- <img src="img/realtors/923c6307d9745d3bc79914533a3d307a.jpg" alt="Риелтор Андрей Меньшиков" /> -->
                 </div>
               </div>
               <div class="realtor__reviews">
@@ -734,11 +736,11 @@
               <div class="realtor__info">
                 <div class="realtor__data">
                   <h3>Евгений Домнич</h3>
-                  <p>Бест недвижимость</p>
+                  <p>"ЦЕНТР коммерческой и жилой недвижимости"</p>
                   <p>15 лет и 1 мес. на Ремос</p>
                 </div>
-                <div class="realtor__info-avatat">
-                  <img src="img/realtors/domnich.jpg" alt="Риелтор Евгений Домнич" />
+                <div class="realtor__avatar realtor__avatar--1">
+                  <!-- <img src="img/realtors/domnich.jpg" alt="Риелтор Евгений Домнич" /> -->
                 </div>
               </div>
               <div class="realtor__reviews">
@@ -818,7 +820,6 @@
                   приема-передачи).
                 </li>
               </ol>
-
               <p>Работа через риелтора упрощает процесс покупки или продажи квартиры, экономит время и снижает риски.</p>
             </div>
           </details>

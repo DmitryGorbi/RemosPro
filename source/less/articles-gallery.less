@@ -1,0 +1,37 @@
+.articles-gallery {
+  display: grid;
+  gap: 15px 0;
+}
+
+.articles-gallery__list {
+  display: grid;
+  gap: 10px 0;
+}
+
+.articles-gallery__list-article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px 0;
+  padding: 10px 15px 15px;
+  height: 100%;
+  //   background-color: var(--light-green);
+  border: 1px solid var(--basic-black);
+  border: 1px solid var(--gray);
+
+  
+
+  & a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .articles-gallery__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 15px;
+  }
+}
