@@ -5785,13 +5785,12 @@ textarea {
 .subway-list__item ul li {
   display: flex;
   align-items: center;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
   padding-bottom: 15px;
   line-height: 20px;
 }
 .subway-list__item label {
   flex-grow: 1;
+  padding-left: 15px;
   line-height: 22px;
 }
 .subway-list__title {
@@ -9733,8 +9732,8 @@ textarea {
        column-gap: 20px;
   margin-bottom: 10px;
 }
-.realtors__nav a {
-  line-height: 25px;
+.realtors__nav li {
+  padding: 3px 0;
 }
 @media (min-width: 1240px) {
   .realtors__header {
@@ -9852,21 +9851,17 @@ textarea {
   font-size: 16px;
   line-height: 100%;
 }
-.realtor__info-avatat {
-  width: 65px;
-  height: 65px;
-}
 .realtor__avatar {
   width: 65px;
   height: 65px;
 }
 .realtor__avatar--userpic {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MCA3MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzUiIGN5PSIzNSIgcj0iMzUiIGZpbGw9IiNENkQ2RDYiLz4KPHBhdGggZD0iTTQ2LjA4NSA0My41MjYyTDQwLjMxMiA0Mi4wODI2TDM5LjgyMDcgNDAuMTE3NUM0MS4zNjUzIDM4LjU4OCA0Mi40MjMyIDM2LjQ4NzIgNDIuNzM2NiAzNC4zMzIzQzQzLjU5MjUgMzQuMDkxMiA0NC4yNTU2IDMzLjM1NzMgNDQuMzcwMSAzMi40MzY2TDQ0Ljc0NjggMjkuNDIyN0M0NC44MjY3IDI4Ljc4NjcgNDQuNjMwOCAyOC4xNDMzIDQ0LjIwODggMjcuNjYxQzQzLjk2MTcgMjcuMzc3NyA0My42NDk3IDI3LjE2MzcgNDMuMzA0NyAyNy4wMzI2TDQzLjQ0MzMgMjQuMTk1TDQ0LjAwNyAyMy42Mjk5QzQ0Ljg1NTQgMjIuNzI3MiA0NS41NTkxIDIxLjE3OTYgNDQuMDg4MyAxOC45MzQzQzQyLjk1ODEgMTcuMjA4OSA0MS4wMzgzIDE2LjMzMzQgMzguMzgwMSAxNi4zMzM0QzM3LjMzMTIgMTYuMzMzNCAzNC45MTcxIDE2LjMzMzQgMzIuNjY4OCAxNy44NDMzQzI2LjI0OTEgMTcuOTc3NSAyNS4zNzUxIDIwLjk1OTcgMjUuMzc1MSAyMy44NjgxQzI1LjM3NTEgMjQuNTQ0OCAyNS41Mzk0IDI2LjA2ODMgMjUuNjQ3OSAyNi45ODc1QzI1LjI2MDYgMjcuMTA5NiAyNC45MDk1IDI3LjMzNTYgMjQuNjM1MiAyNy42NDc1QzI0LjIwNTcgMjguMTM0MyAyNC4wMDY4IDI4Ljc4MDggMjQuMDg2NyAyOS40MjQyTDI0LjQ2MzQgMzIuNDM4MUMyNC41ODcgMzMuNDIwNiAyNS4zMzI5IDM0LjE5MzcgMjYuMjc2MyAzNC4zNzc2QzI2LjU4ODIgMzYuNDQ5NiAyNy41OTE4IDM4LjQ4MjUgMjkuMDQ3NSAzOS45ODY0TDI4LjUyMzEgNDIuMDg1NkwyMi43NSA0My41MjkyQzE4Ljk3MDYgNDQuNDcxIDE2LjMzMzUgNDcuODQ5NiAxNi4zMzM1IDUxLjc0NjVDMTYuMzMzNSA1Mi4xNjI1IDE2LjY3MTEgNTIuNSAxNy4wODcgNTIuNUg1MS43NDY3QzUyLjE2MjYgNTIuNSA1Mi41MDAyIDUyLjE1OTUgNTIuNTAwMiA1MS43NDM2QzUyLjUwMDEgNDcuODQ5NiA0OS44NjMgNDQuNDcxIDQ2LjA4NSA0My41MjYyWiIgZmlsbD0iI0YwRjBGMCIvPgo8L3N2Zz4K);
+  background-position: center;
+  background-size: cover;
 }
 .realtor__avatar--1 {
   border-radius: 50%;
-  background-position: center;
-  background-size: cover;
 }
 .realtor__reviews {
   margin-bottom: 3px;
