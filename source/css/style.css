@@ -229,7 +229,20 @@ a {
 :is(.seo-nav ul, .footer, .developer-about, .gk-progress, .card__gk, .catalog__title, .cookies) a:active {
   color: var(--dark-green);
 }
-:is(.seo-nav, .index-nav, .footer, .new-bldg__list .new-offers__image, .new-offer, .bldg-nav, .submenu__list--expert, .subway, .posts-gallery__item, .posts-gallery__item, .articles-gallery, .pagination) a:focus-visible {
+:is(
+    .seo-nav,
+    .index-nav,
+    .footer,
+    .new-bldg__list .new-offers__image,
+    .new-offer,
+    .bldg-nav,
+    .submenu__list--expert,
+    .subway,
+    .posts-gallery__item,
+    .posts-gallery__item,
+    .articles-gallery,
+    .pagination
+  ) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 :is(.new-offers__nav, .breadcrumbs, .offer-properties__title, .footer-links, .media-header__nav) a:hover {
@@ -260,11 +273,12 @@ a {
     .statistics__table,
     .articles-section__list,
     .news-section__list,
-    .posts-section__list
+    .posts-section__list,
+    .offer-properties
   ) a:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
-:is(.breadcrumbs, .quick-links, .developer-about, .gk-progress, .catalog-list__header, .offer-properties, .seller, .offer-address) a:focus-visible {
+:is(.breadcrumbs, .quick-links, .developer-about, .gk-progress, .catalog-list__header, .seller, .offer-address) a:focus-visible {
   border-radius: 5px;
   box-shadow: 0 0 0 1px #ffffff, 0 0 1px 2px #74d099, 0 0 1px 2px #20a052;
 }
@@ -446,7 +460,7 @@ a {
     font-size: 14px;
   }
 }
-:is(.catalog-menu, .card-image__wrapper, .offer-price, .journal__media-footer, .agents-search__item) button:focus-visible {
+:is(.catalog-menu, .card-image__wrapper, .offer-price, .journal__media-footer, .agents-search__item, .offer-controls__wrapper) button:focus-visible {
   box-shadow: 0 0 0 1px #ffffff, 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
 }
 .experts__realtors,
@@ -4378,7 +4392,7 @@ textarea {
     margin-top: 10px;
   }
   .offer-properties__title {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     font-size: 21px;
   }
   .offer-properties__subway {
@@ -5921,7 +5935,7 @@ textarea {
 }
 @media (min-width: 1240px) {
   .selected-properties > .button {
-    padding: 3px 8px 1px 8px;
+    padding: 0 8px;
   }
   .selected-properties--filter {
     margin-top: 10px;
@@ -5995,8 +6009,10 @@ textarea {
 }
 .filter-add__check-list li {
   display: flex;
-  gap: 0 10px;
   align-items: center;
+}
+.filter-add__check-list li label {
+  padding-left: 10px;
 }
 .filter-add__selected {
   margin-top: 10px;
