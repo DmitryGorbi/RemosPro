@@ -1,4 +1,6 @@
 .doc__header {
+  margin-bottom: 20px;
+
   & h1 {
     margin-bottom: 15px;
   }
@@ -42,7 +44,6 @@
 }
 
 .doc__header-img {
-  margin-bottom: 20px;
   height: 170px;
   border-radius: 7px;
 }
@@ -51,6 +52,7 @@
 .doc__body-picture {
   & img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 }
@@ -103,6 +105,16 @@
 
 .doc__related-articles {
   margin-top: 30px;
+}
+
+.doc__upd {
+  margin-top: 15px;
+  // font-size: 14px;
+
+  & p {
+    text-decoration: underline 2px;
+    text-underline-offset: 5px;
+  }
 }
 
 @media (min-width: @tablet-width) {

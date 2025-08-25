@@ -1,7 +1,12 @@
 .posts-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .posts-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: @desktop-width) {
