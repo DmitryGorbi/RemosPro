@@ -1,13 +1,11 @@
 .journal-nav {
-  & ul {
-    display: flex;
-    column-gap: 10px;
-    margin: 0 -15px;
-    padding: 0 15px;
-    width: 100vw;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
+  display: flex;
+  column-gap: 10px;
+  margin: 0 -15px;
+  padding: 0 15px;
+  width: 100vw;
+  overflow-x: scroll;
+  white-space: nowrap;
 }
 
 .journal-nav__link {
@@ -38,23 +36,19 @@
 
 @media (min-width: @tablet-width) {
   .journal-nav {
-    & ul {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .journal-nav {
-    & ul {
-      display: grid;
-      row-gap: 10px;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-    }
+    display: grid;
+    row-gap: 10px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .journal-nav__link {

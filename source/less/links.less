@@ -15,7 +15,7 @@ a {
 
 // green links
 
-:is(.seo-nav ul, .footer, .developer-about, .gk-progress, .card__gk, .catalog__title, .cookies) a {
+:is(.seo-nav ul, .footer, .developer-about, .gk-progress, .card__gk, .catalog__title, .cookies, .content-box__header) a {
   color: var(--basic-green);
 
   &:hover {
@@ -92,7 +92,8 @@ a {
     .news-section__list,
     .posts-section__list,
     .offer-properties,
-    .offer__title
+    .offer__title,
+    .doc__header-action
   )
   a {
   &:focus-visible {
@@ -107,7 +108,7 @@ a {
   }
 }
 
-:is(.index-nav, .new-bldg__list) a {
+:is(.index-nav, .apartment-options) a {
   background-color: var(--backgound-gray);
 
   &:hover {
@@ -126,6 +127,7 @@ a {
 // links like button
 
 .link-button {
+  display: block;
   padding: 13px 0;
   color: var(--white);
   background-color: var(--basic-green);

@@ -7,8 +7,16 @@
   }
 }
 
-.journal__media-nav {
+.journal__aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   margin-bottom: 15px;
+}
+
+.journal__aside-ads {
+  height: 100px;
+  background-color: red;
 }
 
 .journal__ads {
@@ -85,14 +93,19 @@
     }
   }
 
-  .journal__media-nav ul {
-    position: sticky;
-    top: 5px;
+  .journal__aside-wrapper {
+  position: sticky;
+  top: 3px;
+  margin-bottom: 0;
+}
+
+  .journal__aside-ads {
+    height: 300px;
   }
 
-  .journal__media-content {
+  .journal__media-wrapper {
     display: grid;
-    grid-template-columns: 250px 950px;
+    grid-template-columns: 250px 930px;
     column-gap: 15px;
     margin: 0 auto;
     width: 1200px;

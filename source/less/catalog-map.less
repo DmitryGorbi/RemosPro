@@ -1,0 +1,32 @@
+.catalog-map__wrapper {
+  border-top: 1px solid var(--light-gray);
+}
+
+.catalog-map__body {
+  border-right: 1px solid var(--light-gray);
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-map {
+    height: 100%;
+  }
+
+  .catalog-map__wrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    // grid-template-columns: 648px 1fr;
+    height: calc(100% - 200px);
+    background-color: var(--extra-light-gray);
+  }
+
+  .catalog-map__header {
+    margin-bottom: 15px;
+  }
+
+  .catalog-map__list {
+    padding: 5px;
+    height: 100%;
+  }
+}

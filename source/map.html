@@ -13,7 +13,7 @@
     <link rel="preload" href="fonts/Roboto-500.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Десктопный каталог</title>
+    <title>Карта</title>
     <meta
       name="description"
       content="★ Продажа квартир в Москве. Объявления от агентств и собственников. Подбор по параметрам. Удобная сортировка. Просмотр на карте. Полная информация об объектах ➔ Remos - сервис поиска недвижимости в Москве"
@@ -32,7 +32,7 @@
     <meta property="og:locale" content="ru_RU" />
   </head>
 
-  <body class="page__body layout">
+  <body class="page__body layout layout--map">
     <header class="page-header wrapper-content">
       <div class="page-header__wrapper">
         <nav class="navigation" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
@@ -530,7 +530,7 @@
         </nav>
       </div>
       <div class="page-header__border"></div>
-      <div class="page-header__footer">
+      <div class="page-header__footer visually-hidden">
         <nav class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
           <ol>
             <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
@@ -560,13 +560,10 @@
         </button>
       </div>
     </header>
-    <main id="main" class="catalog">
-      <header class="catalog__header wrapper-content">
-        <div class="catalog__title">
-          <h1 class="catalog-caption">Продажа квартир в Московской области</h1>
-          <p>Найдено 45 545 объявлений</p>
-        </div>
-        <section class="catalog__filter main-search">
+    <main id="main" class="catalog-map">
+      <div class="catalog-map__header wrapper-content">
+        <h1 class="visually-hidden">Продажа квартир в Московской области на карте</h1>
+        <section class="catalog-map__filter main-search">
           <h2 class="visually-hidden">Фильтр поиска недвижимости</h2>
           <form class="filter main-search__form" action="https://echo.htmlacademy.ru/courses">
             <div class="filter__content">
@@ -2483,2177 +2480,694 @@
             <button class="button" type="button">Очистить</button>
           </section>
         </section>
-        <aside class="catalog__links quick-links">
-          <h3 class="visually-hidden-small-mobile">Может подойти</h3>
-          <div class="quick-links__wrapper">
-            <ul>
-              <li>
-                <a href="#">вторичка</a>
-                <span></span>
-                <span>99 000</span>
-              </li>
-              <li>
-                <a href="#">новостройки</a>
-                <span></span>
-                <span>50 000</span>
-              </li>
-              <li>
-                <a href="#">в завидовском заповеднике</a>
-                <span></span>
-                <span>11 000</span>
-              </li>
-              <li>
-                <a href="#">евротрешки</a>
-                <span></span>
-                <span>2 000</span>
-              </li>
-              <li>
-                <a href="#">ближайшее подмосковье</a>
-                <span></span>
-                <span>12 500</span>
-              </li>
-              <li>
-                <a href="#">2-комнатные</a>
-                <span></span>
-                <span>34000</span>
-              </li>
-              <li>
-                <a href="#">вторичка</a>
-                <span></span>
-                <span>99 000</span>
-              </li>
-              <li>
-                <a href="#">новостройки</a>
-                <span></span>
-                <span>50 000</span>
-              </li>
-              <li>
-                <a href="#">студии</a>
-                <span></span>
-                <span>11 000</span>
-              </li>
-              <li>
-                <a href="#">евротрешки</a>
-                <span></span>
-                <span>2 000</span>
-              </li>
-              <li>
-                <a href="#">ближайшее подмосковье</a>
-                <span></span>
-                <span>12 500</span>
-              </li>
-              <li>
-                <a href="#">2-комнатные</a>
-                <span></span>
-                <span>34000</span>
-              </li>
-            </ul>
-            <div class="quick-links__more">
-              <button class="button" type="button">
-                <span>Ещё</span>
-                <svg width="18px" height="18px" aria-hidden="true">
-                  <use xlink:href="img/icons/sprite.svg#arrow"></use>
+      </div>
+      <div class="catalog-map__wrapper">
+        <div class="catalog-map__body content-box">
+          <div>
+            <div class="content-box__header">
+              <h2 class="content-box__title">4 567 объявлений в <a href="#">ЖК Квартал Метроном</a></h2>
+              <p>Квартиры от 6 454 000 &#x20bd;</p>
+              <p>Завершение строительства 2кв 2026</p>
+              <div class="content-box__header-dev">
+                <p>Застройщик</p>
+                <svg class="v-h-m-t" width="150" height="10" viewBox="0 0 150 10" fill="red" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M0.53125 0.182129H16.0259V2.50585H3.87576V3.7968H13.0045C15.4442 3.7968 16.8984 4.90549 16.8984 6.77357C16.8984 8.64166 15.4604 9.75036 13.0045 9.75036H0.53125V0.182129ZM3.87576 6.05976V7.51777H12.3905C13.1338 7.51777 13.4731 7.30514 13.4731 6.78876C13.4731 6.28757 13.1338 6.05976 12.3905 6.05976H3.87576Z"
+                    ></path>
+                    <path
+                      d="M18.8535 0.182129H30.1472C33.2656 0.182129 35.1236 1.54902 35.1236 3.85755C35.1236 6.16607 33.2817 7.53296 30.1472 7.53296H22.3434V9.76555H18.8535V0.182129ZM22.3596 2.65772V5.08775H29.614C30.9875 5.08775 31.5852 4.72324 31.5852 3.88792C31.5852 3.02222 30.9875 2.65772 29.614 2.65772H22.3596Z"
+                    ></path>
+                    <path d="M42.0891 6.95583L34.8184 0.182129H39.0354L44.1572 4.89031L48.7135 0.182129H52.8336L43.5593 9.76555H39.3424L42.0891 6.95583Z"></path>
+                    <path
+                      d="M61.3797 0C66.3883 0 69.3613 1.12389 70.1207 3.26535L66.3561 3.96398C65.9198 2.93122 64.3849 2.4604 61.3959 2.4604C57.3081 2.4604 55.4985 3.21978 55.4985 4.98155C55.4985 6.72814 57.2919 7.50271 61.3959 7.50271C64.4657 7.50271 66.0006 7.0167 66.3723 5.93837L70.0883 6.60664C69.2805 8.83922 66.4045 9.96311 61.3959 9.96311C55.2884 9.96311 51.9278 8.18615 51.9278 4.98155C51.9116 1.76177 55.2723 0 61.3797 0Z"
+                    ></path>
+                    <path d="M71.7207 0.182129H75.2106V3.64492H85.8743V0.182129H89.3804V9.76555H85.8743V6.12051H75.2106V9.76555H71.7207V0.182129Z"></path>
+                    <path d="M91.9492 0.182129H95.4392V6.71283L105.747 0.182129H109.254V9.76555H105.747V3.23485L95.4392 9.76555H91.9492V0.182129Z"></path>
+                    <path d="M111.709 0.182129H115.199V4.17649L123.537 0.182129H129.224L119.594 4.69287L129.466 9.76555H123.375L115.199 5.55856V9.76555H111.709V0.182129Z"></path>
+                    <path
+                      d="M139.306 2.55141L142.021 5.83194H136.592L139.306 2.55141ZM137.561 0.182129L129.289 9.76555H133.344L134.734 8.0949H143.894L145.285 9.76555H149.469L141.197 0.182129H137.561Z"
+                    ></path>
+                  </g>
                 </svg>
-              </button>
-            </div>
-          </div>
-        </aside>
-      </header>
-      <section class="catalog__body catalog-list wrapper-content">
-        <h2 class="visually-hidden">Список подходящих объявлений</h2>
-        <header class="catalog-list__header">
-          <button class="button catalog-list__subscribe" type="button">
-            <span>Подписаться на новые</span>
-            <svg width="21" height="21" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#mail__icon__large"></use>
-            </svg>
-          </button>
-          <nav class="catalog-list__sort sort">
-            <h3 class="visually-hidden">Сортировать объявления</h3>
-            <button class="button sort__control" type="button" aria-expanded="false" aria-controls="sort__list">
-              <span>По умолчанию м²</span>
-              <svg width="21" height="21" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#sort"></use>
-              </svg>
-            </button>
-            <ul id="sort__list" class="sort__list">
-              <li class="sort__list-item">
-                <a href="#">По умолчанию</a>
-              </li>
-              <li class="sort__list-item">
-                <a href="#">Новые предложения</a>
-              </li>
-              <li class="sort__list-item">
-                <a href="#">По возрастанию цены</a>
-              </li>
-              <li class="sort__list-item">
-                <a href="#">По убыванию цены</a>
-              </li>
-              <li class="sort__list-item">
-                <a href="#">По возрастанию площади</a>
-              </li>
-              <li class="sort__list-item">
-                <a href="#">По убыванию площади</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="catalog-list__map">
-            <a href="#">
-              <span>На карте</span>
-              <svg width="21" height="21" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#on__map__large"></use>
-              </svg>
-            </a>
-          </div>
-        </header>
-        <div class="catalog-list__wrapper">
-          <div class="catalog-list__empty">
-            <div>
-              <!-- <p>Нет актуальных объявлений по вашему запросу</p> -->
-              <p>Поиск не дал результратов</p>
-              <!-- <p>К сожалению, мы не смогли найти актуальных объявлений по вашему запросу</p> -->
-              <p>Попробуйте изменить параметры в фильтре</p>
-            </div>
-          </div>
-
-          <div class="catalog-list__near">
-            <p>Объявления рядом</p>
-          </div>
-
-          <!-- новостройка платная c Топ-->
-
-          <article class="catalog-list__item offer delete-class shange-grid-link">
-            <div class="offer__wrapper">
-              <div class="offer__content offer-properties">
-                <h3 class="offer-properties__title">
-                  <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
-                    <span>4-комн. квартира, 90 м², 8/8 этаж</span>
-                    <span class="link-click-area"></span>
-                  </a>
-                </h3>
-                <address class="offer-properties__address">
-                  <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                </address>
-                <p class="offer-properties__subway subway">
-                  <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
-                    <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                  </svg>
-                  <span class="visually-hidden">метро </span>
-                  <a href="#" target="_blank" rel="noopener noreferrer">Бульвар Рокосовского</a>
-                  <span>~ 8 мин.</span>
-                  <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                </p>
-                <p class="offer-properties__gk">
-                  <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer">ЖК «Сиреневый бульвар»</a>
-                </p>
-                <section class="offer-properties__benefits offer-qualities">
-                  <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                  <ul>
-                    <!-- <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li> -->
-                    <li>Этажей: 2</li>
-                    <li>Жилая: 30,2 м²</li>
-                    <li>Комнат: 5</li>
-                    <li>Кухня: 8,2 м²</li>
-                    <li>Этаж: 4/12</li>
-                    <li>С ремонтом</li>
-                    <li>Участок 6.6 сот</li>
-                    <li>ИЖС</li>
-                  </ul>
-                </section>
-                <section class="offer-properties__price offer-price">
-                  <h4 class="visually-hidden">Цена в объявлении</h4>
-                  <div class="offer-price__value">
-                    <data value="16700000">166 700 000 &#x20bd;</data>
-                    <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                  </div>
-                  <div class="offer-price__history">
-                    <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                      <svg width="35" height="35" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                      </svg>
-                      <span class="label-popup">Показать историю цены</span>
-                    </button>
-                    <section id="price__chart" class="offer-price__chart price-chart">
-                      <h5>История цены объявления</h5>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                      <ul>
-                        <li>
-                          <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                          <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                        </li>
-                        <li>
-                          <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                          <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                        </li>
-                        <li>
-                          <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                          <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </section>
-                <p class="offer-properties__description">
-                  Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                  кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                </p>
-              </div>
-              <section class="offer__pictures offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--paid">
-                  <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer" tabindex="-1"></a>
-                  <div class="offer-images__main slider">
-                    <div class="offer-images__large">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
-                      </picture>
-                    </div>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <div>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__pictures-footer">
-                  <div class="top-icon">
-                    <p class="visually-hidden">К объявлению применена услуга</p>
-                    <span>Топ</span>
-                    <svg width="23" height="24" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
-                    </svg>
-                  </div>
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-              <div class="offer__aside">
-                <section class="offer__seller seller">
-                  <h4 class="visually-hidden">Владелец объявления</h4>
-                  <div class="seller__wrapper">
-                    <div class="seller__info">
-                      <p class="seller__type">Агентство недвижимости</p>
-                      <p class="seller__name">
-                        <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                      </p>
-                    </div>
-                    <div class="seller__avatar">
-                      <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                    </div>
-                  </div>
-                  <p class="seller__offers">
-                    <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                  </p>
-                  <div class="seller__phone">
-                    <a href="tel:">Контакты</a>
-                  </div>
-                </section>
-                <div class="offer__actions offer-controls">
-                  <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                    <svg width="25" height="25" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                    </svg>
-                  </button>
-                  <div class="offer-controls__wrapper">
-                    <ul>
-                      <li>
-                        <button class="button offer-controls__item icon-color" type="button">
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                          </svg>
-                          <span class="label-popup">Добавить взбранное</span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                          </svg>
-                          <span class="label-popup">Показать а карте</span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                          </svg>
-                          <span class="label-popup">Добавить заметку</span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="button offer-controls__item" type="button">
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                          </svg>
-                          <span class="label-popup">Скрыть объявление</span>
-                        </button>
-                      </li>
-                      <li>
-                        <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                          <svg width="20" height="20" aria-hidden="true">
-                            <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                          </svg>
-                          <span class="label-popup">Пожаловаться</span>
-                        </button>
-                      </li>
-                    </ul>
-                    <button class="button button-close" type="button">
-                      <span class="visually-hidden">Закрыть окно</span>
-                    </button>
-                  </div>
-                </div>
               </div>
             </div>
-          </article>
-
-          <aside class="catalog__ads">
-            <!-- Yandex.RTB R-A-429460-18 -->
-            <!-- <div id="yandex_rtb_R-A-429460-18"></div> -->
-            <!-- <script>
-              window.yaContextCb.push(() => {
-                Ya.Context.AdvManager.render({
-                  blockId: "R-A-429460-18",
-                  renderTo: "yandex_rtb_R-A-429460-18",
-                });
-              });
-            </script> -->
-
-            <!-- Реклама застройщика -->
-
-            <div class="edv-promo-catalog">
-              <article class="catalog-list__item offer delete-class">
-                <div class="offer__wrapper">
-                  <section class="offer__pictures offer-images">
-                    <h4 class="visually-hidden">Фотографии объявления</h4>
-                    <div class="offer-images__wrapper offer-images__wrapper--free">
-                      <div class="offer-images__main slider">
-                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                          <picture>
-                            <img src="img/adv/aviator.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                          </picture>
-                        </a>
-                      </div>
-                    </div>
-                  </section>
-                  <section class="offer__content offer__content--adv">
-                    <section class="offer-properties">
+            <ul class="cards-list">
+              <li>
+                <article class="map-card">
+                  <div class="map-card__wrapper">
+                    <div class="map-card__content offer-properties offer-properties--map">
                       <h3 class="offer-properties__title">
-                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">ЖК квартал «Авиатор»</a>
+                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
+                          <span
+                            >4-комн. квартира
+                            <span class="separator">•</span>
+                            <span>90 м²</span>
+                            <span class="separator">•</span>
+                            <span>8/8 этаж</span>
+                          </span>
+                          <span class="link-click-area"></span>
+                        </a>
                       </h3>
-                      <address class="offer-properties__address">
-                        <a href="#" target="_blank" rel="noopener noreferrer">Новосибирск, ул. Аэропорт</a>
-                      </address>
-                      <p class="edv-promo-catalog__address">квартал вблизи Красного проспекта</p>
-                      <!-- <p class="offer-properties__subway subway">
-                        <svg class="subway__icon-line-2" width="18" height="13" aria-hidden="true">
+                      <address class="offer-properties__address">Москва, 1-й Иртышский пр-д, д. 1</address>
+                      <p class="offer-properties__subway subway">
+                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
                           <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
                         </svg>
                         <span class="visually-hidden">метро </span>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Войковская</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Бульвар Рокосовского</a>
                         <span>~ 8 мин.</span>
                         <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                      </p> -->
-                      <p class="edv-promo-catalog__price">Квартиры от 9,9 млн руб</p>
-                      <p class="offer-properties__description">
-                        <span>Реклама.</span> ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф
                       </p>
+                      <p class="offer-properties__gk">ЖК «Квартал Метроном»</p>
+                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
+                        <ul>
+                          <li>От застройщика</li>
+                          <li class="offer-qualities__dev">Брусника</li>
+                          <li>Скидка 28%</li>
+                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
+                          <!-- <li>ИЖС</li> -->
+                        </ul>
+                      </section>
+                      <section class="offer-properties__price offer-price">
+                        <h4 class="visually-hidden">Цена в объявлении</h4>
+                        <div class="offer-price__value">
+                          <data value="16700000">166 700 000 &#x20bd;</data>
+                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
+                        </div>
+                        <div class="offer-price__history">
+                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
+                            <svg width="35" height="35" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
+                            </svg>
+                            <span class="label-popup">Показать историю цены</span>
+                          </button>
+                          <section id="price__chart" class="offer-price__chart price-chart">
+                            <h5>История цены объявления</h5>
+                            <button class="button button-close" type="button">
+                              <span class="visually-hidden">Закрыть окно</span>
+                            </button>
+                            <ul>
+                              <li>
+                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                      </section>
+                    </div>
+                    <section class="map-card__pictures offer-images">
+                      <h4 class="visually-hidden">Фотографии объявления</h4>
+                      <div class="offer-images__wrapper offer-images__wrapper--paid">
+                        <a
+                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
+                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          tabindex="-1"
+                        ></a>
+                        <div class="offer-images__main slider">
+                          <div class="offer-images__large">
+                            <picture>
+                              <img src="img/adv/metronom_1.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
+                            </picture>
+                          </div>
+                          <span class="offer-images__camera"></span>
+                          <button class="button button-circle button-circle--dark icon-color" type="button">
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                            </svg>
+                            <span class="visually-hidden">В избранное</span>
+                          </button>
+                          <button class="button slider__control slider__control--left" type="button">
+                            <span class="visually-hidden">Предыдущее изображение</span>
+                            <span></span>
+                          </button>
+                          <button class="button slider__control slider__control--right" type="button">
+                            <span class="visually-hidden">Следующее изображение</span>
+                            <span></span>
+                          </button>
+                          <div class="offer-images__counter">
+                            <span class="visually-hidden">Нумерация фотографий</span>
+                            <span>2/15</span>
+                          </div>
+                        </div>
+                        <div class="offer-images__thumbnails">
+                          <div>
+                            <picture>
+                              <img src="img/adv/metronom_2.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
+                            </picture>
+                            <picture>
+                              <img src="img/adv/metronom_3.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
+                            </picture>
+                            <picture>
+                              <img src="img/adv/metronom_4.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
                     </section>
-                    <div class="offer__aside offer__aside--adv">
-                      <section class="offer__seller seller">
-                        <div class="seller__wrapper">
-                          <div class="seller__info">
-                            <p class="seller__type">Застройщик</p>
-                            <p class="seller__name">
-                              <svg class="" width="150" height="10" viewBox="0 0 150 10" fill="red" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                  <path
-                                    d="M0.53125 0.182129H16.0259V2.50585H3.87576V3.7968H13.0045C15.4442 3.7968 16.8984 4.90549 16.8984 6.77357C16.8984 8.64166 15.4604 9.75036 13.0045 9.75036H0.53125V0.182129ZM3.87576 6.05976V7.51777H12.3905C13.1338 7.51777 13.4731 7.30514 13.4731 6.78876C13.4731 6.28757 13.1338 6.05976 12.3905 6.05976H3.87576Z"
-                                  ></path>
-                                  <path
-                                    d="M18.8535 0.182129H30.1472C33.2656 0.182129 35.1236 1.54902 35.1236 3.85755C35.1236 6.16607 33.2817 7.53296 30.1472 7.53296H22.3434V9.76555H18.8535V0.182129ZM22.3596 2.65772V5.08775H29.614C30.9875 5.08775 31.5852 4.72324 31.5852 3.88792C31.5852 3.02222 30.9875 2.65772 29.614 2.65772H22.3596Z"
-                                  ></path>
-                                  <path d="M42.0891 6.95583L34.8184 0.182129H39.0354L44.1572 4.89031L48.7135 0.182129H52.8336L43.5593 9.76555H39.3424L42.0891 6.95583Z"></path>
-                                  <path
-                                    d="M61.3797 0C66.3883 0 69.3613 1.12389 70.1207 3.26535L66.3561 3.96398C65.9198 2.93122 64.3849 2.4604 61.3959 2.4604C57.3081 2.4604 55.4985 3.21978 55.4985 4.98155C55.4985 6.72814 57.2919 7.50271 61.3959 7.50271C64.4657 7.50271 66.0006 7.0167 66.3723 5.93837L70.0883 6.60664C69.2805 8.83922 66.4045 9.96311 61.3959 9.96311C55.2884 9.96311 51.9278 8.18615 51.9278 4.98155C51.9116 1.76177 55.2723 0 61.3797 0Z"
-                                  ></path>
-                                  <path d="M71.7207 0.182129H75.2106V3.64492H85.8743V0.182129H89.3804V9.76555H85.8743V6.12051H75.2106V9.76555H71.7207V0.182129Z"></path>
-                                  <path d="M91.9492 0.182129H95.4392V6.71283L105.747 0.182129H109.254V9.76555H105.747V3.23485L95.4392 9.76555H91.9492V0.182129Z"></path>
-                                  <path d="M111.709 0.182129H115.199V4.17649L123.537 0.182129H129.224L119.594 4.69287L129.466 9.76555H123.375L115.199 5.55856V9.76555H111.709V0.182129Z"></path>
-                                  <path
-                                    d="M139.306 2.55141L142.021 5.83194H136.592L139.306 2.55141ZM137.561 0.182129L129.289 9.76555H133.344L134.734 8.0949H143.894L145.285 9.76555H149.469L141.197 0.182129H137.561Z"
-                                  ></path>
-                                </g>
+                    <div class="map-card__phone">
+                      <a href="tel:">Контакты</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="map-card">
+                  <div class="map-card__wrapper">
+                    <section class="map-card__pictures offer-images">
+                      <h4 class="visually-hidden">Фотографии объявления</h4>
+                      <div class="offer-images__wrapper offer-images__wrapper--free">
+                        <div class="offer-images__main slider">
+                          <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
+                            <picture>
+                              <img src="img/adv/aviator.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
+                            </picture>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="map-card__content offer-properties offer-properties--map offer__content--adv">
+                      <section class="offer-properties">
+                        <h3 class="offer-properties__title">
+                          <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">ЖК квартал «Авиатор»</a>
+                        </h3>
+                        <address class="offer-properties__address">
+                          <a href="#" target="_blank" rel="noopener noreferrer">Новосибирск, ул. Аэропорт</a>
+                        </address>
+                        <p class="edv-promo-catalog__address">квартал вблизи Красного проспекта</p>
+                        <p class="edv-promo-catalog__price">Квартиры от 9,9 млн руб</p>
+                        <p class="offer-properties__description">
+                          <span>Реклама.</span> ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф
+                        </p>
+                      </section>
+                      <div class="offer__aside offer__aside--adv">
+                        <section class="offer__seller seller">
+                          <div class="seller__wrapper">
+                            <div class="seller__info">
+                              <p class="seller__type">Застройщик</p>
+                              <p class="seller__name">
+                                <svg class="" width="150" height="10" viewBox="0 0 150 10" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                  <g>
+                                    <path
+                                      d="M0.53125 0.182129H16.0259V2.50585H3.87576V3.7968H13.0045C15.4442 3.7968 16.8984 4.90549 16.8984 6.77357C16.8984 8.64166 15.4604 9.75036 13.0045 9.75036H0.53125V0.182129ZM3.87576 6.05976V7.51777H12.3905C13.1338 7.51777 13.4731 7.30514 13.4731 6.78876C13.4731 6.28757 13.1338 6.05976 12.3905 6.05976H3.87576Z"
+                                    ></path>
+                                    <path
+                                      d="M18.8535 0.182129H30.1472C33.2656 0.182129 35.1236 1.54902 35.1236 3.85755C35.1236 6.16607 33.2817 7.53296 30.1472 7.53296H22.3434V9.76555H18.8535V0.182129ZM22.3596 2.65772V5.08775H29.614C30.9875 5.08775 31.5852 4.72324 31.5852 3.88792C31.5852 3.02222 30.9875 2.65772 29.614 2.65772H22.3596Z"
+                                    ></path>
+                                    <path d="M42.0891 6.95583L34.8184 0.182129H39.0354L44.1572 4.89031L48.7135 0.182129H52.8336L43.5593 9.76555H39.3424L42.0891 6.95583Z"></path>
+                                    <path
+                                      d="M61.3797 0C66.3883 0 69.3613 1.12389 70.1207 3.26535L66.3561 3.96398C65.9198 2.93122 64.3849 2.4604 61.3959 2.4604C57.3081 2.4604 55.4985 3.21978 55.4985 4.98155C55.4985 6.72814 57.2919 7.50271 61.3959 7.50271C64.4657 7.50271 66.0006 7.0167 66.3723 5.93837L70.0883 6.60664C69.2805 8.83922 66.4045 9.96311 61.3959 9.96311C55.2884 9.96311 51.9278 8.18615 51.9278 4.98155C51.9116 1.76177 55.2723 0 61.3797 0Z"
+                                    ></path>
+                                    <path d="M71.7207 0.182129H75.2106V3.64492H85.8743V0.182129H89.3804V9.76555H85.8743V6.12051H75.2106V9.76555H71.7207V0.182129Z"></path>
+                                    <path d="M91.9492 0.182129H95.4392V6.71283L105.747 0.182129H109.254V9.76555H105.747V3.23485L95.4392 9.76555H91.9492V0.182129Z"></path>
+                                    <path d="M111.709 0.182129H115.199V4.17649L123.537 0.182129H129.224L119.594 4.69287L129.466 9.76555H123.375L115.199 5.55856V9.76555H111.709V0.182129Z"></path>
+                                    <path
+                                      d="M139.306 2.55141L142.021 5.83194H136.592L139.306 2.55141ZM137.561 0.182129L129.289 9.76555H133.344L134.734 8.0949H143.894L145.285 9.76555H149.469L141.197 0.182129H137.561Z"
+                                    ></path>
+                                  </g>
+                                </svg>
+                              </p>
+                            </div>
+                            <div class="seller__avatar">
+                              <svg width="40" height="40" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
+                                  fill="#EE3D24"
+                                ></path>
+                                <path
+                                  d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
+                                  fill="#EE3D24"
+                                ></path>
                               </svg>
-
-                              <!-- <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Брусника</a> -->
-                            </p>
+                            </div>
                           </div>
-                          <div class="seller__avatar">
-                            <!-- <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" /> -->
-                            <svg width="60" height="60" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                                fill="#EE3D24"
-                              />
-                              <path
-                                d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                                fill="#EE3D24"
-                              />
+                          <div class="seller__phone">
+                            <a href="#">Узнать подробности</a>
+                          </div>
+                        </section>
+                      </div>
+                    </section>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="map-card">
+                  <div class="map-card__wrapper">
+                    <div class="map-card__content offer-properties offer-properties--map">
+                      <h3 class="offer-properties__title">
+                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
+                          <span
+                            >4-комн. квартира
+                            <span class="separator">•</span>
+                            <span>90 м²</span>
+                            <span class="separator">•</span>
+                            <span>8/8 этаж</span>
+                          </span>
+                          <span class="link-click-area"></span>
+                        </a>
+                      </h3>
+                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
+                      <p class="offer-properties__subway subway">
+                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
+                        </svg>
+                        <span class="visually-hidden">метро </span>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Павелецкая</a>
+                        <span>~ 8 мин.</span>
+                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+                      </p>
+                      <p class="offer-properties__gk">ЖК «Дом А»</p>
+                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
+                        <ul>
+                          <li>От застройщика</li>
+                          <li class="offer-qualities__dev">Брусника</li>
+                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
+                          <!-- <li>С ремонтом</li> -->
+                          <!-- <li>ИЖС</li> -->
+                        </ul>
+                      </section>
+                      <section class="offer-properties__price offer-price">
+                        <h4 class="visually-hidden">Цена в объявлении</h4>
+                        <div class="offer-price__value">
+                          <data value="16700000">166 700 000 &#x20bd;</data>
+                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
+                        </div>
+                        <div class="offer-price__history">
+                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
+                            <svg width="35" height="35" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
                             </svg>
+                            <span class="label-popup">Показать историю цены</span>
+                          </button>
+                          <section id="price__chart" class="offer-price__chart price-chart">
+                            <h5>История цены объявления</h5>
+                            <button class="button button-close" type="button">
+                              <span class="visually-hidden">Закрыть окно</span>
+                            </button>
+                            <ul>
+                              <li>
+                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                      </section>
+                    </div>
+                    <section class="map-card__pictures offer-images">
+                      <h4 class="visually-hidden">Фотографии объявления</h4>
+                      <div class="offer-images__wrapper offer-images__wrapper--paid">
+                        <a
+                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
+                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          tabindex="-1"
+                        ></a>
+                        <div class="offer-images__main slider">
+                          <div class="offer-images__large">
+                            <picture>
+                              <img src="img/adv/doma_1.jpg" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
+                            </picture>
+                          </div>
+                          <span class="offer-images__camera"></span>
+                          <button class="button button-circle button-circle--dark icon-color" type="button">
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
+                            </svg>
+                            <span class="visually-hidden">В избранное</span>
+                          </button>
+                          <button class="button slider__control slider__control--left" type="button">
+                            <span class="visually-hidden">Предыдущее изображение</span>
+                            <span></span>
+                          </button>
+                          <button class="button slider__control slider__control--right" type="button">
+                            <span class="visually-hidden">Следующее изображение</span>
+                            <span></span>
+                          </button>
+                          <div class="offer-images__counter">
+                            <span class="visually-hidden">Нумерация фотографий</span>
+                            <span>2/15</span>
                           </div>
                         </div>
-                        <div class="seller__phone">
-                          <a href="#">Узнать подробности</a>
+                        <div class="offer-images__thumbnails">
+                          <div>
+                            <picture>
+                              <img src="img/adv/doma_2.jpg" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
+                            </picture>
+                            <picture>
+                              <img src="img/adv/doma_3.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
+                            </picture>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <div class="map-card__phone">
+                      <a href="tel:">Контакты</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="map-card">
+                  <div class="map-card__wrapper">
+                    <div class="map-card__content offer-properties offer-properties--map">
+                      <h3 class="offer-properties__title">
+                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
+                          <span
+                            >4-комн. квартира
+                            <span class="separator">•</span>
+                            <span>90 м²</span>
+                            <span class="separator">•</span>
+                            <span>8/8 этаж</span>
+                          </span>
+                          <span class="link-click-area"></span>
+                        </a>
+                      </h3>
+                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
+                      <p class="offer-properties__subway subway">
+                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
+                        </svg>
+                        <span class="visually-hidden">метро </span>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Фонвизинская</a>
+                        <span>~ 8 мин.</span>
+                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+                      </p>
+                      <p class="offer-properties__gk">ЖК «МОНС»</p>
+                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
+                        <ul>
+                          <li>От застройщика</li>
+                          <li class="offer-qualities__dev">Брусника</li>
+                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
+                          <!-- <li>С ремонтом</li> -->
+                          <!-- <li>ИЖС</li> -->
+                        </ul>
+                      </section>
+                      <section class="offer-properties__price offer-price">
+                        <h4 class="visually-hidden">Цена в объявлении</h4>
+                        <div class="offer-price__value">
+                          <data value="16700000">166 700 000 &#x20bd;</data>
+                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
+                        </div>
+                        <div class="offer-price__history">
+                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
+                            <svg width="35" height="35" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
+                            </svg>
+                            <span class="label-popup">Показать историю цены</span>
+                          </button>
+                          <section id="price__chart" class="offer-price__chart price-chart">
+                            <h5>История цены объявления</h5>
+                            <button class="button button-close" type="button">
+                              <span class="visually-hidden">Закрыть окно</span>
+                            </button>
+                            <ul>
+                              <li>
+                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                            </ul>
+                          </section>
                         </div>
                       </section>
                     </div>
-                    <button class="button edv-promo-close" type="button">
-                      <span class="visually-hidden">Убрать рекламу</span>
-                    </button>
-                  </section>
-                </div>
-              </article>
-            </div>
-          </aside>
-
-          <!-- Бесплатная вторичка -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--free">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                      </picture>
-                    </a>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <svg class="subway__icon-line-2" width="18" height="13" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                    </svg>
-                    <span class="visually-hidden">метро </span>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Войковская</a>
-                    <span>~ 8 мин.</span>
-                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                  </p>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="16700000">166 700 000 &#x20bd;</data>
-                      <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
-                      </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false" aria-controls="controls-section">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
+                    <section class="map-card__pictures offer-images">
+                      <h4 class="visually-hidden">Фотографии объявления</h4>
+                      <div class="offer-images__wrapper offer-images__wrapper--paid">
+                        <a
+                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
+                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          tabindex="-1"
+                        ></a>
+                        <div class="offer-images__main slider">
+                          <div class="offer-images__large">
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
+                            </picture>
+                          </div>
+                          <span class="offer-images__camera"></span>
+                          <button class="button button-circle button-circle--dark icon-color" type="button">
                             <svg width="20" height="20" aria-hidden="true">
                               <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
                             </svg>
-                            <span class="label-popup">Добавить взбранное</span>
+                            <span class="visually-hidden">В избранное</span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
+                          <button class="button slider__control slider__control--left" type="button">
+                            <span class="visually-hidden">Предыдущее изображение</span>
+                            <span></span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
+                          <button class="button slider__control slider__control--right" type="button">
+                            <span class="visually-hidden">Следующее изображение</span>
+                            <span></span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__content-footer">
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
-
-          <!-- квартира-новостройка топ без метро -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--paid">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                      </picture>
-                    </a>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" tabindex="-1" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" loading="lazy" />
-                      </picture>
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__gk">
-                    <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer">ЖК «Сиреневый бульвар»</a>
-                  </p>
-                  <section class="offer-properties__benefits offer-qualities">
-                    <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                    <ul>
-                      <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                      <li>Господдержка</li>
-                      <li>Рассрочка</li>
-                      <li>С отделкой</li>
-                    </ul>
-                  </section>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="16700000">166 700 000 &#x20bd;</data>
-                      <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
+                          <div class="offer-images__counter">
+                            <span class="visually-hidden">Нумерация фотографий</span>
+                            <span>2/15</span>
+                          </div>
+                        </div>
+                        <div class="offer-images__thumbnails">
+                          <div>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
+                            </picture>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
+                            </picture>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
+                            </picture>
+                          </div>
+                        </div>
                       </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
+                    </section>
+                    <div class="map-card__phone">
                       <a href="tel:">Контакты</a>
                     </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="map-card">
+                  <div class="map-card__wrapper">
+                    <div class="map-card__content offer-properties offer-properties--map">
+                      <h3 class="offer-properties__title">
+                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
+                          <span
+                            >4-комн. квартира
+                            <span class="separator">•</span>
+                            <span>90 м²</span>
+                            <span class="separator">•</span>
+                            <span>8/8 этаж</span>
+                          </span>
+                          <span class="link-click-area"></span>
+                        </a>
+                      </h3>
+                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
+                      <p class="offer-properties__subway subway">
+                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
+                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
+                        </svg>
+                        <span class="visually-hidden">метро </span>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Бульвар Рокосовского</a>
+                        <span>~ 8 мин.</span>
+                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+                      </p>
+                      <p class="offer-properties__gk">ЖК «Авиатор»</p>
+                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
+                        <ul>
+                          <li>От застройщика</li>
+                          <li class="offer-qualities__dev">Брусника</li>
+                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
+                          <!-- <li>С ремонтом</li> -->
+                          <!-- <li>ИЖС</li> -->
+                        </ul>
+                      </section>
+                      <section class="offer-properties__price offer-price">
+                        <h4 class="visually-hidden">Цена в объявлении</h4>
+                        <div class="offer-price__value">
+                          <data value="16700000">166 700 000 &#x20bd;</data>
+                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
+                        </div>
+                        <div class="offer-price__history">
+                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
+                            <svg width="35" height="35" aria-hidden="true">
+                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
+                            </svg>
+                            <span class="label-popup">Показать историю цены</span>
+                          </button>
+                          <section id="price__chart" class="offer-price__chart price-chart">
+                            <h5>История цены объявления</h5>
+                            <button class="button button-close" type="button">
+                              <span class="visually-hidden">Закрыть окно</span>
+                            </button>
+                            <ul>
+                              <li>
+                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                              <li>
+                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
+                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
+                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                      </section>
+                    </div>
+                    <section class="map-card__pictures offer-images">
+                      <h4 class="visually-hidden">Фотографии объявления</h4>
+                      <div class="offer-images__wrapper offer-images__wrapper--paid">
+                        <a
+                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
+                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          tabindex="-1"
+                        ></a>
+                        <div class="offer-images__main slider">
+                          <div class="offer-images__large">
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
+                            </picture>
+                          </div>
+                          <span class="offer-images__camera"></span>
+                          <button class="button button-circle button-circle--dark icon-color" type="button">
                             <svg width="20" height="20" aria-hidden="true">
                               <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
                             </svg>
-                            <span class="label-popup">Добавить взбранное</span>
+                            <span class="visually-hidden">В избранное</span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
+                          <button class="button slider__control slider__control--left" type="button">
+                            <span class="visually-hidden">Предыдущее изображение</span>
+                            <span></span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
+                          <button class="button slider__control slider__control--right" type="button">
+                            <span class="visually-hidden">Следующее изображение</span>
+                            <span></span>
                           </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__content-footer">
-                  <div class="offer__content-top">
-                    <p class="visually-hidden">К объявлению применена услуга</p>
-                    <span>Топ</span>
-                    <svg width="23" height="24" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
-                    </svg>
-                  </div>
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
-
-          <!-- вторичка топ с метро -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--paid">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                      </picture>
-                    </a>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" tabindex="-1" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" loading="lazy" />
-                      </picture>
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <svg class="subway__icon-line-3" width="18" height="13" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                    </svg>
-                    <span class="visually-hidden">метро </span>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Семёновская</a>
-                    <span>~ 8 мин.</span>
-                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                  </p>
-                  <section class="offer-properties__benefits offer-qualities">
-                    <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                    <ul>
-                      <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                      <li>Господдержка</li>
-                      <li>Рассрочка</li>
-                      <li>С отделкой</li>
-                    </ul>
-                  </section>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="16700000">166 700 000 &#x20bd;</data>
-                      <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
+                          <div class="offer-images__counter">
+                            <span class="visually-hidden">Нумерация фотографий</span>
+                            <span>2/15</span>
+                          </div>
+                        </div>
+                        <div class="offer-images__thumbnails">
+                          <div>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
+                            </picture>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
+                            </picture>
+                            <picture>
+                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
+                            </picture>
+                          </div>
+                        </div>
                       </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
+                    </section>
+                    <div class="map-card__phone">
                       <a href="tel:">Контакты</a>
                     </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="label-popup">Добавить взбранное</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
                   </div>
-                </div>
-                <div class="offer__content-footer">
-                  <div class="offer__content-top">
-                    <p class="visually-hidden">К объявлению применена услуга</p>
-                    <span>Топ</span>
-                    <svg width="23" height="24" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
-                    </svg>
-                  </div>
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
-
-          <!--Бесплатное без картинок -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images no-image">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--free">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <!-- <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" /> -->
-                      </picture>
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <svg class="subway__icon-line-6" width="18" height="13" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                    </svg>
-                    <span class="visually-hidden">метро </span>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Медведково</a>
-                    <span>~ 8 мин.</span>
-                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                  </p>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="16700000">166 700 000 &#x20bd;</data>
-                      <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
-                      </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="label-popup">Добавить взбранное</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__content-footer">
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
-
-          <aside class="catalog__ads">
-            <!-- Yandex.RTB R-A-429460-19 -->
-            <!-- <div id="yandex_rtb_R-A-429460-19"></div> -->
-            <!-- <script>
-              window.yaContextCb.push(() => {
-                Ya.Context.AdvManager.render({
-                  blockId: "R-A-429460-19",
-                  renderTo: "yandex_rtb_R-A-429460-19",
-                });
-              });
-            </script> -->
-            <div class="edv-realtor"></div>
-          </aside>
-
-          <!-- Платная с топ новостройка с незагруженными фото -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images no-image">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--paid">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <!-- <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" /> -->
-                      </picture>
-                    </a>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" tabindex="-1" title="Продажа 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <!-- <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" loading="lazy" /> -->
-                      </picture>
-                      <picture>
-                        <!-- <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" loading="lazy" /> -->
-                      </picture>
-                      <picture>
-                        <!-- <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" loading="lazy" /> -->
-                      </picture>
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <svg class="subway__icon-line-4" width="18" height="13" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                    </svg>
-                    <span class="visually-hidden">метро </span>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Фили</a>
-                    <span>~ 8 мин.</span>
-                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                  </p>
-                  <p class="offer-properties__gk">
-                    <a href="https://www.remospro.ru/novostroyki/sirenevyi_bulvar/" target="_blank" rel="noopener noreferrer">ЖК «Сиреневый бульвар»</a>
-                  </p>
-                  <section class="offer-properties__benefits offer-qualities">
-                    <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                    <ul>
-                      <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                      <li>Господдержка</li>
-                      <li>Рассрочка</li>
-                      <li>С отделкой</li>
-                    </ul>
-                  </section>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="16700000">166 700 000 &#x20bd;</data>
-                      <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
-                      </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="label-popup">Добавить взбранное</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__content-footer">
-                  <div class="offer__content-top">
-                    <p class="visually-hidden">К объявлению применена услуга</p>
-                    <span>Топ</span>
-                    <svg width="23" height="24" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
-                    </svg>
-                  </div>
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
-
-          <aside class="catalog__agents experts experts--catalog">
-            <h2 class="caption-index">Специалисты помогут вам купить или продать квартиру в Москве</h2>
-            <div class="experts__wrapper">
-              <section class="experts__realtors">
-                <h3>Риэлторы</h3>
-                <ul class="experts__list">
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу риэлтора">
-                      <h4>Румянцева Татьяна Румянцева Румянцева Румянцева Румянцева Т.</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts/realtors/realtor__rumyntseva.webp" width="45" height="45" alt="Фотография Румянцевой Татьяны" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу риэлтора">
-                      <h4>Румянцева Татьяна</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts/realtors/realtor_3.webp" width="45" height="45" alt="Фотография Румянцевой Татьяны" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу риэлтора">
-                      <h4>Румянцева Татьяна</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts/realtors/realtor_4.webp" width="45" height="45" alt="Фотография Румянцевой Татьяны" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу риэлтора">
-                      <h4>Румянцева Татьяна</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts/realtors/realtor_5.webp" width="45" height="45" alt="Фотография Румянцевой Татьяны" loading="lazy" />
-                    </a>
-                  </li>
-                </ul>
-                <div class="experts__link-wrapper">
-                  <a class="link-underline" href="https://www.remospro.ru/rieltory_v_moskovskoy_oblasti/">
-                    <span>Все риэлторы</span>
-                  </a>
-                </div>
-              </section>
-              <section class="experts__agencies">
-                <h3>Агентства недвижимости</h3>
-                <ul class="experts__list">
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
-                      <h4>Градомир</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts//agencies/agency3.webp" width="45" height="45" alt="Логотип агентства недвижимости Градомир" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
-                      <h4>Авангард</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts//agencies/agency4.webp" width="45" height="45" alt="Логотип агентства недвижимости Авангард" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
-                      <h4>АэНБИ</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts//agencies/agency5.webp" width="45" height="45" alt="Логотип агентства недвижимости АэНБИ" loading="lazy" />
-                    </a>
-                  </li>
-                  <li class="experts__list-item">
-                    <a class="expert-card" href="#" aria-label="Перйти на страницу агентства">
-                      <h4>Мегаполис сервис Мегаполис сервис Мегаполис сервис Мегаполис сервис</h4>
-                      <p>На Ремос с 2020</p>
-                      <img src="img/experts//agencies/agency6.webp" width="45" height="45" alt="Логотип агентства недвижимости Мегаполис сервис" loading="lazy" />
-                    </a>
-                  </li>
-                </ul>
-                <div class="experts__link-wrapper">
-                  <a class="link-underline" href="https://www.remospro.ru/agentstva_v_kirovskoy_oblasti/">
-                    <span>Все агентства</span>
-                  </a>
-                </div>
-              </section>
-            </div>
-          </aside>
-
-          <!-- аренда квартиры -->
-
-          <article class="catalog-list__item offer delete-class">
-            <div class="offer__wrapper">
-              <section class="offer__pictures offer-images">
-                <h4 class="visually-hidden">Фотографии объявления</h4>
-                <div class="offer-images__wrapper offer-images__wrapper--paid">
-                  <div class="offer-images__main slider">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="Аренда 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                      </picture>
-                    </a>
-                    <span class="offer-images__camera"></span>
-                    <button class="button button-circle button-circle--dark icon-color" type="button">
-                      <svg width="20" height="20" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                      </svg>
-                      <span class="visually-hidden">В избранное</span>
-                    </button>
-                    <button class="button slider__control slider__control--left" type="button">
-                      <span class="visually-hidden">Предыдущее изображение</span>
-                      <span></span>
-                    </button>
-                    <button class="button slider__control slider__control--right" type="button">
-                      <span class="visually-hidden">Следующее изображение</span>
-                      <span></span>
-                    </button>
-                    <div class="offer-images__counter">
-                      <span class="visually-hidden">Нумерация фотографий</span>
-                      <span>2/15</span>
-                    </div>
-                  </div>
-                  <div class="offer-images__thumbnails">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" tabindex="-1" title="Аренда 4-комн квартира, 90 м², 8/8 этаж" target="_blank" rel="noopener noreferrer">
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" loading="lazy" />
-                      </picture>
-                      <picture>
-                        <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" loading="lazy" />
-                      </picture>
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="offer__content">
-                <section class="offer-properties">
-                  <h3 class="offer-properties__title">
-                    <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">4-комн квартира, 90 м², 8/8 этаж </a>
-                  </h3>
-                  <address class="offer-properties__address">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1 </a>
-                  </address>
-                  <p class="offer-properties__subway subway">
-                    <svg class="subway__icon-line-7" width="18" height="13" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                    </svg>
-                    <span class="visually-hidden">метро </span>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Планерная</a>
-                    <span>~ 8 мин.</span>
-                    <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                  </p>
-                  <section class="offer-properties__benefits offer-qualities">
-                    <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                    <ul>
-                      <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                      <li>Господдержка</li>
-                      <li>Рассрочка</li>
-                      <li>С отделкой</li>
-                    </ul>
-                  </section>
-                  <section class="offer-properties__price offer-price">
-                    <h4 class="visually-hidden">Цена в объявлении</h4>
-                    <div class="offer-price__value">
-                      <data value="160700">160 700 &#x20bd;/мес</data>
-                    </div>
-                    <div class="offer-price__history">
-                      <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                        <svg width="35" height="35" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                        </svg>
-                        <span class="label-popup">Показать историю цены</span>
-                      </button>
-                      <section id="price__chart" class="offer-price__chart price-chart">
-                        <h5>История цены объявления</h5>
-                        <button class="button button-close" type="button">
-                          <span class="visually-hidden">Закрыть окно</span>
-                        </button>
-                        <ul>
-                          <li>
-                            <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                          <li>
-                            <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                            <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                            <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                          </li>
-                        </ul>
-                      </section>
-                    </div>
-                  </section>
-                  <p class="offer-properties__description">
-                    Просторная двухкомнатная квартира с первичной отделкой в ЖК "Сиреневый бульвар" на 4 этаже. Общая площадь: 72.1 кв.м., жилая: 30.1 кв.м., площадь просторной кухни-столовой: 19.4
-                    кв.м. Квартира - распашонка, выxoдит oкнaми нa oбe cтopoны дoмa oднoвpeмeннo, комнаты в течение дня равномерно освещен...
-                  </p>
-                </section>
-                <div class="offer__aside">
-                  <section class="offer__seller seller">
-                    <h4 class="visually-hidden">Владелец объявления</h4>
-                    <div class="seller__wrapper">
-                      <div class="seller__info">
-                        <p class="seller__type">Агентство недвижимости</p>
-                        <p class="seller__name">
-                          <a href="https://www.remospro.ru/agencies/chip_75395/" target="_blank" rel="noopener noreferrer">Русский Фонд Недвижимости</a>
-                        </p>
-                      </div>
-                      <div class="seller__avatar">
-                        <img src="img/catalog/user/user__avatar.webp" width="40" height="40" alt="Логотип агентства недвижимости Русский Фонд Недвижимости" />
-                      </div>
-                    </div>
-                    <p class="seller__offers">
-                      <a href="#" target="_blank" rel="noopener noreferrer">все объявления</a>
-                    </p>
-                    <div class="seller__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </section>
-                  <div class="offer__actions offer-controls">
-                    <button class="button offer-controls__toggler" type="button" aria-label="Показать" aria-expanded="false">
-                      <svg width="25" height="25" aria-hidden="true">
-                        <use xlink:href="img/icons/sprite_2.svg#dots"></use>
-                      </svg>
-                    </button>
-                    <div class="offer-controls__wrapper">
-                      <ul>
-                        <li>
-                          <button class="button offer-controls__item icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="label-popup">Добавить взбранное</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#on__map"></use>
-                            </svg>
-                            <span class="label-popup">Показать а карте</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#note"></use>
-                            </svg>
-                            <span class="label-popup">Добавить заметку</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#hide"></use>
-                            </svg>
-                            <span class="label-popup">Скрыть объявление</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button class="button offer-controls__item offer-controls__item--modal" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite_2.svg#complain"></use>
-                            </svg>
-                            <span class="label-popup">Пожаловаться</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <button class="button button-close" type="button">
-                        <span class="visually-hidden">Закрыть окно</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="offer__content-footer">
-                  <div class="offer__content-top">
-                    <p class="visually-hidden">К объявлению применена услуга</p>
-                    <span>Топ</span>
-                    <svg width="23" height="24" aria-hidden="true">
-                      <use xlink:href="img/icons/sprite_2.svg#top__icon"></use>
-                    </svg>
-                  </div>
-                  <p class="v-h-m-t">На Ремос c<time datetime="2024-06-10T14:54"> 10 июня</time></p>
-                </div>
-              </section>
-            </div>
-          </article>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+          <div></div>
         </div>
-        <footer class="catalog-list__footer">
-          <h3 class="visually-hidden">Пагинация</h3>
-          <ul class="pagination">
-            <li>
-              <a class="button-white button-white--disabled" href="#">Назад</a>
-            </li>
-            <li>
-              <a class="button-white button-white--selected" href="#">1</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">2</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">3</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">4</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">5</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">6</a>
-            </li>
-            <li>
-              <a class="button-white" href="#">Вперёд</a>
-            </li>
-          </ul>
-        </footer>
-      </section>
-      <aside class="catalog__ads-footer new-buildings edv-footer">
-        <h2 class="new-buildings__title">Популярные жилые комплексы от застройщиков</h2>
-        <div class="new-buildings__list new-buildings__list--edv">
-          <article class="new-buildings__list-item gk-adv-card">
-            <div class="gk-adv-card__content">
-              <h4 class="gk-adv-card__title">ЖК Авиатор</h4>
-              <p class="gk-adv-card__price">от 6 800 000 &#x20bd;</p>
-              <p class="gk-adv-card__ready">Сдача: 1 кв. 2026, есть сданные</p>
-              <p class="gk-adv-card__adress">вблизи Красного проспекта</p>
-              <p class="gk-adv-card__builder">Застройщик Брусника</p>
-            </div>
-            <div class="gk-adv-card__img">
-              <div class="gk-adv-card__picture">
-                <img src="img/adv/aviator.webp" alt="" />
-              </div>
-              <div class="gk-adv-card__logo">
-                <svg width="30" height="30" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                    fill="#EE3D24"
-                  />
-                  <path
-                    d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                    fill="#EE3D24"
-                  />
-                </svg>
+        <div class="map">
+          <div class="map__wrapper">
+            <iframe
+              tabindex="-1"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa63defc846f73db603703548b5c39ca378b2e182cbfdb34ca9cd4591f124d898&amp;source=constructor"
+              width="100%"
+              height="720"
+              frameborder="0"
+            ></iframe>
+            <div class="map__promo map-edv">
+              <div class="map-edv__wrapper">
+                <div class="map-edv__content">
+                  <p class="map-edv__title">Квартиры от 390 тыс руб за м2</p>
+                  <p>узнать подробности</p>
+                  <svg width="30" height="30" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
+                      fill="#EE3D24"
+                    ></path>
+                    <path
+                      d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
+                      fill="#EE3D24"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="map-edv__message run-text">ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф</p>
               </div>
             </div>
-          </article>
-          <article class="new-buildings__list-item gk-adv-card">
-            <div class="gk-adv-card__content">
-              <h4 class="gk-adv-card__title">ЖК Лебединский</h4>
-              <p class="gk-adv-card__price">от 4 100 000 &#x20bd;</p>
-              <p class="gk-adv-card__ready">Сдача: 2 кв. 2028</p>
-              <p class="gk-adv-card__adress">Заельцовский район</p>
-              <p class="gk-adv-card__builder">Застройщик Брусника</p>
-            </div>
-            <div class="gk-adv-card__img">
-              <div class="gk-adv-card__picture">
-                <img src="img/adv/lebedevsky.webp" alt="" />
-              </div>
-              <div class="gk-adv-card__logo">
-                <svg width="30" height="30" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                    fill="#EE3D24"
-                  />
-                  <path
-                    d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                    fill="#EE3D24"
-                  />
-                </svg>
-              </div>
-            </div>
-          </article>
-          <article class="new-buildings__list-item gk-adv-card">
-            <div class="gk-adv-card__content">
-              <h4 class="gk-adv-card__title">ЖК Мылзавод</h4>
-              <p class="gk-adv-card__price">от 8 600 000 &#x20bd;</p>
-              <p class="gk-adv-card__ready">Сдача: 1 кв. 2026, есть сданные</p>
-              <p class="gk-adv-card__adress">вблизи ул. Некрасова, Каменская, Писарева</p>
-              <p class="gk-adv-card__builder">Застройщик Брусника</p>
-            </div>
-            <div class="gk-adv-card__img">
-              <div class="gk-adv-card__picture">
-                <img src="img/adv/mylzavod" alt="" />
-              </div>
-              <div class="gk-adv-card__logo">
-                <svg width="30" height="30" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                    fill="#EE3D24"
-                  />
-                  <path
-                    d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                    fill="#EE3D24"
-                  />
-                </svg>
-              </div>
-            </div>
-          </article>
-          <article class="new-buildings__list-item gk-adv-card">
-            <div class="gk-adv-card__content">
-              <h4 class="gk-adv-card__title">ЖК Пшеница</h4>
-              <p class="gk-adv-card__price">от 3 300 000 &#x20bd;</p>
-              <p class="gk-adv-card__ready">Сдача: 1 кв. 2026, есть сданные</p>
-              <p class="gk-adv-card__adress">3-й микр-н посёлка Краснообск</p>
-              <p class="gk-adv-card__builder">Застройщик Брусника</p>
-            </div>
-            <div class="gk-adv-card__img">
-              <div class="gk-adv-card__picture">
-                <img src="img/adv/psheniza.jpg" alt="" />
-              </div>
-              <div class="gk-adv-card__logo">
-                <svg width="30" height="30" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                    fill="#EE3D24"
-                  />
-                  <path
-                    d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                    fill="#EE3D24"
-                  />
-                </svg>
-              </div>
-            </div>
-          </article>
-        </div>
-        <button class="button" type="button"></button>
-      </aside>
-      <section class="catalog__stats wrapper-content">
-        <div class="accordion accordion--stats">
-          <details>
-            <summary>
-              <h2>&#127969; Как купить квартиру в Москве на RemosPro?</h2>
-            </summary>
-            <div class="accordion__body">
-              <p>Ищете объявления с недвижимостью о покупке или продаже квартиры в Москве?</p>
-              <ol>
-                <li>&#10004; Чтобы продать или купить недвижимость, используйте удобную форму поиска, фильтры, карту, сортировку, быстрые ссылки.</li>
-                <li>&#10004; Свяжитесь с владельцем объявления, чтобы уточнить детали продажи квартиры.</li>
-                <li>&#10004; Если стоимость покупки для вас высокая, подпишитесь на получение уведомлений о снижении цены.</li>
-              </ol>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h2>&#128176; Сколько стоит квартира в Новороссийске?</h2>
-            </summary>
-            <div class="accordion__body">
-              <p>Стоимость покупки квартиры в выбранной вами локации:</p>
-              <table class="accordion__table">
-                <tbody>
-                  <tr>
-                    <td>&#128142; Цена недвижимости</td>
-                    <td>от <data value="4800000">400 тыс. руб.</data> до <data value="3296000000">3,296 млн. руб.</data></td>
-                  </tr>
-                  <tr>
-                    <td>&#128142; Средняя цена</td>
-                    <td><data value="40000000">40 млн. руб.</data></td>
-                  </tr>
-                  <tr>
-                    <td>&#128142; Цена за <abbr title="квадратный метр">м²</abbr></td>
-                    <td>от <data value="150000">150 тыс. руб.</data> до <data value="1120000">1,12 млн. руб.</data></td>
-                  </tr>
-                  <tr>
-                    <td>&#128142; Средняя стоимость <abbr title="квадратный метр">м²</abbr></td>
-                    <td><data value="650000">650 тыс. руб. в месяц</data></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h2>&#x1F4D0; Какая площадь квартир в микрорайоне Центральный в Новороссийске?</h2>
-            </summary>
-            <div class="accordion__body">
-              <table class="accordion__table">
-                <tbody>
-                  <tr>
-                    <td>&#128311; Минимальная площадь</td>
-                    <td>10 <abbr title="квадратный метр">м²</abbr></td>
-                  </tr>
-                  <tr>
-                    <td>&#128311; Максимальная площадь</td>
-                    <td>1 110 <abbr title="квадратный метр">м²</abbr></td>
-                  </tr>
-                  <tr>
-                    <td>&#128311; Средняя площадь</td>
-                    <td>110 <abbr title="квадратный метр">м²</abbr></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </details>
-          <details>
-            <summary>
-              <h2>&#128064; Почему стоит искать объявления на РемосПро?</h2>
-            </summary>
-            <div class="accordion__body">
-              <ol>
-                <li>&#128270; На сайте размещено 80 776 объявлений. Можно найти объявления о продаже или покупке квартиры в Москве от агентств недвижимости, риелторов, частных лиц и застройщиков.</li>
-                <li>&#128270; Можно оформить подписку по фильтру для отслеживания новых объявлений в разделе продажи квартиры в Москве.</li>
-                <li>&#128270; У нас вы найдёте недвижимость по всей территории России.</li>
-              </ol>
-            </div>
-          </details>
-        </div>
-        <div class="statistics">
-          <h2 class="section-title">Средняя стоимость продажи квартир в Москве</h2>
-          <div class="statistics__table statistics__table--catalog">
-            <table>
-              <thead>
-                <tr>
-                  <th>Количество комнат</th>
-                  <th>Средняя площадь</th>
-                  <th>Средняя цена квартир</th>
-                  <th>Средняя цена за <abbr title="квадратный метр">м²</abbr></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="/catalog/prodazha_odnokomnatnykh_kvartir_v_moskve.html">Студии</a></td>
-                  <td>36.43 <abbr title="квадратный метр">м²</abbr></td>
-                  <td><data value="44000000">44 000 000 руб.</data></td>
-                  <td><data value="440000">440 000 руб.</data></td>
-                </tr>
-                <tr>
-                  <td><a href="/catalog/prodazha_odnokomnatnykh_kvartir_v_moskve.html">Однокомнатные квартиры</a></td>
-                  <td>36.43 <abbr title="квадратный метр">м²</abbr></td>
-                  <td><data value="44000000">44 000 000 руб.</data></td>
-                  <td><data value="440000">440 000 руб.</data></td>
-                </tr>
-                <tr>
-                  <td><a href="/catalog/prodazha_dvukhkomnatnykh_kvartir_v_moskve.html">Двухкомнатные квартиры</a></td>
-                  <td>36.94 <abbr title="квадратный метр">м²</abbr></td>
-                  <td><data value="44000000">44 000 000 руб.</data></td>
-                  <td><data value="440000">440 000 руб.</data></td>
-                </tr>
-                <tr>
-                  <td><a href="/catalog/prodazha_tryekhkomnatnykh_kvartir_v_moskve.html">Трёхкомнатные квартиры</a></td>
-                  <td>36.94 <abbr title="квадратный метр">м²</abbr></td>
-                  <td><data value="44000000">44 000 000 руб.</data></td>
-                  <td><data value="440000">440 000 руб.</data></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="map-marker map-marker--1"></div>
+            <div class="map-marker map-marker--2"></div>
+            <div class="map-marker map-marker--3"></div>
+            <div class="map-marker map-marker--4"></div>
+            <div class="map-marker map-marker--5"></div>
+            <div class="map-marker map-marker--6"></div>
+            <div class="map-marker map-marker--6"></div>
+            <div class="map-marker map-marker--7"></div>
+            <div class="map-marker map-marker--8"></div>
+            <div class="map-marker map-marker--9"></div>
+            <div class="map-marker map-marker--10"></div>
           </div>
         </div>
-      </section>
-      <aside class="catalog__adv-top wrapper-content">
-        <div class="edv-promo">
-          <div class="edv-promo__img">
-            <img src="img/adv/2fb43770c2c3a0eece39a515c8951d63.webp" alt="" />
-          </div>
-          <div class="edv-promo__content">
-            <p class="edv-promo__title">ЖК «Авиатор»</p>
-            <p>Квартиры от 9,9 млн ₽</p>
-            <p>Квартиры в готовых и строящихся домах</p>
-            <div class="edv-promo__button">Узнать подробности</div>
-            <div class="edv-promo__dev">
-              <!-- <p>Брусника</p> -->
-              <svg class="v-h-m-t" width="150" height="10" viewBox="0 0 150 10" fill="red" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <path
-                    d="M0.53125 0.182129H16.0259V2.50585H3.87576V3.7968H13.0045C15.4442 3.7968 16.8984 4.90549 16.8984 6.77357C16.8984 8.64166 15.4604 9.75036 13.0045 9.75036H0.53125V0.182129ZM3.87576 6.05976V7.51777H12.3905C13.1338 7.51777 13.4731 7.30514 13.4731 6.78876C13.4731 6.28757 13.1338 6.05976 12.3905 6.05976H3.87576Z"
-                  ></path>
-                  <path
-                    d="M18.8535 0.182129H30.1472C33.2656 0.182129 35.1236 1.54902 35.1236 3.85755C35.1236 6.16607 33.2817 7.53296 30.1472 7.53296H22.3434V9.76555H18.8535V0.182129ZM22.3596 2.65772V5.08775H29.614C30.9875 5.08775 31.5852 4.72324 31.5852 3.88792C31.5852 3.02222 30.9875 2.65772 29.614 2.65772H22.3596Z"
-                  ></path>
-                  <path d="M42.0891 6.95583L34.8184 0.182129H39.0354L44.1572 4.89031L48.7135 0.182129H52.8336L43.5593 9.76555H39.3424L42.0891 6.95583Z"></path>
-                  <path
-                    d="M61.3797 0C66.3883 0 69.3613 1.12389 70.1207 3.26535L66.3561 3.96398C65.9198 2.93122 64.3849 2.4604 61.3959 2.4604C57.3081 2.4604 55.4985 3.21978 55.4985 4.98155C55.4985 6.72814 57.2919 7.50271 61.3959 7.50271C64.4657 7.50271 66.0006 7.0167 66.3723 5.93837L70.0883 6.60664C69.2805 8.83922 66.4045 9.96311 61.3959 9.96311C55.2884 9.96311 51.9278 8.18615 51.9278 4.98155C51.9116 1.76177 55.2723 0 61.3797 0Z"
-                  ></path>
-                  <path d="M71.7207 0.182129H75.2106V3.64492H85.8743V0.182129H89.3804V9.76555H85.8743V6.12051H75.2106V9.76555H71.7207V0.182129Z"></path>
-                  <path d="M91.9492 0.182129H95.4392V6.71283L105.747 0.182129H109.254V9.76555H105.747V3.23485L95.4392 9.76555H91.9492V0.182129Z"></path>
-                  <path d="M111.709 0.182129H115.199V4.17649L123.537 0.182129H129.224L119.594 4.69287L129.466 9.76555H123.375L115.199 5.55856V9.76555H111.709V0.182129Z"></path>
-                  <path
-                    d="M139.306 2.55141L142.021 5.83194H136.592L139.306 2.55141ZM137.561 0.182129L129.289 9.76555H133.344L134.734 8.0949H143.894L145.285 9.76555H149.469L141.197 0.182129H137.561Z"
-                  ></path>
-                </g>
-              </svg>
-              <div class="edv-promo__dev-logo">
-                <svg width="20" height="20" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                    fill="#EE3D24"
-                  />
-                  <path
-                    d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                    fill="#EE3D24"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <button class="button edv-promo-close" type="button">
-            <span class="visually-hidden">Убрать рекламу</span>
-          </button>
-        </div>
-      </aside>
+      </div>
     </main>
-    <section class="page__body-district footer-links">
-      <div class="footer-links__wrapper">
-        <h2 class="visually-hidden">Недвижимость по гео-локациям</h2>
-        <section class="footer-links__item footer-links__item-gk">
-          <h3>Квартиры в новых ЖК</h3>
-          <ul class="footer-links__list">
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_desnareche_v_moskve.html">Деснаречье</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_dom_na_zorge_v_moskve.html">Дом на Зорге</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_rodnye_kvartaly_v_moskve.html">Родные кварталы</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_yuzhnye_sady_v_moskve.html">Южные сады</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_prokshino_v_moskve.html">Прокшино</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_dzen_kvartaly_v_moskve.html">Дзен-кварталы</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_buninskie_kvartaly_v_moskve.html">Бунинские кварталы</a></li>
-            <li><a href="https://www.remospro.ru/catalog/prodazha_kvartir_v_zhilom_komplekse_skandinaviya_v_moskve.html">Скандинавия</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="footer-links__item footer-links__item-metro">
-          <h3>Квартиры у метро</h3>
-          <ul class="footer-links__list">
-            <li><a href="#">Автозаводская</a></li>
-            <li><a href="#">Авиамоторная</a></li>
-            <li><a href="#">Академическая</a></li>
-            <li><a href="#">Александровский сад</a></li>
-            <li><a href="#">Алексеевская</a></li>
-            <li><a href="#">Улица Академика Королева</a></li>
-            <li><a href="#">Сокол</a></li>
-            <li><a href="#">Войковская</a></li>
-            <li><a href="#">Менделеевская</a></li>
-            <li><a href="#">Динамо</a></li>
-            <li><a href="#">Марьина Роща</a></li>
-            <li><a href="#">Говорово</a></li>
-            <li><a href="#">Бульвар Дмитрия Донского</a></li>
-            <li><a href="#">Нагатинская</a></li>
-            <li><a href="#">Рижская</a></li>
-            <li><a href="#">Свиблово</a></li>
-            <!-- <li><a href="#">Семеновская</a></li>
-            <li><a href="#">Новогиреево</a></li>
-            <li><a href="#">Шелепиха</a></li>
-            <li><a href="#">Печатники</a></li>
-            <li><a href="#">Красные ворота</a></li>
-            <li><a href="#">Бульвар адмирала Ушакова</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Кузнецкий мост</a></li>
-            <li><a href="#">Охотный ряд</a></li>
-            <li><a href="#">Румянцево</a></li>
-            <li><a href="#">Севастопольская</a></li>
-            <li><a href="#">Университет</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li>
-            <li><a href="#">Щукинская</a></li>
-            <li><a href="#">Электрозаводская</a></li> -->
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="footer-links__item footer-links__item-area">
-          <h3>Квартиры в районе</h3>
-          <ul class="footer-links__list">
-            <li><a href="#">Хорошево-Мневники</a></li>
-            <li><a href="#">Марьино</a></li>
-            <li><a href="#">Орехово-Борисово Северное</a></li>
-            <li><a href="#">Строгино</a></li>
-            <li><a href="#">Тверской</a></li>
-            <li><a href="#">Дорогомилово</a></li>
-            <li><a href="#">Северное Измайлово</a></li>
-            <li><a href="#">Южное Медввеедково</a></li>
-            <li><a href="#">Лефортово</a></li>
-            <li><a href="#">Коньково</a></li>
-            <li><a href="#">Орехово-Борисово Южное</a></li>
-            <li><a href="#">Роостокино</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="footer-links__item footer-links__item-district">
-          <h3>Квартиры в Округах</h3>
-          <ul class="footer-links__list">
-            <li><a href="#">ВАО</a></li>
-            <li><a href="#">ЮВАО</a></li>
-            <li><a href="#">ЮАО</a></li>
-            <li><a href="#">ЮЗАО</a></li>
-            <li><a href="#">ЗАО</a></li>
-            <li><a href="#">СЗАО</a></li>
-            <li><a href="#">ЦАО</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-        <section class="footer-links__item footer-links__item-street">
-          <h3>Квартиры на улицах</h3>
-          <ul class="footer-links__list">
-            <li><a href="#">ул. Космонавта Волкова</a></li>
-            <li><a href="#">ул. Коптевская</a></li>
-            <li><a href="#">ул. Б. Академическая</a></li>
-            <li><a href="#">ул. Лесная</a></li>
-            <li><a href="#">ул. Боровая</a></li>
-            <li><a href="#">б-р Матроса Железняка</a></li>
-            <li><a href="#">Ленинградское шоссе</a></li>
-            <li><a href="#">Ленинградский проспект</a></li>
-            <li><a href="#">ул. Зорге</a></li>
-            <li><a href="#">ул. Зои и Александра Космодемьянских</a></li>
-            <li><a href="#">ул. Приорова</a></li>
-            <li><a href="#">ул. Клары Цеткин</a></li>
-          </ul>
-          <button class="button link-underline" type="button">
-            <span>Показать всё</span>
-          </button>
-        </section>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="wrapper-content">
-        <p>© Remos 2023 - Недвижимость в Московской области</p>
-        <ul>
-          <li><a href="">О проекте</a></li>
-          <li><a href="">Условия использования</a></li>
-          <li><a href="">Публикации</a></li>
-          <li><a href="">Обратная связь</a></li>
-        </ul>
-        <ul class="social-list">
-          <li>
-            <a href=""
-              ><img
-                alt="Логотип Вконтакте"
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiMxOTc2ZDIiIGQ9Ik0yNCA0QTIwIDIwIDAgMSAwIDI0IDQ0QTIwIDIwIDAgMSAwIDI0IDRaIi8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTM1LjkzNywxOC4wNDFjMC4wNDYtMC4xNTEsMC4wNjgtMC4yOTEsMC4wNjItMC40MTZDMzUuOTg0LDE3LjI2MywzNS43MzUsMTcsMzUuMTQ5LDE3aC0yLjYxOCBjLTAuNjYxLDAtMC45NjYsMC40LTEuMTQ0LDAuODAxYzAsMC0xLjYzMiwzLjM1OS0zLjUxMyw1LjU3NGMtMC42MSwwLjY0MS0wLjkyLDAuNjI1LTEuMjUsMC42MjVDMjYuNDQ3LDI0LDI2LDIzLjc4NiwyNiwyMy4xOTkgdi01LjE4NUMyNiwxNy4zMiwyNS44MjcsMTcsMjUuMjY4LDE3aC00LjY0OUMyMC4yMTIsMTcsMjAsMTcuMzIsMjAsMTcuNjQxYzAsMC42NjcsMC44OTgsMC44MjcsMSwyLjY5NnYzLjYyMyBDMjEsMjQuODQsMjAuODQ3LDI1LDIwLjUxNywyNWMtMC44OSwwLTIuNjQyLTMtMy44MTUtNi45MzJDMTYuNDQ4LDE3LjI5NCwxNi4xOTQsMTcsMTUuNTMzLDE3aC0yLjY0MyBDMTIuMTI3LDE3LDEyLDE3LjM3NCwxMiwxNy43NzRjMCwwLjcyMSwwLjYsNC42MTksMy44NzUsOS4xMDFDMTguMjUsMzAuMTI1LDIxLjM3OSwzMiwyNC4xNDksMzJjMS42NzgsMCwxLjg1LTAuNDI3LDEuODUtMS4wOTQgdi0yLjk3MkMyNiwyNy4xMzMsMjYuMTgzLDI3LDI2LjcxNywyN2MwLjM4MSwwLDEuMTU4LDAuMjUsMi42NTgsMmMxLjczLDIuMDE4LDIuMDQ0LDMsMy4wMzYsM2gyLjYxOCBjMC42MDgsMCwwLjk1Ny0wLjI1NSwwLjk3MS0wLjc1YzAuMDAzLTAuMTI2LTAuMDE1LTAuMjY3LTAuMDU2LTAuNDI0Yy0wLjE5NC0wLjU3Ni0xLjA4NC0xLjk4NC0yLjE5NC0zLjMyNiBjLTAuNjE1LTAuNzQzLTEuMjIyLTEuNDc5LTEuNTAxLTEuODc5QzMyLjA2MiwyNS4zNiwzMS45OTEsMjUuMTc2LDMyLDI1YzAuMDA5LTAuMTg1LDAuMTA1LTAuMzYxLDAuMjQ5LTAuNjA3IEMzMi4yMjMsMjQuMzkzLDM1LjYwNywxOS42NDIsMzUuOTM3LDE4LjA0MXoiLz48L3N2Zz4="
-            /></a>
-          </li>
-          <li>
-            <a href="">
-              <img
-                alt="Логотип телеграм"
-                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiMyOWI2ZjYiIGQ9Ik0yNCA0QTIwIDIwIDAgMSAwIDI0IDQ0QTIwIDIwIDAgMSAwIDI0IDRaIi8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMzLjk1LDE1bC0zLjc0NiwxOS4xMjZjMCwwLTAuMTYxLDAuODc0LTEuMjQ1LDAuODc0Yy0wLjU3NiwwLTAuODczLTAuMjc0LTAuODczLTAuMjc0bC04LjExNC02LjczMyBsLTMuOTctMi4wMDFsLTUuMDk1LTEuMzU1YzAsMC0wLjkwNy0wLjI2Mi0wLjkwNy0xLjAxMmMwLTAuNjI1LDAuOTMzLTAuOTIzLDAuOTMzLTAuOTIzbDIxLjMxNi04LjQ2OCBjLTAuMDAxLTAuMDAxLDAuNjUxLTAuMjM1LDEuMTI2LTAuMjM0QzMzLjY2NywxNCwzNCwxNC4xMjUsMzQsMTQuNUMzNCwxNC43NSwzMy45NSwxNSwzMy45NSwxNXoiLz48cGF0aCBmaWxsPSIjYjBiZWM1IiBkPSJNMjMsMzAuNTA1bC0zLjQyNiwzLjM3NGMwLDAtMC4xNDksMC4xMTUtMC4zNDgsMC4xMmMtMC4wNjksMC4wMDItMC4xNDMtMC4wMDktMC4yMTktMC4wNDMgbDAuOTY0LTUuOTY1TDIzLDMwLjUwNXoiLz48cGF0aCBmaWxsPSIjY2ZkOGRjIiBkPSJNMjkuODk3LDE4LjE5NmMtMC4xNjktMC4yMi0wLjQ4MS0wLjI2LTAuNzAxLTAuMDkzTDE2LDI2YzAsMCwyLjEwNiw1Ljg5MiwyLjQyNyw2LjkxMiBjMC4zMjIsMS4wMjEsMC41OCwxLjA0NSwwLjU4LDEuMDQ1bDAuOTY0LTUuOTY1bDkuODMyLTkuMDk2QzMwLjAyMywxOC43MjksMzAuMDY0LDE4LjQxNiwyOS44OTcsMTguMTk2eiIvPjwvc3ZnPg=="
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
     <div class="modal modal--subscribe">
       <h2 class="caption">Подписаться на новые объявления Remos</h2>
       <div class="modal__wrapper modal__wrapper--subscribe">
@@ -4688,118 +3202,6 @@
           </div>
           <button class="button button-main" type="submit">Подписаться</button>
         </form>
-        <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть окно</span>
-        </button>
-      </div>
-    </div>
-    <div class="controls-modal">
-      <div class="modal modal--map">
-        <h2 class="caption visually-hidden">На карте</h2>
-        <div class="modal__wrapper modal__wrapper--map">
-          <!-- Тут должна быть карта с меткой объекта -->
-          <div class="modal-map">
-            <div style="position: relative; overflow: hidden">
-              <a href="https://yandex.ru/maps/org/sirenevy_bulvar/46655526711/?utm_medium=mapframe&utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 0px" tabindex="-1"
-                >Сиреневый бульвар</a
-              ><a
-                href="https://yandex.ru/maps/22/kaliningrad/category/housing_complex/64960171169/?utm_medium=mapframe&utm_source=maps"
-                style="color: #eee; font-size: 12px; position: absolute; top: 14px"
-                tabindex="-1"
-                >Жилой комплекс в Калининграде</a
-              ><iframe
-                tabindex="-1"
-                src="https://yandex.ru/map-widget/v1/?ll=20.556991%2C54.749960&mode=search&oid=46655526711&ol=biz&z=15.8"
-                width="100%"
-                height="600"
-                frameborder="0"
-                allowfullscreen="true"
-                style="position: relative"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть окно</span>
-        </button>
-      </div>
-      <div class="modal modal--note">
-        <h2 class="caption">Заметка</h2>
-        <div class="modal-note">
-          <div class="modal-note__header">
-            <p>4-комн квартира, 90 <abbr title="квадратный метр">м²</abbr>, 8/8 этаж</p>
-            <p>Московская область, Видное, ЖК Видный город, ул. Галины Вишневской, 12к1</p>
-          </div>
-          <div class="modal-note__form">
-            <input type="hidden" name="id" value="8651609" />
-            <input type="hidden" name="deal_type" value="100" />
-            <input type="hidden" name="realty_type" value="110" />
-            <label class="visually-hidden" for="note__message">
-              <span>Ваша заметка</span>
-            </label>
-            <textarea class="textarea" id="note__message" name="note" placeholder="Ваша заметка"></textarea>
-            <div class="modal-note__buttons">
-              <button class="button button-main" type="button" disabled>Сохранить</button>
-              <button class="button button-cancel" type="reset">Удалить</button>
-            </div>
-          </div>
-        </div>
-        <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть окно</span>
-        </button>
-      </div>
-      <div class="modal modal--abuse">
-        <h2 class="caption">Пожаловаться на объявление</h2>
-        <div class="modal-abuse">
-          <div class="modal-abuse__select">
-            <select class="select" name="item[type]" title="Тип жалобы">
-              <option value="" selected="">- Выберите причину -</option>
-              <option value="100">Уже продано</option>
-              <option value="200">Неверное описание</option>
-              <option value="300">Неверная цена</option>
-              <option value="400">Неверные данные: метраж, этаж/этажность и т.д.</option>
-              <option value="500">Неверный адрес</option>
-              <option value="600">Объект не существует</option>
-              <option value="700">Объект сдан/продан</option>
-              <option value="800">Объект - замануха</option>
-              <option value="1000">Повторная подача объявления(дубль)</option>
-              <option value="1100">Не дозвониться</option>
-              <option value="1300">Мошенничество</option>
-              <option value="1400">Объявление размещено без согласия собственника</option>
-              <option value="1600">Другая причина</option>
-            </select>
-          </div>
-          <div class="modal-abuse__form">
-            <input type="hidden" name="item[url]" value="/catalog/sale/apartment-new/8717831/" />
-            <label class="visually-hidden" for="abuser__name">
-              <span>Ваше имя</span>
-            </label>
-            <input class="input input--field invalid-field" id="abuser__name" type="text" name="item[user_name]" autocomplete="name" placeholder="Ваше имя" data-validate="noempty" required />
-            <label class="visually-hidden" for="abuser__tel">
-              <span>Ваш телефон</span>
-            </label>
-            <input class="input input--field" id="abuser__tel" type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
-            <label class="visually-hidden" for="abuser__email">
-              <span>Email адрес</span>
-            </label>
-            <input
-              class="input input--field"
-              id="abuser__email"
-              type="email"
-              name="item[user_email]"
-              inputmode="email"
-              autocomplete="email"
-              placeholder="Ваша электронная почта"
-              data-validate="email"
-              required
-            />
-            <label class="visually-hidden" for="abuser__message">
-              <span>Ваше сообщние</span>
-            </label>
-            <textarea class="textarea" id="abuser__message" name="item[user_text]" autocomplete="off" data-validate="noempty" placeholder="Текст жалобы"></textarea>
-            <button class="button button-main" type="button">Отправить</button>
-          </div>
-        </div>
         <button class="button button-close" type="button">
           <span class="visually-hidden">Закрыть окно</span>
         </button>
@@ -5548,7 +3950,7 @@
             </ul>
           </section>
           <section class="subway-list__item subway-list__item-subway">
-            <h3 class="subway-list__title"><span class="m-line-8A">8А</span>Солнцевская линия</h3>
+            <h3 class="subway-list__title"><span class="m-line-8a">8А</span>Солнцевская линия</h3>
             <ul>
               <li>
                 <input class="input-checkbox" id="1161" type="checkbox" />
@@ -6184,7 +4586,7 @@
             </ul>
           </section>
           <section class="subway-list__item subway-list__item-subway">
-            <h3 class="subway-list__title"><span class="m-line-D1">D1</span>МЦД-1 (Белорусско-Савёловский)</h3>
+            <h3 class="subway-list__title"><span class="m-line-d1">D1</span>МЦД-1 (Белорусско-Савёловский)</h3>
             <ul>
               <li>
                 <input class="input-checkbox" id="289" type="checkbox" />
@@ -6289,7 +4691,7 @@
             </ul>
           </section>
           <section class="subway-list__item subway-list__item-subway">
-            <h3 class="subway-list__title"><span class="m-line-D2">D2</span>МЦД-2 (Курско-Рижский)</h3>
+            <h3 class="subway-list__title"><span class="m-line-d2">D2</span>МЦД-2 (Курско-Рижский)</h3>
             <ul>
               <li>
                 <input class="input-checkbox" id="314" type="checkbox" />
@@ -6442,7 +4844,7 @@
             </ul>
           </section>
           <section class="subway-list__item subway-list__item-subway">
-            <h3 class="subway-list__title"><span class="m-line-D3">D3</span>МЦД-3 (Ленинградско-Казанский)</h3>
+            <h3 class="subway-list__title"><span class="m-line-d3">D3</span>МЦД-3 (Ленинградско-Казанский)</h3>
             <ul>
               <li>
                 <input class="input-checkbox" id="351" type="checkbox" />
@@ -6603,7 +5005,7 @@
             </ul>
           </section>
           <section class="subway-list__item subway-list__item-subway">
-            <h3 class="subway-list__title"><span class="m-line-D4">D4</span>МЦД-4 (Калужско-Нижегородский)</h3>
+            <h3 class="subway-list__title"><span class="m-line-d4">D4</span>МЦД-4 (Калужско-Нижегородский)</h3>
             <ul>
               <li>
                 <input class="input-checkbox" id="424" type="checkbox" />

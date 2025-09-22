@@ -1,4 +1,8 @@
 .post-structure {
+  padding: 15px 15px 15px;
+  box-shadow: 0 0 10px var(--light-gray);
+  border-radius: 7px;
+
   & ul {
     display: grid;
     row-gap: 5px;
@@ -11,6 +15,12 @@
     text-decoration: underline solid var(--gray) 1px;
     text-underline-offset: 3px;
     line-height: 22px;
+
+    &:focus-visible,
+    &:hover {
+      color: var(--basic-green);
+      text-decoration-color: var(--basic-green);
+    }
   }
 }
 
@@ -22,6 +32,9 @@
 
 @media (min-width: @tablet-width) {
   .post-structure {
+    padding: 20px 25px 20px;
+    border-radius: 7px;
+
     & ul {
       & a {
         font-size: 16px;

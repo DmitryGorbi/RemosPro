@@ -1,3 +1,7 @@
+.offer {
+  container: old-offer / inline-size;
+}
+
 .offer__wrapper {
   display: flex;
   row-gap: 15px;
@@ -61,41 +65,7 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .offer {
-    position: relative;
-    row-gap: 10px;
-    margin: -20px;
-    border-radius: 5px;
-
-    &:hover {
-      box-shadow: 0 0 10px var(--light-gray);
-    }
-
-    &::after,
-    &:first-of-type::before {
-      position: absolute;
-      content: "";
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      background-color: var(--light-gray);
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    &:first-of-type::before {
-      top: -1px;
-    }
-
-    &:hover::after,
-    &:first-of-type:hover::before {
-      display: none;
-    }
-  }
-
+@container old-offer (width > 1239px) {
   .offer__wrapper {
     display: grid;
     grid-template-columns: 345px 1fr;
@@ -105,7 +75,9 @@
     max-height: 425px;
     box-shadow: none;
   }
+}
 
+@media (min-width: @desktop-width) {
   .offer__content {
     display: grid;
     grid-template-columns: 1fr 235px;
@@ -156,9 +128,11 @@
 // test
 
 .shange-grid-link {
+  container: offer / inline-size;
+
   & .offer__wrapper {
     display: grid;
-    row-gap: 0;
+    row-gap: 13px;
   }
 
   & .offer__pictures {
@@ -189,7 +163,6 @@
   }
 
   & .offer__content {
-    // position: static;
     padding: 15px 0 25px;
     margin-bottom: 0;
   }
@@ -202,16 +175,34 @@
     z-index: 1;
   }
 
-  @media (min-width: @desktop-width) {
+
+
+  @container offer (width > 1239px) {
     .offer__wrapper {
       grid-template-areas: "photo data aside";
       grid-template-columns: 345px 1fr 235px;
       grid-template-rows: max-content;
+      column-gap: 20px;
+      box-shadow: none;
     }
 
     .offer__pictures {
       grid-area: photo;
+    }
 
+    .offer__content {
+      grid-area: data;
+      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 235px;
+    }
+
+    .offer__aside {
+      grid-area: aside;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .offer__pictures {
       & a {
         right: 855px;
       }
@@ -231,18 +222,12 @@
     }
 
     .offer__content {
-      grid-area: data;
-      grid-template-columns: 1fr;
       position: static;
       padding: 0;
     }
 
     .offer__pictures {
       position: static;
-    }
-
-    .offer__aside {
-      grid-area: aside;
     }
 
     .offer__pictures-footer {
