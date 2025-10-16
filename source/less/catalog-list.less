@@ -93,35 +93,6 @@
   }
 
   .catalog-list__item {
-    position: relative;
-    margin: -20px;
     border-radius: 5px;
-
-    &:hover {
-      box-shadow: 0 0 10px var(--light-gray);
-    }
-
-    &::after,
-    &:first-of-type::before {
-      position: absolute;
-      content: "";
-      left: 20px;
-      right: 20px;
-      height: 1px;
-      background-color: var(--light-gray);
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    &:first-of-type::before {
-      top: -1px;
-    }
-
-    &:hover::after,
-    &:first-of-type:hover::before {
-      display: none;
-    }
   }
 }

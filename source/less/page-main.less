@@ -1,6 +1,4 @@
 .page-main {
-  // display: flex;
-  // flex-direction: column;
   display: grid;
   row-gap: 40px;
 }
@@ -14,28 +12,14 @@
   row-gap: 40px;
 }
 
-// .page-main__header {
-//   position: relative;
-//   min-height: 154px;
-//   padding: 21px 0 20px 0;
-//   background-color: @light-green;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     bottom: 20px;
-//     right: 20px;
-//     width: 66px;
-//     height: 66px;
-//     background-image: url('../img/icons/building.svg');
-//     background-repeat: no-repeat;
-//   }
-// }
-
 .page-main__caption {
   margin: 0;
   line-height: 26px;
   font-size: 20px;
+}
+
+.page-main.catalog {
+  row-gap: 0;
 }
 
 @media (min-width: @desktop-width) {
@@ -54,18 +38,4 @@
     line-height: 42px;
     font-weight: 400;
   }
-
-  // .page-main__header {
-  //   min-height: 84px;
-  //   margin: 0;
-  //   padding: 52px 0 52px 0;
-
-  //   &::after {
-  //     right: 55px;
-  //     width: 112px;
-  //     bottom: 36px;
-  //     height: 112px;
-  //     background-size: 100%;
-  //   }
-  // }
 }
