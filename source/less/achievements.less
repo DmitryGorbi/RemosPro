@@ -1,0 +1,19 @@
+.achievements__item {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  column-gap: 10px;
+
+  & svg {
+    grid-row: 1/-1;
+    fill: none;
+    align-self: baseline;
+
+    & path {
+      stroke: var(--basic-green);
+    }
+  }
+
+  & dt {
+    grid-column: 2/3;
+  }
+}

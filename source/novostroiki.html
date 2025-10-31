@@ -562,59 +562,60 @@
       </div>
     </header>
     <main id="main" class="wrapper-content page-main catalog">
-      <header class="catalog__header wrapper-content">
+      <header class="catalog__header">
         <div class="catalog__title">
           <h1 class="catalog-caption">Новостройки от застройщика Брусника</h1>
           <p>Найдено 45 545 объявлений</p>
         </div>
         <div class="builder__objects builder-filter">
-          <form class="builder-filter__wrapper builder-filter__wrapper--new" action="">
+          <form class="builder-filter__container" action="">
             <div class="builder-filter__item">
-              <label class="" for="realtors__region">Застройщик</label>
+              <label class="builder-filter__title" for="builder">Застройщик</label>
               <div class="native-select">
-                <select name="region" id="realtors__region">
-                  <option value="moscow">Брусника</option>
-                  <option value="samara">А101</option>
+                <select name="builder" id="builder">
+                  <option value="nomatter">Неважно</option>
+                  <option value="brusnika">Брусника</option>
+                  <option value="a101">А101</option>
                 </select>
               </div>
             </div>
             <div class="builder-filter__item">
-              <label class="" for="realtors__region">Срок сдачи</label>
+              <label class="builder-filter__title" for="building__ready">Срок сдачи</label>
               <div class="native-select">
-                <select name="region" id="realtors__region">
-                  <option value="moscow">Неважно</option>
-                  <option value="samara">сдан</option>
-                  <option value="samara">2025</option>
-                  <option value="samara">4 кв 2025</option>
-                  <option value="samara">2026</option>
-                  <option value="samara">1 кв 2026</option>
-                  <option value="samara">2 кв 2025</option>
-                  <option value="samara">3 кв 2025</option>
-                  <option value="samara">4 кв 2025</option>
-                  <option value="samara">2027</option>
-                  <option value="samara">1 кв 2026</option>
-                  <option value="samara">2 кв 2026</option>
-                  <option value="samara">3 кв 2026</option>
-                  <option value="samara">4 кв 2026</option>
+                <select name="building__ready" id="building__ready">
+                  <option value="nomatter">Неважно</option>
+                  <option value="">сдан</option>
+                  <option value="">2025</option>
+                  <option value="">4 кв 2025</option>
+                  <option value="">2026</option>
+                  <option value="">1 кв 2026</option>
+                  <option value="">2 кв 2025</option>
+                  <option value="">3 кв 2025</option>
+                  <option value="">4 кв 2025</option>
+                  <option value="">2027</option>
+                  <option value="">1 кв 2026</option>
+                  <option value="">2 кв 2026</option>
+                  <option value="">3 кв 2026</option>
+                  <option value="">4 кв 2026</option>
                 </select>
               </div>
             </div>
             <div class="builder-filter__item">
-              <label class="" for="realtors__region">Класс ЖК</label>
+              <label class="builder-filter__title" for="building__status">Класс ЖК</label>
               <div class="native-select">
-                <select name="region" id="realtors__region">
-                  <option value="moscow">Неважно</option>
-                  <option value="samara">Эконом</option>
-                  <option value="samara">Комфорт</option>
-                  <option value="samara">Бизнес</option>
-                  <option value="samara">Премиум</option>
+                <select name="building__status" id="building__status">
+                  <option value="nomatter">Неважно</option>
+                  <option value="economy">Эконом</option>
+                  <option value="comfort">Комфорт</option>
+                  <option value="buisness">Бизнес</option>
+                  <option value="premium">Премиум</option>
                 </select>
               </div>
             </div>
             <div class="builder-filter__item">
               <fieldset class="builder-filter__fieldset">
-                <legend>Количество комнат</legend>
-                <ul class="builder-filter__fieldset-list">
+                <legend class="builder-filter__title">Количество комнат</legend>
+                <ul class="builder-filter__list">
                   <li>
                     <input id="studia__room" class="visually-hidden input" type="checkbox" />
                     <label for="studia__room">
@@ -628,27 +629,21 @@
                     </label>
                   </li>
                   <li>
-                    <input id="two__room" class="visually-hidden input" type="checkbox" />
-                    <label for="two__room">
+                    <input id="two__rooms" class="visually-hidden input" type="checkbox" />
+                    <label for="two__rooms">
                       <span class="filter-control">2</span>
                     </label>
                   </li>
                   <li>
-                    <input id="three__room" class="visually-hidden input" type="checkbox" />
-                    <label for="three__room">
+                    <input id="three__rooms" class="visually-hidden input" type="checkbox" />
+                    <label for="three__rooms">
                       <span class="filter-control">3</span>
                     </label>
                   </li>
                   <li>
-                    <input id="four__room" class="visually-hidden input" type="checkbox" />
-                    <label for="four__room">
+                    <input id="four__rooms" class="visually-hidden input" type="checkbox" />
+                    <label for="four__rooms">
                       <span class="filter-control">4</span>
-                    </label>
-                  </li>
-                  <li>
-                    <input id="four__room" class="visually-hidden input" type="checkbox" />
-                    <label for="four__room">
-                      <span class="filter-control">5+</span>
                     </label>
                   </li>
                 </ul>
@@ -662,12 +657,12 @@
                   <input id="area__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
                 </li>
                 <li>
-                  <label for="price__to" class="visually-hidden">до</label>
-                  <input id="price__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                  <label for="area__to" class="visually-hidden">до</label>
+                  <input id="area__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
                 </li>
               </ul>
             </div>
-            <div class="builder-filter__item builder-filter__item--price">
+            <div class="builder-filter__item">
               <p class="builder-filter__title">Цена</p>
               <ul class="builder-filter__list">
                 <li>
