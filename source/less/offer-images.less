@@ -1,4 +1,9 @@
+.offer-images {
+  position: relative;
+}
+
 .offer-images__wrapper {
+  position: relative;
   display: grid;
   gap: 8px;
   border-radius: 5px;
@@ -17,11 +22,20 @@
   &--free {
     grid-template-rows: 250px;
   }
+
+  & a {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  & a:hover + .slider .slider__control {
+    display: block;
+    z-index: 3;
+  }
 }
 
 .offer-images__main {
-  position: relative;
-
   & a {
     display: block;
     height: 100%;
@@ -67,7 +81,7 @@
   & a,
   div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     height: 100%;
     grid-template-rows: 100%;
     column-gap: 8px;

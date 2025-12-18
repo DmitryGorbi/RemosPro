@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    z-index: 2;
+    // z-index: 1;
   }
 }
 
@@ -24,23 +24,21 @@
   margin: 0 -15px;
   padding: 10px 15px 8px 15px;
   background-color: var(--white);
-  // z-index: 2;
 
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
-    // z-index: 2;
   }
 }
 
 .page-header__border {
   position: absolute;
-  top: 63px;
+  top: 62px;
   border-bottom: 1px solid var(--light-gray);
   width: 100vw;
   left: 50%;
   margin-left: -50vw;
-  // z-index: 2;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
     top: 58px;

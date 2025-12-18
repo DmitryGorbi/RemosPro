@@ -51,7 +51,6 @@
     display: flex;
     column-gap: 10px;
     height: auto;
-    z-index: 10;
   }
 
   .filter__content {
@@ -71,12 +70,8 @@
     flex-grow: 1;
   }
 
-  .button-filter[aria-expanded='false'] + .filter__fieldset {
+  .button-filter[aria-expanded="false"] + .filter__fieldset {
     display: none;
-  }
-
-  .filter__fieldset {
-    z-index: 2;
   }
 
   .filter__fieldset-deal,
@@ -88,6 +83,7 @@
     border: 1px solid var(--light-gray);
     background-color: var(--white);
     border-radius: 5px;
+    z-index: 2;
   }
 
   .filter__fieldset-deal,
@@ -107,7 +103,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
-    z-index: 1;
   }
 
   .filter__fieldset-type,

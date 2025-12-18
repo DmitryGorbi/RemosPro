@@ -8,9 +8,12 @@
   row-gap: 0;
 }
 
- .layout--map {
+.layout--map {
+  grid-template-rows: max-content 100%;
   row-gap: 0;
- }
+  // height: 100%;
+  overflow: hidden;
+}
 
 @media (max-width: @mobile-width-only) {
   .layout--catalog {
@@ -24,10 +27,7 @@
   }
 
   .layout--map {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
     row-gap: 40px;
-    overflow: hidden;
   }
 }

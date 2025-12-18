@@ -3,18 +3,30 @@
   height: 100%;
 }
 
+.page__body-map {
+  height: calc(100% - 62px);
+}
+
 .page__body {
   margin: 0;
   padding: 0;
   width: auto;
   font-size: 16px;
-  font-family: Roboto, 'Arial', 'Oswald', sans-serif;
+  font-family: Roboto, "Arial", "Oswald", sans-serif;
   font-weight: 400;
   color: var(--basic-black);
   background-color: var(--white);
   overflow-x: hidden;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .page__body {
     font-size: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body-map {
+    height: 100%;
   }
 }

@@ -1,16 +1,7 @@
 .map-card {
   height: 100%;
 
-  .map-card__wrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    height: 100%;
-  }
-
   .offer-images__wrapper {
-    position: relative;
-
     &--paid {
       grid-template-rows: 190px 55px;
     }
@@ -19,32 +10,15 @@
       grid-template-rows: 190px;
     }
   }
+}
 
-  & .map-card__phone {
-    margin-top: auto;
-
-    & a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      text-align: center;
-      color: var(--white);
-      background-color: var(--basic-green);
-      border-radius: 5px;
-    }
-  }
+.map-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  height: 100%;
 }
 
 .map-card__pictures {
   order: -1;
-  & a {
-    position: absolute;
-    inset: 0;
-    // z-index: 1;
-  }
-
-  & .offer-images__large {
-    height: 100%;
-  }
 }

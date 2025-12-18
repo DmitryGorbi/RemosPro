@@ -1,5 +1,4 @@
 .edv-promo {
-  position: relative;
   display: grid;
   grid-template-rows: 180px;
   border-radius: 10px;
@@ -28,8 +27,6 @@
   flex-direction: column;
   padding: 15px 15px 15px 20px;
   color: var(--white);
-  order: 0;
-  z-index: 2;
 
   & p:not(:first-of-type) {
     margin-top: 3px;
@@ -70,18 +67,6 @@
   border-radius: 5px;
 }
 
-.edv-promo-close {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 25px;
-  height: 25px;
-  z-index: 2;
-  border-radius: 50%;
-  background-color: var(--extra-light-gray);
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbD0iIzMzMzMzMyIgZD0iTTEzLjc3ODUgNC4yMjkwOEMxMy43MDgzIDQuMTU4NzcgMTMuNjI1IDQuMTAyOTggMTMuNTMzMiA0LjA2NDkyQzEzLjQ0MTUgNC4wMjY4NiAxMy4zNDMxIDQuMDA3MjYgMTMuMjQzOCA0LjAwNzI2QzEzLjE0NDQgNC4wMDcyNiAxMy4wNDYxIDQuMDI2ODYgMTIuOTU0MyA0LjA2NDkyQzEyLjg2MjUgNC4xMDI5OCAxMi43NzkyIDQuMTU4NzcgMTIuNzA5IDQuMjI5MDhMOSA3LjkzMDUzTDUuMjkwOTcgNC4yMjE1QzUuMjIwNzUgNC4xNTEyNyA1LjEzNzM4IDQuMDk1NTcgNS4wNDU2MyA0LjA1NzU2QzQuOTUzODggNC4wMTk1NiA0Ljg1NTU0IDQgNC43NTYyMyA0QzQuNjU2OTIgNCA0LjU1ODU5IDQuMDE5NTYgNC40NjY4MyA0LjA1NzU2QzQuMzc1MDggNC4wOTU1NyA0LjI5MTcyIDQuMTUxMjcgNC4yMjE1IDQuMjIxNUM0LjE1MTI3IDQuMjkxNzIgNC4wOTU1NyA0LjM3NTA4IDQuMDU3NTYgNC40NjY4M0M0LjAxOTU2IDQuNTU4NTkgNCA0LjY1NjkyIDQgNC43NTYyM0M0IDQuODU1NTQgNC4wMTk1NiA0Ljk1Mzg4IDQuMDU3NTYgNS4wNDU2M0M0LjA5NTU3IDUuMTM3MzggNC4xNTEyNyA1LjIyMDc1IDQuMjIxNSA1LjI5MDk3TDcuOTMwNTMgOUw0LjIyMTUgMTIuNzA5QzQuMTUxMjcgMTIuNzc5MyA0LjA5NTU3IDEyLjg2MjYgNC4wNTc1NiAxMi45NTQ0QzQuMDE5NTYgMTMuMDQ2MSA0IDEzLjE0NDUgNCAxMy4yNDM4QzQgMTMuMzQzMSA0LjAxOTU2IDEzLjQ0MTQgNC4wNTc1NiAxMy41MzMyQzQuMDk1NTcgMTMuNjI0OSA0LjE1MTI3IDEzLjcwODMgNC4yMjE1IDEzLjc3ODVDNC4yOTE3MiAxMy44NDg3IDQuMzc1MDggMTMuOTA0NCA0LjQ2NjgzIDEzLjk0MjRDNC41NTg1OSAxMy45ODA0IDQuNjU2OTIgMTQgNC43NTYyMyAxNEM0Ljg1NTU0IDE0IDQuOTUzODggMTMuOTgwNCA1LjA0NTYzIDEzLjk0MjRDNS4xMzczOCAxMy45MDQ0IDUuMjIwNzUgMTMuODQ4NyA1LjI5MDk3IDEzLjc3ODVMOSAxMC4wNjk1TDEyLjcwOSAxMy43Nzg1QzEyLjc3OTMgMTMuODQ4NyAxMi44NjI2IDEzLjkwNDQgMTIuOTU0NCAxMy45NDI0QzEzLjA0NjEgMTMuOTgwNCAxMy4xNDQ1IDE0IDEzLjI0MzggMTRDMTMuMzQzMSAxNCAxMy40NDE0IDEzLjk4MDQgMTMuNTMzMiAxMy45NDI0QzEzLjYyNDkgMTMuOTA0NCAxMy43MDgzIDEzLjg0ODcgMTMuNzc4NSAxMy43Nzg1QzEzLjg0ODcgMTMuNzA4MyAxMy45MDQ0IDEzLjYyNDkgMTMuOTQyNCAxMy41MzMyQzEzLjk4MDQgMTMuNDQxNCAxNCAxMy4zNDMxIDE0IDEzLjI0MzhDMTQgMTMuMTQ0NSAxMy45ODA0IDEzLjA0NjEgMTMuOTQyNCAxMi45NTQ0QzEzLjkwNDQgMTIuODYyNiAxMy44NDg3IDEyLjc3OTMgMTMuNzc4NSAxMi43MDlMMTAuMDY5NSA5TDEzLjc3ODUgNS4yOTA5N0MxNC4wNjY3IDUuMDAyNzQgMTQuMDY2NyA0LjUxNzMxIDEzLjc3ODUgNC4yMjkwOFoiLz4KPC9zdmc+Cg==);
-  background-position: center;
-}
 
 @media (min-width: @tablet-width) {
   .edv-promo__dev {
@@ -120,120 +105,6 @@
   }
 }
 
-.edv-promo-catalog {
-  & .offer-properties__description {
-    display: block;
-    font-size: 13px;
-    color: var(--gray);
-    line-height: 17px;
-
-    & span {
-      color: black;
-    }
-  }
-}
-
-.offer__content--adv {
-  & .edv-promo-close {
-    display: none;
-  }
-}
-
-.edv-promo-catalog__price {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 19px;
-}
-
-.offer__aside--adv {
-  grid-template-columns: 1fr !important;
-}
-
-.edv-footer__title {
-  // font-size: 18px;
-}
-
-@media (min-width: @desktop-width) {
-  .offer__aside--adv {
-    grid-template-columns: 1fr 35px;
-
-    & .seller {
-      background-color: var(--white);
-    }
-  }
-
-  .edv-promo-catalog__address {
-  }
-
-  .offer__content--adv {
-    & .edv-promo-close {
-      display: block;
-      background-color: var(--white);
-    }
-  }
-
-  // index
-
-  .index-header-ads {
-    height: 405px;
-
-    & h2 {
-      flex-direction: row;
-      column-gap: 20px;
-      margin-bottom: 35px;
-    }
-  }
-
-  .index-header__aside {
-    position: relative;
-    display: grid;
-    grid-template-columns: max-content max-content;
-    column-gap: 15px;
-    margin-top: 30px;
-    padding-top: 30px;
-    color: var(--white);
-
-    & h3 {
-      margin-bottom: 3px;
-      font-size: 22px;
-    }
-
-    & .index-header__aside-logo {
-      height: min-content;
-      background-color: var(--white);
-      padding: 3px 3px 0 3px;
-      border-radius: 5px;
-    }
-
-    & .index-header__aside-info {
-      display: grid;
-      width: max-content;
-
-      & div {
-        display: flex;
-        align-items: center;
-        column-gap: 20px;
-        margin-top: 7px;
-      }
-    }
-
-    & a:first-of-type {
-      display: inline-block;
-      padding: 3px 15px;
-      width: max-content;
-      border-radius: 14px;
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .index-header__aside-note {
-      position: absolute;
-      padding: 2px 10px;
-      font-size: 14px;
-      border-radius: 5px;
-      background-color: tomato;
-    }
-  }
-}
 
 // card slider
 
@@ -364,4 +235,3 @@
     }
   }
 }
-
