@@ -55,19 +55,19 @@
   margin-bottom: 15px;
 }
 
-.card__author .button-phone,
-.card__author .button-main {
+.card__author .button-phone {
   position: fixed;
   bottom: 10px;
-  display: block;
+  height: 40px;
   width: calc(100% - 30px);
-  z-index: 3;
+  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
   .card {
     margin-top: 0;
   }
+
   .card__gk {
     margin-top: 3px;
     font-size: 26px;
@@ -86,8 +86,7 @@
     margin-top: 25px;
   }
 
-  .card__author .button-phone,
-  .card__author .button-main {
+  .card__author .button-phone {
     width: calc(100% - 80px);
   }
 }
@@ -97,6 +96,10 @@
     display: grid;
     grid-template-columns: 775px 400px;
     column-gap: 25px;
+
+    & .seller__wrapper {
+      flex-direction: row;
+    }
   }
 
   .card__gk {
@@ -173,13 +176,9 @@
     grid-column: 1/3;
   }
 
-  .card__author .button-main {
-    position: static;
-    width: 100%;
-  }
-
   .card__author .button-phone {
     position: static;
+    margin-top: 15px;
     width: 100%;
   }
 }

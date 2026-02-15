@@ -92,12 +92,17 @@
     font-weight: 500;
   }
 
+  & .button-main {
+    padding: 0 15px;
+    height: 45px;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 5px;
 
-    & .button {
+    & .button-main {
       grid-column: 2/3;
       margin: auto auto auto auto;
     }
@@ -107,9 +112,10 @@
     grid-template-columns: 1fr max-content max-content;
     column-gap: 40px;
 
-    & .button {
+    & .button-main {
       grid-column: 3/4;
       margin: auto 0 0 0;
+      height: 45px;
     }
   }
 }

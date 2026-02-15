@@ -7,19 +7,12 @@
 }
 
 .offer-promo__wrapper {
+  position: relative;
   display: grid;
   row-gap: 15px;
-}
-
-.offer-promo__description {
-  display: block;
-  font-size: 13px;
-  color: var(--gray);
-  line-height: 17px;
-
-  & span {
-    color: var(--basic-black);
-  }
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
 }
 
 .offer-promo__pictures {
@@ -33,21 +26,56 @@
   }
 }
 
-.offer-promo__price {
-  margin-top: 20px;
-  font-weight: 500;
-  font-size: 19px;
+.offer-promo__content {
+  display: flex;
+  flex-direction: column;
 }
 
-.offer-promo__seller .seller__wrapper {
-  flex-direction: row;
-  align-items: center;
+.offer-promo__address {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.offer-promo__description {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.offer-promo__message {
+  margin-top: 5px;
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 17px;
+
+  & span {
+    background-color: var(--gray);
+    color: var(--basic-black);
+    border-radius: 5px;
+    padding: 0 3px 0 5px;
+  }
+}
+
+.offer-promo__advertiser {
+  position: absolute;
+  right: 10px;
+
+  &-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.offer-promo__advertiser-phone {
+  display: none;
 }
 
 @container promo (width > 1180px) {
   .offer-promo__wrapper {
     grid-template-columns: 345px 1fr 235px;
     column-gap: 20px;
+    padding: 0;
+    border: none;
 
     & h3 {
       font-size: 21px;
@@ -58,16 +86,35 @@
     height: 282px;
   }
 
-  .offer-promo__seller .seller__wrapper {
-    flex-direction: column;
+  .offer-promo__message {
+    margin-top: auto;
   }
 
-  .offer-promo__aside {
+  .offer-promo__advertiser {
+    right: 45px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     padding: 10px;
     width: 190px;
 
-    .offer-tel {
+    & .offer-tel {
       height: 35px;
     }
+
+    &-logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .offer-promo__advertiser-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    color: var(--white);
+    background-color: var(--basic-green);
+    border-radius: 5px;
   }
 }

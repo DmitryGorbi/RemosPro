@@ -93,10 +93,26 @@ const closeSelect = (item, icon) => {
 if (document.querySelector(".catalog-menu__filter") && document.querySelector(".main-search--adaptive")) {
   const filterMobile = document.querySelector(".main-search--adaptive");
   const mobileFilterButton = document.querySelector(".catalog-menu__filter");
-  console.log(filterMobile);
+  // console.log(filterMobile);
   mobileFilterButton.addEventListener("click", (evt) => {
     evt.preventDefault();
     filterMobile.classList.toggle("show");
+  });
+}
+
+if (document.querySelector(".main-search--adaptive")) {
+  const filterMobile = document.querySelector(".main-search--adaptive");
+  const mapFilterButton = document.querySelector(".button-map-filter");
+  const filterButtonClose = filterMobile.querySelector(".main-search__footer .button-close");
+
+  mapFilterButton.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    filterMobile.classList.add("show");
+  });
+
+  filterButtonClose.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    filterMobile.classList.remove("show");
   });
 }
 

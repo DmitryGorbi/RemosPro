@@ -563,6 +563,36 @@
     <main class="page__body-map catalog-map">
       <div class="catalog-map__header wrapper-content">
         <h1 class="visually-hidden">Продажа квартир в Московской области на карте</h1>
+        <div class="catalog-map__nav">
+          <ul class="catalog-map__nav-list">
+            <li>
+              <button class="button button-map-filter" type="button">
+                <svg width="19" height="19" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                  <path
+                    d="M17.2881 20H36M17.2881 20C17.2881 22.2593 15.4669 24.0909 13.2203 24.0909C10.9738 24.0909 9.15254 22.2593 9.15254 20M17.2881 20C17.2881 17.7407 15.4669 15.9091 13.2203 15.9091C10.9738 15.9091 9.15254 17.7407 9.15254 20M4 20H9.15254M22.7119 9.09091H4M22.7119 9.09091C22.7119 11.3502 24.5331 13.1818 26.7797 13.1818C29.0262 13.1818 30.8475 11.3502 30.8475 9.09091M22.7119 9.09091C22.7119 6.83156 24.5331 5 26.7797 5C29.0262 5 30.8475 6.83156 30.8475 9.09091M36 9.09091H30.8475M22.7119 30.9091H4M22.7119 30.9091C22.7119 33.1684 24.5331 35 26.7797 35C29.0262 35 30.8475 33.1684 30.8475 30.9091M22.7119 30.9091C22.7119 28.6498 24.5331 26.8182 26.7797 26.8182C29.0262 26.8182 30.8475 28.6498 30.8475 30.9091M36 30.9091H30.8475"
+                    stroke-width="2.6"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Фильтры</span>
+              </button>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="19" height="19" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                  <path
+                    d="M25.7627 9.81818L14.2373 4M25.7627 9.81818L32.8039 6.17258C33.2431 5.94517 33.7329 5.8355 34.2262 5.8541C34.7195 5.8727 35.1997 6.01894 35.621 6.27879C36.0422 6.53864 36.3902 6.9034 36.6317 7.33808C36.8732 7.77275 37 8.26278 37 8.76116V28.4044C37 28.9396 36.8538 29.4644 36.5774 29.9211C36.301 30.3778 35.9052 30.7487 35.4335 30.9929L25.7627 36M25.7627 9.81818V36M14.2373 4L4.56652 9.00713C4.09482 9.25134 3.699 9.6222 3.42261 10.0789C3.14623 10.5356 2.99999 11.0604 3 11.5956V31.2388C3 31.7372 3.12682 32.2272 3.3683 32.6619C3.60978 33.0966 3.95782 33.4614 4.37904 33.7212C4.80026 33.9811 5.28055 34.1273 5.77384 34.1459C6.26712 34.1645 6.75687 34.0548 7.19612 33.8274L14.2373 30.1818M14.2373 4V30.1818M14.2373 30.1818L25.7627 36"
+                    stroke-width="2.6"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+                <span>Список</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <section class="catalog-map__filter main-search">
           <h2 class="visually-hidden">Фильтр поиска недвижимости</h2>
           <form class="filter main-search__form" action="https://echo.htmlacademy.ru/courses">
@@ -2506,8 +2536,8 @@
               <li>
                 <article class="map-card">
                   <div class="map-card__wrapper">
-                    <div class="map-card__content offer-properties offer-properties--map">
-                      <h3 class="offer-properties__title">
+                    <section class="map-card__content card-data">
+                      <h3 class="card-data__title">
                         <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
                           <span
                             >4-комн. квартира
@@ -2519,35 +2549,37 @@
                           <span class="link-click-area"></span>
                         </a>
                       </h3>
-                      <address class="offer-properties__address">Москва, 1-й Иртышский пр-д, д. 1</address>
-                      <p class="offer-properties__subway subway">
-                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                        </svg>
-                        <span class="visually-hidden">метро </span>
-                        <span>Бульвар Рокосовского</span>
-                        <span>~ 8 мин.</span>
-                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                      </p>
-                      <p class="offer-properties__gk">ЖК «Квартал Метроном»</p>
-                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                      <div class="card-data__geo">
+                        <address class="card-data__address">Москва, 1-й Иртышский пр-д, д. 1</address>
+                        <p class="card-data__subway subway">
+                          <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
+                            <use xlink:href="img/icons/sprite_2.svg#subway__icon__small"></use>
+                          </svg>
+                          <span class="visually-hidden">метро </span>
+                          <span>Бульвар Рокосовского</span>
+                          <span>~ 8 мин.</span>
+                          <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+                        </p>
+                      </div>
+                      <p class="card-data__gk">ЖК «Квартал Метроном»</p>
+                      <section class="card-data__benefits offer-qualities offer-qualities--map">
                         <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
                         <ul>
                           <li>От застройщика</li>
-                          <li class="offer-qualities__dev">Брусника</li>
+                          <li class="offer-qualities__dev">А101</li>
                           <li>Скидка 28%</li>
                           <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
                           <!-- <li>ИЖС</li> -->
                         </ul>
                       </section>
-                      <section class="offer-properties__price offer-price">
+                      <section class="card-data__price offer-price">
                         <h4 class="visually-hidden">Цена в объявлении</h4>
                         <div class="offer-price__value">
                           <data value="16700000">166 700 000 &#x20bd;</data>
                           <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
                         </div>
                       </section>
-                      <button class="button button-circle icon-color" type="button">
+                      <button class="card-data__like button button-circle icon-color" type="button">
                         <svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                           <path
                             d="M21.6473 9.47225C24.9306 6.17598 30.254 6.17598 33.5374 9.47225C36.8208 12.7685 36.8209 18.1127 33.5376 21.409L19.9995 35L6.46237 21.409C3.17914 18.1127 3.17921 12.7685 6.46257 9.47225C9.74594 6.17592 15.0694 6.17592 18.3527 9.47225L20 11.1259L21.6473 9.47225Z"
@@ -2558,7 +2590,7 @@
                         </svg>
                         <span class="visually-hidden">В избранное</span>
                       </button>
-                    </div>
+                    </section>
                     <section class="map-card__pictures offer-images">
                       <h4 class="visually-hidden">Фотографии объявления</h4>
                       <div class="offer-images__wrapper offer-images__wrapper--paid">
@@ -2604,7 +2636,7 @@
                         </div>
                       </div>
                     </section>
-                    <div class="map-card__phone offer-tel">
+                    <div class="map-card__contacts offer-tel">
                       <a href="tel:">Контакты</a>
                     </div>
                   </div>
@@ -2614,66 +2646,23 @@
                 <aside class="map-card offer-promo">
                   <div class="offer-promo__wrapper">
                     <div class="offer-promo__pictures">
-                      <a href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/" title="ЖК квартал Авиатор" target="_blank" rel="noopener noreferrer">
-                        <picture>
-                          <img src="img/adv/aviator.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" loading="lazy" />
-                        </picture>
-                      </a>
+                      <picture>
+                        <img src="img/bldg/front__medium.webp" alt="Жилой комплекс Дом на Зорге" loading="lazy" />
+                      </picture>
                     </div>
-                    <section class="offer-promo__content offer-properties">
-                      <section class="offer-properties">
-                        <h3>
-                          <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">ЖК квартал «Авиатор»</a>
-                        </h3>
-                        <address class="offer-properties__address">Новосибирск, ул. Аэропорт</address>
-                        <p class="offer-promo__address">квартал вблизи Красного проспекта</p>
-                        <p class="offer-promo__price">Квартиры от 9,9 млн руб</p>
-                        <p class="offer-promo__description"><span>Реклама.</span> ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф</p>
-                      </section>
-                    </section>
-                    <div class="offer-promo__aside">
-                      <div class="offer-promo__seller seller">
-                        <div class="seller__wrapper">
-                          <div class="seller__info">
-                            <p class="seller__type">Застройщик</p>
-                            <p class="seller__name">
-                              <svg class="" width="150" height="10" viewBox="0 0 150 10" fill="red" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                  <path
-                                    d="M0.53125 0.182129H16.0259V2.50585H3.87576V3.7968H13.0045C15.4442 3.7968 16.8984 4.90549 16.8984 6.77357C16.8984 8.64166 15.4604 9.75036 13.0045 9.75036H0.53125V0.182129ZM3.87576 6.05976V7.51777H12.3905C13.1338 7.51777 13.4731 7.30514 13.4731 6.78876C13.4731 6.28757 13.1338 6.05976 12.3905 6.05976H3.87576Z"
-                                  ></path>
-                                  <path
-                                    d="M18.8535 0.182129H30.1472C33.2656 0.182129 35.1236 1.54902 35.1236 3.85755C35.1236 6.16607 33.2817 7.53296 30.1472 7.53296H22.3434V9.76555H18.8535V0.182129ZM22.3596 2.65772V5.08775H29.614C30.9875 5.08775 31.5852 4.72324 31.5852 3.88792C31.5852 3.02222 30.9875 2.65772 29.614 2.65772H22.3596Z"
-                                  ></path>
-                                  <path d="M42.0891 6.95583L34.8184 0.182129H39.0354L44.1572 4.89031L48.7135 0.182129H52.8336L43.5593 9.76555H39.3424L42.0891 6.95583Z"></path>
-                                  <path
-                                    d="M61.3797 0C66.3883 0 69.3613 1.12389 70.1207 3.26535L66.3561 3.96398C65.9198 2.93122 64.3849 2.4604 61.3959 2.4604C57.3081 2.4604 55.4985 3.21978 55.4985 4.98155C55.4985 6.72814 57.2919 7.50271 61.3959 7.50271C64.4657 7.50271 66.0006 7.0167 66.3723 5.93837L70.0883 6.60664C69.2805 8.83922 66.4045 9.96311 61.3959 9.96311C55.2884 9.96311 51.9278 8.18615 51.9278 4.98155C51.9116 1.76177 55.2723 0 61.3797 0Z"
-                                  ></path>
-                                  <path d="M71.7207 0.182129H75.2106V3.64492H85.8743V0.182129H89.3804V9.76555H85.8743V6.12051H75.2106V9.76555H71.7207V0.182129Z"></path>
-                                  <path d="M91.9492 0.182129H95.4392V6.71283L105.747 0.182129H109.254V9.76555H105.747V3.23485L95.4392 9.76555H91.9492V0.182129Z"></path>
-                                  <path d="M111.709 0.182129H115.199V4.17649L123.537 0.182129H129.224L119.594 4.69287L129.466 9.76555H123.375L115.199 5.55856V9.76555H111.709V0.182129Z"></path>
-                                  <path
-                                    d="M139.306 2.55141L142.021 5.83194H136.592L139.306 2.55141ZM137.561 0.182129L129.289 9.76555H133.344L134.734 8.0949H143.894L145.285 9.76555H149.469L141.197 0.182129H137.561Z"
-                                  ></path>
-                                </g>
-                              </svg>
-                            </p>
-                          </div>
-                          <div class="seller__avatar">
-                            <svg width="40" height="40" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M92.5 0C41.3553 0 0 41.4776 0 92.55C0 143.722 41.4552 185 92.4001 185C143.345 185 185 143.522 185 92.55C185 41.2777 143.645 0 92.5 0ZM92.5 33.382C108.283 33.382 123.167 39.4787 134.255 50.7726C145.343 61.8666 151.636 76.7585 151.636 92.55C151.636 108.341 145.543 123.233 134.255 134.327C123.167 145.421 108.283 151.718 92.5 151.718C76.7171 151.718 61.8332 145.621 50.7451 134.327C39.6571 123.133 33.3639 108.341 33.3639 92.55C33.3639 76.7585 39.6571 61.8666 50.7451 50.6726C61.8332 39.4787 76.7171 33.382 92.5 33.382Z"
-                                fill="#EE3D24"
-                              ></path>
-                              <path
-                                d="M129.06 70.262C129.06 82.4554 119.171 92.45 106.884 92.45C94.6976 92.45 84.7084 82.5554 84.7084 70.262C84.7084 58.0686 94.5977 48.074 106.884 48.074C119.271 48.074 129.06 58.0686 129.06 70.262Z"
-                                fill="#EE3D24"
-                              ></path>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="offer-tel">
-                          <a href="#">Узнать подробности</a>
+                    <div class="offer-promo__content">
+                      <h3>
+                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
+                          <span>ЖК «Дом на Зорге</span>
+                          <span class="link-click-area"></span>
+                        </a>
+                      </h3>
+                      <address class="offer-promo__address">Москва, ул. Аэропорт</address>
+                      <p class="offer-promo__description">Квартиры от 9,9 млн руб</p>
+                      <p class="offer-promo__message"><span>Реклама.</span> ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф</p>
+                      <div class="offer-promo__advertiser">
+                        <div class="offer-promo__advertiser-logo">
+                          <img src="img/index/logo__a101.webp" alt="Логотип застройщика а101" width="40" height="40" />
                         </div>
                       </div>
                     </div>
@@ -2683,8 +2672,8 @@
               <li>
                 <article class="map-card">
                   <div class="map-card__wrapper">
-                    <div class="map-card__content offer-properties offer-properties--map">
-                      <h3 class="offer-properties__title">
+                    <section class="map-card__content card-data">
+                      <h3 class="card-data__title">
                         <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
                           <span
                             >4-комн. квартира
@@ -2696,65 +2685,47 @@
                           <span class="link-click-area"></span>
                         </a>
                       </h3>
-                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
-                      <p class="offer-properties__subway subway">
-                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                        </svg>
-                        <span class="visually-hidden">метро </span>
-                        <span>Павелецкая</span>
-                        <span>~ 8 мин.</span>
-                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                      </p>
-                      <p class="offer-properties__gk">ЖК «Дом А»</p>
-                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
+                      <div class="card-data__geo">
+                        <address class="card-data__address">Москва, 1-й Иртышский пр-д, д. 1</address>
+                        <p class="card-data__subway subway">
+                          <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
+                            <use xlink:href="img/icons/sprite_2.svg#subway__icon__small"></use>
+                          </svg>
+                          <span class="visually-hidden">метро </span>
+                          <span>Бульвар Рокосовского</span>
+                          <span>~ 8 мин.</span>
+                          <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
+                        </p>
+                      </div>
+                      <p class="card-data__gk">ЖК «Квартал Метроном»</p>
+                      <section class="card-data__benefits offer-qualities offer-qualities--map">
                         <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
                         <ul>
                           <li>От застройщика</li>
-                          <li class="offer-qualities__dev">Брусника</li>
+                          <li class="offer-qualities__dev">А101</li>
+                          <li>Скидка 28%</li>
                           <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                          <!-- <li>С ремонтом</li> -->
-                          <!-- <li>ИЖС</li> -->
                         </ul>
                       </section>
-                      <section class="offer-properties__price offer-price">
+                      <section class="card-data__price offer-price">
                         <h4 class="visually-hidden">Цена в объявлении</h4>
                         <div class="offer-price__value">
                           <data value="16700000">166 700 000 &#x20bd;</data>
-                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
-                        </div>
-                        <div class="offer-price__history">
-                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                            <svg width="35" height="35" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                            </svg>
-                            <span class="label-popup">Показать историю цены</span>
-                          </button>
-                          <section id="price__chart" class="offer-price__chart price-chart">
-                            <h5>История цены объявления</h5>
-                            <button class="button button-close" type="button">
-                              <span class="visually-hidden">Закрыть окно</span>
-                            </button>
-                            <ul>
-                              <li>
-                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                            </ul>
-                          </section>
+                          <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data>
                         </div>
                       </section>
-                    </div>
+                      <button class="card-data__like button button-circle" type="button">
+                        <svg width="25" height="25" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path
+                            d="M21.6473 9.47225C24.9306 6.17598 30.254 6.17598 33.5374 9.47225C36.8208 12.7685 36.8209 18.1127 33.5376 21.409L19.9995 35L6.46237 21.409C3.17914 18.1127 3.17921 12.7685 6.46257 9.47225C9.74594 6.17592 15.0694 6.17592 18.3527 9.47225L20 11.1259L21.6473 9.47225Z"
+                            stroke="black"
+                            stroke-width="3.6"
+                            stroke-miterlimit="10"
+                          />
+                        </svg>
+                        <span class="visually-hidden">В избранное</span>
+                      </button>
+                    </section>
                     <section class="map-card__pictures offer-images">
                       <h4 class="visually-hidden">Фотографии объявления</h4>
                       <div class="offer-images__wrapper offer-images__wrapper--paid">
@@ -2768,16 +2739,10 @@
                         <div class="offer-images__main slider">
                           <div class="offer-images__large">
                             <picture>
-                              <img src="img/adv/doma_1.jpg" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
+                              <img src="img/adv/metronom_1.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
                             </picture>
                           </div>
                           <span class="offer-images__camera"></span>
-                          <button class="button button-circle button-circle--dark icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="visually-hidden">В избранное</span>
-                          </button>
                           <button class="button slider__control slider__control--left" type="button">
                             <span class="visually-hidden">Предыдущее изображение</span>
                             <span></span>
@@ -2794,283 +2759,19 @@
                         <div class="offer-images__thumbnails">
                           <div>
                             <picture>
-                              <img src="img/adv/doma_2.jpg" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
+                              <img src="img/adv/metronom_2.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
                             </picture>
                             <picture>
-                              <img src="img/adv/doma_3.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
+                              <img src="img/adv/metronom_3.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
                             </picture>
                             <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
+                              <img src="img/adv/metronom_4.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
                             </picture>
                           </div>
                         </div>
                       </div>
                     </section>
-                    <div class="map-card__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article class="map-card">
-                  <div class="map-card__wrapper">
-                    <div class="map-card__content offer-properties offer-properties--map">
-                      <h3 class="offer-properties__title">
-                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
-                          <span
-                            >4-комн. квартира
-                            <span class="separator">•</span>
-                            <span>90 м²</span>
-                            <span class="separator">•</span>
-                            <span>8/8 этаж</span>
-                          </span>
-                          <span class="link-click-area"></span>
-                        </a>
-                      </h3>
-                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
-                      <p class="offer-properties__subway subway">
-                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                        </svg>
-                        <span class="visually-hidden">метро </span>
-                        <span>Фонвизинская</span>
-                        <span>~ 8 мин.</span>
-                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                      </p>
-                      <p class="offer-properties__gk">ЖК «МОНС»</p>
-                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
-                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                        <ul>
-                          <li>От застройщика</li>
-                          <li class="offer-qualities__dev">Брусника</li>
-                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                          <!-- <li>С ремонтом</li> -->
-                          <!-- <li>ИЖС</li> -->
-                        </ul>
-                      </section>
-                      <section class="offer-properties__price offer-price">
-                        <h4 class="visually-hidden">Цена в объявлении</h4>
-                        <div class="offer-price__value">
-                          <data value="16700000">166 700 000 &#x20bd;</data>
-                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
-                        </div>
-                        <div class="offer-price__history">
-                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                            <svg width="35" height="35" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                            </svg>
-                            <span class="label-popup">Показать историю цены</span>
-                          </button>
-                          <section id="price__chart" class="offer-price__chart price-chart">
-                            <h5>История цены объявления</h5>
-                            <button class="button button-close" type="button">
-                              <span class="visually-hidden">Закрыть окно</span>
-                            </button>
-                            <ul>
-                              <li>
-                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                            </ul>
-                          </section>
-                        </div>
-                      </section>
-                    </div>
-                    <section class="map-card__pictures offer-images">
-                      <h4 class="visually-hidden">Фотографии объявления</h4>
-                      <div class="offer-images__wrapper offer-images__wrapper--paid">
-                        <a
-                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
-                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          tabindex="-1"
-                        ></a>
-                        <div class="offer-images__main slider">
-                          <div class="offer-images__large">
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
-                            </picture>
-                          </div>
-                          <span class="offer-images__camera"></span>
-                          <button class="button button-circle button-circle--dark icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="visually-hidden">В избранное</span>
-                          </button>
-                          <button class="button slider__control slider__control--left" type="button">
-                            <span class="visually-hidden">Предыдущее изображение</span>
-                            <span></span>
-                          </button>
-                          <button class="button slider__control slider__control--right" type="button">
-                            <span class="visually-hidden">Следующее изображение</span>
-                            <span></span>
-                          </button>
-                          <div class="offer-images__counter">
-                            <span class="visually-hidden">Нумерация фотографий</span>
-                            <span>2/15</span>
-                          </div>
-                        </div>
-                        <div class="offer-images__thumbnails">
-                          <div>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
-                            </picture>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
-                            </picture>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
-                            </picture>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <div class="map-card__phone">
-                      <a href="tel:">Контакты</a>
-                    </div>
-                  </div>
-                </article>
-              </li>
-              <li>
-                <article class="map-card">
-                  <div class="map-card__wrapper">
-                    <div class="map-card__content offer-properties offer-properties--map">
-                      <h3 class="offer-properties__title">
-                        <a href="https://www.remospro.ru/catalog/sale/apartment-new/8550856/" target="_blank" rel="noopener noreferrer">
-                          <span
-                            >4-комн. квартира
-                            <span class="separator">•</span>
-                            <span>90 м²</span>
-                            <span class="separator">•</span>
-                            <span>8/8 этаж</span>
-                          </span>
-                          <span class="link-click-area"></span>
-                        </a>
-                      </h3>
-                      <address class="offer-properties__address">Московская область, Видное, ул. Вишневской, 12к1</address>
-                      <p class="offer-properties__subway subway">
-                        <svg class="subway__icon-line-1" width="18" height="13" aria-hidden="true">
-                          <use xlink:href="img/icons/sprite_2.svg#subway__icon"></use>
-                        </svg>
-                        <span class="visually-hidden">метро </span>
-                        <span>Бульвар Рокосовского</span>
-                        <span>~ 8 мин.</span>
-                        <span class="subway__distance subway__distance--foot"><span class="visually-hidden">пешком от метро</span></span>
-                      </p>
-                      <p class="offer-properties__gk">ЖК «Авиатор»</p>
-                      <section class="offer-properties__benefits offer-qualities offer-qualities--map">
-                        <h4 class="visually-hidden">Особенности и преимущества объявления</h4>
-                        <ul>
-                          <li>От застройщика</li>
-                          <li class="offer-qualities__dev">Брусника</li>
-                          <li>Сдача: <time datetime="2025-W24">2 кв. 2025 г.</time></li>
-                          <!-- <li>С ремонтом</li> -->
-                          <!-- <li>ИЖС</li> -->
-                        </ul>
-                      </section>
-                      <section class="offer-properties__price offer-price">
-                        <h4 class="visually-hidden">Цена в объявлении</h4>
-                        <div class="offer-price__value">
-                          <data value="16700000">166 700 000 &#x20bd;</data>
-                          <!-- <data value="185555">185 555 &#x20bd;/<abbr title="квадратный метр">м²</abbr></data> -->
-                        </div>
-                        <div class="offer-price__history">
-                          <button class="button offer-price__control" type="button" aria-expanded="false" aria-controls="price__chart">
-                            <svg width="35" height="35" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#price__bottom"></use>
-                            </svg>
-                            <span class="label-popup">Показать историю цены</span>
-                          </button>
-                          <section id="price__chart" class="offer-price__chart price-chart">
-                            <h5>История цены объявления</h5>
-                            <button class="button button-close" type="button">
-                              <span class="visually-hidden">Закрыть окно</span>
-                            </button>
-                            <ul>
-                              <li>
-                                <span>Дата публикации <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__down">- <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                              <li>
-                                <span>Цена изменилась <time datetime="2021-10-24">24 октября 2021</time></span>
-                                <data value="24850000">24 850 000 <span>&#x20bd;</span></data>
-                                <span class="price-chart__up">+ <data value="50000">50 000</data>&#x20bd;</span>
-                              </li>
-                            </ul>
-                          </section>
-                        </div>
-                      </section>
-                    </div>
-                    <section class="map-card__pictures offer-images">
-                      <h4 class="visually-hidden">Фотографии объявления</h4>
-                      <div class="offer-images__wrapper offer-images__wrapper--paid">
-                        <a
-                          href="https://www.remospro.ru/catalog/sale/apartment-new/8718171/"
-                          title="Продажа 4-комн квартира, 90 м², 8/8 этаж"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          tabindex="-1"
-                        ></a>
-                        <div class="offer-images__main slider">
-                          <div class="offer-images__large">
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/small.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 1" />
-                            </picture>
-                          </div>
-                          <span class="offer-images__camera"></span>
-                          <button class="button button-circle button-circle--dark icon-color" type="button">
-                            <svg width="20" height="20" aria-hidden="true">
-                              <use xlink:href="img/icons/sprite.svg#icon-heart"></use>
-                            </svg>
-                            <span class="visually-hidden">В избранное</span>
-                          </button>
-                          <button class="button slider__control slider__control--left" type="button">
-                            <span class="visually-hidden">Предыдущее изображение</span>
-                            <span></span>
-                          </button>
-                          <button class="button slider__control slider__control--right" type="button">
-                            <span class="visually-hidden">Следующее изображение</span>
-                            <span></span>
-                          </button>
-                          <div class="offer-images__counter">
-                            <span class="visually-hidden">Нумерация фотографий</span>
-                            <span>2/15</span>
-                          </div>
-                        </div>
-                        <div class="offer-images__thumbnails">
-                          <div>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 2" />
-                            </picture>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 3" />
-                            </picture>
-                            <picture>
-                              <img src="img/catalog/novostroyka/card__1/picollo.webp" alt="4-комн квартира, 90 м², 8/8 этаж фото 4" />
-                            </picture>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <div class="map-card__phone">
+                    <div class="map-card__contacts offer-tel">
                       <a href="tel:">Контакты</a>
                     </div>
                   </div>
@@ -3078,7 +2779,7 @@
               </li>
             </ul>
           </section>
-          <div class="sidebar__item"></div>
+          <div class="sidebar__item">la-la</div>
           <div class="sidebar__item"></div>
         </div>
         <div class="catalog-map__map map">
@@ -3110,26 +2811,36 @@
                 <p class="map-edv__message run-text">ООО «Брусника, ОГРН 1116671018958. Проектная декларация на сайте наш.дом.рф. Подробности на сайте академический.рф</p>
               </div>
             </div>
-            <div class="pin pin--1" role="button"></div>
-            <span class="pin pin--2" role="button"></span>
-            <span class="pin pin--3" role="button"></span>
-            <span class="pin pin--4" role="button"></span>
-            <span class="pin pin--5" role="button"></span>
-            <span class="pin pin--6" role="button"></span>
-            <span class="pin pin--7" role="button"></span>
-            <span class="pin pin--8" role="button"></span>
-            <span class="pin pin--9" role="button"></span>
-            <span class="pin pin--10" role="button"></span>
-            <div class="special-pin special-pin--1">
-              <div class="special-pin__container">
-                <div class="pin"></div>
-                <div class="special-pin__plate">
-                  <div class="special-pin__count"><span>9</span><span>+</span></div>
-                  <div class="special-pin__price">от 17,5 млн</div>
+            <div class="pin geo geo--1" role="button"></div>
+            <span class="pin geo geo--2" role="button"></span>
+            <span class="pin geo geo--3" role="button"></span>
+            <span class="pin geo geo--4" role="button"></span>
+            <span class="pin geo geo--5" role="button">
+              <div class="info-pin">
+                <div class="info-pin__plate">
+                  <div class="info-pin__price">17,5 млн</div>
                 </div>
-                <div class="special-baloon">
-                  <div class="special-baloon__wrapper">
-                    <div class="special-baloon__content">
+              </div>
+            </span>
+            <span class="pin geo geo--5-1" role="button">
+              <div class="info-pin">
+                <div class="info-pin__plate">
+                  <div class="info-pin__price">17,5 млн</div>
+                </div>
+              </div>
+            </span>
+            <span class="pin geo geo--6" role="button"></span>
+            <span class="pin geo geo--7" role="button"></span>
+            <span class="pin geo geo--8" role="button"></span>
+            <span class="pin geo geo--9" role="button"></span>
+            <span class="pin geo geo--10" role="button"></span>
+            <div class="pin geo geo--11">
+              <div class="info-pin">
+                <div class="info-pin__count"><span>9</span><span>+</span></div>
+                <div class="info-pin__price">от 17,5 млн</div>
+                <div class="info-pin__baloon baloon">
+                  <div class="baloon__wrapper">
+                    <div class="baloon__content">
                       <p>ЖК Дом А»</p>
                       <p>От 22,5 млн</p>
                       <div class="subway">
@@ -3143,12 +2854,12 @@
                           <span class="visually-hidden">транспортом от метро</span>
                         </span>
                       </div>
-                      <div class="special-baloon__contacts">
+                      <div class="baloon__contacts">
                         <a href="tel">+7(495) 431-62...</a>
                         <a href="#">Подробнее о ЖК</a>
                       </div>
                     </div>
-                    <div class="special-baloon__image">
+                    <div class="baloon__image">
                       <img src="img/adv/domA.webp" alt="" />
                       <p>Скидки до 28%</p>
                     </div>
@@ -3156,10 +2867,1744 @@
                 </div>
               </div>
             </div>
+            <span class="pin geo geo--12" role="button">
+              <div class="info-pin">
+                <div class="info-pin__plate viewed">
+                  <div class="info-pin__price">17,5 млн</div>
+                </div>
+              </div>
+            </span>
           </div>
         </div>
       </div>
     </main>
+    <section class="main-search main-search--adaptive main-search--map">
+      <h2 class="visually-hidden">Фильтр поиска недвижимости</h2>
+      <div class="main-search__header">
+        <h3>Найдено 4 596</h3>
+      </div>
+      <form class="filter" action="https://echo.htmlacademy.ru/courses">
+        <div class="filter__content">
+          <div class="filter__item">
+            <fieldset id="deal" class="filter__fieldset">
+              <legend class="visually-hidden-desktop">Тип сделки</legend>
+              <ul class="deal">
+                <li class="deal__item">
+                  <input id="deal_type_buy" class="visually-hidden input" type="radio" checked />
+                  <label for="deal_type_buy">
+                    <span class="filter-control">Купить</span>
+                  </label>
+                </li>
+                <li class="deal__item">
+                  <input id="deal_type_rent" class="visually-hidden input" type="radio" />
+                  <label for="deal_type_rent">
+                    <span class="filter-control">Снять</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter__item">
+            <fieldset class="filter__fieldset">
+              <legend class="visually-hidden-desktop">Тип недвижимости</legend>
+              <ul class="type-estate">
+                <li>
+                  <input id="residential__estate" class="visually-hidden input" type="radio" checked />
+                  <label for="residential__estate">
+                    <span class="filter-control">Жилая</span>
+                  </label>
+                </li>
+                <li>
+                  <input id="comm__estate" class="visually-hidden input" type="radio" />
+                  <label for="comm__estate">
+                    <span class="filter-control">Коммерческая</span>
+                  </label>
+                </li>
+                <li>
+                  <input id="garage__estate" class="visually-hidden input" type="radio" />
+                  <label for="garage__estate">
+                    <span class="filter-control">Гаражи</span>
+                  </label>
+                </li>
+              </ul>
+              <fieldset class="filter__fieldset real-estate">
+                <legend>Жилая недвижимость</legend>
+                <ul class="real-estate__list">
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="new__flat" checked />
+                    <label for="new__flat">Квартира в новостройке</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="second__hand__flat" checked />
+                    <label for="second__hand__flat">Квартира на вторичке</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="room" />
+                    <label for="room">Комната</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="part__flat" />
+                    <label for="part__flat">Доля в квартире</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="house" />
+                    <label for="house">Дом</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="townhouse" />
+                    <label for="townhouse">Таунхаус</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="part__house" />
+                    <label for="part__house">Часть дома</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="land" />
+                    <label for="land">Земельный участок</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter__fieldset real-estate">
+                <legend>Коммерческая недвижимость</legend>
+                <ul class="real-estate__list">
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="office" checked />
+                    <label for="office">Офис</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="psn" />
+                    <label for="psn">ПСН </label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="building" />
+                    <label for="building">Здание</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="manufacture" />
+                    <label for="manufacture">Производство</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="trade__area" />
+                    <label for="trade__area">Торговая площадь</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="stock" />
+                    <label for="stock">Склад</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="ready__business" />
+                    <label for="ready__business">Готовый бизнес</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="commercial__land" />
+                    <label for="commercial__land">Коммерческая земля</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter__fieldset real-estate">
+                <legend>Гаражи</legend>
+                <ul class="real-estate__list">
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="type__garage" checked />
+                    <label for="type__garage">Гараж</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="parking__place" />
+                    <label for="parking__place">Машиноместо</label>
+                  </li>
+                  <li>
+                    <input class="input-checkbox" type="checkbox" id="parking__box" />
+                    <label for="parking__box">Бокс</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </fieldset>
+          </div>
+          <div class="filter__item">
+            <fieldset id="rooms__count" class="filter__fieldset filter__fieldset-rooms filter-rooms">
+              <legend class="visually-hidden-desktop">Количество комнат</legend>
+              <ul class="filter-rooms__list">
+                <li>
+                  <input id="studio" class="v-h-m-t" type="checkbox" />
+                  <label for="studio">
+                    <span class="filter-rooms__control">Студия</span>
+                  </label>
+                </li>
+                <li>
+                  <input id="one__room" class="v-h-m-t" type="checkbox" />
+                  <label for="one__room">
+                    <span class="filter-rooms__control">1<span class="v-h-m-t">-комнатная</span></span>
+                  </label>
+                </li>
+                <li>
+                  <input id="two__rooms" class="v-h-m-t" type="checkbox" />
+                  <label for="two__rooms">
+                    <span class="filter-rooms__control">2<span class="v-h-m-t">-комнатная</span></span>
+                  </label>
+                </li>
+                <li>
+                  <input id="three__rooms" class="v-h-m-t" type="checkbox" />
+                  <label for="three__rooms">
+                    <span class="filter-rooms__control">3<span class="v-h-m-t">-комнатная</span></span>
+                  </label>
+                </li>
+                <li>
+                  <input id="four__rooms" class="v-h-m-t" type="checkbox" />
+                  <label for="four__rooms">
+                    <span class="filter-rooms__control">4<span class="v-h-m-t">-комнатная</span></span>
+                  </label>
+                </li>
+                <li>
+                  <input id="five__rooms" class="v-h-m-t" type="checkbox" />
+                  <label for="five__rooms">
+                    <span class="filter-rooms__control">5<span class="v-h-m-t">-комнатная</span></span>
+                  </label>
+                </li>
+                <li>
+                  <input id="six__rooms" class="v-h-m-t" type="checkbox" />
+                  <label for="six__rooms">
+                    <span class="filter-rooms__control">6+<span class="v-h-m-t"> комнат и более</span></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter__item">
+            <fieldset id="price" class="filter__fieldset filter__fieldset-price filter-price">
+              <legend class="visually-hidden-desktop">Цена</legend>
+              <ul class="filter-price__list">
+                <li>
+                  <label for="min__price">Минимум</label>
+                  <div class="input-wrap-rub">
+                    <input id="min__price" class="input input--field" type="number" inputmode="numeric" placeholder="Цена от" />
+                  </div>
+                </li>
+                <li>
+                  <label for="max__price">Максимум</label>
+                  <div class="input-wrap-rub">
+                    <input id="max__price" class="input input--field" type="number" inputmode="numeric" placeholder="до" />
+                  </div>
+                </li>
+              </ul>
+              <ul class="filter-price__switch">
+                <li>
+                  <input id="all__price" class="visually-hidden input" type="radio" name="price__type" value="all__price" checked />
+                  <label for="all__price">
+                    <span class="filter-control">Цена за всё</span>
+                  </label>
+                </li>
+                <li>
+                  <input id="meter__price" class="visually-hidden input" type="radio" name="price__type" value="miter__price" />
+                  <label for="meter__price">
+                    <span class="filter-control">Цена за <abbr title="квадратный метр">м²</abbr></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter__item">
+            <fieldset class="filter__fieldset filter__fieldset-search">
+              <legend class="visually-hidden-desktop">Поиск адреса, района, ЖК, метро и тд</legend>
+              <ul class="search-controls">
+                <li>
+                  <button class="search-controls__item button search__button-js-geo" type="button" aria-label="Перейти к списку">
+                    <span class="search-controls__icon">
+                      <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.1362 26.1915C23.9996 28.2733 21.0735 29.5568 17.8458 29.5568C11.3036 29.5568 6 24.2834 6 17.7784C6 11.2734 11.3036 6 17.8458 6C24.3881 6 29.6916 11.2734 29.6916 17.7784C29.6916 21.0741 28.3303 24.0537 26.1362 26.1915ZM26.1362 26.1915L34 34"
+                          stroke-width="4.6"
+                        />
+                      </svg>
+                    </span>
+                    <span class="search-controls__name">Адрес, район, ЖК</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="button search-controls__item search__button-js-metro" type="button" aria-label="Перейти к списку">
+                    <span class="search-controls__icon search-controls__icon--metro">
+                      <svg width="17" height="12" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 12.6948L11.7622 7.88311L12.909 11.1419H11.9832V12.5762H17.5V11.1419H16.4472L12.484 0.694824L9 7.12716L5.51601 0.694824L1.5531
+                      11.1419H0.5V12.5762H6.01702V11.1419H5.09096L6.2378 7.88311L9 12.6948Z"
+                          stroke-width=".5"
+                        />
+                      </svg>
+                    </span>
+                    <span class="search-controls__name">Метро</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="button search-controls__item search__button-js-area" type="button" aria-label="Перейти к списку">
+                    <span class="search-controls__icon">
+                      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 7V42M22.6363 23.1334H9V9.36669H22.6363C24.8959 9.36669 26.7273 11.2023 26.7273 13.4667V27.2334M22.6363 23.1334C24.8959 23.1334 26.7273 24.969 26.7273 27.2334M22.6363 23.1334H19.9091V31.3333H22.6363M26.7273 27.2334C26.7273 29.4977 24.8959 31.3333 22.6363 31.3333M26.7273 27.2334V14.8333H41V31.3333L22.6363 31.3333"
+                          stroke-width="4.6"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="search-controls__name">Район</span>
+                  </button>
+                </li>
+              </ul>
+              <section class="selected-properties filter__selected">
+                <h4 class="visually-hidden">Выбранные фильтры</h4>
+                <ul>
+                  <li>
+                    <span class="subway-mark m-line-2"></span>
+                    <span>Войковская</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Удалить свойство</span>
+                    </button>
+                  </li>
+                  <li>
+                    <span class="subway-mark m-line-1"></span>
+                    <span class="">Красносельская</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Удалить свойство</span>
+                    </button>
+                  </li>
+                  <li>
+                    <span class="subway-mark m-line-2"></span>
+                    <span>Войковская</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Удалить свойство</span>
+                    </button>
+                  </li>
+                  <li>
+                    <span class="subway-mark m-line-1"></span>
+                    <span class="">Красносельская</span>
+                    <button class="button button-close" type="button">
+                      <span class="visually-hidden">Удалить свойство</span>
+                    </button>
+                  </li>
+                </ul>
+                <button class="button" type="button">Очистить</button>
+              </section>
+            </fieldset>
+          </div>
+          <div class="filter__item">
+            <div id="filter__addition" class="filter-add filter__fieldset filter__fieldset-add">
+              <div class="filter-add__body">
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь, м²</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__space">
+                        <li>
+                          <p>Общая</p>
+                          <label for="total__min" class="visually-hidden">минимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="total__min" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                          </div>
+                          <label for="total__max" class="visually-hidden">максимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="total__max" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                          </div>
+                        </li>
+                        <li>
+                          <p>Жилая</p>
+                          <label for="living__min" class="visually-hidden">минимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="living__min" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                          </div>
+                          <label for="living__max" class="visually-hidden">максимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="living__max" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                          </div>
+                        </li>
+                        <li>
+                          <p>Кухня</p>
+                          <label for="kitchen__min" class="visually-hidden">минимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="kitchen__min" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                          </div>
+                          <label for="kitchen__max" class="visually-hidden">максимум</label>
+                          <div class="input-wrap-miter">
+                            <input id="kitchen__max" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Планировка</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="layout__care" class="visually-hidden input" type="radio" checked />
+                          <label for="layout__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="isolated" class="visually-hidden input" type="radio" />
+                          <label for="isolated">
+                            <span class="filter-control">Изолированная</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="adjacent" class="visually-hidden input" type="radio" />
+                          <label for="adjacent">
+                            <span class="filter-control">Смежная</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="photo__plan" class="input-checkbox" type="checkbox" />
+                          <label for="photo__plan">Схема планировки</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Санузел</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="bath__care" class="visually-hidden input" type="radio" checked />
+                          <label for="bath__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="shared__bath" class="visually-hidden input" type="radio" />
+                          <label for="shared__bath">
+                            <span class="filter-control">Совмещенный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="separate__bath" class="visually-hidden input" type="radio" />
+                          <label for="separate__bath">
+                            <span class="filter-control">Раздельный</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="bath__count" class="input-checkbox" type="checkbox" />
+                          <label for="bath__count">Несколько</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Ремонт</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="designer__repair" class="visually-hidden input" type="checkbox" />
+                          <label for="designer__repair">
+                            <span class="filter-control">Дизайнерский</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="euro__repair" class="visually-hidden input" type="checkbox" />
+                          <label for="euro__repair">
+                            <span class="filter-control">Евро</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="cosmetic__repair" class="visually-hidden input" type="checkbox" />
+                          <label for="cosmetic__repair">
+                            <span class="filter-control">Косметический</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="absent__repair" class="visually-hidden input" type="checkbox" />
+                          <label for="absent__repair">
+                            <span class="filter-control">Отсутствует</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Наличие балкона</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="balcony__care" class="visually-hidden input" type="radio" checked />
+                          <label for="balcony__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="balcony" class="visually-hidden input" type="radio" />
+                          <label for="balcony">
+                            <span class="filter-control">Балкон</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="loggia" class="visually-hidden input" type="radio" />
+                          <label for="loggia">
+                            <span class="filter-control">Лоджия</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Вид из окон</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="view__care" class="visually-hidden input" type="radio" checked />
+                          <label for="view__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="street__view" class="visually-hidden input" type="radio" />
+                          <label for="street__view">
+                            <span class="filter-control">На улицу</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="view__yard" class="visually-hidden input" type="radio" />
+                          <label for="view__yard">
+                            <span class="filter-control">Во двор</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этаж</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="floor__from" class="visually-hidden">от</label>
+                          <input id="floor__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="floor__to" class="visually-hidden">до</label>
+                          <input id="floor__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="not__first" class="input-checkbox" type="checkbox" />
+                          <label for="not__first">Не первый</label>
+                        </li>
+                        <li>
+                          <input id="not__last" class="input-checkbox" type="checkbox" />
+                          <label for="not__last">Не последний</label>
+                        </li>
+                        <li>
+                          <input id="just__last" class="input-checkbox" type="checkbox" />
+                          <label for="just__last">Последний</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажность дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="ground__floor" class="visually-hidden">от</label>
+                          <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="top__floor" class="visually-hidden">до</label>
+                          <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="panel" class="visually-hidden input" type="checkbox" />
+                          <label for="panel">
+                            <span class="filter-control">Панельный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="brick__monolithic" class="visually-hidden input" type="checkbox" />
+                          <label for="brick__monolithic">
+                            <span class="filter-control">Кирпично-монолитный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="monolithic" class="visually-hidden input" type="checkbox" />
+                          <label for="monolithic">
+                            <span class="filter-control">Монолитный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="block" class="visually-hidden input" type="checkbox" />
+                          <label for="block">
+                            <span class="filter-control">Блочный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="brick" class="visually-hidden input" type="checkbox" />
+                          <label for="brick">
+                            <span class="filter-control">Кирпичный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="wood" class="visually-hidden input" type="checkbox" />
+                          <label for="wood">
+                            <span class="filter-control">Деревянный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="stalin" class="visually-hidden input" type="checkbox" />
+                          <label for="stalin">
+                            <span class="filter-control">Сталинский</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Год постройки</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="ground__floor" class="visually-hidden">от</label>
+                          <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="top__floor" class="visually-hidden">до</label>
+                          <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Наличие лифтов</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="elevator__care" class="visually-hidden input" type="radio" checked />
+                          <label for="elevator__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="elevator" class="visually-hidden input" type="radio" />
+                          <label for="elevator">
+                            <span class="filter-control">Есть любой</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="big__elevator" class="visually-hidden input" type="radio" />
+                          <label for="big__elevator">
+                            <span class="filter-control">Есть грузовой</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Парковка</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="underground__parking" class="visually-hidden input" type="checkbox" />
+                          <label for="underground__parking">
+                            <span class="filter-control">Подземная</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="ground__parking" class="visually-hidden input" type="checkbox" />
+                          <label for="ground__parking">
+                            <span class="filter-control">Наземная</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="multi__parking" class="visually-hidden input" type="checkbox" />
+                          <label for="multi__parking">
+                            <span class="filter-control">Многоуровневая</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Апартаменты</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="apart__care" class="visually-hidden input" type="radio" checked />
+                          <label for="apart__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="notapart" class="visually-hidden input" type="radio" />
+                          <label for="notapart">
+                            <span class="filter-control">Без апартаментов</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="apart" class="visually-hidden input" type="radio" />
+                          <label for="apart">
+                            <span class="filter-control">Только апартаменты</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Время до метро, мин</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="5__min" class="visually-hidden input" type="radio" />
+                          <label for="5__min">
+                            <span class="filter-control">5 м</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="7__min" class="visually-hidden input" type="radio" />
+                          <label for="7__min">
+                            <span class="filter-control">7 м</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="10__min" class="visually-hidden input" type="radio" />
+                          <label for="10__min">
+                            <span class="filter-control">10 м</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="15__min" class="visually-hidden input" type="radio" />
+                          <label for="15__min">
+                            <span class="filter-control">15 м</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="20__min" class="visually-hidden input" type="radio" />
+                          <label for="20__min">
+                            <span class="filter-control">20 м</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="on__foot" class="visually-hidden input" type="radio" />
+                          <label for="on__foot">
+                            <span class="filter-control">Пешком</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="on__transport" class="visually-hidden input" type="radio" />
+                          <label for="on__transport">
+                            <span class="filter-control">Транспортом</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип продажи</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="sale__care" class="visually-hidden input" type="radio" checked />
+                          <label for="sale__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="alternative__sale" class="visually-hidden input" type="radio" />
+                          <label for="alternative__sale">
+                            <span class="filter-control">Альтернативная</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="free__sale" class="visually-hidden input" type="radio" />
+                          <label for="free__sale">
+                            <span class="filter-control">Свободная</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="mortgage__possible" class="input-checkbox" type="checkbox" />
+                          <label for="mortgage__possible">Возможна ипотека</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Оформление</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="sale__care" class="visually-hidden input" type="radio" checked />
+                          <label for="sale__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="law__214" class="visually-hidden input" type="radio" />
+                          <label for="alternative__sale">
+                            <span class="filter-control">214-ФЗ</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="assignation" class="visually-hidden input" type="radio" />
+                          <label for="assignation">
+                            <span class="filter-control">Переуступка</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="mortgage__possible" class="input-checkbox" type="checkbox" />
+                          <label for="mortgage__possible">Возможна ипотека</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия проживания</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="kids" class="visually-hidden input" type="checkbox" />
+                          <label for="kids">
+                            <span class="filter-control">Можно с детьми</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="animals" class="visually-hidden input" type="checkbox" />
+                          <label for="animals">
+                            <span class="filter-control">Можно с животными</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Условия аренды</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="no__commission" class="input-checkbox" type="checkbox" />
+                          <label for="no__commission">Без комиссии</label>
+                        </li>
+                        <li>
+                          <input id="no__guarantee" class="input-checkbox" type="checkbox" />
+                          <label for="no__guarantee">Без залога</label>
+                        </li>
+                        <li>
+                          <input id="no__deposit" class="input-checkbox" type="checkbox" />
+                          <label for="no__deposit">Без предоплаты</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Дата публикации</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="date__care" class="visually-hidden input" type="radio" checked />
+                          <label for="date__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="one__day" class="visually-hidden input" type="radio" />
+                          <label for="one__day">
+                            <span class="filter-control">за 1 день</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="three__days" class="visually-hidden input" type="radio" />
+                          <label for="three__days">
+                            <span class="filter-control">за 3 дня</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="one__week" class="visually-hidden input" type="radio" />
+                          <label for="one__week">
+                            <span class="filter-control">за неделю</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="one__month" class="visually-hidden input" type="radio" />
+                          <label for="one__month">
+                            <span class="filter-control">за месяц</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Объявление содержит</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="whith__photo" class="input-checkbox" type="checkbox" />
+                          <label for="whith__photo">Фотографии</label>
+                        </li>
+                        <li>
+                          <input id="whith__video" class="input-checkbox" type="checkbox" />
+                          <label for="whith__video">Видео</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">
+                      Поиск по ключевым<br />
+                      словам
+                    </legend>
+                    <ul class="filter-add__wrapper filter-add__keywords">
+                      <li>
+                        <label for="keywords">Объявления содержат слова:</label>
+                        <div class="search search--keywords">
+                          <input id="keywords" class="input input--field" type="text" name="add" data-name="keywords" placeholder="Введите слово или фразу" inputmode="search" autocomplete="off" />
+                          <button class="button search__button" type="button">
+                            <span>Добавить</span>
+                          </button>
+                        </div>
+                        <section class="selected-properties filter-add__selected">
+                          <h3 class="visually-hidden">Выбранные слова</h3>
+                          <ul>
+                            <li>
+                              <span>ижс</span>
+                              <button class="button button-close" type="button">
+                                <span class="visually-hidden">Удалить свойство</span>
+                              </button>
+                            </li>
+                            <li>
+                              <span>снт</span>
+                              <button class="button button-close" type="button">
+                                <span class="visually-hidden">Удалить свойство</span>
+                              </button>
+                            </li>
+                            <li>
+                              <span>лес</span>
+                              <button class="button button-close" type="button">
+                                <span class="visually-hidden">Удалить свойство</span>
+                              </button>
+                            </li>
+                            <li>
+                              <span>озеро</span>
+                              <button class="button button-close" type="button">
+                                <span class="visually-hidden">Удалить свойство</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </section>
+                      </li>
+                      <li>
+                        <label for="exclude__keywords">Объявления исключают слова:</label>
+                        <div class="search search--keywords">
+                          <input id="exclude__keywords" class="input input--field" type="text" placeholder="Введите слово или фразу" inputmode="search" autocomplete="off" />
+                          <button class="button search__button" type="button">
+                            <span>Добавить</span>
+                          </button>
+                        </div>
+                      </li>
+                      <li>
+                        <label for="locality__keywords">Название населённого пункта содержит слово:</label>
+                        <div class="search search--keywords">
+                          <input id="locality__keywords" class="input input--field" type="text" placeholder="Введите слово или фразу" inputmode="search" autocomplete="off" />
+                          <button class="button search__button" type="button">
+                            <span>Добавить</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Срок аренды</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="care__care" class="visually-hidden input" type="radio" checked />
+                          <label for="care__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="long__rent" class="visually-hidden input" type="radio" />
+                          <label for="long__rent">
+                            <span class="filter-control">Длительно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="short__rent" class="visually-hidden input" type="radio" />
+                          <label for="short__rent">
+                            <span class="filter-control">Посуточно</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат в квартире</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list filter-add__list--square">
+                        <li>
+                          <input id="two__room" class="visually-hidden input" type="checkbox" />
+                          <label for="two__room">
+                            <span class="filter-control">2</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="three__room" class="visually-hidden input" type="checkbox" />
+                          <label for="three__room">
+                            <span class="filter-control">3</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="four__room" class="visually-hidden input" type="checkbox" />
+                          <label for="four__room">
+                            <span class="filter-control">4</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="five__room" class="visually-hidden input" type="checkbox" />
+                          <label for="five__room">
+                            <span class="filter-control">5</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="six__room" class="visually-hidden input" type="checkbox" />
+                          <label for="six__room">
+                            <span class="filter-control">6</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат на покупку</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list filter-add__list--square">
+                        <li>
+                          <input id="one__room__deal" class="visually-hidden input" type="checkbox" />
+                          <label for="one__room__deal">
+                            <span class="filter-control">1</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="two__rooms__deal" class="visually-hidden input" type="checkbox" />
+                          <label for="two__rooms__deal">
+                            <span class="filter-control">2</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="three__rooms__deal" class="visually-hidden input" type="checkbox" />
+                          <label for="three__rooms__deal">
+                            <span class="filter-control">3</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="type__house__care" class="visually-hidden input" type="radio" checked />
+                          <label for="type__house__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="type__house" class="visually-hidden input" type="radio" />
+                          <label for="type__house">
+                            <span class="filter-control">Дом</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="type__townhouse" class="visually-hidden input" type="radio" />
+                          <label for="type__townhouse">
+                            <span class="filter-control">Таунхаус</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="type__part" class="visually-hidden input" type="radio" />
+                          <label for="type__part">
+                            <span class="filter-control">Часть дома</span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="filter-add__check-list">
+                        <li>
+                          <input id="mortgage__possible__house" class="input-checkbox" type="checkbox" />
+                          <label for="mortgage__possible__house">Возможна ипотека</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="house__square__from" class="visually-hidden">Минимум</label>
+                          <input id="house__square__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="house__square__to" class="visually-hidden">Максимум</label>
+                          <input id="house__square__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Площадь участка в сотках</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="land__square__from" class="visually-hidden">Минимум</label>
+                          <input id="land__square__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="land__square__to" class="visually-hidden">Максимум</label>
+                          <input id="land__square__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажей в доме</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list filter-add__list--square">
+                        <li>
+                          <input id="one__floor" class="visually-hidden input" type="checkbox" />
+                          <label for="one__floor">
+                            <span class="filter-control">1</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="two__floors" class="visually-hidden input" type="checkbox" />
+                          <label for="two__floors">
+                            <span class="filter-control">2</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="three__floors" class="visually-hidden input" type="checkbox" />
+                          <label for="three__floors">
+                            <span class="filter-control">3</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="four__floors" class="visually-hidden input" type="checkbox" />
+                          <label for="four__floors">
+                            <span class="filter-control">4</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Комнат в доме</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list filter-add__list--square">
+                        <li>
+                          <input id="house__one__room" class="visually-hidden input" type="checkbox" />
+                          <label for="house__one__room">
+                            <span class="filter-control">1</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__two__rooms" class="visually-hidden input" type="checkbox" />
+                          <label for="house__two__rooms">
+                            <span class="filter-control">2</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__three__rooms" class="visually-hidden input" type="checkbox" />
+                          <label for="house__three__rooms">
+                            <span class="filter-control">3</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__four__rooms" class="visually-hidden input" type="checkbox" />
+                          <label for="house__four__rooms">
+                            <span class="filter-control">4</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__five__rooms" class="visually-hidden input" type="checkbox" />
+                          <label for="house__five__rooms">
+                            <span class="filter-control">5</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__six__rooms" class="visually-hidden input" type="checkbox" />
+                          <label for="house__six__rooms">
+                            <span class="filter-control">6</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Материал дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="house__brick" class="visually-hidden input" type="checkbox" />
+                          <label for="house__brick">
+                            <span class="filter-control">Кирпичный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__monolithic" class="visually-hidden input" type="checkbox" />
+                          <label for="house__monolithic">
+                            <span class="filter-control">Монолитный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__wood" class="visually-hidden input" type="checkbox" />
+                          <label for="house__wood">
+                            <span class="filter-control">Деревянный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__panel" class="visually-hidden input" type="checkbox" />
+                          <label for="house__panel">
+                            <span class="filter-control">Щитовой</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__frame" class="visually-hidden input" type="checkbox" />
+                          <label for="house__frame">
+                            <span class="filter-control">Каркасный</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="house__block" class="visually-hidden input" type="checkbox" />
+                          <label for="house__block">
+                            <span class="filter-control">Блочный</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Коммуникации</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="electricity" class="visually-hidden input" type="checkbox" />
+                          <label for="electricity">
+                            <span class="filter-control">Электричество</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="sewerage" class="visually-hidden input" type="checkbox" />
+                          <label for="sewerage">
+                            <span class="filter-control">Канализация</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="whater" class="visually-hidden input" type="checkbox" />
+                          <label for="whater">
+                            <span class="filter-control">Водоснабжение</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="gaz" class="visually-hidden input" type="checkbox" />
+                          <label for="gaz">
+                            <span class="filter-control">Газ</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="heating" class="visually-hidden input" type="checkbox" />
+                          <label for="heating">
+                            <span class="filter-control">Отопление</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Санузел</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="date__care" class="visually-hidden input" type="radio" checked />
+                          <label for="date__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="toilet__in" class="visually-hidden input" type="radio" />
+                          <label for="toilet__in">
+                            <span class="filter-control">В доме</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="toilet__out" class="visually-hidden input" type="radio" />
+                          <label for="toilet__out">
+                            <span class="filter-control">На улице</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Статус участка</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="ihc" class="visually-hidden input" type="checkbox" />
+                          <label for="ihc">
+                            <span class="filter-control">ИЖС</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="gardening" class="visually-hidden input" type="checkbox" />
+                          <label for="gardening">
+                            <span class="filter-control">Садоводство</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="dnp" class="visually-hidden input" type="checkbox" />
+                          <label for="dnp">
+                            <span class="filter-control">ДНП</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="farming" class="visually-hidden input" type="checkbox" />
+                          <label for="farming">
+                            <span class="filter-control">Фермерское хозяйство</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Удобства</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="room__furniture" class="visually-hidden input" type="checkbox" />
+                          <label for="room__furniture">
+                            <span class="filter-control">Мебель в комнатах</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="dishwasher" class="visually-hidden input" type="checkbox" />
+                          <label for="dishwasher">
+                            <span class="filter-control">Посудомоечная машина</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="tv" class="visually-hidden input" type="checkbox" />
+                          <label for="tv">
+                            <span class="filter-control">Телевизор</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="kitchen__furniture" class="visually-hidden input" type="checkbox" />
+                          <label for="kitchen__furniture">
+                            <span class="filter-control">Мебель на кухне</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="washer" class="visually-hidden input" type="checkbox" />
+                          <label for="washer">
+                            <span class="filter-control">Стиральная машина</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="internet" class="visually-hidden input" type="checkbox" />
+                          <label for="internet">
+                            <span class="filter-control">Интернет</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="fridge" class="visually-hidden input" type="checkbox" />
+                          <label for="fridge">
+                            <span class="filter-control">Холодильник</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="conditioner" class="visually-hidden input" type="checkbox" />
+                          <label for="conditioner">
+                            <span class="filter-control">Кондиционер</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="sauna" class="visually-hidden input" type="checkbox" />
+                          <label for="sauna">
+                            <span class="filter-control">Баня</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="garage" class="visually-hidden input" type="checkbox" />
+                          <label for="garage">
+                            <span class="filter-control">Гараж</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="pool" class="visually-hidden input" type="checkbox" />
+                          <label for="pool">
+                            <span class="filter-control">Бассейн</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="security" class="visually-hidden input" type="checkbox" />
+                          <label for="security">
+                            <span class="filter-control">Охрана</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Особенности дома</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="dacha" class="visually-hidden input" type="checkbox" />
+                          <label for="dacha">
+                            <span class="filter-control">Дача</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="village" class="visually-hidden input" type="checkbox" />
+                          <label for="village">
+                            <span class="filter-control">Дом в деревне</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этаж</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="floor__from" class="visually-hidden">от</label>
+                          <input id="floor__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="floor__to" class="visually-hidden">до</label>
+                          <input id="floor__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Этажей в здании</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="ground__floor" class="visually-hidden">от</label>
+                          <input id="ground__floor" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="top__floor" class="visually-hidden">до</label>
+                          <input id="top__floor" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип здания</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="center" class="visually-hidden input" type="checkbox" />
+                          <label for="center">
+                            <span class="filter-control">Бизнес-центр</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="structure" class="visually-hidden input" type="checkbox" />
+                          <label for="structure">
+                            <span class="filter-control">Отдельно стоящее здание</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="residential__building" class="visually-hidden input" type="checkbox" />
+                          <label for="residential__building">
+                            <span class="filter-control">Помещение в жилом доме</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="storage" class="visually-hidden input" type="checkbox" />
+                          <label for="storage">
+                            <span class="filter-control">Складской комплекс</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="mall" class="visually-hidden input" type="checkbox" />
+                          <label for="mall">
+                            <span class="filter-control">Торговый центр</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Класс здания</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list filter-add__list--square">
+                        <li>
+                          <input id="class__a+" class="visually-hidden input" type="checkbox" />
+                          <label for="class__a+">
+                            <span class="filter-control">А+</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="class__a" class="visually-hidden input" type="checkbox" />
+                          <label for="class__a">
+                            <span class="filter-control">А</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="class__b+" class="visually-hidden input" type="checkbox" />
+                          <label for="class__b+">
+                            <span class="filter-control">В+</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="class__b" class="visually-hidden input" type="checkbox" />
+                          <label for="class__b">
+                            <span class="filter-control">В</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="class__c+" class="visually-hidden input" type="checkbox" />
+                          <label for="class__c+">
+                            <span class="filter-control">С+</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="class__c" class="visually-hidden input" type="checkbox" />
+                          <label for="class__c">
+                            <span class="filter-control">С</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Вход</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="entrance__care" class="visually-hidden input" type="radio" checked />
+                          <label for="entrance__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="general__entrance" class="visually-hidden input" type="radio" />
+                          <label for="general__entrance">
+                            <span class="filter-control">Общий</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="separate__entrance" class="visually-hidden input" type="radio" />
+                          <label for="separate__entrance">
+                            <span class="filter-control">Отдельный</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Тип договора</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="contract__care" class="visually-hidden input" type="radio" checked />
+                          <label for="contract__care">
+                            <span class="filter-control">Неважно</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="direct__rental" class="visually-hidden input" type="radio" />
+                          <label for="direct__rental">
+                            <span class="filter-control">Прямая аренда</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="sublease" class="visually-hidden input" type="radio" />
+                          <label for="sublease">
+                            <span class="filter-control">Субаренда</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Возможное назначение</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list">
+                        <li>
+                          <input id="medical" class="visually-hidden input" type="checkbox" />
+                          <label for="medical">
+                            <span class="filter-control">Помещение для банка</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="structure" class="visually-hidden input" type="checkbox" />
+                          <label for="structure">
+                            <span class="filter-control">Медицинский центр</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="grocery" class="visually-hidden input" type="checkbox" />
+                          <label for="grocery">
+                            <span class="filter-control">Продуктовый магазин</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="beauty" class="visually-hidden input" type="checkbox" />
+                          <label for="beauty">
+                            <span class="filter-control">Салон красоты</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="travel" class="visually-hidden input" type="checkbox" />
+                          <label for="travel">
+                            <span class="filter-control">Турагентство</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input id="showroom" class="visually-hidden input" type="checkbox" />
+                          <label for="showroom">
+                            <span class="filter-control">Шоурум</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="filter-add__item">
+                  <fieldset class="filter-add__fieldset">
+                    <legend class="filter-add__legend">Высота потолков, м.</legend>
+                    <div class="filter-add__wrapper">
+                      <ul class="filter-add__list-grid">
+                        <li>
+                          <label for="heigth__floor__from" class="visually-hidden">от</label>
+                          <input id="heigth__floor__from" class="input input--field" type="number" placeholder="от" autocomplete="off" inputmode="numeric" />
+                        </li>
+                        <li>
+                          <label for="heigth__floor__to" class="visually-hidden">до</label>
+                          <input id="heigth__floor__to" class="input input--field" type="number" placeholder="до" autocomplete="off" inputmode="numeric" />
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter__footer">
+          <button class="button" type="reset">
+            <span>Сбросить фильтры</span>
+          </button>
+          <button class="button button-submit" type="submit">Искать</button>
+        </div>
+      </form>
+      <div class="main-search__footer">
+        <button class="button button-close" type="button">
+          <span class="visually-hidden">Закрыть фильтр</span>
+        </button>
+      </div>
+    </section>
     <div class="modal modal--subscribe">
       <h2 class="caption">Подписаться на новые объявления Remos</h2>
       <div class="modal__wrapper modal__wrapper--subscribe">
@@ -6515,7 +7960,7 @@
         </button>
       </div>
     </section>
-    <script src="js/catalog_desktop.js" type="module"></script>
+    <!-- <script src="js/catalog_desktop.js" type="module"></script> -->
     <script src="js/header.js" type="module"></script>
     <script src="js/filter.js" type="module"></script>
     <script src="js/catalog.js" type="module"></script>

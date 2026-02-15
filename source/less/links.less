@@ -130,13 +130,15 @@ a {
 // links like button
 
 .link-button {
-  display: block;
-  padding: 13px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   color: var(--white);
   background-color: var(--basic-green);
   border-radius: 5px;
   font-weight: 500;
-  text-align: center;
 
   &:hover {
     background-color: var(--green);
@@ -148,9 +150,5 @@ a {
 
   &:focus-visible {
     box-shadow: 0 0 0 1px rgb(255, 255, 255), 0 0 2px 3px #74d099, 0 0 2px 3px #20a052;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 12px 0;
   }
 }

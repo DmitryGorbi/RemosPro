@@ -11,7 +11,6 @@
       padding: 3px 4px;
       white-space: nowrap;
       width: min-content;
-      background-color: var(--half-black);
       color: var(--white);
       border-radius: 3px;
       background-color: var(--basic-green);
@@ -20,28 +19,18 @@
 
     & .offer-qualities__dev {
       color: red;
-      background-color: var(--white);
-      border: 1px solid red;
-    }
-
-    @media (min-width: @desktop-width) {
-      gap: 10px;
+      background-color: pink;
     }
   }
 
   &--map {
     & ul {
       & li {
+        color: var(--black);
+        font-size: 12px;
         background-color: var(--light-green);
-        border: 1px solid var(--basic-green);
-        color: var(--black) !important;
+        border-color: transparent;
       }
-    }
-
-    & .offer-qualities__dev {
-      color: red !important;
-      background-color: var(--white);
-      border: 1px solid red;
     }
   }
 

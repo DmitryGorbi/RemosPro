@@ -1,14 +1,12 @@
+.seller .button-main {
+  margin-top: 10px;
+  height: 45px;
+}
+
 .seller__wrapper {
   display: flex;
   column-gap: 10px;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.seller__info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
 }
 
 .seller__type {
@@ -16,9 +14,15 @@
   color: #737a8e;
 }
 
+.seller__name {
+  margin-top: 5px;
+}
+
 .seller__avatar {
   order: -1;
   padding: 3px;
+  // height: 50px;
+  // width: 50px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 
@@ -27,11 +31,18 @@
   }
 }
 
+.seller__avatar-image {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 5px;
+}
+
 .seller__offers {
   display: none;
 }
 
 .seller__phone {
+  margin-top: 15px;
   height: 48px;
 
   & a {
@@ -47,15 +58,13 @@
 
 @media (min-width: @desktop-width) {
   .seller {
-    
     height: max-content;
     overflow: hidden;
 
     .button-main {
       position: static;
-      padding: 5px 14px;
       margin-top: 20px;
-      width: 100%;
+      height: 35px;
     }
   }
 
@@ -81,21 +90,13 @@
     }
   }
 
-  .seller__avatar {
-    & img {
-      width: 60px;
-      height: 60px;
-    }
-  }
-
   .seller__offers {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
     border-bottom: 1px dashed var(--basic-green);
   }
 
   .seller__phone {
-    margin-top: 10px;
     height: 35px;
   }
 }

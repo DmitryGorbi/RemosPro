@@ -1,12 +1,19 @@
 .pin {
-  position: absolute;
-  transform: translate(-50%);
   width: 17px;
   height: 17px;
   border-radius: 50%;
   background-color: var(--blue);
   border: 2px solid var(--white);
   cursor: pointer;
+}
+
+.geo {
+  position: absolute;
+  transform: translate(-50%);
+
+  &:hover {
+    z-index: 1;
+  }
 
   &--1 {
     top: 28%;
@@ -30,6 +37,11 @@
 
   &--5 {
     top: 52%;
+    left: 60%;
+  }
+
+  &--5-1 {
+    top: 54%;
     left: 60%;
   }
 
@@ -57,43 +69,63 @@
     top: 75%;
     left: 60%;
   }
-}
 
-.special-pin {
-  position: absolute;
-
-  &--1 {
+  &--11 {
     top: 41%;
     left: 50%;
   }
+
+  &--12 {
+    top: 65%;
+    left: 70%;
+  }
 }
 
-.special-pin__container {
-  position: relative;
-}
-
-.special-pin__plate {
+.info-pin {
   position: absolute;
   top: -21px;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   column-gap: 5px;
-  padding: 2px 6px 2px 2px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px var(--light-gray);
+  padding: 2px 3px;
+  min-height: 22px;
   width: max-content;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  color: var(--basic-black);
   background-color: var(--white);
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--light-gray);
 }
 
-.special-pin__count {
+.viewed {
+  color: var(--half-black);
+}
+
+.info-pin__count {
   display: flex;
   column-gap: 1px;
   padding: 3px 4px;
   background-color: var(--basic-green);
   color: var(--white);
   border-radius: 3px;
+}
+
+.info-pin__baloon {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 0;
+  transform: translate(-100%, -50%);
+}
+
+@media (min-width: @desktop-width) {
+  .info-pin {
+    &:hover .info-pin__baloon {
+      display: block;
+    }
+  }
 }

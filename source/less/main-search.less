@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   background-color: var(--white);
+  z-index: 1;
 }
 
 .main-search__header {
@@ -19,7 +20,8 @@
   }
 }
 
-.main-search__footer .button {
+.main-search__footer {
+  position: absolute;
   top: 6px;
   right: 0;
 }
@@ -38,6 +40,11 @@
     margin: 0 auto;
     width: 1200px;
     box-shadow: none;
+    z-index: auto;
+
+    &--map {
+      display: none !important;
+    }
   }
 
   .main-search__form {

@@ -19,36 +19,27 @@
       color: #737a8e;
     }
   }
+}
 
-  @media (min-width: @desktop-width) {
-    & .offer-aside__deal {
-      row-gap: 30px;
-      padding: 20px;
-      box-shadow: 0 0 10px var(--light-gray);
-      border-radius: 5px;
+@media (min-width: @desktop-width) {
+  .offer-aside {
+    & .seller__wrapper {
+      flex-direction: column;
+      align-items: center;
+      column-gap: 20px;
     }
+  }
 
-    & .seller {
-      padding: 0;
-      background-color: transparent;
-      // box-shadow: 0 0 10px var(--light-gray);
-      border-radius: 5px;
+  & .offer-aside__deal {
+    row-gap: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
+  }
 
-      & .seller__wrapper {
-        flex-direction: row;
-        align-items: center;
-        column-gap: 20px;
-      }
-
-      & .button {
-        padding: 10px 14px;
-      }
-    }
-
-    & .offer-aside__statistics {
-      padding: 20px;
-      box-shadow: 0 0 10px var(--light-gray);
-      border-radius: 5px;
-    }
+  & .offer-aside__statistics {
+    padding: 20px;
+    box-shadow: 0 0 10px var(--light-gray);
+    border-radius: 5px;
   }
 }
