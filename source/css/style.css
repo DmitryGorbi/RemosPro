@@ -191,11 +191,12 @@ ol {
 }
 img {
   width: 100%;
-  height: 100%;
+  height: auto;
   vertical-align: middle;
   font-style: italic;
   background-repeat: no-repeat;
   background-size: cover;
+  image-rendering: auto;
 }
 ::-moz-placeholder {
   font-family: "Roboto", sans-serif, "Arial";
@@ -5188,6 +5189,8 @@ textarea {
 .seller__avatar {
   order: -1;
   padding: 3px;
+  height: 50px;
+  width: 50px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
 }
